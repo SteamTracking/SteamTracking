@@ -12,5 +12,13 @@
     "espree": "^11.0.0",
     "estraverse": "^5.3.0",
     "xmlbuilder2": "^4.0.0"
+  },
+  "overrides": {
+    "js-yaml": {
+      "js-yaml": "4.3.2"
+    },
+    "xmlbuilder2": {
+      "js-yaml": "4.3.2"
+    }
   }
 }
