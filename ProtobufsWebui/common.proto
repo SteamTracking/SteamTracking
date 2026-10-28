@@ -970,7 +970,7 @@ message CInputTouchFingerUpMsg {
 message CKeepAliveMsg {
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreCuration, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreCuration, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message CLocalizationToken {
 	optional uint32 language = 1;
 	optional string localized_string = 2;
@@ -5532,19 +5532,19 @@ message CSaveTouchConfigLayoutMsg {
 	optional bytes layout = 4;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message CSeasonPass {
 	optional uint32 appid = 1;
 	repeated .CSeasonPassMilestone milestones = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message CSeasonPassDateAndDisplay {
 	optional uint32 rtime = 1;
 	optional string coming_soon_display_type = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message CSeasonPassMilestone {
 	optional int32 milestone_id = 1;
 	repeated .CLocalizationToken title = 2;
@@ -7177,14 +7177,14 @@ message SiteServerUI_Status_Response {
 	optional int32 acct_status = 5;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message SteamAward {
 	optional int32 voteid = 1;
 	optional .SteamAward_Localization localization = 2;
 	optional int32 award_year = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message SteamAward_Localization {
 	optional string title = 1;
 }
@@ -7196,7 +7196,7 @@ message SteamMessagesClientIClientForcedEnumDependencies {
 	optional int32 d = 4 [(.description) = "enum"];
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreBrowseContext {
 	optional string language = 1;
 	optional int32 elanguage = 2;
@@ -7204,12 +7204,13 @@ message StoreBrowseContext {
 	optional int32 steam_realm = 4;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreBrowseFilterFailure {
 	optional int32 filter_failure = 1 [default = 0, (.description) = "enum"];
 	optional bool already_owned = 5;
 	optional bool on_wishlist = 6;
 	optional bool ignored = 7;
+	optional bool ignored_creator = 8;
 	optional bool not_in_users_language = 10;
 	optional bool not_on_users_platform = 11;
 	optional bool demo_for_owned_game = 12;
@@ -7223,7 +7224,7 @@ message StoreBrowseFilterFailure {
 	repeated int32 excluded_content_descriptorids = 30 [(.description) = "enum"];
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreBrowseItemDataRequest {
 	optional bool include_assets = 1;
 	optional bool include_release = 2;
@@ -7247,7 +7248,7 @@ message StoreBrowseItemDataRequest {
 	optional bool include_optin_registration_tags = 20;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreGameRating {
 	optional string type = 1;
 	optional string rating = 2;
@@ -7266,7 +7267,7 @@ message StoreGameRating {
 	optional string image_target = 21;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem {
 	optional int32 item_type = 1 [(.description) = "enum"];
 	optional uint32 id = 2;
@@ -7321,13 +7322,13 @@ message StoreItem {
 	repeated .StoreItem_PurchaseNote purchase_notes = 78;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_AIGeneratedContentService {
 	optional string name = 1;
 	optional string url = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Anticheat {
 	optional bool kernel_mode = 1;
 	optional bool uninstall_completely = 2;
@@ -7337,7 +7338,7 @@ message StoreItem_Anticheat {
 	optional string name_loc = 6;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Assets {
 	optional string asset_url_format = 1;
 	optional string main_capsule = 2;
@@ -7363,7 +7364,7 @@ message StoreItem_Assets {
 	optional string creator_home_background = 22;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_BasicInfo {
 	optional string short_description = 1;
 	repeated .StoreItem_BasicInfo_CreatorHomeLink publishers = 2;
@@ -7372,33 +7373,33 @@ message StoreItem_BasicInfo {
 	optional string capsule_headline = 5;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_BasicInfo_CreatorHomeLink {
 	optional string name = 1;
 	optional uint32 creator_clan_account_id = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Categories {
 	repeated uint32 supported_player_categoryids = 2;
 	repeated uint32 feature_categoryids = 3;
 	repeated uint32 controller_categoryids = 4;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Demo {
 	optional uint32 appid = 1;
 	optional string label = 2;
 	optional bool show_above_purchase = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Eula {
 	optional string name = 1;
 	optional string url = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails {
 	repeated .SteamAward steam_award = 1;
 	optional bool vetted = 2;
@@ -7437,15 +7438,18 @@ message StoreItem_ExtraDetails {
 	repeated .StoreItem_ExtraDetails_Season seasons = 31;
 	optional int32 video_extras_note = 32 [(.description) = "enum"];
 	optional bool has_community_hub = 33;
+	optional .StoreItem_ExtraDetails_EventSpotlight event_spotlight = 34;
+	optional .StoreItem_ExtraDetails_MusicAlbum music_album = 35;
+	repeated .StoreItem_ExtraDetails_SalePage sale_pages = 36;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_AIGeneratedContentService {
 	optional string name = 1;
 	optional string url = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_Anticheat {
 	optional bool kernel_mode = 1;
 	optional bool uninstall_completely = 2;
@@ -7455,7 +7459,7 @@ message StoreItem_ExtraDetails_Anticheat {
 	optional string name_loc = 6;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_CastAndCrew {
 	repeated string directors = 1;
 	repeated string producers = 2;
@@ -7464,7 +7468,7 @@ message StoreItem_ExtraDetails_CastAndCrew {
 	repeated string actors = 5;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_EarlyAccess {
 	optional string why_bbcode = 1;
 	optional string how_long_bbcode = 2;
@@ -7475,20 +7479,27 @@ message StoreItem_ExtraDetails_EarlyAccess {
 	optional string description_bbcode = 7;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_Episode {
 	optional string number = 1;
 	optional int32 type = 2 [(.description) = "enum"];
 	optional bool hide_details = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_Eula {
 	optional string name = 1;
 	optional string url = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_EventSpotlight {
+	optional uint32 clan_account_id = 1;
+	optional fixed64 event_gid = 2;
+	optional fixed64 announcement_gid = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_LinksAndInfo {
 	optional string website = 1;
 	optional string stats_url = 2;
@@ -7502,21 +7513,39 @@ message StoreItem_ExtraDetails_LinksAndInfo {
 	optional uint32 achievement_count = 10;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_Metacritic {
 	optional uint32 score = 1;
 	optional string url = 2;
 	optional bool always_show = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_MusicAlbum {
+	repeated .StoreItem_ExtraDetails_MusicAlbum_Track tracks = 1;
+	optional string artist = 2;
+	optional string composer = 3;
+	optional string label = 4;
+	optional string other_credits = 5;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_MusicAlbum_Track {
+	optional uint32 disc_number = 1;
+	optional uint32 track_number = 2;
+	optional string name = 3;
+	optional string other_name = 4;
+	optional uint32 duration_seconds = 5;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_PageSection {
 	optional string label = 1;
 	optional string content_bbcode = 2;
 	optional int32 banner = 3 [(.description) = "enum"];
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_PressReview {
 	optional string quote = 1;
 	optional string score = 2;
@@ -7524,19 +7553,25 @@ message StoreItem_ExtraDetails_PressReview {
 	optional string url = 4;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails_SalePage {
+	optional uint32 clan_account_id = 1;
+	optional fixed64 event_gid = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_Season {
 	optional int32 index = 1;
 	optional string name = 2;
 	repeated uint32 episode_appids = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_SystemRequirements {
 	repeated .StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements platforms = 1;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements {
 	optional int32 platform = 1 [(.description) = "enum"];
 	optional .StoreItem_ExtraDetails_SystemRequirements_Requirements minimum = 2;
@@ -7546,7 +7581,7 @@ message StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements {
 	optional int32 unsupported_os_note = 6 [(.description) = "enum"];
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_SystemRequirements_Requirements {
 	optional string os_version = 1;
 	optional bool os_version_unsupported = 2;
@@ -7563,13 +7598,13 @@ message StoreItem_ExtraDetails_SystemRequirements_Requirements {
 	optional string legacy_bbcode = 13;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ExtraDetails_SystemRequirements_Size {
 	optional string amount = 1;
 	optional string units = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_FreeWeekend {
 	optional uint32 start_time = 1;
 	optional uint32 end_time = 2;
@@ -7577,7 +7612,7 @@ message StoreItem_FreeWeekend {
 	optional uint32 appid = 4;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_IncludedItems {
 	repeated .StoreItem included_apps = 1;
 	repeated .StoreItem included_packages = 2;
@@ -7585,20 +7620,20 @@ message StoreItem_IncludedItems {
 	repeated .StoreItem included_creators = 4;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Link {
 	optional int32 link_type = 1 [(.description) = "enum"];
 	optional string url = 2;
 	optional string text = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_OptInRegistrationTags {
 	optional string optin_name = 1;
 	repeated string values = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_PackageGroup {
 	optional string name = 1;
 	optional string heading = 2;
@@ -7607,14 +7642,14 @@ message StoreItem_PackageGroup {
 	optional string dropdown_description_bbcode = 5;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_PageSection {
 	optional string label = 1;
 	optional string content_bbcode = 2;
 	optional int32 banner = 3 [(.description) = "enum"];
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Platforms {
 	optional bool windows = 1;
 	optional bool mac = 2;
@@ -7626,7 +7661,7 @@ message StoreItem_Platforms {
 	optional int32 steam_machine_compat_category = 14 [(.description) = "enum"];
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Platforms_VRSupport {
 	optional bool vrhmd = 1;
 	optional bool vrhmd_only = 2;
@@ -7637,13 +7672,13 @@ message StoreItem_Platforms_VRSupport {
 	optional bool valve_index = 43;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Playtest {
 	optional uint32 appid = 1;
 	optional bool is_open = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_PressReview {
 	optional string quote = 1;
 	optional string score = 2;
@@ -7651,14 +7686,14 @@ message StoreItem_PressReview {
 	optional string url = 4;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_PurchaseNote {
 	optional int32 type = 1 [(.description) = "enum"];
 	optional bool highlighted = 2;
 	optional string text_bbcode = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_PurchaseOption {
 	optional int32 packageid = 1;
 	optional int32 bundleid = 2;
@@ -7691,9 +7726,10 @@ message StoreItem_PurchaseOption {
 	optional uint32 free_with_master_sub_appid = 54;
 	optional string formatted_lowest_recent_price = 55;
 	optional bool is_free_license = 56;
+	optional int32 combined_discount_pct = 57;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_PurchaseOption_Discount {
 	optional int64 discount_amount = 1;
 	optional string discount_description = 2;
@@ -7701,7 +7737,7 @@ message StoreItem_PurchaseOption_Discount {
 	optional uint32 master_sub_appid = 4;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_PurchaseOption_RecurrenceInfo {
 	optional int32 packageid = 1;
 	optional int32 billing_agreement_type = 2;
@@ -7711,14 +7747,14 @@ message StoreItem_PurchaseOption_RecurrenceInfo {
 	optional string formatted_renewal_price = 6;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_RelatedF2P {
 	optional uint32 appid = 1;
 	optional string header_text = 2;
 	optional string description_text = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_RelatedItems {
 	optional uint32 parent_appid = 1;
 	repeated uint32 demo_appid = 2;
@@ -7730,7 +7766,7 @@ message StoreItem_RelatedItems {
 	repeated uint32 dlc_parent_appids = 9;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_ReleaseInfo {
 	optional uint32 steam_release_date = 1;
 	optional uint32 original_release_date = 2;
@@ -7749,14 +7785,14 @@ message StoreItem_ReleaseInfo {
 	optional uint32 advance_access_date = 23;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Reviews {
 	optional .StoreItem_Reviews_StoreReviewSummary summary_filtered = 1;
 	optional .StoreItem_Reviews_StoreReviewSummary summary_unfiltered = 2;
 	optional .StoreItem_Reviews_StoreReviewSummary summary_language_specific = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Reviews_StoreReviewSummary {
 	optional uint32 review_count = 1;
 	optional int32 percent_positive = 2;
@@ -7764,19 +7800,21 @@ message StoreItem_Reviews_StoreReviewSummary {
 	optional string review_score_label = 4;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Screenshots {
 	repeated .StoreItem_Screenshots_Screenshot all_ages_screenshots = 2;
 	repeated .StoreItem_Screenshots_Screenshot mature_content_screenshots = 3;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Screenshots_Screenshot {
 	optional string filename = 1;
 	optional int32 ordinal = 2;
+	optional string alt_text = 3;
+	optional int32 category = 4 [(.description) = "enum"];
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_SupportedLanguage {
 	optional int32 elanguage = 1 [default = -1];
 	optional bool supported = 2;
@@ -7785,25 +7823,25 @@ message StoreItem_SupportedLanguage {
 	optional int32 eadditionallanguage = 5 [default = -1];
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Tag {
 	optional uint32 tagid = 1;
 	optional uint32 weight = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Trailers {
 	repeated .StoreItem_Trailers_Trailer highlights = 1;
 	repeated .StoreItem_Trailers_Trailer other_trailers = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Trailers_AdaptiveTrailer {
 	optional string cdn_path = 1;
 	optional string encoding = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Trailers_Trailer {
 	optional string trailer_name = 1;
 	optional string trailer_url_format = 2;
@@ -7817,15 +7855,17 @@ message StoreItem_Trailers_Trailer {
 	optional int32 trailer_base_id = 12;
 	optional int32 trailer_category = 13 [(.description) = "enum"];
 	optional bool all_ages = 14;
+	optional string screenshot_small = 15;
+	optional uint32 trailer_id = 16;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist
 message StoreItem_Trailers_VideoSource {
 	optional string filename = 1;
 	optional string type = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit
 message StoreItemID {
 	optional uint32 appid = 1;
 	optional uint32 packageid = 2;

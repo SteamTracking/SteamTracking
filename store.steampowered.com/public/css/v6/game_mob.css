@@ -892,7 +892,6 @@
 	/* Increase font size: DLC list */
 	html.responsive .game_purchase_price,
 	html.responsive .discount_pct,
-	html.responsive .discount_original_price,
 	html.responsive .discount_final_price {
 		font-size: 14px;
 	}

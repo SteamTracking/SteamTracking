@@ -1046,8 +1046,18 @@ td.wht_wallet_change.wallet_entry_highlight {
 }
 
 .wht_original_price {
-	text-decoration: line-through;
-	color: #738895;
+	position: relative;
+	color: #8b929a;
+}
+.wht_original_price:before {
+	content: '';
+	left: 0px;
+	right: 0px;
+	position: absolute;
+	top: 43%;
+	border-bottom: 1.5px solid #8b929a;
+	transform: skewY(-8deg);
+	box-shadow: 0 0 2px black;
 }
 .wht_discounted_price {
 	color: #BEEE11;

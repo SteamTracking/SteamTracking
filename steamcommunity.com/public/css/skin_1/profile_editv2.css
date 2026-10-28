@@ -268,6 +268,66 @@ select.gray_bevel {
 	color: #ffffff;
 }
 
+.showcase_game_filter_item.selected {
+	background: rgba( 103, 193, 245, 0.35 );
+}
+
+/* Fixed size, like the achievement picker, so filtering or picking a game doesn't resize the dialog.
+   The dialog scrolls when the window is too short. */
+.showcase_game_picker {
+	width: 760px;
+}
+
+/* short lists stay short; the picker keeps the list's opening height while filtering */
+/* btn_disabled only dims it */
+.showcase_game_picker_save.btn_disabled {
+	pointer-events: none;
+}
+
+.showcase_game_picker .showcase_game_picker_games {
+	max-height: 220px;
+}
+
+/* the selected game's options on the left, a preview of the slot on the right */
+.showcase_game_picker_details {
+	display: grid;
+	grid-template-columns: minmax( 0, 1fr ) 304px;
+	gap: 12px;
+	height: 200px;
+	margin-top: 12px;
+}
+
+.showcase_game_picker_instructions {
+	grid-column: 1 / -1;
+	align-self: center;
+	text-align: center;
+	color: #8f98a0;
+}
+
+.showcase_completionist_feature_options {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	min-height: 0;
+}
+
+.showcase_completionist_feature {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.showcase_completionist_sets {
+	flex: 1;
+	min-height: 0;
+	max-height: none;
+	margin-top: 0;
+}
+
+.showcase_completionist_feature_preview {
+	align-self: center;
+}
+
 .showcase_game_filter_empty {
 	padding: 12px 10px;
 	color: #8f98a0;

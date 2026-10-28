@@ -5,19 +5,19 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./broadcastapp.js?contenthash=Cy8C2JMd",
+      "./broadcastapp.js?contenthash=B6cq007Z",
       "./rolldown-runtime.js?contenthash=Bhk3NnG1",
-      "./localization.js?contenthash=BbMOQ_Ae",
-      "./shared_dialog.js?contenthash=WvH2gnj2",
-      "./webpackinit.js?contenthash=Cz42I4Gb",
+      "./localization.js?contenthash=BbczadiP",
+      "./shared_dialog.js?contenthash=Bjg1l0y4",
+      "./webpackinit.js?contenthash=7c4B_KgN",
       "../../css/webui/shared_dialog2.css?contenthash=NjhQ-d4N",
-      "./friendsui_desktopapp.js?contenthash=_B26r5LR",
-      "./defaultappheader.js?contenthash=0-KHOTKe",
-      "./broadcastwatchstore.js?contenthash=CFH0mf1t",
+      "./friendsui_desktopapp.js?contenthash=Z0qtwhtB",
+      "./defaultappheader.js?contenthash=ClYGx_wk",
+      "./broadcastwatchstore.js?contenthash=8PXRLCEh",
       "../../css/webui/defaultappheader.css?contenthash=DwpeiF5o",
-      "../../css/webui/friendsui_desktopapp.css?contenthash=DLqYsH1V",
-      "./broadcastplayer.js?contenthash=DIiUNv6d",
-      "../../css/webui/broadcastplayer.css?contenthash=CKOEWNkt",
+      "../../css/webui/friendsui_desktopapp.css?contenthash=as1wmsd6",
+      "./broadcastplayer.js?contenthash=Z53i0P2A",
+      "../../css/webui/broadcastplayer.css?contenthash=DvWbSQLN",
       "../../css/webui/broadcastapp.css?contenthash=DLwrs7u4",
     ]),
 ) => i.map((i) => d[i]);
@@ -26,30 +26,30 @@ import { i as e, t } from "./rolldown-runtime.js?contenthash=Bhk3NnG1";
 import { t as n } from "./_rolldown_dynamic_import_helper.js?contenthash=B8fe511f";
 import {
   At as r,
-  B as i,
-  Bn as a,
-  Bt as o,
-  Ct as s,
-  En as c,
-  H as l,
-  I as u,
-  J as d,
-  Ot as f,
-  T as p,
-  Vt as m,
-  W as h,
-  Wt as g,
-  a as _,
-  b as v,
+  G as i,
+  L as a,
+  Mn as o,
+  Mt as s,
+  N as c,
+  T as l,
+  Tt as u,
+  Un as d,
+  Ut as f,
+  V as p,
+  W as m,
+  Wt as h,
+  a as g,
+  b as _,
+  jt as v,
   kn as y,
-  kt as b,
+  ln as b,
   n as x,
-  on as S,
-  q as C,
-  sn as w,
-  w as T,
-} from "./localization.js?contenthash=BbMOQ_Ae";
-import { ac as E } from "./shared_dialog.js?contenthash=WvH2gnj2";
+  qt as S,
+  un as C,
+  w,
+  z as T,
+} from "./localization.js?contenthash=BbczadiP";
+import { ac as E } from "./shared_dialog.js?contenthash=Bjg1l0y4";
 import {
   A as ee,
   C as te,
@@ -67,20 +67,20 @@ import {
   w as se,
   x as ce,
   y as le,
-} from "./friendsui_desktopapp.js?contenthash=_B26r5LR";
-import { c as N } from "./defaultappheader.js?contenthash=0-KHOTKe";
-import { l as P, u as ue } from "./webpackinit.js?contenthash=Cz42I4Gb";
+} from "./friendsui_desktopapp.js?contenthash=Z0qtwhtB";
+import { c as N } from "./defaultappheader.js?contenthash=ClYGx_wk";
+import { l as P, u as ue } from "./webpackinit.js?contenthash=7c4B_KgN";
 import {
-  E as de,
-  w as fe,
-} from "./broadcastwatchstore.js?contenthash=CFH0mf1t";
+  h as de,
+  p as fe,
+} from "./broadcastwatchstore.js?contenthash=8PXRLCEh";
 function pe(e) {
   return `unknown EMsg ( ` + e + ` )`;
 }
 var F = e(fe()),
   me = class {
     m_bRunOnce = !1;
-    m_ClientConnectionCallbacks = new y();
+    m_ClientConnectionCallbacks = new o();
     m_mapServerTypeCallbacks = new Map();
     constructor(e = !1) {
       this.m_bRunOnce = e;
@@ -103,7 +103,7 @@ var F = e(fe()),
       return (
         t !== void 0 &&
           (this.m_mapServerTypeCallbacks.has(t) ||
-            this.m_mapServerTypeCallbacks.set(t, new y()),
+            this.m_mapServerTypeCallbacks.set(t, new o()),
           (n = this.m_mapServerTypeCallbacks.get(t))),
         n.Register(e)
       );
@@ -151,7 +151,7 @@ var L = class {
   m_nPerfClockServerMSOffset = new Date().getTime() - performance.now();
   m_messageHandlers = new le();
   constructor() {
-    C(this),
+    m(this),
       (this.m_ServiceTransport = {
         SendMsg: (e, t, n) => (
           (t.GetEMsg() === void 0 || t.GetEMsg() != 9804) && t.SetEMsg(151),
@@ -249,7 +249,7 @@ var L = class {
     return !0;
   }
   ResolveAwaitWithTransportError(e, t, n, r) {
-    let i = m.Init(t);
+    let i = h.Init(t);
     i.Hdr().set_eresult(2),
       i.Hdr().set_transport_error(n),
       r && i.Hdr().set_error_message(r),
@@ -313,7 +313,7 @@ var L = class {
         this.m_callbacksOnDisconnectOneTime.RunCallbacks(e, t));
   }
   ClientServersAvailableHandler = this.m_messageHandlers.RegisterEMessageAction(
-    w,
+    C,
     te,
     (e) => {
       let t = new Set(this.m_setConnectedServers);
@@ -339,7 +339,7 @@ var L = class {
   DEBUG_LogCMInterfaceActivity(e, t, n = !0) {}
   DEBUG_LogMessage(e, ...t) {}
   async InternalAdjustClock() {
-    let e = m.Init(re, S);
+    let e = h.Init(re, b);
     return (
       e
         .Body()
@@ -354,7 +354,7 @@ var L = class {
             ? ((this.m_bPerformedInitialClockAdjustment = !0),
               (this.m_nPerfClockServerMSOffset = i - t),
               (this.m_nWallClockDriftMS = n.getTime() - i))
-            : a(
+            : d(
                 !1,
                 `Error computing server time, server echo: ${r} server time ${i}`,
               ),
@@ -378,18 +378,18 @@ var L = class {
     return new Date(e * 1e3 + this.m_nWallClockDriftMS);
   }
 };
-u([d], L.prototype, `m_steamid`, void 0),
-  u([d], L.prototype, `m_bLoggedOn`, void 0),
-  u([d], L.prototype, `m_bCompletedInitialConnect`, void 0),
-  u([d], L.prototype, `m_unAccountFlags`, void 0),
-  u([d], L.prototype, `m_strIPCountry`, void 0),
-  u([d], L.prototype, `m_strPersonaName`, void 0),
-  u([d], L.prototype, `m_rtReconnectThrottleStart`, void 0),
-  u([d], L.prototype, `m_rtReconnectThrottleExpiration`, void 0),
-  u([d], L.prototype, `m_bConnected`, void 0),
-  u([d], L.prototype, `m_bPerformedInitialClockAdjustment`, void 0),
-  u([i], L.prototype, `DispatchMessage`, null),
-  u([i], L.prototype, `OnDisconnect`, null);
+c([i], L.prototype, `m_steamid`, void 0),
+  c([i], L.prototype, `m_bLoggedOn`, void 0),
+  c([i], L.prototype, `m_bCompletedInitialConnect`, void 0),
+  c([i], L.prototype, `m_unAccountFlags`, void 0),
+  c([i], L.prototype, `m_strIPCountry`, void 0),
+  c([i], L.prototype, `m_strPersonaName`, void 0),
+  c([i], L.prototype, `m_rtReconnectThrottleStart`, void 0),
+  c([i], L.prototype, `m_rtReconnectThrottleExpiration`, void 0),
+  c([i], L.prototype, `m_bConnected`, void 0),
+  c([i], L.prototype, `m_bPerformedInitialClockAdjustment`, void 0),
+  c([a], L.prototype, `DispatchMessage`, null),
+  c([a], L.prototype, `OnDisconnect`, null);
 var R = class extends L {
   m_hSharedConnection;
   m_hEMsgRegistrationObserver;
@@ -397,7 +397,7 @@ var R = class extends L {
   m_setServiceMethodHandlers = new Set();
   constructor() {
     super(),
-      C(this),
+      m(this),
       E(`User.RegisterForConnectionAttemptsThrottled`) &&
         SteamClient.User.RegisterForConnectionAttemptsThrottled(
           this.OnConnectionAttemptThrottled,
@@ -414,8 +414,8 @@ var R = class extends L {
               r,
             )
               .then((e) => {
-                let r = new g(e),
-                  i = m.InitFromPacket(t, r);
+                let r = new S(e),
+                  i = h.InitFromPacket(t, r);
                 this.DEBUG_LogCMInterfaceActivity(i, `receive`, !0),
                   i.BIsValid()
                     ? n(i)
@@ -434,8 +434,8 @@ var R = class extends L {
               r,
             )
               .then((e) => {
-                let r = new g(F.toByteArray(e)),
-                  i = m.InitFromPacket(t, r);
+                let r = new S(F.toByteArray(e)),
+                  i = h.InitFromPacket(t, r);
                 this.DEBUG_LogCMInterfaceActivity(i, `receive`, !0),
                   i.BIsValid()
                     ? n(i)
@@ -466,23 +466,23 @@ var R = class extends L {
     );
   }
   OnMsgRecvd(e) {
-    let t = new g(e),
-      n = o.InitHeaderFromPacket(t);
+    let t = new S(e),
+      n = f.InitHeaderFromPacket(t);
     this.DispatchMessage(n);
   }
   OnLogonInfoChanged(e) {
     this.DEBUG_LogMessage(`Login info from client: `, e),
       (this.m_bLoggedOn = e.bLoggedOn),
-      (b.EUNIVERSE = e.eUniverse),
-      (b.MEDIA_CDN_COMMUNITY_URL = e.strCommunityImagesURL),
-      (b.COUNTRY = e.strUserCountry),
+      (v.EUNIVERSE = e.eUniverse),
+      (v.MEDIA_CDN_COMMUNITY_URL = e.strCommunityImagesURL),
+      (v.COUNTRY = e.strUserCountry),
       e.strSteamid
         ? ((this.m_steamid = new P(e.strSteamid)),
           (this.m_strPersonaName = e.strPersonaName),
-          (r.logged_in = e.bLoggedOn),
-          (r.steamid = e.strSteamid),
-          (r.accountid = this.m_steamid.GetAccountID()),
-          (r.account_name = e.strAccountName))
+          (s.logged_in = e.bLoggedOn),
+          (s.steamid = e.strSteamid),
+          (s.accountid = this.m_steamid.GetAccountID()),
+          (s.account_name = e.strAccountName))
         : this.m_steamid.GetAccountID() != 0 && (this.m_steamid = new P()),
       this.m_bLoggedOn
         ? (this.m_bConnected || this.OnConnect(), this.OnLoggedOn())
@@ -512,7 +512,7 @@ var R = class extends L {
       this.m_setEMsgHandlers.clear(),
       this.m_setServiceMethodHandlers.clear(),
       this.m_hEMsgRegistrationObserver && this.m_hEMsgRegistrationObserver(),
-      (this.m_hEMsgRegistrationObserver = l(() => {
+      (this.m_hEMsgRegistrationObserver = T(() => {
         if (this.m_hSharedConnection) {
           for (let e of this.m_messageHandlers.emsg_list)
             this.m_setEMsgHandlers.has(e) ||
@@ -554,7 +554,7 @@ var R = class extends L {
   }
   Disconnect() {
     if (this.m_hSharedConnection) {
-      let e = m.Init(se, 716);
+      let e = h.Init(se, 716);
       e.Body().set_persona_state(0),
         e.Body().set_persona_set_by_user(!1),
         this.Send(e),
@@ -576,12 +576,12 @@ var R = class extends L {
     e.rtCooldownExpiration == 0
       ? (this.m_rtReconnectThrottleStart = 0)
       : this.m_rtReconnectThrottleStart == 0 &&
-        (this.m_rtReconnectThrottleStart = v()),
+        (this.m_rtReconnectThrottleStart = _()),
       (this.m_rtReconnectThrottleExpiration = e.rtCooldownExpiration);
   }
 };
-u([i], R.prototype, `OnLogonInfoChanged`, null),
-  u([i.bound], R.prototype, `OnConnectionAttemptThrottled`, null);
+c([a], R.prototype, `OnLogonInfoChanged`, null),
+  c([a.bound], R.prototype, `OnConnectionAttemptThrottled`, null);
 var z = t((e) => {
     var t =
       typeof Uint8Array < `u` &&
@@ -3692,10 +3692,10 @@ var z = t((e) => {
       return `wss://` + this.FixDevHost(e) + `/cmsocket/`;
     }
     FixDevHost(e) {
-      return b.EUNIVERSE, e;
+      return v.EUNIVERSE, e;
     }
     GetLocalStorageKey() {
-      return `CCMList_` + b.EUNIVERSE;
+      return `CCMList_` + v.EUNIVERSE;
     }
     WriteCMListToLocalStorage() {
       this.m_Storage.StoreObject(this.GetLocalStorageKey(), this.m_CMList);
@@ -3723,16 +3723,16 @@ var z = t((e) => {
         let i = Le(r),
           a = !i || r.rtLastCheck < e;
         a && t.length < $ && t.push(r),
-          (!a || b.IN_MOBILE) && i && i < Ee && (n[r.strHost] = r);
+          (!a || v.IN_MOBILE) && i && i < Ee && (n[r.strHost] = r);
       }
       `${t.length}`;
       let r = !1;
       return new Promise((e, i) => {
-        let o = `immediate`,
+        let a = `immediate`,
+          o,
           s,
-          c,
-          l = (t) => {
-            if ((a(!r, `fnPingingComplete called a second time`), !r)) {
+          c = (t) => {
+            if ((d(!r, `fnPingingComplete called a second time`), !r)) {
               let n = Object.keys(t)
                 .map((e) => t[e])
                 .sort((e, t) => Le(e) - Le(t));
@@ -3740,8 +3740,8 @@ var z = t((e) => {
                 (`${n.length}${n.length ? n[0].strHost : `none`}`,
                 (r = !0),
                 this.WriteCMListToLocalStorage(),
+                o && window.clearTimeout(o),
                 s && window.clearTimeout(s),
-                c && window.clearTimeout(c),
                 n.length)
               )
                 return e(n);
@@ -3751,37 +3751,37 @@ var z = t((e) => {
             }
           };
         (t.length === 0 ||
-          Object.keys(n).some((e) => this.BCMOkToUse(n[e], o)) ||
-          (b.IN_MOBILE && Object.keys(n).length)) &&
-          (Object.keys(n).length && b.IN_MOBILE, l(n)),
+          Object.keys(n).some((e) => this.BCMOkToUse(n[e], a)) ||
+          (v.IN_MOBILE && Object.keys(n).length)) &&
+          (Object.keys(n).length && v.IN_MOBILE, c(n)),
           r ||
-            ((s = window.setTimeout(() => {
-              (o = `timeout`),
+            ((o = window.setTimeout(() => {
+              (a = `timeout`),
                 !r &&
-                  Object.keys(n).some((e) => this.BCMOkToUse(n[e], o)) &&
-                  l(n);
+                  Object.keys(n).some((e) => this.BCMOkToUse(n[e], a)) &&
+                  c(n);
             }, Q)),
-            (c = window.setTimeout(() => {
-              (o = `seriouslytimeout`), l(n);
+            (s = window.setTimeout(() => {
+              (a = `seriouslytimeout`), c(n);
             }, Te)));
-        let u = 0,
-          d = 0,
+        let l = 0,
+          u = 0,
           f,
           p = (e) => {
-            !r && this.BCMOkToUse(e, o)
-              ? l({ [e.strHost]: e })
+            !r && this.BCMOkToUse(e, a)
+              ? c({ [e.strHost]: e })
               : (n[e.strHost] = e),
               (r || !f()) &&
-                --d == 0 &&
+                --u == 0 &&
                 (r
                   ? this.WriteCMListToLocalStorage()
                   : this.BCMOkToUse(e, `seriouslytimeout`)
-                    ? l({ [e.strHost]: e })
-                    : ((n[e.strHost] = e), l(n)));
+                    ? c({ [e.strHost]: e })
+                    : ((n[e.strHost] = e), c(n)));
           };
         f = () => {
-          if (u < t.length) {
-            let e = t[u++];
+          if (l < t.length) {
+            let e = t[l++];
             return (
               this.PingCM(e).then(() => {
                 p(e);
@@ -3791,7 +3791,7 @@ var z = t((e) => {
           }
           return !1;
         };
-        for (let e = 0; e < we; e++) f() && d++;
+        for (let e = 0; e < we; e++) f() && u++;
       });
     }
     GetCMWithFewestDisconnects() {
@@ -3840,7 +3840,7 @@ var z = t((e) => {
     }
   };
 async function Pe() {
-  let e = `${b.WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&origin=${self.origin}`;
+  let e = `${v.WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&origin=${self.origin}`;
   `${e}`;
   let t = (await Se.default.get(e)).data,
     n = (t && t.response && t.response.serverlist) || [];
@@ -3893,7 +3893,7 @@ var Re = 3,
     m_mapWaitingCallbacks = new Map();
     m_CMList = new Ne();
     constructor(e) {
-      super(), C(this), this.m_CMList.Init(e);
+      super(), m(this), this.m_CMList.Init(e);
     }
     BIsConnected() {
       return this.m_Socket && this.m_Socket.readyState == WebSocket.OPEN;
@@ -3955,34 +3955,34 @@ var Re = 3,
       return (
         (t.binaryType = `arraybuffer`),
         (t.onmessage = (e) => {
-          let t = new g(e.data),
-            n = o.InitHeaderFromPacket(t);
+          let t = new S(e.data),
+            n = f.InitHeaderFromPacket(t);
           n.GetEMsg() == 1
-            ? this.DecodeAndDispatchMultiMsg(m.InitFromMsg(c, n))
+            ? this.DecodeAndDispatchMultiMsg(h.InitFromMsg(y, n))
             : this.DispatchMessage(n);
         }),
         new Promise((n, r) => {
           let i = !1,
-            o = 3e3,
-            s = window.setTimeout(() => {
+            a = 3e3,
+            o = window.setTimeout(() => {
               console.warn(
-                `Socket connection timed out after ${o}ms: ${e.strHost}`,
+                `Socket connection timed out after ${a}ms: ${e.strHost}`,
               ),
                 (i = !0),
                 t.close(4e3),
                 this.m_CMList.RecordCMDisconnected(e),
                 r();
-            }, o);
+            }, a);
           (t.onopen = () => {
             console.log(`Connected socket to host ${e.strHost}`),
-              a(!i, `Socket connection was opened after timing out.`),
-              i || window.clearTimeout(s),
+              d(!i, `Socket connection was opened after timing out.`),
+              i || window.clearTimeout(o),
               n(t);
           }),
             (t.onerror = (t) => {
               i ||
-                (window.clearTimeout(s),
-                a(!1, `Socket connect failed`, t),
+                (window.clearTimeout(o),
+                d(!1, `Socket connect failed`, t),
                 console.log(t),
                 t.message ? console.log(t.message) : console.log(`No message`),
                 this.m_CMList.RecordCMDisconnected(e),
@@ -4006,7 +4006,7 @@ var Re = 3,
         ));
     }
     SendHeartbeat() {
-      let e = m.Init(ne, 703);
+      let e = h.Init(ne, 703);
       this.Send(e);
     }
     OnConnect() {
@@ -4067,7 +4067,7 @@ var Re = 3,
         if (this.m_mapWaitingCallbacks.has(t)) {
           let n = this.m_mapWaitingCallbacks.get(t);
           if (n) {
-            let r = m.InitFromMsg(n.msgClass, e);
+            let r = h.InitFromMsg(n.msgClass, e);
             this.DEBUG_LogCMInterfaceActivity(r, `receive`, !0),
               r.BIsValid()
                 ? n.fnCallback(r)
@@ -4123,25 +4123,25 @@ var Re = 3,
       let t = e.Body().message_body();
       if (!t) return;
       e.Body().size_unzipped() && (t = xe.inflate(t));
-      let n = new g(t);
+      let n = new S(t);
       for (; n.GetCountBytesRemaining() > 0; ) {
         let e = n.GetUint32(),
-          t = o.InitHeaderFromPacket(new g(n.GetPacket(), n.TellGet(), e));
+          t = f.InitHeaderFromPacket(new S(n.GetPacket(), n.TellGet(), e));
         this.DispatchMessage(t), n.SeekGetCurrent(e);
       }
     }
   };
-u([i], ze.prototype, `DecodeAndDispatchMultiMsg`, null),
-  h({ enforceActions: `never` }),
-  (window.AssertMsg = a);
+c([a], ze.prototype, `DecodeAndDispatchMultiMsg`, null),
+  p({ enforceActions: `never` }),
+  (window.AssertMsg = d);
 function Be() {
   let e = new oe(!1),
     t,
     n = null,
-    i = (t = new ze(e.Storage));
+    r = (t = new ze(e.Storage));
   j.Get().SetCMInterface(t),
-    (n = new A(i, b.EREALM)),
-    n.PerformInitialLogon(r),
+    (n = new A(r, v.EREALM)),
+    n.PerformInitialLogon(s),
     e.Init(t, !1, n),
     ae(
       e.FriendStore,
@@ -4151,10 +4151,10 @@ function Be() {
 }
 async function Ve() {
   ie();
-  let { CBroadcastApp: e } = await p(
+  let { CBroadcastApp: e } = await l(
     async () => {
       let { CBroadcastApp: e } = await import(
-        `./broadcastapp.js?contenthash=Cy8C2JMd`
+        `./broadcastapp.js?contenthash=B6cq007Z`
       );
       return { CBroadcastApp: e };
     },
@@ -4166,12 +4166,12 @@ async function Ve() {
   });
 }
 document.addEventListener(`DOMContentLoaded`, async function () {
-  s(), k(), await He(b.LANGUAGE);
+  u(), k(), await He(v.LANGUAGE);
   let e = !0;
-  f.steamid && de(f.steamid),
-    !b.IN_CLIENT &&
+  r.steamid && de(r.steamid),
+    !v.IN_CLIENT &&
       ce.STEAM_TV &&
-      (r.logged_in ? M(f.steamid) : ((e = !1), Ve())),
+      (s.logged_in ? M(r.steamid) : ((e = !1), Ve())),
     N.SetNavEventParams(`steamclient`, ce.STEAM_TV ? `steamtv` : `friendsui`),
     e && Be();
 });
@@ -4182,194 +4182,194 @@ async function He(e) {
       n(
         Object.assign({
           "../localization/friendsui_arabic.json": () =>
-            p(
-              () => import(`./friendsui_arabic.js?contenthash=B-bJtu7k`),
+            l(
+              () => import(`./friendsui_arabic.js?contenthash=CnZEM91y`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_brazilian.json": () =>
-            p(
-              () => import(`./friendsui_brazilian.js?contenthash=BpthACvy`),
+            l(
+              () => import(`./friendsui_brazilian.js?contenthash=ChGnBikL`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_bulgarian.json": () =>
-            p(
-              () => import(`./friendsui_bulgarian.js?contenthash=EfYZpE0Q`),
+            l(
+              () => import(`./friendsui_bulgarian.js?contenthash=NzeMeN1U`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_czech.json": () =>
-            p(
-              () => import(`./friendsui_czech.js?contenthash=DoSzdAcd`),
+            l(
+              () => import(`./friendsui_czech.js?contenthash=DY0U0Ufm`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_danish.json": () =>
-            p(
-              () => import(`./friendsui_danish.js?contenthash=h3CZXpVo`),
+            l(
+              () => import(`./friendsui_danish.js?contenthash=YKOxxopz`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_dutch.json": () =>
-            p(
-              () => import(`./friendsui_dutch.js?contenthash=CAgvO9CB`),
+            l(
+              () => import(`./friendsui_dutch.js?contenthash=CGapuncu`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_english.json": () =>
-            p(
-              () => import(`./friendsui_english.js?contenthash=BhHonhkI`),
+            l(
+              () => import(`./friendsui_english.js?contenthash=DVg31sHA`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_finnish.json": () =>
-            p(
-              () => import(`./friendsui_finnish.js?contenthash=B2VNMCwm`),
+            l(
+              () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_french.json": () =>
-            p(
-              () => import(`./friendsui_french.js?contenthash=BaPTQ8XP`),
+            l(
+              () => import(`./friendsui_french.js?contenthash=DFcwkjWI`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_german.json": () =>
-            p(
-              () => import(`./friendsui_german.js?contenthash=C0J4jbnK`),
+            l(
+              () => import(`./friendsui_german.js?contenthash=DQ9X1MPU`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_greek.json": () =>
-            p(
-              () => import(`./friendsui_greek.js?contenthash=Czyt_3yz`),
+            l(
+              () => import(`./friendsui_greek.js?contenthash=D5G4ezrZ`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_hungarian.json": () =>
-            p(
-              () => import(`./friendsui_hungarian.js?contenthash=B0IqucIH`),
+            l(
+              () => import(`./friendsui_hungarian.js?contenthash=Bn4GsGt9`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_indonesian.json": () =>
-            p(
-              () => import(`./friendsui_indonesian.js?contenthash=Di8XQJ4e`),
+            l(
+              () => import(`./friendsui_indonesian.js?contenthash=BdHxBrfS`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_italian.json": () =>
-            p(
-              () => import(`./friendsui_italian.js?contenthash=DdXCLXyk`),
+            l(
+              () => import(`./friendsui_italian.js?contenthash=Dfv4ZYTz`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_japanese.json": () =>
-            p(
-              () => import(`./friendsui_japanese.js?contenthash=DfRqrwQF`),
+            l(
+              () => import(`./friendsui_japanese.js?contenthash=BUwpM_dp`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_koreana.json": () =>
-            p(
-              () => import(`./friendsui_koreana.js?contenthash=yT-IL79K`),
+            l(
+              () => import(`./friendsui_koreana.js?contenthash=DQZ8-pXJ`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_latam.json": () =>
-            p(
-              () => import(`./friendsui_latam.js?contenthash=DPN8ov0P`),
+            l(
+              () => import(`./friendsui_latam.js?contenthash=Dn3i5z6D`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_malay.json": () =>
-            p(
-              () => import(`./friendsui_malay.js?contenthash=BImozhmP`),
+            l(
+              () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_norwegian.json": () =>
-            p(
-              () => import(`./friendsui_norwegian.js?contenthash=MOcLintx`),
+            l(
+              () => import(`./friendsui_norwegian.js?contenthash=Cbydn4il`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_polish.json": () =>
-            p(
-              () => import(`./friendsui_polish.js?contenthash=CScWovln`),
+            l(
+              () => import(`./friendsui_polish.js?contenthash=9Q9lFq0e`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_portuguese.json": () =>
-            p(
-              () => import(`./friendsui_portuguese.js?contenthash=ZrM7K-ix`),
+            l(
+              () => import(`./friendsui_portuguese.js?contenthash=CFYepeor`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_romanian.json": () =>
-            p(
-              () => import(`./friendsui_romanian.js?contenthash=B-BaWYoK`),
+            l(
+              () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_russian.json": () =>
-            p(
-              () => import(`./friendsui_russian.js?contenthash=nU9jtA28`),
+            l(
+              () => import(`./friendsui_russian.js?contenthash=BZFw9yAo`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_sc_schinese.json": () =>
-            p(
+            l(
               () => import(`./friendsui_sc_schinese.js?contenthash=DxZJpGQD`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_schinese.json": () =>
-            p(
-              () => import(`./friendsui_schinese.js?contenthash=w82AcbGD`),
+            l(
+              () => import(`./friendsui_schinese.js?contenthash=D_-9oeb8`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_spanish.json": () =>
-            p(
-              () => import(`./friendsui_spanish.js?contenthash=DK3_G90M`),
+            l(
+              () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_swedish.json": () =>
-            p(
-              () => import(`./friendsui_swedish.js?contenthash=BxZ-p38c`),
+            l(
+              () => import(`./friendsui_swedish.js?contenthash=CHg9O79L`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_tchinese.json": () =>
-            p(
-              () => import(`./friendsui_tchinese.js?contenthash=BrpuFb-a`),
+            l(
+              () => import(`./friendsui_tchinese.js?contenthash=DFe68QuO`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_thai.json": () =>
-            p(
-              () => import(`./friendsui_thai.js?contenthash=BhCQNQ5F`),
+            l(
+              () => import(`./friendsui_thai.js?contenthash=7zuSyyaN`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_turkish.json": () =>
-            p(
-              () => import(`./friendsui_turkish.js?contenthash=BxKC2vJC`),
+            l(
+              () => import(`./friendsui_turkish.js?contenthash=ObGSkyOE`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_ukrainian.json": () =>
-            p(
-              () => import(`./friendsui_ukrainian.js?contenthash=DD0ZQfYB`),
+            l(
+              () => import(`./friendsui_ukrainian.js?contenthash=DKGabtNo`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_vietnamese.json": () =>
-            p(
-              () => import(`./friendsui_vietnamese.js?contenthash=CqIYfrKb`),
+            l(
+              () => import(`./friendsui_vietnamese.js?contenthash=ChKd0lDP`),
               [],
               import.meta.url,
             ),
@@ -4382,198 +4382,198 @@ async function He(e) {
         : n(
             Object.assign({
               "../localization/friendsui_arabic.json": () =>
-                p(
-                  () => import(`./friendsui_arabic.js?contenthash=B-bJtu7k`),
+                l(
+                  () => import(`./friendsui_arabic.js?contenthash=CnZEM91y`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_brazilian.json": () =>
-                p(
-                  () => import(`./friendsui_brazilian.js?contenthash=BpthACvy`),
+                l(
+                  () => import(`./friendsui_brazilian.js?contenthash=ChGnBikL`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_bulgarian.json": () =>
-                p(
-                  () => import(`./friendsui_bulgarian.js?contenthash=EfYZpE0Q`),
+                l(
+                  () => import(`./friendsui_bulgarian.js?contenthash=NzeMeN1U`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_czech.json": () =>
-                p(
-                  () => import(`./friendsui_czech.js?contenthash=DoSzdAcd`),
+                l(
+                  () => import(`./friendsui_czech.js?contenthash=DY0U0Ufm`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_danish.json": () =>
-                p(
-                  () => import(`./friendsui_danish.js?contenthash=h3CZXpVo`),
+                l(
+                  () => import(`./friendsui_danish.js?contenthash=YKOxxopz`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_dutch.json": () =>
-                p(
-                  () => import(`./friendsui_dutch.js?contenthash=CAgvO9CB`),
+                l(
+                  () => import(`./friendsui_dutch.js?contenthash=CGapuncu`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_english.json": () =>
-                p(
-                  () => import(`./friendsui_english.js?contenthash=BhHonhkI`),
+                l(
+                  () => import(`./friendsui_english.js?contenthash=DVg31sHA`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_finnish.json": () =>
-                p(
-                  () => import(`./friendsui_finnish.js?contenthash=B2VNMCwm`),
+                l(
+                  () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_french.json": () =>
-                p(
-                  () => import(`./friendsui_french.js?contenthash=BaPTQ8XP`),
+                l(
+                  () => import(`./friendsui_french.js?contenthash=DFcwkjWI`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_german.json": () =>
-                p(
-                  () => import(`./friendsui_german.js?contenthash=C0J4jbnK`),
+                l(
+                  () => import(`./friendsui_german.js?contenthash=DQ9X1MPU`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_greek.json": () =>
-                p(
-                  () => import(`./friendsui_greek.js?contenthash=Czyt_3yz`),
+                l(
+                  () => import(`./friendsui_greek.js?contenthash=D5G4ezrZ`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_hungarian.json": () =>
-                p(
-                  () => import(`./friendsui_hungarian.js?contenthash=B0IqucIH`),
+                l(
+                  () => import(`./friendsui_hungarian.js?contenthash=Bn4GsGt9`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_indonesian.json": () =>
-                p(
+                l(
                   () =>
-                    import(`./friendsui_indonesian.js?contenthash=Di8XQJ4e`),
+                    import(`./friendsui_indonesian.js?contenthash=BdHxBrfS`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_italian.json": () =>
-                p(
-                  () => import(`./friendsui_italian.js?contenthash=DdXCLXyk`),
+                l(
+                  () => import(`./friendsui_italian.js?contenthash=Dfv4ZYTz`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_japanese.json": () =>
-                p(
-                  () => import(`./friendsui_japanese.js?contenthash=DfRqrwQF`),
+                l(
+                  () => import(`./friendsui_japanese.js?contenthash=BUwpM_dp`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_koreana.json": () =>
-                p(
-                  () => import(`./friendsui_koreana.js?contenthash=yT-IL79K`),
+                l(
+                  () => import(`./friendsui_koreana.js?contenthash=DQZ8-pXJ`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_latam.json": () =>
-                p(
-                  () => import(`./friendsui_latam.js?contenthash=DPN8ov0P`),
+                l(
+                  () => import(`./friendsui_latam.js?contenthash=Dn3i5z6D`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_malay.json": () =>
-                p(
-                  () => import(`./friendsui_malay.js?contenthash=BImozhmP`),
+                l(
+                  () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_norwegian.json": () =>
-                p(
-                  () => import(`./friendsui_norwegian.js?contenthash=MOcLintx`),
+                l(
+                  () => import(`./friendsui_norwegian.js?contenthash=Cbydn4il`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_polish.json": () =>
-                p(
-                  () => import(`./friendsui_polish.js?contenthash=CScWovln`),
+                l(
+                  () => import(`./friendsui_polish.js?contenthash=9Q9lFq0e`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_portuguese.json": () =>
-                p(
+                l(
                   () =>
-                    import(`./friendsui_portuguese.js?contenthash=ZrM7K-ix`),
+                    import(`./friendsui_portuguese.js?contenthash=CFYepeor`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_romanian.json": () =>
-                p(
-                  () => import(`./friendsui_romanian.js?contenthash=B-BaWYoK`),
+                l(
+                  () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_russian.json": () =>
-                p(
-                  () => import(`./friendsui_russian.js?contenthash=nU9jtA28`),
+                l(
+                  () => import(`./friendsui_russian.js?contenthash=BZFw9yAo`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_sc_schinese.json": () =>
-                p(
+                l(
                   () =>
                     import(`./friendsui_sc_schinese.js?contenthash=DxZJpGQD`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_schinese.json": () =>
-                p(
-                  () => import(`./friendsui_schinese.js?contenthash=w82AcbGD`),
+                l(
+                  () => import(`./friendsui_schinese.js?contenthash=D_-9oeb8`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_spanish.json": () =>
-                p(
-                  () => import(`./friendsui_spanish.js?contenthash=DK3_G90M`),
+                l(
+                  () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_swedish.json": () =>
-                p(
-                  () => import(`./friendsui_swedish.js?contenthash=BxZ-p38c`),
+                l(
+                  () => import(`./friendsui_swedish.js?contenthash=CHg9O79L`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_tchinese.json": () =>
-                p(
-                  () => import(`./friendsui_tchinese.js?contenthash=BrpuFb-a`),
+                l(
+                  () => import(`./friendsui_tchinese.js?contenthash=DFe68QuO`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_thai.json": () =>
-                p(
-                  () => import(`./friendsui_thai.js?contenthash=BhCQNQ5F`),
+                l(
+                  () => import(`./friendsui_thai.js?contenthash=7zuSyyaN`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_turkish.json": () =>
-                p(
-                  () => import(`./friendsui_turkish.js?contenthash=BxKC2vJC`),
+                l(
+                  () => import(`./friendsui_turkish.js?contenthash=ObGSkyOE`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_ukrainian.json": () =>
-                p(
-                  () => import(`./friendsui_ukrainian.js?contenthash=DD0ZQfYB`),
+                l(
+                  () => import(`./friendsui_ukrainian.js?contenthash=DKGabtNo`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_vietnamese.json": () =>
-                p(
+                l(
                   () =>
-                    import(`./friendsui_vietnamese.js?contenthash=CqIYfrKb`),
+                    import(`./friendsui_vietnamese.js?contenthash=ChKd0lDP`),
                   [],
                   import.meta.url,
                 ),
@@ -4581,7 +4581,7 @@ async function He(e) {
             `../localization/friendsui_${t}.json`,
             3,
           ),
-      T.Ready(),
+      w.Ready(),
     ]);
-  _.AddTokens(i, a);
+  g.AddTokens(i, a);
 }

@@ -1,4 +1,3 @@
-import "common.proto";
 
 message CStoreTopSellers_GetCountryList_Request {
 	optional string language = 1;
@@ -15,8 +14,8 @@ message CStoreTopSellers_GetCountryList_Response_Country {
 
 message CStoreTopSellers_GetWeeklyTopSellers_Request {
 	optional string country_code = 1;
-	optional .StoreBrowseContext context = 2;
-	optional .StoreBrowseItemDataRequest data_request = 3;
+	//optional UNKNOWN context = 2;
+	//optional UNKNOWN data_request = 3;
 	optional uint32 start_date = 4;
 	optional int32 page_start = 5;
 	optional int32 page_count = 6 [default = 20];
@@ -31,7 +30,7 @@ message CStoreTopSellers_GetWeeklyTopSellers_Response {
 message CStoreTopSellers_GetWeeklyTopSellers_Response_TopSellersRank {
 	optional int32 rank = 1;
 	optional int32 appid = 2;
-	optional .StoreItem item = 3;
+	//optional UNKNOWN item = 3;
 	optional int32 last_week_rank = 4;
 	optional int32 consecutive_weeks = 5;
 	optional bool first_top100 = 6;

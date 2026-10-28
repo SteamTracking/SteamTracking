@@ -891,6 +891,10 @@ button:focus {
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
+.NoInviteColumn .chatMemberInviteButton.Hidden,
+.NoJoinColumn .chatMemberJoinButton.Hidden {
+  display: none;
+}
 .GamepadMode .ChatRoomGroupAvatar {
   border: 2px solid #67707b;
   width: 32px;
@@ -1312,12 +1316,18 @@ button:focus {
   background: linear-gradient(90deg, #4469a5 0, #24252d 60px 100%);
   border-left: 3px solid #639eff;
 }
-.GamepadMode .chatWindow .chatHeader.VoiceActiveHeader {
-  background: linear-gradient(90deg, #59bf40 0, #24252d 60px 100%);
+.GamepadMode .chatWindow .chatHeader.InGameHeader {
+  background: linear-gradient(90deg, #2d6020 0, #24252d 60px 100%);
   border-left-color: #59bf40;
+}
+.GamepadMode .chatWindow .chatHeader.InGameHeader > .no-drag {
+  background: 0 0;
 }
 .GamepadMode .chatHeader.titleBarContainer {
   height: 100px;
+}
+#QuickAccess-Menu .GamepadMode .chatHeader.titleBarContainer {
+  height: 80px;
 }
 .GamepadMode .FriendChatHeaderSteamDeck {
   flex-direction: row;
@@ -1329,6 +1339,19 @@ button:focus {
   height: 100px;
   padding: 40px 12px 0 0;
   position: relative;
+}
+#QuickAccess-Menu
+  .GamepadMode
+  .FriendChatHeaderSteamDeck
+  .RightSideButtonContainer {
+  height: 80px;
+  padding-top: 0;
+}
+#QuickAccess-Menu
+  .GamepadMode
+  .FriendChatHeaderSteamDeck
+  .RightSideButtonContainer:has(> .FriendChatHeaderVoiceStatus > :not(:empty)) {
+  padding-top: 26px;
 }
 .GamepadMode .FriendChatHeaderSteamDeck .FriendChatHeaderVoiceStatus {
   text-align: start;
@@ -1352,6 +1375,13 @@ button:focus {
   position: absolute;
   bottom: 48px;
   right: 12px;
+}
+#QuickAccess-Menu
+  .GamepadMode
+  .FriendChatHeaderSteamDeck
+  .FriendChatHeaderVoiceStatus {
+  top: 13px;
+  bottom: auto;
 }
 .GamepadMode .FriendChatHeaderSteamDeck .FriendChatHeaderVoiceStatus:empty {
   display: none;
@@ -1525,18 +1555,28 @@ button:focus {
   display: flex;
   transform: scale(1) rotateX(0);
 }
-.GamepadMode .PendingGameInvite .PendingGameInviteButton.Accept {
-  color: #59bf40;
-}
 .GamepadMode .PendingGameInvite .PendingGameInviteButton svg {
   width: 18px;
   height: 18px;
 }
+.GamepadMode .PendingGameInvite .PendingGameInviteButton.Accept svg {
+  color: #59bf40;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteButton.Dismiss svg {
+  color: #de3618;
+}
 .GamepadMode .PendingGameInvite .PendingGameInviteButton.gpfocus {
   z-index: 1;
-  color: #23262e;
-  background-color: #fff;
-  animation-name: ItemFocusAnim-darkerGrey;
+  animation-name: none;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteButton.gpfocus svg {
+  color: #fff;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteButton.gpfocus.Accept {
+  background-color: #59bf40;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteButton.gpfocus.Dismiss {
+  background-color: #de3618;
 }
 .GamepadMode .chatRoomGroupStatsRow {
   flex-direction: row;
@@ -2050,7 +2090,7 @@ button:focus {
   position: unset;
   top: unset;
   right: unset;
-  color: #67707b;
+  color: #8b929a;
   background-color: #282b33;
   border-radius: 3px;
   flex-direction: row;
@@ -3078,6 +3118,12 @@ body.in_global_drag .friendlist_titlebar {
 }
 .GamepadMode .FriendChatTypingNotification {
   background: linear-gradient(0deg, #13202ce6 0% 12px, #13202c00 80%);
+}
+#QuickAccess-Menu .GamepadMode .FriendChatTypingNotification {
+  width: auto;
+  margin-inline-end: 0;
+  padding-inline: 4px;
+  inset-inline: 10px;
 }
 .FriendChatTypingNotification.FriendIsTyping {
   opacity: 1;
@@ -7760,7 +7806,8 @@ a.connectionStatus:visited {
   inset-inline-start: -13px;
   top: -23px;
 }
-.GamepadMode .MemberListColumn .friend .rankIcon .SVGIcon_Crown {
+.GamepadMode .MemberListColumn .friend .rankIcon .SVGIcon_Crown,
+.GamepadMode .MemberListColumn .friend .rankIcon img {
   inset-inline-start: -13px;
 }
 .MemberListColumn .friend .chatMemberFriendIcon svg {

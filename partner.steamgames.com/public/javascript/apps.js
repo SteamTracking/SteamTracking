@@ -260,6 +260,17 @@ function SetRefundsIgnorePlaytime( appid, ignorePlaytime )
 		);
 }
 
+//
+// Set which third party's playtime refunds should check for the app
+//
+function SetRefundsThirdPartyPlaytime( appid, thirdParty )
+{
+	AppsAjaxRequest( g_szBaseURL + '/apps/setrefundsthirdpartyplaytime/' + appid,
+		{ 'refundsthirdpartyplaytime' : thirdParty },
+		CommonSetHandler
+		);
+}
+
 
 //
 // Set the signing info

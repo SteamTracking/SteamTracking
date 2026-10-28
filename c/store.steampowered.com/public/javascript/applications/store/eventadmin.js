@@ -1,7939 +1,12484 @@
-(() => {
-  (self.webpackChunkstore = self.webpackChunkstore || []).push([
-    [50970],
-    {
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        let _ = 0;
-        function _(_, _) {
-          (0, _.useEffect)(() => {
-            if (!(_ || _))
-              return (
-                _++,
-                () => {
-                  --_ == 0 && (0, _._)();
-                }
-              );
-          }, [_, _]);
-        }
-        function _(_) {
-          const [_, _] = (0, _.useState)(!1);
-          (0, _.useEffect)(() => {
-            const _ = window.setTimeout(() => _(!0), _);
-            return () => window.clearTimeout(_);
-          }, [_]),
-            _(_);
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = {};
-        __webpack_require__._(_),
-          __webpack_require__._(_, {
-            _: () => _,
-          });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = 0,
-          _ = 1,
-          _ = 2,
-          _ = 3;
-        function _(_) {
-          return "unknown ENewsRecommendationState ( " + _ + " )";
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.gid || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [5], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    gid: {
-                      _: 1,
-                      _: _._.readFixed64String,
-                      _: _._.writeFixed64String,
-                    },
-                    name: {
-                      _: 2,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    type: {
-                      _: 3,
-                      _: 0,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    url: {
-                      _: 4,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    associated_apps: {
-                      _: 5,
-                      _: !0,
-                      _: !0,
-                      _: _._.readUint32,
-                      pbr: _._.readPackedUint32,
-                      _: _._.writeRepeatedUint32,
-                    },
-                    poll_interval: {
-                      _: 6,
-                      _: 300,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    kv_description: {
-                      _: 7,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    kv_filter: {
-                      _: 8,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    publish_to_clan_account_id: {
-                      _: 9,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    language: {
-                      _: 10,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    last_error: {
-                      _: 11,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    last_update: {
-                      _: 12,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    last_checked: {
-                      _: 13,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNewsFeedDef";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.gid || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [11], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    gid: {
-                      _: 1,
-                      _: _._.readFixed64String,
-                      _: _._.writeFixed64String,
-                    },
-                    news_feed_gid: {
-                      _: 2,
-                      _: _._.readFixed64String,
-                      _: _._.writeFixed64String,
-                    },
-                    title: {
-                      _: 3,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    url: {
-                      _: 4,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    author: {
-                      _: 5,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    rtime_date: {
-                      _: 6,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    contents: {
-                      _: 7,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    commited: {
-                      _: 8,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    deleted: {
-                      _: 9,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    tags: {
-                      _: 10,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    appids: {
-                      _: 11,
-                      _: !0,
-                      _: !0,
-                      _: _._.readUint32,
-                      pbr: _._.readPackedUint32,
-                      _: _._.writeRepeatedUint32,
-                    },
-                    recommendation_state: {
-                      _: 12,
-                      _: _._.readEnum,
-                      _: _._.writeEnum,
-                    },
-                    received_compensation: {
-                      _: 13,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    received_for_free: {
-                      _: 14,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    blurb: {
-                      _: 15,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    event_subtitle: {
-                      _: 16,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    event_summary: {
-                      _: 17,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNewsFeedPostDef";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.content || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    content: {
-                      _: 1,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    preserve_newlines: {
-                      _: 2,
-                      _: !1,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_ConvertHTMLToBBCode_Request";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.converted_content || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    converted_content: {
-                      _: 1,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    found_html: {
-                      _: 2,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_ConvertHTMLToBBCode_Response";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.rss_message || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    rss_message: {
-                      _: 1,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    unique_id: {
-                      _: 2,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    title: {
-                      _: 3,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    desc: {
-                      _: 4,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    jsondata: {
-                      _: 5,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    post: {
-                      _: 6,
-                      _: _,
-                    },
-                    valid_post: {
-                      _: 7,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    post_error_msg: {
-                      _: 8,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNewsPartnerEventPreview";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.rss_url || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    rss_url: {
-                      _: 1,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    lang: {
-                      _: 2,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    clan_account_id: {
-                      _: 3,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_PreviewPartnerEvents_Request";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.rss_url || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [2], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    rss_url: {
-                      _: 1,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    results: {
-                      _: 2,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                    error_msg: {
-                      _: 3,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_PreviewPartnerEvents_Response";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.clan_account_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    clan_account_id: {
-                      _: 1,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_GetNewsFeedByRepublishClan_Request";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.feeds || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [1], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    feeds: {
-                      _: 1,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_GetNewsFeedByRepublishClan_Response";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.post || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    post: {
-                      _: 1,
-                      _: _,
-                    },
-                    draft: {
-                      _: 2,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_PublishPartnerEvent_Request";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.clan_event_gid || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    clan_event_gid: {
-                      _: 1,
-                      _: _._.readFixed64String,
-                      _: _._.writeFixed64String,
-                    },
-                    news_post_gid: {
-                      _: 2,
-                      _: _._.readFixed64String,
-                      _: _._.writeFixed64String,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_PublishPartnerEvent_Response";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.news_feed_gid || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    news_feed_gid: {
-                      _: 1,
-                      _: _._.readFixed64String,
-                      _: _._.writeFixed64String,
-                    },
-                    start_index: {
-                      _: 2,
-                      _: 0,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    amount: {
-                      _: 3,
-                      _: 100,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_GetBatchPublishedPartnerEvent_Request";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.clan_account_id || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    clan_account_id: {
-                      _: 1,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    news_feed_gid: {
-                      _: 2,
-                      _: _._.readFixed64String,
-                      _: _._.writeFixed64String,
-                    },
-                    clan_event_gid: {
-                      _: 3,
-                      _: !0,
-                      _: !0,
-                      _: _._.readFixed64String,
-                      pbr: _._.readPackedFixed64String,
-                      _: _._.writeRepeatedFixed64String,
-                    },
-                    news_post_gid: {
-                      _: 4,
-                      _: !0,
-                      _: !0,
-                      _: _._.readFixed64String,
-                      pbr: _._.readPackedFixed64String,
-                      _: _._.writeRepeatedFixed64String,
-                    },
-                    news_url: {
-                      _: 5,
-                      _: !0,
-                      _: !0,
-                      _: _._.readString,
-                      _: _._.writeRepeatedString,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_GetBatchPublishedPartnerEvent_Response";
-          }
-        }
-        var _;
-        ((_) => {
-          function _(_, _, _) {
-            return _.SendMsg(
-              "News.ConvertHTMLToBBCode#1",
-              (0, _._)(_, _, _),
+import { _, _, _, _, _ } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./libraries.js?contenthash=b0JzZ9xY";
+import { _, _ } from "./clanimagemodels.js?contenthash=DZ8CXPmC";
+import { _ } from "./salesectionfactory.js?contenthash=DbCRTOuY";
+import { _ } from "./storelink.js?contenthash=Dql-0jgv";
+import { _ } from "./multisourceimage.js?contenthash=BVqKyLkc";
+import { _, _, _, _, _, _, _ } from "./partnerevent.js?contenthash=dPVYDW7-";
+import { _, _ } from "./basicpartnereventrender.js?contenthash=LxBKBaJm";
+import { _, _ } from "./eventlink.js?contenthash=Byy_2dhH";
+import { _ } from "./modals.js?contenthash=0VSE8G4g";
+import { _ } from "./eventinitialization.js?contenthash=BBe4Tdhr";
+import { _ } from "./throbber.js?contenthash=BIVX4x_C";
+import { _ } from "./eventdevfeaturestore.js?contenthash=CwBYN90A";
+import { _ } from "./moment-timezone.js?contenthash=yrPd--Pl";
+import { _, _ } from "./partnereventshared.module.js?contenthash=BdpFElnJ";
+import { _ } from "./loyaltyrewarddefs.js?contenthash=CmEyBZB_";
+import { _ } from "./storegamehover.js?contenthash=Dl0yLM2W";
+import { _ } from "./playerstore.js?contenthash=49W-ihmu";
+import { _, _, _, _ } from "./clanimageupload.js?contenthash=BUZFVgUe";
+import { _ } from "./partnereventstore.js?contenthash=BynImTwG";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./main.js?contenthash=C1XpPKHE";
+import { _ } from "./clanstore.js?contenthash=CX-238CQ";
+import { _ } from "./react-datetime.js?contenthash=DNegIGQC";
+import { _, _ } from "./managerss.js?contenthash=Dm_1tCmZ";
+var _ = _(_()),
+  _ = class _ {
+    static s_Singleton;
+    m_rgRSSEnabledClans = [];
+    GetAllRSSEnabledClans() {
+      return this.m_rgRSSEnabledClans;
+    }
+    GetTrustedEnabledClans(_) {
+      return this.m_rgRSSEnabledClans
+        .filter((_) => _.is_trusted_press == _)
+        .map((_) => _.clan_accoundid);
+    }
+    static Get() {
+      return (
+        _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+        _.s_Singleton
+      );
+    }
+    Init() {
+      let _ = _(`rssaccountinfo`, `application_config`);
+      this.ValidateRSSAccountConfig(_) && (this.m_rgRSSEnabledClans = _);
+    }
+    ValidateRSSAccountConfig(_) {
+      let _ = _;
+      return (
+        _ &&
+        Array.isArray(_) &&
+        _.length > 0 &&
+        typeof _[0] == `object` &&
+        typeof _[0].clan_accoundid == `number`
+      );
+    }
+    async LoadKnownAllRSSInfo() {
+      let _ = [],
+        _ = _.Get();
+      this.m_rgRSSEnabledClans.forEach((_) => {
+        _.BHasClanIDLoaded(_.clan_accoundid) ||
+          _.push(_.QueueCuratorAdminInfoLoad(_.clan_accoundid));
+      }),
+        await Promise.all(_);
+    }
+    ExtractWithoutRSSAutomation() {
+      let _ = [],
+        _ = _.Get();
+      return (
+        this.m_rgRSSEnabledClans.forEach((_) => {
+          let _ = _.GetRSSAdminForClanAccountID(_.clan_accoundid);
+          _ && !_.BIsAutomationEnabled() && _.push(_.clan_accoundid);
+        }),
+        _
+      );
+    }
+    async HintLoadAccounts() {}
+    async ReindexClanEventsAndReloadAccount(_) {
+      let _ = _.STORE_BASE_URL + `events_admin/ajaxflushandreindexrss`,
+        _ = new FormData();
+      _.set(`sessionid`, _()), _.append(`clanids`, `` + _);
+      try {
+        if (
+          (
+            await _.default.post(_, _, {
+              withCredentials: !0,
+            })
+          )?.data?.success == 1
+        )
+          return !0;
+      } catch (_) {
+        let _ = _(_);
+        console.error(
+          `Failed to ReindexClanEventsAndReloadAccount: ` + _.strErrorMsg,
+          _,
+        );
+      }
+      return !1;
+    }
+  },
+  _ = _(_()),
+  _ = `FRJnBfJ5XdQ-`,
+  _ = `yeG5YHSDTgg-`,
+  _ = `yWlpLUaVL0Q-`,
+  _ = `UOgdlafVa7Y-`,
+  _ = `LDVxT-1sHFA-`,
+  _ = `_4Q3Bz9buMsQ-`,
+  _ = _(),
+  _ = _((_) => {
+    let [_, _] = (0, _.useState)(!0);
+    if (
+      ((0, _.useEffect)(() => {
+        (async () => {
+          _.Init(), await _.Get().HintLoadAccounts(), _(!1);
+        })();
+      }, []),
+      _)
+    )
+      return (0, _.jsx)(_, {
+        string: _(`#Loading`),
+        size: `medium`,
+      });
+    let _ = _.Get().GetTrustedEnabledClans(!0),
+      _ = _.Get().GetTrustedEnabledClans(!1);
+    return (0, _.jsx)(`div`, {
+      children: (0, _.jsxs)(_, {
+        children: [
+          (0, _.jsx)(`h1`, {
+            children: _(`#RSSModeration_Title`),
+          }),
+          (0, _.jsx)(_, {}),
+          (0, _.jsx)(_, {
+            rgClanIDs: _.Get()
+              .GetAllRSSEnabledClans()
+              .map((_) => _.clan_accoundid),
+          }),
+          (0, _.jsx)(_, {
+            rgClanIDs: _,
+            strTitle: _(`#RSSModeration_TrustTitle`),
+          }),
+          (0, _.jsx)(_, {
+            rgClanIDs: _,
+            strTitle: _(`#RSSModeration_RestTitle`),
+          }),
+        ],
+      }),
+    });
+  }),
+  _ = _((_) => {
+    let [_, _] = (0, _.useState)(!1),
+      [_, _] = (0, _.useState)(void 0);
+    return _
+      ? (0, _.jsx)(_, {
+          string: _(`#Loading`),
+          size: `medium`,
+        })
+      : _ === void 0
+        ? (0, _.jsxs)(_, {
+            onClick: async () => {
+              _(!0),
+                await _.Get().LoadKnownAllRSSInfo(),
+                _(_.Get().ExtractWithoutRSSAutomation()),
+                _(!1);
+            },
+            children: [_(`#RSSModeration_FindInActive`), ` `],
+          })
+        : _.length > 0
+          ? (0, _.jsx)(_, {
+              rgClanIDs: _,
+              strTitle: _(`#RSSModeration_InactiveAutomation`),
+            })
+          : (0, _.jsx)(`div`, {
+              children: _(`#RSSModreation_AllAutomationEnabled`),
+            });
+  }),
+  _ = (_) => {
+    let { rgClanIDs: _, strTitle: _ } = _,
+      [_, _] = (0, _.useState)(!1),
+      _ = null;
+    return (
+      _ ||
+        (_ = _.map((_) =>
+          (0, _.jsx)(
+            _,
+            {
+              clanAccountID: _,
+            },
+            _,
+          ),
+        )),
+      (0, _.jsxs)(`div`, {
+        className: _(_),
+        children: [
+          (0, _.jsxs)(`h2`, {
+            className: _(_),
+            onDoubleClick: () => _(!_),
+            children: [
               _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 0,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          }
-          _.ConvertHTMLToBBCode = _;
-          function _(_, _, _) {
-            return _.SendMsg(
-              "News.PreviewPartnerEvents#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }
-          _.PreviewPartnerEvents = _;
-          function _(_, _, _) {
-            return _.SendMsg(
-              "News.GetNewsFeedByRepublishClan#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }
-          _.GetNewsFeedByRepublishClan = _;
-          function _(_, _, _) {
-            return _.SendMsg(
-              "News.PublishPartnerEvent#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          }
-          _.PublishPartnerEvent = _;
-          function _(_, _, _) {
-            return _.SendMsg(
-              "News.GetBatchPublishedPartnerEvent#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }
-          _.GetBatchPublishedPartnerEvent = _;
-        })(_ || (_ = {}));
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        const _ = class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          giveaway_id = void 0;
-          seconds_until_drawing = void 0;
-          rtime_start = void 0;
-          rtime_end = void 0;
-          closed = void 0;
-          winner_count = void 0;
-          BIsValid() {
-            return this.giveaway_id !== void 0 && this.giveaway_id !== null;
-          }
-          BStarted() {
-            return this.BIsValid()
-              ? this.seconds_until_drawing !== void 0 &&
-                this.seconds_until_drawing >= 0
-                ? !0
-                : this.winner_count !== void 0 && this.winner_count > 0
-              : !1;
-          }
-          clone() {
-            const _ = new _();
-            return (
-              (_.giveaway_id = this.giveaway_id),
-              (_.seconds_until_drawing = this.seconds_until_drawing),
-              (_.rtime_start = this.rtime_start),
-              (_.rtime_end = this.rtime_end),
-              (_.closed = this.closed),
-              (_.winner_count = this.winner_count),
-              _
-            );
-          }
-        };
-        _([_._], _.prototype, "giveaway_id", 2),
-          _([_._], _.prototype, "seconds_until_drawing", 2),
-          _([_._], _.prototype, "rtime_start", 2),
-          _([_._], _.prototype, "rtime_end", 2),
-          _([_._], _.prototype, "closed", 2),
-          _([_._], _.prototype, "winner_count", 2);
-        let _ = _;
-        const _ = class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_mapGiveawayIDToNextDrawInfo = new Map();
-          m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
-          m_bLoadedFromConfig = !1;
-          m_mapNextDrawChangeCallback = new Map();
-          GetKey(_, _) {
-            return _ + "_" + _;
-          }
-          GetInfoByInstance(_, _) {
-            return this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(
-              this.GetKey(_, _),
-            );
-          }
-          GetNextDrawChangeCallback(_) {
-            let _ = this.m_mapNextDrawChangeCallback.get(_);
-            return (
-              _ ||
-                ((_ = new _._()), this.m_mapNextDrawChangeCallback.set(_, _)),
-              _
-            );
-          }
-          CopyToGiveaway(_, _) {
-            _.closed != _.closed && (_.closed = _.closed),
-              _.giveaway_id != _.giveaway_id && (_.giveaway_id = _.giveaway_id),
-              _.rtime_start != _.rtime_start && (_.rtime_start = _.rtime_start),
-              _.rtime_end != _.rtime_end && (_.rtime_end = _.rtime_end),
-              _.winner_count != _.winner_count &&
-                (_.winner_count = _.winner_count),
-              _.seconds_until_drawing != _.seconds_until_drawing &&
-                (_.seconds_until_drawing = _.seconds_until_drawing);
-          }
-          async ReloadGiveaway(_, _) {
-            if (!_) return null;
-            let _ = _._.STORE_BASE_URL + "prizes/nextdraw/" + _,
-              _ = {
-                origin: self.origin,
-              };
-            const _ = await _().get(_, {
-                params: _,
+              (0, _.jsx)(`span`, {
+                children: `\xA0`,
               }),
-              _ = (0, _._)(() => {
-                let _ = this.m_mapGiveawayIDToNextDrawInfo.get(_);
-                if (
-                  (_ ||
-                    ((_ = new _()),
-                    this.m_mapGiveawayIDToNextDrawInfo.set(_, _)),
-                  this.CopyToGiveaway(_.data, _),
-                  _ !== void 0)
-                ) {
-                  const _ = this.GetKey(_, _);
-                  let _ = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_);
-                  _ ||
-                    ((_ = new _()),
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(_, _)),
-                    this.CopyToGiveaway(_.data, _);
+              (0, _.jsx)(_, {
+                className: _,
+                onClick: () => _(!_),
+                children: _ ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {}),
+              }),
+            ],
+          }),
+          _ &&
+            (0, _.jsx)(_, {
+              onClick: () => _(!1),
+              children: _(`#Sale_ShowContents`),
+            }),
+          _,
+        ],
+      })
+    );
+  },
+  _ = _((_) => {
+    let { clanAccountID: _ } = _;
+    return _.BHasClanInfoLoadedByAccountID(_) && _.Get().BHasClanIDLoaded(_)
+      ? (0, _.jsx)(_, {
+          clanInfo: _.GetClanInfoByClanAccountID(_),
+          rssAdminInfo: _.Get().GetRSSAdminForClanAccountID(_),
+        })
+      : (0, _.jsx)(_, {
+          clanAccountID: _,
+        });
+  }),
+  _ = (_) => {
+    let { clanAccountID: _ } = _,
+      _ = `500px`,
+      _ = _(
+        {
+          onEnter: async () => {
+            let _ = _.InitFromClanID(_);
+            await Promise.all([
+              _.LoadClanInfoForClanSteamID(_),
+              _.Get().QueueCuratorAdminInfoLoad(_),
+            ]);
+          },
+        },
+        {
+          rootMargin: `${_} 0px ${_} 0px`,
+        },
+      );
+    return (0, _.jsx)(`div`, {
+      ref: _,
+      className: _,
+      children: (0, _.jsxs)(`div`, {
+        children: [_(`#Loading`), ` - `, _],
+      }),
+    });
+  },
+  _ = (_) => {
+    let { clanInfo: _, rssAdminInfo: _ } = _,
+      [_, _] = (0, _.useState)(!1),
+      _ = _.STORE_BASE_URL + `newshub/group/` + _.clanAccountID,
+      _ = _.STORE_BASE_URL + `curator/` + _.clanAccountID + `/admin/manage_rss`,
+      _ = _.COMMUNITY_BASE_URL + `group/` + _.clanAccountID,
+      _ =
+        `https://steamsupport.valvesoftware.com/clan/overview/` +
+        _.InitFromClanID(_.clanAccountID).ConvertTo64BitString(),
+      _ = _.Get().GetRSSAdminStats(_.clanAccountID);
+    return (0, _.jsxs)(`div`, {
+      className: _(_),
+      children: [
+        (0, _.jsxs)(`div`, {
+          className: _(_),
+          children: [
+            (0, _.jsxs)(`div`, {
+              children: [
+                (0, _.jsxs)(`div`, {
+                  children: [_.group_name, ` - `, _.clanAccountID],
+                }),
+                (0, _.jsxs)(`div`, {
+                  children: [
+                    (0, _.jsxs)(`div`, {
+                      children: [_(`#CuratorAdmin_RSSFeed`), `:`],
+                    }),
+                    (0, _.jsx)(`a`, {
+                      href: _.GetRSSUrl(),
+                      children: _.GetRSSUrl(),
+                    }),
+                  ],
+                }),
+                !!_ &&
+                  (0, _.jsxs)(`div`, {
+                    children: [
+                      (0, _.jsx)(`div`, {
+                        children: _(
+                          `#RSSModeration_TotalEvents`,
+                          _(_.total_event_count),
+                        ),
+                      }),
+                      (0, _.jsx)(`div`, {
+                        children: _(
+                          `#RSSModeration_RSSEvents`,
+                          _(_.rss_event_count),
+                        ),
+                      }),
+                    ],
+                  }),
+                (0, _.jsx)(_, {
+                  onClick: () => _(!_),
+                  children: _(
+                    _
+                      ? `#Bbcode_Expand_Details_Expanded`
+                      : `#Bbcode_Expand_Details_Collapsed`,
+                  ),
+                }),
+              ],
+            }),
+            (0, _.jsx)(`div`, {
+              children: (0, _.jsxs)(`ul`, {
+                children: [
+                  (0, _.jsx)(`li`, {
+                    children: (0, _.jsx)(`a`, {
+                      href: _,
+                      children: _(`#EventDisplay_NewsHubSubtitle`),
+                    }),
+                  }),
+                  (0, _.jsx)(`li`, {
+                    children: (0, _.jsx)(`a`, {
+                      href: _,
+                      children: _(`#CuratorAdmin_RSSFeed_title`),
+                    }),
+                  }),
+                  (0, _.jsx)(`li`, {
+                    children: (0, _.jsx)(`a`, {
+                      href: _,
+                      children: _(`#RSSModeration_GroupPage`),
+                    }),
+                  }),
+                  (0, _.jsx)(`li`, {
+                    children: (0, _.jsx)(`a`, {
+                      href: _,
+                      children: _(`#RSSModeration_SupportPage`),
+                    }),
+                  }),
+                  (0, _.jsx)(`li`, {
+                    children: (0, _.jsx)(_, {
+                      rgClanIDs: [_.clanAccountID],
+                    }),
+                  }),
+                ],
+              }),
+            }),
+            (0, _.jsx)(`div`, {
+              className: _,
+              children: (0, _.jsx)(_, {
+                bHideCreatorType: !0,
+                creatorID: {
+                  name: null,
+                  clan_account_id: _.clanAccountID,
+                  type: `developer`,
+                },
+                bSmallFormat: !0,
+              }),
+            }),
+          ],
+        }),
+        !!_ &&
+          (0, _.jsx)(_.Fragment, {
+            children: _.BHasSavedRSSURL()
+              ? (0, _.jsx)(_, {
+                  strRssURL: _.GetRSSUrl(),
+                  admin: _,
+                })
+              : (0, _.jsx)(`div`, {
+                  children: _(`#RSSModeration_NoRSSFeed`),
+                }),
+          }),
+      ],
+    });
+  },
+  _ = (_) =>
+    (0, _.jsx)(_, {
+      toolTipContent: _(`#RSSModeration_ReindexAndReload_ttip`),
+      children: (0, _.jsx)(_, {
+        onClick: (_) => {
+          _(
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            _(_),
+          );
+        },
+        children: _(`#RSSModeration_ReindexAndReload`),
+      }),
+    }),
+  _ = (_) => {
+    let [_, _] = (0, _.useState)(void 0),
+      [_, _] = (0, _.useState)(!1),
+      [_, _] = (0, _.useState)(void 0),
+      _ = () => _.closeModal && _.closeModal();
+    return (0, _.jsx)(_, {
+      onEscKeypress: _,
+      children: (0, _.jsxs)(_, {
+        children: [
+          (0, _.jsxs)(_, {
+            children: [` `, _(`#RSSModeration_ReindexAndReload`), ` `],
+          }),
+          (0, _.jsxs)(_, {
+            children: [
+              (0, _.jsxs)(_, {
+                children: [
+                  _ === void 0
+                    ? (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)(`span`, {
+                            children: _(
+                              `#RSSModeration_Reindex_Verify`,
+                              _.rgClanIDs.length,
+                            ),
+                          }),
+                          (0, _.jsx)(_, {
+                            onClick: async () => {
+                              let _ = 0;
+                              _(_);
+                              for (let _ = 0; _ < _.rgClanIDs.length; ++_) {
+                                let _ = _.rgClanIDs[_];
+                                if (
+                                  await _.Get().ReindexClanEventsAndReloadAccount(
+                                    _,
+                                  )
+                                )
+                                  (_ += 1), _(_);
+                                else {
+                                  _(_(`#Error_Generic_Label`));
+                                  break;
+                                }
+                              }
+                              _(!0);
+                            },
+                            children: _(`#Button_Continue`),
+                          }),
+                        ],
+                      })
+                    : (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)(`span`, {
+                            children: _(
+                              `#RSSModeration_Reindex_Action`,
+                              _,
+                              _.rgClanIDs.length,
+                            ),
+                          }),
+                          _
+                            ? (0, _.jsx)(`span`, {
+                                children: _(
+                                  `#EventEditor_ImportFromHTML_ConvertFinished`,
+                                ),
+                              })
+                            : (0, _.jsx)(_, {
+                                size: `small`,
+                                string: _(`#Updating`),
+                              }),
+                        ],
+                      }),
+                  !!_ &&
+                    (0, _.jsxs)(`span`, {
+                      children: [_, ` `],
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                children: (0, _.jsx)(_, {
+                  onClick: _,
+                  children: _(_ ? `#Button_OK` : `#Button_Cancel`),
+                }),
+              }),
+            ],
+          }),
+        ],
+      }),
+    });
+  },
+  _ = class _ {
+    static s_Singleton;
+    m_mapEventGIDToSolrData = new Map();
+    m_listEvents = [];
+    BHasSolrEvent(_) {
+      return this.m_mapEventGIDToSolrData.has(_);
+    }
+    GetAllSolrEvents() {
+      return this.m_listEvents;
+    }
+    static Get() {
+      return (_.s_Singleton ||= new _()), _.s_Singleton;
+    }
+    constructor() {
+      _(this);
+    }
+    ClearAllSolrEvents() {
+      (this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []);
+    }
+    async LoadPartnerEventForQueryIncremental(
+      _,
+      _ = 0,
+      _ = 10,
+      _,
+      _,
+      _,
+      _,
+      _,
+      _,
+    ) {
+      let _ = await this.GetLatestPartnerEvents(_, _, _, _, _, _, _, _, _),
+        _ = [];
+      return (
+        _(() => {
+          _.forEach((_) => {
+            this.m_mapEventGIDToSolrData.has(_.unique_id) ||
+              (_.push(_),
+              this.m_mapEventGIDToSolrData.set(_.unique_id, _),
+              this.m_listEvents.push(_));
+          });
+        }),
+        _
+      );
+    }
+    async GetLatestPartnerEvents(
+      _,
+      _ = 0,
+      _ = 10,
+      _,
+      _,
+      _,
+      _,
+      _,
+      _,
+      _,
+      _,
+      _,
+      _,
+    ) {
+      let _ = _.STORE_BASE_URL + `events_admin/ajaxgetlatestpartnerevents`,
+        _ = {
+          page: _,
+          count: _,
+          date: _,
+          appids: _ === void 0 ? void 0 : _.join(`,`),
+          required_tags: _ === void 0 ? void 0 : _.join(`,`),
+          exclude_tags: _ === void 0 ? void 0 : _.join(`,`),
+          eventtypefilter: _ === void 0 ? void 0 : _.join(`,`),
+          orderByVisibility: _ || void 0,
+          creator_home_clan_id: _ === void 0 ? void 0 : _.join(`,`),
+          showUnpublished: _ === void 0 ? void 0 : _,
+          sale_only: _ === void 0 ? void 0 : _,
+          term: _ === void 0 ? void 0 : _,
+        },
+        _ = await _.default.get(_, {
+          params: _,
+          withCredentials: !0,
+          cancelToken: _ ? _.token : void 0,
+        });
+      return _.data ? _.data.docs : [];
+    }
+  };
+_([_], _.prototype, `m_mapEventGIDToSolrData`, void 0),
+  _([_], _.prototype, `m_listEvents`, void 0),
+  _([_], _.prototype, `ClearAllSolrEvents`, null);
+var _ = class {
+  constructor() {
+    _(this);
+  }
+  m_backfill = void 0;
+  m_mapEventGIDProcessed = new Map();
+  m_vecEventGID = [];
+  m_bBackfillInProgress = !1;
+  m_nProcessed = 0;
+  m_nSuccesses = 0;
+  m_nFailures = 0;
+  m_nWarning = 0;
+  m_nSkipped = 0;
+  GetBackfill() {
+    return this.m_backfill;
+  }
+  SetBackfill(_) {
+    this.m_backfill = _;
+  }
+  StartBackfill(_) {
+    (this.m_backfill = _), (this.m_bBackfillInProgress = !0);
+  }
+  CompleteBackfill(_) {
+    (this.m_backfill = void 0), (this.m_bBackfillInProgress = !1);
+  }
+  BIsBackkFillInProgress() {
+    return this.m_bBackfillInProgress;
+  }
+  GetEventBackfillProgress() {
+    return this.m_mapEventGIDProcessed;
+  }
+  CreateOrGetBackfillProgess(_) {
+    return (
+      this.m_mapEventGIDProcessed.has(_) ||
+        (this.m_mapEventGIDProcessed.set(_, {
+          bProcessing: !1,
+        }),
+        this.m_vecEventGID.push(_)),
+      this.m_mapEventGIDProcessed.get(_)
+    );
+  }
+  BHasProgress(_) {
+    return this.m_mapEventGIDProcessed.has(_);
+  }
+  GetBackfillGIDs() {
+    return this.m_vecEventGID;
+  }
+  CloseProgress(_, _) {
+    (this.m_nProcessed += 1),
+      _.bAlreadyProcessed || _.bSkipped
+        ? (this.m_nSkipped += 1)
+        : _.bSucceeded
+          ? (this.m_nSuccesses += 1)
+          : _.bFailed && (this.m_nFailures += 1),
+      _.bWarning && (this.m_nWarning += 1),
+      this.m_mapEventGIDProcessed.set(_, _);
+  }
+};
+_([_], _.prototype, `m_backfill`, void 0),
+  _([_], _.prototype, `m_mapEventGIDProcessed`, void 0),
+  _([_], _.prototype, `m_bBackfillInProgress`, void 0),
+  _([_], _.prototype, `m_nProcessed`, void 0),
+  _([_], _.prototype, `m_nSuccesses`, void 0),
+  _([_], _.prototype, `m_nFailures`, void 0),
+  _([_], _.prototype, `m_nWarning`, void 0),
+  _([_], _.prototype, `m_nSkipped`, void 0),
+  _([_], _.prototype, `StartBackfill`, null),
+  _([_], _.prototype, `CompleteBackfill`, null),
+  _([_], _.prototype, `CloseProgress`, null);
+var _ = new _(),
+  _ = `d8inY9yaWr4-`,
+  _ = 25,
+  _ = 5e3,
+  _ = class extends _.Component {
+    m_cancelSignal = _.default.CancelToken.source();
+    m_nImageID = 0;
+    m_mapArtworkResizeSuccess = new Map();
+    state = {
+      eBackfillState: void 0,
+    };
+    componentWillUnmount() {
+      this.m_cancelSignal.cancel(`EventBackfillLanding component unmounted`);
+    }
+    OnArtworkResizeBackfill() {
+      this.state.eBackfillState ??
+        this.setState(
+          {
+            eBackfillState: `started`,
+          },
+          this.BeginArtworkResize,
+        );
+    }
+    BeginArtworkResize() {
+      this.m_mapArtworkResizeSuccess.set(`capsule`, 0),
+        this.m_mapArtworkResizeSuccess.set(`spotlight`, 0),
+        this.m_mapArtworkResizeSuccess.set(`background`, 0),
+        this.RunArtworkResizeBackfill()
+          .then(() =>
+            this.setState({
+              eBackfillState: `success`,
+            }),
+          )
+          .catch((_) => {
+            let _ = _(_);
+            console.error(`EventBackfillLanding: error ` + _.strErrorMsg, _),
+              this.setState({
+                eBackfillState: `error`,
+              });
+          });
+    }
+    async GetImageInfo(_, _, _ = ``) {
+      let _ = _(_),
+        _ = _.GetHashFromHashAndExt(_) + _;
+      return _.AsyncGetImageResolution(_, _, _, this.m_cancelSignal, !0);
+    }
+    HandleErrorFatal(_, _, _, _) {
+      let _ = _(_),
+        _ =
+          `EventBackfillLanding: ` + _ + ` on GID ` + _ + ` : ` + _.strErrorMsg;
+      console.error(_, _),
+        _
+          ? ((_.bFailed = !0), (_.strMessage = _), _.CloseProgress(_, _))
+          : _.CompleteBackfill(`resize_image`);
+    }
+    async HandleResizeForImageType(_, _, _, _, _) {
+      for (let _ = 0; _ < _.length && _ < 32; ++_)
+        if (_[_] && _[_].length > 0) {
+          let _ = _[_],
+            _ = _(_),
+            _ = new _(_.clan_steamid);
+          if (_) {
+            let _ = await this.GetImageInfo(_, _).catch(
+              (_) => (
+                this.HandleErrorFatal(null, _, `GetImageInfo Original`, _),
+                {
+                  height: 0,
+                  width: 0,
+                  success: 2,
+                }
+              ),
+            );
+            if (_.success == 1 && _(_.width, _.height, _, !0)) {
+              if (
+                (
+                  await this.GetImageInfo(_, _, _).catch(
+                    (_) => (
+                      this.HandleErrorFatal(null, _, `GetImageInfo Resize`, _),
+                      {
+                        height: 0,
+                        width: 0,
+                        success: 2,
+                      }
+                    ),
+                  )
+                ).success == 1
+              )
+                _.bAlreadyProcessed = !0;
+              else {
+                _.bProcessing = !0;
+                let _ = _.GetHashFromHashAndExt(_),
+                  _ = _.GetExtStringFromHashAndExt(_),
+                  _ = _(_);
+                if (_)
+                  try {
+                    let _ = await _(this.m_cancelSignal.token, _, _, _, _);
+                    console.log(`success on the resize request`),
+                      _ == _.length
+                        ? ((_.bSucceeded = !0),
+                          this.m_mapArtworkResizeSuccess.set(
+                            _,
+                            this.m_mapArtworkResizeSuccess.get(_) + 1,
+                          ))
+                        : ((_.bFailed = !0),
+                          (_.strMessage =
+                            `Did not resize all: ` +
+                            _ +
+                            ` ` +
+                            _ +
+                            ` / ` +
+                            _.length));
+                  } catch (_) {
+                    _.bFailed = !0;
+                    let _ = _(_);
+                    (_.strMessage = _.strErrorMsg),
+                      console.error(`Resize: ` + _.strErrorMsg, _);
+                  }
+                else
+                  (_.bFailed = !0),
+                    console.error(
+                      `Resize: resize request couldn't be determined from the artwork type`,
+                    );
+              }
+            } else _.bSkipped = !0;
+          } else _.bSkipped = !0;
+        }
+    }
+    async RunArtworkResizeBackfill() {
+      _.StartBackfill(`resize_image`);
+      let _ = 0;
+      for (; _.BIsBackkFillInProgress(); ) {
+        let _ = await _.Get()
+          .LoadPartnerEventForQueryIncremental(this.m_cancelSignal, _, _)
+          .catch((_) =>
+            this.HandleErrorFatal(
+              null,
+              _,
+              `LoadPartnerEventForQueryIncremental`,
+            ),
+          );
+        if (!_ || _.length == 0) {
+          _.CompleteBackfill(`resize_image`),
+            console.log(`Compelted the backfill`);
+          break;
+        }
+        _ += _.length;
+        for (let _ = 0; _ < _.length; ++_) {
+          let _ = _[_],
+            _ = _.CreateOrGetBackfillProgess(_.unique_id);
+          if (!_.announcement_gid || _.announcement_gid.length == 0) {
+            (_.bSkipped = !0),
+              (_.bWarning = !0),
+              _.CloseProgress(_.unique_id, _);
+            continue;
+          }
+          if (
+            (await _.LoadPartnerEventFromAnnoucementGID(
+              Number(_.appid),
+              _.announcement_gid,
+              100,
+            ).catch((_) => {
+              this.HandleErrorFatal(
+                _.announcement_gid,
+                _,
+                `LoadPartnerEventFromAnnoucementGID`,
+                _,
+              );
+            }),
+            _.bFailed)
+          )
+            continue;
+          let _ = _.GetClanEventFromAnnouncementGID(_.announcement_gid);
+          if (!_) {
+            (_.bFailed = !0),
+              (_.strMessage = `Failed to load the event: ` + _.unique_id),
+              _.CloseProgress(_.unique_id, _);
+            continue;
+          }
+          if (_.bSucceeded || _.bFailed || _.bAlreadyProcessed) {
+            (_.bAlreadyProcessed = !0), _.CloseProgress(_.unique_id, _);
+            continue;
+          }
+          if (
+            ((_.bAnalysing = !0),
+            this.setState({
+              strInfo:
+                `Processing ` +
+                _.GetBackfillGIDs().length +
+                ` Appid: ` +
+                _.appid +
+                ` Event ` +
+                _.GID +
+                ` Title: ` +
+                _.GetNameWithFallback(0),
+            }),
+            _.jsondata && _.jsondata.localized_capsule_image)
+          ) {
+            let _ = _.jsondata.localized_capsule_image;
+            await this.HandleResizeForImageType(
+              _,
+              _,
+              _,
+              `capsule`,
+              _.capsule_main,
+            ).catch((_) =>
+              this.HandleErrorFatal(
+                null,
+                _,
+                `HandleResizeForImageType capsule`,
+                _,
+              ),
+            );
+          }
+          if (_.jsondata && _.jsondata.localized_title_image) {
+            let _ = _.jsondata.localized_title_image;
+            await this.HandleResizeForImageType(
+              _,
+              _,
+              _,
+              `background`,
+              _.background_mini,
+            ).catch((_) =>
+              this.HandleErrorFatal(
+                null,
+                _,
+                `HandleResizeForImageType background`,
+                _,
+              ),
+            );
+          }
+          if (_.jsondata && _.jsondata.localized_spotlight_image) {
+            let _ = _.jsondata.localized_spotlight_image;
+            await this.HandleResizeForImageType(
+              _,
+              _,
+              _,
+              `spotlight`,
+              _.spotlight_main,
+            ).catch((_) =>
+              this.HandleErrorFatal(
+                null,
+                _,
+                `HandleResizeForImageType spotlight`,
+                _,
+              ),
+            );
+          }
+          if ((_.CloseProgress(_.unique_id, _), !_.BIsBackkFillInProgress()))
+            break;
+        }
+        if (_.m_nFailures > _) {
+          console.log(`Hit too many errors, stoppinng the backfill`);
+          break;
+        }
+      }
+    }
+    RenderFailure() {
+      let _ = [];
+      return (
+        _.m_nFailures > 0 &&
+          _.GetBackfillGIDs().forEach((_) => {
+            let _ = _.GetEventBackfillProgress().get(_);
+            if (_ && _.bFailed) {
+              let _ = _.GetClanEventModel(_);
+              _ &&
+                _.push(
+                  (0, _.jsxs)(
+                    `div`,
+                    {
+                      children: [
+                        (0, _.jsx)(_, {
+                          eventModel: _,
+                          route: _.k_eView,
+                          children: _.GetNameWithFallback(0),
+                        }),
+                        (0, _.jsx)(`div`, {
+                          className: _,
+                          children: _.strMessage,
+                        }),
+                      ],
+                    },
+                    _,
+                  ),
+                );
+            }
+          }),
+        _
+      );
+    }
+    RenderResizeProgress() {
+      let _ = [];
+      return (
+        _.push(
+          (0, _.jsxs)(
+            `div`,
+            {
+              children: [
+                `Capsule Resized: `,
+                this.m_mapArtworkResizeSuccess.get(`capsule`),
+                ` `,
+              ],
+            },
+            `res_capsule`,
+          ),
+        ),
+        _.push(
+          (0, _.jsxs)(
+            `div`,
+            {
+              children: [
+                `Header Resized: `,
+                this.m_mapArtworkResizeSuccess.get(`background`),
+                ` `,
+              ],
+            },
+            `res_header`,
+          ),
+        ),
+        _.push(
+          (0, _.jsxs)(
+            `div`,
+            {
+              children: [
+                `Spotlight Resized: `,
+                this.m_mapArtworkResizeSuccess.get(`spotlight`),
+                ` `,
+              ],
+            },
+            `res_spotlightr`,
+          ),
+        ),
+        _
+      );
+    }
+    render() {
+      let _ = this.RenderFailure(),
+        _ = this.m_mapArtworkResizeSuccess.has(`capsule`)
+          ? this.RenderResizeProgress()
+          : void 0;
+      return (0, _.jsxs)(`div`, {
+        children: [
+          (0, _.jsx)(`h2`, {
+            children: `Partner Events Backfill Processing Page`,
+          }),
+          this.state.eBackfillState == null &&
+            (0, _.jsx)(`div`, {
+              children: (0, _.jsx)(`button`, {
+                onClick: this.OnArtworkResizeBackfill,
+                children: `Begin Artwork Resize Backfill`,
+              }),
+            }),
+          (0, _.jsx)(`div`, {
+            children: (0, _.jsx)(`button`, {
+              onClick: () => _.CompleteBackfill(`resize_image`),
+              children: `Stop Backfill`,
+            }),
+          }),
+          this.state.strInfo &&
+            (0, _.jsxs)(`div`, {
+              children: [`Processing: `, this.state.strInfo],
+            }),
+          (0, _.jsxs)(`div`, {
+            children: [`Events Processed: `, _.m_nProcessed],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [`Events Succeeded: `, _.m_nSuccesses],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [`Events Warning: `, _.m_nWarning],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [`Events Failed: `, _.m_nFailures],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [`Events Skipped: `, _.m_nSkipped],
+          }),
+          _.length > 0 &&
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(`h2`, {
+                  children: `Failure Info`,
+                }),
+                _,
+              ],
+            }),
+          !!_ &&
+            (0, _.jsxs)(`div`, {
+              children: [
+                (0, _.jsx)(`h2`, {
+                  children: `Resizing Actions`,
+                }),
+                _,
+              ],
+            }),
+          this.state.eBackfillState == `started` &&
+            (0, _.jsx)(_, {
+              size: `medium`,
+              position: `center`,
+              string: `Backfill In Progress`,
+            }),
+        ],
+      });
+    }
+  };
+_([_], _.prototype, `OnArtworkResizeBackfill`, null),
+  _([_], _.prototype, `BeginArtworkResize`, null),
+  (_ = _([_], _));
+var _ = _((_, _) => {
+    function _(_) {
+      "@babel/helpers - typeof";
+      return (
+        (_.exports = _ =
+          typeof Symbol == `function` && typeof Symbol.iterator == `symbol`
+            ? function (_) {
+                return typeof _;
+              }
+            : function (_) {
+                return _ &&
+                  typeof Symbol == `function` &&
+                  _.constructor === Symbol &&
+                  _ !== Symbol.prototype
+                  ? `symbol`
+                  : typeof _;
+              }),
+        (_.exports.__esModule = !0),
+        (_.exports.default = _.exports),
+        _(_)
+      );
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _().default;
+    function _(_, _) {
+      if (_(_) != `object` || !_) return _;
+      var _ = _[Symbol.toPrimitive];
+      if (_ !== void 0) {
+        var _ = _.call(_, _ || `default`);
+        if (_(_) != `object`) return _;
+        throw TypeError(`@@toPrimitive must return a primitive value.`);
+      }
+      return (_ === `string` ? String : Number)(_);
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _().default,
+      _ = _();
+    function _(_) {
+      var _ = _(_, `string`);
+      return _(_) == `symbol` ? _ : _ + ``;
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _();
+    function _(_, _, _) {
+      return (
+        (_ = _(_)) in _
+          ? Object.defineProperty(_, _, {
+              value: _,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0,
+            })
+          : (_[_] = _),
+        _
+      );
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _();
+    function _(_, _) {
+      var _ = Object.keys(_);
+      if (Object.getOwnPropertySymbols) {
+        var _ = Object.getOwnPropertySymbols(_);
+        _ &&
+          (_ = _.filter(function (_) {
+            return Object.getOwnPropertyDescriptor(_, _).enumerable;
+          })),
+          _.push.apply(_, _);
+      }
+      return _;
+    }
+    function _(_) {
+      for (var _ = 1; _ < arguments.length; _++) {
+        var _ = arguments[_] == null ? {} : arguments[_];
+        _ % 2
+          ? _(Object(_), !0).forEach(function (_) {
+              _(_, _, _[_]);
+            })
+          : Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(_, Object.getOwnPropertyDescriptors(_))
+            : _(Object(_)).forEach(function (_) {
+                Object.defineProperty(
+                  _,
+                  _,
+                  Object.getOwnPropertyDescriptor(_, _),
+                );
+              });
+      }
+      return _;
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _(_) {
+      if (Array.isArray(_)) return _;
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _(_, _) {
+      var _ =
+        _ == null
+          ? null
+          : (typeof Symbol < `u` && _[Symbol.iterator]) || _[`@@iterator`];
+      if (_ != null) {
+        var _,
+          _,
+          _,
+          _,
+          _ = [],
+          _ = !0,
+          _ = !1;
+        try {
+          if (((_ = (_ = _.call(_)).next), _ === 0)) {
+            if (Object(_) !== _) return;
+            _ = !1;
+          } else
+            for (
+              ;
+              !(_ = (_ = _.call(_)).done) && (_.push(_.value), _.length !== _);
+              _ = !0
+            );
+        } catch (_) {
+          (_ = !0), (_ = _);
+        } finally {
+          try {
+            if (!_ && _.return != null && ((_ = _.return()), Object(_) !== _))
+              return;
+          } finally {
+            if (_) throw _;
+          }
+        }
+        return _;
+      }
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _(_, _) {
+      (_ == null || _ > _.length) && (_ = _.length);
+      for (var _ = 0, _ = Array(_); _ < _; _++) _[_] = _[_];
+      return _;
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _();
+    function _(_, _) {
+      if (_) {
+        if (typeof _ == `string`) return _(_, _);
+        var _ = {}.toString.call(_).slice(8, -1);
+        return (
+          _ === `Object` && _.constructor && (_ = _.constructor.name),
+          _ === `Map` || _ === `Set`
+            ? Array.from(_)
+            : _ === `Arguments` ||
+                /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(_)
+              ? _(_, _)
+              : void 0
+        );
+      }
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _() {
+      throw TypeError(`Invalid attempt to destructure non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _();
+    function _(_, _) {
+      return _(_) || _(_, _) || _(_, _) || _();
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _(_, _) {
+      if (_ == null) return {};
+      var _ = {};
+      for (var _ in _)
+        if ({}.hasOwnProperty.call(_, _)) {
+          if (_.indexOf(_) !== -1) continue;
+          _[_] = _[_];
+        }
+      return _;
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _();
+    function _(_, _) {
+      if (_ == null) return {};
+      var _,
+        _,
+        _ = _(_, _);
+      if (Object.getOwnPropertySymbols) {
+        var _ = Object.getOwnPropertySymbols(_);
+        for (_ = 0; _ < _.length; _++)
+          (_ = _[_]),
+            _.indexOf(_) === -1 &&
+              {}.propertyIsEnumerable.call(_, _) &&
+              (_[_] = _[_]);
+      }
+      return _;
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_) => {
+    var _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = [
+        `defaultInputValue`,
+        `defaultMenuIsOpen`,
+        `defaultValue`,
+        `inputValue`,
+        `menuIsOpen`,
+        `onChange`,
+        `onInputChange`,
+        `onMenuClose`,
+        `onMenuOpen`,
+        `value`,
+      ];
+    function _(_) {
+      var _ = _.defaultInputValue,
+        _ = _ === void 0 ? `` : _,
+        _ = _.defaultMenuIsOpen,
+        _ = _ !== void 0 && _,
+        _ = _.defaultValue,
+        _ = _ === void 0 ? null : _,
+        _ = _.inputValue,
+        _ = _.menuIsOpen,
+        _ = _.onChange,
+        _ = _.onInputChange,
+        _ = _.onMenuClose,
+        _ = _.onMenuOpen,
+        _ = _.value,
+        _ = _(_, _),
+        _ = _(_.useState(_ === void 0 ? _ : _), 2),
+        _ = _[0],
+        _ = _[1],
+        _ = _(_.useState(_ === void 0 ? _ : _), 2),
+        _ = _[0],
+        _ = _[1],
+        _ = _(_.useState(_ === void 0 ? _ : _), 2),
+        _ = _[0],
+        _ = _[1],
+        _ = _.useCallback(
+          function (_, _) {
+            typeof _ == `function` && _(_, _), _(_);
+          },
+          [_],
+        ),
+        _ = _.useCallback(
+          function (_, _) {
+            var _;
+            typeof _ == `function` && (_ = _(_, _)), _(_ === void 0 ? _ : _);
+          },
+          [_],
+        ),
+        _ = _.useCallback(
+          function () {
+            typeof _ == `function` && _(), _(!0);
+          },
+          [_],
+        ),
+        _ = _.useCallback(
+          function () {
+            typeof _ == `function` && _(), _(!1);
+          },
+          [_],
+        ),
+        _ = _ === void 0 ? _ : _,
+        _ = _ === void 0 ? _ : _,
+        _ = _ === void 0 ? _ : _;
+      return _(
+        _({}, _),
+        {},
+        {
+          inputValue: _,
+          menuIsOpen: _,
+          onChange: _,
+          onInputChange: _,
+          onMenuClose: _,
+          onMenuOpen: _,
+          value: _,
+        },
+      );
+    }
+    _.useStateManager = _;
+  }),
+  _ = _((_, _) => {
+    function _() {
+      return (
+        (_.exports = _ =
+          Object.assign
+            ? Object.assign.bind()
+            : function (_) {
+                for (var _ = 1; _ < arguments.length; _++) {
+                  var _ = arguments[_];
+                  for (var _ in _)
+                    ({}).hasOwnProperty.call(_, _) && (_[_] = _[_]);
                 }
                 return _;
-              });
-            return this.GetNextDrawChangeCallback(_).Dispatch(_), _;
-          }
-          static s_Singleton;
-          static Get() {
-            return (
-              _.s_Singleton ||
-                ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-              _.s_Singleton
-            );
-          }
-          Init() {
-            if (!this.m_bLoadedFromConfig) {
-              let _ = (0, _._)("giveawaynextdraw", "application_config");
-              if (_ && _.giveaway_id) {
-                let _ = new _();
-                this.CopyToGiveaway(_, _),
-                  this.m_mapGiveawayIDToNextDrawInfo.set(_.giveaway_id, _);
-              }
-              this.m_bLoadedFromConfig = !0;
-            }
-          }
+              }),
+        (_.exports.__esModule = !0),
+        (_.exports.default = _.exports),
+        _.apply(null, arguments)
+      );
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _(_, _) {
+      if (!(_ instanceof _))
+        throw TypeError(`Cannot call a class as a function`);
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _();
+    function _(_, _) {
+      for (var _ = 0; _ < _.length; _++) {
+        var _ = _[_];
+        (_.enumerable = _.enumerable || !1),
+          (_.configurable = !0),
+          `value` in _ && (_.writable = !0),
+          Object.defineProperty(_, _(_.key), _);
+      }
+    }
+    function _(_, _, _) {
+      return (
+        _ && _(_.prototype, _),
+        _ && _(_, _),
+        Object.defineProperty(_, "prototype", {
+          writable: !1,
+        }),
+        _
+      );
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _(_, _) {
+      return (
+        (_.exports = _ =
+          Object.setPrototypeOf
+            ? Object.setPrototypeOf.bind()
+            : function (_, _) {
+                return (_.__proto__ = _), _;
+              }),
+        (_.exports.__esModule = !0),
+        (_.exports.default = _.exports),
+        _(_, _)
+      );
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _();
+    function _(_, _) {
+      if (typeof _ != `function` && _ !== null)
+        throw TypeError(`Super expression must either be null or a function`);
+      (_.prototype = Object.create(_ && _.prototype, {
+        constructor: {
+          value: _,
+          writable: !0,
+          configurable: !0,
+        },
+      })),
+        Object.defineProperty(_, "prototype", {
+          writable: !1,
+        }),
+        _ && _(_, _);
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _(_) {
+      return (
+        (_.exports = _ =
+          Object.setPrototypeOf
+            ? Object.getPrototypeOf.bind()
+            : function (_) {
+                return _.__proto__ || Object.getPrototypeOf(_);
+              }),
+        (_.exports.__esModule = !0),
+        (_.exports.default = _.exports),
+        _(_)
+      );
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _() {
+      try {
+        var _ = !Boolean.prototype.valueOf.call(
+          Reflect.construct(Boolean, [], function () {}),
+        );
+      } catch {}
+      return ((_.exports = _ =
+        function () {
+          return !!_;
+        }),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports))();
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _(_) {
+      if (_ === void 0)
+        throw ReferenceError(
+          `this hasn't been initialised - super() hasn't been called`,
+        );
+      return _;
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _().default,
+      _ = _();
+    function _(_, _) {
+      if (_ && (_(_) == `object` || typeof _ == `function`)) return _;
+      if (_ !== void 0)
+        throw TypeError(
+          `Derived constructors may only return object or undefined`,
+        );
+      return _(_);
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _(),
+      _ = _(),
+      _ = _();
+    function _(_) {
+      var _ = _();
+      return function () {
+        var _,
+          _ = _(_);
+        if (_) {
+          var _ = _(this).constructor;
+          _ = Reflect.construct(_, arguments, _);
+        } else _ = _.apply(this, arguments);
+        return _(this, _);
+      };
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _();
+    function _(_) {
+      if (Array.isArray(_)) return _(_);
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _(_) {
+      if (
+        (typeof Symbol < `u` && _[Symbol.iterator] != null) ||
+        _[`@@iterator`] != null
+      )
+        return Array.from(_);
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    function _() {
+      throw TypeError(`Invalid attempt to spread non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    var _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _();
+    function _(_) {
+      return _(_) || _(_) || _(_) || _();
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    function _(_) {
+      if (_.sheet) return _.sheet;
+      for (var _ = 0; _ < document.styleSheets.length; _++)
+        if (document.styleSheets[_].ownerNode === _)
+          return document.styleSheets[_];
+    }
+    function _(_) {
+      var _ = document.createElement(`style`);
+      return (
+        _.setAttribute(`data-emotion`, _.key),
+        _.nonce !== void 0 && _.setAttribute(`nonce`, _.nonce),
+        _.appendChild(document.createTextNode(``)),
+        _.setAttribute(`data-s`, ``),
+        _
+      );
+    }
+    _.StyleSheet = (function () {
+      function _(_) {
+        var _ = this;
+        (this._insertTag = function (_) {
+          var _ =
+            _.tags.length === 0
+              ? _.insertionPoint
+                ? _.insertionPoint.nextSibling
+                : _.prepend
+                  ? _.container.firstChild
+                  : _.before
+              : _.tags[_.tags.length - 1].nextSibling;
+          _.container.insertBefore(_, _), _.tags.push(_);
+        }),
+          (this.isSpeedy = _.speedy === void 0 || _.speedy),
+          (this.tags = []),
+          (this.ctr = 0),
+          (this.nonce = _.nonce),
+          (this.key = _.key),
+          (this.container = _.container),
+          (this.prepend = _.prepend),
+          (this.insertionPoint = _.insertionPoint),
+          (this.before = null);
+      }
+      var _ = _.prototype;
+      return (
+        (_.hydrate = function (_) {
+          _.forEach(this._insertTag);
+        }),
+        (_.insert = function (_) {
+          this.ctr % (this.isSpeedy ? 65e3 : 1) == 0 &&
+            this._insertTag(_(this));
+          var _ = this.tags[this.tags.length - 1];
+          if (this.isSpeedy) {
+            var _ = _(_);
+            try {
+              _.insertRule(_, _.cssRules.length);
+            } catch {}
+          } else _.appendChild(document.createTextNode(_));
+          this.ctr++;
+        }),
+        (_.flush = function () {
+          this.tags.forEach(function (_) {
+            return _.parentNode && _.parentNode.removeChild(_);
+          }),
+            (this.tags = []),
+            (this.ctr = 0);
+        }),
+        _
+      );
+    })();
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_, _) => {
+    (function (_, _) {
+      typeof _ == `object` && _ !== void 0
+        ? _(_)
+        : typeof define == `function` && define.amd
+          ? define([`exports`], _)
+          : ((_ ||= self), _((_.stylis = {})));
+    })(_, function (_) {
+      var _ = `-ms-`,
+        _ = `-moz-`,
+        _ = `-webkit-`,
+        _ = `comm`,
+        _ = `rule`,
+        _ = `decl`,
+        _ = `@page`,
+        _ = `@media`,
+        _ = `@import`,
+        _ = `@charset`,
+        _ = `@viewport`,
+        _ = `@supports`,
+        _ = `@document`,
+        _ = `@namespace`,
+        _ = `@keyframes`,
+        _ = `@font-face`,
+        _ = `@counter-style`,
+        _ = `@font-feature-values`,
+        _ = `@layer`,
+        _ = Math.abs,
+        _ = String.fromCharCode,
+        _ = Object.assign;
+      function _(_, _) {
+        return _(_, 0) ^ 45
+          ? (((((((_ << 2) ^ _(_, 0)) << 2) ^ _(_, 1)) << 2) ^ _(_, 2)) << 2) ^
+              _(_, 3)
+          : 0;
+      }
+      function _(_) {
+        return _.trim();
+      }
+      function _(_, _) {
+        return (_ = _.exec(_)) ? _[0] : _;
+      }
+      function _(_, _, _) {
+        return _.replace(_, _);
+      }
+      function _(_, _) {
+        return _.indexOf(_);
+      }
+      function _(_, _) {
+        return _.charCodeAt(_) | 0;
+      }
+      function _(_, _, _) {
+        return _.slice(_, _);
+      }
+      function _(_) {
+        return _.length;
+      }
+      function _(_) {
+        return _.length;
+      }
+      function _(_, _) {
+        return _.push(_), _;
+      }
+      function _(_, _) {
+        return _.map(_).join(``);
+      }
+      (_.line = 1),
+        (_.column = 1),
+        (_.length = 0),
+        (_.position = 0),
+        (_.character = 0),
+        (_.characters = ``);
+      function _(_, _, _, _, _, _, _) {
+        return {
+          value: _,
+          root: _,
+          parent: _,
+          type: _,
+          props: _,
+          children: _,
+          line: _.line,
+          column: _.column,
+          length: _,
+          return: ``,
         };
-        _([_._], _.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
-          _([_._], _.prototype, "CopyToGiveaway", 1);
-        let _ = _;
-        const _ = class _ {
-          m_intervalID;
-          m_intervalCountDownID;
-          static s_GlobalInstance = 0;
-          m_myInstanceNumber = 0;
-          constructor() {
-            (this.m_myInstanceNumber = _.s_GlobalInstance),
-              (_.s_GlobalInstance += 1);
-          }
-          ClearRefreshInterval() {
-            this.m_intervalID &&
-              (window.clearInterval(this.m_intervalID),
-              (this.m_intervalID = void 0));
-          }
-          ClearCountDown() {
-            this.m_intervalCountDownID &&
-              (window.clearInterval(this.m_intervalCountDownID),
-              (this.m_intervalCountDownID = void 0));
-          }
-          SetupRefreshDataInterval(_, _) {
-            if ((this.ClearRefreshInterval(), !_.closed)) {
-              let _ =
-                _.seconds_until_drawing !== void 0 &&
-                _.seconds_until_drawing <= 0 &&
-                _.winner_count == 0
-                  ? 60 * 1e3
-                  : 5 * 1e3;
-              this.m_intervalID = window.setInterval(_, _);
-            }
-          }
-          SetupCountDown(_, _) {
-            _ !== void 0 &&
-              _ > 0 &&
-              (this.m_intervalCountDownID = window.setInterval(_, 1e3));
-          }
-        };
-        _([_._], _.prototype, "ClearRefreshInterval", 1),
-          _([_._], _.prototype, "ClearCountDown", 1),
-          _([_._], _.prototype, "SetupRefreshDataInterval", 1),
-          _([_._], _.prototype, "SetupCountDown", 1);
-        let _ = _;
-        function _(_, _) {
-          const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
-          !_ ||
-            _.seconds_until_drawing === void 0 ||
-            ((_.seconds_until_drawing -= 1),
-            _.seconds_until_drawing == 0 && _.ClearCountDown());
+      }
+      function _(_, _) {
+        return _(
+          _(``, null, null, ``, null, null, 0),
+          _,
+          {
+            length: -_.length,
+          },
+          _,
+        );
+      }
+      function _() {
+        return _.character;
+      }
+      function _() {
+        return (
+          (_.character = _.position > 0 ? _(_.characters, --_.position) : 0),
+          _.column--,
+          _.character === 10 && ((_.column = 1), _.line--),
+          _.character
+        );
+      }
+      function _() {
+        return (
+          (_.character =
+            _.position < _.length ? _(_.characters, _.position++) : 0),
+          _.column++,
+          _.character === 10 && ((_.column = 1), _.line++),
+          _.character
+        );
+      }
+      function _() {
+        return _(_.characters, _.position);
+      }
+      function _() {
+        return _.position;
+      }
+      function _(_, _) {
+        return _(_.characters, _, _);
+      }
+      function _(_) {
+        switch (_) {
+          case 0:
+          case 9:
+          case 10:
+          case 13:
+          case 32:
+            return 5;
+          case 33:
+          case 43:
+          case 44:
+          case 47:
+          case 62:
+          case 64:
+          case 126:
+          case 59:
+          case 123:
+          case 125:
+            return 4;
+          case 58:
+            return 3;
+          case 34:
+          case 39:
+          case 40:
+          case 91:
+            return 2;
+          case 41:
+          case 93:
+            return 1;
         }
-        function _(_, _) {
-          const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
-          _ &&
-            _.BIsValid() &&
-            _.seconds_until_drawing !== void 0 &&
-            _.seconds_until_drawing <= 0 &&
-            !_.closed &&
-            (_.ClearCountDown(),
-            _.Get()
-              .ReloadGiveaway(_, _.m_myInstanceNumber)
-              .then((_) => {
-                _ && _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
-              }));
-        }
-        function _(_) {
-          const [_] = (0, _.useState)(new _()),
-            _ = (0, _._)();
-          (0, _.useEffect)(
-            () => (
-              _.Get()
-                .ReloadGiveaway(_, _.m_myInstanceNumber)
-                .then((_) => {
-                  _ &&
-                    (_.SetupRefreshDataInterval(_, () => _(_, _)),
-                    _.SetupCountDown(_.seconds_until_drawing, () => _(_, _)),
-                    _());
-                }),
-              () => {
-                _.ClearRefreshInterval(), _.ClearCountDown();
-              }
-            ),
-            [_, _, _],
+        return 0;
+      }
+      function _(_) {
+        return (
+          (_.line = _.column = 1),
+          (_.length = _((_.characters = _))),
+          (_.position = 0),
+          []
+        );
+      }
+      function _(_) {
+        return (_.characters = ``), _;
+      }
+      function _(_) {
+        return _(_(_.position - 1, _(_ === 91 ? _ + 2 : _ === 40 ? _ + 1 : _)));
+      }
+      function _(_) {
+        return _(_(_(_)));
+      }
+      function _(_) {
+        for (; (_.character = _()) && _.character < 33; ) _();
+        return _(_) > 2 || _(_.character) > 3 ? `` : ` `;
+      }
+      function _(_) {
+        for (; _(); )
+          switch (_(_.character)) {
+            case 0:
+              _(_(_.position - 1), _);
+              break;
+            case 2:
+              _(_(_.character), _);
+              break;
+            default:
+              _(_(_.character), _);
+          }
+        return _;
+      }
+      function _(_, _) {
+        for (
+          ;
+          --_ &&
+          _() &&
+          !(
+            _.character < 48 ||
+            _.character > 102 ||
+            (_.character > 57 && _.character < 65) ||
+            (_.character > 70 && _.character < 97)
           );
-          const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber),
-            [_, _, _] = (0, _._)(() => [
-              _?.winner_count,
-              _?.closed,
-              _?.seconds_until_drawing,
-            ]);
-          return {
-            bLoadingGiveawayInfo:
-              !_ || _.giveaway_id == null || !_.BStarted() || _ === void 0,
-            winner_count: _,
-            closed: _,
-            seconds_until_drawing: _,
+        );
+        return _(_, _() + (_ < 6 && _() == 32 && _() == 32));
+      }
+      function _(_) {
+        for (; _(); )
+          switch (_.character) {
+            case _:
+              return _.position;
+            case 34:
+            case 39:
+              _ !== 34 && _ !== 39 && _(_.character);
+              break;
+            case 40:
+              _ === 41 && _(_);
+              break;
+            case 92:
+              _();
+          }
+        return _.position;
+      }
+      function _(_, _) {
+        for (
+          ;
+          _() &&
+          _ + _.character !== 57 &&
+          (_ + _.character !== 84 || _() !== 47);
+        );
+        return `/*` + _(_, _.position - 1) + `*` + _(_ === 47 ? _ : _());
+      }
+      function _(_) {
+        for (; !_(_()); ) _();
+        return _(_, _.position);
+      }
+      function _(_) {
+        return _(_(``, null, null, null, [``], (_ = _(_)), 0, [0], _));
+      }
+      function _(_, _, _, _, _, _, _, _, _) {
+        for (
+          var _ = 0,
+            _ = 0,
+            _ = _,
+            _ = 0,
+            _ = 0,
+            _ = 0,
+            _ = 1,
+            _ = 1,
+            _ = 1,
+            _ = 0,
+            _ = ``,
+            _ = _,
+            _ = _,
+            _ = _,
+            _ = _;
+          _;
+        )
+          switch (((_ = _), (_ = _()))) {
+            case 40:
+              if (_ != 108 && _(_, _ - 1) == 58) {
+                _((_ += _(_(_), `&`, `&\f`)), `&\f`) != -1 && (_ = -1);
+                break;
+              }
+            case 34:
+            case 39:
+            case 91:
+              _ += _(_);
+              break;
+            case 9:
+            case 10:
+            case 13:
+            case 32:
+              _ += _(_);
+              break;
+            case 92:
+              _ += _(_() - 1, 7);
+              continue;
+            case 47:
+              switch (_()) {
+                case 42:
+                case 47:
+                  _(_(_(_(), _()), _, _), _);
+                  break;
+                default:
+                  _ += `/`;
+              }
+              break;
+            case 123 * _:
+              _[_++] = _(_) * _;
+            case 125 * _:
+            case 59:
+            case 0:
+              switch (_) {
+                case 0:
+                case 125:
+                  _ = 0;
+                case 59 + _:
+                  _ == -1 && (_ = _(_, /\f/g, ``)),
+                    _ > 0 &&
+                      _(_) - _ &&
+                      _(
+                        _ > 32
+                          ? _(_ + `;`, _, _, _ - 1)
+                          : _(_(_, ` `, ``) + `;`, _, _, _ - 2),
+                        _,
+                      );
+                  break;
+                case 59:
+                  _ += `;`;
+                default:
+                  if (
+                    (_(
+                      (_ = _(_, _, _, _, _, _, _, _, (_ = []), (_ = []), _)),
+                      _,
+                    ),
+                    _ === 123)
+                  ) {
+                    if (_ === 0) _(_, _, _, _, _, _, _, _, _);
+                    else
+                      switch (_ === 99 && _(_, 3) === 110 ? 100 : _) {
+                        case 100:
+                        case 108:
+                        case 109:
+                        case 115:
+                          _(
+                            _,
+                            _,
+                            _,
+                            _ &&
+                              _(_(_, _, _, 0, 0, _, _, _, _, (_ = []), _), _),
+                            _,
+                            _,
+                            _,
+                            _,
+                            _ ? _ : _,
+                          );
+                          break;
+                        default:
+                          _(_, _, _, _, [``], _, 0, _, _);
+                      }
+                  }
+              }
+              (_ = _ = _ = 0), (_ = _ = 1), (_ = _ = ``), (_ = _);
+              break;
+            case 58:
+              (_ = 1 + _(_)), (_ = _);
+            default:
+              if (_ < 1) {
+                if (_ == 123) --_;
+                else if (_ == 125 && _++ == 0 && _() == 125) continue;
+              }
+              switch (((_ += _(_)), _ * _)) {
+                case 38:
+                  _ = _ > 0 ? 1 : ((_ += `\f`), -1);
+                  break;
+                case 44:
+                  (_[_++] = (_(_) - 1) * _), (_ = 1);
+                  break;
+                case 64:
+                  _() === 45 && (_ += _(_())),
+                    (_ = _()),
+                    (_ = _ = _((_ = _ += _(_())))),
+                    _++;
+                  break;
+                case 45:
+                  _ === 45 && _(_) == 2 && (_ = 0);
+              }
+          }
+        return _;
+      }
+      function _(_, _, _, _, _, _, _, _, _, _, _) {
+        for (
+          var _ = _ - 1, _ = _ === 0 ? _ : [``], _ = _(_), _ = 0, _ = 0, _ = 0;
+          _ < _;
+          ++_
+        )
+          for (
+            var _ = 0, _ = _(_, _ + 1, (_ = _((_ = _[_])))), _ = _;
+            _ < _;
+            ++_
+          )
+            (_ = _(_ > 0 ? _[_] + ` ` + _ : _(_, /&\f/g, _[_]))) &&
+              (_[_++] = _);
+        return _(_, _, _, _ === 0 ? _ : _, _, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, _, _, _, _(_()), _(_, 2, -2), 0);
+      }
+      function _(_, _, _, _) {
+        return _(_, _, _, _, _(_, 0, _), _(_, _ + 1, -1), _);
+      }
+      function _(_, _, _) {
+        switch (_(_, _)) {
+          case 5103:
+            return _ + `print-` + _ + _;
+          case 5737:
+          case 4201:
+          case 3177:
+          case 3433:
+          case 1641:
+          case 4457:
+          case 2921:
+          case 5572:
+          case 6356:
+          case 5844:
+          case 3191:
+          case 6645:
+          case 3005:
+          case 6391:
+          case 5879:
+          case 5623:
+          case 6135:
+          case 4599:
+          case 4855:
+          case 4215:
+          case 6389:
+          case 5109:
+          case 5365:
+          case 5621:
+          case 3829:
+            return _ + _ + _;
+          case 4789:
+            return _ + _ + _;
+          case 5349:
+          case 4246:
+          case 4810:
+          case 6968:
+          case 2756:
+            return _ + _ + _ + _ + _ + _ + _;
+          case 5936:
+            switch (_(_, _ + 11)) {
+              case 114:
+                return _ + _ + _ + _(_, /[svh]\w+-[tblr]{2}/, `tb`) + _;
+              case 108:
+                return _ + _ + _ + _(_, /[svh]\w+-[tblr]{2}/, `tb-rl`) + _;
+              case 45:
+                return _ + _ + _ + _(_, /[svh]\w+-[tblr]{2}/, `lr`) + _;
+            }
+          case 6828:
+          case 4268:
+          case 2903:
+            return _ + _ + _ + _ + _;
+          case 6165:
+            return _ + _ + _ + `flex-` + _ + _;
+          case 5187:
+            return (
+              _ +
+              _ +
+              _(_, /(\w+).+(:[^]+)/, _ + `box-$1$2` + _ + `flex-$1$2`) +
+              _
+            );
+          case 5443:
+            return (
+              _ +
+              _ +
+              _ +
+              `flex-item-` +
+              _(_, /flex-|-self/g, ``) +
+              (_(_, /flex-|baseline/)
+                ? ``
+                : _ + `grid-row-` + _(_, /flex-|-self/g, ``)) +
+              _
+            );
+          case 4675:
+            return (
+              _ +
+              _ +
+              _ +
+              `flex-line-pack` +
+              _(_, /align-content|flex-|-self/g, ``) +
+              _
+            );
+          case 5548:
+            return _ + _ + _ + _(_, `shrink`, `negative`) + _;
+          case 5292:
+            return _ + _ + _ + _(_, `basis`, `preferred-size`) + _;
+          case 6060:
+            return (
+              _ +
+              `box-` +
+              _(_, `-grow`, ``) +
+              _ +
+              _ +
+              _ +
+              _(_, `grow`, `positive`) +
+              _
+            );
+          case 4554:
+            return _ + _(_, /([^-])(transform)/g, `$1` + _ + `$2`) + _;
+          case 6187:
+            return (
+              _(
+                _(_(_, /(zoom-|grab)/, _ + `$1`), /(image-set)/, _ + `$1`),
+                _,
+                ``,
+              ) + _
+            );
+          case 5495:
+          case 3959:
+            return _(_, /(image-set\([^]*)/, _ + "$1$`$1");
+          case 4968:
+            return (
+              _(
+                _(
+                  _,
+                  /(.+:)(flex-)?(.*)/,
+                  _ + `box-pack:$3` + _ + `flex-pack:$3`,
+                ),
+                /s.+-b[^;]+/,
+                `justify`,
+              ) +
+              _ +
+              _ +
+              _
+            );
+          case 4200:
+            if (!_(_, /flex-|baseline/))
+              return _ + `grid-column-align` + _(_, _) + _;
+            break;
+          case 2592:
+          case 3360:
+            return _ + _(_, `template-`, ``) + _;
+          case 4384:
+          case 3616:
+            return _ &&
+              _.some(function (_, _) {
+                return (_ = _), _(_.props, /grid-\w+-end/);
+              })
+              ? ~_(_ + (_ = _[_].value), `span`)
+                ? _
+                : _ +
+                  _(_, `-start`, ``) +
+                  _ +
+                  _ +
+                  `grid-row-span:` +
+                  (~_(_, `span`) ? _(_, /\d+/) : +_(_, /\d+/) - _(_, /\d+/)) +
+                  `;`
+              : _ + _(_, `-start`, ``) + _;
+          case 4896:
+          case 4128:
+            return _ &&
+              _.some(function (_) {
+                return _(_.props, /grid-\w+-start/);
+              })
+              ? _
+              : _ + _(_(_, `-end`, `-span`), `span `, ``) + _;
+          case 4095:
+          case 3583:
+          case 4068:
+          case 2532:
+            return _(_, /(.+)-inline(.+)/, _ + `$1$2`) + _;
+          case 8116:
+          case 7059:
+          case 5753:
+          case 5535:
+          case 5445:
+          case 5701:
+          case 4933:
+          case 4677:
+          case 5533:
+          case 5789:
+          case 5021:
+          case 4765:
+            if (_(_) - 1 - _ > 6)
+              switch (_(_, _ + 1)) {
+                case 109:
+                  if (_(_, _ + 4) !== 45) break;
+                case 102:
+                  return (
+                    _(
+                      _,
+                      /(.+:)(.+)-([^]+)/,
+                      `$1` +
+                        _ +
+                        `$2-$3$1` +
+                        _ +
+                        (_(_, _ + 3) == 108 ? `$3` : `$2-$3`),
+                    ) + _
+                  );
+                case 115:
+                  return ~_(_, `stretch`)
+                    ? _(_(_, `stretch`, `fill-available`), _, _) + _
+                    : _;
+              }
+            break;
+          case 5152:
+          case 5920:
+            return _(
+              _,
+              /(.+?):(\d+)(\s*\/\s*(span)?\s*(\d+))?(.*)/,
+              function (_, _, _, _, _, _, _) {
+                return (
+                  _ +
+                  _ +
+                  `:` +
+                  _ +
+                  _ +
+                  (_ ? _ + _ + `-span:` + (_ ? _ : +_ - _) + _ : ``) +
+                  _
+                );
+              },
+            );
+          case 4949:
+            if (_(_, _ + 6) === 121) return _(_, `:`, `:` + _) + _;
+            break;
+          case 6444:
+            switch (_(_, _(_, 14) === 45 ? 18 : 11)) {
+              case 120:
+                return (
+                  _(
+                    _,
+                    /(.+:)([^;\s!]+)(;|(\s+)?!.+)?/,
+                    `$1` +
+                      _ +
+                      (_(_, 14) === 45 ? `inline-` : ``) +
+                      `box$3$1` +
+                      _ +
+                      `$2$3$1` +
+                      _ +
+                      `$2box$3`,
+                  ) + _
+                );
+              case 100:
+                return _(_, `:`, `:` + _) + _;
+            }
+            break;
+          case 5719:
+          case 2647:
+          case 2135:
+          case 3927:
+          case 2391:
+            return _(_, `scroll-`, `scroll-snap-`) + _;
+        }
+        return _;
+      }
+      function _(_, _) {
+        for (var _ = ``, _ = _(_), _ = 0; _ < _; _++)
+          _ += _(_[_], _, _, _) || ``;
+        return _;
+      }
+      function _(_, _, _, _) {
+        switch (_.type) {
+          case _:
+            if (_.children.length) break;
+          case _:
+          case _:
+            return (_.return = _.return || _.value);
+          case _:
+            return ``;
+          case _:
+            return (_.return = _.value + `{` + _(_.children, _) + `}`);
+          case _:
+            _.value = _.props.join(`,`);
+        }
+        return _((_ = _(_.children, _)))
+          ? (_.return = _.value + `{` + _ + `}`)
+          : ``;
+      }
+      function _(_) {
+        var _ = _(_);
+        return function (_, _, _, _) {
+          for (var _ = ``, _ = 0; _ < _; _++) _ += _[_](_, _, _, _) || ``;
+          return _;
+        };
+      }
+      function _(_) {
+        return function (_) {
+          _.root || ((_ = _.return) && _(_));
+        };
+      }
+      function _(_, _, _, _) {
+        if (_.length > -1 && !_.return)
+          switch (_.type) {
+            case _:
+              _.return = _(_.value, _.length, _);
+              return;
+            case _:
+              return _(
+                [
+                  _(_, {
+                    value: _(_.value, `@`, `@` + _),
+                  }),
+                ],
+                _,
+              );
+            case _:
+              if (_.length)
+                return _(_.props, function (_) {
+                  switch (_(_, /(::plac\w+|:read-\w+)/)) {
+                    case `:read-only`:
+                    case `:read-write`:
+                      return _(
+                        [
+                          _(_, {
+                            props: [_(_, /:(read-\w+)/, `:` + _ + `$1`)],
+                          }),
+                        ],
+                        _,
+                      );
+                    case `::placeholder`:
+                      return _(
+                        [
+                          _(_, {
+                            props: [_(_, /:(plac\w+)/, `:` + _ + `input-$1`)],
+                          }),
+                          _(_, {
+                            props: [_(_, /:(plac\w+)/, `:` + _ + `$1`)],
+                          }),
+                          _(_, {
+                            props: [_(_, /:(plac\w+)/, _ + `input-$1`)],
+                          }),
+                        ],
+                        _,
+                      );
+                  }
+                  return ``;
+                });
+          }
+      }
+      function _(_) {
+        switch (_.type) {
+          case _:
+            _.props = _.props.map(function (_) {
+              return _(_(_), function (_, _, _) {
+                switch (_(_, 0)) {
+                  case 12:
+                    return _(_, 1, _(_));
+                  case 0:
+                  case 40:
+                  case 43:
+                  case 62:
+                  case 126:
+                    return _;
+                  case 58:
+                    _[++_] === `global` &&
+                      ((_[_] = ``), (_[++_] = `\f` + _(_[_], (_ = 1), -1)));
+                  case 32:
+                    return _ === 1 ? `` : _;
+                  default:
+                    switch (_) {
+                      case 0:
+                        return (_ = _), _(_) > 1 ? `` : _;
+                      case (_ = _(_) - 1):
+                      case 2:
+                        return _ === 2 ? _ + _ + _ : _ + _;
+                      default:
+                        return _;
+                    }
+                }
+              });
+            });
+        }
+      }
+      (_.CHARSET = _),
+        (_.COMMENT = _),
+        (_.COUNTER_STYLE = _),
+        (_.DECLARATION = _),
+        (_.DOCUMENT = _),
+        (_.FONT_FACE = _),
+        (_.FONT_FEATURE_VALUES = _),
+        (_.IMPORT = _),
+        (_.KEYFRAMES = _),
+        (_.LAYER = _),
+        (_.MEDIA = _),
+        (_.MOZ = _),
+        (_._ = _),
+        (_.NAMESPACE = _),
+        (_.PAGE = _),
+        (_.RULESET = _),
+        (_.SUPPORTS = _),
+        (_.VIEWPORT = _),
+        (_.WEBKIT = _),
+        (_.abs = _),
+        (_.alloc = _),
+        (_.append = _),
+        (_.assign = _),
+        (_.caret = _),
+        (_.char = _),
+        (_.charat = _),
+        (_.combine = _),
+        (_.comment = _),
+        (_.commenter = _),
+        (_.compile = _),
+        (_.copy = _),
+        (_.dealloc = _),
+        (_.declaration = _),
+        (_.delimit = _),
+        (_.delimiter = _),
+        (_.escaping = _),
+        (_.from = _),
+        (_.hash = _),
+        (_.identifier = _),
+        (_.indexof = _),
+        (_.match = _),
+        (_.middleware = _),
+        (_.namespace = _),
+        (_.next = _),
+        (_.node = _),
+        (_.parse = _),
+        (_.peek = _),
+        (_.prefix = _),
+        (_.prefixer = _),
+        (_.prev = _),
+        (_.replace = _),
+        (_.ruleset = _),
+        (_.rulesheet = _),
+        (_.serialize = _),
+        (_.sizeof = _),
+        (_.slice = _),
+        (_.stringify = _),
+        (_.strlen = _),
+        (_.substr = _),
+        (_.token = _),
+        (_.tokenize = _),
+        (_.tokenizer = _),
+        (_.trim = _),
+        (_.whitespace = _),
+        Object.defineProperty(_, "__esModule", {
+          value: !0,
+        });
+    });
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    }),
+      (_.default = function (_) {
+        var _ = new WeakMap();
+        return function (_) {
+          if (_.has(_)) return _.get(_);
+          var _ = _(_);
+          return _.set(_, _), _;
+        };
+      });
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    function _(_) {
+      var _ = Object.create(null);
+      return function (_) {
+        return _[_] === void 0 && (_[_] = _(_)), _[_];
+      };
+    }
+    _.default = _;
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    var _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _();
+    function _(_) {
+      return _ && _.__esModule
+        ? _
+        : {
+            default: _,
           };
+    }
+    var _ = _(_),
+      _ = _(_),
+      _ = function (_, _, _) {
+        for (
+          var _ = 0, _ = 0;
+          (_ = _),
+            (_ = _.peek()),
+            _ === 38 && _ === 12 && (_[_] = 1),
+            !_.token(_);
+        )
+          _.next();
+        return _.slice(_, _.position);
+      },
+      _ = function (_, _) {
+        var _ = -1,
+          _ = 44;
+        do
+          switch (_.token(_)) {
+            case 0:
+              _ === 38 && _.peek() === 12 && (_[_] = 1),
+                (_[_] += _(_.position - 1, _, _));
+              break;
+            case 2:
+              _[_] += _.delimit(_);
+              break;
+            case 4:
+              if (_ === 44) {
+                (_[++_] = _.peek() === 58 ? `&\f` : ``), (_[_] = _[_].length);
+                break;
+              }
+            default:
+              _[_] += _.from(_);
+          }
+        while ((_ = _.next()));
+        return _;
+      },
+      _ = function (_, _) {
+        return _.dealloc(_(_.alloc(_), _));
+      },
+      _ = new WeakMap(),
+      _ = function (_) {
+        if (!(_.type !== `rule` || !_.parent || _.length < 1)) {
+          for (
+            var _ = _.value,
+              _ = _.parent,
+              _ = _.column === _.column && _.line === _.line;
+            _.type !== `rule`;
+          )
+            if (((_ = _.parent), !_)) return;
+          if (
+            (_.props.length !== 1 || _.charCodeAt(0) === 58 || _.get(_)) &&
+            !_
+          ) {
+            _.set(_, !0);
+            for (
+              var _ = [], _ = _(_, _), _ = _.props, _ = 0, _ = 0;
+              _ < _.length;
+              _++
+            )
+              for (var _ = 0; _ < _.length; _++, _++)
+                _.props[_] = _[_]
+                  ? _[_].replace(/&\f/g, _[_])
+                  : _[_] + ` ` + _[_];
+          }
         }
       },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const _ = (0, _._)(),
-            _ = _.useContext(_);
-          return (0, _._)(_(_, _, _));
+      _ = function (_) {
+        if (_.type === `decl`) {
+          var _ = _.value;
+          _.charCodeAt(0) === 108 &&
+            _.charCodeAt(2) === 98 &&
+            ((_.return = ``), (_.value = ``));
         }
-        function _(_) {
-          const _ = React.useRef(void 0),
-            _ = _(_);
-          return _.data
-            ? _
-            : (_.current ||
-                (_.current = new CPersonaStateImpl(
-                  typeof _ == "string"
-                    ? new CSteamID(_)
-                    : CSteamID.InitFromAccountID(_),
-                )),
-              {
-                ..._,
-                data: _.current,
+      };
+    function _(_, _) {
+      switch (_.hash(_, _)) {
+        case 5103:
+          return _.WEBKIT + `print-` + _ + _;
+        case 5737:
+        case 4201:
+        case 3177:
+        case 3433:
+        case 1641:
+        case 4457:
+        case 2921:
+        case 5572:
+        case 6356:
+        case 5844:
+        case 3191:
+        case 6645:
+        case 3005:
+        case 6391:
+        case 5879:
+        case 5623:
+        case 6135:
+        case 4599:
+        case 4855:
+        case 4215:
+        case 6389:
+        case 5109:
+        case 5365:
+        case 5621:
+        case 3829:
+          return _.WEBKIT + _ + _;
+        case 5349:
+        case 4246:
+        case 4810:
+        case 6968:
+        case 2756:
+          return _.WEBKIT + _ + _.MOZ + _ + _._ + _ + _;
+        case 6828:
+        case 4268:
+          return _.WEBKIT + _ + _._ + _ + _;
+        case 6165:
+          return _.WEBKIT + _ + _._ + `flex-` + _ + _;
+        case 5187:
+          return (
+            _.WEBKIT +
+            _ +
+            _.replace(
+              _,
+              /(\w+).+(:[^]+)/,
+              _.WEBKIT + `box-$1$2` + _._ + `flex-$1$2`,
+            ) +
+            _
+          );
+        case 5443:
+          return (
+            _.WEBKIT +
+            _ +
+            _._ +
+            `flex-item-` +
+            _.replace(_, /flex-|-self/, ``) +
+            _
+          );
+        case 4675:
+          return (
+            _.WEBKIT +
+            _ +
+            _._ +
+            `flex-line-pack` +
+            _.replace(_, /align-content|flex-|-self/, ``) +
+            _
+          );
+        case 5548:
+          return _.WEBKIT + _ + _._ + _.replace(_, `shrink`, `negative`) + _;
+        case 5292:
+          return (
+            _.WEBKIT + _ + _._ + _.replace(_, `basis`, `preferred-size`) + _
+          );
+        case 6060:
+          return (
+            _.WEBKIT +
+            `box-` +
+            _.replace(_, `-grow`, ``) +
+            _.WEBKIT +
+            _ +
+            _._ +
+            _.replace(_, `grow`, `positive`) +
+            _
+          );
+        case 4554:
+          return (
+            _.WEBKIT +
+            _.replace(_, /([^-])(transform)/g, `$1` + _.WEBKIT + `$2`) +
+            _
+          );
+        case 6187:
+          return (
+            _.replace(
+              _.replace(
+                _.replace(_, /(zoom-|grab)/, _.WEBKIT + `$1`),
+                /(image-set)/,
+                _.WEBKIT + `$1`,
+              ),
+              _,
+              ``,
+            ) + _
+          );
+        case 5495:
+        case 3959:
+          return _.replace(_, /(image-set\([^]*)/, _.WEBKIT + "$1$`$1");
+        case 4968:
+          return (
+            _.replace(
+              _.replace(
+                _,
+                /(.+:)(flex-)?(.*)/,
+                _.WEBKIT + `box-pack:$3` + _._ + `flex-pack:$3`,
+              ),
+              /s.+-b[^;]+/,
+              `justify`,
+            ) +
+            _.WEBKIT +
+            _ +
+            _
+          );
+        case 4095:
+        case 3583:
+        case 4068:
+        case 2532:
+          return _.replace(_, /(.+)-inline(.+)/, _.WEBKIT + `$1$2`) + _;
+        case 8116:
+        case 7059:
+        case 5753:
+        case 5535:
+        case 5445:
+        case 5701:
+        case 4933:
+        case 4677:
+        case 5533:
+        case 5789:
+        case 5021:
+        case 4765:
+          if (_.strlen(_) - 1 - _ > 6)
+            switch (_.charat(_, _ + 1)) {
+              case 109:
+                if (_.charat(_, _ + 4) !== 45) break;
+              case 102:
+                return (
+                  _.replace(
+                    _,
+                    /(.+:)(.+)-([^]+)/,
+                    `$1` +
+                      _.WEBKIT +
+                      `$2-$3$1` +
+                      _.MOZ +
+                      (_.charat(_, _ + 3) == 108 ? `$3` : `$2-$3`),
+                  ) + _
+                );
+              case 115:
+                return ~_.indexof(_, `stretch`)
+                  ? _(_.replace(_, `stretch`, `fill-available`), _) + _
+                  : _;
+            }
+          break;
+        case 4949:
+          if (_.charat(_, _ + 1) !== 115) break;
+        case 6444:
+          switch (
+            _.charat(_, _.strlen(_) - 3 - (~_.indexof(_, `!important`) && 10))
+          ) {
+            case 107:
+              return _.replace(_, `:`, `:` + _.WEBKIT) + _;
+            case 101:
+              return (
+                _.replace(
+                  _,
+                  /(.+:)([^;!]+)(;|!.+)?/,
+                  `$1` +
+                    _.WEBKIT +
+                    (_.charat(_, 14) === 45 ? `inline-` : ``) +
+                    `box$3$1` +
+                    _.WEBKIT +
+                    `$2$3$1` +
+                    _._ +
+                    `$2box$3`,
+                ) + _
+              );
+          }
+          break;
+        case 5936:
+          switch (_.charat(_, _ + 11)) {
+            case 114:
+              return (
+                _.WEBKIT +
+                _ +
+                _._ +
+                _.replace(_, /[svh]\w+-[tblr]{2}/, `tb`) +
+                _
+              );
+            case 108:
+              return (
+                _.WEBKIT +
+                _ +
+                _._ +
+                _.replace(_, /[svh]\w+-[tblr]{2}/, `tb-rl`) +
+                _
+              );
+            case 45:
+              return (
+                _.WEBKIT +
+                _ +
+                _._ +
+                _.replace(_, /[svh]\w+-[tblr]{2}/, `lr`) +
+                _
+              );
+          }
+          return _.WEBKIT + _ + _._ + _ + _;
+      }
+      return _;
+    }
+    var _ = function (_, _, _, _) {
+        if (_.length > -1 && !_.return)
+          switch (_.type) {
+            case _.DECLARATION:
+              _.return = _(_.value, _.length);
+              break;
+            case _.KEYFRAMES:
+              return _.serialize(
+                [
+                  _.copy(_, {
+                    value: _.replace(_.value, `@`, `@` + _.WEBKIT),
+                  }),
+                ],
+                _,
+              );
+            case _.RULESET:
+              if (_.length)
+                return _.combine(_.props, function (_) {
+                  switch (_.match(_, /(::plac\w+|:read-\w+)/)) {
+                    case `:read-only`:
+                    case `:read-write`:
+                      return _.serialize(
+                        [
+                          _.copy(_, {
+                            props: [
+                              _.replace(_, /:(read-\w+)/, `:` + _.MOZ + `$1`),
+                            ],
+                          }),
+                        ],
+                        _,
+                      );
+                    case `::placeholder`:
+                      return _.serialize(
+                        [
+                          _.copy(_, {
+                            props: [
+                              _.replace(
+                                _,
+                                /:(plac\w+)/,
+                                `:` + _.WEBKIT + `input-$1`,
+                              ),
+                            ],
+                          }),
+                          _.copy(_, {
+                            props: [
+                              _.replace(_, /:(plac\w+)/, `:` + _.MOZ + `$1`),
+                            ],
+                          }),
+                          _.copy(_, {
+                            props: [
+                              _.replace(_, /:(plac\w+)/, _._ + `input-$1`),
+                            ],
+                          }),
+                        ],
+                        _,
+                      );
+                  }
+                  return ``;
+                });
+          }
+      },
+      _ = typeof document < `u`,
+      _ = _
+        ? void 0
+        : _.default(function () {
+            return _.default(function () {
+              var _ = {};
+              return function (_) {
+                return _[_];
+              };
+            });
+          }),
+      _ = [_];
+    _.default = function (_) {
+      var _ = _.key;
+      if (_ && _ === `css`) {
+        var _ = document.querySelectorAll(`style[data-emotion]:not([data-s])`);
+        Array.prototype.forEach.call(_, function (_) {
+          _.getAttribute(`data-emotion`).indexOf(` `) !== -1 &&
+            (document.head.appendChild(_), _.setAttribute(`data-s`, ``));
+        });
+      }
+      var _ = _.stylisPlugins || _,
+        _ = {},
+        _,
+        _ = [];
+      _ &&
+        ((_ = _.container || document.head),
+        Array.prototype.forEach.call(
+          document.querySelectorAll(`style[data-emotion^="` + _ + ` "]`),
+          function (_) {
+            for (
+              var _ = _.getAttribute(`data-emotion`).split(` `), _ = 1;
+              _ < _.length;
+              _++
+            )
+              _[_[_]] = !0;
+            _.push(_);
+          },
+        ));
+      var _,
+        _ = [_, _];
+      if (_) {
+        var _,
+          _ = [
+            _.stringify,
+            _.rulesheet(function (_) {
+              _.insert(_);
+            }),
+          ],
+          _ = _.middleware(_.concat(_, _)),
+          _ = function (_) {
+            return _.serialize(_.compile(_), _);
+          };
+        _ = function (_, _, _, _) {
+          (_ = _),
+            _(_ ? _ + `{` + _.styles + `}` : _.styles),
+            _ && (_.inserted[_.name] = !0);
+        };
+      } else {
+        var _ = [_.stringify],
+          _ = _.middleware(_.concat(_, _)),
+          _ = function (_) {
+            return _.serialize(_.compile(_), _);
+          },
+          _ = _(_)(_),
+          _ = function (_, _) {
+            var _ = _.name;
+            return (
+              _[_] === void 0 &&
+                (_[_] = _(_ ? _ + `{` + _.styles + `}` : _.styles)),
+              _[_]
+            );
+          };
+        _ = function (_, _, _, _) {
+          var _ = _.name,
+            _ = _(_, _);
+          if (_.compat === void 0) return _ && (_.inserted[_] = !0), _;
+          if (_) _.inserted[_] = _;
+          else return _;
+        };
+      }
+      var _ = {
+        key: _,
+        sheet: new _.StyleSheet({
+          key: _,
+          container: _,
+          nonce: _.nonce,
+          speedy: _.speedy,
+          prepend: _.prepend,
+          insertionPoint: _.insertionPoint,
+        }),
+        nonce: _.nonce,
+        inserted: _,
+        registered: {},
+        insert: _,
+      };
+      return _.sheet.hydrate(_), _;
+    };
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    var _ = _();
+    function _(_) {
+      return _ && _.__esModule
+        ? _
+        : {
+            default: _,
+          };
+    }
+    var _ = _(_);
+    _.default = function (_, _) {
+      return _.default(_, _);
+    };
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    var _ = typeof document < `u`;
+    function _(_, _, _) {
+      var _ = ``;
+      return (
+        _.split(` `).forEach(function (_) {
+          _[_] === void 0 ? (_ += _ + ` `) : _.push(_[_] + `;`);
+        }),
+        _
+      );
+    }
+    var _ = function (_, _, _) {
+      var _ = _.key + `-` + _.name;
+      (_ === !1 || (_ === !1 && _.compat !== void 0)) &&
+        _.registered[_] === void 0 &&
+        (_.registered[_] = _.styles);
+    };
+    (_.getRegisteredStyles = _),
+      (_.insertStyles = function (_, _, _) {
+        _(_, _, _);
+        var _ = _.key + `-` + _.name;
+        if (_.inserted[_.name] === void 0) {
+          var _ = ``,
+            _ = _;
+          do {
+            var _ = _.insert(_ === _ ? `.` + _ : ``, _, _.sheet, !0);
+            !_ && _ !== void 0 && (_ += _), (_ = _.next);
+          } while (_ !== void 0);
+          if (!_ && _.length !== 0) return _;
+        }
+      }),
+      (_.registerStyles = _);
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    function _(_) {
+      for (var _ = 0, _, _ = 0, _ = _.length; _ >= 4; ++_, _ -= 4)
+        (_ =
+          (_.charCodeAt(_) & 255) |
+          ((_.charCodeAt(++_) & 255) << 8) |
+          ((_.charCodeAt(++_) & 255) << 16) |
+          ((_.charCodeAt(++_) & 255) << 24)),
+          (_ = (_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16)),
+          (_ ^= _ >>> 24),
+          (_ =
+            ((_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16)) ^
+            ((_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16)));
+      switch (_) {
+        case 3:
+          _ ^= (_.charCodeAt(_ + 2) & 255) << 16;
+        case 2:
+          _ ^= (_.charCodeAt(_ + 1) & 255) << 8;
+        case 1:
+          (_ ^= _.charCodeAt(_) & 255),
+            (_ = (_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16));
+      }
+      return (
+        (_ ^= _ >>> 13),
+        (_ = (_ & 65535) * 1540483477 + (((_ >>> 16) * 59797) << 16)),
+        ((_ ^ (_ >>> 15)) >>> 0).toString(36)
+      );
+    }
+    _.default = _;
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    }),
+      (_.default = {
+        animationIterationCount: 1,
+        aspectRatio: 1,
+        borderImageOutset: 1,
+        borderImageSlice: 1,
+        borderImageWidth: 1,
+        boxFlex: 1,
+        boxFlexGroup: 1,
+        boxOrdinalGroup: 1,
+        columnCount: 1,
+        columns: 1,
+        flex: 1,
+        flexGrow: 1,
+        flexPositive: 1,
+        flexShrink: 1,
+        flexNegative: 1,
+        flexOrder: 1,
+        gridRow: 1,
+        gridRowEnd: 1,
+        gridRowSpan: 1,
+        gridRowStart: 1,
+        gridColumn: 1,
+        gridColumnEnd: 1,
+        gridColumnSpan: 1,
+        gridColumnStart: 1,
+        msGridRow: 1,
+        msGridRowSpan: 1,
+        msGridColumn: 1,
+        msGridColumnSpan: 1,
+        fontWeight: 1,
+        lineHeight: 1,
+        opacity: 1,
+        order: 1,
+        orphans: 1,
+        tabSize: 1,
+        widows: 1,
+        zIndex: 1,
+        zoom: 1,
+        WebkitLineClamp: 1,
+        fillOpacity: 1,
+        floodOpacity: 1,
+        stopOpacity: 1,
+        strokeDasharray: 1,
+        strokeDashoffset: 1,
+        strokeMiterlimit: 1,
+        strokeOpacity: 1,
+        strokeWidth: 1,
+      });
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    var _ = _(),
+      _ = _(),
+      _ = _();
+    function _(_) {
+      return _ && _.__esModule
+        ? _
+        : {
+            default: _,
+          };
+    }
+    var _ = _(_),
+      _ = _(_),
+      _ = _(_),
+      _ = /[A-Z]|^ms/g,
+      _ = /_EMO_([^_]+?)_([^]*?)_EMO_/g,
+      _ = function (_) {
+        return _.charCodeAt(1) === 45;
+      },
+      _ = function (_) {
+        return _ != null && typeof _ != `boolean`;
+      },
+      _ = _.default(function (_) {
+        return _(_) ? _ : _.replace(_, `-$&`).toLowerCase();
+      }),
+      _ = function (_, _) {
+        switch (_) {
+          case `animation`:
+          case `animationName`:
+            if (typeof _ == `string`)
+              return _.replace(_, function (_, _, _) {
+                return (
+                  (_ = {
+                    name: _,
+                    styles: _,
+                    next: _,
+                  }),
+                  _
+                );
               });
         }
-        function _(_) {
-          const _ = (0, _._)(),
-            _ = _.useContext(_);
-          return (0, _._)({
-            queries: _.map((_) => _(_, _, _)),
-          });
-        }
-        function _(_) {
-          return ReactQueryClient.getQueryData(["PlayerSummary", _]);
-        }
-        function _(_) {
-          const { loadPersonaState: _, children: _ } = _,
-            _ = React.useMemo(
-              () => ({
-                loadPersonaState: _,
+        return _.default[_] !== 1 && !_(_) && typeof _ == `number` && _ !== 0
+          ? _ + `px`
+          : _;
+      };
+    function _(_, _, _) {
+      if (_ == null) return ``;
+      if (_.__emotion_styles !== void 0) return _;
+      switch (typeof _) {
+        case `boolean`:
+          return ``;
+        case `object`:
+          if (_.anim === 1)
+            return (
+              (_ = {
+                name: _.name,
+                styles: _.styles,
+                next: _,
               }),
-              [_],
+              _.name
             );
-          return React.createElement(
+          if (_.styles !== void 0) {
+            var _ = _.next;
+            if (_ !== void 0)
+              for (; _ !== void 0; )
+                (_ = {
+                  name: _.name,
+                  styles: _.styles,
+                  next: _,
+                }),
+                  (_ = _.next);
+            return _.styles + `;`;
+          }
+          return _(_, _, _);
+        case `function`:
+          if (_ !== void 0) {
+            var _ = _,
+              _ = _(_);
+            return (_ = _), _(_, _, _);
+          }
+      }
+      if (_ == null) return _;
+      var _ = _[_];
+      return _ === void 0 ? _ : _;
+    }
+    function _(_, _, _) {
+      var _ = ``;
+      if (Array.isArray(_))
+        for (var _ = 0; _ < _.length; _++) _ += _(_, _, _[_]) + `;`;
+      else
+        for (var _ in _) {
+          var _ = _[_];
+          if (typeof _ != `object`)
+            _ != null && _[_] !== void 0
+              ? (_ += _ + `{` + _[_] + `}`)
+              : _(_) && (_ += _(_) + `:` + _(_, _) + `;`);
+          else if (
+            Array.isArray(_) &&
+            typeof _[0] == `string` &&
+            (_ == null || _[_[0]] === void 0)
+          )
+            for (var _ = 0; _ < _.length; _++)
+              _(_[_]) && (_ += _(_) + `:` + _(_, _[_]) + `;`);
+          else {
+            var _ = _(_, _, _);
+            switch (_) {
+              case `animation`:
+              case `animationName`:
+                _ += _(_) + `:` + _ + `;`;
+                break;
+              default:
+                _ += _ + `{` + _ + `}`;
+            }
+          }
+        }
+      return _;
+    }
+    var _ = /label:\s*([^\s;\n{]+)\s*(;|$)/g,
+      _;
+    _.serializeStyles = function (_, _, _) {
+      if (
+        _.length === 1 &&
+        typeof _[0] == `object` &&
+        _[0] !== null &&
+        _[0].styles !== void 0
+      )
+        return _[0];
+      var _ = !0,
+        _ = ``;
+      _ = void 0;
+      var _ = _[0];
+      _ == null || _.raw === void 0
+        ? ((_ = !1), (_ += _(_, _, _)))
+        : (_ += _[0]);
+      for (var _ = 1; _ < _.length; _++) (_ += _(_, _, _[_])), _ && (_ += _[_]);
+      _.lastIndex = 0;
+      for (var _ = ``, _; (_ = _.exec(_)) !== null; ) _ += `-` + _[1];
+      return {
+        name: _.default(_) + _,
+        styles: _,
+        next: _,
+      };
+    };
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    var _ = _();
+    function _(_) {
+      if (_ && _.__esModule) return _;
+      var _ = Object.create(null);
+      return (
+        _ &&
+          Object.keys(_).forEach(function (_) {
+            if (_ !== "default") {
+              var _ = Object.getOwnPropertyDescriptor(_, _);
+              Object.defineProperty(
+                _,
+                _,
+                _.get
+                  ? _
+                  : {
+                      enumerable: !0,
+                      get: function () {
+                        return _[_];
+                      },
+                    },
+              );
+            }
+          }),
+        (_.default = _),
+        Object.freeze(_)
+      );
+    }
+    var _ = _(_),
+      _ = typeof document < `u`,
+      _ = function (_) {
+        return _();
+      },
+      _ = _.useInsertionEffect ? _.useInsertionEffect : !1,
+      _ = (_ && _) || _,
+      _ = _ || _.useLayoutEffect;
+    (_.useInsertionEffectAlwaysWithSyncFallback = _),
+      (_.useInsertionEffectWithLayoutFallback = _);
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_) => {
+    var _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _();
+    function _(_) {
+      return _ && _.__esModule
+        ? _
+        : {
+            default: _,
+          };
+    }
+    function _(_) {
+      if (_ && _.__esModule) return _;
+      var _ = Object.create(null);
+      return (
+        _ &&
+          Object.keys(_).forEach(function (_) {
+            if (_ !== "default") {
+              var _ = Object.getOwnPropertyDescriptor(_, _);
+              Object.defineProperty(
+                _,
+                _,
+                _.get
+                  ? _
+                  : {
+                      enumerable: !0,
+                      get: function () {
+                        return _[_];
+                      },
+                    },
+              );
+            }
+          }),
+        (_.default = _),
+        Object.freeze(_)
+      );
+    }
+    var _ = _(_),
+      _ = _(_),
+      _ = _(_),
+      _ = typeof document < `u`,
+      _ = {}.hasOwnProperty,
+      _ = _.createContext(
+        typeof HTMLElement < `u`
+          ? _.default({
+              key: `css`,
+            })
+          : null,
+      ),
+      _ = _.Provider,
+      _ = function () {
+        return _.useContext(_);
+      };
+    (_.withEmotionCache = function (_) {
+      return _.forwardRef(function (_, _) {
+        return _(_, _.useContext(_), _);
+      });
+    }),
+      _ ||
+        (_.withEmotionCache = function (_) {
+          return function (_) {
+            var _ = _.useContext(_);
+            return _ === null
+              ? ((_ = _.default({
+                  key: `css`,
+                })),
+                _.createElement(
+                  _.Provider,
+                  {
+                    value: _,
+                  },
+                  _(_, _),
+                ))
+              : _(_, _);
+          };
+        });
+    var _ = _.createContext({}),
+      _ = function () {
+        return _.useContext(_);
+      },
+      _ = function (_, _) {
+        return typeof _ == `function` ? _(_) : _({}, _, _);
+      },
+      _ = _.default(function (_) {
+        return _.default(function (_) {
+          return _(_, _);
+        });
+      }),
+      _ = function (_) {
+        var _ = _.useContext(_);
+        return (
+          _.theme !== _ && (_ = _(_)(_.theme)),
+          _.createElement(
             _.Provider,
             {
               value: _,
             },
+            _.children,
+          )
+        );
+      };
+    function _(_) {
+      var _ = _.displayName || _.name || `Component`,
+        _ = _.forwardRef(function (_, _) {
+          var _ = _.useContext(_);
+          return _.createElement(
             _,
+            _(
+              {
+                theme: _,
+                ref: _,
+              },
+              _,
+            ),
+          );
+        });
+      return (_.displayName = `WithTheme(` + _ + `)`), _.default(_, _);
+    }
+    var _ = `__EMOTION_TYPE_PLEASE_DO_NOT_USE__`,
+      _ = function (_, _) {
+        var _ = {};
+        for (var _ in _) _.call(_, _) && (_[_] = _[_]);
+        return (_[_] = _), _;
+      },
+      _ = function (_) {
+        var _ = _.cache,
+          _ = _.serialized,
+          _ = _.isStringTag;
+        _.registerStyles(_, _, _);
+        var _ = _.useInsertionEffectAlwaysWithSyncFallback(function () {
+          return _.insertStyles(_, _, _);
+        });
+        if (!_ && _ !== void 0) {
+          for (var _, _ = _.name, _ = _.next; _ !== void 0; )
+            (_ += ` ` + _.name), (_ = _.next);
+          return _.createElement(
+            `style`,
+            ((_ = {}),
+            (_[`data-emotion`] = _.key + ` ` + _),
+            (_.dangerouslySetInnerHTML = {
+              __html: _,
+            }),
+            (_.nonce = _.sheet.nonce),
+            _),
           );
         }
-        const _ = _.createContext({
-          loadPersonaState: async (_, _) => {
-            if (_ == null) return null;
-            const _ = await _(_).load(
-              _._.InitFromAccountID(_).ConvertTo64BitString(),
+        return null;
+      },
+      _ = _.withEmotionCache(function (_, _, _) {
+        var _ = _.css;
+        typeof _ == `string` &&
+          _.registered[_] !== void 0 &&
+          (_ = _.registered[_]);
+        var _ = _[_],
+          _ = [_],
+          _ = ``;
+        typeof _.className == `string`
+          ? (_ = _.getRegisteredStyles(_.registered, _, _.className))
+          : _.className != null && (_ = _.className + ` `);
+        var _ = _.serializeStyles(_, void 0, _.useContext(_));
+        _ += _.key + `-` + _.name;
+        var _ = {};
+        for (var _ in _)
+          _.call(_, _) && _ !== `css` && _ !== _ && (_[_] = _[_]);
+        return (
+          (_.ref = _),
+          (_.className = _),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_, {
+              cache: _,
+              serialized: _,
+              isStringTag: typeof _ == `string`,
+            }),
+            _.createElement(_, _),
+          )
+        );
+      });
+    (_.CacheProvider = _),
+      (_.Emotion = _),
+      (_.ThemeContext = _),
+      (_.ThemeProvider = _),
+      (_.__unsafe_useEmotionCache = _),
+      (_.createEmotionProps = _),
+      (_.hasOwnProperty = _),
+      (_.isBrowser = _),
+      (_.useTheme = _),
+      (_.withTheme = _);
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    var _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _();
+    _(), _(), _(), _(), _();
+    function _(_) {
+      if (_ && _.__esModule) return _;
+      var _ = Object.create(null);
+      return (
+        _ &&
+          Object.keys(_).forEach(function (_) {
+            if (_ !== "default") {
+              var _ = Object.getOwnPropertyDescriptor(_, _);
+              Object.defineProperty(
+                _,
+                _,
+                _.get
+                  ? _
+                  : {
+                      enumerable: !0,
+                      get: function () {
+                        return _[_];
+                      },
+                    },
+              );
+            }
+          }),
+        (_.default = _),
+        Object.freeze(_)
+      );
+    }
+    var _ = _(_),
+      _ = function (_, _) {
+        var _ = arguments;
+        if (_ == null || !_.hasOwnProperty.call(_, `css`))
+          return _.createElement.apply(void 0, _);
+        var _ = _.length,
+          _ = Array(_);
+        (_[0] = _.Emotion), (_[1] = _.createEmotionProps(_, _));
+        for (var _ = 2; _ < _; _++) _[_] = _[_];
+        return _.createElement.apply(null, _);
+      },
+      _ = _.withEmotionCache(function (_, _) {
+        var _ = _.styles,
+          _ = _.serializeStyles([_], void 0, _.useContext(_.ThemeContext));
+        if (!_.isBrowser) {
+          for (var _, _ = _.name, _ = _.styles, _ = _.next; _ !== void 0; )
+            (_ += ` ` + _.name), (_ += _.styles), (_ = _.next);
+          var _ = _.compat === !0,
+            _ = _.insert(
+              ``,
+              {
+                name: _,
+                styles: _,
+              },
+              _.sheet,
+              _,
             );
-            return _(_._.InitFromAccountID(_), _);
+          return _
+            ? null
+            : _.createElement(
+                `style`,
+                ((_ = {}),
+                (_[`data-emotion`] = _.key + `-global ` + _),
+                (_.dangerouslySetInnerHTML = {
+                  __html: _,
+                }),
+                (_.nonce = _.sheet.nonce),
+                _),
+              );
+        }
+        var _ = _.useRef();
+        return (
+          _.useInsertionEffectWithLayoutFallback(
+            function () {
+              var _ = _.key + `-global`,
+                _ = new _.sheet.constructor({
+                  key: _,
+                  nonce: _.sheet.nonce,
+                  container: _.sheet.container,
+                  speedy: _.sheet.isSpeedy,
+                }),
+                _ = !1,
+                _ = document.querySelector(
+                  `style[data-emotion="` + _ + ` ` + _.name + `"]`,
+                );
+              return (
+                _.sheet.tags.length && (_.before = _.sheet.tags[0]),
+                _ !== null &&
+                  ((_ = !0), _.setAttribute(`data-emotion`, _), _.hydrate([_])),
+                (_.current = [_, _]),
+                function () {
+                  _.flush();
+                }
+              );
+            },
+            [_],
+          ),
+          _.useInsertionEffectWithLayoutFallback(
+            function () {
+              var _ = _.current,
+                _ = _[0];
+              if (_[1]) {
+                _[1] = !1;
+                return;
+              }
+              _.next !== void 0 && _.insertStyles(_, _.next, !0),
+                _.tags.length &&
+                  ((_.before = _.tags[_.tags.length - 1].nextElementSibling),
+                  _.flush()),
+                _.insert(``, _, _, !1);
+            },
+            [_, _.name],
+          ),
+          null
+        );
+      });
+    function _() {
+      var _ = [...arguments];
+      return _.serializeStyles(_);
+    }
+    var _ = function () {
+        var _ = _.apply(void 0, arguments),
+          _ = `animation-` + _.name;
+        return {
+          name: _,
+          styles: `@keyframes ` + _ + `{` + _.styles + `}`,
+          anim: 1,
+          toString: function () {
+            return `_EMO_` + this.name + `_` + this.styles + `_EMO_`;
+          },
+        };
+      },
+      _ = function _(_) {
+        for (var _ = _.length, _ = 0, _ = ``; _ < _; _++) {
+          var _ = _[_];
+          if (_ != null) {
+            var _ = void 0;
+            switch (typeof _) {
+              case `boolean`:
+                break;
+              case `object`:
+                if (Array.isArray(_)) _ = _(_);
+                else
+                  for (var _ in ((_ = ``), _))
+                    _[_] && _ && (_ && (_ += ` `), (_ += _));
+                break;
+              default:
+                _ = _;
+            }
+            _ && (_ && (_ += ` `), (_ += _));
+          }
+        }
+        return _;
+      };
+    function _(_, _, _) {
+      var _ = [],
+        _ = _.getRegisteredStyles(_, _, _);
+      return _.length < 2 ? _ : _ + _(_);
+    }
+    var _ = function (_) {
+        var _ = _.cache,
+          _ = _.serializedArr,
+          _ = _.useInsertionEffectAlwaysWithSyncFallback(function () {
+            for (var _ = ``, _ = 0; _ < _.length; _++) {
+              var _ = _.insertStyles(_, _[_], !1);
+              !_.isBrowser && _ !== void 0 && (_ += _);
+            }
+            if (!_.isBrowser) return _;
+          });
+        if (!_.isBrowser && _.length !== 0) {
+          var _;
+          return _.createElement(
+            `style`,
+            ((_ = {}),
+            (_[`data-emotion`] =
+              _.key +
+              ` ` +
+              _.map(function (_) {
+                return _.name;
+              }).join(` `)),
+            (_.dangerouslySetInnerHTML = {
+              __html: _,
+            }),
+            (_.nonce = _.sheet.nonce),
+            _),
+          );
+        }
+        return null;
+      },
+      _ = _.withEmotionCache(function (_, _) {
+        var _ = [],
+          _ = function () {
+            var _ = [...arguments],
+              _ = _.serializeStyles(_, _.registered);
+            return _.push(_), _.registerStyles(_, _, !1), _.key + `-` + _.name;
+          },
+          _ = {
+            css: _,
+            _: function () {
+              var _ = [...arguments];
+              return _(_.registered, _, _(_));
+            },
+            theme: _.useContext(_.ThemeContext),
+          },
+          _ = _.children(_);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            cache: _,
+            serializedArr: _,
+          }),
+          _,
+        );
+      });
+    (_.CacheProvider = _.CacheProvider),
+      (_.ThemeContext = _.ThemeContext),
+      (_.ThemeProvider = _.ThemeProvider),
+      (_.__unsafe_useEmotionCache = _.__unsafe_useEmotionCache),
+      (_.useTheme = _.useTheme),
+      Object.defineProperty(_, "withEmotionCache", {
+        enumerable: !0,
+        get: function () {
+          return _.withEmotionCache;
+        },
+      }),
+      (_.withTheme = _.withTheme),
+      (_.ClassNames = _),
+      (_.Global = _),
+      (_.createElement = _),
+      (_.css = _),
+      (_.jsx = _),
+      (_.keyframes = _);
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_, _) => {
+    function _(_, _) {
+      return (
+        (_ ||= _.slice(0)),
+        Object.freeze(
+          Object.defineProperties(_, {
+            raw: {
+              value: Object.freeze(_),
+            },
+          }),
+        )
+      );
+    }
+    (_.exports = _),
+      (_.exports.__esModule = !0),
+      (_.exports.default = _.exports);
+  }),
+  _ = _((_, _) => {
+    (function (_, _) {
+      typeof _ == `object` && _ !== void 0
+        ? _(_)
+        : typeof define == `function` && define.amd
+          ? define([`exports`], _)
+          : ((_ = typeof globalThis < `u` ? globalThis : _ || self),
+            _((_.FloatingUICore = {})));
+    })(_, function (_) {
+      let _ = [`top`, `right`, `bottom`, `left`],
+        _ = [`start`, `end`],
+        _ = _.reduce((_, _) => _.concat(_, _ + `-` + _[0], _ + `-` + _[1]), []),
+        _ = Math.min,
+        _ = Math.max,
+        _ = {
+          left: `right`,
+          right: `left`,
+          bottom: `top`,
+          top: `bottom`,
+        };
+      function _(_, _, _) {
+        return _(_, _(_, _));
+      }
+      function _(_, _) {
+        return typeof _ == `function` ? _(_) : _;
+      }
+      function _(_) {
+        return _.split(`-`)[0];
+      }
+      function _(_) {
+        return _.split(`-`)[1];
+      }
+      function _(_) {
+        return _ === `x` ? `y` : `x`;
+      }
+      function _(_) {
+        return _ === `y` ? `height` : `width`;
+      }
+      function _(_) {
+        let _ = _[0];
+        return _ === `t` || _ === `b` ? `y` : `x`;
+      }
+      function _(_) {
+        return _(_(_));
+      }
+      function _(_, _, _) {
+        _ === void 0 && (_ = !1);
+        let _ = _(_),
+          _ = _(_),
+          _ = _(_),
+          _ =
+            _ === `x`
+              ? _ === (_ ? `end` : `start`)
+                ? `right`
+                : `left`
+              : _ === `start`
+                ? `bottom`
+                : `top`;
+        return _.reference[_] > _.floating[_] && (_ = _(_)), [_, _(_)];
+      }
+      function _(_) {
+        let _ = _(_);
+        return [_(_), _, _(_)];
+      }
+      function _(_) {
+        return _.includes(`start`)
+          ? _.replace(`start`, `end`)
+          : _.replace(`end`, `start`);
+      }
+      let _ = [`left`, `right`],
+        _ = [`right`, `left`],
+        _ = [`top`, `bottom`],
+        _ = [`bottom`, `top`];
+      function _(_, _, _) {
+        switch (_) {
+          case `top`:
+          case `bottom`:
+            return _ ? (_ ? _ : _) : _ ? _ : _;
+          case `left`:
+          case `right`:
+            return _ ? _ : _;
+          default:
+            return [];
+        }
+      }
+      function _(_, _, _, _) {
+        let _ = _(_),
+          _ = _(_(_), _ === `start`, _);
+        return (
+          _ && ((_ = _.map((_) => _ + `-` + _)), _ && (_ = _.concat(_.map(_)))),
+          _
+        );
+      }
+      function _(_) {
+        let _ = _(_);
+        return _[_] + _.slice(_.length);
+      }
+      function _(_) {
+        return {
+          top: _.top ?? 0,
+          right: _.right ?? 0,
+          bottom: _.bottom ?? 0,
+          left: _.left ?? 0,
+        };
+      }
+      function _(_) {
+        return typeof _ == `number`
+          ? {
+              top: _,
+              right: _,
+              bottom: _,
+              left: _,
+            }
+          : _(_);
+      }
+      function _(_) {
+        let { _: _, _: _, width: _, height: _ } = _;
+        return {
+          width: _,
+          height: _,
+          top: _,
+          left: _,
+          right: _ + _,
+          bottom: _ + _,
+          _: _,
+          _: _,
+        };
+      }
+      function _(_, _, _) {
+        let { reference: _, floating: _ } = _,
+          _ = _(_),
+          _ = _(_),
+          _ = _(_),
+          _ = _(_),
+          _ = _ === `y`,
+          _ = _._ + _.width / 2 - _.width / 2,
+          _ = _._ + _.height / 2 - _.height / 2,
+          _ = _[_] / 2 - _[_] / 2,
+          _;
+        switch (_) {
+          case `top`:
+            _ = {
+              _: _,
+              _: _._ - _.height,
+            };
+            break;
+          case `bottom`:
+            _ = {
+              _: _,
+              _: _._ + _.height,
+            };
+            break;
+          case `right`:
+            _ = {
+              _: _._ + _.width,
+              _: _,
+            };
+            break;
+          case `left`:
+            _ = {
+              _: _._ - _.width,
+              _: _,
+            };
+            break;
+          default:
+            _ = {
+              _: _._,
+              _: _._,
+            };
+        }
+        let _ = _(_);
+        return _ && (_[_] += _ * (_ === `end` ? 1 : -1) * (_ && _ ? -1 : 1)), _;
+      }
+      async function _(_, _) {
+        _ === void 0 && (_ = {});
+        let { _: _, _: _, platform: _, rects: _, elements: _, strategy: _ } = _,
+          {
+            boundary: _ = `clippingAncestors`,
+            rootBoundary: _ = `viewport`,
+            elementContext: _ = `floating`,
+            altBoundary: _ = !1,
+            padding: _ = 0,
+          } = _(_, _),
+          _ = _(_),
+          _ = _[_ ? (_ === `floating` ? `reference` : `floating`) : _],
+          _ = _(
+            await _.getClippingRect({
+              element:
+                ((await (_.isElement == null ? void 0 : _.isElement(_))) ?? !0)
+                  ? _
+                  : _.contextElement ||
+                    (await (_.getDocumentElement == null
+                      ? void 0
+                      : _.getDocumentElement(_.floating))),
+              boundary: _,
+              rootBoundary: _,
+              strategy: _,
+            }),
+          ),
+          _ =
+            _ === `floating`
+              ? {
+                  _: _,
+                  _: _,
+                  width: _.floating.width,
+                  height: _.floating.height,
+                }
+              : _.reference,
+          _ = await (_.getOffsetParent == null
+            ? void 0
+            : _.getOffsetParent(_.floating)),
+          _ = ((await (_.isElement == null ? void 0 : _.isElement(_))) &&
+            (await (_.getScale == null ? void 0 : _.getScale(_)))) || {
+            _: 1,
+            _: 1,
+          },
+          _ = _(
+            _.convertOffsetParentRelativeRectToViewportRelativeRect
+              ? await _.convertOffsetParentRelativeRectToViewportRelativeRect({
+                  elements: _,
+                  rect: _,
+                  offsetParent: _,
+                  strategy: _,
+                })
+              : _,
+          );
+        return {
+          top: (_.top - _.top + _.top) / _._,
+          bottom: (_.bottom - _.bottom + _.bottom) / _._,
+          left: (_.left - _.left + _.left) / _._,
+          right: (_.right - _.right + _.right) / _._,
+        };
+      }
+      let _ = async (_, _, _) => {
+          let {
+              placement: _ = `bottom`,
+              strategy: _ = `absolute`,
+              middleware: _ = [],
+              platform: _,
+            } = _,
+            _ = _.detectOverflow
+              ? _
+              : {
+                  ..._,
+                  detectOverflow: _,
+                },
+            _ = await (_.isRTL == null ? void 0 : _.isRTL(_)),
+            _ = await _.getElementRects({
+              reference: _,
+              floating: _,
+              strategy: _,
+            }),
+            { _: _, _: _ } = _(_, _, _),
+            _ = _,
+            _ = 0,
+            _ = {};
+          for (let _ = 0; _ < _.length; _++) {
+            let _ = _[_];
+            if (!_) continue;
+            let { name: _, _: _ } = _,
+              {
+                _: _,
+                _,
+                data: _,
+                reset: _,
+              } = await _({
+                _: _,
+                _: _,
+                initialPlacement: _,
+                placement: _,
+                strategy: _,
+                middlewareData: _,
+                rects: _,
+                platform: _,
+                elements: {
+                  reference: _,
+                  floating: _,
+                },
+              });
+            (_ = _ ?? _),
+              (_ = _ ?? _),
+              (_[_] = {
+                ..._[_],
+                ..._,
+              }),
+              _ &&
+                _ < 50 &&
+                (_++,
+                typeof _ == `object` &&
+                  (_.placement && (_ = _.placement),
+                  _.rects &&
+                    (_ =
+                      _.rects === !0
+                        ? await _.getElementRects({
+                            reference: _,
+                            floating: _,
+                            strategy: _,
+                          })
+                        : _.rects),
+                  ({ _: _, _: _ } = _(_, _, _))),
+                (_ = -1));
+          }
+          return {
+            _: _,
+            _: _,
+            placement: _,
+            strategy: _,
+            middlewareData: _,
+          };
+        },
+        _ = (_) => ({
+          name: `arrow`,
+          options: _,
+          async _(_) {
+            let {
+                _: _,
+                _: _,
+                placement: _,
+                rects: _,
+                platform: _,
+                elements: _,
+                middlewareData: _,
+              } = _,
+              { element: _, padding: _ = 0 } = _(_, _) || {};
+            if (_ == null) return {};
+            let _ = _(_),
+              _ = {
+                _: _,
+                _: _,
+              },
+              _ = _(_),
+              _ = _(_),
+              _ = await _.getDimensions(_),
+              _ = _ === `y`,
+              _ = _ ? `top` : `left`,
+              _ = _ ? `bottom` : `right`,
+              _ = _ ? `clientHeight` : `clientWidth`,
+              _ = _.reference[_] + _.reference[_] - _[_] - _.floating[_],
+              _ = _[_] - _.reference[_],
+              _ = await (_.getOffsetParent == null
+                ? void 0
+                : _.getOffsetParent(_)),
+              _ = _ ? _[_] : 0;
+            (!_ || !(await (_.isElement == null ? void 0 : _.isElement(_)))) &&
+              (_ = _.floating[_] || _.floating[_]);
+            let _ = _ / 2 - _ / 2,
+              _ = _ / 2 - _[_] / 2 - 1,
+              _ = _(_[_], _),
+              _ = _(_[_], _),
+              _ = _ - _[_] - _,
+              _ = _ / 2 - _[_] / 2 + _,
+              _ = _(_, _, _),
+              _ =
+                !_.arrow &&
+                _(_) != null &&
+                _ !== _ &&
+                _.reference[_] / 2 - (_ < _ ? _ : _) - _[_] / 2 < 0,
+              _ = _ ? (_ < _ ? _ - _ : _ - _) : 0;
+            return {
+              [_]: _[_] + _,
+              data: {
+                [_]: _,
+                centerOffset: _ - _ - _,
+                ...(_ && {
+                  alignmentOffset: _,
+                }),
+              },
+              reset: _,
+            };
           },
         });
-        function _() {
-          return _.useContext(_);
-        }
-        function _(_, _, _) {
-          const _ = typeof _ == "string" ? new _._(_).GetAccountID() : _;
-          return {
-            queryKey: ["PlayerSummary", _],
-            queryFn: () => _.loadPersonaState(_, _),
-            enabled: !!_,
-          };
-        }
-        let _;
-        function _(_) {
-          return (_ ??= (0, _._)(_));
-        }
-        function _(_, _) {
-          let _ = new _._(_);
-          const _ = _?.public_data,
-            _ = _?.private_data;
+      function _(_, _, _) {
+        return (
+          _
+            ? [..._.filter((_) => _(_) === _), ..._.filter((_) => _(_) !== _)]
+            : _.filter((_) => _(_) === _)
+        ).filter((_) => !_ || _(_) === _ || (_ ? _(_) !== _ : !1));
+      }
+      let _ = function (_) {
           return (
-            (_.m_bInitialized = !!_),
-            (_.m_ePersonaState = _?.persona_state ?? _.cU3),
-            (_.m_strAvatarHash = _?.sha_digest_avatar
-              ? (0, _._)(_.sha_digest_avatar)
-              : _._),
-            (_.m_strPlayerName = _?.persona_name ?? _.ConvertTo64BitString()),
-            (_.m_strAccountName = _?.account_name),
-            _?.persona_state_flags &&
-              (_.m_unPersonaStateFlags = _?.persona_state_flags),
-            _?.game_id && (_.m_gameid = _?.game_id),
-            _?.game_server_ip_address &&
-              (_.m_unGameServerIP = _?.game_server_ip_address),
-            _?.lobby_steam_id && (_.m_game_lobby_id = _?.lobby_steam_id),
-            _?.game_extra_info && (_.m_strGameExtraInfo = _?.game_extra_info),
-            _?.profile_url && (_.m_strProfileURL = _.profile_url),
-            _
-          );
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          return "unknown EMsg ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EClientPersonaStateFlag ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EMsgClanAccountFlags ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown ESteamReviewScore ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown ECodecUsagePlatform ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown ECodecUsageReason ( " + _ + " )";
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        class _ {
-          m_clanAccountID;
-          m_clanSteamID;
-          m_strRSSFeedURL = void 0;
-          m_strRSSGID = void 0;
-          m_rtimeRSSLastChecked = void 0;
-          m_nPollIntervalSeconds = void 0;
-          m_eRSSFeedLanguage = void 0;
-          m_eCuratorLanguage = void 0;
-          m_mapURLToPosted = new Map();
-          constructor(_) {
-            (0, _._)(this),
-              (this.m_clanAccountID = _.clanid),
-              (this.m_clanSteamID = _._.InitFromClanID(this.m_clanAccountID)),
-              (this.m_strRSSFeedURL = _.rss_feed_url),
-              (this.m_strRSSGID = _.rss_feed_gid),
-              (this.m_eRSSFeedLanguage = _.rss_feed_language),
-              (this.m_rtimeRSSLastChecked = _.rss_feed_last_checked),
-              (this.m_nPollIntervalSeconds = _.poll_interval),
-              (this.m_eCuratorLanguage = _.curation_language);
-          }
-          GetFeedLanguageHandleUnset() {
-            return this.m_eRSSFeedLanguage == _.xPp
-              ? this.m_eCuratorLanguage == _.xPp
-                ? _.Bhc
-                : this.m_eCuratorLanguage
-              : this.m_eRSSFeedLanguage;
-          }
-          GetCuratorLanguage() {
-            return this.m_eCuratorLanguage == _.xPp
-              ? _.Bhc
-              : this.m_eCuratorLanguage;
-          }
-          BHasSavedRSSURL() {
-            return !!this.m_strRSSFeedURL;
-          }
-          GetRSSUrl() {
-            return this.m_strRSSFeedURL ? this.m_strRSSFeedURL : "";
-          }
-          GetRSSLastRtimeChecked() {
-            return this.m_rtimeRSSLastChecked;
-          }
-          GetClanSteamID() {
-            return this.m_clanSteamID;
-          }
-          GetClanAccountID() {
-            return this.m_clanAccountID;
-          }
-          BHasSetupFeed(_) {
-            return !!this.m_strRSSGID && this.m_strRSSFeedURL === _;
-          }
-          BIsAutomationEnabled() {
-            return this.m_nPollIntervalSeconds > 0;
-          }
-          BHasFeedGID() {
-            return !!this.m_strRSSGID;
-          }
-          async PreviewPartnerEventsFromRSSFeed(_) {
-            if (!this.BIsLoggedIn())
-              return (
-                console.error(
-                  "PreviewPartnerEventsFromRSSFeed: User not logged in",
-                ),
-                null
-              );
-            const _ = _._.Init(_._);
-            _.Body().set_rss_url(_),
-              _.Body().set_lang(this.GetFeedLanguageHandleUnset()),
-              _.Body().set_clan_account_id(this.GetClanAccountID());
-            let _ = await _._.PreviewPartnerEvents(
-              _.Get().GetCuratorTransport(),
-              _,
-            );
-            return (
-              _.GetEResult() != _._ &&
-                console.error(
-                  "PreviewPartnerEventsFromRSSFeed error: " +
-                    _.GetEMsg() +
-                    " " +
-                    _.GetEResult(),
-                ),
-              _
-            );
-          }
-          async FetchPublishedEvents(_ = 100) {
-            if (!this.BIsLoggedIn())
-              return (
-                console.error("FetchPublishedEvents: User not logged in"), null
-              );
-            if (!this.m_strRSSGID)
-              return (
-                console.error(
-                  "FetchPublishedEvents: Need to create a news feed first",
-                ),
-                null
-              );
-            const _ = _._.Init(_._);
-            _.Body().set_news_feed_gid(this.m_strRSSGID),
-              _.Body().set_amount(_);
-            let _ = await _._.GetBatchPublishedPartnerEvent(
-              _.Get().GetCuratorTransport(),
-              _,
-            );
-            return (
-              _.GetEResult() != _._
-                ? console.error(
-                    "FetchPublishedEvents error: EMsg:" +
-                      _(_.GetEMsg()) +
-                      " EResult:" +
-                      _.GetEResult() +
-                      " msg:" +
-                      _.Hdr().error_message(),
-                  )
-                : (0, _._)(() => {
-                    for (let _ = 0; _ < _.Body().clan_event_gid().length; ++_) {
-                      let _ = {
-                        url: _.Body().news_url()[_],
-                        clan_event_gid: _.Body().clan_event_gid()[_],
-                        news_post_gid: _.Body().news_post_gid()[_],
-                      };
-                      this.m_mapURLToPosted.set(_.url, _);
-                    }
-                  }),
-              _
-            );
-          }
-          MapArticleURLToClanEventGID(_) {
-            let _ = this.m_mapURLToPosted.get(_);
-            if (_) return _.clan_event_gid;
-          }
-          BIsLoggedIn() {
-            return _._.logged_in;
-          }
-          async CreateOrUpdateRSSNewFeed(_, _ = 0) {
-            let _ = new FormData();
-            _.append("sessionid", (0, _._)()),
-              _.append("gid", this.m_strRSSGID),
-              _.append("lang", "" + this.GetCuratorLanguage()),
-              _.append("rss_url", _),
-              _.append("polling_interval", "" + _);
-            const _ =
-              _._.STORE_BASE_URL +
-              "curator/" +
-              this.m_clanAccountID +
-              "/admin/ajaxmanagerssfeed";
-            let _ = await _().post(_, _, {
-              withCredentials: !0,
-            });
-            return (
-              _.data.success == _._ &&
-                (0, _._)(() => {
-                  (this.m_strRSSGID = _.data.gid),
-                    (this.m_strRSSFeedURL = _),
-                    (this.m_nPollIntervalSeconds = _);
-                }),
-              _.data
-            );
-          }
-          async UpdateAutomation(_) {
-            return this.CreateOrUpdateRSSNewFeed(
-              this.m_strRSSFeedURL,
-              _ ? 300 : 0,
-            );
-          }
-          async CheckForNewUpdate() {
-            if (this.m_strRSSGID) {
-              let _ = new FormData();
-              _.append("sessionid", (0, _._)()),
-                _.append("gid", this.m_strRSSGID);
-              const _ =
-                _._.STORE_BASE_URL +
-                "curator/" +
-                this.m_clanAccountID +
-                "/admin/ajaxcheckfornews";
-              await _().post(_, _, {
-                withCredentials: !0,
-              });
-            }
-          }
-          async CreatePost(_, _) {
-            if (!this.BIsLoggedIn())
-              return (
-                console.error(
-                  "CreatePartnerFromPreviewPost: User not logged in",
-                ),
-                null
-              );
-            if (!this.m_strRSSGID)
-              return (
-                console.error(
-                  "CreatePartnerFromPreviewPost: Need to create a news feed first",
-                ),
-                null
-              );
-            let _ = new _._();
-            _.set_gid(_.post.gid),
-              _.set_news_feed_gid(this.m_strRSSGID),
-              _.set_title(_.post.title),
-              _.set_url(_.post.url),
-              _.set_author(_.post.author),
-              _.set_rtime_date(_.post.rtime_date),
-              _.set_contents(_.post.contents),
-              _.set_commited(_.post.commited),
-              _.set_deleted(_.post.deleted),
-              _.set_tags(_.post.tags),
-              _.set_appids(_.post.appids),
-              _.set_recommendation_state(_.post.recommendation_state),
-              _.set_received_for_free(_.post.received_for_free),
-              _.set_received_compensation(_.post.received_compensation),
-              _.set_blurb(_.post.blurb);
-            const _ = _._.Init(_._);
-            _.Body().set_post(_), _.Body().set_draft(_);
-            let _ = await _._.PublishPartnerEvent(
-              _.Get().GetCuratorTransport(),
-              _,
-            );
-            return (
-              _.GetEResult() != _._
-                ? console.error(
-                    "CreatePost error: " + _.GetEMsg() + " " + _.GetEResult(),
-                  )
-                : ((0, _._)(() => {
-                    let _ = {
-                      url: _.post.url,
-                      clan_event_gid: _.Body().clan_event_gid(),
-                      news_post_gid: _.Body().news_post_gid(),
-                    };
-                    this.m_mapURLToPosted.set(_.post.url, _);
-                  }),
-                  _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                    this.m_clanSteamID,
-                    _.Body().clan_event_gid(),
-                    0,
-                  )),
-              _
-            );
-          }
-        }
-        _([_._], _.prototype, "m_strRSSFeedURL", 2),
-          _([_._], _.prototype, "m_strRSSGID", 2),
-          _([_._], _.prototype, "m_rtimeRSSLastChecked", 2),
-          _([_._], _.prototype, "m_nPollIntervalSeconds", 2),
-          _([_._], _.prototype, "m_eRSSFeedLanguage", 2),
-          _([_._], _.prototype, "m_eCuratorLanguage", 2),
-          _([_._], _.prototype, "m_mapURLToPosted", 2);
-        const _ = class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          static s_CuratorAdminStore;
-          m_transport;
-          m_mapClanAccountToAdmin = new Map();
-          m_defaultAdmin = void 0;
-          m_mapClanToEventRSSStats = new Map();
-          m_setPendingClanInfo = new Set();
-          m_PendingClanInfoPromise;
-          m_PendingClanInfoResolve;
-          m_cClanInfoRequestsInFlight = 0;
-          GetCuratorTransport() {
-            return (
-              (0, _._)(
-                this.m_transport,
-                "Expects Transpoate to be initialized but it is now",
-              ),
-              this.m_transport
-            );
-          }
-          GetDefaultAdmin() {
-            return this.m_defaultAdmin;
-          }
-          GetRSSAdminStats(_) {
-            return this.m_mapClanToEventRSSStats.get(_);
-          }
-          static Get() {
-            return (
-              _.s_CuratorAdminStore ||
-                ((_.s_CuratorAdminStore = new _()),
-                _.s_CuratorAdminStore.Init()),
-              _.s_CuratorAdminStore
-            );
-          }
-          Init() {
-            let _ = (0, _._)("curatoradmin", "application_config");
-            this.ValidateStoreDefault(_) &&
-              ((this.m_defaultAdmin = new _(_)),
-              this.m_mapClanAccountToAdmin.set(_.clanid, this.m_defaultAdmin)),
-              this.ValidateWebAPI(_) &&
-                (this.m_transport = (0, _._)(
-                  new _._(_._.WEBAPI_BASE_URL, _.webapi_token),
-                ).GetServiceTransport());
-          }
-          ValidateStoreDefault(_) {
-            const _ = _;
-            return _ && typeof _ == "object" && typeof _.clanid == "number";
-          }
-          ValidateWebAPI(_) {
-            const _ = _;
-            return _ && typeof _.webapi_token == "string";
-          }
-          BIsLoggedIn() {
-            return _._.logged_in;
-          }
-          BHavePendingInfoRequests() {
-            return (
-              this.m_setPendingClanInfo.size > 0 ||
-              this.m_cClanInfoRequestsInFlight > 0
-            );
-          }
-          BIsLoadingClanID(_) {
-            return this.m_setPendingClanInfo.has(_);
-          }
-          BHasClanIDLoaded(_) {
-            return this.m_mapClanAccountToAdmin.has(_);
-          }
-          GetRSSAdminForClanAccountID(_) {
-            return this.m_mapClanAccountToAdmin.get(_);
-          }
-          async QueueCuratorAdminInfoLoad(_) {
-            return _
-              ? this.m_mapClanAccountToAdmin.has(_)
-                ? Promise.resolve()
-                : (this.m_setPendingClanInfo.size ||
-                    ((this.m_PendingClanInfoPromise = new Promise(
-                      (_) => (this.m_PendingClanInfoResolve = _),
-                    )),
-                    window.setTimeout(() => this.FlushPendingClanInfo(), 25)),
-                  this.m_setPendingClanInfo.add(_),
-                  this.m_PendingClanInfoPromise)
-              : ((0, _._)(!_, "unexpected clanid of zero or undefined: " + _),
-                Promise.resolve());
-          }
-          async FlushPendingClanInfo() {
-            const _ = this.m_PendingClanInfoResolve,
-              _ = Array.from(this.m_setPendingClanInfo);
-            (this.m_PendingClanInfoPromise = void 0),
-              (this.m_PendingClanInfoResolve = void 0),
-              this.m_setPendingClanInfo.clear(),
-              await this.LoadBatchedClanRSSAdminInfo(_),
-              _();
-          }
-          EnsureClanInfoLoaded(_) {
-            const _ = _.filter(
-              (_) =>
-                !this.m_mapClanAccountToAdmin.has(_) &&
-                this.m_setPendingClanInfo.has(_),
-            );
-            return (
-              _.forEach((_) => this.QueueCuratorAdminInfoLoad(_)),
-              _.length > 0 && this.m_PendingClanInfoPromise
-                ? this.m_PendingClanInfoPromise
-                : Promise.resolve()
-            );
-          }
-          async LoadBatchedClanRSSAdminInfo(_) {
-            this.m_cClanInfoRequestsInFlight++;
-            let _ = _.filter((_) => !this.m_mapClanAccountToAdmin.has(_));
-            const _ = 50;
-            for (; _.length > 0; ) {
-              const _ = Math.min(_, _.length),
-                _ = _.slice(0, _);
-              _ = _.slice(_);
-              try {
-                const _ =
-                    _._.STORE_BASE_URL + "events_admin/ajaxgetrssadmininfo",
-                  _ = {
-                    clanids: _,
-                  },
-                  _ = await _().get(_, {
-                    params: _,
-                    withCredentials: !0,
-                  });
-                if (
-                  _ &&
-                  _.data &&
-                  _.data.success == _._ &&
-                  _.data.rss_admin_infos &&
-                  Array.isArray(_.data.rss_admin_infos)
-                )
-                  (0, _._)(() => {
-                    _.data.rss_admin_infos.forEach((_) => {
-                      this.m_mapClanAccountToAdmin.set(_.clanid, new _(_));
-                    }),
-                      _.data.rss_event_stats.forEach((_) => {
-                        this.m_mapClanToEventRSSStats.set(_.clan_account_id, _);
-                      });
-                  });
-                else {
-                  const _ = (0, _._)(_.data || {});
-                  console.error(
-                    "LoadBatchedClanRSSAdminInfo error:" + _.strErrorMsg,
-                    _,
-                  );
-                }
-              } catch (_) {
-                const _ = (0, _._)(_);
-                console.error(
-                  "LoadBatchedClanRSSAdminInfo catched error:" + _.strErrorMsg,
-                  _,
-                );
-              }
-            }
-            this.m_cClanInfoRequestsInFlight--;
-          }
-        };
-        _([_._.shallow], _.prototype, "m_mapClanAccountToAdmin", 2),
-          _([_._.shallow], _.prototype, "m_mapClanToEventRSSStats", 2);
-        let _ = _;
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        class _ {
-          static s_CuratorStore;
-          m_mapClanToRecommendation = new Map();
-          static Get() {
-            return (
-              _.s_CuratorStore ||
-                ((_.s_CuratorStore = new _()),
-                _.s_CuratorStore.Init(),
-                (window.g_CuratorRecommendationStore = _.s_CuratorStore)),
-              _.s_CuratorStore
-            );
-          }
-          Init() {}
-          GetReviewForApp(_, _) {
-            if (this.m_mapClanToRecommendation.has(_.GetAccountID()))
-              return this.m_mapClanToRecommendation
-                .get(_.GetAccountID())
-                .get(_);
-          }
-          BHasReviewForApp(_, _) {
-            return !!this.GetReviewForApp(_, _);
-          }
-          BHasReviewForAppByClanAccount(_, _) {
-            let _ = _._.InitFromClanID(_);
-            return !!this.GetReviewForApp(_, _);
-          }
-          async LoadAppRecommendation(_, _) {
-            this.m_mapClanToRecommendation.has(_.GetAccountID()) ||
-              this.m_mapClanToRecommendation.set(_.GetAccountID(), new Map());
-            let _ = this.m_mapClanToRecommendation.get(_.GetAccountID());
-            const _ = [];
-            if (
-              (_.forEach((_) => {
-                _.has(_) || _.push(_);
-              }),
-              _.length > 0)
-            ) {
-              const _ =
-                  _._.STORE_BASE_URL +
-                  "curator/" +
-                  _.GetAccountID() +
-                  "/admin/ajaxgetrecbyapps",
-                _ = await _().get(_, {
-                  params: {
-                    appids: _,
-                    _: _._.COUNTRY || "US",
-                    _: _._.LANGUAGE,
-                  },
-                }),
-                _ = _ && _.data;
-              _ &&
-                _.rec_app &&
-                _.rec_app.forEach((_) => {
-                  _.set(Number(_.appid), _);
-                });
-            }
-          }
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        let _ = class extends _.Component {
-          state = {
-            strRssURL: _._.Get().GetDefaultAdmin().GetRSSUrl(),
-          };
-          m_Admin = _._.Get().GetDefaultAdmin();
-          OnChangeActualRSSURL(_) {
-            this.setState({
-              strRssURL: _.target.value,
-            });
-          }
-          OnCreateOrSaveFeed(_) {
-            _.preventDefault(),
-              (0, _._)(
-                (0, _.jsx)(_, {
-                  strRSSUrl: this.state.strRssURL,
-                  admin: this.m_Admin,
-                }),
-                (0, _._)(_),
-              );
-          }
-          OnRevert(_) {
-            _.preventDefault(),
-              this.setState({
-                strRssURL: this.m_Admin.GetRSSUrl(),
-              });
-          }
-          render() {
-            let _ = this.state.strRssURL === this.m_Admin.GetRSSUrl();
-            if (window.Prototype !== void 0)
-              return window.location.reload(), null;
-            const _ = (0, _.x6o)(
-                (0, _.LgB)(this.m_Admin.GetFeedLanguageHandleUnset()),
-              ),
-              _ = _._.Get().GetDefaultAdmin();
-            return (0, _.jsxs)("div", {
-              className: (0, _._)(_.Ctn),
-              children: [
-                (0, _.jsxs)("div", {
-                  className: "titleframe",
-                  children: [
-                    (0, _.jsx)("h4", {
-                      children: (0, _._)("#CuratorAdmin_RSSFeed_title"),
-                    }),
-                    (0, _.jsx)("p", {
-                      className: "subtitle",
-                      children: (0, _._)("#CuratorAdmin_RSSFeed_desc"),
-                    }),
-                    (0, _.jsx)("p", {
-                      children: (0, _._)(
-                        "#CuratorAdmin_RSSFeed_doc_link",
-                        (0, _.jsx)("a", {
-                          href: "https://partner.steamgames.com/doc/store/news/rss",
-                          target: "_blank",
-                          children: (0, _._)(
-                            "#CuratorAdmin_RSSFeed_doc_link_text",
-                          ),
-                        }),
-                      ),
-                    }),
-                    (0, _.jsx)("p", {
-                      className: _.DashboardBtn,
-                      children: (0, _.jsx)(_._, {
-                        href:
-                          _._.COMMUNITY_BASE_URL +
-                          "gid/" +
-                          this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
-                          "/partnerevents/",
-                        className: (0, _._)(_().Button, _().Primary),
-                        children: (0, _._)("#RSSManager_EventDashBoard"),
-                      }),
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: "darkframe",
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: _.LanguageRow,
-                      children: [
-                        (0, _.jsx)("span", {
-                          className: _.LanguageTitle,
-                          children: (0, _._)("#CuratorAdmin_RSSFeed_lang_only"),
-                        }),
-                        (0, _.jsx)("span", {
-                          className: _.LanguageSet,
-                          children: _,
-                        }),
-                        (0, _.jsx)("a", {
-                          href:
-                            _._.COMMUNITY_BASE_URL +
-                            "gid/" +
-                            this.m_Admin
-                              .GetClanSteamID()
-                              .ConvertTo64BitString() +
-                            "/edit ",
-                          target: "_blank",
-                          className: (0, _._)(_().Button, _.PreviewBtn),
-                          children: (0, _._)(
-                            "#CuratorAdmin_RSSFeed_edit_language",
-                          ),
-                        }),
-                      ],
-                    }),
-                    this.m_Admin.GetFeedLanguageHandleUnset() !=
-                      this.m_Admin.GetCuratorLanguage() &&
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(
-                          _.LanguageRow,
-                          _().WarningIconLayout,
-                        ),
-                        children: (0, _.jsx)("span", {
-                          className: _.LanguageTitle,
-                          children: (0, _._)(
-                            "#CuratorAdmin_Curator_lang_only",
-                            (0, _._)(
-                              "#Language_" +
-                                (0, _.LgB)(this.m_Admin.GetCuratorLanguage()),
-                            ),
-                            _,
-                          ),
-                        }),
-                      }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(
-                        _().FlexRowContainer,
-                        _.UrlSettingCtn,
-                      ),
-                      children: [
-                        (0, _.jsx)(_._, {
-                          className: _.RssInpu,
-                          type: "text",
-                          name: "link_url",
-                          _: "link_url",
-                          value: this.state.strRssURL,
-                          label: (0, _._)("#CuratorAdmin_RSSFeed"),
-                          placeholder: (0, _._)(
-                            "#CuratorAdmin_RSSFeed_placeholder",
-                          ),
-                          onChange: this.OnChangeActualRSSURL,
-                          mustBeURL: !0,
-                        }),
-                        (0, _.jsx)("a", {
-                          className: "btn_green_white_innerfade btn_medium",
-                          onClick: this.OnCreateOrSaveFeed,
-                          children: (0, _.jsx)("span", {
-                            children: (0, _._)(
-                              _ ? "#Button_Saved" : "#Button_Save",
-                            ),
-                          }),
-                        }),
-                        !_ &&
-                          (0, _.jsx)("a", {
-                            onClick: this.OnRevert,
-                            className: "btn_grey_white_innerfade btn_medium",
-                            children: (0, _._)("#Button_Revert"),
-                          }),
-                      ],
-                    }),
-                    (0, _.jsx)(_, {
-                      admin: _,
-                    }),
-                    (0, _.jsx)("br", {}),
-                    (0, _.jsx)(_, {
-                      strRssURL: this.state.strRssURL,
-                      admin: _,
-                    }),
-                  ],
-                }),
-              ],
-            });
-          }
-        };
-        _([_._], _.prototype, "OnChangeActualRSSURL", 1),
-          _([_._], _.prototype, "OnCreateOrSaveFeed", 1),
-          _([_._], _.prototype, "OnRevert", 1),
-          (_ = _([_._], _));
-        let _ = class extends _.Component {
-          state = {
-            strParseRssURL: this.props.strRssURL,
-            bLoadingPreview: !1,
-          };
-          m_cancelSignal = _().CancelToken.source();
-          componentDidMount() {
-            const { admin: _ } = this.props;
-            _.BHasFeedGID() &&
-              _.BHasSavedRSSURL() &&
-              _.GetRSSUrl() == this.props.strRssURL &&
-              this.OnLoadPreview();
-          }
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "PreviewRSSViewAndControl component unmounted",
-            );
-          }
-          RenderPreviews() {
-            let _ = this.props.admin,
-              _ = new Array();
-            if (this.state.previews) {
-              let _ = this.state.previews;
-              (_ = _.sort((_, _) => {
-                let _ = _.MapArticleURLToClanEventGID(_.post.url),
-                  _ = _.MapArticleURLToClanEventGID(_.post.url),
-                  _ = _ ? _._.GetClanEventModel(_) : null,
-                  _ = _ ? _._.GetClanEventModel(_) : null;
-                return _ && _
-                  ? _.postTime - _.postTime
-                  : _
-                    ? -1
-                    : _
-                      ? 1
-                      : _.post.rtime_date - _.post.rtime_date;
-              })),
-                _.forEach((_) => {
-                  _.push(
-                    (0, _.jsx)(
-                      _,
-                      {
-                        newsData: _,
-                        admin: _,
-                        clanSteamID: _.GetClanSteamID(),
-                        fnGetRSSUrl: this.GetRSSPreviewURL,
-                      },
-                      "id: " + _.unique_id,
-                    ),
-                  );
-                });
-            }
-            return _;
-          }
-          GetRSSPreviewURL() {
-            return this.state.strParseRssURL;
-          }
-          OnLoadPreview() {
-            this.setState(
-              {
-                bLoadingPreview: !0,
-                previews: void 0,
-                strPreviewURL: this.props.strRssURL,
-                strPreviewErrorMsg: void 0,
-              },
-              this.DoLoadPreview,
-            );
-          }
-          async DoLoadPreview() {
-            let _ = this.props.admin,
-              _ = await _.PreviewPartnerEventsFromRSSFeed(this.props.strRssURL);
-            if (_ && _.GetEResult() == _._) {
-              let _ = _.Body().toObject();
-              this.setState(
-                {
-                  strParseRssURL: _.rss_url,
-                  bLoadingPreview: !0,
-                },
-                async () => {
-                  await _.FetchPublishedEvents(Math.max(100, _.results.length));
-                  let _ = new Array(),
-                    _ = new Array();
-                  if (
-                    (_.results.forEach((_) => {
-                      let _ = _.MapArticleURLToClanEventGID(_.post.url);
-                      _ && _.push(_),
-                        _.post.appids &&
-                          _.post.appids.length === 1 &&
-                          _.post.recommendation_state !== _._._ &&
-                          _.push(_.post.appids[0]);
-                    }),
-                    _.length > 0 &&
-                      (await _._.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
-                        _,
-                        null,
-                        this.m_cancelSignal,
-                      )),
-                    _.length > 0)
-                  ) {
-                    const _ = _.GetClanSteamID();
-                    await _.Get().LoadAppRecommendation(_, _);
-                  }
-                  this.setState({
-                    previews: _.results,
-                    bLoadingPreview: void 0,
-                  });
-                },
-              );
-            } else
-              this.setState({
-                bLoadingPreview: void 0,
-                strPreviewErrorMsg: (0, _._)(
-                  "#Error_Description",
-                  _.GetEResult(),
-                  _.Hdr().error_message(),
-                ),
-              });
-          }
-          render() {
-            const _ = this.RenderPreviews();
-            let _ = this.props.admin;
-            return (0, _.jsxs)("div", {
-              children: [
-                !this.state.bLoadingPreview &&
-                  this.state.strPreviewURL !== this.props.strRssURL &&
-                  (0, _.jsx)("div", {
-                    className: _.PreviewListBtn,
-                    children: (0, _.jsx)(_._, {
-                      disabled: !_._.validateUrl(this.props.strRssURL),
-                      onClick: this.OnLoadPreview,
-                      children: (0, _._)("#CuratorAdmin_RSSFeed_preview"),
-                    }),
-                  }),
-                this.state.bLoadingPreview &&
-                  (0, _.jsx)(_._, {
-                    string: (0, _._)("#Loading"),
-                    size: "medium",
-                    position: "center",
-                  }),
-                this.state.strPreviewErrorMsg &&
-                  (0, _.jsx)("div", {
-                    className: _().ErrorMsg,
-                    children: this.state.strPreviewErrorMsg,
-                  }),
-                _.length > 0 &&
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("p", {
-                        children: (0, _._)(
-                          "#RSSManager_PreviewInfo",
-                          this.state.strPreviewURL,
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.PreviewListCtn,
-                        children: _,
-                      }),
-                      (0, _.jsx)("p", {
-                        className: _.DashboardBtn,
-                        children: (0, _.jsx)(_._, {
-                          href:
-                            _._.COMMUNITY_BASE_URL +
-                            "gid/" +
-                            _.GetClanSteamID().ConvertTo64BitString() +
-                            "/partnerevents/",
-                          className: (0, _._)(_().Button, _().Primary),
-                          children: (0, _._)("#RSSManager_EventDashBoard"),
-                        }),
-                      }),
-                    ],
-                  }),
-              ],
-            });
-          }
-        };
-        _([_._], _.prototype, "GetRSSPreviewURL", 1),
-          _([_._], _.prototype, "OnLoadPreview", 1),
-          (_ = _([_._], _));
-        let _ = class extends _.Component {
-          state = {};
-          OnToggleChannelAutomation(_) {
-            _
-              ? (this.setState({
-                  strErrorMessage: void 0,
-                }),
-                (0, _._)(
-                  (0, _.jsx)(_, {
-                    strRSSUrl: this.props.admin.GetRSSUrl(),
-                    admin: this.props.admin,
-                    bActivatePooling: !0,
-                  }),
-                  window,
-                ))
-              : this.setState(
+            _ === void 0 && (_ = {}),
+            {
+              name: `autoPlacement`,
+              options: _,
+              async _(_) {
+                let {
+                    rects: _,
+                    middlewareData: _,
+                    placement: _,
+                    platform: _,
+                    elements: _,
+                  } = _,
                   {
-                    strErrorMessage: void 0,
-                    strReasonWaiting: (0, _._)("#Saving"),
-                  },
-                  this.BDisableAutomation,
-                );
-          }
-          async BDisableAutomation() {
-            this.props.admin
-              .UpdateAutomation(!1)
-              .catch(() =>
-                this.setState({
-                  strErrorMessage: (0, _._)(
-                    "#RSSManager_Status_Automation_DisableFailed",
+                    crossAxis: _ = !1,
+                    alignment: _,
+                    allowedPlacements: _ = _,
+                    autoAlignment: _ = !0,
+                    ..._
+                  } = _(_, _),
+                  _ = _ !== void 0 || _ === _ ? _(_ || null, _, _) : _,
+                  _ = _.autoPlacement?.index || 0,
+                  _ = _[_];
+                if (_ == null) return {};
+                if (_ !== _)
+                  return {
+                    reset: {
+                      placement: _[0],
+                    },
+                  };
+                let _ = await _.detectOverflow(_, _),
+                  _ = _(
+                    _,
+                    _,
+                    await (_.isRTL == null ? void 0 : _.isRTL(_.floating)),
                   ),
-                }),
-              )
-              .finally(() =>
-                this.setState({
-                  strReasonWaiting: void 0,
-                }),
-              );
-          }
-          async OnQueueScan(_) {
-            this.setState({
-              strReasonWaiting: (0, _._)("#CuratorAdmin_RSSFeed_scannow"),
-            }),
-              this.props.admin
-                .CheckForNewUpdate()
-                .then(() =>
-                  (0, _._)(
-                    (0, _.jsx)(_._, {
-                      strTitle: (0, _._)("#CuratorAdmin_RSSFeed_scannow"),
-                      strDescription: (0, _._)("#CuratorAdmin_RSSFeed_queued"),
-                    }),
-                    (0, _._)(_),
-                  ),
-                )
-                .catch((_) =>
-                  (0, _._)(
-                    (0, _.jsx)(_._, {
-                      strTitle: (0, _._)("#CuratorAdmin_RSSFeed_scannow"),
-                      strDescription: (0, _._)(_).strErrorMsg,
-                    }),
-                    (0, _._)(_),
-                  ),
-                )
-                .finally(() =>
-                  this.setState({
-                    strReasonWaiting: void 0,
-                  }),
-                );
-          }
-          render() {
-            return this.props.admin.BHasSavedRSSURL()
-              ? (0, _.jsxs)("div", {
-                  children: [
-                    !!this.state.strReasonWaiting &&
-                      (0, _.jsx)(_._, {
-                        size: "medium",
-                        string: this.state.strReasonWaiting,
-                      }),
-                    !!this.state.strErrorMessage &&
-                      (0, _.jsx)("div", {
-                        className: _.Error,
-                        children: this.state.strErrorMessage,
-                      }),
-                    (0, _.jsx)(_._, {
-                      onChange: this.OnToggleChannelAutomation,
-                      label: (0, _._)("#RSSManager_Status_Automation_Desc"),
-                      checked: this.props.admin.BIsAutomationEnabled(),
-                      description: "",
-                    }),
-                    this.props.admin.BIsAutomationEnabled() &&
-                      (0, _.jsxs)("p", {
-                        children: [
-                          (0, _._)("#CuratorAdmin_RSSFeed_lastscanned"),
-                          "\xA0",
-                          (0, _._)(
-                            this.props.admin.GetRSSLastRtimeChecked(),
-                            !1,
-                          ),
-                          "\xA0 @ ",
-                          (0, _._)(this.props.admin.GetRSSLastRtimeChecked(), {
-                            bForce24HourClock: !1,
-                          }),
-                          "\xA0",
-                          (0, _.jsx)("a", {
-                            onClick: this.OnQueueScan,
-                            children: (0, _.jsx)("span", {
-                              children: (0, _._)(
-                                "#CuratorAdmin_RSSFeed_scannow",
-                              ),
-                            }),
-                          }),
-                        ],
-                      }),
+                  _ = [_[_(_)], _[_[0]], _[_[1]]],
+                  _ = [
+                    ...(_.autoPlacement?.overflows || []),
+                    {
+                      placement: _,
+                      overflows: _,
+                    },
                   ],
-                })
-              : null;
-          }
-        };
-        _([_._], _.prototype, "OnToggleChannelAutomation", 1),
-          _([_._], _.prototype, "OnQueueScan", 1),
-          (_ = _([_._], _));
-        let _ = class extends _.Component {
-          state = {
-            clan_event_gid: this.props.admin.MapArticleURLToClanEventGID(
-              this.props.newsData.post.url,
-            ),
-            bLoadingPartnerEvent:
-              !!this.props.admin.MapArticleURLToClanEventGID(
-                this.props.newsData.post.url,
-              ),
-          };
-          componentDidMount() {
-            this.DoPartnerEventLoad();
-          }
-          async DoPartnerEventLoad() {
-            if (this.state.clan_event_gid) {
-              let _ = this.props.admin.GetClanSteamID(),
-                _ = _._.GetClanEventModel(this.state.clan_event_gid);
-              _ ||
-                (_ = await _._.LoadHiddenPartnerEvent(
-                  _,
-                  this.state.clan_event_gid,
-                )),
-                this.setState({
-                  bLoadingPartnerEvent: !1,
-                  existingEventModel: _,
-                });
-            }
-          }
-          OnOpenPreviewAsPartnerEvent(_) {
-            const { newsData: _, clanSteamID: _ } = this.props;
-            let _ = new _._();
-            (_.GID = "PreviewPartnerEventRow_0"),
-              (_.clanSteamID = _),
-              (_.postTime = Date.now() / 1e3),
-              (_.startTime = Date.now() / 1e3),
-              (_.type = _.uYK),
-              _.vecTags.push("auto_rssfeed"),
-              _.vecTags.push("curator"),
-              _.vecTags.push("curator_public"),
-              _.name.set(_.Bhc, _.title),
-              _.description.set(_.Bhc, _.desc),
-              this.ValidateJSONDefault(_.jsondata) && (_.jsondata = _.jsondata),
-              _.jsondata.read_more_link ||
-                (_.jsondata.read_more_link = _.unique_id);
-            let _ = this.props.admin.GetFeedLanguageHandleUnset();
-            !_.jsondata.localized_summary &&
-              _.post.event_summary &&
-              ((_.jsondata.localized_summary = (0, _._)(
-                _.jsondata.localized_summary,
-                _.bP9,
-                null,
-              )),
-              (_.jsondata.localized_summary[_.Bhc] = _.post.event_summary),
-              _ != _.Bhc &&
-                (_.jsondata.localized_summary[_] = _.post.event_summary)),
-              !_.jsondata.localized_subtitle &&
-                _.post.event_subtitle &&
-                ((_.jsondata.localized_subtitle = (0, _._)(
-                  _.jsondata.localized_subtitle,
-                  _.bP9,
-                  null,
-                )),
-                (_.jsondata.localized_subtitle[_.Bhc] = _.post.event_subtitle),
-                _ != _.Bhc &&
-                  (_.jsondata.localized_subtitle[_] = _.post.event_subtitle)),
-              this.ShowModalEvent(_);
-          }
-          OnViewEvent() {
-            this.ShowModalEvent(
-              _._.GetClanEventModel(this.state.clan_event_gid),
-            );
-          }
-          ShowModalEvent(_) {
-            let _ = document.getElementById("curator_header_area_ctn_id");
-            _ &&
-              (_
-                ? _.classList.add("curator_header_area_ctn_hideme")
-                : _.classList.remove("curator_header_area_ctn_hideme")),
-              this.setState({
-                eventModelForPreviewNow: _,
-              });
-          }
-          ValidateJSONDefault(_) {
-            const _ = _;
-            return !!(_ && !Array.isArray(_) && typeof _ == "object");
-          }
-          OnPostNewsEvent(_) {
-            const { newsData: _, fnGetRSSUrl: _ } = this.props;
-            (0, _._)(
-              (0, _.jsx)(_, {
-                newsData: _,
-                admin: this.props.admin,
-                strRSSUrl: _(),
-                fnClanEventGID: this.OnClanEventCreateSuccess,
-              }),
-              (0, _._)(_),
-            );
-          }
-          OnUpdateNewsEvent(_) {
-            const { newsData: _, fnGetRSSUrl: _ } = this.props;
-            (0, _._)(
-              (0, _.jsx)(_, {
-                newsData: _,
-                strRSSUrl: _(),
-                admin: this.props.admin,
-                fnClanEventGID: this.OnClanEventCreateSuccess,
-                bUpdatePost: !0,
-              }),
-              (0, _._)(_),
-            );
-          }
-          HideModalEvent() {
-            this.state.eventModelForPreviewNow && this.ShowModalEvent(void 0);
-          }
-          OnClanEventCreateSuccess(_) {
-            this.setState(
-              {
-                clan_event_gid: _,
-                bLoadingPartnerEvent: !0,
+                  _ = _[_ + 1];
+                if (_)
+                  return {
+                    data: {
+                      index: _ + 1,
+                      overflows: _,
+                    },
+                    reset: {
+                      placement: _,
+                    },
+                  };
+                let _ = _.map((_) => {
+                    let _ = _(_.placement);
+                    return [
+                      _.placement,
+                      _ && _
+                        ? _.overflows.slice(0, 2).reduce((_, _) => _ + _, 0)
+                        : _.overflows[0],
+                      _.overflows,
+                    ];
+                  }).sort((_, _) => _[1] - _[1]),
+                  _ =
+                    _.filter((_) =>
+                      _[2].slice(0, _(_[0]) ? 2 : 3).every((_) => _ <= 0),
+                    )[0]?.[0] || _[0][0];
+                return _ === _
+                  ? {}
+                  : {
+                      data: {
+                        index: _ + 1,
+                        overflows: _,
+                      },
+                      reset: {
+                        placement: _,
+                      },
+                    };
               },
-              this.DoPartnerEventLoad,
-            );
-          }
-          OnShowRawRSS(_) {
-            const _ = this.props.newsData.rss_message,
-              _ = (() => {
-                const _ = _.match(/<entry[^>]*>([\s\S]*)<\/entry>/m);
-                if (!_) return _;
-                const _ = _[1].match(/<content[^>]*>[\s\S]*<\/content>/m);
-                return _ ? (0, _._)(_[0]) : _[0];
-              })();
-            (0, _._)(
-              (0, _.jsx)(_._, {
-                bAlertDialog: !0,
-                strTitle: (0, _._)("#RSSManager_PostEvent_ViewRaw"),
-                children: (0, _.jsx)("textarea", {
-                  className: _.RawRSS,
-                  value: _,
-                  disabled: !0,
-                }),
-              }),
-              (0, _._)(_),
-            );
-          }
-          render() {
-            const { newsData: _ } = this.props,
-              {
-                clan_event_gid: _,
-                existingEventModel: _,
-                bLoadingPartnerEvent: _,
-              } = this.state;
-            let _ = this.props.admin,
-              _ = _.GetClanSteamID(),
-              _ = _ && _.BIsStagedEvent(),
-              _ =
-                _.post.appids && _.post.appids.length == 1 && _.post.appids[0],
-              _ =
-                _.post.recommendation_state !== _._._ &&
-                _ &&
-                _.Get().BHasReviewForApp(_, _),
-              _ = "";
-            if (_) {
-              const _ =
-                _.GetVisibilityStartTimeAndDateUnixSeconds() ||
-                _.GetPostTimeAndDateUnixSeconds();
-              _ =
-                (0, _._)(_) +
-                " @ " +
-                (0, _._)(_, {
-                  bForce24HourClock: !1,
-                });
             }
-            return (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _.PostCtn,
-                _ ? _.ActivePost : "",
-                _.valid_post ? "" : _.ErrorPost,
-              ),
-              children: [
-                (0, _.jsx)("span", {
-                  className: _.PostTitle,
-                  children: _.title,
-                }),
-                (0, _.jsx)("br", {}),
-                !!_ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      !!_.BIsVisibleEvent() &&
-                        (0, _.jsx)("span", {
-                          className: _.PostDate,
-                          children: (0, _._)(
-                            "#RSSManager_PostEvent_PostedDate",
-                            _,
-                          ),
-                        }),
-                      !_.BIsVisibleEvent() &&
-                        (0, _.jsx)("span", {
-                          className: (0, _._)(
-                            _.PostDraft,
-                            _ ? _.PostStaged : "",
-                          ),
-                          children: (0, _._)(
-                            _
-                              ? "#RSSManager_PostEvent_Staged"
-                              : "#RSSManager_PostEvent_Draft",
-                            _,
-                          ),
-                        }),
-                    ],
-                  }),
-                !!(!_.valid_post && _.post_error_msg) &&
-                  (0, _.jsxs)("div", {
-                    className: _().ErrorStylesBackground,
-                    children: [
-                      (0, _._)("#Error_Generic_Label"),
-                      " ",
-                      (0, _._)(_.post_error_msg),
-                    ],
-                  }),
-                (0, _.jsxs)("div", {
-                  className: _.ButtonCtn,
-                  children: [
-                    _
-                      ? (0, _.jsxs)(_.Fragment, {
-                          children: [
-                            _
-                              ? (0, _.jsx)(_._, {
-                                  string: (0, _._)("#Loading"),
-                                  size: "small",
-                                  position: "center",
-                                })
-                              : (0, _.jsx)("div", {
-                                  onClick: this.OnViewEvent,
-                                  className: (0, _._)(_().Button, _.PreviewBtn),
-                                  children: (0, _._)(
-                                    "#RSSManager_PostEvent_ViewEvent",
-                                  ),
-                                }),
-                            (0, _.jsx)("a", {
-                              className: (0, _._)(_().Button, _.PreviewBtn),
-                              href:
-                                _._.COMMUNITY_BASE_URL +
-                                "gid/" +
-                                _.GetClanSteamID().ConvertTo64BitString() +
-                                "/partnerevents/edit/" +
-                                this.state.clan_event_gid,
-                              children: (0, _._)(
-                                "#RSSManager_PostEvent_EditEvent",
-                              ),
-                            }),
-                            (0, _.jsx)("div", {
-                              onClick: this.OnUpdateNewsEvent,
-                              className: (0, _._)(_().Button, _.PreviewBtn),
-                              children: (0, _._)(
-                                "#RSSManager_PostEvent_UpdateEvent",
-                              ),
-                            }),
-                            _ &&
-                              (0, _.jsx)("a", {
-                                className: (0, _._)(_().Button, _.PreviewBtn),
-                                href: (0, _._)(
-                                  _._.STORE_BASE_URL +
-                                    "app/" +
-                                    _.post.appids[0] +
-                                    "/?curator_clanid=" +
-                                    _.GetAccountID(),
-                                ),
-                                children: (0, _._)("#RSSManager_SeeReview"),
-                              }),
-                          ],
-                        })
-                      : (0, _.jsxs)(_.Fragment, {
-                          children: [
-                            (0, _.jsx)("div", {
-                              onClick: this.OnOpenPreviewAsPartnerEvent,
-                              className: (0, _._)(_().Button, _.PreviewBtn),
-                              children: (0, _._)(
-                                "#CuratorAdmin_RSSFeed_col_preview_event",
-                              ),
-                            }),
-                            (0, _.jsx)("div", {
-                              onClick: this.OnPostNewsEvent,
-                              className: (0, _._)(_().Button, _.PreviewBtn),
-                              children: (0, _._)(
-                                "#CuratorAdmin_RSSFeed_col_create_event",
-                              ),
-                            }),
-                          ],
-                        }),
-                    !!(_.rss_message && _.rss_message.length > 0) &&
-                      (0, _.jsx)("div", {
-                        onClick: this.OnShowRawRSS,
-                        className: _.ViewRaw,
-                        children: (0, _._)("#RSSManager_PostEvent_ViewRaw"),
-                      }),
-                    !!this.state.eventModelForPreviewNow &&
-                      (0, _.jsx)(_._, {
-                        className: _.StoreHeaderAdjust,
-                        children: (0, _.jsx)("div", {
-                          children: (0, _.jsx)(_._, {
-                            event: this.state.eventModelForPreviewNow,
-                            fnClose: this.HideModalEvent,
-                          }),
-                        }),
-                      }),
-                  ],
-                }),
-              ],
-            });
-          }
-        };
-        _([_._], _.prototype, "DoPartnerEventLoad", 1),
-          _([_._], _.prototype, "OnOpenPreviewAsPartnerEvent", 1),
-          _([_._], _.prototype, "OnViewEvent", 1),
-          _([_._], _.prototype, "OnPostNewsEvent", 1),
-          _([_._], _.prototype, "OnUpdateNewsEvent", 1),
-          _([_._], _.prototype, "HideModalEvent", 1),
-          _([_._], _.prototype, "OnClanEventCreateSuccess", 1),
-          _([_._], _.prototype, "OnShowRawRSS", 1),
-          (_ = _([_._], _));
-        const _ = class _ extends _.Component {
-          state = {
-            initialState: _.DetermineStartState(this.props),
-            step: _.DetermineStartState(this.props),
-            bDraftMode: !0,
-          };
-          static DetermineStartState(_) {
-            let _ = _.admin.BHasSetupFeed(_.strRSSUrl);
-            return !_.newsData || !_
-              ? _.bActivatePooling
-                ? "activate_feed"
-                : _.admin.BHasSavedRSSURL()
-                  ? "update_feed"
-                  : "feed_missing"
-              : _.bUpdatePost
-                ? "update_post"
-                : "create_post";
-          }
-          OnCreateNewsFeed() {
-            this.setState(
-              {
-                step: "creating_feed",
-              },
-              this.DoCreateNewsFeed,
-            );
-          }
-          async DoCreateNewsFeed() {
-            let _ = await this.props.admin.CreateOrUpdateRSSNewFeed(
-              this.props.strRSSUrl,
-              this.props.bActivatePooling ? 300 : 0,
-            );
-            _.success != _._
-              ? this.setState({
-                  step: "failure",
-                  eResult: _.success,
-                  strErrorMessage: (0, _._)("#RSSManager_PostEvent_Failure"),
-                })
-              : this.setState({
-                  step: this.props.newsData ? "create_post" : "success",
-                });
-          }
-          OnCreatePost() {
-            this.setState(
-              {
-                step: "waiting_post",
-              },
-              this.DoCreatePost,
-            );
-          }
-          async DoCreatePost() {
-            let _ = await this.props.admin.CreatePost(
-              this.props.newsData,
-              !!this.state.bDraftMode,
-            );
-            _.GetEResult() != _._
-              ? this.setState({
-                  step: "failure",
-                  eResult: _.GetEResult(),
-                  strErrorMessage: (0, _._)("#RSSManager_PostEvent_Failure"),
-                })
-              : (this.props.fnClanEventGID &&
-                  this.props.fnClanEventGID(_.Body().clan_event_gid()),
-                this.setState({
-                  step: "success",
-                  eventGID: _.Body().clan_event_gid(),
-                }));
-          }
-          OnChangeDraftMode(_) {
-            this.setState({
-              bDraftMode: _,
-            });
-          }
-          OnChangePermissionsCreateFeed(_) {
-            this.setState({
-              bPermissions: _,
-            });
-          }
-          OnChangeConductCreateFeed(_) {
-            this.setState({
-              bConduct: _,
-            });
-          }
-          GetStrTitle() {
-            if (this.props.newsData)
-              return (0, _._)(
-                this.props.bUpdatePost
-                  ? "#RSSManager_PostEvent_UpdateEvent"
-                  : "#RSSManager_PostEvent_Tilte",
-              );
-            switch (this.state.initialState) {
-              case "feed_missing":
-                return (0, _._)("#RSSManager_PostEvent_CreateFeedTitle");
-              default:
-              case "update_feed":
-                return (0, _._)("#RSSManager_PostEvent_UpdateFeedTitle");
-              case "activate_feed":
-                return (0, _._)("#RSSManager_Status_Automation_Activate");
-            }
-          }
-          render() {
-            const { strRSSUrl: _ } = this.props;
-            switch (this.state.step) {
-              case "feed_missing":
-              case "activate_feed":
-              case "update_feed":
-              default:
-                return (0, _.jsx)(_._, {
-                  title: this.GetStrTitle(),
-                  children: (0, _.jsxs)(_._, {
-                    children: [
-                      (0, _.jsxs)(_._, {
-                        children: [
-                          this.props.newsData &&
-                            (0, _.jsx)("div", {
-                              children: (0, _._)(
-                                "#RSSManager_PostEvent_CreateFeed_DuringPost",
-                              ),
-                            }),
-                          this.state.step !== "activate_feed" &&
-                            (0, _.jsx)("div", {
-                              children: (0, _._)(
-                                "#RSSManager_PostEvent_CreateFeed_Desc",
-                                _,
-                              ),
-                            }),
-                          (0, _.jsx)("div", {
-                            children: (0, _._)("#RSSManager_CreateFeed_Review"),
-                          }),
-                          (0, _.jsx)("div", {
-                            children: (0, _.jsx)(_._, {
-                              label: (0, _._)(
-                                "#RSSManager_CreateFeed_Permissions_v1",
-                              ),
-                              onChange: this.OnChangePermissionsCreateFeed,
-                              checked: !!this.state.bPermissions,
-                            }),
-                          }),
-                          (0, _.jsxs)("div", {
-                            children: [
-                              (0, _.jsx)(_._, {
-                                label: (0, _._)(
-                                  "#RSSManager_CreateFeed_Conduct_v1",
-                                ),
-                                onChange: this.OnChangeConductCreateFeed,
-                                checked: !!this.state.bConduct,
-                              }),
-                              (0, _.jsx)(_._, {
-                                href: _._.STORE_BASE_URL + "online_conduct/",
-                                children: (0, _._)(
-                                  "#RSSManager_CreateFeed_Conduct_Link",
-                                ),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_._, {
-                          bOKDisabled: !(
-                            this.state.bPermissions && this.state.bConduct
-                          ),
-                          onOK: this.OnCreateNewsFeed,
-                          onCancel: this.props.closeModal,
-                        }),
-                      }),
-                    ],
-                  }),
-                });
-              case "failure":
-                return (0, _.jsx)(_._, {
-                  strDescription: (0, _._)("#RSSManager_PostEvent_Failure"),
-                  closeModal: this.props.closeModal,
-                  children: (0, _.jsx)("div", {
-                    children: (0, _._)(
-                      "#Error_Description",
-                      this.state.eResult,
-                      this.state.strErrorMessage,
-                    ),
-                  }),
-                });
-              case "creating_feed":
-              case "waiting_post":
-                return (0, _.jsx)(_._, {
-                  strTitle: this.GetStrTitle(),
-                  strDescription: (0, _._)("#RSSManager_PostEvent_InFlight"),
-                  closeModal: this.props.closeModal,
-                  children: (0, _.jsx)(_._, {
-                    position: "center",
-                  }),
-                });
-              case "create_post":
-                return (0, _.jsx)(_._, {
-                  title: this.GetStrTitle(),
-                  children: (0, _.jsxs)(_._, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        children: (0, _.jsxs)("div", {
-                          children: [
-                            (0, _.jsx)("div", {
-                              children: (0, _._)(
-                                "#RSSManager_PostEvent_CreatePost",
-                              ),
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _.DialogPostTitle,
-                              children: this.props.newsData.title,
-                            }),
-                            (0, _.jsx)("br", {}),
-                            (0, _.jsx)("div", {
-                              children: (0, _.jsx)(_._, {
-                                label: (0, _._)(
-                                  "#RSSManager_PostEvent_CreatePost_Draft",
-                                ),
-                                onChange: this.OnChangeDraftMode,
-                                checked: !!this.state.bDraftMode,
-                              }),
-                            }),
-                          ],
-                        }),
-                      }),
-                      (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_._, {
-                          onOK: this.OnCreatePost,
-                          onCancel: this.props.closeModal,
-                        }),
-                      }),
-                    ],
-                  }),
-                });
-              case "update_post":
-                return (0, _.jsx)(_._, {
-                  title: this.GetStrTitle(),
-                  children: (0, _.jsxs)(_._, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        children: (0, _.jsxs)("div", {
-                          children: [
-                            (0, _.jsx)("div", {
-                              children: (0, _._)(
-                                "#RSSManager_PostEvent_UpdatePost",
-                              ),
-                            }),
-                            (0, _.jsx)("br", {}),
-                            (0, _.jsx)("div", {
-                              className: _.DialogPostTitle,
-                              children: this.props.newsData.title,
-                            }),
-                            (0, _.jsx)("br", {}),
-                          ],
-                        }),
-                      }),
-                      (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_._, {
-                          onOK: this.OnCreatePost,
-                          onCancel: this.props.closeModal,
-                        }),
-                      }),
-                    ],
-                  }),
-                });
-              case "success":
-                return (0, _.jsx)(_._, {
-                  strTitle: this.GetStrTitle(),
-                  strDescription: (0, _._)(
-                    this.props.newsData
-                      ? "#RSSManager_PostEvent_Success"
-                      : "#RSSManager_PostEvent_Success_feed",
-                  ),
-                  closeModal: this.props.closeModal,
-                  bAlertDialog: !0,
-                  children:
-                    !!this.state.eventGID &&
-                    (0, _.jsx)("a", {
-                      href:
-                        _._.COMMUNITY_BASE_URL +
-                        "gid/" +
-                        this.props.admin
-                          .GetClanSteamID()
-                          .ConvertTo64BitString() +
-                        "/partnerevents/edit/" +
-                        this.state.eventGID,
-                      children: (0, _._)("#RSSManager_PostEvent_EventLink"),
-                    }),
-                });
-            }
-          }
-        };
-        _([_._], _.prototype, "OnCreateNewsFeed", 1),
-          _([_._], _.prototype, "DoCreateNewsFeed", 1),
-          _([_._], _.prototype, "OnCreatePost", 1),
-          _([_._], _.prototype, "DoCreatePost", 1),
-          _([_._], _.prototype, "OnChangeDraftMode", 1),
-          _([_._], _.prototype, "OnChangePermissionsCreateFeed", 1),
-          _([_._], _.prototype, "OnChangeConductCreateFeed", 1),
-          _([_._], _.prototype, "GetStrTitle", 1);
-        let _ = _;
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        async function _() {
-          const _ = await (0, _._)(
-            "ajaxgetuserdeckcompatcounts",
-            new URLSearchParams(),
           );
-          if (!_.counts)
-            throw new Error(
-              "ajaxgetuserdeckcompatcounts answered without counts",
-            );
-          return _.counts;
+        },
+        _ = function (_) {
+          return (
+            _ === void 0 && (_ = {}),
+            {
+              name: `flip`,
+              options: _,
+              async _(_) {
+                var _;
+                let {
+                    placement: _,
+                    middlewareData: _,
+                    rects: _,
+                    initialPlacement: _,
+                    platform: _,
+                    elements: _,
+                  } = _,
+                  {
+                    mainAxis: _ = !0,
+                    crossAxis: _ = !0,
+                    fallbackPlacements: _,
+                    fallbackStrategy: _ = `bestFit`,
+                    fallbackAxisSideDirection: _ = `none`,
+                    flipAlignment: _ = !0,
+                    ..._
+                  } = _(_, _);
+                if ((_ = _.arrow) != null && _.alignmentOffset) return {};
+                let _ = _(_),
+                  _ = _(_),
+                  _ = _(_) === _,
+                  _ = await (_.isRTL == null ? void 0 : _.isRTL(_.floating)),
+                  _ = _ || (_ || !_ ? [_(_)] : _(_)),
+                  _ = _ !== `none`;
+                !_ && _ && _.push(..._(_, _, _, _));
+                let _ = [_, ..._],
+                  _ = await _.detectOverflow(_, _),
+                  _ = [],
+                  _ = _.flip?.overflows || [];
+                if ((_ && _.push(_[_]), _)) {
+                  let _ = _(_, _, _);
+                  _.push(_[_[0]], _[_[1]]);
+                }
+                if (
+                  ((_ = [
+                    ..._,
+                    {
+                      placement: _,
+                      overflows: _,
+                    },
+                  ]),
+                  !_.every((_) => _ <= 0))
+                ) {
+                  let _ = (_.flip?.index || 0) + 1,
+                    _ = _[_];
+                  if (
+                    _ &&
+                    (_ !== `alignment` ||
+                      _ === _(_) ||
+                      _.every(
+                        (_) => _(_.placement) !== _ || _.overflows[0] > 0,
+                      ))
+                  )
+                    return {
+                      data: {
+                        index: _,
+                        overflows: _,
+                      },
+                      reset: {
+                        placement: _,
+                      },
+                    };
+                  let _ = _.filter((_) => _.overflows[0] <= 0).sort(
+                    (_, _) => _.overflows[1] - _.overflows[1],
+                  )[0]?.placement;
+                  if (!_)
+                    switch (_) {
+                      case `bestFit`: {
+                        let _ = _.filter((_) => {
+                          if (_) {
+                            let _ = _(_.placement);
+                            return _ === _ || _ === `y`;
+                          }
+                          return !0;
+                        })
+                          .map((_) => [
+                            _.placement,
+                            _.overflows
+                              .filter((_) => _ > 0)
+                              .reduce((_, _) => _ + _, 0),
+                          ])
+                          .sort((_, _) => _[1] - _[1])[0]?.[0];
+                        _ && (_ = _);
+                        break;
+                      }
+                      case `initialPlacement`:
+                        _ = _;
+                    }
+                  if (_ !== _)
+                    return {
+                      reset: {
+                        placement: _,
+                      },
+                    };
+                }
+                return {};
+              },
+            }
+          );
+        };
+      function _(_, _) {
+        return {
+          top: _.top - _.height,
+          right: _.right - _.width,
+          bottom: _.bottom - _.height,
+          left: _.left - _.width,
+        };
+      }
+      function _(_) {
+        return _.some((_) => _[_] >= 0);
+      }
+      let _ = function (_) {
+        return (
+          _ === void 0 && (_ = {}),
+          {
+            name: `hide`,
+            options: _,
+            async _(_) {
+              let { rects: _, platform: _ } = _,
+                { strategy: _ = `referenceHidden`, ..._ } = _(_, _);
+              switch (_) {
+                case `referenceHidden`: {
+                  let _ = _(
+                    await _.detectOverflow(_, {
+                      ..._,
+                      elementContext: `reference`,
+                    }),
+                    _.reference,
+                  );
+                  return {
+                    data: {
+                      referenceHiddenOffsets: _,
+                      referenceHidden: _(_),
+                    },
+                  };
+                }
+                case `escaped`: {
+                  let _ = _(
+                    await _.detectOverflow(_, {
+                      ..._,
+                      altBoundary: !0,
+                    }),
+                    _.floating,
+                  );
+                  return {
+                    data: {
+                      escapedOffsets: _,
+                      escaped: _(_),
+                    },
+                  };
+                }
+                default:
+                  return {};
+              }
+            },
+          }
+        );
+      };
+      function _(_) {
+        let _ = _(..._.map((_) => _.left)),
+          _ = _(..._.map((_) => _.top)),
+          _ = _(..._.map((_) => _.right)),
+          _ = _(..._.map((_) => _.bottom));
+        return {
+          _: _,
+          _: _,
+          width: _ - _,
+          height: _ - _,
+        };
+      }
+      function _(_) {
+        let _ = _.slice().sort((_, _) => _._ - _._),
+          _ = [],
+          _ = null;
+        for (let _ = 0; _ < _.length; _++) {
+          let _ = _[_];
+          !_ || _._ - _._ > _.height / 2
+            ? _.push([_])
+            : _[_.length - 1].push(_),
+            (_ = _);
         }
-        const _ = 300 * 1e3;
-        function _() {
-          return ["DeckCompatCounts"];
+        return _.map((_) => _(_(_)));
+      }
+      let _ = function (_) {
+          return (
+            _ === void 0 && (_ = {}),
+            {
+              name: `inline`,
+              options: _,
+              async _(_) {
+                let {
+                    placement: _,
+                    elements: _,
+                    rects: _,
+                    platform: _,
+                    strategy: _,
+                  } = _,
+                  { padding: _ = 2, _: _, _: _ } = _(_, _),
+                  _ = Array.from(
+                    (await (_.getClientRects == null
+                      ? void 0
+                      : _.getClientRects(_.reference))) || [],
+                  );
+                if (!_.length) return {};
+                let _ = _(_),
+                  _ = _(_(_)),
+                  _ = _(_);
+                function _() {
+                  if (
+                    _.length === 2 &&
+                    (_[0].left > _[1].right || _[1].left > _[0].right) &&
+                    _ != null &&
+                    _ != null
+                  )
+                    return (
+                      _.find(
+                        (_) =>
+                          _ > _.left - _.left &&
+                          _ < _.right + _.right &&
+                          _ > _.top - _.top &&
+                          _ < _.bottom + _.bottom,
+                      ) || _
+                    );
+                  if (_.length >= 2) {
+                    if (_(_) === `y`) {
+                      let _ = _[0],
+                        _ = _[_.length - 1],
+                        _ = _(_) === `top`,
+                        _ = _.top,
+                        _ = _.bottom,
+                        _ = _ ? _.left : _.left;
+                      return _({
+                        _: _,
+                        _: _,
+                        width: (_ ? _.right : _.right) - _,
+                        height: _ - _,
+                      });
+                    }
+                    let _ = _(_) === `left`,
+                      _ = _(..._.map((_) => _.right)),
+                      _ = _(..._.map((_) => _.left)),
+                      _ = _.filter((_) => (_ ? _.left === _ : _.right === _)),
+                      _ = _[0].top,
+                      _ = _[_.length - 1].bottom;
+                    return _({
+                      _: _,
+                      _: _,
+                      width: _ - _,
+                      height: _ - _,
+                    });
+                  }
+                  return _;
+                }
+                let _ = await _.getElementRects({
+                  reference: {
+                    getBoundingClientRect: _,
+                  },
+                  floating: _.floating,
+                  strategy: _,
+                });
+                return _.reference._ !== _.reference._ ||
+                  _.reference._ !== _.reference._ ||
+                  _.reference.width !== _.reference.width ||
+                  _.reference.height !== _.reference.height
+                  ? {
+                      reset: {
+                        rects: _,
+                      },
+                    }
+                  : {};
+              },
+            }
+          );
+        },
+        _ = new Set([`left`, `top`]);
+      async function _(_, _) {
+        let { placement: _, platform: _, elements: _ } = _,
+          _ = await (_.isRTL == null ? void 0 : _.isRTL(_.floating)),
+          _ = _(_),
+          _ = _(_),
+          _ = _(_) === `y`,
+          _ = _.has(_) ? -1 : 1,
+          _ = _ && _ ? -1 : 1,
+          _ = _(_, _),
+          {
+            mainAxis: _,
+            crossAxis: _,
+            alignmentAxis: _,
+          } = typeof _ == `number`
+            ? {
+                mainAxis: _,
+                crossAxis: 0,
+                alignmentAxis: null,
+              }
+            : {
+                mainAxis: _.mainAxis || 0,
+                crossAxis: _.crossAxis || 0,
+                alignmentAxis: _.alignmentAxis,
+              };
+        return (
+          _ && typeof _ == `number` && (_ = _ === `end` ? _ * -1 : _),
+          _
+            ? {
+                _: _ * _,
+                _: _ * _,
+              }
+            : {
+                _: _ * _,
+                _: _ * _,
+              }
+        );
+      }
+      (_.arrow = _),
+        (_.autoPlacement = _),
+        (_.computePosition = _),
+        (_.detectOverflow = _),
+        (_.flip = _),
+        (_.hide = _),
+        (_.inline = _),
+        (_.limitShift = function (_) {
+          return (
+            _ === void 0 && (_ = {}),
+            {
+              options: _,
+              _(_) {
+                let {
+                    _: _,
+                    _: _,
+                    placement: _,
+                    rects: _,
+                    middlewareData: _,
+                  } = _,
+                  {
+                    offset: _ = 0,
+                    mainAxis: _ = !0,
+                    crossAxis: _ = !0,
+                  } = _(_, _),
+                  _ = {
+                    _: _,
+                    _: _,
+                  },
+                  _ = _(_),
+                  _ = _(_),
+                  _ = _[_],
+                  _ = _[_],
+                  _ = _(_, _),
+                  _ =
+                    typeof _ == `number`
+                      ? {
+                          mainAxis: _,
+                          crossAxis: 0,
+                        }
+                      : {
+                          mainAxis: _.mainAxis ?? 0,
+                          crossAxis: _.crossAxis ?? 0,
+                        };
+                if (_) {
+                  let _ = _ === `y` ? `height` : `width`,
+                    _ = _.reference[_] - _.floating[_] + _.mainAxis,
+                    _ = _.reference[_] + _.reference[_] - _.mainAxis;
+                  _ < _ ? (_ = _) : _ > _ && (_ = _);
+                }
+                if (_) {
+                  let _ = _ === `y` ? `width` : `height`,
+                    _ = _.has(_(_)),
+                    _ =
+                      _.reference[_] -
+                      _.floating[_] +
+                      ((_ && _.offset?.[_]) || 0) +
+                      (_ ? 0 : _.crossAxis),
+                    _ =
+                      _.reference[_] +
+                      _.reference[_] +
+                      (_ ? 0 : _.offset?.[_] || 0) -
+                      (_ ? _.crossAxis : 0);
+                  _ < _ ? (_ = _) : _ > _ && (_ = _);
+                }
+                return {
+                  [_]: _,
+                  [_]: _,
+                };
+              },
+            }
+          );
+        }),
+        (_.offset = function (_) {
+          return (
+            _ === void 0 && (_ = 0),
+            {
+              name: `offset`,
+              options: _,
+              async _(_) {
+                var _;
+                let { _: _, _: _, placement: _, middlewareData: _ } = _,
+                  _ = await _(_, _);
+                return _ === _.offset?.placement &&
+                  (_ = _.arrow) != null &&
+                  _.alignmentOffset
+                  ? {}
+                  : {
+                      _: _ + _._,
+                      _: _ + _._,
+                      data: {
+                        ..._,
+                        placement: _,
+                      },
+                    };
+              },
+            }
+          );
+        }),
+        (_.rectToClientRect = _),
+        (_.shift = function (_) {
+          return (
+            _ === void 0 && (_ = {}),
+            {
+              name: `shift`,
+              options: _,
+              async _(_) {
+                let { _: _, _: _, placement: _, platform: _ } = _,
+                  {
+                    mainAxis: _ = !0,
+                    crossAxis: _ = !1,
+                    limiter: _ = {
+                      _: (_) => {
+                        let { _: _, _: _ } = _;
+                        return {
+                          _: _,
+                          _: _,
+                        };
+                      },
+                    },
+                    ..._
+                  } = _(_, _),
+                  _ = {
+                    _: _,
+                    _: _,
+                  },
+                  _ = await _.detectOverflow(_, _),
+                  _ = _(_),
+                  _ = _(_),
+                  _ = _[_],
+                  _ = _[_],
+                  _ = (_, _) =>
+                    _(
+                      _ + _[_ === `y` ? `top` : `left`],
+                      _,
+                      _ - _[_ === `y` ? `bottom` : `right`],
+                    );
+                _ && (_ = _(_, _)), _ && (_ = _(_, _));
+                let _ = _._({
+                  ..._,
+                  [_]: _,
+                  [_]: _,
+                });
+                return {
+                  ..._,
+                  data: {
+                    _: _._ - _,
+                    _: _._ - _,
+                    enabled: {
+                      [_]: _,
+                      [_]: _,
+                    },
+                  },
+                };
+              },
+            }
+          );
+        }),
+        (_.size = function (_) {
+          return (
+            _ === void 0 && (_ = {}),
+            {
+              name: `size`,
+              options: _,
+              async _(_) {
+                let { placement: _, rects: _, platform: _, elements: _ } = _,
+                  { apply: _ = () => {}, ..._ } = _(_, _),
+                  _ = await _.detectOverflow(_, _),
+                  _ = _(_),
+                  _ = _(_),
+                  _ = _(_) === `y`,
+                  { width: _, height: _ } = _.floating,
+                  _,
+                  _;
+                _ === `top` || _ === `bottom`
+                  ? ((_ = _),
+                    (_ =
+                      _ ===
+                      ((await (_.isRTL == null ? void 0 : _.isRTL(_.floating)))
+                        ? `start`
+                        : `end`)
+                        ? `left`
+                        : `right`))
+                  : ((_ = _), (_ = _ === `end` ? `top` : `bottom`));
+                let _ = _ - _.top - _.bottom,
+                  _ = _ - _.left - _.right,
+                  _ = _(_ - _[_], _),
+                  _ = _(_ - _[_], _),
+                  _ = _.middlewareData.shift,
+                  _ = !_,
+                  _ = _,
+                  _ = _;
+                _ != null && _.enabled._ && (_ = _),
+                  _ != null && _.enabled._ && (_ = _),
+                  _ &&
+                    !_ &&
+                    (_
+                      ? (_ = _ - 2 * _(_.left, _.right))
+                      : (_ = _ - 2 * _(_.top, _.bottom))),
+                  await _({
+                    ..._,
+                    availableWidth: _,
+                    availableHeight: _,
+                  });
+                let _ = await _.getDimensions(_.floating);
+                return _ !== _.width || _ !== _.height
+                  ? {
+                      reset: {
+                        rects: !0,
+                      },
+                    }
+                  : {};
+              },
+            }
+          );
+        });
+    });
+  }),
+  _ = _((_, _) => {
+    (function (_, _) {
+      typeof _ == `object` && _ !== void 0
+        ? _(_, _())
+        : typeof define == `function` && define.amd
+          ? define([`exports`, `@floating-ui/core`], _)
+          : ((_ = typeof globalThis < `u` ? globalThis : _ || self),
+            _((_.FloatingUIDOM = {}), _.FloatingUICore));
+    })(_, function (_, _) {
+      let _ = Math.min,
+        _ = Math.max,
+        _ = Math.round,
+        _ = Math.floor,
+        _ = (_) => ({
+          _: _,
+          _: _,
+        });
+      function _() {
+        return typeof window < `u`;
+      }
+      function _(_) {
+        return _(_) ? (_.nodeName || ``).toLowerCase() : `#document`;
+      }
+      function _(_) {
+        var _;
+        return (
+          (_ == null || (_ = _.ownerDocument) == null
+            ? void 0
+            : _.defaultView) || window
+        );
+      }
+      function _(_) {
+        return ((_(_) ? _.ownerDocument : _.document) || window.document)
+          ?.documentElement;
+      }
+      function _(_) {
+        return _() ? _ instanceof Node || _ instanceof _(_).Node : !1;
+      }
+      function _(_) {
+        return _() ? _ instanceof Element || _ instanceof _(_).Element : !1;
+      }
+      function _(_) {
+        return _()
+          ? _ instanceof HTMLElement || _ instanceof _(_).HTMLElement
+          : !1;
+      }
+      function _(_) {
+        return !_() || typeof ShadowRoot > `u`
+          ? !1
+          : _ instanceof ShadowRoot || _ instanceof _(_).ShadowRoot;
+      }
+      function _(_) {
+        let { overflow: _, overflowX: _, overflowY: _, display: _ } = _(_);
+        return (
+          /auto|scroll|overlay|hidden|clip/.test(_ + _ + _) &&
+          _ !== `inline` &&
+          _ !== `contents`
+        );
+      }
+      function _(_) {
+        return /^(table|td|th)$/.test(_(_));
+      }
+      function _(_) {
+        try {
+          if (_.matches(`:popover-open`)) return !0;
+        } catch {}
+        try {
+          return _.matches(`:modal`);
+        } catch {
+          return !1;
         }
-        function _() {
-          return {
-            queryKey: _(),
-            queryFn: () => _(),
-            staleTime: _,
-            retry: !1,
+      }
+      let _ = /transform|translate|scale|rotate|perspective|filter/,
+        _ = /paint|layout|strict|content/,
+        _ = (_) => !!_ && _ !== `none`,
+        _;
+      function _(_) {
+        let _ = _(_) ? _(_) : _;
+        return (
+          _(_.transform) ||
+          _(_.translate) ||
+          _(_.scale) ||
+          _(_.rotate) ||
+          _(_.perspective) ||
+          (!_() && (_(_.backdropFilter) || _(_.filter))) ||
+          _.test(_.willChange || ``) ||
+          _.test(_.contain || ``)
+        );
+      }
+      function _(_) {
+        let _ = _(_);
+        for (; _(_) && !_(_); ) {
+          if (_(_)) return _;
+          if (_(_)) return null;
+          _ = _(_);
+        }
+        return null;
+      }
+      function _() {
+        return (
+          (_ ??=
+            typeof CSS < `u` &&
+            CSS.supports &&
+            CSS.supports(`-webkit-backdrop-filter`, `none`)),
+          _
+        );
+      }
+      function _(_) {
+        return /^(html|body|#document)$/.test(_(_));
+      }
+      function _(_) {
+        return _(_).getComputedStyle(_);
+      }
+      function _(_) {
+        return _(_)
+          ? {
+              scrollLeft: _.scrollLeft,
+              scrollTop: _.scrollTop,
+            }
+          : {
+              scrollLeft: _.scrollX,
+              scrollTop: _.scrollY,
+            };
+      }
+      function _(_) {
+        if (_(_) === `html`) return _;
+        let _ = _.assignedSlot || _.parentNode || (_(_) && _.host) || _(_);
+        return _(_) ? _.host : _;
+      }
+      function _(_) {
+        let _ = _(_);
+        return _(_) ? (_.ownerDocument || _).body : _(_) && _(_) ? _ : _(_);
+      }
+      function _(_, _, _) {
+        _ === void 0 && (_ = []), _ === void 0 && (_ = !0);
+        let _ = _(_),
+          _ = _ === _.ownerDocument?.body,
+          _ = _(_);
+        if (_) {
+          let _ = _(_);
+          return _.concat(
+            _,
+            _.visualViewport || [],
+            _(_) ? _ : [],
+            _ && _ ? _(_) : [],
+          );
+        }
+        return _.concat(_, _(_, [], _));
+      }
+      function _(_) {
+        return _.parent && Object.getPrototypeOf(_.parent)
+          ? _.frameElement
+          : null;
+      }
+      function _(_) {
+        let _ = _(_),
+          _ = parseFloat(_.width) || 0,
+          _ = parseFloat(_.height) || 0,
+          _ = _(_),
+          _ = _ ? _.offsetWidth : _,
+          _ = _ ? _.offsetHeight : _,
+          _ = _(_) !== _ || _(_) !== _;
+        return (
+          _ && ((_ = _), (_ = _)),
+          {
+            width: _,
+            height: _,
+            _: _,
+          }
+        );
+      }
+      function _(_) {
+        return _(_) ? _ : _.contextElement;
+      }
+      function _(_) {
+        let _ = _(_);
+        if (!_(_)) return _(1);
+        let _ = _.getBoundingClientRect(),
+          { width: _, height: _, _: _ } = _(_),
+          _ = (_ ? _(_.width) : _.width) / _,
+          _ = (_ ? _(_.height) : _.height) / _;
+        return (
+          (!_ || !Number.isFinite(_)) && (_ = 1),
+          (!_ || !Number.isFinite(_)) && (_ = 1),
+          {
+            _: _,
+            _: _,
+          }
+        );
+      }
+      let _ = _(0);
+      function _(_) {
+        let _ = _(_);
+        return !_() || !_.visualViewport
+          ? _
+          : {
+              _: _.visualViewport.offsetLeft,
+              _: _.visualViewport.offsetTop,
+            };
+      }
+      function _(_, _, _) {
+        return _ === void 0 && (_ = !1), !!_ && _ && _ === _(_);
+      }
+      function _(_, _, _, _) {
+        _ === void 0 && (_ = !1), _ === void 0 && (_ = !1);
+        let _ = _.getBoundingClientRect(),
+          _ = _(_),
+          _ = _(1);
+        _ && (_ ? _(_) && (_ = _(_)) : (_ = _(_)));
+        let _ = _(_, _, _) ? _(_) : _(0),
+          _ = (_.left + _._) / _._,
+          _ = (_.top + _._) / _._,
+          _ = _.width / _._,
+          _ = _.height / _._;
+        if (_ && _) {
+          let _ = _(_),
+            _ = _(_) ? _(_) : _,
+            _ = _,
+            _ = _(_);
+          for (; _ && _ !== _; ) {
+            let _ = _(_),
+              _ = _.getBoundingClientRect(),
+              _ = _(_),
+              _ = _.left + (_.clientLeft + parseFloat(_.paddingLeft)) * _._,
+              _ = _.top + (_.clientTop + parseFloat(_.paddingTop)) * _._;
+            (_ *= _._),
+              (_ *= _._),
+              (_ *= _._),
+              (_ *= _._),
+              (_ += _),
+              (_ += _),
+              (_ = _(_)),
+              (_ = _(_));
+          }
+        }
+        return _.rectToClientRect({
+          width: _,
+          height: _,
+          _: _,
+          _: _,
+        });
+      }
+      function _(_, _) {
+        let _ = _(_).scrollLeft;
+        return _ ? _.left + _ : _(_(_)).left + _;
+      }
+      function _(_, _) {
+        let _ = _.getBoundingClientRect();
+        return {
+          _: _.left + _.scrollLeft - _(_, _),
+          _: _.top + _.scrollTop,
+        };
+      }
+      function _(_) {
+        let { elements: _, rect: _, offsetParent: _, strategy: _ } = _,
+          _ = _ === `fixed`,
+          _ = _(_),
+          _ = _ ? _(_.floating) : !1;
+        if (_ === _ || (_ && _)) return _;
+        let _ = {
+            scrollLeft: 0,
+            scrollTop: 0,
+          },
+          _ = _(1),
+          _ = _(0),
+          _ = _(_);
+        if ((_ || !_) && ((_(_) !== `body` || _(_)) && (_ = _(_)), _)) {
+          let _ = _(_);
+          (_ = _(_)), (_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop);
+        }
+        let _ = _ && !_ && !_ ? _(_, _) : _(0);
+        return {
+          width: _.width * _._,
+          height: _.height * _._,
+          _: _._ * _._ - _.scrollLeft * _._ + _._ + _._,
+          _: _._ * _._ - _.scrollTop * _._ + _._ + _._,
+        };
+      }
+      function _(_) {
+        return _.getClientRects ? Array.from(_.getClientRects()) : [];
+      }
+      function _(_) {
+        let _ = _(_),
+          _ = _.ownerDocument.body,
+          _ = _(_.scrollWidth, _.clientWidth, _.scrollWidth, _.clientWidth),
+          _ = _(_.scrollHeight, _.clientHeight, _.scrollHeight, _.clientHeight),
+          _ = -_.scrollLeft + _(_),
+          _ = -_.scrollTop;
+        return (
+          _(_).direction === `rtl` &&
+            (_ += _(_.clientWidth, _.clientWidth) - _),
+          {
+            width: _,
+            height: _,
+            _: _,
+            _: _,
+          }
+        );
+      }
+      function _(_, _, _) {
+        _ === void 0 && (_ = `viewport`);
+        let _ = _ === `layoutViewport`,
+          _ = _(_),
+          _ = _(_),
+          _ = _.visualViewport,
+          _ = _.clientWidth,
+          _ = _.clientHeight,
+          _ = 0,
+          _ = 0;
+        if (_) {
+          let _ = !_() || _ === `fixed`;
+          _
+            ? _ || ((_ = -_.offsetLeft), (_ = -_.offsetTop))
+            : ((_ = _.width),
+              (_ = _.height),
+              _ && ((_ = _.offsetLeft), (_ = _.offsetTop)));
+        }
+        if (_(_) <= 0) {
+          let _ = _.ownerDocument,
+            _ = _.body,
+            _ = getComputedStyle(_),
+            _ =
+              (_.compatMode === `CSS1Compat` &&
+                parseFloat(_.marginLeft) + parseFloat(_.marginRight)) ||
+              0,
+            _ = Math.abs(_.clientWidth - _.clientWidth - _),
+            _ =
+              getComputedStyle(_).scrollbarGutter === `stable both-edges`
+                ? _ / 2
+                : _;
+          _ <= 25 && (_ -= _);
+        }
+        return {
+          width: _,
+          height: _,
+          _: _,
+          _: _,
+        };
+      }
+      function _(_, _) {
+        let _ = _(_, !0, _ === `fixed`),
+          _ = _.top + _.clientTop,
+          _ = _.left + _.clientLeft,
+          _ = _(_);
+        return {
+          width: _.clientWidth * _._,
+          height: _.clientHeight * _._,
+          _: _ * _._,
+          _: _ * _._,
+        };
+      }
+      function _(_, _, _) {
+        let _;
+        if (_ === `viewport` || _ === `layoutViewport`) _ = _(_, _, _);
+        else if (_ === `document`) _ = _(_(_));
+        else if (_(_)) _ = _(_, _);
+        else {
+          let _ = _(_);
+          _ = {
+            _: _._ - _._,
+            _: _._ - _._,
+            width: _.width,
+            height: _.height,
           };
         }
-        function _() {
-          const { data: _ } = (0, _._)(_());
+        return _.rectToClientRect(_);
+      }
+      function _(_, _) {
+        let _ = _.get(_);
+        if (_) return _;
+        let _ = _(_, [], !1).filter((_) => _(_) && _(_) !== `body`),
+          _ = null,
+          _ = _(_).position === `fixed`,
+          _ = _ ? _(_) : _;
+        for (; _(_) && !_(_); ) {
+          let _ = _(_),
+            _ = _(_),
+            _ = _ ? _.position : _ ? `fixed` : ``;
+          !_ && (_ === `fixed` || (_ === `absolute` && _.position === `static`))
+            ? (_ = _.filter((_) => _ !== _))
+            : (_ = _),
+            (_ = _(_));
+        }
+        return _.set(_, _), _;
+      }
+      function _(_) {
+        let { element: _, boundary: _, rootBoundary: _, strategy: _ } = _,
+          _ = [
+            ...(_ === `clippingAncestors`
+              ? _(_)
+                ? []
+                : _(_, this._)
+              : [].concat(_)),
+            _,
+          ],
+          _ = _(_, _[0], _),
+          _ = _.top,
+          _ = _.right,
+          _ = _.bottom,
+          _ = _.left;
+        for (let _ = 1; _ < _.length; _++) {
+          let _ = _(_, _[_], _);
+          (_ = _(_.top, _)),
+            (_ = _(_.right, _)),
+            (_ = _(_.bottom, _)),
+            (_ = _(_.left, _));
+        }
+        return {
+          width: _ - _,
+          height: _ - _,
+          _: _,
+          _: _,
+        };
+      }
+      function _(_) {
+        let { width: _, height: _ } = _(_);
+        return {
+          width: _,
+          height: _,
+        };
+      }
+      function _(_, _, _) {
+        let _ = _(_),
+          _ = _(_),
+          _ = _ === `fixed`,
+          _ = _(_, !0, _, _),
+          _ = {
+            scrollLeft: 0,
+            scrollTop: 0,
+          },
+          _ = _(0);
+        if ((_ || !_) && ((_(_) !== `body` || _(_)) && (_ = _(_)), _)) {
+          let _ = _(_, !0, _, _);
+          (_._ = _._ + _.clientLeft), (_._ = _._ + _.clientTop);
+        }
+        !_ && _ && (_._ = _(_));
+        let _ = _ && !_ && !_ ? _(_, _) : _(0);
+        return {
+          _: _.left + _.scrollLeft - _._ - _._,
+          _: _.top + _.scrollTop - _._ - _._,
+          width: _.width,
+          height: _.height,
+        };
+      }
+      function _(_) {
+        return _(_).position === `static`;
+      }
+      function _(_, _) {
+        if (!_(_) || _(_).position === `fixed`) return null;
+        if (_) return _(_);
+        let _ = _.offsetParent;
+        return _(_) === _ && (_ = _.ownerDocument.body), _;
+      }
+      function _(_, _) {
+        let _ = _(_);
+        if (_(_)) return _;
+        if (!_(_)) {
+          let _ = _(_);
+          for (; _ && !_(_); ) {
+            if (_(_) && !_(_)) return _;
+            _ = _(_);
+          }
           return _;
         }
-        function _(_, _) {
-          switch (_) {
-            case _._:
-              return _?.playable;
-            case _._:
-              return _?.unsupported;
-            default:
-              return _?.verified;
-          }
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { event: _ } = _.context,
-            _ = Number.parseInt((0, _._)(_.args)),
-            _ = _.useMemo(() => {
-              if (_)
-                return _.jsondata.sale_sections?.find(
-                  (_) =>
-                    _.section_type == "vo_internal" &&
-                    (_.internal_section_data?.internal_type ==
-                      "reservation_widget" ||
-                      _.internal_section_data?.internal_type ==
-                        "while_supplies_last"),
-                );
-            }, [_]);
-          if (_ && _) {
-            const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
-              _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
-              _ = (0, _._)(_.args, "out_of_stock_override"),
-              _ = (0, _._)(_.args, "delivery_override"),
-              _ = (0, _._)(_.args, "delivery_override_out_of_stock");
-            return (0, _.jsx)(_, {
-              section: _,
-              reservationPackageID: _,
-              depositPackageID: _,
-              psuLessPackageID: _,
-              strOutOfStockOverride: _,
-              strDeliveryOverride: _ || _,
-              bDeliveryOverrideOnlyIfOutOfStock: !!_,
-              PreviewActions: _.PreviewActions,
-            });
-          }
-          return (0, _.jsx)(_.Fragment, {});
-        }
-        function _(_) {
-          const {
-              reservationPackageID: _,
-              depositPackageID: _,
-              bIsPreview: _,
-              psuLessPackageID: _,
-              strOutOfStockOverride: _,
-              strDeliveryOverride: _,
-              bDeliveryOverrideOnlyIfOutOfStock: _,
-              section: _,
-              PreviewActions: _,
-            } = _,
-            { data: _ } = (0, _._)(_),
-            { data: _ } = (0, _._)(_),
-            _ = (0, _.useMemo)(
-              () => [
-                {
-                  unique_id: "reservation_bbcode_" + _,
-                  reservation_package: _,
-                  deposit_package: _,
-                  localized_reservation_desc: (0, _._)([], _.bP9, null),
-                  localized_out_of_stock_override: (0, _._)(
-                    [_ || null],
-                    _.bP9,
-                    null,
-                  ),
-                  localized_delivery_override_desc: (0, _._)(
-                    [_ || null],
-                    _.bP9,
-                    null,
-                  ),
-                  override_delivery_only_out_of_stock: !!_,
-                  psu_less_package: _,
-                },
-              ],
-              [_, _, _, _, _, _],
-            );
-          if (!_ || (_ && !_))
-            return (0, _.jsx)(_._, {
-              string: (0, _._)("#Loading"),
-              size: "small",
-              position: "center",
-            });
-          const _ = !_._.logged_in || !_.account_restricted_from_purchasing,
-            _ =
-              _.reservation_state == _._.k_EPurchaseReservationState_Reserved
-                ? _
-                : void 0;
-          return (0, _.jsxs)(_._, {
-            children: [
-              _ &&
-                (0, _.jsx)(_.Suspense, {
-                  fallback: null,
-                  children: (0, _.jsx)(_, {
-                    bIsPreview: !!_,
-                    rgReservationDef: _,
-                  }),
-                }),
-              !!_.allow_purchase_in_country &&
-                (0, _.jsxs)("div", {
-                  className: _[0].unique_id,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      reservationDef: _[0],
-                      hardwareDetail: _,
-                      bPSULessModel: !1,
-                      reservedHardwareDetail: _,
-                    }),
-                    _ &&
-                      (0, _.jsx)(_._, {
-                        section: _,
-                        reservationDef: _[0],
-                        hardwareDetail: _,
-                        reservedHardwareDetail: _,
-                      }),
-                    _ &&
-                      _?.allow_purchase_in_country &&
-                      (0, _.jsx)(_._, {
-                        reservationDef: _[0],
-                        hardwareDetail: _,
-                        bPSULessModel: !0,
-                        reservedHardwareDetail: void 0,
-                      }),
-                  ],
-                }),
-            ],
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _(_) {
-          const { appID: _, classOverride: _, styleOverride: _ } = _,
-            [_, _] = (0, _.useState)(!1),
-            _ = (0, _._)("GameHoverFollowButton"),
-            { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
-            _ = (0, _._)(_),
-            { mutateAsync: _ } = (0, _._)(_, !_, void 0),
-            _ = async (_) => {
-              _.preventDefault(),
-                _.stopPropagation(),
-                _._.logged_in
-                  ? (_(!0), await _(), _.token.reason || _(!1))
-                  : _();
-            };
-          return (0, _.jsxs)(_._, {
-            className: (0, _._)(_().FollowButton, _),
-            onClick: _,
-            style: _,
-            children: [
-              _ ? (0, _.jsx)(_.pPV, {}) : (0, _.jsx)(_.c9e, {}),
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().FollowButtonText,
-                  _ && _().FollowLoadingText,
-                  "FollowGameButton",
-                ),
-                children: (0, _._)(
-                  _ ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
-                ),
-              }),
-              _,
-            ],
-          });
-        }
-        function _(_) {
-          const { appid: _, color: _, bgcolor: _ } = _,
-            _ = (0, _._)();
-          return (0, _.jsx)(_, {
-            appID: _,
-            classOverride: (0, _._)(
-              _().FollowGameButtonNotTop,
-              _().BBCodeFollowButton,
-            ),
-            styleOverride: {
-              color: _,
-              backgroundColor: _,
-            },
-          });
-        }
-        function _(_) {
-          const _ = Number(_.args.appid);
-          if (!_) return null;
-          const _ = (0, _._)(_.args.color, "black"),
-            _ = (0, _._)(_.args.bgcolor, "white");
-          return (0, _.jsx)(_, {
-            appid: _,
-            color: _,
-            bgcolor: _,
-          });
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          const _ = Number(_.args.packageid);
-          return _
-            ? (0, _.jsx)(_._, {
-                packageID: _,
-                display_style: (0, _._)(_.args.display),
-              })
-            : null;
-        }
-        function _(_) {
-          const _ = Number(_.args.packageid),
-            _ = Number(_.args.compareid);
-          return !_ || !_
-            ? null
-            : (0, _.jsx)(_._, {
-                packageID: _,
-                compareID: _,
-              });
-        }
-        function _(_) {
-          const _ = _.args[""]?.trim();
-          return _
-            ? (0, _.jsx)("div", {
-                className: _,
-                children: _.children,
-              })
-            : (0, _.jsx)(_.Fragment, {
-                children: _.children,
-              });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { clanAccountID: _, color: _, bgcolor: _ } = _,
-            [_, _] = _.useState(!1);
-          return (0, _.jsx)("div", {
-            className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-            children: (0, _.jsx)(_._, {
-              nCreatorAccountID: _,
-              classOverride: _().FollowGameButtonNotTop,
-              styleOverride: {
-                color: _,
-                backgroundColor: _,
-              },
-              followType: "group",
-            }),
-          });
-        }
-        function _(_) {
-          const { event: _ } = _.context,
-            _ = Number(_.args.groupid) || _?.clanSteamID.GetAccountID();
-          if (!_) return null;
-          const _ = (0, _._)(_.args.color, "black"),
-            _ = (0, _._)(_.args.bgcolor, "white");
-          return (0, _.jsx)(_, {
-            clanAccountID: _,
-            color: _,
-            bgcolor: _,
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { appid: _, color: _, bgcolor: _ } = _,
-            _ = (0, _._)(),
-            _ = (0, _._)(_),
-            _ = (0, _._)(_);
-          return (0, _.jsx)("div", {
-            className: _().WishlistHoverCtn,
-            children: (0, _.jsx)(_._, {
-              snr: _,
-              _: _,
-              classOverride: (0, _._)(
-                _().WishlistButtonNotTop,
-                _().BBCodeWishlistButton,
-                "WishlistButton",
-              ),
-              styleOverride: {
-                color: _,
-                backgroundColor: _,
-              },
-              bShowInGamepadUI: !0,
-            }),
-          });
-        }
-        function _(_) {
-          const _ = Number(_.args.appid);
-          if (!_) return null;
-          const _ = (0, _._)(_.args.color, "black"),
-            _ = (0, _._)(_.args.bgcolor, "white");
-          return (0, _.jsx)(_, {
-            appid: _,
-            color: _,
-            bgcolor: _,
-          });
-        }
-        let _ = null;
-        function _() {
-          return (
-            _ == null &&
-              (_ = new Map([
-                [
-                  "wishlist",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "followgroup",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "classname",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "price",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "pricesavings",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "reservationbutton",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-              ])),
-            _
-          );
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          return _ < 10 ? "0" + _ : _;
-        }
-        function _(_) {
-          const { giveawayid: _ } = _,
-            _ = (0, _._)(_),
-            {
-              bLoadingGiveawayInfo: _,
-              winner_count: _,
-              closed: _,
-              seconds_until_drawing: _,
-            } = _;
-          return _
-            ? null
-            : (0, _.jsxs)("div", {
-                className: _.countdownCtn,
-                children: [
-                  !!_ &&
-                    (0, _.jsx)("div", {
-                      className: _.Closed,
-                      children:
-                        _ > 0
-                          ? (0, _._)("#Giveaway_Closed", (0, _._)(_))
-                          : (0, _._)("#Giveaway_Closed_NoWinnerInfo"),
-                    }),
-                  !_ &&
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        _ <= 0
-                          ? (0, _.jsxs)("div", {
-                              className: _.Throbber,
-                              children: [
-                                (0, _.jsx)(_._, {
-                                  size: "small",
-                                }),
-                                (0, _.jsx)("div", {
-                                  children: (0, _._)("#Giveaway_RandomDraw"),
-                                }),
-                              ],
-                            })
-                          : (0, _.jsxs)("div", {
-                              className: _.CountDownCtn,
-                              children: [
-                                (0, _.jsx)("div", {
-                                  className: _.CountDownTime,
-                                  children:
-                                    _(Math.floor(_ / 60)) + ":" + _(_ % 60),
-                                }),
-                                (0, _.jsxs)("div", {
-                                  className: _.CountDownText,
-                                  children: [
-                                    (0, _._)("#Giveaway_CountDown2"),
-                                    " ",
-                                    (0, _._)("#Giveaway_KeepWatching"),
-                                  ],
-                                }),
-                              ],
-                            }),
-                        _ > 0 &&
-                          (0, _.jsxs)("div", {
-                            className: _.WinnerInfo,
-                            children: [
-                              (0, _.jsx)("div", {
-                                className: _.WinnerCount,
-                                children: (0, _._)(_),
-                              }),
-                              (0, _.jsx)("div", {
-                                className: _.WinnerText,
-                                children: (0, _._)("#Giveaway_Congratulation"),
-                              }),
-                            ],
-                          }),
-                      ],
-                    }),
-                ],
-              });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { eventModel: _, nEventBadgeID: _ } = _,
-            _ = (0, _._)(_);
-          if (_?.level > 0) {
-            let _ = _.level;
-            if (_?.BHasSaleEnabled()) {
-              const _ = _.GetSaleSectionsByType("badge_progress");
-              if (_?.length == 1) {
-                const _ = _[0].badge_progress;
-                if (_?.event_badgeid == _ && _?.granted_by_discovery_queue) {
-                  const _ = _.levels[_.levels.length - 1].level;
-                  return (0, _.jsx)(_, {
-                    eventModel: _,
-                    nBadgeLevel: _,
-                    nMaxLevel: _,
-                  });
-                }
-              }
-            }
-            return (0, _.jsx)("span", {
-              className: "DisplayBadgeProgress",
-              children: (0, _._)(_),
-            });
-          }
-          return null;
-        }
-        function _(_) {
-          const { eventModel: _, nBadgeLevel: _, nMaxLevel: _ } = _,
-            _ = _.useMemo(() => {
-              const _ = _.GetSaleSections().filter(
-                (_) => _.section_type == "discoveryqueue",
-              );
-              return _?.length > 0 ? _[0] : null;
-            }, [_]),
-            { storePageFilter: _, eStoreDiscoveryQueueType: _ } = _.useMemo(
-              () => (0, _._)(_, _),
-              [_, _],
-            ),
-            _ = (0, _._)(_, _),
-            _ = Math.min(_ + _, _);
-          return (0, _.jsx)("span", {
-            className: "DisplayBadgeProgress",
-            children: (0, _._)(_),
-          });
-        }
-        function _(_) {
-          const { event: _ } = _.context,
-            _ = Number.parseInt((0, _._)(_.args, "eventid"));
-          return _._.logged_in && _
-            ? (0, _.jsx)(_, {
-                nEventBadgeID: _,
-                eventModel: _,
-              })
-            : null;
-        }
-        function _(_) {
-          const { nDoorIndex: _, children: _ } = _,
-            _ = (0, _._)(_),
-            _ = (0, _._)(),
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState(!1),
-            { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_._, {
-                disabled: _,
-                onClick: (_) => {
-                  _ ||
-                    (_._.logged_in
-                      ? (_(!0),
-                        _({
-                          iDoorIndex: _,
-                        })
-                          .then((_) => {
-                            _ || _(!0), _(!1);
-                          })
-                          .catch(() => {
-                            _(!0), _(!1);
-                          }))
-                      : _());
-                },
-                children: _
-                  ? (0, _.jsx)("div", {
-                      children: (0, _._)("#GrantAwardError_Busy"),
-                    })
-                  : (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        !!_ &&
-                          (0, _.jsx)(_._, {
-                            size: "small",
-                          }),
-                        !!_ && (0, _.jsx)(_.Jlk, {}),
-                        _,
-                      ],
-                    }),
-              }),
-              _,
-            ],
-          });
-        }
-        function _(_) {
-          const _ = Number.parseInt((0, _._)(_.args)) || 0;
-          return _ >= 0 && _ < 32
-            ? (0, _.jsx)(_, {
-                nDoorIndex: _,
-                children: _.children,
-              })
-            : null;
-        }
-        const _ = (0, _._)(_._);
-        function _(_) {
-          const _ = Number.parseInt((0, _._)(_.args)),
-            { event: _, showErrorInfo: _ } = _.context;
-          if (_) {
-            const _ = _?.jsondata?.sale_sections?.findIndex(
-              (_) => _.unique_id == _,
-            );
-            if (_ >= 0) {
-              const _ = _.GetDayIndexFromEventStart();
-              return (0, _.jsx)(_._, {
-                location: _ ? _._ : _._,
-                children: (0, _.jsx)(_, {
-                  event: _,
-                  section: _.jsondata.sale_sections[_],
-                  activeTab: new _._(null, _),
-                  language: _.language,
-                  nSaleDayIndex: _,
-                  promotionName: "",
-                  appVisibilityTracker: null,
-                  ePreviewMode: _
-                    ? _._.EPreviewMode_Enabled
-                    : _._.EPreviewMode_Disabled,
-                }),
-              });
-            } else if (_)
-              return (0, _.jsxs)("div", {
-                className: _.ErrorDiv,
-                children: ["Error could not find sale section ", _],
-              });
-          }
-          return null;
-        }
-        let _ = null;
-        function _() {
-          return (
-            _ == null &&
-              (_ = new Map([
-                ...Array.from(_().entries()),
-                [
-                  "itemdef",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                    skipInternalNewline: !0,
-                    allowWrapTextForCopying: !0,
-                  },
-                ],
-                [
-                  "followgame",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "deckcompatcount",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "deckcompatuserlibrarycount",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "giveawayinfo",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "eventdoorvisibility",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "badgecurrentlevel",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "optindoorquest",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "localize",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "salesection",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-                [
-                  "reservationbutton",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-              ])),
-            _
-          );
-        }
-        function _(_) {
-          const { event: _ } = _.context,
-            _ = Number.parseInt((0, _._)(_.args, "appid")),
-            _ = Number.parseInt((0, _._)(_.args, "itemdefid")),
-            _ = Number.parseInt((0, _._)(_.args, "maxquantity")),
-            _ = (0, _._)(_.args, "calltoaction");
-          return !(0, _._)(_, _, !1) || !_
-            ? (0, _.jsx)(_._, {
-                size: "small",
-                position: "center",
-                string: (0, _._)("#Loading"),
-              })
-            : (0, _.jsx)(_._, {
-                language: _.language,
-                clanAccountID: _.clanSteamID.GetAccountID(),
-                itemDefSetting: {
-                  nAppID: _,
-                  nItemDefID: _,
-                  max_quantity: _,
-                },
-                strCallToAction: _,
-              });
-        }
-        function _(_) {
-          const _ = _();
-          if (!_)
-            return (0, _.jsx)(_._, {
-              size: "small",
-            });
-          const _ = Number.parseInt((0, _._)(_.args));
-          return (0, _.jsx)("span", {
-            children: (0, _._)(Number(_(_, _))),
-          });
-        }
-        function _(_) {
-          const _ = (0, _._)(_._.accountid, "library");
-          if (!_)
-            return (0, _.jsx)(_._, {
-              size: "small",
-            });
-          const _ = Number.parseInt((0, _._)(_.args));
-          let _ = _.verifiedList?.length || 0;
-          switch (_) {
-            case _._:
-              _ = _.playableList?.length || 0;
-              break;
-            case _._:
-              _ = _.unsupportedList?.length || 0;
-              break;
-            case _._:
-              _ = _.unknownList?.length || 0;
-              break;
-          }
-          return (0, _.jsx)("span", {
-            children: (0, _._)(Number(_)),
-          });
-        }
-        function _(_) {
-          const _ = Number.parseInt((0, _._)(_.args)),
-            _ = "hide" in _.args && !!Number.parseInt((0, _._)(_.args, "hide"));
-          return _ >= 0
-            ? (0, _.jsx)(_, {
-                nDoorIndex: _,
-                bHide: _,
-                children: _.children,
-              })
-            : null;
-        }
-        function _(_) {
-          const { nDoorIndex: _, bHide: _, children: _ } = _,
-            _ = (0, _._)(_);
-          return _ == null
-            ? null
-            : (_ && !_) || (!_ && _)
-              ? (0, _.jsx)(_.Fragment, {
-                  children: _.children,
-                })
-              : null;
-        }
-        function _(_) {
-          return (0, _.jsx)("span", {
-            className: _.LocalizeBlock,
-            children: (0, _._)(
-              _.children,
-              (0, _.jsx)("b", {}),
-              (0, _.jsx)("b", {}),
-              (0, _.jsx)("b", {}),
-              (0, _.jsx)("b", {}),
-            ),
-          });
-        }
-        function _(_) {
-          let _ = (0, _._)(_.args);
-          return _
-            ? (0, _.jsx)(_, {
-                giveawayid: _,
-              })
-            : (0, _.jsx)(_.Fragment, {});
-        }
-        const _ = void 0;
-        function _(_) {
-          return (0, _.jsx)(_, {
-            ..._,
-            PreviewActions: _,
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { bSalePage: _ } = _,
-            [_, _] = _.useState(!1);
-          return (
-            (0, _._)(_, _),
-            _.useEffect(() => {
-              _._.Init(new _._(_._.WEBAPI_BASE_URL)), _._.Init(), _(!0);
-            }, []),
-            _.useEffect(() => {
-              const _ = (0, _._)();
-              _ && _.locale(_);
-            }, []),
-            _
-              ? _
-                ? (0, _.jsx)(_._, {
-                    dictionary: _(),
-                    children: _.children,
-                  })
-                : _.children
-              : null
-          );
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports),
-          __webpack_require__._(module_exports, {
-            default: () => _,
-          });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        class _ extends _.Component {
-          state = {
-            bIsLoading: !0,
-          };
-          componentDidMount() {
-            _._.Get(),
-              this.setState({
-                bIsLoading: !1,
-              });
-          }
-          render() {
-            return this.state.bIsLoading
-              ? null
-              : (0, _.jsx)(_._, {
-                  children: (0, _.jsxs)(_._, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        exact: !0,
-                        path: "/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss",
-                        component: _._,
-                      }),
-                      (0, _.jsx)(_._, {
-                        children: !1,
-                      }),
-                    ],
-                  }),
-                });
-          }
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports),
-          __webpack_require__._(module_exports, {
-            default: () => _,
-          });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        class _ {
-          static s_Singleton;
-          m_rgRSSEnabledClans = [];
-          GetAllRSSEnabledClans() {
-            return this.m_rgRSSEnabledClans;
-          }
-          GetTrustedEnabledClans(_) {
-            return this.m_rgRSSEnabledClans
-              .filter((_) => _.is_trusted_press == _)
-              .map((_) => _.clan_accoundid);
-          }
-          static Get() {
-            return (
-              _.s_Singleton ||
-                ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-              _.s_Singleton
-            );
-          }
-          Init() {
-            let _ = (0, _._)("rssaccountinfo", "application_config");
-            this.ValidateRSSAccountConfig(_) && (this.m_rgRSSEnabledClans = _);
-          }
-          ValidateRSSAccountConfig(_) {
-            const _ = _;
-            return (
-              _ &&
-              Array.isArray(_) &&
-              _.length > 0 &&
-              typeof _[0] == "object" &&
-              typeof _[0].clan_accoundid == "number"
-            );
-          }
-          async LoadKnownAllRSSInfo() {
-            const _ = new Array(),
-              _ = _._.Get();
-            this.m_rgRSSEnabledClans.forEach((_) => {
-              _.BHasClanIDLoaded(_.clan_accoundid) ||
-                _.push(_.QueueCuratorAdminInfoLoad(_.clan_accoundid));
-            }),
-              await Promise.all(_);
-          }
-          ExtractWithoutRSSAutomation() {
-            const _ = [],
-              _ = _._.Get();
-            return (
-              this.m_rgRSSEnabledClans.forEach((_) => {
-                const _ = _.GetRSSAdminForClanAccountID(_.clan_accoundid);
-                _ && !_.BIsAutomationEnabled() && _.push(_.clan_accoundid);
-              }),
-              _
-            );
-          }
-          async HintLoadAccounts() {}
-          async ReindexClanEventsAndReloadAccount(_) {
-            const _ =
-                _._.STORE_BASE_URL + "events_admin/ajaxflushandreindexrss",
-              _ = new FormData();
-            _.set("sessionid", (0, _._)()), _.append("clanids", "" + _);
-            try {
-              if (
-                (
-                  await _().post(_, _, {
-                    withCredentials: !0,
-                  })
-                )?.data?.success == _._
-              )
-                return !0;
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "Failed to ReindexClanEventsAndReloadAccount: " + _.strErrorMsg,
-                _,
-              );
-            }
-            return !1;
-          }
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = (_) => {
-            const [_, _] = (0, _.useState)(!0);
-            if (
-              ((0, _.useEffect)(() => {
-                (async () => (
-                  _._.Init(), await _.Get().HintLoadAccounts(), _(!1)
-                ))();
-              }, []),
-              _)
-            )
-              return (0, _.jsx)(_._, {
-                string: (0, _._)("#Loading"),
-                size: "medium",
-              });
-            const _ = _.Get().GetTrustedEnabledClans(!0),
-              _ = _.Get().GetTrustedEnabledClans(!1);
-            return (0, _.jsx)("div", {
-              children: (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)("h1", {
-                    children: (0, _._)("#RSSModeration_Title"),
-                  }),
-                  (0, _.jsx)(_, {}),
-                  (0, _.jsx)(_, {
-                    rgClanIDs: _.Get()
-                      .GetAllRSSEnabledClans()
-                      .map((_) => _.clan_accoundid),
-                  }),
-                  (0, _.jsx)(_, {
-                    rgClanIDs: _,
-                    strTitle: (0, _._)("#RSSModeration_TrustTitle"),
-                  }),
-                  (0, _.jsx)(_, {
-                    rgClanIDs: _,
-                    strTitle: (0, _._)("#RSSModeration_RestTitle"),
-                  }),
-                ],
-              }),
-            });
+        let _ = _(_, _);
+        for (; _ && _(_) && _(_); ) _ = _(_, _);
+        return _ && _(_) && _(_) && !_(_) ? _ : _ || _(_) || _;
+      }
+      let _ = async function (_) {
+        let _ = this.getOffsetParent || _,
+          _ = this.getDimensions,
+          _ = await _(_.floating);
+        return {
+          reference: _(_.reference, await _(_.floating), _.strategy),
+          floating: {
+            _: 0,
+            _: 0,
+            width: _.width,
+            height: _.height,
           },
-          _ = (0, _._)(_),
-          _ = (0, _._)((_) => {
-            const [_, _] = (0, _.useState)(!1),
-              [_, _] = (0, _.useState)(void 0);
-            return _
-              ? (0, _.jsx)(_._, {
-                  string: (0, _._)("#Loading"),
-                  size: "medium",
-                })
-              : _ !== void 0
-                ? _.length > 0
-                  ? (0, _.jsx)(_, {
-                      rgClanIDs: _,
-                      strTitle: (0, _._)("#RSSModeration_InactiveAutomation"),
-                    })
-                  : (0, _.jsx)("div", {
-                      children: (0, _._)("#RSSModreation_AllAutomationEnabled"),
-                    })
-                : (0, _.jsxs)(_._, {
-                    onClick: async () => {
-                      _(!0),
-                        await _.Get().LoadKnownAllRSSInfo(),
-                        _(_.Get().ExtractWithoutRSSAutomation()),
-                        _(!1);
-                    },
-                    children: [(0, _._)("#RSSModeration_FindInActive"), " "],
-                  });
-          }),
-          _ = (_) => {
-            const { rgClanIDs: _, strTitle: _ } = _,
-              [_, _] = (0, _.useState)(!1);
-            let _ = null;
-            return (
-              _ ||
-                (_ = _.map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      clanAccountID: _,
-                    },
-                    _,
-                  ),
-                )),
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_().SectionContainer),
-                children: [
-                  (0, _.jsxs)("h2", {
-                    className: (0, _._)(_().ModSectionTitle),
-                    onDoubleClick: () => _(!_),
-                    children: [
-                      _,
-                      (0, _.jsx)("span", {
-                        children: "\xA0",
-                      }),
-                      (0, _.jsx)(_._, {
-                        className: _().ResizeButton,
-                        onClick: () => _(!_),
-                        children: _
-                          ? (0, _.jsx)(_.hz4, {})
-                          : (0, _.jsx)(_.Xjb, {}),
-                      }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      onClick: () => _(!1),
-                      children: (0, _._)("#Sale_ShowContents"),
-                    }),
-                  _,
-                ],
-              })
-            );
-          },
-          _ = (0, _._)((_) => {
-            const { clanAccountID: _ } = _;
-            return _._.BHasClanInfoLoadedByAccountID(_) &&
-              _._.Get().BHasClanIDLoaded(_)
-              ? (0, _.jsx)(_, {
-                  clanInfo: _._.GetClanInfoByClanAccountID(_),
-                  rssAdminInfo: _._.Get().GetRSSAdminForClanAccountID(_),
-                })
-              : (0, _.jsx)(_, {
-                  clanAccountID: _,
-                });
-          }),
-          _ = (_) => {
-            const { clanAccountID: _ } = _,
-              _ = "500px",
-              _ = async () => {
-                const _ = _._.InitFromClanID(_);
-                await Promise.all([
-                  _._.LoadClanInfoForClanSteamID(_),
-                  _._.Get().QueueCuratorAdminInfoLoad(_),
-                ]);
-              },
-              _ = (0, _._)(
-                {
-                  onEnter: _,
-                },
-                {
-                  rootMargin: `${_} 0px ${_} 0px`,
-                },
-              );
-            return (0, _.jsx)("div", {
-              ref: _,
-              className: _().TileContainer,
-              children: (0, _.jsxs)("div", {
-                children: [(0, _._)("#Loading"), " - ", _],
-              }),
-            });
-          },
-          _ = (_) => {
-            const { clanInfo: _, rssAdminInfo: _ } = _,
-              [_, _] = (0, _.useState)(!1),
-              _ = _._.STORE_BASE_URL + "newshub/group/" + _.clanAccountID,
-              _ =
-                _._.STORE_BASE_URL +
-                "curator/" +
-                _.clanAccountID +
-                "/admin/manage_rss",
-              _ = _._.COMMUNITY_BASE_URL + "group/" + _.clanAccountID,
-              _ =
-                "https://steamsupport.valvesoftware.com/clan/overview/" +
-                _._.InitFromClanID(_.clanAccountID).ConvertTo64BitString(),
-              _ = _._.Get().GetRSSAdminStats(_.clanAccountID);
-            return (0, _.jsxs)("div", {
-              className: (0, _._)(_().TileContainer),
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().TileSpread),
-                  children: [
-                    (0, _.jsxs)("div", {
-                      children: [
-                        (0, _.jsxs)("div", {
-                          children: [_.group_name, " - ", _.clanAccountID],
-                        }),
-                        (0, _.jsxs)("div", {
-                          children: [
-                            (0, _.jsxs)("div", {
-                              children: [
-                                (0, _._)("#CuratorAdmin_RSSFeed"),
-                                ":",
-                              ],
-                            }),
-                            (0, _.jsx)("a", {
-                              href: _.GetRSSUrl(),
-                              children: _.GetRSSUrl(),
-                            }),
-                          ],
-                        }),
-                        !!_ &&
-                          (0, _.jsxs)("div", {
-                            children: [
-                              (0, _.jsx)("div", {
-                                children: (0, _._)(
-                                  "#RSSModeration_TotalEvents",
-                                  (0, _._)(_.total_event_count),
-                                ),
-                              }),
-                              (0, _.jsx)("div", {
-                                children: (0, _._)(
-                                  "#RSSModeration_RSSEvents",
-                                  (0, _._)(_.rss_event_count),
-                                ),
-                              }),
-                            ],
-                          }),
-                        (0, _.jsx)(_._, {
-                          onClick: () => _(!_),
-                          children: (0, _._)(
-                            _
-                              ? "#Bbcode_Expand_Details_Expanded"
-                              : "#Bbcode_Expand_Details_Collapsed",
-                          ),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)("div", {
-                      children: (0, _.jsxs)("ul", {
-                        children: [
-                          (0, _.jsx)("li", {
-                            children: (0, _.jsx)("a", {
-                              href: _,
-                              children: (0, _._)(
-                                "#EventDisplay_NewsHubSubtitle",
-                              ),
-                            }),
-                          }),
-                          (0, _.jsx)("li", {
-                            children: (0, _.jsx)("a", {
-                              href: _,
-                              children: (0, _._)("#CuratorAdmin_RSSFeed_title"),
-                            }),
-                          }),
-                          (0, _.jsx)("li", {
-                            children: (0, _.jsx)("a", {
-                              href: _,
-                              children: (0, _._)("#RSSModeration_GroupPage"),
-                            }),
-                          }),
-                          (0, _.jsx)("li", {
-                            children: (0, _.jsx)("a", {
-                              href: _,
-                              children: (0, _._)("#RSSModeration_SupportPage"),
-                            }),
-                          }),
-                          (0, _.jsx)("li", {
-                            children: (0, _.jsx)(_, {
-                              rgClanIDs: [_.clanAccountID],
-                            }),
-                          }),
-                        ],
-                      }),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().CreatorCtn,
-                      children: (0, _.jsx)(_._, {
-                        bHideCreatorType: !0,
-                        creatorID: {
-                          name: null,
-                          clan_account_id: _.clanAccountID,
-                          type: "developer",
-                        },
-                        bSmallFormat: !0,
-                      }),
-                    }),
-                  ],
-                }),
-                !!_ &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: _.BHasSavedRSSURL()
-                      ? (0, _.jsx)(_._, {
-                          strRssURL: _.GetRSSUrl(),
-                          admin: _,
-                        })
-                      : (0, _.jsx)("div", {
-                          children: (0, _._)("#RSSModeration_NoRSSFeed"),
-                        }),
-                  }),
-              ],
-            });
-          },
-          _ = (_) => {
-            const _ = (_) => {
-              (0, _._)(
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-                (0, _._)(_),
-              );
-            };
-            return (0, _.jsx)(_._, {
-              toolTipContent: (0, _._)("#RSSModeration_ReindexAndReload_ttip"),
-              children: (0, _.jsx)(_._, {
-                onClick: _,
-                children: (0, _._)("#RSSModeration_ReindexAndReload"),
-              }),
-            });
-          },
-          _ = (_) => {
-            const [_, _] = (0, _.useState)(void 0),
-              [_, _] = (0, _.useState)(!1),
-              [_, _] = (0, _.useState)(void 0),
-              _ = () => _.closeModal && _.closeModal(),
-              _ = async () => {
-                let _ = 0;
-                _(_);
-                for (let _ = 0; _ < _.rgClanIDs.length; ++_) {
-                  let _ = _.rgClanIDs[_];
-                  if (await _.Get().ReindexClanEventsAndReloadAccount(_))
-                    (_ += 1), _(_);
-                  else {
-                    _((0, _._)("#Error_Generic_Label"));
-                    break;
-                  }
-                }
-                _(!0);
-              };
-            return (0, _.jsx)(_._, {
-              onEscKeypress: _,
-              children: (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsxs)(_._, {
-                    children: [
-                      " ",
-                      (0, _._)("#RSSModeration_ReindexAndReload"),
-                      " ",
-                    ],
-                  }),
-                  (0, _.jsxs)(_._, {
-                    children: [
-                      (0, _.jsxs)(_._, {
-                        children: [
-                          _ === void 0
-                            ? (0, _.jsxs)(_.Fragment, {
-                                children: [
-                                  (0, _.jsx)("span", {
-                                    children: (0, _._)(
-                                      "#RSSModeration_Reindex_Verify",
-                                      _.rgClanIDs.length,
-                                    ),
-                                  }),
-                                  (0, _.jsx)(_._, {
-                                    onClick: _,
-                                    children: (0, _._)("#Button_Continue"),
-                                  }),
-                                ],
-                              })
-                            : (0, _.jsxs)(_.Fragment, {
-                                children: [
-                                  (0, _.jsx)("span", {
-                                    children: (0, _._)(
-                                      "#RSSModeration_Reindex_Action",
-                                      _,
-                                      _.rgClanIDs.length,
-                                    ),
-                                  }),
-                                  _
-                                    ? (0, _.jsx)("span", {
-                                        children: (0, _._)(
-                                          "#EventEditor_ImportFromHTML_ConvertFinished",
-                                        ),
-                                      })
-                                    : (0, _.jsx)(_._, {
-                                        size: "small",
-                                        string: (0, _._)("#Updating"),
-                                      }),
-                                ],
-                              }),
-                          !!_ &&
-                            (0, _.jsxs)("span", {
-                              children: [_, " "],
-                            }),
-                        ],
-                      }),
-                      (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_._, {
-                          onClick: _,
-                          children: (0, _._)(
-                            _ ? "#Button_OK" : "#Button_Cancel",
-                          ),
-                        }),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            });
-          };
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        const _ = class _ {
-          static s_Singleton;
-          m_mapEventGIDToSolrData = new Map();
-          m_listEvents = new Array();
-          BHasSolrEvent(_) {
-            return this.m_mapEventGIDToSolrData.has(_);
-          }
-          GetAllSolrEvents() {
-            return this.m_listEvents;
-          }
-          static Get() {
-            return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-          }
-          constructor() {
-            (0, _._)(this);
-          }
-          ClearAllSolrEvents() {
-            (this.m_mapEventGIDToSolrData = new Map()),
-              (this.m_listEvents = new Array());
-          }
-          async LoadPartnerEventForQueryIncremental(
-            _,
-            _ = 0,
-            _ = 10,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-          ) {
-            const _ = await this.GetLatestPartnerEvents(
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-            );
-            let _ = new Array();
-            return (
-              (0, _._)(() => {
-                _.forEach((_) => {
-                  this.m_mapEventGIDToSolrData.has(_.unique_id) ||
-                    (_.push(_),
-                    this.m_mapEventGIDToSolrData.set(_.unique_id, _),
-                    this.m_listEvents.push(_));
-                });
-              }),
-              _
-            );
-          }
-          async GetLatestPartnerEvents(
-            _,
-            _ = 0,
-            _ = 10,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-          ) {
-            const _ =
-                _._.STORE_BASE_URL + "events_admin/ajaxgetlatestpartnerevents",
-              _ = {
-                page: _,
-                count: _,
-                date: _,
-                appids: _ === void 0 ? void 0 : _.join(","),
-                required_tags: _ === void 0 ? void 0 : _.join(","),
-                exclude_tags: _ === void 0 ? void 0 : _.join(","),
-                eventtypefilter: _ === void 0 ? void 0 : _.join(","),
-                orderByVisibility: _ || void 0,
-                creator_home_clan_id: _ === void 0 ? void 0 : _.join(","),
-                showUnpublished: _ === void 0 ? void 0 : _,
-                sale_only: _ === void 0 ? void 0 : _,
-                term: _ === void 0 ? void 0 : _,
-              },
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-                cancelToken: _ ? _.token : void 0,
-              });
-            return _.data ? _.data.docs : [];
-          }
         };
-        _([_._], _.prototype, "m_mapEventGIDToSolrData", 2),
-          _([_._], _.prototype, "m_listEvents", 2),
-          _([_._], _.prototype, "ClearAllSolrEvents", 1);
-        let _ = _;
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_backfill = void 0;
-          m_mapEventGIDProcessed = new Map();
-          m_vecEventGID = new Array();
-          m_bBackfillInProgress = !1;
-          m_nProcessed = 0;
-          m_nSuccesses = 0;
-          m_nFailures = 0;
-          m_nWarning = 0;
-          m_nSkipped = 0;
-          GetBackfill() {
-            return this.m_backfill;
-          }
-          SetBackfill(_) {
-            this.m_backfill = _;
-          }
-          StartBackfill(_) {
-            (this.m_backfill = _), (this.m_bBackfillInProgress = !0);
-          }
-          CompleteBackfill(_) {
-            (this.m_backfill = void 0), (this.m_bBackfillInProgress = !1);
-          }
-          BIsBackkFillInProgress() {
-            return this.m_bBackfillInProgress;
-          }
-          GetEventBackfillProgress() {
-            return this.m_mapEventGIDProcessed;
-          }
-          CreateOrGetBackfillProgess(_) {
-            return (
-              this.m_mapEventGIDProcessed.has(_) ||
-                (this.m_mapEventGIDProcessed.set(_, {
-                  bProcessing: !1,
-                }),
-                this.m_vecEventGID.push(_)),
-              this.m_mapEventGIDProcessed.get(_)
-            );
-          }
-          BHasProgress(_) {
-            return this.m_mapEventGIDProcessed.has(_);
-          }
-          GetBackfillGIDs() {
-            return this.m_vecEventGID;
-          }
-          CloseProgress(_, _) {
-            (this.m_nProcessed += 1),
-              _.bAlreadyProcessed || _.bSkipped
-                ? (this.m_nSkipped += 1)
-                : _.bSucceeded
-                  ? (this.m_nSuccesses += 1)
-                  : _.bFailed && (this.m_nFailures += 1),
-              _.bWarning && (this.m_nWarning += 1),
-              this.m_mapEventGIDProcessed.set(_, _);
-          }
+      };
+      function _(_) {
+        return _(_).direction === `rtl`;
+      }
+      let _ = {
+        convertOffsetParentRelativeRectToViewportRelativeRect: _,
+        getDocumentElement: _,
+        getClippingRect: _,
+        getOffsetParent: _,
+        getElementRects: _,
+        getClientRects: _,
+        getDimensions: _,
+        getScale: _,
+        isElement: _,
+        isRTL: _,
+      };
+      function _(_, _) {
+        return (
+          _._ === _._ &&
+          _._ === _._ &&
+          _.width === _.width &&
+          _.height === _.height
+        );
+      }
+      function _(_, _, _) {
+        let _ = null,
+          _,
+          _ = _(_);
+        function _() {
+          var _;
+          clearTimeout(_), (_ = _) == null || _.disconnect(), (_ = null);
         }
-        _([_._], _.prototype, "m_backfill", 2),
-          _([_._], _.prototype, "m_mapEventGIDProcessed", 2),
-          _([_._], _.prototype, "m_bBackfillInProgress", 2),
-          _([_._], _.prototype, "m_nProcessed", 2),
-          _([_._], _.prototype, "m_nSuccesses", 2),
-          _([_._], _.prototype, "m_nFailures", 2),
-          _([_._], _.prototype, "m_nWarning", 2),
-          _([_._], _.prototype, "m_nSkipped", 2),
-          _([_._], _.prototype, "StartBackfill", 1),
-          _([_._], _.prototype, "CompleteBackfill", 1),
-          _([_._], _.prototype, "CloseProgress", 1);
-        const _ = new _();
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        const _ = 25,
-          _ = 5e3;
-        let _ = class extends _.Component {
-          m_cancelSignal = _().CancelToken.source();
-          m_nImageID = 0;
-          m_mapArtworkResizeSuccess = new Map();
-          state = {
-            eBackfillState: void 0,
-          };
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "EventBackfillLanding component unmounted",
-            );
-          }
-          OnArtworkResizeBackfill() {
-            this.state.eBackfillState == null &&
-              this.setState(
-                {
-                  eBackfillState: "started",
-                },
-                this.BeginArtworkResize,
-              );
-          }
-          BeginArtworkResize() {
-            this.m_mapArtworkResizeSuccess.set("capsule", 0),
-              this.m_mapArtworkResizeSuccess.set("spotlight", 0),
-              this.m_mapArtworkResizeSuccess.set("background", 0),
-              this.RunArtworkResizeBackfill()
-                .then(() =>
-                  this.setState({
-                    eBackfillState: "success",
-                  }),
-                )
-                .catch((_) => {
-                  let _ = (0, _._)(_);
-                  console.error(
-                    "EventBackfillLanding: error " + _.strErrorMsg,
-                    _,
-                  ),
-                    this.setState({
-                      eBackfillState: "error",
-                    });
-                });
-          }
-          async GetImageInfo(_, _, _ = "") {
-            const _ = (0, _._)(_),
-              _ = _._.GetHashFromHashAndExt(_) + _;
-            return _._.AsyncGetImageResolution(
-              _,
-              _,
-              _,
-              this.m_cancelSignal,
-              !0,
-            );
-          }
-          HandleErrorFatal(_, _, _, _) {
-            let _ = (0, _._)(_),
-              _ =
-                "EventBackfillLanding: " +
-                _ +
-                " on GID " +
-                _ +
-                " : " +
-                _.strErrorMsg;
-            console.error(_, _),
+        function _(_, _) {
+          _ === void 0 && (_ = !1), _ === void 0 && (_ = 1), _();
+          let _ = _.getBoundingClientRect(),
+            { left: _, top: _, width: _, height: _ } = _;
+          if ((_ || _(), !_ || !_)) return;
+          let _ = _(_),
+            _ = _(_.clientWidth - (_ + _)),
+            _ = _(_.clientHeight - (_ + _)),
+            _ = _(_),
+            _ = {
+              rootMargin: -_ + `px ` + -_ + `px ` + -_ + `px ` + -_ + `px`,
+              threshold: _(0, _(1, _)) || 1,
+            },
+            _ = !0;
+          function _(_) {
+            let _ = _[0].intersectionRatio;
+            if (!_(_, _.getBoundingClientRect())) return _();
+            if (_ !== _) {
+              if (!_) return _();
               _
-                ? ((_.bFailed = !0), (_.strMessage = _), _.CloseProgress(_, _))
-                : _.CompleteBackfill("resize_image");
+                ? _(!1, _)
+                : (_ = setTimeout(() => {
+                    _(!1, 1e-7);
+                  }, 1e3));
+            }
+            _ = !1;
           }
-          async HandleResizeForImageType(_, _, _, _, _) {
-            for (let _ = _.Bhc; _ < _.length && _ < _.bP9; ++_)
-              if (_[_] && _[_].length > 0) {
-                let _ = _[_],
-                  _ = (0, _._)(_);
-                const _ = new _._(_.clan_steamid);
-                if (_) {
-                  let _ = await this.GetImageInfo(_, _).catch(
-                    (_) => (
-                      this.HandleErrorFatal(
-                        null,
-                        _,
-                        "GetImageInfo Original",
-                        _,
-                      ),
+          try {
+            _ = new IntersectionObserver(_, {
+              ..._,
+              root: _.ownerDocument,
+            });
+          } catch {
+            _ = new IntersectionObserver(_, _);
+          }
+          _.observe(_);
+        }
+        let _ = _(_),
+          _ = () => _(_);
+        return (
+          _.addEventListener(`resize`, _),
+          _(!0),
+          () => {
+            _.removeEventListener(`resize`, _), _();
+          }
+        );
+      }
+      function _(_, _, _, _) {
+        _ === void 0 && (_ = {});
+        let {
+            ancestorScroll: _ = !0,
+            ancestorResize: _ = !0,
+            elementResize: _ = typeof ResizeObserver == `function`,
+            layoutShift: _ = typeof IntersectionObserver == `function`,
+            animationFrame: _ = !1,
+          } = _,
+          _ = _(_),
+          _ = _ || _ ? [...(_ ? _(_) : []), ...(_ ? _(_) : [])] : [];
+        _.forEach((_) => {
+          _ && _.addEventListener(`scroll`, _),
+            _ && _.addEventListener(`resize`, _);
+        });
+        let _ = _ && _ ? _(_, _, _) : null,
+          _ = -1,
+          _ = null;
+        _ &&
+          ((_ = new ResizeObserver((_) => {
+            let [_] = _;
+            _ &&
+              _.target === _ &&
+              _ &&
+              _ &&
+              (_.unobserve(_),
+              cancelAnimationFrame(_),
+              (_ = requestAnimationFrame(() => {
+                var _;
+                (_ = _) == null || _.observe(_);
+              }))),
+              _();
+          })),
+          _ && !_ && _.observe(_),
+          _ && _.observe(_));
+        let _,
+          _ = _ ? _(_) : null;
+        _ && _();
+        function _() {
+          let _ = _(_);
+          _ && !_(_, _) && _(), (_ = _), (_ = requestAnimationFrame(_));
+        }
+        return (
+          _(),
+          () => {
+            var _;
+            _.forEach((_) => {
+              _ && _.removeEventListener(`scroll`, _),
+                _ && _.removeEventListener(`resize`, _);
+            }),
+              _?.(),
+              (_ = _) == null || _.disconnect(),
+              (_ = null),
+              _ && cancelAnimationFrame(_);
+          }
+        );
+      }
+      let _ = _.detectOverflow,
+        _ = _.offset,
+        _ = _.autoPlacement,
+        _ = _.shift,
+        _ = _.flip,
+        _ = _.size,
+        _ = _.hide,
+        _ = _.arrow,
+        _ = _.inline,
+        _ = _.limitShift;
+      (_.arrow = _),
+        (_.autoPlacement = _),
+        (_.autoUpdate = _),
+        (_.computePosition = (_, _, _) => {
+          let _ = new Map(),
+            _ = _ ?? {},
+            _ = {
+              ..._,
+              ..._.platform,
+              _: _,
+            };
+          return _.computePosition(_, _, {
+            ..._,
+            platform: _,
+          });
+        }),
+        (_.detectOverflow = _),
+        (_.flip = _),
+        (_.getOverflowAncestors = _),
+        (_.hide = _),
+        (_.inline = _),
+        (_.limitShift = _),
+        (_.offset = _),
+        (_.platform = _),
+        (_.shift = _),
+        (_.size = _);
+    });
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    }),
+      (_.default = _().useLayoutEffect);
+  }),
+  _ = _((_) => {
+    var _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _();
+    function _(_) {
+      return _ && _.__esModule
+        ? _
+        : {
+            default: _,
+          };
+    }
+    var _ = _(_),
+      _ = [
+        `className`,
+        `clearValue`,
+        `cx`,
+        `getStyles`,
+        `getClassNames`,
+        `getValue`,
+        `hasValue`,
+        `isMulti`,
+        `isRtl`,
+        `options`,
+        `selectOption`,
+        `selectProps`,
+        `setValue`,
+        `theme`,
+      ],
+      _ = function () {};
+    function _(_, _) {
+      return _ ? (_[0] === `-` ? _ + _ : _ + `__` + _) : _;
+    }
+    function _(_, _) {
+      var _ = [...arguments].slice(2),
+        _ = [].concat(_);
+      if (_ && _)
+        for (var _ in _) _.hasOwnProperty(_) && _[_] && _.push(`${_(_, _)}`);
+      return _.filter(function (_) {
+        return _;
+      })
+        .map(function (_) {
+          return String(_).trim();
+        })
+        .join(` `);
+    }
+    var _ = function (_) {
+        return _(_)
+          ? _.filter(Boolean)
+          : _(_) === `object` && _ !== null
+            ? [_]
+            : [];
+      },
+      _ = function (_) {
+        return (
+          _.className,
+          _.clearValue,
+          _._,
+          _.getStyles,
+          _.getClassNames,
+          _.getValue,
+          _.hasValue,
+          _.isMulti,
+          _.isRtl,
+          _.options,
+          _.selectOption,
+          _.selectProps,
+          _.setValue,
+          _.theme,
+          _({}, _(_, _))
+        );
+      },
+      _ = function (_, _, _) {
+        var _ = _._,
+          _ = _.getStyles,
+          _ = _.getClassNames,
+          _ = _.className;
+        return {
+          css: _(_, _),
+          className: _(_ ?? {}, _(_, _), _),
+        };
+      };
+    function _(_, _, _) {
+      if (_) {
+        var _ = _(_, _);
+        if (typeof _ == `string`) return _;
+      }
+      return _;
+    }
+    function _(_) {
+      return [document.documentElement, document.body, window].indexOf(_) > -1;
+    }
+    function _(_) {
+      return _(_) ? window.innerHeight : _.clientHeight;
+    }
+    function _(_) {
+      return _(_) ? window.pageYOffset : _.scrollTop;
+    }
+    function _(_, _) {
+      if (_(_)) {
+        window.scrollTo(0, _);
+        return;
+      }
+      _.scrollTop = _;
+    }
+    function _(_) {
+      var _ = getComputedStyle(_),
+        _ = _.position === `absolute`,
+        _ = /(auto|scroll)/;
+      if (_.position === `fixed`) return document.documentElement;
+      for (var _ = _; (_ = _.parentElement); )
+        if (
+          ((_ = getComputedStyle(_)),
+          !(_ && _.position === `static`) &&
+            _.test(_.overflow + _.overflowY + _.overflowX))
+        )
+          return _;
+      return document.documentElement;
+    }
+    function _(_, _, _, _) {
+      return _ * ((_ = _ / _ - 1) * _ * _ + 1) + _;
+    }
+    function _(_, _) {
+      var _ =
+          arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 200,
+        _ = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : _,
+        _ = _(_),
+        _ = _ - _,
+        _ = 10,
+        _ = 0;
+      function _() {
+        (_ += _),
+          _(_, _(_, _, _, _)),
+          _ < _ ? window.requestAnimationFrame(_) : _(_);
+      }
+      _();
+    }
+    function _(_, _) {
+      var _ = _.getBoundingClientRect(),
+        _ = _.getBoundingClientRect(),
+        _ = _.offsetHeight / 3;
+      _.bottom + _ > _.bottom
+        ? _(
+            _,
+            Math.min(
+              _.offsetTop + _.clientHeight - _.offsetHeight + _,
+              _.scrollHeight,
+            ),
+          )
+        : _.top - _ < _.top && _(_, Math.max(_.offsetTop - _, 0));
+    }
+    function _(_) {
+      var _ = _.getBoundingClientRect();
+      return {
+        bottom: _.bottom,
+        height: _.height,
+        left: _.left,
+        right: _.right,
+        top: _.top,
+        width: _.width,
+      };
+    }
+    function _() {
+      try {
+        return document.createEvent(`TouchEvent`), !0;
+      } catch {
+        return !1;
+      }
+    }
+    function _() {
+      try {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent,
+        );
+      } catch {
+        return !1;
+      }
+    }
+    var _ = !1,
+      _ = {
+        get passive() {
+          return (_ = !0);
+        },
+      },
+      _ = typeof window < `u` ? window : {};
+    _.addEventListener &&
+      _.removeEventListener &&
+      (_.addEventListener(`p`, _, _), _.removeEventListener(`p`, _, !1));
+    var _ = _;
+    function _(_) {
+      return _ != null;
+    }
+    function _(_) {
+      return Array.isArray(_);
+    }
+    function _(_, _, _) {
+      return _ ? _ : _;
+    }
+    function _(_) {
+      return _;
+    }
+    function _(_) {
+      return _;
+    }
+    var _ = function (_) {
+        var _ = [...arguments].slice(1);
+        return Object.entries(_)
+          .filter(function (_) {
+            var _ = _(_, 1)[0];
+            return !_.includes(_);
+          })
+          .reduce(function (_, _) {
+            var _ = _(_, 2),
+              _ = _[0];
+            return (_[_] = _[1]), _;
+          }, {});
+      },
+      _ = [`children`, `innerProps`],
+      _ = [`children`, `innerProps`];
+    function _(_) {
+      var _ = _.maxHeight,
+        _ = _.menuEl,
+        _ = _.minHeight,
+        _ = _.placement,
+        _ = _.shouldScroll,
+        _ = _.isFixedPosition,
+        _ = _.controlHeight,
+        _ = _(_),
+        _ = {
+          placement: `bottom`,
+          maxHeight: _,
+        };
+      if (!_ || !_.offsetParent) return _;
+      var _ = _.getBoundingClientRect().height,
+        _ = _.getBoundingClientRect(),
+        _ = _.bottom,
+        _ = _.height,
+        _ = _.top,
+        _ = _.offsetParent.getBoundingClientRect().top,
+        _ = _ ? window.innerHeight : _(_),
+        _ = _(_),
+        _ = parseInt(getComputedStyle(_).marginBottom, 10),
+        _ = parseInt(getComputedStyle(_).marginTop, 10),
+        _ = _ - _,
+        _ = _ - _,
+        _ = _ + _,
+        _ = _ - _ - _,
+        _ = _ - _ + _ + _,
+        _ = _ + _ - _,
+        _ = 160;
+      switch (_) {
+        case `auto`:
+        case `bottom`:
+          if (_ >= _)
+            return {
+              placement: `bottom`,
+              maxHeight: _,
+            };
+          if (_ >= _ && !_)
+            return (
+              _ && _(_, _, _),
+              {
+                placement: `bottom`,
+                maxHeight: _,
+              }
+            );
+          if ((!_ && _ >= _) || (_ && _ >= _))
+            return (
+              _ && _(_, _, _),
+              {
+                placement: `bottom`,
+                maxHeight: _ ? _ - _ : _ - _,
+              }
+            );
+          if (_ === `auto` || _) {
+            var _ = _,
+              _ = _ ? _ : _;
+            return (
+              _ >= _ && (_ = Math.min(_ - _ - _, _)),
+              {
+                placement: `top`,
+                maxHeight: _,
+              }
+            );
+          }
+          if (_ === `bottom`)
+            return (
+              _ && _(_, _),
+              {
+                placement: `bottom`,
+                maxHeight: _,
+              }
+            );
+          break;
+        case `top`:
+          if (_ >= _)
+            return {
+              placement: `top`,
+              maxHeight: _,
+            };
+          if (_ >= _ && !_)
+            return (
+              _ && _(_, _, _),
+              {
+                placement: `top`,
+                maxHeight: _,
+              }
+            );
+          if ((!_ && _ >= _) || (_ && _ >= _)) {
+            var _ = _;
+            return (
+              ((!_ && _ >= _) || (_ && _ >= _)) && (_ = _ ? _ - _ : _ - _),
+              _ && _(_, _, _),
+              {
+                placement: `top`,
+                maxHeight: _,
+              }
+            );
+          }
+          return {
+            placement: `bottom`,
+            maxHeight: _,
+          };
+        default:
+          throw Error(`Invalid placement provided "${_}".`);
+      }
+      return _;
+    }
+    function _(_) {
+      return _
+        ? {
+            bottom: `top`,
+            top: `bottom`,
+          }[_]
+        : `bottom`;
+    }
+    var _ = function (_) {
+        return _ === `auto` ? `bottom` : _;
+      },
+      _ = function (_, _) {
+        var _,
+          _ = _.placement,
+          _ = _.theme,
+          _ = _.borderRadius,
+          _ = _.spacing,
+          _ = _.colors;
+        return _(
+          ((_ = {
+            label: `menu`,
+          }),
+          _(_, _(_), `100%`),
+          _(_, `position`, `absolute`),
+          _(_, `width`, `100%`),
+          _(_, `zIndex`, 1),
+          _),
+          _
+            ? {}
+            : {
+                backgroundColor: _.neutral0,
+                borderRadius: _,
+                boxShadow: `0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1)`,
+                marginBottom: _.menuGutter,
+                marginTop: _.menuGutter,
+              },
+        );
+      },
+      _ = _.createContext(null),
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.minMenuHeight,
+          _ = _.maxMenuHeight,
+          _ = _.menuPlacement,
+          _ = _.menuPosition,
+          _ = _.menuShouldScrollIntoView,
+          _ = _.theme,
+          _ = (_.useContext(_) || {}).setPortalPlacement,
+          _ = _.useRef(null),
+          _ = _(_.useState(_), 2),
+          _ = _[0],
+          _ = _[1],
+          _ = _(_.useState(null), 2),
+          _ = _[0],
+          _ = _[1],
+          _ = _.spacing.controlHeight;
+        return (
+          _.default(
+            function () {
+              var _ = _.current;
+              if (_) {
+                var _ = _ === `fixed`,
+                  _ = _({
+                    maxHeight: _,
+                    menuEl: _,
+                    minHeight: _,
+                    placement: _,
+                    shouldScroll: _ && !_,
+                    isFixedPosition: _,
+                    controlHeight: _,
+                  });
+                _(_.maxHeight), _(_.placement), _?.(_.placement);
+              }
+            },
+            [_, _, _, _, _, _, _],
+          ),
+          _({
+            ref: _,
+            placerProps: _(
+              _({}, _),
+              {},
+              {
+                placement: _ || _(_),
+                maxHeight: _,
+              },
+            ),
+          })
+        );
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.innerRef,
+          _ = _.innerProps;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `menu`, {
+              menu: !0,
+            }),
+            {
+              ref: _,
+            },
+            _,
+          ),
+          _,
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.maxHeight,
+          _ = _.theme.spacing.baseUnit;
+        return _(
+          {
+            maxHeight: _,
+            overflowY: `auto`,
+            position: `relative`,
+            WebkitOverflowScrolling: `touch`,
+          },
+          _
+            ? {}
+            : {
+                paddingBottom: _,
+                paddingTop: _,
+              },
+        );
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.innerProps,
+          _ = _.innerRef,
+          _ = _.isMulti;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `menuList`, {
+              "menu-list": !0,
+              "menu-list--is-multi": _,
+            }),
+            {
+              ref: _,
+            },
+            _,
+          ),
+          _,
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.theme,
+          _ = _.spacing.baseUnit,
+          _ = _.colors;
+        return _(
+          {
+            textAlign: `center`,
+          },
+          _
+            ? {}
+            : {
+                color: _.neutral40,
+                padding: `${_ * 2}px ${_ * 3}px`,
+              },
+        );
+      },
+      _ = _,
+      _ = _,
+      _ = function (_) {
+        var _ = _.children,
+          _ = _ === void 0 ? `No options` : _,
+          _ = _.innerProps,
+          _ = _(_, _);
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(
+              _(
+                _({}, _),
+                {},
+                {
+                  children: _,
+                  innerProps: _,
+                },
+              ),
+              `noOptionsMessage`,
+              {
+                "menu-notice": !0,
+                "menu-notice--no-options": !0,
+              },
+            ),
+            _,
+          ),
+          _,
+        );
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _ === void 0 ? `Loading...` : _,
+          _ = _.innerProps,
+          _ = _(_, _);
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(
+              _(
+                _({}, _),
+                {},
+                {
+                  children: _,
+                  innerProps: _,
+                },
+              ),
+              `loadingMessage`,
+              {
+                "menu-notice": !0,
+                "menu-notice--loading": !0,
+              },
+            ),
+            _,
+          ),
+          _,
+        );
+      },
+      _ = function (_) {
+        var _ = _.rect,
+          _ = _.offset,
+          _ = _.position;
+        return {
+          left: _.left,
+          position: _,
+          top: _,
+          width: _.width,
+          zIndex: 1,
+        };
+      },
+      _ = function (_) {
+        var _ = _.appendTo,
+          _ = _.children,
+          _ = _.controlElement,
+          _ = _.innerProps,
+          _ = _.menuPlacement,
+          _ = _.menuPosition,
+          _ = _.useRef(null),
+          _ = _.useRef(null),
+          _ = _(_.useState(_(_)), 2),
+          _ = _[0],
+          _ = _[1],
+          _ = _.useMemo(function () {
+            return {
+              setPortalPlacement: _,
+            };
+          }, []),
+          _ = _(_.useState(null), 2),
+          _ = _[0],
+          _ = _[1],
+          _ = _.useCallback(
+            function () {
+              if (_) {
+                var _ = _(_),
+                  _ = _ === `fixed` ? 0 : window.pageYOffset,
+                  _ = _[_] + _;
+                (_ !== _?.offset ||
+                  _.left !== _?.rect.left ||
+                  _.width !== _?.rect.width) &&
+                  _({
+                    offset: _,
+                    rect: _,
+                  });
+              }
+            },
+            [_, _, _, _?.offset, _?.rect.left, _?.rect.width],
+          );
+        _.default(
+          function () {
+            _();
+          },
+          [_],
+        );
+        var _ = _.useCallback(
+          function () {
+            typeof _.current == `function` && (_.current(), (_.current = null)),
+              _ &&
+                _.current &&
+                (_.current = _.autoUpdate(_, _.current, _, {
+                  elementResize: `ResizeObserver` in window,
+                }));
+          },
+          [_, _],
+        );
+        _.default(
+          function () {
+            _();
+          },
+          [_],
+        );
+        var _ = _.useCallback(
+          function (_) {
+            (_.current = _), _();
+          },
+          [_],
+        );
+        if ((!_ && _ !== `fixed`) || !_) return null;
+        var _ = _.jsx(
+          `div`,
+          _(
+            {
+              ref: _,
+            },
+            _(
+              _(
+                _({}, _),
+                {},
+                {
+                  offset: _.offset,
+                  position: _,
+                  rect: _.rect,
+                },
+              ),
+              `menuPortal`,
+              {
+                "menu-portal": !0,
+              },
+            ),
+            _,
+          ),
+          _,
+        );
+        return _.jsx(
+          _.Provider,
+          {
+            value: _,
+          },
+          _ ? _.createPortal(_, _) : _,
+        );
+      },
+      _ = function (_) {
+        var _ = _.isDisabled;
+        return {
+          label: `container`,
+          direction: _.isRtl ? `rtl` : void 0,
+          pointerEvents: _ ? `none` : void 0,
+          position: `relative`,
+        };
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.innerProps,
+          _ = _.isDisabled,
+          _ = _.isRtl;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `container`, {
+              "--is-disabled": _,
+              "--is-rtl": _,
+            }),
+            _,
+          ),
+          _,
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.theme.spacing,
+          _ = _.isMulti,
+          _ = _.hasValue,
+          _ = _.selectProps.controlShouldRenderValue;
+        return _(
+          {
+            alignItems: `center`,
+            display: _ && _ && _ ? `flex` : `grid`,
+            flex: 1,
+            flexWrap: `wrap`,
+            WebkitOverflowScrolling: `touch`,
+            position: `relative`,
+            overflow: `hidden`,
+          },
+          _
+            ? {}
+            : {
+                padding: `${_.baseUnit / 2}px ${_.baseUnit * 2}px`,
+              },
+        );
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.innerProps,
+          _ = _.isMulti,
+          _ = _.hasValue;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `valueContainer`, {
+              "value-container": !0,
+              "value-container--is-multi": _,
+              "value-container--has-value": _,
+            }),
+            _,
+          ),
+          _,
+        );
+      },
+      _ = function () {
+        return {
+          alignItems: `center`,
+          alignSelf: `stretch`,
+          display: `flex`,
+          flexShrink: 0,
+        };
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.innerProps;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `indicatorsContainer`, {
+              indicators: !0,
+            }),
+            _,
+          ),
+          _,
+        );
+      },
+      _,
+      _ = [`size`],
+      _ = [`innerProps`, `isRtl`, `size`],
+      _ = {
+        name: `8mmkcg`,
+        styles: `display:inline-block;fill:currentColor;line-height:1;stroke:currentColor;stroke-width:0`,
+      },
+      _ = function (_) {
+        var _ = _.size,
+          _ = _(_, _);
+        return _.jsx(
+          `svg`,
+          _(
+            {
+              height: _,
+              width: _,
+              viewBox: `0 0 20 20`,
+              "aria-hidden": `true`,
+              focusable: `false`,
+              css: _,
+            },
+            _,
+          ),
+        );
+      },
+      _ = function (_) {
+        return _.jsx(
+          _,
+          _(
+            {
+              size: 20,
+            },
+            _,
+          ),
+          _.jsx(`path`, {
+            _: `M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z`,
+          }),
+        );
+      },
+      _ = function (_) {
+        return _.jsx(
+          _,
+          _(
+            {
+              size: 20,
+            },
+            _,
+          ),
+          _.jsx(`path`, {
+            _: `M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z`,
+          }),
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.isFocused,
+          _ = _.theme,
+          _ = _.spacing.baseUnit,
+          _ = _.colors;
+        return _(
+          {
+            label: `indicatorContainer`,
+            display: `flex`,
+            transition: `color 150ms`,
+          },
+          _
+            ? {}
+            : {
+                color: _ ? _.neutral60 : _.neutral20,
+                padding: _ * 2,
+                ":hover": {
+                  color: _ ? _.neutral80 : _.neutral40,
+                },
+              },
+        );
+      },
+      _ = _,
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.innerProps;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `dropdownIndicator`, {
+              indicator: !0,
+              "dropdown-indicator": !0,
+            }),
+            _,
+          ),
+          _ || _.jsx(_, null),
+        );
+      },
+      _ = _,
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.innerProps;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `clearIndicator`, {
+              indicator: !0,
+              "clear-indicator": !0,
+            }),
+            _,
+          ),
+          _ || _.jsx(_, null),
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.isDisabled,
+          _ = _.theme,
+          _ = _.spacing.baseUnit,
+          _ = _.colors;
+        return _(
+          {
+            label: `indicatorSeparator`,
+            alignSelf: `stretch`,
+            width: 1,
+          },
+          _
+            ? {}
+            : {
+                backgroundColor: _ ? _.neutral10 : _.neutral20,
+                marginBottom: _ * 2,
+                marginTop: _ * 2,
+              },
+        );
+      },
+      _ = function (_) {
+        var _ = _.innerProps;
+        return _.jsx(
+          `span`,
+          _(
+            {},
+            _,
+            _(_, `indicatorSeparator`, {
+              "indicator-separator": !0,
+            }),
+          ),
+        );
+      },
+      _ = _.keyframes(
+        (_ ||= _([
+          `
+  0%, 80%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+`,
+        ])),
+      ),
+      _ = function (_, _) {
+        var _ = _.isFocused,
+          _ = _.size,
+          _ = _.theme,
+          _ = _.colors,
+          _ = _.spacing.baseUnit;
+        return _(
+          {
+            label: `loadingIndicator`,
+            display: `flex`,
+            transition: `color 150ms`,
+            alignSelf: `center`,
+            fontSize: _,
+            lineHeight: 1,
+            marginRight: _,
+            textAlign: `center`,
+            verticalAlign: `middle`,
+          },
+          _
+            ? {}
+            : {
+                color: _ ? _.neutral60 : _.neutral20,
+                padding: _ * 2,
+              },
+        );
+      },
+      _ = function (_) {
+        var _ = _.delay,
+          _ = _.offset;
+        return _.jsx(`span`, {
+          css: _.css(
+            {
+              animation: `${_} 1s ease-in-out ${_}ms infinite;`,
+              backgroundColor: `currentColor`,
+              borderRadius: `1em`,
+              display: `inline-block`,
+              marginLeft: _ ? `1em` : void 0,
+              height: `1em`,
+              verticalAlign: `top`,
+              width: `1em`,
+            },
+            ``,
+            ``,
+          ),
+        });
+      },
+      _ = function (_) {
+        var _ = _.innerProps,
+          _ = _.isRtl,
+          _ = _.size,
+          _ = _ === void 0 ? 4 : _,
+          _ = _(_, _);
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(
+              _(
+                _({}, _),
+                {},
+                {
+                  innerProps: _,
+                  isRtl: _,
+                  size: _,
+                },
+              ),
+              `loadingIndicator`,
+              {
+                indicator: !0,
+                "loading-indicator": !0,
+              },
+            ),
+            _,
+          ),
+          _.jsx(_, {
+            delay: 0,
+            offset: _,
+          }),
+          _.jsx(_, {
+            delay: 160,
+            offset: !0,
+          }),
+          _.jsx(_, {
+            delay: 320,
+            offset: !_,
+          }),
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.isDisabled,
+          _ = _.isFocused,
+          _ = _.theme,
+          _ = _.colors,
+          _ = _.borderRadius,
+          _ = _.spacing;
+        return _(
+          {
+            label: `control`,
+            alignItems: `center`,
+            cursor: `default`,
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            minHeight: _.controlHeight,
+            outline: `0 !important`,
+            position: `relative`,
+            transition: `all 100ms`,
+          },
+          _
+            ? {}
+            : {
+                backgroundColor: _ ? _.neutral5 : _.neutral0,
+                borderColor: _ ? _.neutral10 : _ ? _.primary : _.neutral20,
+                borderRadius: _,
+                borderStyle: `solid`,
+                borderWidth: 1,
+                boxShadow: _ ? `0 0 0 1px ${_.primary}` : void 0,
+                "&:hover": {
+                  borderColor: _ ? _.primary : _.neutral30,
+                },
+              },
+        );
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.isDisabled,
+          _ = _.isFocused,
+          _ = _.innerRef,
+          _ = _.innerProps,
+          _ = _.menuIsOpen;
+        return _.jsx(
+          `div`,
+          _(
+            {
+              ref: _,
+            },
+            _(_, `control`, {
+              control: !0,
+              "control--is-disabled": _,
+              "control--is-focused": _,
+              "control--menu-is-open": _,
+            }),
+            _,
+            {
+              "aria-disabled": _ || void 0,
+            },
+          ),
+          _,
+        );
+      },
+      _ = [`data`],
+      _ = function (_, _) {
+        var _ = _.theme.spacing;
+        return _
+          ? {}
+          : {
+              paddingBottom: _.baseUnit * 2,
+              paddingTop: _.baseUnit * 2,
+            };
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _._,
+          _ = _.getStyles,
+          _ = _.getClassNames,
+          _ = _.Heading,
+          _ = _.headingProps,
+          _ = _.innerProps,
+          _ = _.label,
+          _ = _.theme,
+          _ = _.selectProps;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `group`, {
+              group: !0,
+            }),
+            _,
+          ),
+          _.jsx(
+            _,
+            _({}, _, {
+              selectProps: _,
+              theme: _,
+              getStyles: _,
+              getClassNames: _,
+              _: _,
+            }),
+            _,
+          ),
+          _.jsx(`div`, null, _),
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.theme,
+          _ = _.colors,
+          _ = _.spacing;
+        return _(
+          {
+            label: `group`,
+            cursor: `default`,
+            display: `block`,
+          },
+          _
+            ? {}
+            : {
+                color: _.neutral40,
+                fontSize: `75%`,
+                fontWeight: 500,
+                marginBottom: `0.25em`,
+                paddingLeft: _.baseUnit * 3,
+                paddingRight: _.baseUnit * 3,
+                textTransform: `uppercase`,
+              },
+        );
+      },
+      _ = function (_) {
+        var _ = _(_);
+        _.data;
+        var _ = _(_, _);
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `groupHeading`, {
+              "group-heading": !0,
+            }),
+            _,
+          ),
+        );
+      },
+      _ = _,
+      _ = [`innerRef`, `isDisabled`, `isHidden`, `inputClassName`],
+      _ = function (_, _) {
+        var _ = _.isDisabled,
+          _ = _.value,
+          _ = _.theme,
+          _ = _.spacing,
+          _ = _.colors;
+        return _(
+          _(
+            {
+              visibility: _ ? `hidden` : `visible`,
+              transform: _ ? `translateZ(0)` : ``,
+            },
+            _,
+          ),
+          _
+            ? {}
+            : {
+                margin: _.baseUnit / 2,
+                paddingBottom: _.baseUnit / 2,
+                paddingTop: _.baseUnit / 2,
+                color: _.neutral80,
+              },
+        );
+      },
+      _ = {
+        gridArea: `1 / 2`,
+        font: `inherit`,
+        minWidth: `2px`,
+        border: 0,
+        margin: 0,
+        outline: 0,
+        padding: 0,
+      },
+      _ = {
+        flex: `1 1 auto`,
+        display: `inline-grid`,
+        gridArea: `1 / 1 / 2 / 3`,
+        gridTemplateColumns: `0 min-content`,
+        "&:after": _(
+          {
+            content: `attr(data-value) " "`,
+            visibility: `hidden`,
+            whiteSpace: `pre`,
+          },
+          _,
+        ),
+      },
+      _ = function (_) {
+        return _(
+          {
+            label: `input`,
+            color: `inherit`,
+            background: 0,
+            opacity: +!_,
+            width: `100%`,
+          },
+          _,
+        );
+      },
+      _ = function (_) {
+        var _ = _._,
+          _ = _.value,
+          _ = _(_),
+          _ = _.innerRef,
+          _ = _.isDisabled,
+          _ = _.isHidden,
+          _ = _.inputClassName,
+          _ = _(_, _);
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `input`, {
+              "input-container": !0,
+            }),
+            {
+              "data-value": _ || ``,
+            },
+          ),
+          _.jsx(
+            `input`,
+            _(
+              {
+                className: _(
+                  {
+                    input: !0,
+                  },
+                  _,
+                ),
+                ref: _,
+                style: _(_),
+                disabled: _,
+              },
+              _,
+            ),
+          ),
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.theme,
+          _ = _.spacing,
+          _ = _.borderRadius,
+          _ = _.colors;
+        return _(
+          {
+            label: `multiValue`,
+            display: `flex`,
+            minWidth: 0,
+          },
+          _
+            ? {}
+            : {
+                backgroundColor: _.neutral10,
+                borderRadius: _ / 2,
+                margin: _.baseUnit / 2,
+              },
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.theme,
+          _ = _.borderRadius,
+          _ = _.colors,
+          _ = _.cropWithEllipsis;
+        return _(
+          {
+            overflow: `hidden`,
+            textOverflow: _ || _ === void 0 ? `ellipsis` : void 0,
+            whiteSpace: `nowrap`,
+          },
+          _
+            ? {}
+            : {
+                borderRadius: _ / 2,
+                color: _.neutral80,
+                fontSize: `85%`,
+                padding: 3,
+                paddingLeft: 6,
+              },
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.theme,
+          _ = _.spacing,
+          _ = _.borderRadius,
+          _ = _.colors,
+          _ = _.isFocused;
+        return _(
+          {
+            alignItems: `center`,
+            display: `flex`,
+          },
+          _
+            ? {}
+            : {
+                borderRadius: _ / 2,
+                backgroundColor: _ ? _.dangerLight : void 0,
+                paddingLeft: _.baseUnit,
+                paddingRight: _.baseUnit,
+                ":hover": {
+                  backgroundColor: _.dangerLight,
+                  color: _.danger,
+                },
+              },
+        );
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.innerProps;
+        return _.jsx(`div`, _, _);
+      },
+      _ = _,
+      _ = _;
+    function _(_) {
+      var _ = _.children,
+        _ = _.innerProps;
+      return _.jsx(
+        `div`,
+        _(
+          {
+            role: `button`,
+          },
+          _,
+        ),
+        _ ||
+          _.jsx(_, {
+            size: 14,
+          }),
+      );
+    }
+    var _ = function (_) {
+        var _ = _.children,
+          _ = _.components,
+          _ = _.data,
+          _ = _.innerProps,
+          _ = _.isDisabled,
+          _ = _.removeProps,
+          _ = _.selectProps,
+          _ = _.Container,
+          _ = _.Label,
+          _ = _.Remove;
+        return _.jsx(
+          _,
+          {
+            data: _,
+            innerProps: _(
+              _(
+                {},
+                _(_, `multiValue`, {
+                  "multi-value": !0,
+                  "multi-value--is-disabled": _,
+                }),
+              ),
+              _,
+            ),
+            selectProps: _,
+          },
+          _.jsx(
+            _,
+            {
+              data: _,
+              innerProps: _(
+                {},
+                _(_, `multiValueLabel`, {
+                  "multi-value__label": !0,
+                }),
+              ),
+              selectProps: _,
+            },
+            _,
+          ),
+          _.jsx(_, {
+            data: _,
+            innerProps: _(
+              _(
+                {},
+                _(_, `multiValueRemove`, {
+                  "multi-value__remove": !0,
+                }),
+              ),
+              {},
+              {
+                "aria-label": `Remove ${_ || `option`}`,
+              },
+              _,
+            ),
+            selectProps: _,
+          }),
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.isDisabled,
+          _ = _.isFocused,
+          _ = _.isSelected,
+          _ = _.theme,
+          _ = _.spacing,
+          _ = _.colors;
+        return _(
+          {
+            label: `option`,
+            cursor: `default`,
+            display: `block`,
+            fontSize: `inherit`,
+            width: `100%`,
+            userSelect: `none`,
+            WebkitTapHighlightColor: `rgba(0, 0, 0, 0)`,
+          },
+          _
+            ? {}
+            : {
+                backgroundColor: _
+                  ? _.primary
+                  : _
+                    ? _.primary25
+                    : `transparent`,
+                color: _ ? _.neutral20 : _ ? _.neutral0 : `inherit`,
+                padding: `${_.baseUnit * 2}px ${_.baseUnit * 3}px`,
+                ":active": {
+                  backgroundColor: _ ? void 0 : _ ? _.primary : _.primary50,
+                },
+              },
+        );
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.isDisabled,
+          _ = _.isFocused,
+          _ = _.isSelected,
+          _ = _.innerRef,
+          _ = _.innerProps;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `option`, {
+              option: !0,
+              "option--is-disabled": _,
+              "option--is-focused": _,
+              "option--is-selected": _,
+            }),
+            {
+              ref: _,
+              "aria-disabled": _,
+            },
+            _,
+          ),
+          _,
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.theme,
+          _ = _.spacing,
+          _ = _.colors;
+        return _(
+          {
+            label: `placeholder`,
+            gridArea: `1 / 1 / 2 / 3`,
+          },
+          _
+            ? {}
+            : {
+                color: _.neutral50,
+                marginLeft: _.baseUnit / 2,
+                marginRight: _.baseUnit / 2,
+              },
+        );
+      },
+      _ = function (_) {
+        var _ = _.children,
+          _ = _.innerProps;
+        return _.jsx(
+          `div`,
+          _(
+            {},
+            _(_, `placeholder`, {
+              placeholder: !0,
+            }),
+            _,
+          ),
+          _,
+        );
+      },
+      _ = function (_, _) {
+        var _ = _.isDisabled,
+          _ = _.theme,
+          _ = _.spacing,
+          _ = _.colors;
+        return _(
+          {
+            label: `singleValue`,
+            gridArea: `1 / 1 / 2 / 3`,
+            maxWidth: `100%`,
+            overflow: `hidden`,
+            textOverflow: `ellipsis`,
+            whiteSpace: `nowrap`,
+          },
+          _
+            ? {}
+            : {
+                color: _ ? _.neutral40 : _.neutral80,
+                marginLeft: _.baseUnit / 2,
+                marginRight: _.baseUnit / 2,
+              },
+        );
+      },
+      _ = {
+        ClearIndicator: _,
+        Control: _,
+        DropdownIndicator: _,
+        DownChevron: _,
+        CrossIcon: _,
+        Group: _,
+        GroupHeading: _,
+        IndicatorsContainer: _,
+        IndicatorSeparator: _,
+        Input: _,
+        LoadingIndicator: _,
+        Menu: _,
+        MenuList: _,
+        MenuPortal: _,
+        LoadingMessage: _,
+        NoOptionsMessage: _,
+        MultiValue: _,
+        MultiValueContainer: _,
+        MultiValueLabel: _,
+        MultiValueRemove: _,
+        Option: _,
+        Placeholder: _,
+        SelectContainer: _,
+        SingleValue: function (_) {
+          var _ = _.children,
+            _ = _.isDisabled,
+            _ = _.innerProps;
+          return _.jsx(
+            `div`,
+            _(
+              {},
+              _(_, `singleValue`, {
+                "single-value": !0,
+                "single-value--is-disabled": _,
+              }),
+              _,
+            ),
+            _,
+          );
+        },
+        ValueContainer: _,
+      };
+    (_.MenuPlacer = _),
+      (_.classNames = _),
+      (_.cleanValue = _),
+      (_.clearIndicatorCSS = _),
+      (_.components = _),
+      (_.containerCSS = _),
+      (_.css = _),
+      (_.css$1 = _),
+      (_.defaultComponents = function (_) {
+        return _(_({}, _), _.components);
+      }),
+      (_.dropdownIndicatorCSS = _),
+      (_.groupCSS = _),
+      (_.groupHeadingCSS = _),
+      (_.handleInputChange = _),
+      (_.indicatorSeparatorCSS = _),
+      (_.indicatorsContainerCSS = _),
+      (_.inputCSS = _),
+      (_.isDocumentElement = _),
+      (_.isMobileDevice = _),
+      (_.isTouchCapable = _),
+      (_.loadingIndicatorCSS = _),
+      (_.loadingMessageCSS = _),
+      (_.menuCSS = _),
+      (_.menuListCSS = _),
+      (_.menuPortalCSS = _),
+      (_.multiValueAsValue = _),
+      (_.multiValueCSS = _),
+      (_.multiValueLabelCSS = _),
+      (_.multiValueRemoveCSS = _),
+      (_.noOptionsMessageCSS = _),
+      (_.noop = _),
+      (_.notNullish = _),
+      (_.optionCSS = _),
+      (_.placeholderCSS = _),
+      (_.removeProps = _),
+      (_.scrollIntoView = _),
+      (_.singleValueAsValue = _),
+      (_.supportsPassiveEvents = _),
+      (_.valueContainerCSS = _),
+      (_.valueTernary = _);
+  }),
+  _ = _({
+    default: () => _,
+  });
+function _(_, _) {
+  return !!(_ === _ || (_(_) && _(_)));
+}
+function _(_, _) {
+  if (_.length !== _.length) return !1;
+  for (var _ = 0; _ < _.length; _++) if (!_(_[_], _[_])) return !1;
+  return !0;
+}
+function _(_, _) {
+  _ === void 0 && (_ = _);
+  var _ = null;
+  function _() {
+    var _ = [...arguments];
+    if (_ && _.lastThis === this && _(_, _.lastArgs)) return _.lastResult;
+    var _ = _.apply(this, _);
+    return (
+      (_ = {
+        lastResult: _,
+        lastArgs: _,
+        lastThis: this,
+      }),
+      _
+    );
+  }
+  return (
+    (_.clear = function () {
+      _ = null;
+    }),
+    _
+  );
+}
+var _,
+  _ = _(() => {
+    _ =
+      Number.isNaN ||
+      function (_) {
+        return typeof _ == `number` && _ !== _;
+      };
+  }),
+  _ = _((_) => {
+    var _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = (_(), _(_)),
+      _ = _();
+    function _(_) {
+      return _ && _.__esModule
+        ? _
+        : {
+            default: _,
+          };
+    }
+    function _(_) {
+      if (_ && _.__esModule) return _;
+      var _ = Object.create(null);
+      return (
+        _ &&
+          Object.keys(_).forEach(function (_) {
+            if (_ !== "default") {
+              var _ = Object.getOwnPropertyDescriptor(_, _);
+              Object.defineProperty(
+                _,
+                _,
+                _.get
+                  ? _
+                  : {
+                      enumerable: !0,
+                      get: function () {
+                        return _[_];
+                      },
+                    },
+              );
+            }
+          }),
+        (_.default = _),
+        Object.freeze(_)
+      );
+    }
+    for (
+      var _ = _(_),
+        _ = _(_),
+        _ = {
+          name: `7pg0cj-a11yText`,
+          styles: `label:a11yText;z-index:9999;border:0;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;position:absolute;overflow:hidden;padding:0;white-space:nowrap`,
+        },
+        _ = function (_) {
+          return _.jsx(
+            `span`,
+            _(
+              {
+                css: _,
+              },
+              _,
+            ),
+          );
+        },
+        _ = {
+          guidance: function (_) {
+            var _ = _.isSearchable,
+              _ = _.isMulti,
+              _ = _.tabSelectsValue,
+              _ = _.context,
+              _ = _.isInitialFocus;
+            switch (_) {
+              case `menu`:
+                return `Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu${_ ? `, press Tab to select the option and exit the menu` : ``}.`;
+              case `input`:
+                return _
+                  ? `${_[`aria-label`] || `Select`} is focused ${_ ? `,type to refine list` : ``}, press Down to open the menu, ${_ ? ` press left to focus selected values` : ``}`
+                  : ``;
+              case `value`:
+                return `Use left and right to toggle between focused values, press Backspace to remove the currently focused value`;
+              default:
+                return ``;
+            }
+          },
+          onChange: function (_) {
+            var _ = _.action,
+              _ = _.label,
+              _ = _ === void 0 ? `` : _,
+              _ = _.labels,
+              _ = _.isDisabled;
+            switch (_) {
+              case `deselect-option`:
+              case `pop-value`:
+              case `remove-value`:
+                return `option ${_}, deselected.`;
+              case `clear`:
+                return `All selected options have been cleared.`;
+              case `initial-input-focus`:
+                return `option${_.length > 1 ? `s` : ``} ${_.join(`,`)}, selected.`;
+              case `select-option`:
+                return _
+                  ? `option ${_} is disabled. Select another option.`
+                  : `option ${_}, selected.`;
+              default:
+                return ``;
+            }
+          },
+          onFocus: function (_) {
+            var _ = _.context,
+              _ = _.focused,
+              _ = _.options,
+              _ = _.label,
+              _ = _ === void 0 ? `` : _,
+              _ = _.selectValue,
+              _ = _.isDisabled,
+              _ = _.isSelected,
+              _ = _.isAppleDevice,
+              _ = function (_, _) {
+                return _ && _.length
+                  ? `${_.indexOf(_) + 1} of ${_.length}`
+                  : ``;
+              };
+            return _ === `value` && _
+              ? `value ${_} focused, ${_(_, _)}.`
+              : _ === `menu` && _
+                ? `${_}${`${_ ? ` selected` : ``}${_ ? ` disabled` : ``}`}, ${_(_, _)}.`
+                : ``;
+          },
+          onFilter: function (_) {
+            var _ = _.inputValue;
+            return `${_.resultsMessage}${_ ? ` for search term ` + _ : ``}.`;
+          },
+        },
+        _ = function (_) {
+          var _ = _.ariaSelection,
+            _ = _.focusedOption,
+            _ = _.focusedValue,
+            _ = _.focusableOptions,
+            _ = _.isFocused,
+            _ = _.selectValue,
+            _ = _.selectProps,
+            _ = _._,
+            _ = _.isAppleDevice,
+            _ = _.ariaLiveMessages,
+            _ = _.getOptionLabel,
+            _ = _.inputValue,
+            _ = _.isMulti,
+            _ = _.isOptionDisabled,
+            _ = _.isSearchable,
+            _ = _.menuIsOpen,
+            _ = _.options,
+            _ = _.screenReaderStatus,
+            _ = _.tabSelectsValue,
+            _ = _.isLoading,
+            _ = _[`aria-label`],
+            _ = _[`aria-live`],
+            _ = _.useMemo(
+              function () {
+                return _(_({}, _), _ || {});
+              },
+              [_],
+            ),
+            _ = _.useMemo(
+              function () {
+                var _ = ``;
+                if (_ && _.onChange) {
+                  var _ = _.option,
+                    _ = _.options,
+                    _ = _.removedValue,
+                    _ = _.removedValues,
+                    _ = _.value,
+                    _ =
+                      _ ||
+                      _ ||
+                      (function (_) {
+                        return Array.isArray(_) ? null : _;
+                      })(_),
+                    _ = _ ? _(_) : ``,
+                    _ = _ || _ || void 0,
+                    _ = _ ? _.map(_) : [],
+                    _ = _(
                       {
-                        height: 0,
-                        width: 0,
-                        success: _._,
-                      }
-                    ),
-                  );
-                  if (_.success == _._ && (0, _._)(_.width, _.height, _, !0))
-                    if (
-                      (
-                        await this.GetImageInfo(_, _, _).catch(
-                          (_) => (
-                            this.HandleErrorFatal(
-                              null,
-                              _,
-                              "GetImageInfo Resize",
-                              _,
-                            ),
-                            {
-                              height: 0,
-                              width: 0,
-                              success: _._,
-                            }
-                          ),
-                        )
-                      ).success == _._
-                    )
-                      _.bAlreadyProcessed = !0;
-                    else {
-                      _.bProcessing = !0;
-                      let _ = _._.GetHashFromHashAndExt(_),
-                        _ = _._.GetExtStringFromHashAndExt(_),
-                        _ = (0, _._)(_);
-                      if (_)
-                        try {
-                          const _ = await (0, _._)(
-                            this.m_cancelSignal.token,
-                            _,
-                            _,
-                            _,
-                            _,
-                          );
-                          console.log("success on the resize request"),
-                            _ == _.length
-                              ? ((_.bSucceeded = !0),
-                                this.m_mapArtworkResizeSuccess.set(
-                                  _,
-                                  this.m_mapArtworkResizeSuccess.get(_) + 1,
-                                ))
-                              : ((_.bFailed = !0),
-                                (_.strMessage =
-                                  "Did not resize all: " +
-                                  _ +
-                                  " " +
-                                  _ +
-                                  " / " +
-                                  _.length));
-                        } catch (_) {
-                          _.bFailed = !0;
-                          let _ = (0, _._)(_);
-                          (_.strMessage = _.strErrorMsg),
-                            console.error("Resize: " + _.strErrorMsg, _);
-                        }
-                      else
-                        (_.bFailed = !0),
-                          console.error(
-                            "Resize: resize request couldn't be determined from the artwork type",
-                          );
-                    }
-                  else _.bSkipped = !0;
-                } else _.bSkipped = !0;
-              }
-          }
-          async RunArtworkResizeBackfill() {
-            _.StartBackfill("resize_image");
-            let _ = 0;
-            for (; _.BIsBackkFillInProgress(); ) {
-              let _ = await _.Get()
-                .LoadPartnerEventForQueryIncremental(this.m_cancelSignal, _, _)
-                .catch((_) =>
-                  this.HandleErrorFatal(
-                    null,
-                    _,
-                    "LoadPartnerEventForQueryIncremental",
-                  ),
-                );
-              if (!_ || _.length == 0) {
-                _.CompleteBackfill("resize_image"),
-                  console.log("Compelted the backfill");
-                break;
-              }
-              _ += _.length;
-              for (let _ = 0; _ < _.length; ++_) {
-                let _ = _[_],
-                  _ = _.CreateOrGetBackfillProgess(_.unique_id);
-                if (!_.announcement_gid || _.announcement_gid.length == 0) {
-                  (_.bSkipped = !0),
-                    (_.bWarning = !0),
-                    _.CloseProgress(_.unique_id, _);
-                  continue;
-                }
-                if (
-                  (await _._.LoadPartnerEventFromAnnoucementGID(
-                    Number(_.appid),
-                    _.announcement_gid,
-                    100,
-                  ).catch((_) => {
-                    this.HandleErrorFatal(
-                      _.announcement_gid,
-                      _,
-                      "LoadPartnerEventFromAnnoucementGID",
+                        isDisabled: _ && _(_, _),
+                        label: _,
+                        labels: _,
+                      },
                       _,
                     );
-                  }),
-                  _.bFailed)
-                )
-                  continue;
-                let _ = _._.GetClanEventFromAnnouncementGID(_.announcement_gid);
-                if (!_) {
-                  (_.bFailed = !0),
-                    (_.strMessage = "Failed to load the event: " + _.unique_id),
-                    _.CloseProgress(_.unique_id, _);
-                  continue;
+                  _ = _.onChange(_);
                 }
-                if (_.bSucceeded || _.bFailed || _.bAlreadyProcessed) {
-                  (_.bAlreadyProcessed = !0), _.CloseProgress(_.unique_id, _);
-                  continue;
+                return _;
+              },
+              [_, _, _, _, _],
+            ),
+            _ = _.useMemo(
+              function () {
+                var _ = ``,
+                  _ = _ || _,
+                  _ = !!(_ && _ && _.includes(_));
+                if (_ && _.onFocus) {
+                  var _ = {
+                    focused: _,
+                    label: _(_),
+                    isDisabled: _(_, _),
+                    isSelected: _,
+                    options: _,
+                    context: _ === _ ? `menu` : `value`,
+                    selectValue: _,
+                    isAppleDevice: _,
+                  };
+                  _ = _.onFocus(_);
                 }
-                if (
-                  ((_.bAnalysing = !0),
-                  this.setState({
-                    strInfo:
-                      "Processing " +
-                      _.GetBackfillGIDs().length +
-                      " Appid: " +
-                      _.appid +
-                      " Event " +
-                      _.GID +
-                      " Title: " +
-                      _.GetNameWithFallback(_.Bhc),
-                  }),
-                  _.jsondata && _.jsondata.localized_capsule_image)
-                ) {
-                  let _ = _.jsondata.localized_capsule_image;
-                  await this.HandleResizeForImageType(
-                    _,
-                    _,
-                    _,
-                    "capsule",
-                    _._.capsule_main,
-                  ).catch((_) =>
-                    this.HandleErrorFatal(
-                      null,
-                      _,
-                      "HandleResizeForImageType capsule",
-                      _,
-                    ),
-                  );
+                return _;
+              },
+              [_, _, _, _, _, _, _, _],
+            ),
+            _ = _.useMemo(
+              function () {
+                var _ = ``;
+                if (_ && _.length && !_ && _.onFilter) {
+                  var _ = _({
+                    count: _.length,
+                  });
+                  _ = _.onFilter({
+                    inputValue: _,
+                    resultsMessage: _,
+                  });
                 }
-                if (_.jsondata && _.jsondata.localized_title_image) {
-                  let _ = _.jsondata.localized_title_image;
-                  await this.HandleResizeForImageType(
-                    _,
-                    _,
-                    _,
-                    "background",
-                    _._.background_mini,
-                  ).catch((_) =>
-                    this.HandleErrorFatal(
-                      null,
-                      _,
-                      "HandleResizeForImageType background",
-                      _,
-                    ),
-                  );
+                return _;
+              },
+              [_, _, _, _, _, _, _],
+            ),
+            _ = _?.action === `initial-input-focus`,
+            _ = _.useMemo(
+              function () {
+                var _ = ``;
+                if (_.guidance) {
+                  var _ = _ ? `value` : _ ? `menu` : `input`;
+                  _ = _.guidance({
+                    "aria-label": _,
+                    context: _,
+                    isDisabled: _ && _(_, _),
+                    isMulti: _,
+                    isSearchable: _,
+                    tabSelectsValue: _,
+                    isInitialFocus: _,
+                  });
                 }
-                if (_.jsondata && _.jsondata.localized_spotlight_image) {
-                  let _ = _.jsondata.localized_spotlight_image;
-                  await this.HandleResizeForImageType(
-                    _,
-                    _,
-                    _,
-                    "spotlight",
-                    _._.spotlight_main,
-                  ).catch((_) =>
-                    this.HandleErrorFatal(
-                      null,
-                      _,
-                      "HandleResizeForImageType spotlight",
-                      _,
-                    ),
-                  );
-                }
-                if (
-                  (_.CloseProgress(_.unique_id, _), !_.BIsBackkFillInProgress())
-                )
-                  break;
-              }
-              if (_.m_nFailures > _) {
-                console.log("Hit too many errors, stoppinng the backfill");
-                break;
-              }
+                return _;
+              },
+              [_, _, _, _, _, _, _, _, _, _, _],
+            ),
+            _ = _.jsx(
+              _.Fragment,
+              null,
+              _.jsx(
+                `span`,
+                {
+                  _: `aria-selection`,
+                },
+                _,
+              ),
+              _.jsx(
+                `span`,
+                {
+                  _: `aria-focused`,
+                },
+                _,
+              ),
+              _.jsx(
+                `span`,
+                {
+                  _: `aria-results`,
+                },
+                _,
+              ),
+              _.jsx(
+                `span`,
+                {
+                  _: `aria-guidance`,
+                },
+                _,
+              ),
+            );
+          return _.jsx(
+            _.Fragment,
+            null,
+            _.jsx(
+              _,
+              {
+                _: _,
+              },
+              _ && _,
+            ),
+            _.jsx(
+              _,
+              {
+                "aria-live": _,
+                "aria-atomic": `false`,
+                "aria-relevant": `additions text`,
+                role: `log`,
+              },
+              _ && !_ && _,
+            ),
+          );
+        },
+        _ = [
+          {
+            base: `A`,
+            letters: `AⒶＡÀÁÂẦẤẪẨÃĀĂẰẮẴẲȦǠÄǞẢÅǺǍȀȂẠẬẶḀĄȺⱯ`,
+          },
+          {
+            base: `AA`,
+            letters: `Ꜳ`,
+          },
+          {
+            base: `AE`,
+            letters: `ÆǼǢ`,
+          },
+          {
+            base: `AO`,
+            letters: `Ꜵ`,
+          },
+          {
+            base: `AU`,
+            letters: `Ꜷ`,
+          },
+          {
+            base: `AV`,
+            letters: `ꜸꜺ`,
+          },
+          {
+            base: `AY`,
+            letters: `Ꜽ`,
+          },
+          {
+            base: `B`,
+            letters: `BⒷＢḂḄḆɃƂƁ`,
+          },
+          {
+            base: `C`,
+            letters: `CⒸＣĆĈĊČÇḈƇȻꜾ`,
+          },
+          {
+            base: `D`,
+            letters: `DⒹＤḊĎḌḐḒḎĐƋƊƉꝹ`,
+          },
+          {
+            base: `DZ`,
+            letters: `ǱǄ`,
+          },
+          {
+            base: `Dz`,
+            letters: `ǲǅ`,
+          },
+          {
+            base: `E`,
+            letters: `EⒺＥÈÉÊỀẾỄỂẼĒḔḖĔĖËẺĚȄȆẸỆȨḜĘḘḚƐƎ`,
+          },
+          {
+            base: `F`,
+            letters: `FⒻＦḞƑꝻ`,
+          },
+          {
+            base: `G`,
+            letters: `GⒼＧǴĜḠĞĠǦĢǤƓꞠꝽꝾ`,
+          },
+          {
+            base: `H`,
+            letters: `HⒽＨĤḢḦȞḤḨḪĦⱧⱵꞍ`,
+          },
+          {
+            base: `I`,
+            letters: `IⒾＩÌÍÎĨĪĬİÏḮỈǏȈȊỊĮḬƗ`,
+          },
+          {
+            base: `J`,
+            letters: `JⒿＪĴɈ`,
+          },
+          {
+            base: `K`,
+            letters: `KⓀＫḰǨḲĶḴƘⱩꝀꝂꝄꞢ`,
+          },
+          {
+            base: `L`,
+            letters: `LⓁＬĿĹĽḶḸĻḼḺŁȽⱢⱠꝈꝆꞀ`,
+          },
+          {
+            base: `LJ`,
+            letters: `Ǉ`,
+          },
+          {
+            base: `Lj`,
+            letters: `ǈ`,
+          },
+          {
+            base: `M`,
+            letters: `MⓂＭḾṀṂⱮƜ`,
+          },
+          {
+            base: `N`,
+            letters: `NⓃＮǸŃÑṄŇṆŅṊṈȠƝꞐꞤ`,
+          },
+          {
+            base: `NJ`,
+            letters: `Ǌ`,
+          },
+          {
+            base: `Nj`,
+            letters: `ǋ`,
+          },
+          {
+            base: `O`,
+            letters: `OⓄＯÒÓÔỒỐỖỔÕṌȬṎŌṐṒŎȮȰÖȪỎŐǑȌȎƠỜỚỠỞỢỌỘǪǬØǾƆƟꝊꝌ`,
+          },
+          {
+            base: `OI`,
+            letters: `Ƣ`,
+          },
+          {
+            base: `OO`,
+            letters: `Ꝏ`,
+          },
+          {
+            base: `OU`,
+            letters: `Ȣ`,
+          },
+          {
+            base: `P`,
+            letters: `PⓅＰṔṖƤⱣꝐꝒꝔ`,
+          },
+          {
+            base: `Q`,
+            letters: `QⓆＱꝖꝘɊ`,
+          },
+          {
+            base: `R`,
+            letters: `RⓇＲŔṘŘȐȒṚṜŖṞɌⱤꝚꞦꞂ`,
+          },
+          {
+            base: `S`,
+            letters: `SⓈＳẞŚṤŜṠŠṦṢṨȘŞⱾꞨꞄ`,
+          },
+          {
+            base: `T`,
+            letters: `TⓉＴṪŤṬȚŢṰṮŦƬƮȾꞆ`,
+          },
+          {
+            base: `TZ`,
+            letters: `Ꜩ`,
+          },
+          {
+            base: `U`,
+            letters: `UⓊＵÙÚÛŨṸŪṺŬÜǛǗǕǙỦŮŰǓȔȖƯỪỨỮỬỰỤṲŲṶṴɄ`,
+          },
+          {
+            base: `V`,
+            letters: `VⓋＶṼṾƲꝞɅ`,
+          },
+          {
+            base: `VY`,
+            letters: `Ꝡ`,
+          },
+          {
+            base: `W`,
+            letters: `WⓌＷẀẂŴẆẄẈⱲ`,
+          },
+          {
+            base: `X`,
+            letters: `XⓍＸẊẌ`,
+          },
+          {
+            base: `Y`,
+            letters: `YⓎＹỲÝŶỸȲẎŸỶỴƳɎỾ`,
+          },
+          {
+            base: `Z`,
+            letters: `ZⓏＺŹẐŻŽẒẔƵȤⱿⱫꝢ`,
+          },
+          {
+            base: `a`,
+            letters: `aⓐａẚàáâầấẫẩãāăằắẵẳȧǡäǟảåǻǎȁȃạậặḁąⱥɐ`,
+          },
+          {
+            base: `aa`,
+            letters: `ꜳ`,
+          },
+          {
+            base: `ae`,
+            letters: `æǽǣ`,
+          },
+          {
+            base: `ao`,
+            letters: `ꜵ`,
+          },
+          {
+            base: `au`,
+            letters: `ꜷ`,
+          },
+          {
+            base: `av`,
+            letters: `ꜹꜻ`,
+          },
+          {
+            base: `ay`,
+            letters: `ꜽ`,
+          },
+          {
+            base: `b`,
+            letters: `bⓑｂḃḅḇƀƃɓ`,
+          },
+          {
+            base: `c`,
+            letters: `cⓒｃćĉċčçḉƈȼꜿↄ`,
+          },
+          {
+            base: `d`,
+            letters: `dⓓｄḋďḍḑḓḏđƌɖɗꝺ`,
+          },
+          {
+            base: `dz`,
+            letters: `ǳǆ`,
+          },
+          {
+            base: `e`,
+            letters: `eⓔｅèéêềếễểẽēḕḗĕėëẻěȅȇẹệȩḝęḙḛɇɛǝ`,
+          },
+          {
+            base: `f`,
+            letters: `fⓕｆḟƒꝼ`,
+          },
+          {
+            base: `g`,
+            letters: `gⓖｇǵĝḡğġǧģǥɠꞡᵹꝿ`,
+          },
+          {
+            base: `h`,
+            letters: `hⓗｈĥḣḧȟḥḩḫẖħⱨⱶɥ`,
+          },
+          {
+            base: `hv`,
+            letters: `ƕ`,
+          },
+          {
+            base: `i`,
+            letters: `iⓘｉìíîĩīĭïḯỉǐȉȋịįḭɨı`,
+          },
+          {
+            base: `j`,
+            letters: `jⓙｊĵǰɉ`,
+          },
+          {
+            base: `k`,
+            letters: `kⓚｋḱǩḳķḵƙⱪꝁꝃꝅꞣ`,
+          },
+          {
+            base: `l`,
+            letters: `lⓛｌŀĺľḷḹļḽḻſłƚɫⱡꝉꞁꝇ`,
+          },
+          {
+            base: `lj`,
+            letters: `ǉ`,
+          },
+          {
+            base: `m`,
+            letters: `mⓜｍḿṁṃɱɯ`,
+          },
+          {
+            base: `n`,
+            letters: `nⓝｎǹńñṅňṇņṋṉƞɲŉꞑꞥ`,
+          },
+          {
+            base: `nj`,
+            letters: `ǌ`,
+          },
+          {
+            base: `o`,
+            letters: `oⓞｏòóôồốỗổõṍȭṏōṑṓŏȯȱöȫỏőǒȍȏơờớỡởợọộǫǭøǿɔꝋꝍɵ`,
+          },
+          {
+            base: `oi`,
+            letters: `ƣ`,
+          },
+          {
+            base: `ou`,
+            letters: `ȣ`,
+          },
+          {
+            base: `oo`,
+            letters: `ꝏ`,
+          },
+          {
+            base: `p`,
+            letters: `pⓟｐṕṗƥᵽꝑꝓꝕ`,
+          },
+          {
+            base: `q`,
+            letters: `qⓠｑɋꝗꝙ`,
+          },
+          {
+            base: `r`,
+            letters: `rⓡｒŕṙřȑȓṛṝŗṟɍɽꝛꞧꞃ`,
+          },
+          {
+            base: `s`,
+            letters: `sⓢｓßśṥŝṡšṧṣṩșşȿꞩꞅẛ`,
+          },
+          {
+            base: `t`,
+            letters: `tⓣｔṫẗťṭțţṱṯŧƭʈⱦꞇ`,
+          },
+          {
+            base: `tz`,
+            letters: `ꜩ`,
+          },
+          {
+            base: `u`,
+            letters: `uⓤｕùúûũṹūṻŭüǜǘǖǚủůűǔȕȗưừứữửựụṳųṷṵʉ`,
+          },
+          {
+            base: `v`,
+            letters: `vⓥｖṽṿʋꝟʌ`,
+          },
+          {
+            base: `vy`,
+            letters: `ꝡ`,
+          },
+          {
+            base: `w`,
+            letters: `wⓦｗẁẃŵẇẅẘẉⱳ`,
+          },
+          {
+            base: `x`,
+            letters: `xⓧｘẋẍ`,
+          },
+          {
+            base: `y`,
+            letters: `yⓨｙỳýŷỹȳẏÿỷẙỵƴɏỿ`,
+          },
+          {
+            base: `z`,
+            letters: `zⓩｚźẑżžẓẕƶȥɀⱬꝣ`,
+          },
+        ],
+        _ = RegExp(
+          `[` +
+            _.map(function (_) {
+              return _.letters;
+            }).join(``) +
+            `]`,
+          `g`,
+        ),
+        _ = {},
+        _ = 0;
+      _ < _.length;
+      _++
+    )
+      for (var _ = _[_], _ = 0; _ < _.letters.length; _++)
+        _[_.letters[_]] = _.base;
+    var _ = function (_) {
+        return _.replace(_, function (_) {
+          return _[_];
+        });
+      },
+      _ = _.default(_),
+      _ = function (_) {
+        return _.replace(/^\s+|\s+$/g, ``);
+      },
+      _ = function (_) {
+        return `${_.label} ${_.value}`;
+      },
+      _ = function (_) {
+        return function (_, _) {
+          if (_.data.__isNew__) return !0;
+          var _ = _(
+              {
+                ignoreCase: !0,
+                ignoreAccents: !0,
+                stringify: _,
+                trim: !0,
+                matchFrom: `any`,
+              },
+              _,
+            ),
+            _ = _.ignoreCase,
+            _ = _.ignoreAccents,
+            _ = _.stringify,
+            _ = _.trim,
+            _ = _.matchFrom,
+            _ = _ ? _(_) : _,
+            _ = _ ? _(_(_)) : _(_);
+          return (
+            _ && ((_ = _.toLowerCase()), (_ = _.toLowerCase())),
+            _ && ((_ = _(_)), (_ = _(_))),
+            _ === `start` ? _.substr(0, _.length) === _ : _.indexOf(_) > -1
+          );
+        };
+      },
+      _ = [`innerRef`];
+    function _(_) {
+      var _ = _.innerRef,
+        _ = _(_, _),
+        _ = _.removeProps(_, `onExited`, `in`, `enter`, `exit`, `appear`);
+      return _.jsx(
+        `input`,
+        _(
+          {
+            ref: _,
+          },
+          _,
+          {
+            css: _.css(
+              {
+                label: `dummyInput`,
+                background: 0,
+                border: 0,
+                caretColor: `transparent`,
+                fontSize: `inherit`,
+                gridArea: `1 / 1 / 2 / 3`,
+                outline: 0,
+                padding: 0,
+                width: 1,
+                color: `transparent`,
+                left: -100,
+                opacity: 0,
+                position: `relative`,
+                transform: `scale(.01)`,
+              },
+              ``,
+              ``,
+            ),
+          },
+        ),
+      );
+    }
+    var _ = function (_) {
+      _.cancelable && _.preventDefault(), _.stopPropagation();
+    };
+    function _(_) {
+      var _ = _.isEnabled,
+        _ = _.onBottomArrive,
+        _ = _.onBottomLeave,
+        _ = _.onTopArrive,
+        _ = _.onTopLeave,
+        _ = _.useRef(!1),
+        _ = _.useRef(!1),
+        _ = _.useRef(0),
+        _ = _.useRef(null),
+        _ = _.useCallback(
+          function (_, _) {
+            if (_.current !== null) {
+              var _ = _.current,
+                _ = _.scrollTop,
+                _ = _.scrollHeight,
+                _ = _.clientHeight,
+                _ = _.current,
+                _ = _ > 0,
+                _ = _ - _ - _,
+                _ = !1;
+              _ > _ && _.current && (_ && _(_), (_.current = !1)),
+                _ && _.current && (_ && _(_), (_.current = !1)),
+                _ && _ > _
+                  ? (_ && !_.current && _(_),
+                    (_.scrollTop = _),
+                    (_ = !0),
+                    (_.current = !0))
+                  : !_ &&
+                    -_ > _ &&
+                    (_ && !_.current && _(_),
+                    (_.scrollTop = 0),
+                    (_ = !0),
+                    (_.current = !0)),
+                _ && _(_);
             }
+          },
+          [_, _, _, _],
+        ),
+        _ = _.useCallback(
+          function (_) {
+            _(_, _.deltaY);
+          },
+          [_],
+        ),
+        _ = _.useCallback(function (_) {
+          _.current = _.changedTouches[0].clientY;
+        }, []),
+        _ = _.useCallback(
+          function (_) {
+            _(_, _.current - _.changedTouches[0].clientY);
+          },
+          [_],
+        ),
+        _ = _.useCallback(
+          function (_) {
+            if (_) {
+              var _ = _.supportsPassiveEvents
+                ? {
+                    passive: !1,
+                  }
+                : !1;
+              _.addEventListener(`wheel`, _, _),
+                _.addEventListener(`touchstart`, _, _),
+                _.addEventListener(`touchmove`, _, _);
+            }
+          },
+          [_, _, _],
+        ),
+        _ = _.useCallback(
+          function (_) {
+            _ &&
+              (_.removeEventListener(`wheel`, _, !1),
+              _.removeEventListener(`touchstart`, _, !1),
+              _.removeEventListener(`touchmove`, _, !1));
+          },
+          [_, _, _],
+        );
+      return (
+        _.useEffect(
+          function () {
+            if (_) {
+              var _ = _.current;
+              return (
+                _(_),
+                function () {
+                  _(_);
+                }
+              );
+            }
+          },
+          [_, _, _],
+        ),
+        function (_) {
+          _.current = _;
+        }
+      );
+    }
+    var _ = [`boxSizing`, `height`, `overflow`, `paddingRight`, `position`],
+      _ = {
+        boxSizing: `border-box`,
+        overflow: `hidden`,
+        position: `relative`,
+        height: `100%`,
+      };
+    function _(_) {
+      _.cancelable && _.preventDefault();
+    }
+    function _(_) {
+      _.stopPropagation();
+    }
+    function _() {
+      var _ = this.scrollTop,
+        _ = this.scrollHeight,
+        _ = _ + this.offsetHeight;
+      _ === 0 ? (this.scrollTop = 1) : _ === _ && (this.scrollTop = _ - 1);
+    }
+    function _() {
+      return `ontouchstart` in window || navigator.maxTouchPoints;
+    }
+    var _ = !!(
+        typeof window < `u` &&
+        window.document &&
+        window.document.createElement
+      ),
+      _ = 0,
+      _ = {
+        capture: !1,
+        passive: !1,
+      };
+    function _(_) {
+      var _ = _.isEnabled,
+        _ = _.accountForScrollbars,
+        _ = _ === void 0 || _,
+        _ = _.useRef({}),
+        _ = _.useRef(null),
+        _ = _.useCallback(
+          function (_) {
+            if (_) {
+              var _ = document.body,
+                _ = _ && _.style;
+              if (
+                (_ &&
+                  _.forEach(function (_) {
+                    var _ = _ && _[_];
+                    _.current[_] = _;
+                  }),
+                _ && _ < 1)
+              ) {
+                var _ = parseInt(_.current.paddingRight, 10) || 0,
+                  _ = document.body ? document.body.clientWidth : 0,
+                  _ = window.innerWidth - _ + _ || 0;
+                Object.keys(_).forEach(function (_) {
+                  var _ = _[_];
+                  _ && (_[_] = _);
+                }),
+                  _ && (_.paddingRight = `${_}px`);
+              }
+              _ &&
+                _() &&
+                (_.addEventListener(`touchmove`, _, _),
+                _ &&
+                  (_.addEventListener(`touchstart`, _, _),
+                  _.addEventListener(`touchmove`, _, _))),
+                (_ += 1);
+            }
+          },
+          [_],
+        ),
+        _ = _.useCallback(
+          function (_) {
+            if (_) {
+              var _ = document.body,
+                _ = _ && _.style;
+              (_ = Math.max(_ - 1, 0)),
+                _ &&
+                  _ < 1 &&
+                  _.forEach(function (_) {
+                    var _ = _.current[_];
+                    _ && (_[_] = _);
+                  }),
+                _ &&
+                  _() &&
+                  (_.removeEventListener(`touchmove`, _, _),
+                  _ &&
+                    (_.removeEventListener(`touchstart`, _, _),
+                    _.removeEventListener(`touchmove`, _, _)));
+            }
+          },
+          [_],
+        );
+      return (
+        _.useEffect(
+          function () {
+            if (_) {
+              var _ = _.current;
+              return (
+                _(_),
+                function () {
+                  _(_);
+                }
+              );
+            }
+          },
+          [_, _, _],
+        ),
+        function (_) {
+          _.current = _;
+        }
+      );
+    }
+    var _ = function (_) {
+        var _ = _.target;
+        return (
+          _.ownerDocument.activeElement && _.ownerDocument.activeElement.blur()
+        );
+      },
+      _ = {
+        name: `1kfdb0e`,
+        styles: `position:fixed;left:0;bottom:0;right:0;top:0`,
+      };
+    function _(_) {
+      var _ = _.children,
+        _ = _.lockEnabled,
+        _ = _.captureEnabled,
+        _ = _ === void 0 || _,
+        _ = _.onBottomArrive,
+        _ = _.onBottomLeave,
+        _ = _.onTopArrive,
+        _ = _.onTopLeave,
+        _ = _({
+          isEnabled: _,
+          onBottomArrive: _,
+          onBottomLeave: _,
+          onTopArrive: _,
+          onTopLeave: _,
+        }),
+        _ = _({
+          isEnabled: _,
+        });
+      return _.jsx(
+        _.Fragment,
+        null,
+        _ &&
+          _.jsx(`div`, {
+            onClick: _,
+            css: _,
+          }),
+        _(function (_) {
+          _(_), _(_);
+        }),
+      );
+    }
+    var _ = {
+        name: `1a0ro4n-requiredInput`,
+        styles: `label:requiredInput;opacity:0;pointer-events:none;position:absolute;bottom:0;left:0;right:0;width:100%`,
+      },
+      _ = function (_) {
+        var _ = _.name,
+          _ = _.onFocus;
+        return _.jsx(`input`, {
+          required: !0,
+          name: _,
+          tabIndex: -1,
+          "aria-hidden": `true`,
+          onFocus: _,
+          css: _,
+          value: ``,
+          onChange: function () {},
+        });
+      };
+    function _(_) {
+      return (
+        typeof window < `u` &&
+        window.navigator != null &&
+        _.test(
+          window.navigator.userAgentData?.platform || window.navigator.platform,
+        )
+      );
+    }
+    function _() {
+      return _(/^iPhone/i);
+    }
+    function _() {
+      return _(/^Mac/i);
+    }
+    function _() {
+      return _(/^iPad/i) || (_() && navigator.maxTouchPoints > 1);
+    }
+    function _() {
+      return _() || _();
+    }
+    function _() {
+      return _() || _();
+    }
+    var _ = function (_) {
+        return _.label;
+      },
+      _ = function (_) {
+        return _.label;
+      },
+      _ = function (_) {
+        return _.value;
+      },
+      _ = function (_) {
+        return !!_.isDisabled;
+      },
+      _ = {
+        clearIndicator: _.clearIndicatorCSS,
+        container: _.containerCSS,
+        control: _.css,
+        dropdownIndicator: _.dropdownIndicatorCSS,
+        group: _.groupCSS,
+        groupHeading: _.groupHeadingCSS,
+        indicatorsContainer: _.indicatorsContainerCSS,
+        indicatorSeparator: _.indicatorSeparatorCSS,
+        input: _.inputCSS,
+        loadingIndicator: _.loadingIndicatorCSS,
+        loadingMessage: _.loadingMessageCSS,
+        menu: _.menuCSS,
+        menuList: _.menuListCSS,
+        menuPortal: _.menuPortalCSS,
+        multiValue: _.multiValueCSS,
+        multiValueLabel: _.multiValueLabelCSS,
+        multiValueRemove: _.multiValueRemoveCSS,
+        noOptionsMessage: _.noOptionsMessageCSS,
+        option: _.optionCSS,
+        placeholder: _.placeholderCSS,
+        singleValue: _.css$1,
+        valueContainer: _.valueContainerCSS,
+      };
+    function _(_) {
+      var _ =
+          arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {},
+        _ = _({}, _);
+      return (
+        Object.keys(_).forEach(function (_) {
+          var _ = _;
+          _[_] = _[_]
+            ? function (_, _) {
+                return _[_](_[_](_, _), _);
+              }
+            : _[_];
+        }),
+        _
+      );
+    }
+    var _ = {
+        primary: `#2684FF`,
+        primary75: `#4C9AFF`,
+        primary50: `#B2D4FF`,
+        primary25: `#DEEBFF`,
+        danger: `#DE350B`,
+        dangerLight: `#FFBDAD`,
+        neutral0: `hsl(0, 0%, 100%)`,
+        neutral5: `hsl(0, 0%, 95%)`,
+        neutral10: `hsl(0, 0%, 90%)`,
+        neutral20: `hsl(0, 0%, 80%)`,
+        neutral30: `hsl(0, 0%, 70%)`,
+        neutral40: `hsl(0, 0%, 60%)`,
+        neutral50: `hsl(0, 0%, 50%)`,
+        neutral60: `hsl(0, 0%, 40%)`,
+        neutral70: `hsl(0, 0%, 30%)`,
+        neutral80: `hsl(0, 0%, 20%)`,
+        neutral90: `hsl(0, 0%, 10%)`,
+      },
+      _ = 4,
+      _ = 4,
+      _ = {
+        borderRadius: _,
+        colors: _,
+        spacing: {
+          baseUnit: _,
+          controlHeight: 38,
+          menuGutter: _ * 2,
+        },
+      },
+      _ = {
+        "aria-live": `polite`,
+        backspaceRemovesValue: !0,
+        blurInputOnSelect: _.isTouchCapable(),
+        captureMenuScroll: !_.isTouchCapable(),
+        classNames: {},
+        closeMenuOnSelect: !0,
+        closeMenuOnScroll: !1,
+        components: {},
+        controlShouldRenderValue: !0,
+        escapeClearsValue: !1,
+        filterOption: _(),
+        formatGroupLabel: _,
+        getOptionLabel: _,
+        getOptionValue: _,
+        isDisabled: !1,
+        isLoading: !1,
+        isMulti: !1,
+        isRtl: !1,
+        isSearchable: !0,
+        isOptionDisabled: _,
+        loadingMessage: function () {
+          return `Loading...`;
+        },
+        maxMenuHeight: 300,
+        minMenuHeight: 140,
+        menuIsOpen: !1,
+        menuPlacement: `bottom`,
+        menuPosition: `absolute`,
+        menuShouldBlockScroll: !1,
+        menuShouldScrollIntoView: !_.isMobileDevice(),
+        noOptionsMessage: function () {
+          return `No options`;
+        },
+        openMenuOnFocus: !1,
+        openMenuOnClick: !0,
+        options: [],
+        pageSize: 5,
+        placeholder: `Select...`,
+        screenReaderStatus: function (_) {
+          var _ = _.count;
+          return `${_} result${_ === 1 ? `` : `s`} available`;
+        },
+        styles: {},
+        tabIndex: 0,
+        tabSelectsValue: !0,
+        unstyled: !1,
+      };
+    function _(_, _, _, _) {
+      return {
+        type: `option`,
+        data: _,
+        isDisabled: _(_, _, _),
+        isSelected: _(_, _, _),
+        label: _(_, _),
+        value: _(_, _),
+        index: _,
+      };
+    }
+    function _(_, _) {
+      return _.options
+        .map(function (_, _) {
+          if (`options` in _) {
+            var _ = _.options
+              .map(function (_, _) {
+                return _(_, _, _, _);
+              })
+              .filter(function (_) {
+                return _(_, _);
+              });
+            return _.length > 0
+              ? {
+                  type: `group`,
+                  data: _,
+                  options: _,
+                  index: _,
+                }
+              : void 0;
           }
-          RenderFailure() {
-            let _ = new Array();
-            return (
-              _.m_nFailures > 0 &&
-                _.GetBackfillGIDs().forEach((_) => {
-                  let _ = _.GetEventBackfillProgress().get(_);
-                  if (_ && _.bFailed) {
-                    let _ = _._.GetClanEventModel(_);
-                    _ &&
-                      _.push(
-                        (0, _.jsxs)(
-                          "div",
+          var _ = _(_, _, _, _);
+          return _(_, _) ? _ : void 0;
+        })
+        .filter(_.notNullish);
+    }
+    function _(_) {
+      return _.reduce(function (_, _) {
+        return (
+          _.type === `group`
+            ? _.push.apply(
+                _,
+                _(
+                  _.options.map(function (_) {
+                    return _.data;
+                  }),
+                ),
+              )
+            : _.push(_.data),
+          _
+        );
+      }, []);
+    }
+    function _(_, _) {
+      return _.reduce(function (_, _) {
+        return (
+          _.type === `group`
+            ? _.push.apply(
+                _,
+                _(
+                  _.options.map(function (_) {
+                    return {
+                      data: _.data,
+                      _: `${_}-${_.index}-${_.index}`,
+                    };
+                  }),
+                ),
+              )
+            : _.push({
+                data: _.data,
+                _: `${_}-${_.index}`,
+              }),
+          _
+        );
+      }, []);
+    }
+    function _(_, _) {
+      return _(_(_, _));
+    }
+    function _(_, _) {
+      var _ = _.inputValue,
+        _ = _ === void 0 ? `` : _,
+        _ = _.data,
+        _ = _.isSelected,
+        _ = _.label,
+        _ = _.value;
+      return (
+        (!_(_) || !_) &&
+        _(
+          _,
+          {
+            label: _,
+            value: _,
+            data: _,
+          },
+          _,
+        )
+      );
+    }
+    function _(_, _) {
+      var _ = _.focusedValue,
+        _ = _.selectValue.indexOf(_);
+      if (_ > -1) {
+        if (_.indexOf(_) > -1) return _;
+        if (_ < _.length) return _[_];
+      }
+      return null;
+    }
+    function _(_, _) {
+      var _ = _.focusedOption;
+      return _ && _.indexOf(_) > -1 ? _ : _[0];
+    }
+    var _ = function (_, _) {
+        return (
+          _.find(function (_) {
+            return _.data === _;
+          })?._ || null
+        );
+      },
+      _ = function (_, _) {
+        return _.getOptionLabel(_);
+      },
+      _ = function (_, _) {
+        return _.getOptionValue(_);
+      };
+    function _(_, _, _) {
+      return (
+        typeof _.isOptionDisabled == `function` && _.isOptionDisabled(_, _)
+      );
+    }
+    function _(_, _, _) {
+      if (_.indexOf(_) > -1) return !0;
+      if (typeof _.isOptionSelected == `function`)
+        return _.isOptionSelected(_, _);
+      var _ = _(_, _);
+      return _.some(function (_) {
+        return _(_, _) === _;
+      });
+    }
+    function _(_, _, _) {
+      return !_.filterOption || _.filterOption(_, _);
+    }
+    var _ = function (_) {
+        var _ = _.hideSelectedOptions,
+          _ = _.isMulti;
+        return _ === void 0 ? _ : _;
+      },
+      _ = 1,
+      _ = (function (_) {
+        _(_, _);
+        var _ = _(_);
+        function _(_) {
+          var _;
+          if (
+            (_(this, _),
+            (_ = _.call(this, _)),
+            (_.state = {
+              ariaSelection: null,
+              focusedOption: null,
+              focusedOptionId: null,
+              focusableOptionsWithIds: [],
+              focusedValue: null,
+              inputIsHidden: !1,
+              isFocused: !1,
+              selectValue: [],
+              clearFocusValueOnUpdate: !1,
+              prevWasFocused: !1,
+              inputIsHiddenAfterUpdate: void 0,
+              prevProps: void 0,
+              instancePrefix: ``,
+            }),
+            (_.blockOptionHover = !1),
+            (_.isComposing = !1),
+            (_.commonProps = void 0),
+            (_.initialTouchX = 0),
+            (_.initialTouchY = 0),
+            (_.openAfterFocus = !1),
+            (_.scrollToFocusedOptionOnUpdate = !1),
+            (_.userIsDragging = void 0),
+            (_.isAppleDevice = _()),
+            (_.controlRef = null),
+            (_.getControlRef = function (_) {
+              _.controlRef = _;
+            }),
+            (_.focusedOptionRef = null),
+            (_.getFocusedOptionRef = function (_) {
+              _.focusedOptionRef = _;
+            }),
+            (_.menuListRef = null),
+            (_.getMenuListRef = function (_) {
+              _.menuListRef = _;
+            }),
+            (_.inputRef = null),
+            (_.getInputRef = function (_) {
+              _.inputRef = _;
+            }),
+            (_.focus = _.focusInput),
+            (_.blur = _.blurInput),
+            (_.onChange = function (_, _) {
+              var _ = _.props,
+                _ = _.onChange;
+              (_.name = _.name), _.ariaOnChange(_, _), _(_, _);
+            }),
+            (_.setValue = function (_, _, _) {
+              var _ = _.props,
+                _ = _.closeMenuOnSelect,
+                _ = _.isMulti,
+                _ = _.inputValue;
+              _.onInputChange(``, {
+                action: `set-value`,
+                prevInputValue: _,
+              }),
+                _ &&
+                  (_.setState({
+                    inputIsHiddenAfterUpdate: !_,
+                  }),
+                  _.onMenuClose()),
+                _.setState({
+                  clearFocusValueOnUpdate: !0,
+                }),
+                _.onChange(_, {
+                  action: _,
+                  option: _,
+                });
+            }),
+            (_.selectOption = function (_) {
+              var _ = _.props,
+                _ = _.blurInputOnSelect,
+                _ = _.isMulti,
+                _ = _.name,
+                _ = _.state.selectValue,
+                _ = _ && _.isOptionSelected(_, _),
+                _ = _.isOptionDisabled(_, _);
+              if (_) {
+                var _ = _.getOptionValue(_);
+                _.setValue(
+                  _.multiValueAsValue(
+                    _.filter(function (_) {
+                      return _.getOptionValue(_) !== _;
+                    }),
+                  ),
+                  `deselect-option`,
+                  _,
+                );
+              } else if (!_)
+                _
+                  ? _.setValue(
+                      _.multiValueAsValue([].concat(_(_), [_])),
+                      `select-option`,
+                      _,
+                    )
+                  : _.setValue(_.singleValueAsValue(_), `select-option`);
+              else {
+                _.ariaOnChange(_.singleValueAsValue(_), {
+                  action: `select-option`,
+                  option: _,
+                  name: _,
+                });
+                return;
+              }
+              _ && _.blurInput();
+            }),
+            (_.removeValue = function (_) {
+              var _ = _.props.isMulti,
+                _ = _.state.selectValue,
+                _ = _.getOptionValue(_),
+                _ = _.filter(function (_) {
+                  return _.getOptionValue(_) !== _;
+                }),
+                _ = _.valueTernary(_, _, _[0] || null);
+              _.onChange(_, {
+                action: `remove-value`,
+                removedValue: _,
+              }),
+                _.focusInput();
+            }),
+            (_.clearValue = function () {
+              var _ = _.state.selectValue;
+              _.onChange(_.valueTernary(_.props.isMulti, [], null), {
+                action: `clear`,
+                removedValues: _,
+              });
+            }),
+            (_.popValue = function () {
+              var _ = _.props.isMulti,
+                _ = _.state.selectValue,
+                _ = _[_.length - 1],
+                _ = _.slice(0, _.length - 1),
+                _ = _.valueTernary(_, _, _[0] || null);
+              _ &&
+                _.onChange(_, {
+                  action: `pop-value`,
+                  removedValue: _,
+                });
+            }),
+            (_.getFocusedOptionId = function (_) {
+              return _(_.state.focusableOptionsWithIds, _);
+            }),
+            (_.getFocusableOptionsWithIds = function () {
+              return _(
+                _(_.props, _.state.selectValue),
+                _.getElementId(`option`),
+              );
+            }),
+            (_.getValue = function () {
+              return _.state.selectValue;
+            }),
+            (_._ = function () {
+              var _ = [...arguments];
+              return _.classNames.apply(
+                void 0,
+                [_.props.classNamePrefix].concat(_),
+              );
+            }),
+            (_.getOptionLabel = function (_) {
+              return _(_.props, _);
+            }),
+            (_.getOptionValue = function (_) {
+              return _(_.props, _);
+            }),
+            (_.getStyles = function (_, _) {
+              var _ = _.props.unstyled,
+                _ = _[_](_, _);
+              _.boxSizing = `border-box`;
+              var _ = _.props.styles[_];
+              return _ ? _(_, _) : _;
+            }),
+            (_.getClassNames = function (_, _) {
+              var _;
+              return (_ = _.props.classNames)[_]?.call(_, _);
+            }),
+            (_.getElementId = function (_) {
+              return `${_.state.instancePrefix}-${_}`;
+            }),
+            (_.getComponents = function () {
+              return _.defaultComponents(_.props);
+            }),
+            (_.buildCategorizedOptions = function () {
+              return _(_.props, _.state.selectValue);
+            }),
+            (_.getCategorizedOptions = function () {
+              return _.props.menuIsOpen ? _.buildCategorizedOptions() : [];
+            }),
+            (_.buildFocusableOptions = function () {
+              return _(_.buildCategorizedOptions());
+            }),
+            (_.getFocusableOptions = function () {
+              return _.props.menuIsOpen ? _.buildFocusableOptions() : [];
+            }),
+            (_.ariaOnChange = function (_, _) {
+              _.setState({
+                ariaSelection: _(
+                  {
+                    value: _,
+                  },
+                  _,
+                ),
+              });
+            }),
+            (_.onMenuMouseDown = function (_) {
+              _.button === 0 &&
+                (_.stopPropagation(), _.preventDefault(), _.focusInput());
+            }),
+            (_.onMenuMouseMove = function (_) {
+              _.blockOptionHover = !1;
+            }),
+            (_.onControlMouseDown = function (_) {
+              if (!_.defaultPrevented) {
+                var _ = _.props.openMenuOnClick;
+                _.state.isFocused
+                  ? _.props.menuIsOpen
+                    ? _.target.tagName !== `INPUT` &&
+                      _.target.tagName !== `TEXTAREA` &&
+                      _.onMenuClose()
+                    : _ && _.openMenu(`first`)
+                  : (_ && (_.openAfterFocus = !0), _.focusInput()),
+                  _.target.tagName !== `INPUT` &&
+                    _.target.tagName !== `TEXTAREA` &&
+                    _.preventDefault();
+              }
+            }),
+            (_.onDropdownIndicatorMouseDown = function (_) {
+              if (
+                !(_ && _.type === `mousedown` && _.button !== 0) &&
+                !_.props.isDisabled
+              ) {
+                var _ = _.props,
+                  _ = _.isMulti,
+                  _ = _.menuIsOpen;
+                _.focusInput(),
+                  _
+                    ? (_.setState({
+                        inputIsHiddenAfterUpdate: !_,
+                      }),
+                      _.onMenuClose())
+                    : _.openMenu(`first`),
+                  _.preventDefault();
+              }
+            }),
+            (_.onClearIndicatorMouseDown = function (_) {
+              (_ && _.type === `mousedown` && _.button !== 0) ||
+                (_.clearValue(),
+                _.preventDefault(),
+                (_.openAfterFocus = !1),
+                _.type === `touchend`
+                  ? _.focusInput()
+                  : setTimeout(function () {
+                      return _.focusInput();
+                    }));
+            }),
+            (_.onScroll = function (_) {
+              typeof _.props.closeMenuOnScroll == `boolean`
+                ? _.target instanceof HTMLElement &&
+                  _.isDocumentElement(_.target) &&
+                  _.props.onMenuClose()
+                : typeof _.props.closeMenuOnScroll == `function` &&
+                  _.props.closeMenuOnScroll(_) &&
+                  _.props.onMenuClose();
+            }),
+            (_.onCompositionStart = function () {
+              _.isComposing = !0;
+            }),
+            (_.onCompositionEnd = function () {
+              _.isComposing = !1;
+            }),
+            (_.onTouchStart = function (_) {
+              var _ = _.touches,
+                _ = _ && _.item(0);
+              _ &&
+                ((_.initialTouchX = _.clientX),
+                (_.initialTouchY = _.clientY),
+                (_.userIsDragging = !1));
+            }),
+            (_.onTouchMove = function (_) {
+              var _ = _.touches,
+                _ = _ && _.item(0);
+              if (_) {
+                var _ = Math.abs(_.clientX - _.initialTouchX),
+                  _ = Math.abs(_.clientY - _.initialTouchY),
+                  _ = 5;
+                _.userIsDragging = _ > _ || _ > _;
+              }
+            }),
+            (_.onTouchEnd = function (_) {
+              _.userIsDragging ||
+                (_.controlRef &&
+                  !_.controlRef.contains(_.target) &&
+                  _.menuListRef &&
+                  !_.menuListRef.contains(_.target) &&
+                  _.blurInput(),
+                (_.initialTouchX = 0),
+                (_.initialTouchY = 0));
+            }),
+            (_.onControlTouchEnd = function (_) {
+              _.userIsDragging || _.onControlMouseDown(_);
+            }),
+            (_.onClearIndicatorTouchEnd = function (_) {
+              _.userIsDragging || _.onClearIndicatorMouseDown(_);
+            }),
+            (_.onDropdownIndicatorTouchEnd = function (_) {
+              _.userIsDragging || _.onDropdownIndicatorMouseDown(_);
+            }),
+            (_.handleInputChange = function (_) {
+              var _ = _.props.inputValue,
+                _ = _.currentTarget.value;
+              _.setState({
+                inputIsHiddenAfterUpdate: !1,
+              }),
+                _.onInputChange(_, {
+                  action: `input-change`,
+                  prevInputValue: _,
+                }),
+                _.props.menuIsOpen || _.onMenuOpen();
+            }),
+            (_.onInputFocus = function (_) {
+              _.props.onFocus && _.props.onFocus(_),
+                _.setState({
+                  inputIsHiddenAfterUpdate: !1,
+                  isFocused: !0,
+                }),
+                (_.openAfterFocus || _.props.openMenuOnFocus) &&
+                  _.openMenu(`first`),
+                (_.openAfterFocus = !1);
+            }),
+            (_.onInputBlur = function (_) {
+              var _ = _.props.inputValue;
+              if (
+                _.menuListRef &&
+                _.menuListRef.contains(document.activeElement)
+              ) {
+                _.inputRef.focus();
+                return;
+              }
+              _.props.onBlur && _.props.onBlur(_),
+                _.onInputChange(``, {
+                  action: `input-blur`,
+                  prevInputValue: _,
+                }),
+                _.onMenuClose(),
+                _.setState({
+                  focusedValue: null,
+                  isFocused: !1,
+                });
+            }),
+            (_.onOptionHover = function (_) {
+              if (!(_.blockOptionHover || _.state.focusedOption === _)) {
+                var _ = _.getFocusableOptions().indexOf(_);
+                _.setState({
+                  focusedOption: _,
+                  focusedOptionId: _ > -1 ? _.getFocusedOptionId(_) : null,
+                });
+              }
+            }),
+            (_.shouldHideSelectedOptions = function () {
+              return _(_.props);
+            }),
+            (_.onValueInputFocus = function (_) {
+              _.preventDefault(), _.stopPropagation(), _.focus();
+            }),
+            (_.onKeyDown = function (_) {
+              var _ = _.props,
+                _ = _.isMulti,
+                _ = _.backspaceRemovesValue,
+                _ = _.escapeClearsValue,
+                _ = _.inputValue,
+                _ = _.isClearable,
+                _ = _.isDisabled,
+                _ = _.menuIsOpen,
+                _ = _.onKeyDown,
+                _ = _.tabSelectsValue,
+                _ = _.openMenuOnFocus,
+                _ = _.state,
+                _ = _.focusedOption,
+                _ = _.focusedValue,
+                _ = _.selectValue;
+              if (
+                !_ &&
+                !(typeof _ == `function` && (_(_), _.defaultPrevented))
+              ) {
+                switch (((_.blockOptionHover = !0), _.key)) {
+                  case `ArrowLeft`:
+                    if (!_ || _) return;
+                    _.focusValue(`previous`);
+                    break;
+                  case `ArrowRight`:
+                    if (!_ || _) return;
+                    _.focusValue(`next`);
+                    break;
+                  case `Delete`:
+                  case `Backspace`:
+                    if (_) return;
+                    if (_) _.removeValue(_);
+                    else {
+                      if (!_) return;
+                      _ ? _.popValue() : _ && _.clearValue();
+                    }
+                    break;
+                  case `Tab`:
+                    if (
+                      _.isComposing ||
+                      _.shiftKey ||
+                      !_ ||
+                      !_ ||
+                      !_ ||
+                      (_ && _.isOptionSelected(_, _))
+                    )
+                      return;
+                    _.selectOption(_);
+                    break;
+                  case `Enter`:
+                    if (_.keyCode === 229) break;
+                    if (_) {
+                      if (!_ || _.isComposing) return;
+                      _.selectOption(_);
+                      break;
+                    }
+                    return;
+                  case `Escape`:
+                    _
+                      ? (_.setState({
+                          inputIsHiddenAfterUpdate: !1,
+                        }),
+                        _.onInputChange(``, {
+                          action: `menu-close`,
+                          prevInputValue: _,
+                        }),
+                        _.onMenuClose())
+                      : _ && _ && _.clearValue();
+                    break;
+                  case ` `:
+                    if (_) return;
+                    if (!_) {
+                      _.openMenu(`first`);
+                      break;
+                    }
+                    if (!_) return;
+                    _.selectOption(_);
+                    break;
+                  case `ArrowUp`:
+                    _ ? _.focusOption(`up`) : _.openMenu(`last`);
+                    break;
+                  case `ArrowDown`:
+                    _ ? _.focusOption(`down`) : _.openMenu(`first`);
+                    break;
+                  case `PageUp`:
+                    if (!_) return;
+                    _.focusOption(`pageup`);
+                    break;
+                  case `PageDown`:
+                    if (!_) return;
+                    _.focusOption(`pagedown`);
+                    break;
+                  case `Home`:
+                    if (!_) return;
+                    _.focusOption(`first`);
+                    break;
+                  case `End`:
+                    if (!_) return;
+                    _.focusOption(`last`);
+                    break;
+                  default:
+                    return;
+                }
+                _.preventDefault();
+              }
+            }),
+            (_.state.instancePrefix =
+              `react-select-` + (_.props.instanceId || ++_)),
+            (_.state.selectValue = _.cleanValue(_.value)),
+            _.menuIsOpen && _.state.selectValue.length)
+          ) {
+            var _ = _.getFocusableOptionsWithIds(),
+              _ = _.buildFocusableOptions(),
+              _ = _.indexOf(_.state.selectValue[0]);
+            (_.state.focusableOptionsWithIds = _),
+              (_.state.focusedOption = _[_]),
+              (_.state.focusedOptionId = _(_, _[_]));
+          }
+          return _;
+        }
+        return (
+          _(
+            _,
+            [
+              {
+                key: `componentDidMount`,
+                value: function () {
+                  this.startListeningComposition(),
+                    this.startListeningToTouch(),
+                    this.props.closeMenuOnScroll &&
+                      document &&
+                      document.addEventListener &&
+                      document.addEventListener(`scroll`, this.onScroll, !0),
+                    this.props.autoFocus && this.focusInput(),
+                    this.props.menuIsOpen &&
+                      this.state.focusedOption &&
+                      this.menuListRef &&
+                      this.focusedOptionRef &&
+                      _.scrollIntoView(this.menuListRef, this.focusedOptionRef);
+                },
+              },
+              {
+                key: `componentDidUpdate`,
+                value: function (_) {
+                  var _ = this.props,
+                    _ = _.isDisabled,
+                    _ = _.menuIsOpen,
+                    _ = this.state.isFocused;
+                  ((_ && !_ && _.isDisabled) || (_ && _ && !_.menuIsOpen)) &&
+                    this.focusInput(),
+                    _ && _ && !_.isDisabled
+                      ? this.setState(
                           {
-                            children: [
-                              (0, _.jsx)(_._, {
-                                eventModel: _,
-                                route: _._.k_eView,
-                                children: _.GetNameWithFallback(_.Bhc),
-                              }),
-                              (0, _.jsx)("div", {
-                                className: _.Error,
-                                children: _.strMessage,
-                              }),
-                            ],
+                            isFocused: !1,
+                          },
+                          this.onMenuClose,
+                        )
+                      : !_ &&
+                        !_ &&
+                        _.isDisabled &&
+                        this.inputRef === document.activeElement &&
+                        this.setState({
+                          isFocused: !0,
+                        }),
+                    this.menuListRef &&
+                      this.focusedOptionRef &&
+                      this.scrollToFocusedOptionOnUpdate &&
+                      (_.scrollIntoView(
+                        this.menuListRef,
+                        this.focusedOptionRef,
+                      ),
+                      (this.scrollToFocusedOptionOnUpdate = !1));
+                },
+              },
+              {
+                key: `componentWillUnmount`,
+                value: function () {
+                  this.stopListeningComposition(),
+                    this.stopListeningToTouch(),
+                    document.removeEventListener(`scroll`, this.onScroll, !0);
+                },
+              },
+              {
+                key: `onMenuOpen`,
+                value: function () {
+                  this.props.onMenuOpen();
+                },
+              },
+              {
+                key: `onMenuClose`,
+                value: function () {
+                  this.onInputChange(``, {
+                    action: `menu-close`,
+                    prevInputValue: this.props.inputValue,
+                  }),
+                    this.props.onMenuClose();
+                },
+              },
+              {
+                key: `onInputChange`,
+                value: function (_, _) {
+                  this.props.onInputChange(_, _);
+                },
+              },
+              {
+                key: `focusInput`,
+                value: function () {
+                  this.inputRef && this.inputRef.focus();
+                },
+              },
+              {
+                key: `blurInput`,
+                value: function () {
+                  this.inputRef && this.inputRef.blur();
+                },
+              },
+              {
+                key: `openMenu`,
+                value: function (_) {
+                  var _ = this,
+                    _ = this.state,
+                    _ = _.selectValue,
+                    _ = _.isFocused,
+                    _ = this.buildFocusableOptions(),
+                    _ = _ === `first` ? 0 : _.length - 1;
+                  if (!this.props.isMulti) {
+                    var _ = _.indexOf(_[0]);
+                    _ > -1 && (_ = _);
+                  }
+                  (this.scrollToFocusedOptionOnUpdate = !(
+                    _ && this.menuListRef
+                  )),
+                    this.setState(
+                      {
+                        inputIsHiddenAfterUpdate: !1,
+                        focusedValue: null,
+                        focusedOption: _[_],
+                        focusedOptionId: this.getFocusedOptionId(_[_]),
+                      },
+                      function () {
+                        return _.onMenuOpen();
+                      },
+                    );
+                },
+              },
+              {
+                key: `focusValue`,
+                value: function (_) {
+                  var _ = this.state,
+                    _ = _.selectValue,
+                    _ = _.focusedValue;
+                  if (this.props.isMulti) {
+                    this.setState({
+                      focusedOption: null,
+                    });
+                    var _ = _.indexOf(_);
+                    _ || (_ = -1);
+                    var _ = _.length - 1,
+                      _ = -1;
+                    if (_.length) {
+                      switch (_) {
+                        case `previous`:
+                          _ = _ === 0 ? 0 : _ === -1 ? _ : _ - 1;
+                          break;
+                        case `next`:
+                          _ > -1 && _ < _ && (_ = _ + 1);
+                      }
+                      this.setState({
+                        inputIsHidden: _ !== -1,
+                        focusedValue: _[_],
+                      });
+                    }
+                  }
+                },
+              },
+              {
+                key: `focusOption`,
+                value: function () {
+                  var _ =
+                      arguments.length > 0 && arguments[0] !== void 0
+                        ? arguments[0]
+                        : `first`,
+                    _ = this.props.pageSize,
+                    _ = this.state.focusedOption,
+                    _ = this.getFocusableOptions();
+                  if (_.length) {
+                    var _ = 0,
+                      _ = _.indexOf(_);
+                    _ || (_ = -1),
+                      _ === `up`
+                        ? (_ = _ > 0 ? _ - 1 : _.length - 1)
+                        : _ === `down`
+                          ? (_ = (_ + 1) % _.length)
+                          : _ === `pageup`
+                            ? ((_ = _ - _), _ < 0 && (_ = 0))
+                            : _ === `pagedown`
+                              ? ((_ = _ + _),
+                                _ > _.length - 1 && (_ = _.length - 1))
+                              : _ === `last` && (_ = _.length - 1),
+                      (this.scrollToFocusedOptionOnUpdate = !0),
+                      this.setState({
+                        focusedOption: _[_],
+                        focusedValue: null,
+                        focusedOptionId: this.getFocusedOptionId(_[_]),
+                      });
+                  }
+                },
+              },
+              {
+                key: `getTheme`,
+                value: function () {
+                  return this.props.theme
+                    ? typeof this.props.theme == `function`
+                      ? this.props.theme(_)
+                      : _(_({}, _), this.props.theme)
+                    : _;
+                },
+              },
+              {
+                key: `getCommonProps`,
+                value: function () {
+                  var _ = this.clearValue,
+                    _ = this._,
+                    _ = this.getStyles,
+                    _ = this.getClassNames,
+                    _ = this.getValue,
+                    _ = this.selectOption,
+                    _ = this.setValue,
+                    _ = this.props,
+                    _ = _.isMulti,
+                    _ = _.isRtl,
+                    _ = _.options;
+                  return {
+                    clearValue: _,
+                    _: _,
+                    getStyles: _,
+                    getClassNames: _,
+                    getValue: _,
+                    hasValue: this.hasValue(),
+                    isMulti: _,
+                    isRtl: _,
+                    options: _,
+                    selectOption: _,
+                    selectProps: _,
+                    setValue: _,
+                    theme: this.getTheme(),
+                  };
+                },
+              },
+              {
+                key: `hasValue`,
+                value: function () {
+                  return this.state.selectValue.length > 0;
+                },
+              },
+              {
+                key: `hasOptions`,
+                value: function () {
+                  return !!this.getFocusableOptions().length;
+                },
+              },
+              {
+                key: `isClearable`,
+                value: function () {
+                  var _ = this.props,
+                    _ = _.isClearable,
+                    _ = _.isMulti;
+                  return _ === void 0 ? _ : _;
+                },
+              },
+              {
+                key: `isOptionDisabled`,
+                value: function (_, _) {
+                  return _(this.props, _, _);
+                },
+              },
+              {
+                key: `isOptionSelected`,
+                value: function (_, _) {
+                  return _(this.props, _, _);
+                },
+              },
+              {
+                key: `filterOption`,
+                value: function (_, _) {
+                  return _(this.props, _, _);
+                },
+              },
+              {
+                key: `formatOptionLabel`,
+                value: function (_, _) {
+                  if (typeof this.props.formatOptionLabel == `function`) {
+                    var _ = this.props.inputValue,
+                      _ = this.state.selectValue;
+                    return this.props.formatOptionLabel(_, {
+                      context: _,
+                      inputValue: _,
+                      selectValue: _,
+                    });
+                  }
+                  return this.getOptionLabel(_);
+                },
+              },
+              {
+                key: `formatGroupLabel`,
+                value: function (_) {
+                  return this.props.formatGroupLabel(_);
+                },
+              },
+              {
+                key: `startListeningComposition`,
+                value: function () {
+                  document &&
+                    document.addEventListener &&
+                    (document.addEventListener(
+                      `compositionstart`,
+                      this.onCompositionStart,
+                      !1,
+                    ),
+                    document.addEventListener(
+                      `compositionend`,
+                      this.onCompositionEnd,
+                      !1,
+                    ));
+                },
+              },
+              {
+                key: `stopListeningComposition`,
+                value: function () {
+                  document &&
+                    document.removeEventListener &&
+                    (document.removeEventListener(
+                      `compositionstart`,
+                      this.onCompositionStart,
+                    ),
+                    document.removeEventListener(
+                      `compositionend`,
+                      this.onCompositionEnd,
+                    ));
+                },
+              },
+              {
+                key: `startListeningToTouch`,
+                value: function () {
+                  document &&
+                    document.addEventListener &&
+                    (document.addEventListener(
+                      `touchstart`,
+                      this.onTouchStart,
+                      !1,
+                    ),
+                    document.addEventListener(
+                      `touchmove`,
+                      this.onTouchMove,
+                      !1,
+                    ),
+                    document.addEventListener(`touchend`, this.onTouchEnd, !1));
+                },
+              },
+              {
+                key: `stopListeningToTouch`,
+                value: function () {
+                  document &&
+                    document.removeEventListener &&
+                    (document.removeEventListener(
+                      `touchstart`,
+                      this.onTouchStart,
+                    ),
+                    document.removeEventListener(`touchmove`, this.onTouchMove),
+                    document.removeEventListener(`touchend`, this.onTouchEnd));
+                },
+              },
+              {
+                key: `renderInput`,
+                value: function () {
+                  var _ = this.props,
+                    _ = _.isDisabled,
+                    _ = _.isSearchable,
+                    _ = _.inputId,
+                    _ = _.inputValue,
+                    _ = _.tabIndex,
+                    _ = _.form,
+                    _ = _.menuIsOpen,
+                    _ = _.required,
+                    _ = this.getComponents().Input,
+                    _ = this.state,
+                    _ = _.inputIsHidden,
+                    _ = _.ariaSelection,
+                    _ = this.commonProps,
+                    _ = _ || this.getElementId(`input`),
+                    _ = _(
+                      _(
+                        _(
+                          {
+                            "aria-autocomplete": `list`,
+                            "aria-expanded": _,
+                            "aria-haspopup": !0,
+                            "aria-errormessage":
+                              this.props[`aria-errormessage`],
+                            "aria-invalid": this.props[`aria-invalid`],
+                            "aria-label": this.props[`aria-label`],
+                            "aria-labelledby": this.props[`aria-labelledby`],
+                            "aria-required": _,
+                            role: `combobox`,
+                            "aria-activedescendant": this.isAppleDevice
+                              ? void 0
+                              : this.state.focusedOptionId || ``,
+                          },
+                          _ && {
+                            "aria-controls": this.getElementId(`listbox`),
+                          },
+                        ),
+                        !_ && {
+                          "aria-readonly": !0,
+                        },
+                      ),
+                      this.hasValue()
+                        ? _?.action === `initial-input-focus` && {
+                            "aria-describedby":
+                              this.getElementId(`live-region`),
+                          }
+                        : {
+                            "aria-describedby":
+                              this.getElementId(`placeholder`),
+                          },
+                    );
+                  return _
+                    ? _.createElement(
+                        _,
+                        _(
+                          {},
+                          _,
+                          {
+                            autoCapitalize: `none`,
+                            autoComplete: `off`,
+                            autoCorrect: `off`,
+                            _: _,
+                            innerRef: this.getInputRef,
+                            isDisabled: _,
+                            isHidden: _,
+                            onBlur: this.onInputBlur,
+                            onChange: this.handleInputChange,
+                            onFocus: this.onInputFocus,
+                            spellCheck: `false`,
+                            tabIndex: _,
+                            form: _,
+                            type: `text`,
+                            value: _,
+                          },
+                          _,
+                        ),
+                      )
+                    : _.createElement(
+                        _,
+                        _(
+                          {
+                            _: _,
+                            innerRef: this.getInputRef,
+                            onBlur: this.onInputBlur,
+                            onChange: _.noop,
+                            onFocus: this.onInputFocus,
+                            disabled: _,
+                            tabIndex: _,
+                            inputMode: `none`,
+                            form: _,
+                            value: ``,
                           },
                           _,
                         ),
                       );
-                  }
-                }),
-              _
-            );
-          }
-          RenderResizeProgress() {
-            let _ = new Array();
-            return (
-              _.push(
-                (0, _.jsxs)(
-                  "div",
-                  {
-                    children: [
-                      "Capsule Resized: ",
-                      this.m_mapArtworkResizeSuccess.get("capsule"),
-                      " ",
-                    ],
-                  },
-                  "res_capsule",
-                ),
-              ),
-              _.push(
-                (0, _.jsxs)(
-                  "div",
-                  {
-                    children: [
-                      "Header Resized: ",
-                      this.m_mapArtworkResizeSuccess.get("background"),
-                      " ",
-                    ],
-                  },
-                  "res_header",
-                ),
-              ),
-              _.push(
-                (0, _.jsxs)(
-                  "div",
-                  {
-                    children: [
-                      "Spotlight Resized: ",
-                      this.m_mapArtworkResizeSuccess.get("spotlight"),
-                      " ",
-                    ],
-                  },
-                  "res_spotlightr",
-                ),
-              ),
-              _
-            );
-          }
-          render() {
-            let _ = this.RenderFailure(),
-              _ = this.m_mapArtworkResizeSuccess.has("capsule")
-                ? this.RenderResizeProgress()
-                : void 0;
-            return (0, _.jsxs)("div", {
-              children: [
-                (0, _.jsx)("h2", {
-                  children: "Partner Events Backfill Processing Page",
-                }),
-                this.state.eBackfillState == null &&
-                  (0, _.jsx)("div", {
-                    children: (0, _.jsx)("button", {
-                      onClick: this.OnArtworkResizeBackfill,
-                      children: "Begin Artwork Resize Backfill",
-                    }),
-                  }),
-                (0, _.jsx)("div", {
-                  children: (0, _.jsx)("button", {
-                    onClick: () => _.CompleteBackfill("resize_image"),
-                    children: "Stop Backfill",
-                  }),
-                }),
-                this.state.strInfo &&
-                  (0, _.jsxs)("div", {
-                    children: ["Processing: ", this.state.strInfo],
-                  }),
-                (0, _.jsxs)("div", {
-                  children: ["Events Processed: ", _.m_nProcessed],
-                }),
-                (0, _.jsxs)("div", {
-                  children: ["Events Succeeded: ", _.m_nSuccesses],
-                }),
-                (0, _.jsxs)("div", {
-                  children: ["Events Warning: ", _.m_nWarning],
-                }),
-                (0, _.jsxs)("div", {
-                  children: ["Events Failed: ", _.m_nFailures],
-                }),
-                (0, _.jsxs)("div", {
-                  children: ["Events Skipped: ", _.m_nSkipped],
-                }),
-                _.length > 0 &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)("h2", {
-                        children: "Failure Info",
-                      }),
-                      _,
-                    ],
-                  }),
-                !!_ &&
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("h2", {
-                        children: "Resizing Actions",
-                      }),
-                      _,
-                    ],
-                  }),
-                this.state.eBackfillState == "started" &&
-                  (0, _.jsx)(_._, {
-                    size: "medium",
-                    position: "center",
-                    string: "Backfill In Progress",
-                  }),
-              ],
-            });
-          }
-        };
-        _([_._], _.prototype, "OnArtworkResizeBackfill", 1),
-          _([_._], _.prototype, "BeginArtworkResize", 1),
-          (_ = _([_._], _));
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        const _ = __webpack_require__("chunkid"),
-          _ = ["mod_reviewed", "auto_migrated"],
-          _ = 20,
-          _ = class _ {
-            static s_Singleton;
-            selectedTags = void 0;
-            excludedTags = void 0;
-            filterDate = void 0;
-            filterDateAsString = void 0;
-            eventsToLoadPerPaging = _;
-            filterEventTypes = void 0;
-            bOrderByVisibilityStartTime = !1;
-            bUseCustomQuery = !1;
-            static Get() {
-              return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-            }
-            constructor() {
-              (0, _._)(this);
-            }
-            Init(_) {
-              const _ = new URLSearchParams(window.location.search);
-              let _;
-              _.has("selectedTags") &&
-                (_ = _.getAll("selectedTags")
-                  .filter(Boolean)
-                  .map((_) => ({
-                    label: _,
-                    value: _,
-                  })));
-              let _ = !1,
-                _ = _.map((_) => ({
-                  label: _,
-                  value: _,
-                }));
-              _.has("excludedTags") &&
-                ((_ = _.getAll("excludedTags")
-                  .filter(Boolean)
-                  .map((_) => ({
-                    label: _,
-                    value: _,
-                  }))),
-                (_ = _?.length > 0));
-              let _;
-              _.has("eventtype") &&
-                (_ = _.getAll("eventtype")
-                  .filter(Boolean)
-                  .map((_) => {
-                    const _ = Number.parseInt(_.get("eventtype"));
-                    return {
-                      label: (0, _._)(_),
-                      value: _,
-                    };
-                  }));
-              let _;
-              _.has("filterDate") &&
-                _.get("filterDate")?.length > 0 &&
-                (_ = _.unix(Number(_.get("filterDate"))));
-              let _ = !1;
-              _.has("orderByVisibility") &&
-                _.get("orderByVisibility")?.length > 0 &&
-                (_ = !!_.get("orderByVisibility")),
-                (0, _._)(() => {
-                  (this.selectedTags = _),
-                    (this.excludedTags = _),
-                    (this.filterEventTypes = _),
-                    (this.filterDate = _),
-                    (this.bOrderByVisibilityStartTime = _),
-                    (this.bUseCustomQuery =
-                      (_ && _.length > 0) || _ || (_ && _.length > 0));
-                });
-            }
-          };
-        _([_._], _.prototype, "selectedTags", 2),
-          _([_._], _.prototype, "excludedTags", 2),
-          _([_._], _.prototype, "filterDate", 2),
-          _([_._], _.prototype, "filterDateAsString", 2),
-          _([_._], _.prototype, "eventsToLoadPerPaging", 2),
-          _([_._], _.prototype, "filterEventTypes", 2),
-          _([_._], _.prototype, "bOrderByVisibilityStartTime", 2),
-          _([_._], _.prototype, "bUseCustomQuery", 2);
-        let _ = _;
-        var _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          },
-          _ = ((_) => (
-            (_[(_.k_ModReviewed = 0)] = "k_ModReviewed"),
-            (_[(_.k_ModUnreviewed = 1)] = "k_ModUnreviewed"),
-            (_[(_.k_ChangeEventType = 2)] = "k_ChangeEventType"),
-            (_[(_.k_UpdateSeasonTags = 3)] = "k_UpdateSeasonTags"),
-            (_[(_.k_ModReReviewed = 4)] = "k_ModReReviewed"),
-            (_[(_.k_ModRemovedFromSteamChina = 5)] =
-              "k_ModRemovedFromSteamChina"),
-            (_[(_.k_ModFlagAdultOnlyContent = 6)] =
-              "k_ModFlagAdultOnlyContent"),
-            (_[(_.k_ModRemoveAdultOnlyContent = 7)] =
-              "k_ModRemoveAdultOnlyContent"),
-            (_[(_.k_ModFlagHalloweenEvent = 8)] = "k_ModFlagHalloweenEvent"),
-            (_[(_.k_ModRemoveHalloweenEvent = 9)] =
-              "k_ModRemoveHalloweenEvent"),
-            _
-          ))(_ || {});
-        const _ = "ModAct";
-        class _ {
-          m_moderator;
-          m_rtWhen;
-          m_action;
-          m_newEventType;
-          m_newTagAdded;
-          ToModString() {
-            let _ =
-              _ +
-              "_" +
-              this.m_moderator +
-              "_" +
-              Math.floor(this.m_rtWhen) +
-              "_" +
-              this.m_action;
-            switch (this.m_action) {
-              case 2:
-                _ += "_" + this.m_newEventType;
-                break;
-              case 3:
-                _ += "_" + this.m_newTagAdded;
-                break;
-            }
-            return _;
-          }
-          FromString(_) {
-            let _ = _.split("_");
-            if (!_ || _[0] !== _) return !1;
-            switch (
-              ((this.m_moderator = Number(_[1])),
-              (this.m_rtWhen = Number(_[2])),
-              (this.m_action = Number(_[3])),
-              this.m_action)
-            ) {
-              case 2:
-                this.m_newEventType = Number(_[4]);
-                break;
-              case 3:
-                this.m_newTagAdded = _.slice(4).join("_");
-                break;
-            }
-            return !0;
-          }
-          SetActionChangeEvent(_) {
-            return (
-              (this.m_moderator = _._.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = 2),
-              (this.m_newEventType = _),
-              this
-            );
-          }
-          SetReviewAction(_) {
-            return (
-              (this.m_moderator = _._.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = _ ? 0 : 1),
-              this
-            );
-          }
-          SetAdultOnlyContentAction(_) {
-            return (
-              (this.m_moderator = _._.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = _ ? 6 : 7),
-              this
-            );
-          }
-          SetHalloweenEventTypeAction(_) {
-            return (
-              (this.m_moderator = _._.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = _ ? 8 : 9),
-              this
-            );
-          }
-          SetReReviewAction(_) {
-            return (
-              (this.m_moderator = _._.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = _ ? 4 : 1),
-              this
-            );
-          }
-          static IsAuditAction(_) {
-            return _.startsWith(_);
-          }
-          SetUpdateSeasonalTags(_) {
-            return (
-              (this.m_moderator = _._.accountid),
-              (this.m_rtWhen = Date.now() / 1e3),
-              (this.m_action = 3),
-              (this.m_newTagAdded = _),
-              this
-            );
-          }
-        }
-        const _ = class _ {
-          static s_Singleton;
-          m_mapEventGIDToSolrData = new Map();
-          m_listEvents = new Array();
-          BHasSolrEvent(_) {
-            return this.m_mapEventGIDToSolrData.has(_);
-          }
-          GetAllSolrEvents() {
-            return this.m_listEvents;
-          }
-          static Get() {
-            return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-          }
-          constructor() {
-            (0, _._)(this);
-          }
-          ClearAllSolrEvents() {
-            (this.m_mapEventGIDToSolrData = new Map()),
-              (this.m_listEvents = new Array());
-          }
-          async LoadPartnerEventForModerationIncremental(_, _ = 30) {
-            const _ =
-              _._.STORE_BASE_URL +
-              "events_admin/ajaxgetmoderationspecificpartnerevents";
-            let _ = 0;
-            this.m_listEvents?.length &&
-              (this.m_listEvents.forEach(
-                (_) =>
-                  (_ = Math.max(
-                    _,
-                    Math.floor(Date.parse(_.last_modified_date) / 1e3),
-                  )),
-              ),
-              this.m_listEvents.filter(
-                (_) => Math.floor(Date.parse(_.last_modified_date) / 1e3) == _,
-              ).length >= _ && _++);
-            const _ = {
-              start_time: _,
-              count: _,
-            };
-            try {
-              const _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-                cancelToken: _ ? _.token : void 0,
-              });
-              if (_ && _.token.reason) return [];
-              if (_ && _.data) {
-                let _ = new Array();
-                return (
-                  (0, _._)(() => {
-                    _.data.docs.forEach((_) => {
-                      this.m_mapEventGIDToSolrData.has(_.unique_id) ||
-                        (_.push(_),
-                        this.m_mapEventGIDToSolrData.set(_.unique_id, _),
-                        this.m_listEvents.push(_));
+                },
+              },
+              {
+                key: `renderPlaceholderOrValue`,
+                value: function () {
+                  var _ = this,
+                    _ = this.getComponents(),
+                    _ = _.MultiValue,
+                    _ = _.MultiValueContainer,
+                    _ = _.MultiValueLabel,
+                    _ = _.MultiValueRemove,
+                    _ = _.SingleValue,
+                    _ = _.Placeholder,
+                    _ = this.commonProps,
+                    _ = this.props,
+                    _ = _.controlShouldRenderValue,
+                    _ = _.isDisabled,
+                    _ = _.isMulti,
+                    _ = _.inputValue,
+                    _ = _.placeholder,
+                    _ = this.state,
+                    _ = _.selectValue,
+                    _ = _.focusedValue,
+                    _ = _.isFocused;
+                  if (!this.hasValue() || !_)
+                    return _
+                      ? null
+                      : _.createElement(
+                          _,
+                          _({}, _, {
+                            key: `placeholder`,
+                            isDisabled: _,
+                            isFocused: _,
+                            innerProps: {
+                              _: this.getElementId(`placeholder`),
+                            },
+                          }),
+                          _,
+                        );
+                  if (_)
+                    return _.map(function (_, _) {
+                      var _ = _ === _,
+                        _ = `${_.getOptionLabel(_)}-${_.getOptionValue(_)}`;
+                      return _.createElement(
+                        _,
+                        _({}, _, {
+                          components: {
+                            Container: _,
+                            Label: _,
+                            Remove: _,
+                          },
+                          isFocused: _,
+                          isDisabled: _,
+                          key: _,
+                          index: _,
+                          removeProps: {
+                            onClick: function () {
+                              return _.removeValue(_);
+                            },
+                            onTouchEnd: function () {
+                              return _.removeValue(_);
+                            },
+                            onMouseDown: function (_) {
+                              _.preventDefault();
+                            },
+                          },
+                          data: _,
+                        }),
+                        _.formatOptionLabel(_, `value`),
+                      );
                     });
-                  }),
-                  _
-                );
-              }
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "LoadPartnerEventForModerationIncremental failed:" +
-                  _.strErrorMsg,
+                  if (_) return null;
+                  var _ = _[0];
+                  return _.createElement(
+                    _,
+                    _({}, _, {
+                      data: _,
+                      isDisabled: _,
+                    }),
+                    this.formatOptionLabel(_, `value`),
+                  );
+                },
+              },
+              {
+                key: `renderClearIndicator`,
+                value: function () {
+                  var _ = this.getComponents().ClearIndicator,
+                    _ = this.commonProps,
+                    _ = this.props,
+                    _ = _.isDisabled,
+                    _ = _.isLoading,
+                    _ = this.state.isFocused;
+                  if (!this.isClearable() || !_ || _ || !this.hasValue() || _)
+                    return null;
+                  var _ = {
+                    onMouseDown: this.onClearIndicatorMouseDown,
+                    onTouchEnd: this.onClearIndicatorTouchEnd,
+                    "aria-hidden": `true`,
+                  };
+                  return _.createElement(
+                    _,
+                    _({}, _, {
+                      innerProps: _,
+                      isFocused: _,
+                    }),
+                  );
+                },
+              },
+              {
+                key: `renderLoadingIndicator`,
+                value: function () {
+                  var _ = this.getComponents().LoadingIndicator,
+                    _ = this.commonProps,
+                    _ = this.props,
+                    _ = _.isDisabled,
+                    _ = _.isLoading,
+                    _ = this.state.isFocused;
+                  return !_ || !_
+                    ? null
+                    : _.createElement(
+                        _,
+                        _({}, _, {
+                          innerProps: {
+                            "aria-hidden": `true`,
+                          },
+                          isDisabled: _,
+                          isFocused: _,
+                        }),
+                      );
+                },
+              },
+              {
+                key: `renderIndicatorSeparator`,
+                value: function () {
+                  var _ = this.getComponents(),
+                    _ = _.DropdownIndicator,
+                    _ = _.IndicatorSeparator;
+                  if (!_ || !_) return null;
+                  var _ = this.commonProps,
+                    _ = this.props.isDisabled,
+                    _ = this.state.isFocused;
+                  return _.createElement(
+                    _,
+                    _({}, _, {
+                      isDisabled: _,
+                      isFocused: _,
+                    }),
+                  );
+                },
+              },
+              {
+                key: `renderDropdownIndicator`,
+                value: function () {
+                  var _ = this.getComponents().DropdownIndicator;
+                  if (!_) return null;
+                  var _ = this.commonProps,
+                    _ = this.props.isDisabled,
+                    _ = this.state.isFocused,
+                    _ = {
+                      onMouseDown: this.onDropdownIndicatorMouseDown,
+                      onTouchEnd: this.onDropdownIndicatorTouchEnd,
+                      "aria-hidden": `true`,
+                    };
+                  return _.createElement(
+                    _,
+                    _({}, _, {
+                      innerProps: _,
+                      isDisabled: _,
+                      isFocused: _,
+                    }),
+                  );
+                },
+              },
+              {
+                key: `renderMenu`,
+                value: function () {
+                  var _ = this,
+                    _ = this.getComponents(),
+                    _ = _.Group,
+                    _ = _.GroupHeading,
+                    _ = _.Menu,
+                    _ = _.MenuList,
+                    _ = _.MenuPortal,
+                    _ = _.LoadingMessage,
+                    _ = _.NoOptionsMessage,
+                    _ = _.Option,
+                    _ = this.commonProps,
+                    _ = this.state.focusedOption,
+                    _ = this.props,
+                    _ = _.captureMenuScroll,
+                    _ = _.inputValue,
+                    _ = _.isLoading,
+                    _ = _.loadingMessage,
+                    _ = _.minMenuHeight,
+                    _ = _.maxMenuHeight,
+                    _ = _.menuIsOpen,
+                    _ = _.menuPlacement,
+                    _ = _.menuPosition,
+                    _ = _.menuPortalTarget,
+                    _ = _.menuShouldBlockScroll,
+                    _ = _.menuShouldScrollIntoView,
+                    _ = _.noOptionsMessage,
+                    _ = _.onMenuScrollToTop,
+                    _ = _.onMenuScrollToBottom;
+                  if (!_) return null;
+                  var _ = function (_, _) {
+                      var _ = _.type,
+                        _ = _.data,
+                        _ = _.isDisabled,
+                        _ = _.isSelected,
+                        _ = _.label,
+                        _ = _.value,
+                        _ = _ === _,
+                        _ = _
+                          ? void 0
+                          : function () {
+                              return _.onOptionHover(_);
+                            },
+                        _ = _
+                          ? void 0
+                          : function () {
+                              return _.selectOption(_);
+                            },
+                        _ = `${_.getElementId(`option`)}-${_}`,
+                        _ = {
+                          _: _,
+                          onClick: _,
+                          onMouseMove: _,
+                          onMouseOver: _,
+                          tabIndex: -1,
+                          role: `option`,
+                          "aria-selected": _.isAppleDevice ? void 0 : _,
+                        };
+                      return _.createElement(
+                        _,
+                        _({}, _, {
+                          innerProps: _,
+                          data: _,
+                          isDisabled: _,
+                          isSelected: _,
+                          key: _,
+                          label: _,
+                          type: _,
+                          value: _,
+                          isFocused: _,
+                          innerRef: _ ? _.getFocusedOptionRef : void 0,
+                        }),
+                        _.formatOptionLabel(_.data, `menu`),
+                      );
+                    },
+                    _;
+                  if (this.hasOptions())
+                    _ = this.getCategorizedOptions().map(function (_) {
+                      if (_.type === `group`) {
+                        var _ = _.data,
+                          _ = _.options,
+                          _ = _.index,
+                          _ = `${_.getElementId(`group`)}-${_}`,
+                          _ = `${_}-heading`;
+                        return _.createElement(
+                          _,
+                          _({}, _, {
+                            key: _,
+                            data: _,
+                            options: _,
+                            Heading: _,
+                            headingProps: {
+                              _: _,
+                              data: _.data,
+                            },
+                            label: _.formatGroupLabel(_.data),
+                          }),
+                          _.options.map(function (_) {
+                            return _(_, `${_}-${_.index}`);
+                          }),
+                        );
+                      }
+                      if (_.type === `option`) return _(_, `${_.index}`);
+                    });
+                  else if (_) {
+                    var _ = _({
+                      inputValue: _,
+                    });
+                    if (_ === null) return null;
+                    _ = _.createElement(_, _, _);
+                  } else {
+                    var _ = _({
+                      inputValue: _,
+                    });
+                    if (_ === null) return null;
+                    _ = _.createElement(_, _, _);
+                  }
+                  var _ = {
+                      minMenuHeight: _,
+                      maxMenuHeight: _,
+                      menuPlacement: _,
+                      menuPosition: _,
+                      menuShouldScrollIntoView: _,
+                    },
+                    _ = _.createElement(
+                      _.MenuPlacer,
+                      _({}, _, _),
+                      function (_) {
+                        var _ = _.ref,
+                          _ = _.placerProps,
+                          _ = _.placement,
+                          _ = _.maxHeight;
+                        return _.createElement(
+                          _,
+                          _({}, _, _, {
+                            innerRef: _,
+                            innerProps: {
+                              onMouseDown: _.onMenuMouseDown,
+                              onMouseMove: _.onMenuMouseMove,
+                            },
+                            isLoading: _,
+                            placement: _,
+                          }),
+                          _.createElement(
+                            _,
+                            {
+                              captureEnabled: _,
+                              onTopArrive: _,
+                              onBottomArrive: _,
+                              lockEnabled: _,
+                            },
+                            function (_) {
+                              return _.createElement(
+                                _,
+                                _({}, _, {
+                                  innerRef: function (_) {
+                                    _.getMenuListRef(_), _(_);
+                                  },
+                                  innerProps: {
+                                    role: `listbox`,
+                                    "aria-multiselectable": _.isMulti,
+                                    _: _.getElementId(`listbox`),
+                                  },
+                                  isLoading: _,
+                                  maxHeight: _,
+                                  focusedOption: _,
+                                }),
+                                _,
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  return _ || _ === `fixed`
+                    ? _.createElement(
+                        _,
+                        _({}, _, {
+                          appendTo: _,
+                          controlElement: this.controlRef,
+                          menuPlacement: _,
+                          menuPosition: _,
+                        }),
+                        _,
+                      )
+                    : _;
+                },
+              },
+              {
+                key: `renderFormField`,
+                value: function () {
+                  var _ = this,
+                    _ = this.props,
+                    _ = _.delimiter,
+                    _ = _.isDisabled,
+                    _ = _.isMulti,
+                    _ = _.name,
+                    _ = _.required,
+                    _ = this.state.selectValue;
+                  if (_ && !this.hasValue() && !_)
+                    return _.createElement(_, {
+                      name: _,
+                      onFocus: this.onValueInputFocus,
+                    });
+                  if (_ && !_) {
+                    if (_) {
+                      if (_) {
+                        var _ = _.map(function (_) {
+                          return _.getOptionValue(_);
+                        }).join(_);
+                        return _.createElement(`input`, {
+                          name: _,
+                          type: `hidden`,
+                          value: _,
+                        });
+                      }
+                      var _ =
+                        _.length > 0
+                          ? _.map(function (_, _) {
+                              return _.createElement(`input`, {
+                                key: `i-${_}`,
+                                name: _,
+                                type: `hidden`,
+                                value: _.getOptionValue(_),
+                              });
+                            })
+                          : _.createElement(`input`, {
+                              name: _,
+                              type: `hidden`,
+                              value: ``,
+                            });
+                      return _.createElement(`div`, null, _);
+                    }
+                    var _ = _[0] ? this.getOptionValue(_[0]) : ``;
+                    return _.createElement(`input`, {
+                      name: _,
+                      type: `hidden`,
+                      value: _,
+                    });
+                  }
+                },
+              },
+              {
+                key: `renderLiveRegion`,
+                value: function () {
+                  var _ = this.commonProps,
+                    _ = this.state,
+                    _ = _.ariaSelection,
+                    _ = _.focusedOption,
+                    _ = _.focusedValue,
+                    _ = _.isFocused,
+                    _ = _.selectValue,
+                    _ = this.getFocusableOptions();
+                  return _.createElement(
+                    _,
+                    _({}, _, {
+                      _: this.getElementId(`live-region`),
+                      ariaSelection: _,
+                      focusedOption: _,
+                      focusedValue: _,
+                      isFocused: _,
+                      selectValue: _,
+                      focusableOptions: _,
+                      isAppleDevice: this.isAppleDevice,
+                    }),
+                  );
+                },
+              },
+              {
+                key: `render`,
+                value: function () {
+                  var _ = this.getComponents(),
+                    _ = _.Control,
+                    _ = _.IndicatorsContainer,
+                    _ = _.SelectContainer,
+                    _ = _.ValueContainer,
+                    _ = this.props,
+                    _ = _.className,
+                    _ = _._,
+                    _ = _.isDisabled,
+                    _ = _.menuIsOpen,
+                    _ = this.state.isFocused,
+                    _ = (this.commonProps = this.getCommonProps());
+                  return _.createElement(
+                    _,
+                    _({}, _, {
+                      className: _,
+                      innerProps: {
+                        _: _,
+                        onKeyDown: this.onKeyDown,
+                      },
+                      isDisabled: _,
+                      isFocused: _,
+                    }),
+                    this.renderLiveRegion(),
+                    _.createElement(
+                      _,
+                      _({}, _, {
+                        innerRef: this.getControlRef,
+                        innerProps: {
+                          onMouseDown: this.onControlMouseDown,
+                          onTouchEnd: this.onControlTouchEnd,
+                        },
+                        isDisabled: _,
+                        isFocused: _,
+                        menuIsOpen: _,
+                      }),
+                      _.createElement(
+                        _,
+                        _({}, _, {
+                          isDisabled: _,
+                        }),
+                        this.renderPlaceholderOrValue(),
+                        this.renderInput(),
+                      ),
+                      _.createElement(
+                        _,
+                        _({}, _, {
+                          isDisabled: _,
+                        }),
+                        this.renderClearIndicator(),
+                        this.renderLoadingIndicator(),
+                        this.renderIndicatorSeparator(),
+                        this.renderDropdownIndicator(),
+                      ),
+                    ),
+                    this.renderMenu(),
+                    this.renderFormField(),
+                  );
+                },
+              },
+            ],
+            [
+              {
+                key: `getDerivedStateFromProps`,
+                value: function (_, _) {
+                  var _ = _.prevProps,
+                    _ = _.clearFocusValueOnUpdate,
+                    _ = _.inputIsHiddenAfterUpdate,
+                    _ = _.ariaSelection,
+                    _ = _.isFocused,
+                    _ = _.prevWasFocused,
+                    _ = _.instancePrefix,
+                    _ = _.options,
+                    _ = _.value,
+                    _ = _.menuIsOpen,
+                    _ = _.inputValue,
+                    _ = _.isMulti,
+                    _ = _.cleanValue(_),
+                    _ = {};
+                  if (
+                    _ &&
+                    (_ !== _.value ||
+                      _ !== _.options ||
+                      _ !== _.menuIsOpen ||
+                      _ !== _.inputValue)
+                  ) {
+                    var _ = _ ? _(_, _) : [],
+                      _ = _ ? _(_(_, _), `${_}-option`) : [],
+                      _ = _ ? _(_, _) : null,
+                      _ = _(_, _);
+                    _ = {
+                      selectValue: _,
+                      focusedOption: _,
+                      focusedOptionId: _(_, _),
+                      focusableOptionsWithIds: _,
+                      focusedValue: _,
+                      clearFocusValueOnUpdate: !1,
+                    };
+                  }
+                  var _ =
+                      _ != null && _ !== _
+                        ? {
+                            inputIsHidden: _,
+                            inputIsHiddenAfterUpdate: void 0,
+                          }
+                        : {},
+                    _ = _,
+                    _ = _ && _;
+                  return (
+                    _ &&
+                      !_ &&
+                      ((_ = {
+                        value: _.valueTernary(_, _, _[0] || null),
+                        options: _,
+                        action: `initial-input-focus`,
+                      }),
+                      (_ = !_)),
+                    _?.action === `initial-input-focus` && (_ = null),
+                    _(
+                      _(_({}, _), _),
+                      {},
+                      {
+                        prevProps: _,
+                        ariaSelection: _,
+                        prevWasFocused: _,
+                      },
+                    )
+                  );
+                },
+              },
+            ],
+          ),
+          _
+        );
+      })(_.Component);
+    (_.defaultProps = _),
+      (_.Select = _),
+      (_.createFilter = _),
+      (_.defaultProps = _),
+      (_.defaultTheme = _),
+      (_.getOptionLabel = _),
+      (_.getOptionValue = _),
+      (_.mergeStyles = _);
+  }),
+  _ = _((_) => {
+    Object.defineProperty(_, "__esModule", {
+      value: !0,
+    });
+    var _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _(),
+      _ = _();
+    _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _(), _();
+    function _(_) {
+      return _ && _.__esModule
+        ? _
+        : {
+            default: _,
+          };
+    }
+    function _(_) {
+      if (_ && _.__esModule) return _;
+      var _ = Object.create(null);
+      return (
+        _ &&
+          Object.keys(_).forEach(function (_) {
+            if (_ !== "default") {
+              var _ = Object.getOwnPropertyDescriptor(_, _);
+              Object.defineProperty(
                 _,
+                _,
+                _.get
+                  ? _
+                  : {
+                      enumerable: !0,
+                      get: function () {
+                        return _[_];
+                      },
+                    },
               );
             }
-            return [];
-          }
-          async UpdateTagsOnPartnerEvent(_, _, _, _, _, _) {
-            const _ = _._.STORE_BASE_URL + "events_admin/ajaxupdatetags";
-            let _ = _.join(",");
-            _ && (_.length > 0 && (_ += ","), (_ += _.ToModString()));
-            const _ = new FormData();
-            return (
-              _.append("sessionid", (0, _._)()),
-              _.append("clan_accountid", "" + _.GetAccountID()),
-              _.append("gid_announcement", _),
-              _.append("add_tags", _),
-              _.append("remove_tags", _.join(",")),
-              (
-                await _().post(_, _, {
-                  withCredentials: !0,
-                  cancelToken: _.token,
-                })
-              ).data.tags
-            );
-          }
-          async UpdatePartnerEventType(_, _, _, _) {
-            const _ = _._.STORE_BASE_URL + "events_admin/ajaxupdateeventtype",
-              _ = new FormData();
-            _.append("sessionid", (0, _._)()),
-              _.append("clan_accountid", "" + _.GetAccountID()),
-              _.append("gid_event", _),
-              _.append("new_event_type", "" + _),
-              await _().post(_, _, {
-                withCredentials: !0,
-                cancelToken: _.token,
-              });
-          }
-        };
-        _([_._], _.prototype, "m_mapEventGIDToSolrData", 2),
-          _([_._], _.prototype, "m_listEvents", 2),
-          _([_._], _.prototype, "ClearAllSolrEvents", 1);
-        let _ = _;
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { accountID: _, locToken: _ } = _,
-            _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
-            { data: _ } = (0, _._)(_);
-          let _ =
-            "https://steamsupport.valvesoftware.com/account/overview/" +
-            _.ConvertTo64BitString();
-          return (0, _.jsx)("div", {
-            children: (0, _._)(
-              _,
-              (0, _.jsx)("a", {
-                href: _,
-                target: _._.IN_CLIENT ? void 0 : "_blank",
-                children: _
-                  ? (0, _.jsx)(_.Fragment, {
-                      children: _.m_strPlayerName,
-                    })
-                  : (0, _.jsx)(_.Fragment, {
-                      children: (0, _.jsx)("span", {
-                        children: _,
-                      }),
-                    }),
-              }),
-            ),
-          });
-        }
-        function _(_) {
-          const { modAction: _ } = _,
-            _ =
-              (0, _._)(_.m_rtWhen) +
-              " @ " +
-              (0, _._)(_.m_rtWhen, {
-                bForce24HourClock: !1,
-              }),
-            _ = (0, _.jsx)(_, {
-              locToken: "#EventModTile_Moderator",
-              accountID: _.m_moderator,
-            });
-          switch (_.m_action) {
-            case _.k_ModReviewed:
-              return (0, _.jsx)("div", {
-                className: _.ModeratorAuditActionCtn,
-                children: (0, _._)(
-                  "#EventModTile_Action_Reviewed",
-                  (0, _.jsx)("span", {
-                    children: _,
-                  }),
-                  _,
-                ),
-              });
-            case _.k_ModUnreviewed:
-              return (0, _.jsx)("div", {
-                className: _.ModeratorAuditActionCtn,
-                children: (0, _._)(
-                  "#EventModTile_Action_UnReviewed",
-                  (0, _.jsx)("span", {
-                    children: _,
-                  }),
-                  _,
-                ),
-              });
-            case _.k_ChangeEventType:
-              return (0, _.jsx)("div", {
-                className: _.ModeratorAuditActionCtn,
-                children: (0, _._)(
-                  "#EventModTile_Action_NewEventType",
-                  (0, _.jsx)("span", {
-                    children: _,
-                  }),
-                  _,
-                  (0, _._)(_.m_newEventType),
-                ),
-              });
-            case _.k_UpdateSeasonTags:
-              return (0, _.jsx)("div", {
-                className: _.ModeratorAuditActionCtn,
-                children: (0, _._)(
-                  "#EventModTile_Action_SeasonTagUpdate",
-                  (0, _.jsx)("span", {
-                    children: _,
-                  }),
-                  _,
-                  _.m_newTagAdded,
-                ),
-              });
-            case _.k_ModReReviewed:
-              return (0, _.jsx)("div", {
-                className: _.ModeratorAuditActionCtn,
-                children: (0, _._)(
-                  "#EventModTile_Action_ReReviewed",
-                  (0, _.jsx)("span", {
-                    children: _,
-                  }),
-                  _,
-                ),
-              });
-            case _.k_ModRemovedFromSteamChina:
-              return (0, _.jsx)("div", {
-                className: _.ModeratorAuditActionCtn,
-                children: (0, _._)(
-                  "#EventModTile_Action_RemoveFromSC",
-                  (0, _.jsx)("span", {
-                    children: _,
-                  }),
-                  _,
-                ),
-              });
-            case _.k_ModFlagAdultOnlyContent:
-              return (0, _.jsx)("div", {
-                className: _.ModeratorAuditActionCtn,
-                children: (0, _._)(
-                  "#EventModTile_Action_FlagAdultContent",
-                  (0, _.jsx)("span", {
-                    children: _,
-                  }),
-                  _,
-                ),
-              });
-            case _.k_ModRemoveAdultOnlyContent:
-              return (0, _.jsx)("div", {
-                className: _.ModeratorAuditActionCtn,
-                children: (0, _._)(
-                  "#EventModTile_Action_RemoveAdultContent",
-                  (0, _.jsx)("span", {
-                    children: _,
-                  }),
-                  _,
-                ),
-              });
-            default:
-              return (0, _.jsx)("div", {
-                className: _.ModeratorAuditActionCtn,
-                children: _.ToModString(),
-              });
-          }
-        }
-        function _(_) {
-          const [_, _] = _.useState(!0),
-            _ = 3,
-            _ = (_) => {
-              const { eventModel: _ } = _;
-              return _.map((_) => {
-                const _ = new _();
-                return (
-                  _.FromString(_),
-                  (0, _.jsx)(
-                    _,
-                    {
-                      modAction: _,
-                    },
-                    _.GID + _,
-                  )
-                );
+          }),
+        (_.default = _),
+        Object.freeze(_)
+      );
+    }
+    var _ = _(_),
+      _ = _(_),
+      _ = _.forwardRef(function (_, _) {
+        var _ = _.useStateManager(_);
+        return _.createElement(
+          _.Select,
+          _(
+            {
+              ref: _,
+            },
+            _,
+          ),
+        );
+      });
+    (_.useStateManager = _.useStateManager),
+      (_.createFilter = _.createFilter),
+      (_.defaultTheme = _.defaultTheme),
+      (_.mergeStyles = _.mergeStyles),
+      (_.components = _.components),
+      (_.NonceProvider = function (_) {
+        var _ = _.nonce,
+          _ = _.children,
+          _ = _.cacheKey,
+          _ = _.useMemo(
+            function () {
+              return _.default({
+                key: _,
+                nonce: _,
               });
             },
-            { eventModel: _ } = _;
-          let _ = _.GetAllTags()
-            .filter((_) => _.IsAuditAction(_))
-            .reverse();
-          const _ = _.length,
-            _ = _.length > _ && _;
-          return _.length == 0
-            ? null
-            : (_ && (_ = _.splice(0, _)),
-              (0, _.jsxs)("div", {
-                children: [
-                  (0, _.jsx)("h4", {
-                    children: (0, _._)("#EventModTile_Action_Title"),
-                  }),
-                  _(_),
-                  _ &&
-                    (0, _.jsx)("a", {
-                      onClick: () => _(!1),
-                      className: _.ExpandModActions,
-                      children: (0, _._)("#EventModTile_Action_More", _ - _),
-                    }),
-                  !_ &&
-                    _ > _ &&
-                    (0, _.jsx)("a", {
-                      onClick: () => _(!0),
-                      className: _.ExpandModActions,
-                      children: (0, _._)("#EventModTile_Action_Hide"),
-                    }),
-                ],
-              }));
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        const _ = __webpack_require__("chunkid"),
-          _ = 500,
-          _ = 50,
-          _ = {
-            bExhaustedEventList: !1,
-            bInfiniteScrollLoading: !0,
-            nLastFetchCompletedMS: 0,
-          };
-        let _ = class extends _.Component {
-          m_cancelSignal = _().CancelToken.source();
-          m_refScroll = _.createRef();
-          m_IntervalTimer = void 0;
-          state = {
-            bInfiniteScrollLoading: !1,
-            bExhaustedEventList: !1,
-            nLastFetchCompletedMS: 0,
-          };
-          m_nPage = 0;
-          componentDidMount() {
-            this.setState(
-              {
-                bInfiniteScrollLoading: !0,
-              },
-              this.LoadMoreModerationEvents,
-            ),
-              window.addEventListener("scroll", this.OnScroll, !0),
-              _.Get().Init(this.props.history.location.search);
-          }
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "EventModerationLanding component unmounted",
-            ),
-              window.removeEventListener("scroll", this.OnScroll),
-              this.ClearTimer();
-          }
-          HandleUpdateQueryParameter() {
-            const _ = _.Get();
-            if (_.bUseCustomQuery) {
-              const {
-                selectedTags: _,
-                excludedTags: _,
-                filterEventTypes: _,
-                filterDate: _,
-                bOrderByVisibilityStartTime: _,
-              } = _;
-              if (_ || _ || _ || _ || _) {
-                const _ = new URLSearchParams();
-                _?.forEach((_) => _.append("selectedTags", _.value)),
-                  _?.forEach((_) => _.append("excludedTags", _.value)),
-                  _?.forEach((_) => _.append("eventtype", "" + _.value)),
-                  _?.unix() > 0 && _.append("filterDate", "" + _.unix()),
-                  _ && _.append("orderByVisibility", "1"),
-                  this.props.history.push(`?${_.toString()}`);
-              } else this.props.history.push("?");
-            }
-          }
-          ClearTimer() {
-            this.m_IntervalTimer &&
-              (window.clearInterval(this.m_IntervalTimer),
-              (this.m_IntervalTimer = void 0));
-          }
-          HandleError(_) {
-            let _ = (0, _._)(_);
-            console.error("EventModerationLanding error: " + _.strErrorMsg, _),
-              this.setState({
-                bInfiniteScrollLoading: !1,
-                bExhaustedEventList: !0,
-                nLastFetchCompletedMS: Date.now(),
-              });
-          }
-          async LoadMorePublicEventWithDelay() {
-            this.m_IntervalTimer = window.setInterval(
-              this.LoadMoreModerationEvents,
+            [_, _],
+          );
+        return _.createElement(
+          _.CacheProvider,
+          {
+            value: _,
+          },
+          _,
+        );
+      }),
+      (_.default = _);
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  }),
+  _ = _((_) => {
+    _._default = _().default;
+  }),
+  _ = _(_()),
+  _ = _(),
+  _ = _(),
+  _ = [`mod_reviewed`, `auto_migrated`],
+  _ = 20,
+  _ = class _ {
+    static s_Singleton;
+    selectedTags = void 0;
+    excludedTags = void 0;
+    filterDate = void 0;
+    filterDateAsString = void 0;
+    eventsToLoadPerPaging = _;
+    filterEventTypes = void 0;
+    bOrderByVisibilityStartTime = !1;
+    bUseCustomQuery = !1;
+    static Get() {
+      return (_.s_Singleton ||= new _()), _.s_Singleton;
+    }
+    constructor() {
+      _(this);
+    }
+    Init(_) {
+      let _ = new URLSearchParams(window.location.search),
+        _;
+      _.has(`selectedTags`) &&
+        (_ = _.getAll(`selectedTags`)
+          .filter(Boolean)
+          .map((_) => ({
+            label: _,
+            value: _,
+          })));
+      let _ = !1,
+        _ = _.map((_) => ({
+          label: _,
+          value: _,
+        }));
+      _.has(`excludedTags`) &&
+        ((_ = _.getAll(`excludedTags`)
+          .filter(Boolean)
+          .map((_) => ({
+            label: _,
+            value: _,
+          }))),
+        (_ = _?.length > 0));
+      let _;
+      _.has(`eventtype`) &&
+        (_ = _.getAll(`eventtype`)
+          .filter(Boolean)
+          .map((_) => {
+            let _ = Number.parseInt(_.get(`eventtype`));
+            return {
+              label: _(_),
+              value: _,
+            };
+          }));
+      let _;
+      _.has(`filterDate`) &&
+        _.get(`filterDate`)?.length > 0 &&
+        (_ = _.unix(Number(_.get(`filterDate`))));
+      let _ = !1;
+      _.has(`orderByVisibility`) &&
+        _.get(`orderByVisibility`)?.length > 0 &&
+        (_ = !!_.get(`orderByVisibility`)),
+        _(() => {
+          (this.selectedTags = _),
+            (this.excludedTags = _),
+            (this.filterEventTypes = _),
+            (this.filterDate = _),
+            (this.bOrderByVisibilityStartTime = _),
+            (this.bUseCustomQuery =
+              (_ && _.length > 0) || _ || (_ && _.length > 0));
+        });
+    }
+  };
+_([_], _.prototype, `selectedTags`, void 0),
+  _([_], _.prototype, `excludedTags`, void 0),
+  _([_], _.prototype, `filterDate`, void 0),
+  _([_], _.prototype, `filterDateAsString`, void 0),
+  _([_], _.prototype, `eventsToLoadPerPaging`, void 0),
+  _([_], _.prototype, `filterEventTypes`, void 0),
+  _([_], _.prototype, `bOrderByVisibilityStartTime`, void 0),
+  _([_], _.prototype, `bUseCustomQuery`, void 0);
+var _ = (function (_) {
+    return (
+      (_[(_.k_ModReviewed = 0)] = `k_ModReviewed`),
+      (_[(_.k_ModUnreviewed = 1)] = `k_ModUnreviewed`),
+      (_[(_.k_ChangeEventType = 2)] = `k_ChangeEventType`),
+      (_[(_.k_UpdateSeasonTags = 3)] = `k_UpdateSeasonTags`),
+      (_[(_.k_ModReReviewed = 4)] = `k_ModReReviewed`),
+      (_[(_.k_ModRemovedFromSteamChina = 5)] = `k_ModRemovedFromSteamChina`),
+      (_[(_.k_ModFlagAdultOnlyContent = 6)] = `k_ModFlagAdultOnlyContent`),
+      (_[(_.k_ModRemoveAdultOnlyContent = 7)] = `k_ModRemoveAdultOnlyContent`),
+      (_[(_.k_ModFlagHalloweenEvent = 8)] = `k_ModFlagHalloweenEvent`),
+      (_[(_.k_ModRemoveHalloweenEvent = 9)] = `k_ModRemoveHalloweenEvent`),
+      _
+    );
+  })({}),
+  _ = `ModAct`,
+  _ = class {
+    m_moderator;
+    m_rtWhen;
+    m_action;
+    m_newEventType;
+    m_newTagAdded;
+    ToModString() {
+      let _ =
+        `ModAct_` +
+        this.m_moderator +
+        `_` +
+        Math.floor(this.m_rtWhen) +
+        `_` +
+        this.m_action;
+      switch (this.m_action) {
+        case 2:
+          _ += `_` + this.m_newEventType;
+          break;
+        case 3:
+          _ += `_` + this.m_newTagAdded;
+      }
+      return _;
+    }
+    FromString(_) {
+      let _ = _.split(`_`);
+      if (!_ || _[0] !== _) return !1;
+      switch (
+        ((this.m_moderator = Number(_[1])),
+        (this.m_rtWhen = Number(_[2])),
+        (this.m_action = Number(_[3])),
+        this.m_action)
+      ) {
+        case 2:
+          this.m_newEventType = Number(_[4]);
+          break;
+        case 3:
+          this.m_newTagAdded = _.slice(4).join(`_`);
+      }
+      return !0;
+    }
+    SetActionChangeEvent(_) {
+      return (
+        (this.m_moderator = _.accountid),
+        (this.m_rtWhen = Date.now() / 1e3),
+        (this.m_action = 2),
+        (this.m_newEventType = _),
+        this
+      );
+    }
+    SetReviewAction(_) {
+      return (
+        (this.m_moderator = _.accountid),
+        (this.m_rtWhen = Date.now() / 1e3),
+        (this.m_action = +!_),
+        this
+      );
+    }
+    SetAdultOnlyContentAction(_) {
+      return (
+        (this.m_moderator = _.accountid),
+        (this.m_rtWhen = Date.now() / 1e3),
+        (this.m_action = _ ? 6 : 7),
+        this
+      );
+    }
+    SetHalloweenEventTypeAction(_) {
+      return (
+        (this.m_moderator = _.accountid),
+        (this.m_rtWhen = Date.now() / 1e3),
+        (this.m_action = _ ? 8 : 9),
+        this
+      );
+    }
+    SetReReviewAction(_) {
+      return (
+        (this.m_moderator = _.accountid),
+        (this.m_rtWhen = Date.now() / 1e3),
+        (this.m_action = _ ? 4 : 1),
+        this
+      );
+    }
+    static IsAuditAction(_) {
+      return _.startsWith(_);
+    }
+    SetUpdateSeasonalTags(_) {
+      return (
+        (this.m_moderator = _.accountid),
+        (this.m_rtWhen = Date.now() / 1e3),
+        (this.m_action = 3),
+        (this.m_newTagAdded = _),
+        this
+      );
+    }
+  },
+  _ = class _ {
+    static s_Singleton;
+    m_mapEventGIDToSolrData = new Map();
+    m_listEvents = [];
+    BHasSolrEvent(_) {
+      return this.m_mapEventGIDToSolrData.has(_);
+    }
+    GetAllSolrEvents() {
+      return this.m_listEvents;
+    }
+    static Get() {
+      return (_.s_Singleton ||= new _()), _.s_Singleton;
+    }
+    constructor() {
+      _(this);
+    }
+    ClearAllSolrEvents() {
+      (this.m_mapEventGIDToSolrData = new Map()), (this.m_listEvents = []);
+    }
+    async LoadPartnerEventForModerationIncremental(_, _ = 30) {
+      let _ =
+          _.STORE_BASE_URL +
+          `events_admin/ajaxgetmoderationspecificpartnerevents`,
+        _ = 0;
+      this.m_listEvents?.length &&
+        (this.m_listEvents.forEach(
+          (_) =>
+            (_ = Math.max(
               _,
-            );
-          }
-          LoadMoreModerationEvents() {
-            if ((this.ClearTimer(), this.state.bInfiniteScrollLoading)) {
-              let _;
-              const _ = _.Get();
-              if (_.bUseCustomQuery) {
-                let _ = _.filterEventTypes
-                    ? _.filterEventTypes.map((_) => _.value)
-                    : void 0,
-                  _ = _.selectedTags
-                    ? _.selectedTags.map((_) => _.value)
-                    : void 0,
-                  _ = _.excludedTags
-                    ? _.excludedTags.map((_) => _.value)
-                    : void 0;
-                _ = _.Get().LoadPartnerEventForQueryIncremental(
-                  this.m_cancelSignal,
-                  this.m_nPage,
-                  _.eventsToLoadPerPaging,
-                  [this.props.appid],
-                  _,
-                  _,
-                  _.filterDate,
-                  _,
-                  _.bOrderByVisibilityStartTime,
-                );
-              } else
-                _ = _.Get().LoadPartnerEventForModerationIncremental(
-                  this.m_cancelSignal,
-                  _.eventsToLoadPerPaging,
-                );
-              _.then((_) => {
-                (this.m_nPage += _.eventsToLoadPerPaging),
-                  this.setState({
-                    bInfiniteScrollLoading: !1,
-                    bExhaustedEventList: _.length == 0,
-                    nLastFetchCompletedMS: Date.now(),
-                  });
-              }).catch((_) => this.HandleError(_));
-            }
-          }
-          UpdateQueryParametersAndLoadMoreEvents() {
-            this.HandleUpdateQueryParameter(), this.LoadMoreModerationEvents();
-          }
-          RenderTiles() {
-            let _ = new Array();
-            return (
-              (_.Get().bUseCustomQuery
-                ? _.Get().GetAllSolrEvents()
-                : _.Get().GetAllSolrEvents()
-              ).forEach((_) => {
-                _.push(
-                  (0, _.jsx)(
-                    _,
-                    {
-                      solrData: _,
-                    },
-                    _.unique_id,
-                  ),
-                );
+              Math.floor(Date.parse(_.last_modified_date) / 1e3),
+            )),
+        ),
+        this.m_listEvents.filter(
+          (_) => Math.floor(Date.parse(_.last_modified_date) / 1e3) == _,
+        ).length >= _ && _++);
+      let _ = {
+        start_time: _,
+        count: _,
+      };
+      try {
+        let _ = await _.default.get(_, {
+          params: _,
+          withCredentials: !0,
+          cancelToken: _ ? _.token : void 0,
+        });
+        if (_ && _.token.reason) return [];
+        if (_ && _.data) {
+          let _ = [];
+          return (
+            _(() => {
+              _.data.docs.forEach((_) => {
+                this.m_mapEventGIDToSolrData.has(_.unique_id) ||
+                  (_.push(_),
+                  this.m_mapEventGIDToSolrData.set(_.unique_id, _),
+                  this.m_listEvents.push(_));
+              });
+            }),
+            _
+          );
+        }
+      } catch (_) {
+        let _ = _(_);
+        console.error(
+          `LoadPartnerEventForModerationIncremental failed:` + _.strErrorMsg,
+          _,
+        );
+      }
+      return [];
+    }
+    async UpdateTagsOnPartnerEvent(_, _, _, _, _, _) {
+      let _ = _.STORE_BASE_URL + `events_admin/ajaxupdatetags`,
+        _ = _.join(`,`);
+      _ && (_.length > 0 && (_ += `,`), (_ += _.ToModString()));
+      let _ = new FormData();
+      return (
+        _.append(`sessionid`, _()),
+        _.append(`clan_accountid`, `` + _.GetAccountID()),
+        _.append(`gid_announcement`, _),
+        _.append(`add_tags`, _),
+        _.append(`remove_tags`, _.join(`,`)),
+        (
+          await _.default.post(_, _, {
+            withCredentials: !0,
+            cancelToken: _.token,
+          })
+        ).data.tags
+      );
+    }
+    async UpdatePartnerEventType(_, _, _, _) {
+      let _ = _.STORE_BASE_URL + `events_admin/ajaxupdateeventtype`,
+        _ = new FormData();
+      _.append(`sessionid`, _()),
+        _.append(`clan_accountid`, `` + _.GetAccountID()),
+        _.append(`gid_event`, _),
+        _.append(`new_event_type`, `` + _),
+        await _.default.post(_, _, {
+          withCredentials: !0,
+          cancelToken: _.token,
+        });
+    }
+  };
+_([_], _.prototype, `m_mapEventGIDToSolrData`, void 0),
+  _([_], _.prototype, `m_listEvents`, void 0),
+  _([_], _.prototype, `ClearAllSolrEvents`, null);
+var _ = `iQE696qa-gQ-`;
+function _(_) {
+  let { accountID: _, locToken: _ } = _,
+    _ = _.useMemo(() => _.InitFromAccountID(_), [_]),
+    { data: _ } = _(_),
+    _ =
+      `https://steamsupport.valvesoftware.com/account/overview/` +
+      _.ConvertTo64BitString();
+  return (0, _.jsx)(`div`, {
+    children: _(
+      _,
+      (0, _.jsx)(`a`, {
+        href: _,
+        target: _.IN_CLIENT ? void 0 : `_blank`,
+        children: _
+          ? (0, _.jsx)(_.Fragment, {
+              children: _.m_strPlayerName,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsx)(`span`, {
+                children: _,
               }),
-              _
-            );
-          }
-          OnScroll() {
-            if (!this.m_refScroll || !this.m_refScroll.current) return;
-            let _ = this.m_refScroll.current;
-            _ &&
-              (this.state.bExhaustedEventList ||
-                this.state.bInfiniteScrollLoading ||
-                (_.getBoundingClientRect().bottom <= window.innerHeight + _ &&
-                  (this.state.nLastFetchCompletedMS + _ < Date.now()
-                    ? this.setState(
-                        {
-                          bInfiniteScrollLoading: !0,
-                        },
-                        this.LoadMorePublicEventWithDelay,
-                      )
-                    : this.setState(
-                        {
-                          bInfiniteScrollLoading: !0,
-                        },
-                        this.LoadMoreModerationEvents,
-                      ))));
-          }
-          RefetchAllEventTiles() {
-            (this.m_nPage = 0),
-              _.Get().ClearAllSolrEvents(),
-              _.Get().ClearAllSolrEvents(),
-              this.setState(
-                {
-                  ..._,
-                },
-                this.UpdateQueryParametersAndLoadMoreEvents,
-              );
-          }
-          render() {
-            let _ = this.RenderTiles();
-            const _ = _.Get();
-            return (0, _.jsxs)("div", {
-              className: _.ModerationContainer,
-              ref: this.m_refScroll,
-              children: [
-                (0, _.jsxs)("div", {
-                  children: [
-                    (0, _.jsx)("h2", {
-                      children: (0, _._)("#EventModeration_Title"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsxs)("div", {
-                        className: (0, _._)(_().FlexRowContainer),
-                        children: [
-                          (0, _.jsx)(_, {
-                            fnRequireRefetchEvents: this.RefetchAllEventTiles,
-                          }),
-                          !!_.bUseCustomQuery &&
-                            (0, _.jsx)(_, {
-                              fnRequireRefetchEvents: this.RefetchAllEventTiles,
-                            }),
-                        ],
-                      }),
-                    }),
-                  ],
-                }),
-                (0, _.jsx)(_._, {
-                  children: _,
-                }),
-                this.state.bInfiniteScrollLoading &&
-                  (0, _.jsx)(_._, {
-                    position: "center",
-                    size: "medium",
-                    string: (0, _._)("#Loading"),
-                  }),
-              ],
-            });
-          }
-        };
-        _([_._], _.prototype, "HandleError", 1),
-          _([_._], _.prototype, "LoadMorePublicEventWithDelay", 1),
-          _([_._], _.prototype, "LoadMoreModerationEvents", 1),
-          _([_._], _.prototype, "UpdateQueryParametersAndLoadMoreEvents", 1),
-          _([_._], _.prototype, "OnScroll", 1),
-          _([_._], _.prototype, "RefetchAllEventTiles", 1),
-          (_ = _([_._], _));
-        const _ = (0, _._)(_),
-          _ = (0, _._)((_) => {
-            const _ = _.Get(),
-              { fnRequireRefetchEvents: _ } = _;
-            return (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.FilterContainer,
-                  children: (0, _.jsx)(_._, {
-                    toolTipContent: (0, _._)(
-                      "#EventModeration_ShowCustomFilter_ttip",
-                    ),
-                    children: (0, _.jsx)(_._, {
-                      label: (0, _._)("#EventModeration_ShowCustomFilter"),
-                      checked: _.bUseCustomQuery,
-                      onChange: (_) => {
-                        (_.bUseCustomQuery = _), _();
-                      },
-                    }),
-                  }),
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.FilterContainer,
-                  children: [
-                    (0, _.jsx)("label", {
-                      htmlFor: "EventPerLoad",
-                      children: (0, _._)("#EventModeration_PerPageLoad"),
-                    }),
-                    (0, _.jsx)("div", {
-                      children: (0, _.jsx)("input", {
-                        type: "number",
-                        _: "EventPerLoad",
-                        min: "10",
-                        max: "200",
-                        value: _.eventsToLoadPerPaging,
-                        onChange: (_) => {
-                          let _ = Number.parseInt(_.currentTarget.value);
-                          _ &&
-                            _ > 0 &&
-                            _ != _.eventsToLoadPerPaging &&
-                            (_.eventsToLoadPerPaging = _);
-                        },
-                      }),
-                    }),
-                  ],
-                }),
-              ],
-            });
+            }),
+      }),
+    ),
+  });
+}
+function _(_) {
+  let { modAction: _ } = _,
+    _ =
+      _(_.m_rtWhen) +
+      ` @ ` +
+      _(_.m_rtWhen, {
+        bForce24HourClock: !1,
+      }),
+    _ = (0, _.jsx)(_, {
+      locToken: `#EventModTile_Moderator`,
+      accountID: _.m_moderator,
+    });
+  switch (_.m_action) {
+    case _.k_ModReviewed:
+      return (0, _.jsx)(`div`, {
+        className: _,
+        children: _(
+          `#EventModTile_Action_Reviewed`,
+          (0, _.jsx)(`span`, {
+            children: _,
           }),
-          _ = (0, _._)((_) => {
-            const _ = _.Get(),
-              { fnRequireRefetchEvents: _ } = _,
-              _ = _.Zi8.map((_) => ({
-                value: _,
-                label: (0, _._)(_),
-              })).sort((_, _) => _.label.localeCompare(_.label)),
-              _ = _._.map((_) => ({
-                value: _,
-                label: _,
-              })).sort((_, _) => _.label.localeCompare(_.label)),
-              _ = {
-                option: (_) => ({
-                  ..._,
-                  color: "#444444",
-                }),
+          _,
+        ),
+      });
+    case _.k_ModUnreviewed:
+      return (0, _.jsx)(`div`, {
+        className: _,
+        children: _(
+          `#EventModTile_Action_UnReviewed`,
+          (0, _.jsx)(`span`, {
+            children: _,
+          }),
+          _,
+        ),
+      });
+    case _.k_ChangeEventType:
+      return (0, _.jsx)(`div`, {
+        className: _,
+        children: _(
+          `#EventModTile_Action_NewEventType`,
+          (0, _.jsx)(`span`, {
+            children: _,
+          }),
+          _,
+          _(_.m_newEventType),
+        ),
+      });
+    case _.k_UpdateSeasonTags:
+      return (0, _.jsx)(`div`, {
+        className: _,
+        children: _(
+          `#EventModTile_Action_SeasonTagUpdate`,
+          (0, _.jsx)(`span`, {
+            children: _,
+          }),
+          _,
+          _.m_newTagAdded,
+        ),
+      });
+    case _.k_ModReReviewed:
+      return (0, _.jsx)(`div`, {
+        className: _,
+        children: _(
+          `#EventModTile_Action_ReReviewed`,
+          (0, _.jsx)(`span`, {
+            children: _,
+          }),
+          _,
+        ),
+      });
+    case _.k_ModRemovedFromSteamChina:
+      return (0, _.jsx)(`div`, {
+        className: _,
+        children: _(
+          `#EventModTile_Action_RemoveFromSC`,
+          (0, _.jsx)(`span`, {
+            children: _,
+          }),
+          _,
+        ),
+      });
+    case _.k_ModFlagAdultOnlyContent:
+      return (0, _.jsx)(`div`, {
+        className: _,
+        children: _(
+          `#EventModTile_Action_FlagAdultContent`,
+          (0, _.jsx)(`span`, {
+            children: _,
+          }),
+          _,
+        ),
+      });
+    case _.k_ModRemoveAdultOnlyContent:
+      return (0, _.jsx)(`div`, {
+        className: _,
+        children: _(
+          `#EventModTile_Action_RemoveAdultContent`,
+          (0, _.jsx)(`span`, {
+            children: _,
+          }),
+          _,
+        ),
+      });
+    default:
+      return (0, _.jsx)(`div`, {
+        className: _,
+        children: _.ToModString(),
+      });
+  }
+}
+function _(_) {
+  let [_, _] = _.useState(!0),
+    _ = (_) => {
+      let { eventModel: _ } = _;
+      return _.map((_) => {
+        let _ = new _();
+        return (
+          _.FromString(_),
+          (0, _.jsx)(
+            _,
+            {
+              modAction: _,
+            },
+            _.GID + _,
+          )
+        );
+      });
+    },
+    { eventModel: _ } = _,
+    _ = _.GetAllTags()
+      .filter((_) => _.IsAuditAction(_))
+      .reverse(),
+    _ = _.length,
+    _ = _.length > 3 && _;
+  return _.length == 0
+    ? null
+    : (_ && (_ = _.splice(0, 3)),
+      (0, _.jsxs)(`div`, {
+        children: [
+          (0, _.jsx)(`h4`, {
+            children: _(`#EventModTile_Action_Title`),
+          }),
+          _(_),
+          _ &&
+            (0, _.jsx)(`a`, {
+              onClick: () => _(!1),
+              className: `_4eiwqlDx34k-`,
+              children: _(`#EventModTile_Action_More`, _ - 3),
+            }),
+          !_ &&
+            _ > 3 &&
+            (0, _.jsx)(`a`, {
+              onClick: () => _(!0),
+              className: `_4eiwqlDx34k-`,
+              children: _(`#EventModTile_Action_Hide`),
+            }),
+        ],
+      }));
+}
+var _ = _({
+    AnalysisCtn: () => _,
+    AnalysisMissing: () => _,
+    ArtHeader: () => _,
+    ArtSpotlight: () => _,
+    Button: () => _,
+    CategoryChangeDialog: () => _,
+    ChannelInfo: () => _,
+    DateAndTime: () => _,
+    DetailsLeft: () => _,
+    DetailsMiddle: () => _,
+    DetailsRight: () => _,
+    EventModerateMarkReReview: () => _,
+    EventModerateMarkReview: () => _,
+    EventTimingBlock: () => _,
+    EventTitle: () => _,
+    FilterContainer: () => _,
+    HalloweenEvent: () => _,
+    HasAdultContent: () => _,
+    LastUpdateTime: () => _,
+    ModeratedFlagCtn: () => _,
+    ModerationContainer: () => _,
+    NoCapsule: () => _,
+    NoCapsuleFallback: () => _,
+    RightSideTitles: () => _,
+    StoreHeaderAdjust: () => _,
+    Tile: () => _,
+    TileAppInfo: () => _,
+    TileAppInfoImage: () => _,
+    TileAppInfoTitle: () => _,
+    TileCapsule: () => _,
+    TileDetails: () => _,
+    TileEventOtherType: () => _,
+    TileEventType: () => _,
+    TileSplit: () => _,
+    TileTitle: () => _,
+    TimeWidth: () => _,
+    TitleLink: () => _,
+    default: () => _,
+  }),
+  _ = `_2gW897binC0-`,
+  _ = `Ie8IvU00EW0-`,
+  _ = `_2nOLYxq9Xfo-`,
+  _ = `SkvSNNeyxNA-`,
+  _ = `a--2nmWAb98-`,
+  _ = `BgiARhgnEQQ-`,
+  _ = `UtSnAOiNQgg-`,
+  _ = `ivnmmnOMNKY-`,
+  _ = `juzegLM8FdY-`,
+  _ = `d-WIS6clcx0-`,
+  _ = `MHzLLT83hBQ-`,
+  _ = `koqw6dEwI70-`,
+  _ = `bGP7sBTGMBw-`,
+  _ = `BATIZEVfyQ8-`,
+  _ = `mNo6qb7U1r0-`,
+  _ = `qTIKXbfFl6w-`,
+  _ = `etaphwkc6ew-`,
+  _ = `t8meJ736O4c-`,
+  _ = `XsGAPUbg-OU-`,
+  _ = `P0-RoQFlS8A-`,
+  _ = `ceOIVsDMJJ8-`,
+  _ = `tEQODaVCZIc-`,
+  _ = `SrxcB-LYZ5o-`,
+  _ = `Xh8Td5q09Oo-`,
+  _ = `AteZziS9-sc-`,
+  _ = `IlsBvfAw-ew-`,
+  _ = `TPpJuMzIow4-`,
+  _ = `wXCk09i0vE8-`,
+  _ = `G32Rr4n6TnQ-`,
+  _ = `RFxGqivd9lg-`,
+  _ = `toYmQsxNsDc-`,
+  _ = `_-8Nz3nUpNos-`,
+  _ = `c3fKyIzvAtA-`,
+  _ = `IACF40Lzryc-`,
+  _ = `dMJd8v0GV1I-`,
+  _ = `dWRkuOPQklk-`,
+  _ = `rVy1TypxTf8-`,
+  _ = {
+    AnalysisCtn: _,
+    AnalysisMissing: _,
+    ModerationContainer: _,
+    FilterContainer: _,
+    Tile: _,
+    DetailsMiddle: _,
+    EventModerateMarkReview: _,
+    EventModerateMarkReReview: _,
+    HalloweenEvent: _,
+    TileEventOtherType: _,
+    TileCapsule: _,
+    NoCapsuleFallback: _,
+    NoCapsule: _,
+    TileDetails: _,
+    DetailsLeft: _,
+    EventTitle: _,
+    DetailsRight: _,
+    ArtHeader: _,
+    ArtSpotlight: _,
+    ModeratedFlagCtn: _,
+    TitleLink: _,
+    TileAppInfo: _,
+    TileAppInfoTitle: _,
+    TileAppInfoImage: _,
+    TileSplit: _,
+    TileTitle: _,
+    TimeWidth: _,
+    CategoryChangeDialog: _,
+    Button: _,
+    RightSideTitles: _,
+    DateAndTime: _,
+    StoreHeaderAdjust: _,
+    LastUpdateTime: _,
+    EventTimingBlock: _,
+    TileEventType: _,
+    ChannelInfo: _,
+    HasAdultContent: _,
+  },
+  _ = _(),
+  _ = 500,
+  _ = 50,
+  _ = {
+    bExhaustedEventList: !1,
+    bInfiniteScrollLoading: !0,
+    nLastFetchCompletedMS: 0,
+  },
+  _ = class extends _.Component {
+    m_cancelSignal = _.default.CancelToken.source();
+    m_refScroll = _.createRef();
+    m_IntervalTimer = void 0;
+    state = {
+      bInfiniteScrollLoading: !1,
+      bExhaustedEventList: !1,
+      nLastFetchCompletedMS: 0,
+    };
+    m_nPage = 0;
+    componentDidMount() {
+      this.setState(
+        {
+          bInfiniteScrollLoading: !0,
+        },
+        this.LoadMoreModerationEvents,
+      ),
+        window.addEventListener(`scroll`, this.OnScroll, !0),
+        _.Get().Init(this.props.history.location.search);
+    }
+    componentWillUnmount() {
+      this.m_cancelSignal.cancel(`EventModerationLanding component unmounted`),
+        window.removeEventListener(`scroll`, this.OnScroll),
+        this.ClearTimer();
+    }
+    HandleUpdateQueryParameter() {
+      let _ = _.Get();
+      if (_.bUseCustomQuery) {
+        let {
+          selectedTags: _,
+          excludedTags: _,
+          filterEventTypes: _,
+          filterDate: _,
+          bOrderByVisibilityStartTime: _,
+        } = _;
+        if (_ || _ || _ || _ || _) {
+          let _ = new URLSearchParams();
+          _?.forEach((_) => _.append(`selectedTags`, _.value)),
+            _?.forEach((_) => _.append(`excludedTags`, _.value)),
+            _?.forEach((_) => _.append(`eventtype`, `` + _.value)),
+            _?.unix() > 0 && _.append(`filterDate`, `` + _.unix()),
+            _ && _.append(`orderByVisibility`, `1`),
+            this.props.history.push(`?${_.toString()}`);
+        } else this.props.history.push(`?`);
+      }
+    }
+    ClearTimer() {
+      this.m_IntervalTimer &&=
+        (window.clearInterval(this.m_IntervalTimer), void 0);
+    }
+    HandleError(_) {
+      let _ = _(_);
+      console.error(`EventModerationLanding error: ` + _.strErrorMsg, _),
+        this.setState({
+          bInfiniteScrollLoading: !1,
+          bExhaustedEventList: !0,
+          nLastFetchCompletedMS: Date.now(),
+        });
+    }
+    async LoadMorePublicEventWithDelay() {
+      this.m_IntervalTimer = window.setInterval(
+        this.LoadMoreModerationEvents,
+        _,
+      );
+    }
+    LoadMoreModerationEvents() {
+      if ((this.ClearTimer(), this.state.bInfiniteScrollLoading)) {
+        let _,
+          _ = _.Get();
+        if (_.bUseCustomQuery) {
+          let _ = _.filterEventTypes
+              ? _.filterEventTypes.map((_) => _.value)
+              : void 0,
+            _ = _.selectedTags ? _.selectedTags.map((_) => _.value) : void 0,
+            _ = _.excludedTags ? _.excludedTags.map((_) => _.value) : void 0;
+          _ = _.Get().LoadPartnerEventForQueryIncremental(
+            this.m_cancelSignal,
+            this.m_nPage,
+            _.eventsToLoadPerPaging,
+            [this.props.appid],
+            _,
+            _,
+            _.filterDate,
+            _,
+            _.bOrderByVisibilityStartTime,
+          );
+        } else
+          _ = _.Get().LoadPartnerEventForModerationIncremental(
+            this.m_cancelSignal,
+            _.eventsToLoadPerPaging,
+          );
+        _.then((_) => {
+          (this.m_nPage += _.eventsToLoadPerPaging),
+            this.setState({
+              bInfiniteScrollLoading: !1,
+              bExhaustedEventList: _.length == 0,
+              nLastFetchCompletedMS: Date.now(),
+            });
+        }).catch((_) => this.HandleError(_));
+      }
+    }
+    UpdateQueryParametersAndLoadMoreEvents() {
+      this.HandleUpdateQueryParameter(), this.LoadMoreModerationEvents();
+    }
+    RenderTiles() {
+      let _ = [];
+      return (
+        (_.Get().bUseCustomQuery
+          ? _.Get().GetAllSolrEvents()
+          : _.Get().GetAllSolrEvents()
+        ).forEach((_) => {
+          _.push(
+            (0, _.jsx)(
+              _,
+              {
+                solrData: _,
               },
-              _ = (_) => {
+              _.unique_id,
+            ),
+          );
+        }),
+        _
+      );
+    }
+    OnScroll() {
+      if (!this.m_refScroll || !this.m_refScroll.current) return;
+      let _ = this.m_refScroll.current;
+      _ &&
+        (this.state.bExhaustedEventList ||
+          this.state.bInfiniteScrollLoading ||
+          (_.getBoundingClientRect().bottom <= window.innerHeight + _ &&
+            (this.state.nLastFetchCompletedMS + _ < Date.now()
+              ? this.setState(
+                  {
+                    bInfiniteScrollLoading: !0,
+                  },
+                  this.LoadMorePublicEventWithDelay,
+                )
+              : this.setState(
+                  {
+                    bInfiniteScrollLoading: !0,
+                  },
+                  this.LoadMoreModerationEvents,
+                ))));
+    }
+    RefetchAllEventTiles() {
+      (this.m_nPage = 0),
+        _.Get().ClearAllSolrEvents(),
+        _.Get().ClearAllSolrEvents(),
+        this.setState(
+          {
+            ..._,
+          },
+          this.UpdateQueryParametersAndLoadMoreEvents,
+        );
+    }
+    render() {
+      let _ = this.RenderTiles(),
+        _ = _.Get();
+      return (0, _.jsxs)(`div`, {
+        className: _,
+        ref: this.m_refScroll,
+        children: [
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`h2`, {
+                children: _(`#EventModeration_Title`),
+              }),
+              (0, _.jsx)(_, {
+                children: (0, _.jsxs)(`div`, {
+                  className: _(_),
+                  children: [
+                    (0, _.jsx)(_, {
+                      fnRequireRefetchEvents: this.RefetchAllEventTiles,
+                    }),
+                    !!_.bUseCustomQuery &&
+                      (0, _.jsx)(_, {
+                        fnRequireRefetchEvents: this.RefetchAllEventTiles,
+                      }),
+                  ],
+                }),
+              }),
+            ],
+          }),
+          (0, _.jsx)(_, {
+            children: _,
+          }),
+          this.state.bInfiniteScrollLoading &&
+            (0, _.jsx)(_, {
+              position: `center`,
+              size: `medium`,
+              string: _(`#Loading`),
+            }),
+        ],
+      });
+    }
+  };
+_([_], _.prototype, `HandleError`, null),
+  _([_], _.prototype, `LoadMorePublicEventWithDelay`, null),
+  _([_], _.prototype, `LoadMoreModerationEvents`, null),
+  _([_], _.prototype, `UpdateQueryParametersAndLoadMoreEvents`, null),
+  _([_], _.prototype, `OnScroll`, null),
+  _([_], _.prototype, `RefetchAllEventTiles`, null),
+  (_ = _([_], _));
+var _ = _(_),
+  _ = _((_) => {
+    let _ = _.Get(),
+      { fnRequireRefetchEvents: _ } = _;
+    return (0, _.jsxs)(_.Fragment, {
+      children: [
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: (0, _.jsx)(_, {
+            toolTipContent: _(`#EventModeration_ShowCustomFilter_ttip`),
+            children: (0, _.jsx)(_, {
+              label: _(`#EventModeration_ShowCustomFilter`),
+              checked: _.bUseCustomQuery,
+              onChange: (_) => {
+                (_.bUseCustomQuery = _), _();
+              },
+            }),
+          }),
+        }),
+        (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            (0, _.jsx)(`label`, {
+              htmlFor: `EventPerLoad`,
+              children: _(`#EventModeration_PerPageLoad`),
+            }),
+            (0, _.jsx)(`div`, {
+              children: (0, _.jsx)(`input`, {
+                type: `number`,
+                _: `EventPerLoad`,
+                min: `10`,
+                max: `200`,
+                value: _.eventsToLoadPerPaging,
+                onChange: (_) => {
+                  let _ = Number.parseInt(_.currentTarget.value);
+                  _ &&
+                    _ > 0 &&
+                    _ != _.eventsToLoadPerPaging &&
+                    (_.eventsToLoadPerPaging = _);
+                },
+              }),
+            }),
+          ],
+        }),
+      ],
+    });
+  }),
+  _ = _((_) => {
+    let _ = _.Get(),
+      { fnRequireRefetchEvents: _ } = _,
+      _ = _.map((_) => ({
+        value: _,
+        label: _(_),
+      })).sort((_, _) => _.label.localeCompare(_.label)),
+      _ = _.map((_) => ({
+        value: _,
+        label: _,
+      })).sort((_, _) => _.label.localeCompare(_.label)),
+      _ = {
+        option: (_) => ({
+          ..._,
+          color: `#444444`,
+        }),
+      };
+    return (0, _.jsxs)(_.Fragment, {
+      children: [
+        (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            (0, _.jsx)(`span`, {
+              children: _(`#EventModeration_FilterByTag`),
+            }),
+            (0, _.jsx)(_._default, {
+              isSearchable: !0,
+              isMulti: !0,
+              onChange: (_) => {
+                (_.selectedTags = _), _();
+              },
+              value: _.selectedTags,
+              options: _,
+              styles: _,
+            }),
+          ],
+        }),
+        (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            (0, _.jsx)(`span`, {
+              children: _(`#EventModeration_FilterExcludeByTag`),
+            }),
+            (0, _.jsx)(_._default, {
+              isSearchable: !0,
+              isMulti: !0,
+              onChange: (_) => {
+                (_.excludedTags = _), _();
+              },
+              value: _.excludedTags,
+              options: _,
+              styles: _,
+            }),
+          ],
+        }),
+        (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            (0, _.jsx)(`span`, {
+              children: _(`#EventModeration_FilterToType`),
+            }),
+            (0, _.jsx)(_._default, {
+              isSearchable: !0,
+              isMulti: !0,
+              onChange: (_) => {
+                (_.filterEventTypes = _), _();
+              },
+              value: _.filterEventTypes,
+              options: _,
+              styles: _,
+            }),
+          ],
+        }),
+        (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            (0, _.jsx)(`span`, {
+              children: _(`#EventModeration_FilterToDate`),
+            }),
+            (0, _.jsx)(_.default, {
+              timeFormat: !1,
+              onChange: (_) => {
+                if (typeof _ == `string`) {
+                  let _ = _(_, `M/D/YYYY`, !0);
+                  if (!_.isValid()) {
+                    _.filterDateAsString = _;
+                    return;
+                  }
+                  _ = _;
+                }
+                _.filterDate != _ &&
+                  ((_.filterDateAsString = void 0), (_.filterDate = _), _());
+              },
+              value: _.filterDate,
+              isValidDate: (_) => {
                 let _ = new Date();
                 return (
                   _.unix() <
-                  _.unix(_.getTime() / 1e3 + 3600 * 24)
+                  _.unix(_.getTime() / 1e3 + 86400)
                     .hour(0)
                     .seconds(0)
                     .minute(0)
                     .unix()
                 );
-              };
-            return (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _.FilterContainer,
-                  children: [
-                    (0, _.jsx)("span", {
-                      children: (0, _._)("#EventModeration_FilterByTag"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      isSearchable: !0,
-                      isMulti: !0,
-                      onChange: (_) => {
-                        (_.selectedTags = _), _();
-                      },
-                      value: _.selectedTags,
-                      options: _,
-                      styles: _,
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.FilterContainer,
-                  children: [
-                    (0, _.jsx)("span", {
-                      children: (0, _._)("#EventModeration_FilterExcludeByTag"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      isSearchable: !0,
-                      isMulti: !0,
-                      onChange: (_) => {
-                        (_.excludedTags = _), _();
-                      },
-                      value: _.excludedTags,
-                      options: _,
-                      styles: _,
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.FilterContainer,
-                  children: [
-                    (0, _.jsx)("span", {
-                      children: (0, _._)("#EventModeration_FilterToType"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      isSearchable: !0,
-                      isMulti: !0,
-                      onChange: (_) => {
-                        (_.filterEventTypes = _), _();
-                      },
-                      value: _.filterEventTypes,
-                      options: _,
-                      styles: _,
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.FilterContainer,
-                  children: [
-                    (0, _.jsx)("span", {
-                      children: (0, _._)("#EventModeration_FilterToDate"),
-                    }),
-                    (0, _.jsx)(_(), {
-                      timeFormat: !1,
-                      onChange: (_) => {
-                        if (typeof _ == "string") {
-                          let _ = _(_, "M/D/YYYY", !0);
-                          if (!_.isValid()) {
-                            _.filterDateAsString = _;
-                            return;
-                          }
-                          _ = _;
-                        }
-                        _.filterDate != _ &&
-                          ((_.filterDateAsString = void 0),
-                          (_.filterDate = _),
-                          _());
-                      },
-                      value: _.filterDate,
-                      isValidDate: _,
-                      inputProps: {
-                        placeholder: (0, _._)("#EventModeration_PickDatee"),
-                        className: _.TimeWidth,
-                      },
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.FilterContainer,
-                  children: [
-                    (0, _.jsx)("input", {
-                      type: "checkbox",
-                      _: "VisibilityStart",
-                      checked: _.bOrderByVisibilityStartTime,
-                      onChange: (_) => {
-                        (_.bOrderByVisibilityStartTime =
-                          _.currentTarget.checked),
-                          _();
-                      },
-                    }),
-                    (0, _.jsx)("label", {
-                      htmlFor: "VisibilityStart",
-                      children: (0, _._)(
-                        "#EventModeration_OrderByFirstVisible",
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            });
+              },
+              inputProps: {
+                placeholder: _(`#EventModeration_PickDatee`),
+                className: _,
+              },
+            }),
+          ],
+        }),
+        (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            (0, _.jsx)(`input`, {
+              type: `checkbox`,
+              _: `VisibilityStart`,
+              checked: _.bOrderByVisibilityStartTime,
+              onChange: (_) => {
+                (_.bOrderByVisibilityStartTime = _.currentTarget.checked), _();
+              },
+            }),
+            (0, _.jsx)(`label`, {
+              htmlFor: `VisibilityStart`,
+              children: _(`#EventModeration_OrderByFirstVisible`),
+            }),
+          ],
+        }),
+      ],
+    });
+  }),
+  _ = _((_) => {
+    let { onClick: _, event: _, bSaving: _ } = _,
+      _ = _(`#EventModTile_Moderate_ClearReviewed`),
+      _,
+      _ = !1;
+    return (
+      _(_) ||
+        ((_ = _(`#EventModTile_Moderate_MarkReviewed`)), (_ = _), (_ = !0)),
+      _ && ((_ = _(`#EventModTile_Moderate_Saving`)), (_ = void 0)),
+      (0, _.jsxs)(`button`, {
+        className: _(_, _, _),
+        onClick: () => _(_),
+        disabled: _,
+        children: [
+          _ &&
+            (0, _.jsx)(_, {
+              size: `small`,
+            }),
+          _,
+        ],
+      })
+    );
+  }),
+  _ = _((_) => {
+    let { onClick: _, event: _, bSaving: _ } = _,
+      _ = _.BHasTag(`adult_only_content`),
+      _ = _(
+        _
+          ? `#EventModTile_Moderate_RemoveAdultContent`
+          : `#EventModTile_Moderate_FlagAdultContent`,
+      );
+    return (
+      _ && (_ = _(`#EventModTile_Moderate_Saving`)),
+      (0, _.jsxs)(`button`, {
+        className: _(_, _),
+        onClick: () => _(!_),
+        disabled: _,
+        children: [
+          _ &&
+            (0, _.jsx)(_, {
+              size: `small`,
+            }),
+          _,
+        ],
+      })
+    );
+  });
+function _(_) {
+  let { onClick: _, event: _, bSaving: _ } = _,
+    _ = _(() => _.BHasTag(`halloween`)),
+    _ = _(
+      _
+        ? `#EventModTile_Moderate_RemoveHalloweenFlag`
+        : `#EventModTile_Moderate_FlagHalloween`,
+    );
+  _ && (_ = _(`#EventModTile_Moderate_Saving`));
+  let _ = _.GetTimeNowWithOverrideAsDate();
+  return _.getMonth() >= 8 && _.getMonth() <= 10
+    ? (0, _.jsxs)(`button`, {
+        className: _(_, _),
+        onClick: () => _(!_),
+        disabled: _,
+        children: [
+          _ &&
+            (0, _.jsx)(_, {
+              size: `small`,
+            }),
+          _,
+        ],
+      })
+    : null;
+}
+var _ = class extends _.Component {
+  state = {
+    bLoadingEvent: !_.BHasClanEventModel(this.props.solrData.unique_id),
+    bShowAsModal: !1,
+    bSavingModeration: !1,
+  };
+  m_cancelSignal = _.default.CancelToken.source();
+  componentDidMount() {
+    let { solrData: _ } = this.props,
+      _ = _.unique_id;
+    _.BHasClanEventModel(_) ||
+      _.LoadHiddenPartnerEvent(new _(_.clan_steamid), _)
+        .then(() =>
+          this.setState({
+            bLoadingEvent: !1,
           }),
-          _ = (0, _._)((_) => {
-            const { onClick: _, event: _, bSaving: _ } = _;
-            let _ = (0, _._)("#EventModTile_Moderate_ClearReviewed"),
-              _ = _.EventModerateClearReview,
-              _ = !1;
-            return (
-              (0, _._)(_) ||
-                ((_ = (0, _._)("#EventModTile_Moderate_MarkReviewed")),
-                (_ = _.EventModerateMarkReview),
-                (_ = !0)),
-              _ &&
-                ((_ = (0, _._)("#EventModTile_Moderate_Saving")),
-                (_ = _.EventModerateSaving)),
-              (0, _.jsxs)("button", {
-                className: (0, _._)(_().Button, _.Button, _),
-                onClick: () => _(_),
-                disabled: _,
-                children: [
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      size: "small",
-                    }),
-                  _,
-                ],
-              })
-            );
-          }),
-          _ = (0, _._)((_) => {
-            const { onClick: _, event: _, bSaving: _ } = _,
-              _ = _.BHasTag("adult_only_content");
-            let _ = (0, _._)(
-              _
-                ? "#EventModTile_Moderate_RemoveAdultContent"
-                : "#EventModTile_Moderate_FlagAdultContent",
-            );
-            return (
-              _ && (_ = (0, _._)("#EventModTile_Moderate_Saving")),
-              (0, _.jsxs)("button", {
-                className: (0, _._)(_().Button, _.Button),
-                onClick: () => _(!_),
-                disabled: _,
-                children: [
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      size: "small",
-                    }),
-                  _,
-                ],
-              })
-            );
-          });
-        function _(_) {
-          const { onClick: _, event: _, bSaving: _ } = _,
-            _ = (0, _._)(() => _.BHasTag("halloween"));
-          let _ = (0, _._)(
-            _
-              ? "#EventModTile_Moderate_RemoveHalloweenFlag"
-              : "#EventModTile_Moderate_FlagHalloween",
-          );
-          _ && (_ = (0, _._)("#EventModTile_Moderate_Saving"));
-          const _ = _._.GetTimeNowWithOverrideAsDate();
-          return _.getMonth() >= 8 && _.getMonth() <= 10
-            ? (0, _.jsxs)("button", {
-                className: (0, _._)(_().Button, _.Button),
-                onClick: () => _(!_),
-                disabled: _,
-                children: [
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      size: "small",
-                    }),
-                  _,
-                ],
-              })
-            : null;
-        }
-        let _ = class extends _.Component {
-          state = {
-            bLoadingEvent: !_._.BHasClanEventModel(
-              this.props.solrData.unique_id,
-            ),
-            bShowAsModal: !1,
-            bSavingModeration: !1,
-          };
-          m_cancelSignal = _().CancelToken.source();
-          componentDidMount() {
-            const { solrData: _ } = this.props,
-              _ = _.unique_id;
-            _._.BHasClanEventModel(_) ||
-              _._.LoadHiddenPartnerEvent(new _._(_.clan_steamid), _)
-                .then(() =>
-                  this.setState({
-                    bLoadingEvent: !1,
-                  }),
-                )
-                .catch((_) => {
-                  const _ = (0, _._)(_);
-                  console.error(
-                    "EventModerationTile: Event Load: " + _.strErrorMsg,
-                    _,
-                  ),
-                    this.setState({
-                      bLoadingEvent: !1,
-                    });
-                });
-          }
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "EventModerationTile component unmounted",
-            );
-          }
-          ShowModalEvent(_) {
-            const { solrData: _ } = this.props,
-              _ = _.unique_id;
-            !this.state.bLoadingEvent &&
-              _._.BHasClanEventModel(_) &&
-              this.setState({
-                bShowAsModal: !0,
-              }),
-              _.preventDefault(),
-              _.stopPropagation();
-          }
-          HideModalEvent() {
-            this.state.bShowAsModal &&
-              this.setState({
-                bShowAsModal: !1,
-              });
-          }
-          SetAdultContentState(_) {
-            if (this.state.bSavingModeration) return;
-            const { solrData: _ } = this.props,
-              _ = _.unique_id,
-              _ = _._.GetClanEventModel(_);
-            if (!_) return;
-            const _ = _.BHasTag("adult_only_content");
-            if (_ === _) return;
-            const _ = new Array(),
-              _ = new Array();
-            let _ = new _().SetAdultOnlyContentAction(_);
-            _ ? _.push("adult_only_content") : _.push("adult_only_content"),
-              this.UpdateTagsOnEvent(_, _, _, _);
-          }
-          SetHalloweenEventState(_) {
-            if (this.state.bSavingModeration) return;
-            const { solrData: _ } = this.props,
-              _ = _.unique_id,
-              _ = _._.GetClanEventModel(_);
-            if (!_) return;
-            const _ = _.BHasTag("halloween");
-            if (_ === _) return;
-            const _ = new Array(),
-              _ = new Array();
-            let _ = new _().SetHalloweenEventTypeAction(_);
-            _ ? _.push("halloween") : _.push("halloween"),
-              this.UpdateTagsOnEvent(_, _, _, _);
-          }
-          SetModeratedState(_) {
-            if (this.state.bSavingModeration) return;
-            const { solrData: _ } = this.props,
-              _ = _.unique_id,
-              _ = _._.GetClanEventModel(_);
-            if (!_) return;
-            const _ = (0, _._)(_);
-            if (_ === _) return;
-            const _ = new Array(),
-              _ = new Array();
-            let _ = new _().SetReviewAction(_);
-            _
-              ? (_.push("mod_reviewed"),
-                _.push("mod_require_rereview"),
-                _.BHasTag("mod_require_rereview") && _.SetReReviewAction(_))
-              : _.push("mod_require_rereview"),
-              this.UpdateTagsOnEvent(_, _, _, _);
-          }
-          UpdateTagsOnEvent(_, _, _, _) {
-            const _ = async () => {
-              let _ = _._.GetClanEventModel(_);
-              try {
-                let _ = await _.Get().UpdateTagsOnPartnerEvent(
-                  this.m_cancelSignal,
-                  _.clanSteamID,
-                  _.AnnouncementGID,
-                  _,
-                  _,
-                  _,
-                );
-                _.vecTags = _;
-              } catch (_) {
-                let _ = (0, _._)(_);
-                console.error("UpdateTagsOnPartnerEvent " + _.strErrorMsg, _);
-              }
-              this.setState({
-                bSavingModeration: !1,
-              });
-            };
-            this.state.bSavingModeration ||
-              this.setState(
-                {
-                  bSavingModeration: !0,
-                },
-                _,
-              );
-          }
-          OnChangeCategory(_) {
-            const { solrData: _ } = this.props;
-            let _ = _._.GetClanEventModel(_.unique_id);
-            (0, _._)(
-              (0, _.jsx)(_, {
-                eventModel: _,
-              }),
-              (0, _._)(_),
-            );
-          }
-          OnUpdateSeasonalTag(_) {
-            const { solrData: _ } = this.props;
-            let _ = _._.GetClanEventModel(_.unique_id);
-            (0, _._)(
-              (0, _.jsx)(_, {
-                eventModel: _,
-              }),
-              (0, _._)(_),
-            );
-          }
-          render() {
-            const { solrData: _ } = this.props,
-              _ = _.unique_id,
-              _ = Number(_.appid);
-            let _,
-              _ = (0, _.sfN)(_._.LANGUAGE),
-              _ = _._.GetClanEventModel(_),
-              _ = null;
-            _
-              ? (this.state.bShowAsModal &&
-                  (_ = (0, _.jsx)(_._, {
-                    className: _.StoreHeaderAdjust,
-                    children: (0, _.jsx)("div", {
-                      children: (0, _.jsx)(_._, {
-                        event: _,
-                        fnClose: this.HideModalEvent,
-                      }),
-                    }),
-                  })),
-                (_ = (0, _.jsx)(_, {
-                  eventModel: _,
-                  lang: _,
-                })))
-              : (_ = (0, _._)("#Loading"));
-            const _ = _.last_modified_date
-                ? Date.parse(_.last_modified_date) / 1e3
-                : 0,
-              _ = _ ? _.type : Number(_.event_type),
-              _ = new _._(_.clan_steamid),
-              _ = _ ? `app/${_}` : `group/${_.GetAccountID()}`,
-              _ = `${_._.STORE_BASE_URL}news/${_}/view/${_.announcement_gid}`,
-              _ = !!(_ && _.BHasTag("adult_only_content")),
-              _ = !!(_ && _.BHasTag("halloween"));
-            return (0, _.jsxs)(_._, {
-              children: [
-                _,
-                (0, _.jsxs)("div", {
-                  className: (0, _._)({
-                    [_.Tile]: !0,
-                    [_.HalloweenEvent]: _,
-                  }),
-                  children: [
-                    (0, _.jsx)("a", {
-                      href: _,
-                      className: _.TileCapsule,
-                      onClick: this.ShowModalEvent,
-                      children: _,
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.TileDetails,
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: _.DetailsLeft,
-                          children: [
-                            (0, _.jsx)("a", {
-                              className: _.EventTitle,
-                              href: _,
-                              onClick: this.ShowModalEvent,
-                              children: _.event_name,
-                            }),
-                            (0, _.jsx)("div", {
-                              className: (0, _._)(
-                                _.TileEventType,
-                                _ == _.DRF ? _.TileEventOtherType : "",
-                              ),
-                              children: _
-                                ? _.GetCategoryAsString()
-                                : _.event_type,
-                            }),
-                            _ &&
-                              (0, _.jsx)("div", {
-                                className: _.HasAdultContent,
-                                children: (0, _._)(
-                                  "#EventModTile_HasAdultContent",
-                                ),
-                              }),
-                            this.state.bLoadingEvent &&
-                              (0, _.jsx)(_._, {
-                                size: "small",
-                                string: (0, _._)("#Loading"),
-                              }),
-                            (0, _.jsx)("div", {
-                              className: _.ChannelInfo,
-                              children: (0, _.jsx)(_, {
-                                appid: _,
-                                clanSteamID: new _._(_.clan_steamid),
-                              }),
-                            }),
-                          ],
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.DetailsMiddle,
-                          children:
-                            _ &&
-                            (0, _.jsxs)(_.Fragment, {
-                              children: [
-                                (0, _.jsx)(_, {
-                                  onClick: this.SetModeratedState,
-                                  bSaving: this.state.bSavingModeration,
-                                  event: _,
-                                }),
-                                (0, _.jsx)("button", {
-                                  className: (0, _._)(_().Button, _.Button),
-                                  onClick: this.OnChangeCategory,
-                                  children: (0, _._)(
-                                    "#EventModTile_ChangeEventType",
-                                  ),
-                                }),
-                                (0, _.jsx)(_, {
-                                  onClick: this.SetAdultContentState,
-                                  bSaving: this.state.bSavingModeration,
-                                  event: _,
-                                }),
-                                (0, _.jsx)(_, {
-                                  onClick: this.SetHalloweenEventState,
-                                  bSaving: this.state.bSavingModeration,
-                                  event: _,
-                                }),
-                                !!_.BHasTag("halloween2019candidate") &&
-                                  (0, _.jsx)("button", {
-                                    className: (0, _._)(_().Button),
-                                    onClick: this.OnUpdateSeasonalTag,
-                                    children: (0, _._)(
-                                      "#EventModTile_SeasonalTag",
-                                    ),
-                                  }),
-                                (0, _.jsx)(_, {
-                                  eventModel: _,
-                                }),
-                              ],
-                            }),
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.DetailsRight,
-                          children: [
-                            (0, _.jsxs)("div", {
-                              className: _.EventTimingBlock,
-                              children: [
-                                !!_ &&
-                                  (0, _.jsx)("div", {
-                                    className: _.LastUpdateTime,
-                                    children: (0, _._)(
-                                      "#EventModTile_LastModified",
-                                      (0, _._)(_) +
-                                        "@" +
-                                        (0, _._)(_, {
-                                          bForce24HourClock: !1,
-                                        }),
-                                    ),
-                                  }),
-                                _ &&
-                                  (0, _.jsx)(_._, {
-                                    event: _,
-                                    stylesmodule: _,
-                                    nOverrideEndTime:
-                                      _.GetEndTimeAndDateUnixSeconds(),
-                                    nOverrideStartTime:
-                                      _.GetStartTimeAndDateUnixSeconds(),
-                                  }),
-                              ],
-                            }),
-                            _ &&
-                              (0, _.jsx)(_, {
-                                event: _,
-                                hidden: _.hidden,
-                                published: _.published,
-                              }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              ],
+        )
+        .catch((_) => {
+          let _ = _(_);
+          console.error(`EventModerationTile: Event Load: ` + _.strErrorMsg, _),
+            this.setState({
+              bLoadingEvent: !1,
             });
-          }
-        };
-        _([_._], _.prototype, "ShowModalEvent", 1),
-          _([_._], _.prototype, "HideModalEvent", 1),
-          _([_._], _.prototype, "SetAdultContentState", 1),
-          _([_._], _.prototype, "SetHalloweenEventState", 1),
-          _([_._], _.prototype, "SetModeratedState", 1),
-          _([_._], _.prototype, "OnChangeCategory", 1),
-          _([_._], _.prototype, "OnUpdateSeasonalTag", 1),
-          (_ = _([_._], _));
-        function _(_) {
-          const { eventModel: _, lang: _ } = _,
-            _ = (0, _._)(_, "capsule", _, _._.capsule_main),
-            _ = _.BImageNeedScreenshotFallback("capsule", _);
-          return _ && _.length > 0
-            ? (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    rgSources: _,
-                  }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _.NoCapsuleFallback,
-                      children: (0, _._)("#EventModTile_FallbackImageText"),
-                    }),
-                ],
-              })
-            : (0, _.jsx)("div", {
-                className: _.NoCapsule,
-                children: (0, _._)("#EventModTile_NoCapsule"),
-              });
-        }
-        let _ = class extends _.Component {
-          state = {
-            bDownloadingImages: !1,
-            nLocLanguages: 0,
-          };
-          m_cancelSignal = _().CancelToken.source();
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "ChangeEventTypeDialog component unmounted",
-            );
-          }
-          CountLanguages(_) {
-            let _ = 0;
-            if (_ && _.length > 0)
-              for (let _ = 0; _ < _.length && _ < _.bP9; ++_)
-                _[_] && _[_].length > 0 && (_ += 1);
-            return _;
-          }
-          componentDidMount() {
-            const { event: _ } = this.props;
-            _._.LoadClanEventLocalizationFromAnnouncementGID(
+        });
+  }
+  componentWillUnmount() {
+    this.m_cancelSignal.cancel(`EventModerationTile component unmounted`);
+  }
+  ShowModalEvent(_) {
+    let { solrData: _ } = this.props,
+      _ = _.unique_id;
+    !this.state.bLoadingEvent &&
+      _.BHasClanEventModel(_) &&
+      this.setState({
+        bShowAsModal: !0,
+      }),
+      _.preventDefault(),
+      _.stopPropagation();
+  }
+  HideModalEvent() {
+    this.state.bShowAsModal &&
+      this.setState({
+        bShowAsModal: !1,
+      });
+  }
+  SetAdultContentState(_) {
+    if (this.state.bSavingModeration) return;
+    let { solrData: _ } = this.props,
+      _ = _.unique_id,
+      _ = _.GetClanEventModel(_);
+    if (!_ || _ === _.BHasTag(`adult_only_content`)) return;
+    let _ = [],
+      _ = [],
+      _ = new _().SetAdultOnlyContentAction(_);
+    _ ? _.push(`adult_only_content`) : _.push(`adult_only_content`),
+      this.UpdateTagsOnEvent(_, _, _, _);
+  }
+  SetHalloweenEventState(_) {
+    if (this.state.bSavingModeration) return;
+    let { solrData: _ } = this.props,
+      _ = _.unique_id,
+      _ = _.GetClanEventModel(_);
+    if (!_ || _ === _.BHasTag(`halloween`)) return;
+    let _ = [],
+      _ = [],
+      _ = new _().SetHalloweenEventTypeAction(_);
+    _ ? _.push(`halloween`) : _.push(`halloween`),
+      this.UpdateTagsOnEvent(_, _, _, _);
+  }
+  SetModeratedState(_) {
+    if (this.state.bSavingModeration) return;
+    let { solrData: _ } = this.props,
+      _ = _.unique_id,
+      _ = _.GetClanEventModel(_);
+    if (!_ || _ === _(_)) return;
+    let _ = [],
+      _ = [],
+      _ = new _().SetReviewAction(_);
+    _
+      ? (_.push(`mod_reviewed`),
+        _.push(`mod_require_rereview`),
+        _.BHasTag(`mod_require_rereview`) && _.SetReReviewAction(_))
+      : _.push(`mod_require_rereview`),
+      this.UpdateTagsOnEvent(_, _, _, _);
+  }
+  UpdateTagsOnEvent(_, _, _, _) {
+    this.state.bSavingModeration ||
+      this.setState(
+        {
+          bSavingModeration: !0,
+        },
+        async () => {
+          let _ = _.GetClanEventModel(_);
+          try {
+            _.vecTags = await _.Get().UpdateTagsOnPartnerEvent(
+              this.m_cancelSignal,
               _.clanSteamID,
               _.AnnouncementGID,
-            )
-              .then((_) => {
-                this.m_cancelSignal.token.reason ||
-                  this.setState({
-                    nLocLanguages: _.length,
-                  });
-              })
-              .catch((_) => {
-                let _ = (0, _._)(_);
-                console.error(
-                  "EventInspection.LoadLoc : error " + _.strErrorMsg,
-                  _,
-                ),
-                  this.m_cancelSignal.token.reason ||
-                    this.setState({
-                      nLocLanguages: -1,
-                    });
-              });
-          }
-          render() {
-            const { event: _ } = this.props;
-            let _ = this.CountLanguages(_.jsondata.localized_title_image),
-              _ = this.CountLanguages(_.jsondata.localized_capsule_image),
-              _ = this.CountLanguages(_.jsondata.localized_spotlight_image),
-              _ = Math.max(
-                this.CountLanguages(_.jsondata.localized_broadcast_left_image),
-                this.CountLanguages(_.jsondata.localized_broadcast_right_image),
-              ),
-              _ = _ + _ + _ + _,
-              _ = this.CountLanguages(_.jsondata.localized_summary),
-              _ = this.CountLanguages(_.jsondata.localized_subtitle);
-            return (0, _.jsxs)("div", {
-              className: _.AnalysisCtn,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.TileTitle,
-                  children: (0, _._)("#EventModTile_Analysis"),
-                }),
-                (0, _.jsx)("div", {
-                  children: (0, _._)(
-                    "#EventModTile_Stats_Comments",
-                    _.nCommentCount,
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  children: (0, _._)("#EventModTile_Stats_VoteUp", _.nVotesUp),
-                }),
-                (0, _.jsx)("div", {
-                  children: (0, _._)(
-                    "#EventModTile_Stats_VoteDown",
-                    _.nVotesDown,
-                  ),
-                }),
-                !!_ &&
-                  (0, _.jsxs)("div", {
-                    className: _.ArtHeader,
-                    children: [
-                      (0, _._)("#EventModTile_ImageAnalysis_Header", _),
-                      " ",
-                    ],
-                  }),
-                !!_ &&
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _._)("#EventModTile_ImageAnalysis_Capsule", _),
-                      " ",
-                    ],
-                  }),
-                !!_ &&
-                  (0, _.jsxs)("div", {
-                    className: _.ArtSpotlight,
-                    children: [
-                      (0, _._)("#EventModTile_ImageAnalysis_Spotlight", _),
-                      " ",
-                    ],
-                  }),
-                !!_ &&
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _._)("#EventModTile_ImageAnalysis_Broadcast", _),
-                      " ",
-                    ],
-                  }),
-                _ == 0 &&
-                  (0, _.jsxs)("div", {
-                    className: _.AnalysisMissing,
-                    children: [
-                      (0, _._)("#EventModTile_ImageAnalysis_None"),
-                      " ",
-                    ],
-                  }),
-                this.state.nLocLanguages == 0 &&
-                  (0, _.jsx)(_._, {
-                    size: "small",
-                    string: (0, _._)("#EventModTile_LoadingLocs"),
-                  }),
-                this.state.nLocLanguages > 0 &&
-                  (0, _.jsx)("div", {
-                    children: (0, _._)(
-                      "#EventModTile_Languages",
-                      this.state.nLocLanguages,
-                    ),
-                  }),
-                !!_ &&
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _._)("#EventModTile_Languages_Summary", _),
-                      " ",
-                    ],
-                  }),
-                !!_ &&
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _._)("#EventModTile_Languages_Subtitle", _),
-                      " ",
-                    ],
-                  }),
-              ],
-            });
-          }
-        };
-        _ = _([_._], _);
-        const _ = (0, _._)((_) => {
-          const { appid: _, clanSteamID: _ } = _,
-            _ = (0, _._)(_),
-            [_, _] = (0, _.useState)(!_._.Get().BHasApp(_.appid)),
-            _ = _.useRef(_().CancelToken.source());
-          if (
-            ((0, _.useEffect)(
-              () => () =>
-                _.current.cancel(
-                  "EventModerationChannelInfo component unmounted",
-                ),
-              [],
-            ),
-            (0, _.useEffect)(() => {
-              const { appid: _, clanSteamID: _ } = _;
-              ((_ && !_._.Get().BHasApp(_)) ||
-                (_ && !_._.BHasClanInfoLoaded(_))) &&
-                (async () => {
-                  try {
-                    await Promise.all([
-                      _._.Get().QueueAppRequest(_, {
-                        include_assets: !0,
-                        include_release: !0,
-                        include_screenshots: !0,
-                      }),
-                      _ ? _._.LoadClanInfoForClanSteamID(_) : void 0,
-                    ]);
-                  } catch (_) {
-                    const _ = (0, _._)(_);
-                    console.error(
-                      "EventModerationChannelInfo: App Load: " + _.strErrorMsg,
-                      _,
-                    );
-                  } finally {
-                    _.current.token.reason || _(!1);
-                  }
-                })();
-            }, [_]),
-            _)
-          )
-            return (0, _.jsx)(_._, {
-              size: "small",
-              string: (0, _._)("#EventModTile_AppInfoLoading"),
-            });
-          if (_) {
-            const _ = _._.Get().GetApp(_);
-            return _
-              ? (0, _.jsx)("div", {
-                  className: _.TileAppInfo,
-                  children: (0, _.jsxs)("div", {
-                    className: _.TileAppInfoTitle,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        _: _,
-                        children: (0, _.jsx)(_._, {
-                          href: (0, _._)(_.GetStorePageURL()),
-                          children: (0, _.jsx)("img", {
-                            className: _.TileAppInfoImage,
-                            src: _.GetAssets().GetMainCapsuleURL(),
-                          }),
-                        }),
-                      }),
-                      (0, _.jsx)(_._, {
-                        _: _,
-                        children: (0, _.jsx)(_._, {
-                          href: (0, _._)(_.GetStorePageURL()),
-                          children: (0, _.jsx)("div", {
-                            children: _.GetName(),
-                          }),
-                        }),
-                      }),
-                    ],
-                  }),
-                })
-              : null;
-          } else if (_) {
-            const _ = _.GetAccountID(),
-              _ = _._.GetClanInfoByClanAccountID(_);
-            if (_ && _.is_curator)
-              return (0, _.jsx)("div", {
-                className: _.TileAppInfo,
-                children: (0, _.jsx)("div", {
-                  className: _.TileAppInfoTitle,
-                  children: (0, _.jsxs)(_._, {
-                    href: (0, _._)(_._.STORE_BASE_URL + "/curator/" + _ + "/"),
-                    children: [
-                      (0, _.jsx)("img", {
-                        className: _.TileAppInfoImage,
-                        src: _.avatar_full_url,
-                      }),
-                      (0, _.jsx)("div", {
-                        children: (0, _._)(
-                          "#EventModTile_CuratorName",
-                          _.group_name,
-                        ),
-                      }),
-                    ],
-                  }),
-                }),
-              });
-          }
-          return null;
-        });
-        let _ = class extends _.Component {
-          render() {
-            const { event: _, hidden: _, published: _ } = this.props,
-              _ = _
-                ? _
-                  ? (0, _._)("#EVentModTile_State_Staged")
-                  : (0, _._)("#EVentModTile_State_Draft")
-                : (0, _._)("#EVentModTile_State_Published"),
-              _ = (0, _._)(_),
-              _ = (0, _._)(_),
-              _ = (0, _._)(_);
-            let _ =
-                _ && !_.BHasTag("hide_store") && !_.BHasTag("mod_hide_store"),
-              _ =
-                _ &&
-                !_.BHasTag("hide_library_overview") &&
-                !_.BHasTag("mod_hide_library_overview"),
-              _ =
-                _ &&
-                !_.BHasTag("hide_library_detail") &&
-                !_.BHasTag("mod_hide_library_detail");
-            return (0, _.jsxs)("div", {
-              className: _.VisibiltyCtn,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.TileTitle,
-                  children: _,
-                }),
-                (0, _.jsx)("div", {
-                  children: (0, _._)(
-                    "#EventModTile_Store_Visibility",
-                    _
-                      ? (0, _._)("#WriteReview_Dialog_Yes")
-                      : (0, _._)("#WriteReview_Dialog_No"),
-                    _
-                      ? ""
-                      : _
-                        ? (0, _._)(
-                            "#EventModTime_Hidden_EventType",
-                            _.GetEventTypeAsString(),
-                          )
-                        : _.BHasTag("hide_store")
-                          ? (0, _._)("#EventModTime_Hidden_OptOut")
-                          : (0, _._)("#EventModTime_Hidden_Moderator"),
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  children: (0, _._)(
-                    "#EventModTile_LibraryHome_Visibility",
-                    _
-                      ? (0, _._)("#WriteReview_Dialog_Yes")
-                      : (0, _._)("#WriteReview_Dialog_No"),
-                    _
-                      ? ""
-                      : _
-                        ? (0, _._)(
-                            "#EventModTime_Hidden_EventType",
-                            _.GetEventTypeAsString(),
-                          )
-                        : _.BHasTag("hide_library_overview")
-                          ? (0, _._)("#EventModTime_Hidden_OptOut")
-                          : (0, _._)("#EventModTime_Hidden_Moderator"),
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  children: (0, _._)(
-                    "#EventModTile_LibraryDetail_Visibility",
-                    _
-                      ? (0, _._)("#WriteReview_Dialog_Yes")
-                      : (0, _._)("#WriteReview_Dialog_No"),
-                    _
-                      ? ""
-                      : _
-                        ? (0, _._)(
-                            "#EventModTime_Hidden_EventType",
-                            _.GetEventTypeAsString(),
-                          )
-                        : _.BHasTag("hide_library_detail")
-                          ? (0, _._)("#EventModTime_Hidden_OptOut")
-                          : (0, _._)("#EventModTime_Hidden_Moderator"),
-                  ),
-                }),
-                _.BHasTag("enable_steam_china") &&
-                  (0, _.jsx)("div", {
-                    children: (0, _._)("#EventModTile_SteamChina_Visibility"),
-                  }),
-                _.BHasTag("disable_steam_global") &&
-                  (0, _.jsx)("div", {
-                    children: (0, _._)("#EventModTile_SteamGlobal_Hidden"),
-                  }),
-              ],
-            });
-          }
-        };
-        _ = _([_._], _);
-        let _ = class extends _.Component {
-          state = {
-            bUpdating: !1,
-            newCategoryOption: {
-              label: (0, _._)(_.HFK),
-              value: {
-                eventType: _.HFK,
-              },
-            },
-          };
-          m_cancelSignal = _().CancelToken.source();
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "ChangeEventTypeDialog component unmounted",
+              _,
+              _,
+              _,
             );
+          } catch (_) {
+            let _ = _(_);
+            console.error(`UpdateTagsOnPartnerEvent ` + _.strErrorMsg, _);
           }
-          async ChangeCategoryForEvent() {
-            const { eventModel: _, closeModal: _ } = this.props;
-            try {
-              const _ = this.state.newCategoryOption,
-                _ = _.value.eventType;
-              await _.Get().UpdatePartnerEventType(
-                this.m_cancelSignal,
-                _.clanSteamID,
-                _.GID,
-                _,
-              );
-              const _ = _._,
-                _ = [];
-              _.value.tags &&
-                _.value.tags.forEach((_) => {
-                  _.push(_);
-                  const _ = new _().SetUpdateSeasonalTags(_).ToModString();
-                  _.push(_);
-                });
-              const _ = await _.Get().UpdateTagsOnPartnerEvent(
-                this.m_cancelSignal,
-                _.clanSteamID,
-                _.GetAnnouncementGID(),
-                _,
-                _,
-                new _().SetActionChangeEvent(_),
-              );
-              (0, _._)(() => {
-                (_.type = _), (_.vecTags = _);
+          this.setState({
+            bSavingModeration: !1,
+          });
+        },
+      );
+  }
+  OnChangeCategory(_) {
+    let { solrData: _ } = this.props,
+      _ = _.GetClanEventModel(_.unique_id);
+    _(
+      (0, _.jsx)(_, {
+        eventModel: _,
+      }),
+      _(_),
+    );
+  }
+  OnUpdateSeasonalTag(_) {
+    let { solrData: _ } = this.props,
+      _ = _.GetClanEventModel(_.unique_id);
+    _(
+      (0, _.jsx)(_, {
+        eventModel: _,
+      }),
+      _(_),
+    );
+  }
+  render() {
+    let { solrData: _ } = this.props,
+      _ = _.unique_id,
+      _ = Number(_.appid),
+      _,
+      _ = _(_.LANGUAGE),
+      _ = _.GetClanEventModel(_),
+      _ = null;
+    _
+      ? (this.state.bShowAsModal &&
+          (_ = (0, _.jsx)(_, {
+            className: _,
+            children: (0, _.jsx)(`div`, {
+              children: (0, _.jsx)(_, {
+                event: _,
+                fnClose: this.HideModalEvent,
               }),
-                this.setState(
-                  {
-                    bUpdating: !1,
-                  },
-                  _,
-                );
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error("ChangeEventTypeDialog error " + _.strErrorMsg, _),
-                this.setState({
-                  bUpdating: !1,
-                  strErrorMsg: _.strErrorMsg,
-                });
-            }
-          }
-          OnChangeSelection(_) {
-            this.setState({
-              newCategoryOption: _,
-            });
-          }
-          render() {
-            const { eventModel: _, closeModal: _ } = this.props,
-              _ = _.Zi8.filter(
-                (_) => _ == _.DRF || _ == _.Y3j || _ >= _.L0X,
-              ).map((_) => {
-                const _ = {
-                  eventType: _,
-                };
-                return (
-                  _ == _.Fwr && (_.tags = ["patchnotes"]),
-                  {
-                    label: (0, _._)(_),
-                    value: _,
-                  }
-                );
-              });
-            _.push({
-              label: (0, _._)("#PartnerEvent_Curator_Group_Members"),
-              value: {
-                eventType: _.uYK,
-                tags: ["curator", "curator_group_members"],
-              },
             }),
-              _.push({
-                label: (0, _._)("#PartnerEvent_Curator_Public"),
-                value: {
-                  eventType: _.uYK,
-                  tags: ["curator", "curator_public"],
-                },
-              }),
-              _.push({
-                label: (0, _._)("#PartnerEvent_SteamAwardNominations"),
-                value: {
-                  eventType: _.uYK,
-                  tags: [
-                    "steam_award_nomination_request",
-                    "mod_hide_library_overview",
-                  ],
-                },
-              }),
-              _.push({
-                label: (0, _._)("#PartnerEvent_SteamAwardVoteRequest"),
-                value: {
-                  eventType: _.uYK,
-                  tags: [
-                    "steam_award_vote_request",
-                    "mod_hide_library_overview",
-                  ],
-                },
-              });
-            const _ = [
-                {
-                  value: {
-                    eventType: _.f4X,
-                    tags: ["halloween"],
-                  },
-                  label: "Halloween: " + (0, _._)("#PartnerEvent_15"),
-                },
-                {
-                  value: {
-                    eventType: _._,
-                    tags: ["halloween"],
-                  },
-                  label: "Halloween: " + (0, _._)("#PartnerEvent_22"),
-                },
-                {
-                  value: {
-                    eventType: _._,
-                    tags: ["halloween"],
-                  },
-                  label: "Halloween: " + (0, _._)("#PartnerEvent_23"),
-                },
-                {
-                  value: {
-                    eventType: _.hGl,
-                    tags: ["halloween"],
-                  },
-                  label: "Halloween: " + (0, _._)("#PartnerEvent_24"),
-                },
-                {
-                  value: {
-                    eventType: _.WNR,
-                    tags: ["halloween"],
-                  },
-                  label: "Halloween: " + (0, _._)("#PartnerEvent_35"),
-                },
-              ],
-              _ = _._.GetTimeNowWithOverrideAsDate();
-            return (
-              _.getMonth() == 8 || _.getMonth() == 9
-                ? _.unshift(..._)
-                : _.push(..._),
-              (0, _.jsx)(_._, {
-                strTitle: (0, _._)("#EventModTile_ChangeEventType"),
-                strDescription: (0, _._)(
-                  "#EventModTile_ChangeEventType_Desc",
-                  _.GetEventTypeAsString(),
-                ),
-                onCancel: _,
-                onOK: () =>
-                  this.setState(
-                    {
-                      bUpdating: !0,
-                    },
-                    this.ChangeCategoryForEvent,
-                  ),
-                children: (0, _.jsx)(_.Fragment, {
-                  children: (0, _.jsxs)("div", {
-                    className: _.CategoryChangeDialog,
-                    children: [
-                      (0, _.jsx)("br", {}),
-                      this.state.bUpdating &&
-                        (0, _.jsx)(_._, {
-                          size: "small",
-                        }),
-                      this.state.strErrorMsg &&
-                        (0, _.jsxs)("div", {
-                          children: [
-                            (0, _._)("#Chat_Settings_Error_ServerError"),
-                            (0, _.jsx)("br", {}),
-                            this.state.strErrorMsg,
-                          ],
-                        }),
-                      (0, _.jsx)(_._, {
-                        isSearchable: !0,
-                        onChange: this.OnChangeSelection,
-                        value: this.state.newCategoryOption,
-                        options: _,
-                      }),
-                    ],
-                  }),
-                }),
-              })
-            );
-          }
-        };
-        _([_._], _.prototype, "ChangeCategoryForEvent", 1),
-          _([_._], _.prototype, "OnChangeSelection", 1),
-          (_ = _([_._], _));
-        class _ extends _.Component {
-          state = {
-            bUpdating: !1,
-            bAccept: this.props.eventModel.BHasTag("halloween2019"),
-            bHorror: this.props.eventModel.BHasTag("horror"),
-            bCute: this.props.eventModel.BHasTag("cute"),
-          };
-          m_cancelSignal = _().CancelToken.source();
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "UpdateSeasonalTagDialog component unmounted",
-            );
-          }
-          ChangeAcceptance() {
-            this.setState({
-              bAccept: !this.state.bAccept,
-            });
-          }
-          ChangeHorror() {
-            this.setState({
-              bHorror: !this.state.bHorror,
-            });
-          }
-          ChangeCute() {
-            this.setState({
-              bCute: !this.state.bCute,
-            });
-          }
-          async ApplyAction() {
-            let _ = new Array(),
-              _ = new Array();
-            this.state.bAccept
-              ? (_.push("halloween2019"), _.push("halloween2019reviewed"))
-              : (_.push("halloween2019"), _.push("halloween2019reviewed")),
-              this.state.bCute ? _.push("cute") : _.push("cute"),
-              this.state.bHorror ? _.push("horror") : _.push("horror");
-            try {
-              const { eventModel: _ } = this.props;
-              let _ = await _.Get().UpdateTagsOnPartnerEvent(
-                this.m_cancelSignal,
-                _.clanSteamID,
-                _.AnnouncementGID,
-                _,
-                _,
-                new _().SetUpdateSeasonalTags(
-                  this.state.bAccept
-                    ? "halloween2019"
-                    : "halloween2019reviewed",
-                ),
-              );
-              (_.vecTags = _), this.props.closeModal();
-            } catch (_) {
-              let _ = (0, _._)(_);
-              console.error("EventModerationTile " + _.strErrorMsg, _),
-                this.setState({
-                  strErrorMsg: _.strErrorMsg,
-                });
-            }
-          }
-          render() {
-            const { eventModel: _, closeModal: _ } = this.props;
-            return (0, _.jsx)(_._, {
-              strTitle: (0, _._)("#EventModTile_SeasonalTag"),
-              onCancel: _,
-              onOK: () =>
-                this.setState(
-                  {
-                    bUpdating: !0,
-                  },
-                  this.ApplyAction,
-                ),
-              children: (0, _.jsx)(_.Fragment, {
-                children: (0, _.jsxs)("div", {
-                  className: _.CategoryChangeDialog,
+          })),
+        (_ = (0, _.jsx)(_, {
+          eventModel: _,
+          lang: _,
+        })))
+      : (_ = _(`#Loading`));
+    let _ = _.last_modified_date ? Date.parse(_.last_modified_date) / 1e3 : 0,
+      _ = _ ? _.type : Number(_.event_type),
+      _ = new _(_.clan_steamid),
+      _ = _ ? `app/${_}` : `group/${_.GetAccountID()}`,
+      _ = `${_.STORE_BASE_URL}news/${_}/view/${_.announcement_gid}`,
+      _ = !!(_ && _.BHasTag(`adult_only_content`)),
+      _ = !!(_ && _.BHasTag(`halloween`));
+    return (0, _.jsxs)(_, {
+      children: [
+        _,
+        (0, _.jsxs)(`div`, {
+          className: _({
+            [_]: !0,
+            [_]: _,
+          }),
+          children: [
+            (0, _.jsx)(`a`, {
+              href: _,
+              className: _,
+              onClick: this.ShowModalEvent,
+              children: _,
+            }),
+            (0, _.jsxs)(`div`, {
+              className: _,
+              children: [
+                (0, _.jsxs)(`div`, {
+                  className: _,
                   children: [
-                    (0, _.jsx)("input", {
-                      _: "Acceptance",
-                      type: "checkbox",
-                      checked: this.state.bAccept,
-                      onChange: this.ChangeAcceptance,
+                    (0, _.jsx)(`a`, {
+                      className: _,
+                      href: _,
+                      onClick: this.ShowModalEvent,
+                      children: _.event_name,
                     }),
-                    (0, _.jsx)("label", {
-                      htmlFor: "Acceptance",
-                      children: (0, _._)("#EventModTile_SeasonalTag_Desc"),
+                    (0, _.jsx)(`div`, {
+                      className: _(_, _ == 1 ? _ : ``),
+                      children: _ ? _.GetCategoryAsString() : _.event_type,
                     }),
-                    (0, _.jsx)("div", {
-                      children: (0, _._)(
-                        "#EventModTile_SeasonalTag_Desc_Secondary",
-                      ),
-                    }),
-                    (0, _.jsx)("input", {
-                      _: "Horror",
-                      type: "checkbox",
-                      checked: this.state.bHorror,
-                      onChange: this.ChangeHorror,
-                    }),
-                    (0, _.jsx)("label", {
-                      htmlFor: "Horror",
-                      children: "Horror Tag",
-                    }),
-                    (0, _.jsx)("input", {
-                      _: "Cute",
-                      type: "checkbox",
-                      checked: this.state.bCute,
-                      onChange: this.ChangeCute,
-                    }),
-                    (0, _.jsx)("label", {
-                      htmlFor: "Cute",
-                      children: "Cute Tag",
-                    }),
-                    this.state.bUpdating &&
-                      (0, _.jsx)(_._, {
-                        size: "small",
+                    _ &&
+                      (0, _.jsx)(`div`, {
+                        className: `rVy1TypxTf8-`,
+                        children: _(`#EventModTile_HasAdultContent`),
                       }),
-                    this.state.strErrorMsg &&
-                      (0, _.jsxs)("div", {
-                        children: [
-                          (0, _._)("#Chat_Settings_Error_ServerError"),
-                          (0, _.jsx)("br", {}),
-                          this.state.strErrorMsg,
-                        ],
+                    this.state.bLoadingEvent &&
+                      (0, _.jsx)(_, {
+                        size: `small`,
+                        string: _(`#Loading`),
                       }),
+                    (0, _.jsx)(`div`, {
+                      className: _,
+                      children: (0, _.jsx)(_, {
+                        appid: _,
+                        clanSteamID: new _(_.clan_steamid),
+                      }),
+                    }),
                   ],
                 }),
-              }),
-            });
-          }
-        }
-        _([_._], _.prototype, "ChangeAcceptance", 1),
-          _([_._], _.prototype, "ChangeHorror", 1),
-          _([_._], _.prototype, "ChangeCute", 1),
-          _([_._], _.prototype, "ApplyAction", 1);
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        let _ = class extends _.Component {
-          state = {
-            bLoadingEvent: !0,
-          };
-          m_cancelSignal = _().CancelToken.source();
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "SteamGameFestivalStoreDebug to unload ",
-            );
-          }
-          async componentDidMount() {
-            const { clanEventGID: _, clanAccountID: _ } = this.props;
-            if (
-              (console.log(_, _, typeof _, typeof _),
-              _ && !_._.BHasClanEventModel(_))
-            ) {
-              let _ = _._.InitFromClanID(Number.parseInt(_)),
-                _ = await _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                  _,
-                  _,
-                  0,
-                ),
-                _ = new Array(),
-                _ = new Array();
-              if (_.BHasSaleEnabled()) {
-                this.setState({
-                  event: _,
-                  bLoadingEvent: !1,
-                  bLoadingApps: !0,
-                  bLoadingDemos: !0,
-                  bLoadingAssociatedDemoInfo: !0,
-                });
-                let _ = new Map();
-                _.jsondata.sale_sections.forEach((_) => {
-                  _.section_type == "tabs" &&
-                    _.tabs.forEach((_) => {
-                      _.capsules.forEach((_) => {
-                        _.type == "game" ||
-                        _.type == "application" ||
-                        _.type == "software"
-                          ? _.has(_._) || (_.set(_._, !0), _.push(_._))
-                          : _.has(_._) || (_.set(_._, !0), _.push(_._));
-                      });
-                    });
-                });
-                const _ = {
-                  include_assets: !0,
-                  include_screenshots: !0,
-                  include_release: !0,
-                };
-                await _._.Get().QueueMultipleAppRequests(_, _),
-                  this.setState({
-                    rgAppIDs: _,
-                    rgUnknownTypeAppIDs: _,
-                    bLoadingApps: !1,
-                  }),
-                  await _._.Get().QueueMultipleAppRequests(_, _),
-                  this.setState({
-                    bLoadingAssociatedDemoInfo: !1,
-                  });
-                const _ = _.flatMap(
-                  (_) => _._.Get().GetApp(_)?.GetDemoAppIDs() ?? [],
-                );
-                await _._.Get().QueueMultipleAppRequests(_, _),
-                  this.setState({
-                    bLoadingDemos: !1,
-                  });
-              } else
-                this.setState({
-                  bLoadingEvent: !1,
-                  rgAppIDs: _,
-                });
-            } else
-              this.setState({
-                bLoadingEvent: !1,
-              });
-          }
-          render() {
-            if (
-              this.state.bLoadingEvent ||
-              this.state.bLoadingDemos ||
-              this.state.bLoadingApps ||
-              this.state.bLoadingAssociatedDemoInfo
-            )
-              return (0, _.jsx)(_._, {
-                string:
-                  (0, _._)("#Loading") +
-                  (this.state.bLoadingEvent
-                    ? " Events"
-                    : this.state.bLoadingApps
-                      ? " Apps"
-                      : this.state.bLoadingAssociatedDemoInfo
-                        ? " Associated Demo Info"
-                        : this.state.bLoadingDemos
-                          ? " Demos"
-                          : "done"),
-                position: "center",
-              });
-            if (!this.state.event)
-              return (0, _.jsx)("div", {
-                children: " Failed to load event",
-              });
-            const { event: _ } = this.state;
-            if (!_.jsondata.bSaleEnabled)
-              return (0, _.jsx)("div", {
-                children: "Not a sale event",
-              });
-            let _ = new Array(),
-              _ = new Array();
-            this.state.rgAppIDs
-              .filter((_) => !_._.Get().GetApp(_))
-              .forEach((_) => {
-                _.push(
-                  (0, _.jsx)(
-                    "div",
-                    {
-                      children: (0, _.jsx)("a", {
-                        href: _._.STORE_BASE_URL + "app/" + _ + "/?beta=1",
-                        target: "_blank",
-                        children: _,
-                      }),
-                    },
-                    "missing: " + _,
-                  ),
-                ),
-                  _.push(_);
-              });
-            const _ = this.state.rgAppIDs.reduce(
-                (_, _) => _ + (_._.Get().GetApp(_)?.BHasDemo() ? 1 : 0),
-                0,
-              ),
-              _ = new Array();
-            this.state.rgAppIDs.forEach((_) => {
-              const _ = _._.Get().GetApp(_);
-              if (_ && !_.BHasDemo()) {
-                let _ = _._.Get().GetApp(_);
-                _.push(
-                  (0, _.jsxs)(
-                    "div",
-                    {
+                (0, _.jsx)(`div`, {
+                  className: _,
+                  children:
+                    _ &&
+                    (0, _.jsxs)(_.Fragment, {
                       children: [
-                        _?.GetAppType() == _._._ &&
-                          (0, _.jsx)("b", {
-                            children:
-                              "--Error: Sale Page has Demo AppID, based game --\xA0",
-                          }),
-                        _?.GetName(),
-                        " (",
-                        _,
-                        ")",
-                        (0, _.jsx)("a", {
-                          href: (0, _._)(_.GetStorePageURL() + "?beta=0"),
-                          target: "_blank",
-                          children: "Store Page",
+                        (0, _.jsx)(_, {
+                          onClick: this.SetModeratedState,
+                          bSaving: this.state.bSavingModeration,
+                          event: _,
                         }),
-                        "\xA0",
-                        (0, _.jsx)("a", {
-                          href: _._.PARTNER_BASE_URL + "apps/landing/" + _,
-                          target: "_blank",
-                          children: "App Landing Page",
+                        (0, _.jsx)(`button`, {
+                          className: _(`yYL-OrX9PtQ-`, `G32Rr4n6TnQ-`),
+                          onClick: this.OnChangeCategory,
+                          children: _(`#EventModTile_ChangeEventType`),
+                        }),
+                        (0, _.jsx)(_, {
+                          onClick: this.SetAdultContentState,
+                          bSaving: this.state.bSavingModeration,
+                          event: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          onClick: this.SetHalloweenEventState,
+                          bSaving: this.state.bSavingModeration,
+                          event: _,
+                        }),
+                        !!_.BHasTag(`halloween2019candidate`) &&
+                          (0, _.jsx)(`button`, {
+                            className: _(`yYL-OrX9PtQ-`),
+                            onClick: this.OnUpdateSeasonalTag,
+                            children: _(`#EventModTile_SeasonalTag`),
+                          }),
+                        (0, _.jsx)(_, {
+                          eventModel: _,
                         }),
                       ],
-                    },
-                    "missingdemo_" + _,
-                  ),
-                );
-              }
-            });
-            let _ = 0,
-              _ = 0,
-              _ = 0,
-              _ = 0,
-              _ = 0,
-              _ = 0;
-            this.state.rgAppIDs.forEach((_) => {
-              let _ = !1;
-              const _ = _._.Get().GetApp(_);
-              _ &&
-                _.BHasDemo() &&
-                (_._.Get().GetApp(_.GetDemoAppIDs()[0]).BIsComingSoon()
-                  ? ((_ += 1), (_ = !0))
-                  : (_ += 1));
-            });
-            let _ = new Array(),
-              _ = 0;
-            return (
-              this.state.rgAppIDs.forEach((_) => {
-                _._.Get().GetApp(_)?.GetAppType() != _._._ && (_ += 1);
-              }),
-              (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)("h1", {
-                    children: _.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE)),
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "Unique AppIDs:",
-                      }),
-                      " ",
-                      this.state.rgAppIDs.length,
-                      " ",
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsxs)("b", {
-                        children: ["Visible Apps in ", _._.COUNTRY, ":"],
-                      }),
-                      " ",
-                      _,
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "Unknown AppID types:",
-                      }),
-                      " ",
-                      this.state.rgUnknownTypeAppIDs.length,
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "Missing AppIDs:",
-                      }),
-                      " ",
-                      " ",
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "Demos:",
-                      }),
-                      " ",
-                      _,
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "Visible apps missing demo store:",
-                      }),
-                      " ",
-                      _.length,
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "CApplications Loaded:",
-                      }),
-                      " ",
-                      " ",
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "CApplication with Associated Demos:",
-                      }),
-                      " ",
-                      _,
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children:
-                          "\xA0\xA0Associated with store page but not released: ",
-                      }),
-                      " ",
-                      _,
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "CApplication with demo without association:",
-                      }),
-                      " ",
-                      _,
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children:
-                          "\xA0\xA0Released but not associated with store page: ",
-                      }),
-                      " ",
-                      _,
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "CApplication missing:",
-                      }),
-                      " ",
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children:
-                          "CApplication without demo store and demo associations:",
-                      }),
-                      " ",
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "Released Demo: ",
-                      }),
-                      _,
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    children: [
-                      (0, _.jsx)("b", {
-                        children: "Unreleased Demo: ",
-                      }),
-                      _,
-                    ],
-                  }),
-                  (0, _.jsx)("hr", {}),
-                  (0, _.jsx)("h2", {
-                    children: "Missing Appids:",
-                  }),
-                  _,
-                  (0, _.jsx)("h2", {
-                    children:
-                      "Missing BOTH demo list and associated demo on product page:",
-                  }),
-                  _,
-                  (0, _.jsx)("h2", {
-                    children:
-                      "Missing Demos for Visible Appids via Demo Store (missing in link on Sale Page):",
-                  }),
-                  _,
-                ],
-              })
-            );
-          }
-        };
-        _ = _([_._], _);
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const [_, _] = (0, _.useState)(!1),
-            [_] = (0, _.useState)(() => _()),
-            _ = (0, _.useMemo)(
-              () => ({
-                country: _._.COUNTRY,
-                language: _._.LANGUAGE,
-                bUsePartnerAPI: !0,
-              }),
-              [],
-            );
-          return (
-            (0, _.useEffect)(() => (_(!0), _(_)), [_]),
-            _
-              ? (0, _.createElement)(_._, {
-                  context: _,
-                  serviceTransportOverride: _.GetServiceTransport(),
-                  children: _.children,
-                })
-              : null
-          );
-        }
-        function _(_) {
-          const [_] = useState(() => _()),
-            _ = useMemo(
-              () => ({
-                country: Config.COUNTRY,
-                language: Config.LANGUAGE,
-                bUsePartnerAPI: !0,
-                bIncludeUnpublished: _.bIncludeUnpublished,
-              }),
-              [_.bIncludeUnpublished],
-            );
-          return createElement(StoreBrowseLoaderRoot, {
-            context: _,
-            serviceTransportOverride: _.GetServiceTransport(),
-            children: _.children,
-          });
-        }
-        function _() {
-          const _ = (0, _._)(
-            "partnerbrowse_webapi_token",
-            "application_config",
-          );
-          return (0, _._)(new _._(_._.WEBAPI_BASE_URL, _));
-        }
-        function _(_) {
-          return _._.Initialize(_.GetServiceTransport(), _._.is_partner_member);
-        }
-        var _ = __webpack_require__("chunkid");
-        const _ = () =>
-          (0, _.jsx)(_, {
-            children: (0, _.jsx)(_._, {
-              children: (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    path: _._.EventGameFestivalDebug(),
-                    render: (_) =>
+                    }),
+                }),
+                (0, _.jsxs)(`div`, {
+                  className: _,
+                  children: [
+                    (0, _.jsxs)(`div`, {
+                      className: _,
+                      children: [
+                        !!_ &&
+                          (0, _.jsx)(`div`, {
+                            className: `c3fKyIzvAtA-`,
+                            children: _(
+                              `#EventModTile_LastModified`,
+                              _(_) +
+                                `@` +
+                                _(_, {
+                                  bForce24HourClock: !1,
+                                }),
+                            ),
+                          }),
+                        _ &&
+                          (0, _.jsx)(_, {
+                            event: _,
+                            stylesmodule: _,
+                            nOverrideEndTime: _.GetEndTimeAndDateUnixSeconds(),
+                            nOverrideStartTime:
+                              _.GetStartTimeAndDateUnixSeconds(),
+                          }),
+                      ],
+                    }),
+                    _ &&
                       (0, _.jsx)(_, {
-                        ..._,
-                        clanAccountID: _.match.params.clanacountid,
-                        clanEventGID: _.match.params.claneventgid,
+                        event: _,
+                        hidden: _.hidden,
+                        published: _.published,
                       }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    exact: !0,
-                    path: _._.EventBackfill(),
-                    render: (_) =>
-                      (0, _.jsx)(_, {
-                        ..._,
-                      }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    path: _._.EventRSSModeration(),
-                    render: (_) =>
-                      (0, _.jsx)(_, {
-                        ..._,
-                      }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    path: _._.EventModeration(),
-                    render: (_) =>
-                      (0, _.jsx)(_, {
-                        ..._,
-                        appid:
-                          _.match.params.appid &&
-                          Number.parseInt(_.match.params.appid),
-                      }),
-                  }),
-                ],
-              }),
+                  ],
+                }),
+              ],
             }),
+          ],
+        }),
+      ],
+    });
+  }
+};
+_([_], _.prototype, `ShowModalEvent`, null),
+  _([_], _.prototype, `HideModalEvent`, null),
+  _([_], _.prototype, `SetAdultContentState`, null),
+  _([_], _.prototype, `SetHalloweenEventState`, null),
+  _([_], _.prototype, `SetModeratedState`, null),
+  _([_], _.prototype, `OnChangeCategory`, null),
+  _([_], _.prototype, `OnUpdateSeasonalTag`, null),
+  (_ = _([_], _));
+function _(_) {
+  let { eventModel: _, lang: _ } = _,
+    _ = _(_, `capsule`, _, _.capsule_main),
+    _ = _.BImageNeedScreenshotFallback(`capsule`, _);
+  return _ && _.length > 0
+    ? (0, _.jsxs)(_.Fragment, {
+        children: [
+          (0, _.jsx)(_, {
+            rgSources: _,
+          }),
+          _ &&
+            (0, _.jsx)(`div`, {
+              className: `koqw6dEwI70-`,
+              children: _(`#EventModTile_FallbackImageText`),
+            }),
+        ],
+      })
+    : (0, _.jsx)(`div`, {
+        className: _,
+        children: _(`#EventModTile_NoCapsule`),
+      });
+}
+var _ = class extends _.Component {
+  state = {
+    bDownloadingImages: !1,
+    nLocLanguages: 0,
+  };
+  m_cancelSignal = _.default.CancelToken.source();
+  componentWillUnmount() {
+    this.m_cancelSignal.cancel(`ChangeEventTypeDialog component unmounted`);
+  }
+  CountLanguages(_) {
+    let _ = 0;
+    if (_ && _.length > 0)
+      for (let _ = 0; _ < _.length && _ < 32; ++_)
+        _[_] && _[_].length > 0 && (_ += 1);
+    return _;
+  }
+  componentDidMount() {
+    let { event: _ } = this.props;
+    _.LoadClanEventLocalizationFromAnnouncementGID(
+      _.clanSteamID,
+      _.AnnouncementGID,
+    )
+      .then((_) => {
+        this.m_cancelSignal.token.reason ||
+          this.setState({
+            nLocLanguages: _.length,
           });
-      },
-      chunkid: (module) => {
-        module.exports = {
-          "duration-app-launch": "800ms",
-          FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
-          FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
-          FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          ModeratorAuditActionCtn: "f6z__AuHw6SOG9zsY2oKr",
-          ExpandModActions: "_3nNMeqxuySIiNcmt7YEXb7",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          BBCodeFollowButton: "NVuxjpTCUClP-4RsNDDvk",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          BBCodeFollowButton: "BwHJdoHlv8wy5OypqL_b7",
-          isHovered: "_2EcgCb9lHfl7I_MlirYLZL",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          countdownCtn: "GWWacIf04lQysYMFJma0A",
-          Closed: "ATX_xEE69rX8wVxQvONEx",
-          CountDownCtn: "_11RwPICMOmmvNXkOq9bjPc",
-          CountDownTime: "eh0pMnSr-nk203Ealq_Rq",
-          CountDownText: "_3VKQ3h7Z4wO_U-Z_vXUZkk",
-          LearnMore: "_1q98mjxkCUwQuFALsiNtD7",
-          Throbber: "bEkRtFmRUW_smWksM-k9g",
-          WinnerInfo: "_2LTFl4ZFuL1BeNbqYPExWv",
-          WinnerCount: "Z7ScP-i1XHPQn4eeFdJ3g",
-          WinnerText: "chkuqox_QD6U5ID_AHTLk",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          "duration-app-launch": "800ms",
-          Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
-          SectionButton: "_3n8swQFM3I_ARVM_5bPhAs",
-          StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
-          EventsSummariesCtn: "_1snIw0RvJduvDtqpmwtKJ9",
-          LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
-          LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
-          LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          "duration-app-launch": "800ms",
-          storeMenuResponsiveModeWidth: "730px",
-          SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
-          WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
-          BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          Ctn: "_1cSpOjJvmGfNyu_HSwichZ",
-          RssInput: "_8NQ9LUIbLO71H08qAYXDd",
-          PreviewListCtn: "HRcOMhFkaVvhc6JpjMSNL",
-          PostCtn: "_3MI2hkWsuzXcyDAibpwe7B",
-          PostTitle: "_1ZsnsCKJmsJuCu04nd93lM",
-          ActivePost: "h-qBFnVYUuO1I4P-cSkTz",
-          PostDate: "_2vXmupKkh6p2BaA0K6CB5O",
-          ErrorPost: "aBLy2PQkdVwQn6JBG8BN8",
-          PostDraft: "_10_gLIbT6bnwWVSfTW2WSX",
-          PostStaged: "nNzd6ujTYg6p9F7pRvFWy",
-          PreviewListBtn: "_3NT8sO_AexM1KIu_MODBhK",
-          PreviewButtons: "_3lbycruUbHtprPAsZH1xvl",
-          UrlSettingCtn: "iN4AtnUn7apNTMq-bbs1m",
-          Error: "_1ZZ510SPBPFH5AkrGEHFfu",
-          DialogPostTitle: "_1XamDYGOmN-CAK2C5na9a5",
-          DashboardBtn: "_2Hlrm7BUntwygz545o3zQI",
-          RawRSS: "_2mOAhPzeuYmAf5zGBOdp7F",
-          ButtonCtn: "_13jSBmDO_a-9t1cIUiiQGm",
-          PreviewBtn: "_3HssDlgWiXjyOyu8qdcc-K",
-          ViewRaw: "_2jvHrB2MnyHMk3_BUfXjgt",
-          LanguageRow: "g_9tLawSDdTk6NiUPTRzd",
-          LanguageTitle: "_2jkBiax2j-5uGiCq-TfyS0",
-          LanguageSet: "_2zsMrGyxcvlo1yieM1i0d8",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          SectionContainer: "_3P-ffy_ncZSHdpLyO6f0qi",
-          ModSectionTitle: "_2lc8mXoJp_A_p2dgalucda",
-          ResizeButton: "_29RNNuE5kdZltMEtl37JLr",
-          TileContainer: "_2D4XHyOtJNCevYR8usMUTn",
-          CreatorCtn: "GKustVJ6kwH-yfSnQEsoc",
-          TileSpread: "_1s_ElWG5sLvC6jn5bmx5lY",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          Error: "_1eWgIJNhXTPC8_jGAIqKPo",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          AnalysisCtn: "_1YGfWUDh8ed60wRQsWWNIF",
-          AnalysisMissing: "rH1DtJyqgJLBkBSxST7Pr",
-          ModerationContainer: "_4HRKpSC9YY7qtf41FvW0t",
-          FilterContainer: "qY07Ts46PtC9f_CkGYbuw",
-          Tile: "_3oU1yN2Yb-ZuT2P5rHAev9",
-          DetailsMiddle: "VcJpZMvg6yg6gvjet_lOL",
-          EventModerateMarkReview: "_1RqKA7hTv6bcBGrMlmJBgz",
-          EventModerateMarkReReview: "qd-K7NHXOsYzDV3efizgo",
-          HalloweenEvent: "_34-bq70a3KzZ-vVd1v8whZ",
-          TileEventOtherType: "_3LUrW7wuVtojLL2n5z-MO5",
-          TileCapsule: "_36tP88olexdONuQPMAH7wS",
-          NoCapsuleFallback: "_16oQL8__nFx7gB4SyJaXss",
-          NoCapsule: "_1onVFUCJL4w1GOc9-5H6Me",
-          TileDetails: "_2mRup7CUbcaFul1JHh9EZE",
-          DetailsLeft: "_1O0y5744ePZj3bJR1znj1i",
-          EventTitle: "_3ahHdkXDTdAX8N8qrlTO2A",
-          DetailsRight: "_2BaxWyhld4ybAPEQ6OWPMr",
-          ArtHeader: "_38IkFA1-NC1J4Nksi3nRFA",
-          ArtSpotlight: "_2oUPYZHA2_Ta4GuTcTZbgd",
-          ModeratedFlagCtn: "_2JGGc489-CEXdtyThZ-oQB",
-          TitleLink: "_1OG__rbIbfwvZHVxRtcncy",
-          TileAppInfo: "_2IJ__vdWVbYb-buHnhzfnA",
-          TileAppInfoTitle: "_2X75q8B3vbGNtefxcW3jV7",
-          TileAppInfoImage: "_1rVmL1div0uHwyMqwlJixh",
-          TileSplit: "aaFuCFgI5Fl32h2pWEEfN",
-          TileTitle: "yJw1iGP3a49nfGpsJLTX",
-          TimeWidth: "xSOgV1OP-kC1LOJB_U6Lh",
-          CategoryChangeDialog: "_1VSAjVr5FVxM5XYWbK0drT",
-          Button: "wu9KrcTvKBuVbK28hlB7O",
-          RightSideTitles: "XDAwDPCqcUwPgADyyo1I3",
-          DateAndTime: "_2cW9NG6Q7uWRVnhAwe3juu",
-          StoreHeaderAdjust: "_3U7jaAVOEBb0gDtFK1AkVR",
-          LastUpdateTime: "_2x7zHBXixihuRXX3Rjt_0s",
-          EventTimingBlock: "_31d_RSG49SZFyfID3s5Z4G",
-          TileEventType: "_1z1xtCOtqCzGGGDRR-dRFr",
-          ChannelInfo: "H__RKLMfFToIYF83TuW3k",
-          HasAdultContent: "_2PcmCd2KPADlMtBUq-mAxi",
-        };
+      })
+      .catch((_) => {
+        let _ = _(_);
+        console.error(`EventInspection.LoadLoc : error ` + _.strErrorMsg, _),
+          this.m_cancelSignal.token.reason ||
+            this.setState({
+              nLocLanguages: -1,
+            });
+      });
+  }
+  render() {
+    let { event: _ } = this.props,
+      _ = this.CountLanguages(_.jsondata.localized_title_image),
+      _ = this.CountLanguages(_.jsondata.localized_capsule_image),
+      _ = this.CountLanguages(_.jsondata.localized_spotlight_image),
+      _ = Math.max(
+        this.CountLanguages(_.jsondata.localized_broadcast_left_image),
+        this.CountLanguages(_.jsondata.localized_broadcast_right_image),
+      ),
+      _ = _ + _ + _ + _,
+      _ = this.CountLanguages(_.jsondata.localized_summary),
+      _ = this.CountLanguages(_.jsondata.localized_subtitle);
+    return (0, _.jsxs)(`div`, {
+      className: _,
+      children: [
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: _(`#EventModTile_Analysis`),
+        }),
+        (0, _.jsx)(`div`, {
+          children: _(`#EventModTile_Stats_Comments`, _.nCommentCount),
+        }),
+        (0, _.jsx)(`div`, {
+          children: _(`#EventModTile_Stats_VoteUp`, _.nVotesUp),
+        }),
+        (0, _.jsx)(`div`, {
+          children: _(`#EventModTile_Stats_VoteDown`, _.nVotesDown),
+        }),
+        !!_ &&
+          (0, _.jsxs)(`div`, {
+            className: `t8meJ736O4c-`,
+            children: [_(`#EventModTile_ImageAnalysis_Header`, _), ` `],
+          }),
+        !!_ &&
+          (0, _.jsxs)(`div`, {
+            children: [_(`#EventModTile_ImageAnalysis_Capsule`, _), ` `],
+          }),
+        !!_ &&
+          (0, _.jsxs)(`div`, {
+            className: `XsGAPUbg-OU-`,
+            children: [_(`#EventModTile_ImageAnalysis_Spotlight`, _), ` `],
+          }),
+        !!_ &&
+          (0, _.jsxs)(`div`, {
+            children: [_(`#EventModTile_ImageAnalysis_Broadcast`, _), ` `],
+          }),
+        _ == 0 &&
+          (0, _.jsxs)(`div`, {
+            className: `Ie8IvU00EW0-`,
+            children: [_(`#EventModTile_ImageAnalysis_None`), ` `],
+          }),
+        this.state.nLocLanguages == 0 &&
+          (0, _.jsx)(_, {
+            size: `small`,
+            string: _(`#EventModTile_LoadingLocs`),
+          }),
+        this.state.nLocLanguages > 0 &&
+          (0, _.jsx)(`div`, {
+            children: _(`#EventModTile_Languages`, this.state.nLocLanguages),
+          }),
+        !!_ &&
+          (0, _.jsxs)(`div`, {
+            children: [_(`#EventModTile_Languages_Summary`, _), ` `],
+          }),
+        !!_ &&
+          (0, _.jsxs)(`div`, {
+            children: [_(`#EventModTile_Languages_Subtitle`, _), ` `],
+          }),
+      ],
+    });
+  }
+};
+_ = _([_], _);
+var _ = _((_) => {
+    let { appid: _, clanSteamID: _ } = _,
+      _ = _(_),
+      [_, _] = (0, _.useState)(!_.Get().BHasApp(_.appid)),
+      _ = _.useRef(_.default.CancelToken.source());
+    if (
+      ((0, _.useEffect)(
+        () => () =>
+          _.current.cancel(`EventModerationChannelInfo component unmounted`),
+        [],
+      ),
+      (0, _.useEffect)(() => {
+        let { appid: _, clanSteamID: _ } = _;
+        ((_ && !_.Get().BHasApp(_)) || (_ && !_.BHasClanInfoLoaded(_))) &&
+          (async () => {
+            try {
+              await Promise.all([
+                _.Get().QueueAppRequest(_, {
+                  include_assets: !0,
+                  include_release: !0,
+                  include_screenshots: !0,
+                }),
+                _ ? _.LoadClanInfoForClanSteamID(_) : void 0,
+              ]);
+            } catch (_) {
+              let _ = _(_);
+              console.error(
+                `EventModerationChannelInfo: App Load: ` + _.strErrorMsg,
+                _,
+              );
+            } finally {
+              _.current.token.reason || _(!1);
+            }
+          })();
+      }, [_]),
+      _)
+    )
+      return (0, _.jsx)(_, {
+        size: `small`,
+        string: _(`#EventModTile_AppInfoLoading`),
+      });
+    if (_) {
+      let _ = _.Get().GetApp(_);
+      return _
+        ? (0, _.jsx)(`div`, {
+            className: _,
+            children: (0, _.jsxs)(`div`, {
+              className: _,
+              children: [
+                (0, _.jsx)(_, {
+                  _: _,
+                  children: (0, _.jsx)(_, {
+                    href: _(_.GetStorePageURL()),
+                    children: (0, _.jsx)(`img`, {
+                      className: _,
+                      src: _.GetAssets().GetMainCapsuleURL(),
+                    }),
+                  }),
+                }),
+                (0, _.jsx)(_, {
+                  _: _,
+                  children: (0, _.jsx)(_, {
+                    href: _(_.GetStorePageURL()),
+                    children: (0, _.jsx)(`div`, {
+                      children: _.GetName(),
+                    }),
+                  }),
+                }),
+              ],
+            }),
+          })
+        : null;
+    }
+    if (_) {
+      let _ = _.GetAccountID(),
+        _ = _.GetClanInfoByClanAccountID(_);
+      if (_ && _.is_curator)
+        return (0, _.jsx)(`div`, {
+          className: _,
+          children: (0, _.jsx)(`div`, {
+            className: _,
+            children: (0, _.jsxs)(_, {
+              href: _(_.STORE_BASE_URL + `/curator/` + _ + `/`),
+              children: [
+                (0, _.jsx)(`img`, {
+                  className: _,
+                  src: _.avatar_full_url,
+                }),
+                (0, _.jsx)(`div`, {
+                  children: _(`#EventModTile_CuratorName`, _.group_name),
+                }),
+              ],
+            }),
+          }),
+        });
+    }
+    return null;
+  }),
+  _ = class extends _.Component {
+    render() {
+      let { event: _, hidden: _, published: _ } = this.props,
+        _ = _(
+          _
+            ? _
+              ? `#EVentModTile_State_Staged`
+              : `#EVentModTile_State_Draft`
+            : `#EVentModTile_State_Published`,
+        ),
+        _ = _(_),
+        _ = _(_),
+        _ = _(_),
+        _ = _ && !_.BHasTag(`hide_store`) && !_.BHasTag(`mod_hide_store`),
+        _ =
+          _ &&
+          !_.BHasTag(`hide_library_overview`) &&
+          !_.BHasTag(`mod_hide_library_overview`),
+        _ =
+          _ &&
+          !_.BHasTag(`hide_library_detail`) &&
+          !_.BHasTag(`mod_hide_library_detail`);
+      return (0, _.jsxs)(`div`, {
+        className: void 0,
+        children: [
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _,
+          }),
+          (0, _.jsx)(`div`, {
+            children: _(
+              `#EventModTile_Store_Visibility`,
+              _(_ ? `#WriteReview_Dialog_Yes` : `#WriteReview_Dialog_No`),
+              _
+                ? ``
+                : _
+                  ? _(
+                      `#EventModTime_Hidden_EventType`,
+                      _.GetEventTypeAsString(),
+                    )
+                  : _.BHasTag(`hide_store`)
+                    ? _(`#EventModTime_Hidden_OptOut`)
+                    : _(`#EventModTime_Hidden_Moderator`),
+            ),
+          }),
+          (0, _.jsx)(`div`, {
+            children: _(
+              `#EventModTile_LibraryHome_Visibility`,
+              _(_ ? `#WriteReview_Dialog_Yes` : `#WriteReview_Dialog_No`),
+              _
+                ? ``
+                : _
+                  ? _(
+                      `#EventModTime_Hidden_EventType`,
+                      _.GetEventTypeAsString(),
+                    )
+                  : _.BHasTag(`hide_library_overview`)
+                    ? _(`#EventModTime_Hidden_OptOut`)
+                    : _(`#EventModTime_Hidden_Moderator`),
+            ),
+          }),
+          (0, _.jsx)(`div`, {
+            children: _(
+              `#EventModTile_LibraryDetail_Visibility`,
+              _(_ ? `#WriteReview_Dialog_Yes` : `#WriteReview_Dialog_No`),
+              _
+                ? ``
+                : _
+                  ? _(
+                      `#EventModTime_Hidden_EventType`,
+                      _.GetEventTypeAsString(),
+                    )
+                  : _.BHasTag(`hide_library_detail`)
+                    ? _(`#EventModTime_Hidden_OptOut`)
+                    : _(`#EventModTime_Hidden_Moderator`),
+            ),
+          }),
+          _.BHasTag(`enable_steam_china`) &&
+            (0, _.jsx)(`div`, {
+              children: _(`#EventModTile_SteamChina_Visibility`),
+            }),
+          _.BHasTag(`disable_steam_global`) &&
+            (0, _.jsx)(`div`, {
+              children: _(`#EventModTile_SteamGlobal_Hidden`),
+            }),
+        ],
+      });
+    }
+  };
+_ = _([_], _);
+var _ = class extends _.Component {
+  state = {
+    bUpdating: !1,
+    newCategoryOption: {
+      label: _(34),
+      value: {
+        eventType: 34,
       },
     },
-  ]);
-})();
+  };
+  m_cancelSignal = _.default.CancelToken.source();
+  componentWillUnmount() {
+    this.m_cancelSignal.cancel(`ChangeEventTypeDialog component unmounted`);
+  }
+  async ChangeCategoryForEvent() {
+    let { eventModel: _, closeModal: _ } = this.props;
+    try {
+      let _ = this.state.newCategoryOption,
+        _ = _.value.eventType;
+      await _.Get().UpdatePartnerEventType(
+        this.m_cancelSignal,
+        _.clanSteamID,
+        _.GID,
+        _,
+      );
+      let _ = _,
+        _ = [];
+      _.value.tags &&
+        _.value.tags.forEach((_) => {
+          _.push(_);
+          let _ = new _().SetUpdateSeasonalTags(_).ToModString();
+          _.push(_);
+        });
+      let _ = await _.Get().UpdateTagsOnPartnerEvent(
+        this.m_cancelSignal,
+        _.clanSteamID,
+        _.GetAnnouncementGID(),
+        _,
+        _,
+        new _().SetActionChangeEvent(_),
+      );
+      _(() => {
+        (_.type = _), (_.vecTags = _);
+      }),
+        this.setState(
+          {
+            bUpdating: !1,
+          },
+          _,
+        );
+    } catch (_) {
+      let _ = _(_);
+      console.error(`ChangeEventTypeDialog error ` + _.strErrorMsg, _),
+        this.setState({
+          bUpdating: !1,
+          strErrorMsg: _.strErrorMsg,
+        });
+    }
+  }
+  OnChangeSelection(_) {
+    this.setState({
+      newCategoryOption: _,
+    });
+  }
+  render() {
+    let { eventModel: _, closeModal: _ } = this.props,
+      _ = _.filter((_) => _ == 1 || _ == 4 || _ >= 9).map((_) => {
+        let _ = {
+          eventType: _,
+        };
+        return (
+          _ == 12 && (_.tags = [`patchnotes`]),
+          {
+            label: _(_),
+            value: _,
+          }
+        );
+      });
+    _.push({
+      label: _(`#PartnerEvent_Curator_Group_Members`),
+      value: {
+        eventType: 28,
+        tags: [`curator`, `curator_group_members`],
+      },
+    }),
+      _.push({
+        label: _(`#PartnerEvent_Curator_Public`),
+        value: {
+          eventType: 28,
+          tags: [`curator`, `curator_public`],
+        },
+      }),
+      _.push({
+        label: _(`#PartnerEvent_SteamAwardNominations`),
+        value: {
+          eventType: 28,
+          tags: [`steam_award_nomination_request`, `mod_hide_library_overview`],
+        },
+      }),
+      _.push({
+        label: _(`#PartnerEvent_SteamAwardVoteRequest`),
+        value: {
+          eventType: 28,
+          tags: [`steam_award_vote_request`, `mod_hide_library_overview`],
+        },
+      });
+    let _ = [
+        {
+          value: {
+            eventType: 15,
+            tags: [`halloween`],
+          },
+          label: `Halloween: ` + _(`#PartnerEvent_15`),
+        },
+        {
+          value: {
+            eventType: 22,
+            tags: [`halloween`],
+          },
+          label: `Halloween: ` + _(`#PartnerEvent_22`),
+        },
+        {
+          value: {
+            eventType: 23,
+            tags: [`halloween`],
+          },
+          label: `Halloween: ` + _(`#PartnerEvent_23`),
+        },
+        {
+          value: {
+            eventType: 24,
+            tags: [`halloween`],
+          },
+          label: `Halloween: ` + _(`#PartnerEvent_24`),
+        },
+        {
+          value: {
+            eventType: 35,
+            tags: [`halloween`],
+          },
+          label: `Halloween: ` + _(`#PartnerEvent_35`),
+        },
+      ],
+      _ = _.GetTimeNowWithOverrideAsDate();
+    return (
+      _.getMonth() == 8 || _.getMonth() == 9 ? _.unshift(..._) : _.push(..._),
+      (0, _.jsx)(_, {
+        strTitle: _(`#EventModTile_ChangeEventType`),
+        strDescription: _(
+          `#EventModTile_ChangeEventType_Desc`,
+          _.GetEventTypeAsString(),
+        ),
+        onCancel: _,
+        onOK: () =>
+          this.setState(
+            {
+              bUpdating: !0,
+            },
+            this.ChangeCategoryForEvent,
+          ),
+        children: (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              (0, _.jsx)(`br`, {}),
+              this.state.bUpdating &&
+                (0, _.jsx)(_, {
+                  size: `small`,
+                }),
+              this.state.strErrorMsg &&
+                (0, _.jsxs)(`div`, {
+                  children: [
+                    _(`#Chat_Settings_Error_ServerError`),
+                    (0, _.jsx)(`br`, {}),
+                    this.state.strErrorMsg,
+                  ],
+                }),
+              (0, _.jsx)(_._default, {
+                isSearchable: !0,
+                onChange: this.OnChangeSelection,
+                value: this.state.newCategoryOption,
+                options: _,
+              }),
+            ],
+          }),
+        }),
+      })
+    );
+  }
+};
+_([_], _.prototype, `ChangeCategoryForEvent`, null),
+  _([_], _.prototype, `OnChangeSelection`, null),
+  (_ = _([_], _));
+var _ = class extends _.Component {
+  state = {
+    bUpdating: !1,
+    bAccept: this.props.eventModel.BHasTag(`halloween2019`),
+    bHorror: this.props.eventModel.BHasTag(`horror`),
+    bCute: this.props.eventModel.BHasTag(`cute`),
+  };
+  m_cancelSignal = _.default.CancelToken.source();
+  componentWillUnmount() {
+    this.m_cancelSignal.cancel(`UpdateSeasonalTagDialog component unmounted`);
+  }
+  ChangeAcceptance() {
+    this.setState({
+      bAccept: !this.state.bAccept,
+    });
+  }
+  ChangeHorror() {
+    this.setState({
+      bHorror: !this.state.bHorror,
+    });
+  }
+  ChangeCute() {
+    this.setState({
+      bCute: !this.state.bCute,
+    });
+  }
+  async ApplyAction() {
+    let _ = [],
+      _ = [];
+    this.state.bAccept
+      ? (_.push(`halloween2019`), _.push(`halloween2019reviewed`))
+      : (_.push(`halloween2019`), _.push(`halloween2019reviewed`)),
+      this.state.bCute ? _.push(`cute`) : _.push(`cute`),
+      this.state.bHorror ? _.push(`horror`) : _.push(`horror`);
+    try {
+      let { eventModel: _ } = this.props;
+      (_.vecTags = await _.Get().UpdateTagsOnPartnerEvent(
+        this.m_cancelSignal,
+        _.clanSteamID,
+        _.AnnouncementGID,
+        _,
+        _,
+        new _().SetUpdateSeasonalTags(
+          this.state.bAccept ? `halloween2019` : `halloween2019reviewed`,
+        ),
+      )),
+        this.props.closeModal();
+    } catch (_) {
+      let _ = _(_);
+      console.error(`EventModerationTile ` + _.strErrorMsg, _),
+        this.setState({
+          strErrorMsg: _.strErrorMsg,
+        });
+    }
+  }
+  render() {
+    let { eventModel: _, closeModal: _ } = this.props;
+    return (0, _.jsx)(_, {
+      strTitle: _(`#EventModTile_SeasonalTag`),
+      onCancel: _,
+      onOK: () =>
+        this.setState(
+          {
+            bUpdating: !0,
+          },
+          this.ApplyAction,
+        ),
+      children: (0, _.jsx)(_.Fragment, {
+        children: (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            (0, _.jsx)(`input`, {
+              _: `Acceptance`,
+              type: `checkbox`,
+              checked: this.state.bAccept,
+              onChange: this.ChangeAcceptance,
+            }),
+            (0, _.jsx)(`label`, {
+              htmlFor: `Acceptance`,
+              children: _(`#EventModTile_SeasonalTag_Desc`),
+            }),
+            (0, _.jsx)(`div`, {
+              children: _(`#EventModTile_SeasonalTag_Desc_Secondary`),
+            }),
+            (0, _.jsx)(`input`, {
+              _: `Horror`,
+              type: `checkbox`,
+              checked: this.state.bHorror,
+              onChange: this.ChangeHorror,
+            }),
+            (0, _.jsx)(`label`, {
+              htmlFor: `Horror`,
+              children: `Horror Tag`,
+            }),
+            (0, _.jsx)(`input`, {
+              _: `Cute`,
+              type: `checkbox`,
+              checked: this.state.bCute,
+              onChange: this.ChangeCute,
+            }),
+            (0, _.jsx)(`label`, {
+              htmlFor: `Cute`,
+              children: `Cute Tag`,
+            }),
+            this.state.bUpdating &&
+              (0, _.jsx)(_, {
+                size: `small`,
+              }),
+            this.state.strErrorMsg &&
+              (0, _.jsxs)(`div`, {
+                children: [
+                  _(`#Chat_Settings_Error_ServerError`),
+                  (0, _.jsx)(`br`, {}),
+                  this.state.strErrorMsg,
+                ],
+              }),
+          ],
+        }),
+      }),
+    });
+  }
+};
+_([_], _.prototype, `ChangeAcceptance`, null),
+  _([_], _.prototype, `ChangeHorror`, null),
+  _([_], _.prototype, `ChangeCute`, null),
+  _([_], _.prototype, `ApplyAction`, null);
+var _ = class extends _.Component {
+  state = {
+    bLoadingEvent: !0,
+  };
+  m_cancelSignal = _.default.CancelToken.source();
+  componentWillUnmount() {
+    this.m_cancelSignal.cancel(`SteamGameFestivalStoreDebug to unload `);
+  }
+  async componentDidMount() {
+    let { clanEventGID: _, clanAccountID: _ } = this.props;
+    if (
+      (console.log(_, _, typeof _, typeof _), _ && !_.BHasClanEventModel(_))
+    ) {
+      let _ = _.InitFromClanID(Number.parseInt(_)),
+        _ = await _.LoadPartnerEventFromClanEventGIDAndClanSteamID(_, _, 0),
+        _ = [],
+        _ = [];
+      if (_.BHasSaleEnabled()) {
+        this.setState({
+          event: _,
+          bLoadingEvent: !1,
+          bLoadingApps: !0,
+          bLoadingDemos: !0,
+          bLoadingAssociatedDemoInfo: !0,
+        });
+        let _ = new Map();
+        _.jsondata.sale_sections.forEach((_) => {
+          _.section_type == `tabs` &&
+            _.tabs.forEach((_) => {
+              _.capsules.forEach((_) => {
+                _.type == `game` ||
+                _.type == `application` ||
+                _.type == `software`
+                  ? _.has(_._) || (_.set(_._, !0), _.push(_._))
+                  : _.has(_._) || (_.set(_._, !0), _.push(_._));
+              });
+            });
+        });
+        let _ = {
+          include_assets: !0,
+          include_screenshots: !0,
+          include_release: !0,
+        };
+        await _.Get().QueueMultipleAppRequests(_, _),
+          this.setState({
+            rgAppIDs: _,
+            rgUnknownTypeAppIDs: _,
+            bLoadingApps: !1,
+          }),
+          await _.Get().QueueMultipleAppRequests(_, _),
+          this.setState({
+            bLoadingAssociatedDemoInfo: !1,
+          });
+        let _ = _.flatMap((_) => _.Get().GetApp(_)?.GetDemoAppIDs() ?? []);
+        await _.Get().QueueMultipleAppRequests(_, _),
+          this.setState({
+            bLoadingDemos: !1,
+          });
+      } else
+        this.setState({
+          bLoadingEvent: !1,
+          rgAppIDs: _,
+        });
+    } else
+      this.setState({
+        bLoadingEvent: !1,
+      });
+  }
+  render() {
+    if (
+      this.state.bLoadingEvent ||
+      this.state.bLoadingDemos ||
+      this.state.bLoadingApps ||
+      this.state.bLoadingAssociatedDemoInfo
+    )
+      return (0, _.jsx)(_, {
+        string:
+          _(`#Loading`) +
+          (this.state.bLoadingEvent
+            ? ` Events`
+            : this.state.bLoadingApps
+              ? ` Apps`
+              : this.state.bLoadingAssociatedDemoInfo
+                ? ` Associated Demo Info`
+                : this.state.bLoadingDemos
+                  ? ` Demos`
+                  : `done`),
+        position: `center`,
+      });
+    if (!this.state.event)
+      return (0, _.jsx)(`div`, {
+        children: ` Failed to load event`,
+      });
+    let { event: _ } = this.state;
+    if (!_.jsondata.bSaleEnabled)
+      return (0, _.jsx)(`div`, {
+        children: `Not a sale event`,
+      });
+    let _ = [],
+      _ = [];
+    this.state.rgAppIDs
+      .filter((_) => !_.Get().GetApp(_))
+      .forEach((_) => {
+        _.push(
+          (0, _.jsx)(
+            `div`,
+            {
+              children: (0, _.jsx)(`a`, {
+                href: _.STORE_BASE_URL + `app/` + _ + `/?beta=1`,
+                target: `_blank`,
+                children: _,
+              }),
+            },
+            `missing: ` + _,
+          ),
+        ),
+          _.push(_);
+      });
+    let _ = this.state.rgAppIDs.reduce(
+        (_, _) => _ + +!!_.Get().GetApp(_)?.BHasDemo(),
+        0,
+      ),
+      _ = [];
+    this.state.rgAppIDs.forEach((_) => {
+      let _ = _.Get().GetApp(_);
+      if (_ && !_.BHasDemo()) {
+        let _ = _.Get().GetApp(_);
+        _.push(
+          (0, _.jsxs)(
+            `div`,
+            {
+              children: [
+                _?.GetAppType() == 1 &&
+                  (0, _.jsx)(`b`, {
+                    children: `--Error: Sale Page has Demo AppID, based game --\xA0`,
+                  }),
+                _?.GetName(),
+                ` (`,
+                _,
+                `)`,
+                (0, _.jsx)(`a`, {
+                  href: _(_.GetStorePageURL() + `?beta=0`),
+                  target: `_blank`,
+                  children: `Store Page`,
+                }),
+                `\xA0`,
+                (0, _.jsx)(`a`, {
+                  href: _.PARTNER_BASE_URL + `apps/landing/` + _,
+                  target: `_blank`,
+                  children: `App Landing Page`,
+                }),
+              ],
+            },
+            `missingdemo_` + _,
+          ),
+        );
+      }
+    });
+    let _ = 0,
+      _ = 0;
+    this.state.rgAppIDs.forEach((_) => {
+      let _ = _.Get().GetApp(_);
+      _ &&
+        _.BHasDemo() &&
+        (_.Get().GetApp(_.GetDemoAppIDs()[0]).BIsComingSoon()
+          ? (_ += 1)
+          : (_ += 1));
+    });
+    let _ = [],
+      _ = 0;
+    return (
+      this.state.rgAppIDs.forEach((_) => {
+        _.Get().GetApp(_)?.GetAppType() != 1 && (_ += 1);
+      }),
+      (0, _.jsxs)(_, {
+        children: [
+          (0, _.jsx)(`h1`, {
+            children: _.GetNameWithFallback(_(_.LANGUAGE)),
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `Unique AppIDs:`,
+              }),
+              ` `,
+              this.state.rgAppIDs.length,
+              ` `,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsxs)(`b`, {
+                children: [`Visible Apps in `, _.COUNTRY, `:`],
+              }),
+              ` `,
+              _,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `Unknown AppID types:`,
+              }),
+              ` `,
+              this.state.rgUnknownTypeAppIDs.length,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `Missing AppIDs:`,
+              }),
+              ` `,
+              ` `,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `Demos:`,
+              }),
+              ` `,
+              _,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `Visible apps missing demo store:`,
+              }),
+              ` `,
+              _.length,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `CApplications Loaded:`,
+              }),
+              ` `,
+              ` `,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `CApplication with Associated Demos:`,
+              }),
+              ` `,
+              0,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `\xA0\xA0Associated with store page but not released: `,
+              }),
+              ` `,
+              0,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `CApplication with demo without association:`,
+              }),
+              ` `,
+              0,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `\xA0\xA0Released but not associated with store page: `,
+              }),
+              ` `,
+              0,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `CApplication missing:`,
+              }),
+              ` `,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `CApplication without demo store and demo associations:`,
+              }),
+              ` `,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `Released Demo: `,
+              }),
+              _,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              (0, _.jsx)(`b`, {
+                children: `Unreleased Demo: `,
+              }),
+              _,
+            ],
+          }),
+          (0, _.jsx)(`hr`, {}),
+          (0, _.jsx)(`h2`, {
+            children: `Missing Appids:`,
+          }),
+          _,
+          (0, _.jsx)(`h2`, {
+            children: `Missing BOTH demo list and associated demo on product page:`,
+          }),
+          _,
+          (0, _.jsx)(`h2`, {
+            children: `Missing Demos for Visible Appids via Demo Store (missing in link on Sale Page):`,
+          }),
+          _,
+        ],
+      })
+    );
+  }
+};
+_ = _([_], _);
+function _(_) {
+  let [_, _] = (0, _.useState)(!1),
+    [_] = (0, _.useState)(() => _()),
+    _ = (0, _.useMemo)(
+      () => ({
+        country: _.COUNTRY,
+        language: _.LANGUAGE,
+        bUsePartnerAPI: !0,
+      }),
+      [],
+    );
+  return (
+    (0, _.useEffect)(() => (_(!0), _(_)), [_]),
+    _
+      ? (0, _.createElement)(_, {
+          context: _,
+          serviceTransportOverride: _.GetServiceTransport(),
+          children: _.children,
+        })
+      : null
+  );
+}
+function _() {
+  let _ = _(`partnerbrowse_webapi_token`, `application_config`);
+  return _(new _(_.WEBAPI_BASE_URL, _));
+}
+function _(_) {
+  return _.Initialize(_.GetServiceTransport(), _.is_partner_member);
+}
+var _ = () =>
+  (0, _.jsx)(_, {
+    children: (0, _.jsx)(_, {
+      children: (0, _.jsxs)(_, {
+        children: [
+          (0, _.jsx)(_, {
+            path: _.EventGameFestivalDebug(),
+            render: (_) =>
+              (0, _.jsx)(_, {
+                ..._,
+                clanAccountID: _.match.params.clanacountid,
+                clanEventGID: _.match.params.claneventgid,
+              }),
+          }),
+          (0, _.jsx)(_, {
+            exact: !0,
+            path: _.EventBackfill(),
+            render: (_) =>
+              (0, _.jsx)(_, {
+                ..._,
+              }),
+          }),
+          (0, _.jsx)(_, {
+            path: _.EventRSSModeration(),
+            render: (_) =>
+              (0, _.jsx)(_, {
+                ..._,
+              }),
+          }),
+          (0, _.jsx)(_, {
+            path: _.EventModeration(),
+            render: (_) =>
+              (0, _.jsx)(_, {
+                ..._,
+                appid:
+                  _.match.params.appid && Number.parseInt(_.match.params.appid),
+              }),
+          }),
+        ],
+      }),
+    }),
+  });
+export { _ as default };

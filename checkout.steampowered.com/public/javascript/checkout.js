@@ -1095,7 +1095,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'You cannot complete your transaction because you are attempting to purchase an item that is already included in another packaged item in your cart.  Please check your cart to verify that you are not purchasing an item multiple times.  The most common cause would be purchasing DLC along with a deluxe version of a product that already includes the same DLC.';
 					break;
 				case 23:
-					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'https://store.steampowered.com/cart/country_changed\'>here</a>, or change your payment method below.';
+					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'https://store.steampowered.com/cart/\'>here</a>, or change your payment method below.';
 					break;
 				case 8:
 					error_text = 'Your transaction cannot be completed because you have another pending transaction on your account.';
@@ -2949,7 +2949,7 @@ function OnGetFinalPriceFailure( eErrorDetail )
 				switch (method.value)
 				{
 					case 'sofort':
-						error_text = 'This purchase cannot be completed because the amount charged through Sofort must be at least 0,10 EUR.  Please select another payment method for your purchase and try again.';
+						error_text = 'This purchase cannot be completed because the amount charged through Klarna must be at least 0,10 EUR.  Please select another payment method for your purchase and try again.';
 						break;
 
 					case 'beeline':

@@ -1263,6 +1263,15 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 .game_purchase_action_bg > .discount_prices {
     margin: 0 8px;
 }
+.game_purchase_action_bg .btn_medium, .game_purchase_action_bg .btn_medium > span {
+	border-radius: 1px;
+}
+.game_purchase_action_bg .btn_medium {
+	padding: 0;
+}
+.game_purchase_action_bg .btn_medium > span {
+	line-height: 32px;
+}
 
 .game_purchase_action_qty {
 	height: 32px;
@@ -1321,11 +1330,12 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 
 .game_purchase_action .game_purchase_price {
 	background-color: #000000;
-	font-size: 13px;
-	padding-top: 8px;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 32px;
 	padding-left: 12px;
 	padding-right: 12px;
-	height: 24px;
+	height: 32px;
 }
 
 #widget .game_purchase_action .game_purchase_price {
@@ -1531,7 +1541,7 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 	display: inline-block;
 	height: 32px;
 	line-height: 32px;
-	font-size: 25px;
+	font-size: 18px;
 	text-align: center;
 	overflow: hidden;
 	padding: 0 6px;
@@ -2007,6 +2017,13 @@ body.v6 .game_area_description h2.bb_tag strong {
 	right: 14px;
 	color: #ffffff;
 }
+
+.game_area_dlc_price,
+#dlc_purchase_action .game_purchase_price {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 .game_area_dlc_row.even:hover, .game_area_dlc_row.odd:hover {
 	background-color: #417a9b;

@@ -3,19 +3,19 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./broadcastapp.js?contenthash=Cy8C2JMd",
+      "./broadcastapp.js?contenthash=B6cq007Z",
       "./rolldown-runtime.js?contenthash=Bhk3NnG1",
-      "./localization.js?contenthash=BbMOQ_Ae",
-      "./shared_dialog.js?contenthash=WvH2gnj2",
-      "./webpackinit.js?contenthash=Cz42I4Gb",
+      "./localization.js?contenthash=BbczadiP",
+      "./shared_dialog.js?contenthash=Bjg1l0y4",
+      "./webpackinit.js?contenthash=7c4B_KgN",
       "../../css/webui/shared_dialog2.css?contenthash=NjhQ-d4N",
-      "./friendsui_desktopapp.js?contenthash=_B26r5LR",
-      "./defaultappheader.js?contenthash=0-KHOTKe",
-      "./broadcastwatchstore.js?contenthash=CFH0mf1t",
+      "./friendsui_desktopapp.js?contenthash=Z0qtwhtB",
+      "./defaultappheader.js?contenthash=ClYGx_wk",
+      "./broadcastwatchstore.js?contenthash=8PXRLCEh",
       "../../css/webui/defaultappheader.css?contenthash=DwpeiF5o",
-      "../../css/webui/friendsui_desktopapp.css?contenthash=DLqYsH1V",
-      "./broadcastplayer.js?contenthash=DIiUNv6d",
-      "../../css/webui/broadcastplayer.css?contenthash=CKOEWNkt",
+      "../../css/webui/friendsui_desktopapp.css?contenthash=as1wmsd6",
+      "./broadcastplayer.js?contenthash=Z53i0P2A",
+      "../../css/webui/broadcastplayer.css?contenthash=DvWbSQLN",
       "../../css/webui/broadcastapp.css?contenthash=DLwrs7u4",
     ]),
 ) => _.map((_) => _[_]);
@@ -45,8 +45,8 @@ import {
   _,
   _,
   _,
-} from "./localization.js?contenthash=BbMOQ_Ae";
-import { _ } from "./shared_dialog.js?contenthash=WvH2gnj2";
+} from "./localization.js?contenthash=BbczadiP";
+import { _ } from "./shared_dialog.js?contenthash=Bjg1l0y4";
 import {
   _,
   _,
@@ -64,10 +64,10 @@ import {
   _,
   _,
   _,
-} from "./friendsui_desktopapp.js?contenthash=_B26r5LR";
-import { _ } from "./defaultappheader.js?contenthash=0-KHOTKe";
-import { _, _ } from "./webpackinit.js?contenthash=Cz42I4Gb";
-import { _, _ } from "./broadcastwatchstore.js?contenthash=CFH0mf1t";
+} from "./friendsui_desktopapp.js?contenthash=Z0qtwhtB";
+import { _ } from "./defaultappheader.js?contenthash=ClYGx_wk";
+import { _, _ } from "./webpackinit.js?contenthash=7c4B_KgN";
+import { _, _ } from "./broadcastwatchstore.js?contenthash=8PXRLCEh";
 function _(_) {
   return `unknown EMsg ( ` + _ + ` )`;
 }
@@ -4186,7 +4186,7 @@ async function _() {
   let { CBroadcastApp: _ } = await _(
     async () => {
       let { CBroadcastApp: _ } = await import(
-        `./broadcastapp.js?contenthash=Cy8C2JMd`
+        `./broadcastapp.js?contenthash=B6cq007Z`
       );
       return {
         CBroadcastApp: _,
@@ -4217,139 +4217,139 @@ async function _(_) {
         Object.assign({
           "../localization/friendsui_arabic.json": () =>
             _(
-              () => import(`./friendsui_arabic.js?contenthash=B-bJtu7k`),
+              () => import(`./friendsui_arabic.js?contenthash=CnZEM91y`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_brazilian.json": () =>
             _(
-              () => import(`./friendsui_brazilian.js?contenthash=BpthACvy`),
+              () => import(`./friendsui_brazilian.js?contenthash=ChGnBikL`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_bulgarian.json": () =>
             _(
-              () => import(`./friendsui_bulgarian.js?contenthash=EfYZpE0Q`),
+              () => import(`./friendsui_bulgarian.js?contenthash=NzeMeN1U`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_czech.json": () =>
             _(
-              () => import(`./friendsui_czech.js?contenthash=DoSzdAcd`),
+              () => import(`./friendsui_czech.js?contenthash=DY0U0Ufm`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_danish.json": () =>
             _(
-              () => import(`./friendsui_danish.js?contenthash=h3CZXpVo`),
+              () => import(`./friendsui_danish.js?contenthash=YKOxxopz`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_dutch.json": () =>
             _(
-              () => import(`./friendsui_dutch.js?contenthash=CAgvO9CB`),
+              () => import(`./friendsui_dutch.js?contenthash=CGapuncu`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_english.json": () =>
             _(
-              () => import(`./friendsui_english.js?contenthash=BhHonhkI`),
+              () => import(`./friendsui_english.js?contenthash=DVg31sHA`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_finnish.json": () =>
             _(
-              () => import(`./friendsui_finnish.js?contenthash=B2VNMCwm`),
+              () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_french.json": () =>
             _(
-              () => import(`./friendsui_french.js?contenthash=BaPTQ8XP`),
+              () => import(`./friendsui_french.js?contenthash=DFcwkjWI`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_german.json": () =>
             _(
-              () => import(`./friendsui_german.js?contenthash=C0J4jbnK`),
+              () => import(`./friendsui_german.js?contenthash=DQ9X1MPU`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_greek.json": () =>
             _(
-              () => import(`./friendsui_greek.js?contenthash=Czyt_3yz`),
+              () => import(`./friendsui_greek.js?contenthash=D5G4ezrZ`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_hungarian.json": () =>
             _(
-              () => import(`./friendsui_hungarian.js?contenthash=B0IqucIH`),
+              () => import(`./friendsui_hungarian.js?contenthash=Bn4GsGt9`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_indonesian.json": () =>
             _(
-              () => import(`./friendsui_indonesian.js?contenthash=Di8XQJ4e`),
+              () => import(`./friendsui_indonesian.js?contenthash=BdHxBrfS`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_italian.json": () =>
             _(
-              () => import(`./friendsui_italian.js?contenthash=DdXCLXyk`),
+              () => import(`./friendsui_italian.js?contenthash=Dfv4ZYTz`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_japanese.json": () =>
             _(
-              () => import(`./friendsui_japanese.js?contenthash=DfRqrwQF`),
+              () => import(`./friendsui_japanese.js?contenthash=BUwpM_dp`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_koreana.json": () =>
             _(
-              () => import(`./friendsui_koreana.js?contenthash=yT-IL79K`),
+              () => import(`./friendsui_koreana.js?contenthash=DQZ8-pXJ`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_latam.json": () =>
             _(
-              () => import(`./friendsui_latam.js?contenthash=DPN8ov0P`),
+              () => import(`./friendsui_latam.js?contenthash=Dn3i5z6D`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_malay.json": () =>
             _(
-              () => import(`./friendsui_malay.js?contenthash=BImozhmP`),
+              () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_norwegian.json": () =>
             _(
-              () => import(`./friendsui_norwegian.js?contenthash=MOcLintx`),
+              () => import(`./friendsui_norwegian.js?contenthash=Cbydn4il`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_polish.json": () =>
             _(
-              () => import(`./friendsui_polish.js?contenthash=CScWovln`),
+              () => import(`./friendsui_polish.js?contenthash=9Q9lFq0e`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_portuguese.json": () =>
             _(
-              () => import(`./friendsui_portuguese.js?contenthash=ZrM7K-ix`),
+              () => import(`./friendsui_portuguese.js?contenthash=CFYepeor`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_romanian.json": () =>
             _(
-              () => import(`./friendsui_romanian.js?contenthash=B-BaWYoK`),
+              () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_russian.json": () =>
             _(
-              () => import(`./friendsui_russian.js?contenthash=nU9jtA28`),
+              () => import(`./friendsui_russian.js?contenthash=BZFw9yAo`),
               [],
               import.meta.url,
             ),
@@ -4361,49 +4361,49 @@ async function _(_) {
             ),
           "../localization/friendsui_schinese.json": () =>
             _(
-              () => import(`./friendsui_schinese.js?contenthash=w82AcbGD`),
+              () => import(`./friendsui_schinese.js?contenthash=D_-9oeb8`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_spanish.json": () =>
             _(
-              () => import(`./friendsui_spanish.js?contenthash=DK3_G90M`),
+              () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_swedish.json": () =>
             _(
-              () => import(`./friendsui_swedish.js?contenthash=BxZ-p38c`),
+              () => import(`./friendsui_swedish.js?contenthash=CHg9O79L`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_tchinese.json": () =>
             _(
-              () => import(`./friendsui_tchinese.js?contenthash=BrpuFb-a`),
+              () => import(`./friendsui_tchinese.js?contenthash=DFe68QuO`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_thai.json": () =>
             _(
-              () => import(`./friendsui_thai.js?contenthash=BhCQNQ5F`),
+              () => import(`./friendsui_thai.js?contenthash=7zuSyyaN`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_turkish.json": () =>
             _(
-              () => import(`./friendsui_turkish.js?contenthash=BxKC2vJC`),
+              () => import(`./friendsui_turkish.js?contenthash=ObGSkyOE`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_ukrainian.json": () =>
             _(
-              () => import(`./friendsui_ukrainian.js?contenthash=DD0ZQfYB`),
+              () => import(`./friendsui_ukrainian.js?contenthash=DKGabtNo`),
               [],
               import.meta.url,
             ),
           "../localization/friendsui_vietnamese.json": () =>
             _(
-              () => import(`./friendsui_vietnamese.js?contenthash=CqIYfrKb`),
+              () => import(`./friendsui_vietnamese.js?contenthash=ChKd0lDP`),
               [],
               import.meta.url,
             ),
@@ -4417,141 +4417,141 @@ async function _(_) {
             Object.assign({
               "../localization/friendsui_arabic.json": () =>
                 _(
-                  () => import(`./friendsui_arabic.js?contenthash=B-bJtu7k`),
+                  () => import(`./friendsui_arabic.js?contenthash=CnZEM91y`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_brazilian.json": () =>
                 _(
-                  () => import(`./friendsui_brazilian.js?contenthash=BpthACvy`),
+                  () => import(`./friendsui_brazilian.js?contenthash=ChGnBikL`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_bulgarian.json": () =>
                 _(
-                  () => import(`./friendsui_bulgarian.js?contenthash=EfYZpE0Q`),
+                  () => import(`./friendsui_bulgarian.js?contenthash=NzeMeN1U`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_czech.json": () =>
                 _(
-                  () => import(`./friendsui_czech.js?contenthash=DoSzdAcd`),
+                  () => import(`./friendsui_czech.js?contenthash=DY0U0Ufm`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_danish.json": () =>
                 _(
-                  () => import(`./friendsui_danish.js?contenthash=h3CZXpVo`),
+                  () => import(`./friendsui_danish.js?contenthash=YKOxxopz`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_dutch.json": () =>
                 _(
-                  () => import(`./friendsui_dutch.js?contenthash=CAgvO9CB`),
+                  () => import(`./friendsui_dutch.js?contenthash=CGapuncu`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_english.json": () =>
                 _(
-                  () => import(`./friendsui_english.js?contenthash=BhHonhkI`),
+                  () => import(`./friendsui_english.js?contenthash=DVg31sHA`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_finnish.json": () =>
                 _(
-                  () => import(`./friendsui_finnish.js?contenthash=B2VNMCwm`),
+                  () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_french.json": () =>
                 _(
-                  () => import(`./friendsui_french.js?contenthash=BaPTQ8XP`),
+                  () => import(`./friendsui_french.js?contenthash=DFcwkjWI`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_german.json": () =>
                 _(
-                  () => import(`./friendsui_german.js?contenthash=C0J4jbnK`),
+                  () => import(`./friendsui_german.js?contenthash=DQ9X1MPU`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_greek.json": () =>
                 _(
-                  () => import(`./friendsui_greek.js?contenthash=Czyt_3yz`),
+                  () => import(`./friendsui_greek.js?contenthash=D5G4ezrZ`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_hungarian.json": () =>
                 _(
-                  () => import(`./friendsui_hungarian.js?contenthash=B0IqucIH`),
+                  () => import(`./friendsui_hungarian.js?contenthash=Bn4GsGt9`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_indonesian.json": () =>
                 _(
                   () =>
-                    import(`./friendsui_indonesian.js?contenthash=Di8XQJ4e`),
+                    import(`./friendsui_indonesian.js?contenthash=BdHxBrfS`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_italian.json": () =>
                 _(
-                  () => import(`./friendsui_italian.js?contenthash=DdXCLXyk`),
+                  () => import(`./friendsui_italian.js?contenthash=Dfv4ZYTz`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_japanese.json": () =>
                 _(
-                  () => import(`./friendsui_japanese.js?contenthash=DfRqrwQF`),
+                  () => import(`./friendsui_japanese.js?contenthash=BUwpM_dp`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_koreana.json": () =>
                 _(
-                  () => import(`./friendsui_koreana.js?contenthash=yT-IL79K`),
+                  () => import(`./friendsui_koreana.js?contenthash=DQZ8-pXJ`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_latam.json": () =>
                 _(
-                  () => import(`./friendsui_latam.js?contenthash=DPN8ov0P`),
+                  () => import(`./friendsui_latam.js?contenthash=Dn3i5z6D`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_malay.json": () =>
                 _(
-                  () => import(`./friendsui_malay.js?contenthash=BImozhmP`),
+                  () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_norwegian.json": () =>
                 _(
-                  () => import(`./friendsui_norwegian.js?contenthash=MOcLintx`),
+                  () => import(`./friendsui_norwegian.js?contenthash=Cbydn4il`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_polish.json": () =>
                 _(
-                  () => import(`./friendsui_polish.js?contenthash=CScWovln`),
+                  () => import(`./friendsui_polish.js?contenthash=9Q9lFq0e`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_portuguese.json": () =>
                 _(
                   () =>
-                    import(`./friendsui_portuguese.js?contenthash=ZrM7K-ix`),
+                    import(`./friendsui_portuguese.js?contenthash=CFYepeor`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_romanian.json": () =>
                 _(
-                  () => import(`./friendsui_romanian.js?contenthash=B-BaWYoK`),
+                  () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_russian.json": () =>
                 _(
-                  () => import(`./friendsui_russian.js?contenthash=nU9jtA28`),
+                  () => import(`./friendsui_russian.js?contenthash=BZFw9yAo`),
                   [],
                   import.meta.url,
                 ),
@@ -4564,50 +4564,50 @@ async function _(_) {
                 ),
               "../localization/friendsui_schinese.json": () =>
                 _(
-                  () => import(`./friendsui_schinese.js?contenthash=w82AcbGD`),
+                  () => import(`./friendsui_schinese.js?contenthash=D_-9oeb8`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_spanish.json": () =>
                 _(
-                  () => import(`./friendsui_spanish.js?contenthash=DK3_G90M`),
+                  () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_swedish.json": () =>
                 _(
-                  () => import(`./friendsui_swedish.js?contenthash=BxZ-p38c`),
+                  () => import(`./friendsui_swedish.js?contenthash=CHg9O79L`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_tchinese.json": () =>
                 _(
-                  () => import(`./friendsui_tchinese.js?contenthash=BrpuFb-a`),
+                  () => import(`./friendsui_tchinese.js?contenthash=DFe68QuO`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_thai.json": () =>
                 _(
-                  () => import(`./friendsui_thai.js?contenthash=BhCQNQ5F`),
+                  () => import(`./friendsui_thai.js?contenthash=7zuSyyaN`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_turkish.json": () =>
                 _(
-                  () => import(`./friendsui_turkish.js?contenthash=BxKC2vJC`),
+                  () => import(`./friendsui_turkish.js?contenthash=ObGSkyOE`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_ukrainian.json": () =>
                 _(
-                  () => import(`./friendsui_ukrainian.js?contenthash=DD0ZQfYB`),
+                  () => import(`./friendsui_ukrainian.js?contenthash=DKGabtNo`),
                   [],
                   import.meta.url,
                 ),
               "../localization/friendsui_vietnamese.json": () =>
                 _(
                   () =>
-                    import(`./friendsui_vietnamese.js?contenthash=CqIYfrKb`),
+                    import(`./friendsui_vietnamese.js?contenthash=ChKd0lDP`),
                   [],
                   import.meta.url,
                 ),

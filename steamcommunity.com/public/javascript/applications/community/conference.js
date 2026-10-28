@@ -1,1967 +1,1947 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(() => {
-  (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [68521],
-    {
-      5306: (N, ce, s) => {
-        "use strict";
-        s.r(ce), s.d(ce, { ConferenceRoutes: () => Ge, default: () => rn });
-        var e = s(7850),
-          K = s(92757),
-          ke = s(20076),
-          de = s(29630),
-          p = s(99412),
-          $ = s(76559),
-          me = s(90395),
-          S = s(3166),
-          Re = s(14947);
-        class L {
-          m_mapConferences = Re.sH.map();
-          GetConferenceInfo(t) {
-            return this.m_mapConferences.get(t);
-          }
-          static s_Singleton;
-          static Get() {
-            return (
-              L.s_Singleton ||
-                ((L.s_Singleton = new L()), L.s_Singleton.Init()),
-              L.s_Singleton
-            );
-          }
-          async Init() {
-            let t = (0, S.Tc)("conferenceinfo", "application_config");
-            if (this.ValidateStoreDefault(t)) {
-              const n = (0, p.sfN)(S.TS.LANGUAGE),
-                o = (0, me.CJ)(t.clan_faq_about_page),
-                i = me.pN.Get().GetFAQPublishedContent(o, n),
-                r = {
-                  strConferenceID: t.vanity,
-                  rtStartTime: t.start_rtime,
-                  rtEndTime: t.end_rtime,
-                  clanSteamID: new $.b(t.event_group_steamid),
-                  broadcastSteamID: new $.b(t.broadcast_steamid),
-                  bPartnerOnly: t.partner_only,
-                  faqAboutPage: i,
-                  strLocalizedLogos: null,
-                  strLocalizedMobileLogos: null,
-                  globalQandASessionID: t.global_qanda_session_id,
-                  youtubeVideoID: t.youtubeVideoID,
-                };
-              this.m_mapConferences.set(t.vanity, r);
-              const d = await (0, de.Er)(t.localized_logo, n, i?.timestamp),
-                m = await (0, de.Er)(t.localized_mobile_logo, n, i?.timestamp);
-              this.m_mapConferences.set(t.vanity, {
-                ...r,
-                strLocalizedLogos: typeof d == "string" ? [d] : d,
-                strLocalizedMobileLogos: typeof m == "string" ? [m] : m,
-              });
-            }
-          }
-          ValidateStoreDefault(t) {
-            const n = t;
-            return n && typeof n == "object"
-              ? typeof n.event_group_steamid == "string" &&
-                  typeof n.start_rtime == "number" &&
-                  typeof n.end_rtime == "number"
-              : !1;
-          }
-        }
-        var U = s(7582),
-          F = s(25792),
-          V = s(18057),
-          ue = s(13465),
-          Ue = s(21418),
-          c = s(18210),
-          _ = s(65946),
-          I = s(90626),
-          Ve = s(9398),
-          Oe = s(23240),
-          ve = s(90711),
-          We = s(25317),
-          C = s(36707),
-          Qe = s(88619),
-          Ye = s(53120),
-          Ke = s(54089);
-        function ze(a) {
-          const { conferenceInfo: t } = a,
-            n = t.broadcastSteamID.ConvertTo64BitString();
-          return (0, e.jsx)(F.tH, {
-            children: (0, e.jsx)(Oe.default, {
-              steamIDBroadcast: n,
-              watchLocation: ve.nn.CJ,
-              bStartMuted: !0,
-            }),
-          });
-        }
-        function he(a) {
-          const { conferenceInfo: t } = a,
-            n = (0, _.q3)(() => t.broadcastSteamID.ConvertTo64BitString());
-          return (0, e.jsx)("div", {
-            className: (0, C.A)(
-              Qe.BroadcastChatCtn,
-              a.className ? `${a.className}` : "",
-            ),
-            children: (0, e.jsx)(F.tH, {
-              children: (0, e.jsx)(Ve.I, {
-                emoticonStore: We.MX,
-                watchLocation: ve.nn.CJ,
-                steamID: n,
-                globalChat: !0,
-                bPartnerMemberOnlyChat: t.bPartnerOnly,
-                bInvertLayout: !0,
-              }),
-            }),
-          });
-        }
-        function Ce(a) {
-          const { conferenceInfo: t } = a,
-            [n, o] = I.useState(!1);
-          return n
-            ? null
-            : (0, e.jsxs)("div", {
-                className: Ye.broadcast_floating,
-                children: [
-                  (0, e.jsx)(Ke.BroadcastEmbeddablePopoutHeader, {
-                    steamIDBroadcast: t.broadcastSteamID.ConvertTo64BitString(),
-                    OnPreventPopup: () => o(!0),
-                  }),
-                  (0, e.jsx)(ze, { conferenceInfo: t }),
-                ],
-              });
-        }
-        var fe = s(26485);
-        function Je(a) {
-          const { conferenceInfo: t } = a;
-          return null;
-        }
-        var ge = s(67628),
-          Xe = s(71462),
-          w = s(36118),
-          P = s(71421),
-          ne = s(36174),
-          T = s(98241);
-        class O {
-          m_inFlight = null;
-          async LoadInitialCalendarData(t, n) {
-            return (
-              this.m_inFlight ||
-                (this.m_inFlight = this.InternalLoadInitialCalendarData(t, n)),
-              this.m_inFlight
-            );
-          }
-          async InternalLoadInitialCalendarData(t, n) {
-            (0, T.Zr)({ collectionid: n, bSectionByDay: !0, rtCalendarEnd: t });
-            const o = (0, T.v0)(),
-              i = (0, S.Tc)("conference_calendar", "application_config");
-            i && (await o.RegisterCalendarEventsAndModels(i)),
-              o.SetFilteredView((r) => !0);
-          }
-          static m_singleton;
-          static Get() {
-            return O.m_singleton || (O.m_singleton = new O()), O.m_singleton;
-          }
-          constructor() {}
-        }
-        var xe = s(98112),
-          Ze = s(18614),
-          z = s(77495),
-          $e = s(19316),
-          _e = s(91424),
-          q = s(75844),
-          b = s(49789),
-          qe = s(90825),
-          J = s(9046),
-          ae = s(813),
-          y = s(81673),
-          et = s(10014),
-          tt = s(16346),
-          nt = s(19619),
-          at = s(74618),
-          G = s(34360),
-          Se = s(82734),
-          ot = s(53113),
-          oe = s(2801),
-          se = s(88003),
-          st = s(72978),
-          l = s.n(st),
-          B = s(56492),
-          lt = s(89926),
-          it = s(35675);
-        function rt(a) {
-          const { closeModal: t } = a,
-            n = () => {
-              (0, T.v0)().m_visibilityStore.SetGameSourceAllowed(
-                y.FD.k_ECurator,
-                !0,
-              ),
-                t && t();
-            },
-            o = () => {
-              (0,
-              T.v0)().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(
-                !0,
-              ),
-                t && t();
-            };
-          return (0, e.jsx)(oe.o0, {
-            strTitle: (0, c.we)(
-              "#EventCalendar_GameSource_UnhideCuratorsDialog_Title",
-            ),
-            strDescription: (0, c.we)(
-              "#EventCalendar_GameSource_UnhideCuratorsDialog_Description",
-            ),
-            strOKButtonText: (0, c.we)(
-              "#EventCalendar_GameSource_UnhideCuratorsDialog_OKButton",
-            ),
-            strCancelButtonText: (0, c.we)(
-              "#EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton",
-            ),
-            onOK: n,
-            onCancel: o,
-          });
-        }
-        function ct(a) {
-          a ||
-            ((0, T.dP)() &&
-              ((0,
-              T.v0)().m_visibilityStore.BCuratorUnhideOnFollowDialogDismissed() ||
-                (0, T.v0)().m_visibilityStore.BIsGameSourceAllowed(
-                  y.FD.k_ECurator,
-                ) ||
-                (0, se.pg)((0, e.jsx)(rt, {}), window)));
-        }
-        const dt = (0, q.PA)((a) => {
-          const { eventModel: t, calendarEvent: n, history: o } = a,
-            i = (E) => {
-              let v = n.GetEntityName();
-              (0, se.pg)(
-                (0, e.jsx)(oe.o0, {
-                  strTitle: (0, c.we)("#EventCalendar_MuteApp_Title", v),
-                  strDescription: (0, c.we)(
-                    "#EventCalendar_MuteApp_details",
-                    v,
-                  ),
-                  onOK: () =>
-                    (0, T.v0)().UpdateEventBlockFromCalendarEvent(n, !1),
-                  children: (0, e.jsx)("a", {
-                    href: S.TS.STORE_BASE_URL + "account/emailoptout/app",
-                    target: S.TS.IN_CLIENT ? void 0 : "_blank",
-                    children: (0, c.we)("#EventCalendar_ManageMutedSources"),
-                  }),
-                }),
-                (0, Se.uX)(E),
-              );
-            },
-            r = () => {
-              (0, T.v0)().UpdateEventBlockFromCalendarEvent(n, !0);
-            },
-            d = () => {
-              const E = m().MapClanEventTypeToGroup(t.GetEventType());
-              m().SetEventTypeGroupAllowed(E, !1);
-            },
-            m = () => (0, T.v0)().m_visibilityStore,
-            u = (E, v, x, g = !0) => {
-              m().BIsGameSourceAllowed(v) &&
-                (g &&
-                  E.push(
-                    (0, e.jsx)(
-                      G.kt,
-                      {
-                        disabled: !0,
-                        onSelected: () => {},
-                        children: (0, c.we)("#EventCalender_Reason_" + v),
-                      },
-                      `item-source-${x}-${v}`,
-                    ),
-                  ),
-                E.push(
-                  (0, e.jsx)(
-                    G.kt,
-                    {
-                      onSelected: () => {
-                        m().SetGameSourceAllowed(v, !1);
-                      },
-                      children: (0, c.we)("#EventCalender_Hide_Reason_" + v),
-                    },
-                    `item-hidesource-${x}-${v}`,
-                  ),
-                ));
-            },
-            f = (0, B.Bw)(t, B.PH.k_eStoreNewsHub, "allowRelative"),
-            D = () => {
-              f.startsWith("http") ? (window.location.href = f) : o.push(f);
-            },
-            A = (E) => {
-              let v = [];
-              const x = n.GetSource(),
-                g = n.unique_id,
-                H = (0, S.Y2)(),
-                k = (0, T.v0)();
-              k.BIsGlobalCalendar() &&
-                (x &&
-                  x & b.bK.k_eLibrary &&
-                  (m().BIsGameSourceAllowed(y.FD.k_ERecent) && n.appInfo
-                    ? (v.push(
-                        (0, e.jsx)(
-                          G.kt,
-                          {
-                            disabled: !0,
-                            onSelected: () => {},
-                            children: (0, c.we)(
-                              "#EventCalender_LastPlayed",
-                              (0, c.Hq)(
-                                U.HD.GetTimeNowWithOverride() -
-                                  n.appInfo.last_played,
-                              ),
-                            ),
-                          },
-                          `item-source-${g}-lastplayed`,
-                        ),
-                      ),
-                      u(v, y.FD.k_ERecent, g, !1))
-                    : u(v, y.FD.k_ELibrary, g)),
-                x && x & b.bK.k_eWishlist && u(v, y.FD.k_EWishlist, g),
-                x && x & b.bK.k_eFollowing && u(v, y.FD.k_EFollowing, g),
-                !H && x && x & b.bK.k_eCurator && u(v, y.FD.k_ECurator, g),
-                x && x & b.bK.k_eRecommended && u(v, y.FD.k_ERecommended, g),
-                x && x & b.bK.k_eSteam && u(v, y.FD.k_ESteam, g),
-                x && x & b.bK.k_eFeatured && u(v, y.FD.k_EFeatured, g)),
-                v.push(
-                  (0, e.jsx)(
-                    G.kt,
-                    {
-                      onSelected: d,
-                      children: (0, c.we)(
-                        "#EVentCalendar_Hide_EventType",
-                        (0, c.we)(
-                          "#EventCalendar_EventTypeGroup_" +
-                            m().MapClanEventTypeToGroup(t.GetEventType()),
-                        ),
-                      ),
-                    },
-                    t.GID + "hidetype",
-                  ),
-                ),
-                S.iA.logged_in &&
-                  (at.S.Get().BIsEventBlocked(n)
-                    ? v.push(
-                        (0, e.jsx)(
-                          G.kt,
-                          {
-                            onSelected: r,
-                            children: (0, e.jsx)(P.he, {
-                              toolTipContent: (0, c.we)(
-                                "#EventCalendar_UnMuteApp_ttip",
-                              ),
-                              children: (0, c.we)(
-                                "#EventCalendar_UnMuteApp_Title",
-                                n.GetEntityName(),
-                              ),
-                            }),
-                          },
-                          t.GID + "unmuteapp",
-                        ),
-                      )
-                    : v.push(
-                        (0, e.jsx)(
-                          G.kt,
-                          {
-                            onSelected: i,
-                            children: (0, e.jsx)(P.he, {
-                              toolTipContent: (0, c.we)(
-                                "#EventCalendar_MuteApp_ttip",
-                              ),
-                              children: (0, c.we)(
-                                "#EventCalendar_MuteApp_Title",
-                                n.GetEntityName(),
-                              ),
-                            }),
-                          },
-                          t.GID + "muteapp",
-                        ),
-                      )),
-                !t.BIsOGGEvent() &&
-                  !H &&
-                  v.push((0, e.jsx)(mt, { eventModel: t, calendarEvent: n })),
-                k.BIsSingleSourceCalendar() ||
-                  v.push(
-                    (0, e.jsx)(
-                      G.kt,
-                      {
-                        onSelected: D,
-                        children: (0, c.we)(
-                          "#EventCalendar_Goto_SpecificCalendar",
-                          n.GetEntityName(),
-                        ),
-                      },
-                      t.GID + "goto",
-                    ),
-                  ),
-                t.appid &&
-                  v.push(
-                    (0, e.jsx)(
-                      G.kt,
-                      {
-                        onSelected: () =>
-                          (window.location.href = (0, ot.k2)(
-                            S.TS.STORE_BASE_URL + "app/" + t.appid,
-                          )),
-                        children: (0, c.we)("#EventDisplay_ViewStorePage"),
-                      },
-                      t.GID + "goto",
-                    ),
-                  ),
-                (0, tt.lX)((0, e.jsx)(G.tz, { children: v }), E);
-            };
-          return (0, e.jsx)("div", {
-            className: (0, C.A)(l().FooterStat, l().Options),
-            onClick: A,
-            children: (0, e.jsx)(w.faJ, {}),
-          });
+
+import { o as e, r as t } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
+import {
+  C as n,
+  Et as r,
+  Ft as i,
+  R as a,
+  St as o,
+  ot as s,
+  w as c,
+  xt as l,
+} from "./libraries.js?contenthash=eLY4-d-j";
+import {
+  Et as u,
+  Ga as d,
+  Ja as f,
+  Na as p,
+  Zn as m,
+  fo as h,
+  fr as g,
+  gn as _,
+  ja as v,
+  jr as y,
+  pn as b,
+  u as x,
+} from "./salebanner.js?contenthash=Kgzkt2UP";
+import { t as ee } from "./eventinfinitescrollmodal.js?contenthash=C55rGRmB";
+import { t as te } from "./broadcast_embeddable.js?contenthash=BbU1tSfW";
+import { a as S, s as ne } from "./clanstore.js?contenthash=C3YK0fn0";
+import { t as re } from "./broadcastplayer.js?contenthash=C1DpdUZK";
+import { t as ie } from "./throbber.js?contenthash=COAox7wG";
+import {
+  F as ae,
+  G as oe,
+  K as se,
+  R as ce,
+  dt as C,
+  z as le,
+} from "./emoticonbutton.js?contenthash=Du6540NS";
+import {
+  Lt as w,
+  Pt as T,
+  ft as ue,
+  jt as de,
+  mt as fe,
+} from "./apppartnereventspage.js?contenthash=CVvLPBJR";
+import {
+  A as pe,
+  X as me,
+  Y as he,
+  Z as ge,
+  j as _e,
+  k as ve,
+  tt as ye,
+} from "./carouselarrows.js?contenthash=BqkMhyR4";
+import { t as be } from "./ajaxhooks.js?contenthash=DrP4Usdq";
+import { o as xe } from "./historyutils.js?contenthash=C2OBI7UD";
+import { t as Se } from "./tabbar.js?contenthash=DcrOUU8j";
+import {
+  d as E,
+  f as D,
+  o as Ce,
+  r as we,
+  s as O,
+  u as Te,
+} from "./localdateandtime.js?contenthash=CpVlqQ_-";
+import { t as k } from "./numberformats.js?contenthash=DiRCIxm1";
+import {
+  Gi as A,
+  Gl as Ee,
+  Jr as j,
+  Kd as M,
+  Kf as N,
+  Ku as P,
+  Lh as De,
+  Ns as Oe,
+  Pu as F,
+  Qc as ke,
+  Qi as I,
+  Sc as Ae,
+  Tp as je,
+  Uf as L,
+  Us as Me,
+  Vs as Ne,
+  Ws as R,
+  Xd as Pe,
+  Zm as z,
+  _c as Fe,
+  ap as Ie,
+  cl as Le,
+  cp as Re,
+  ef as ze,
+  f as Be,
+  gl as Ve,
+  gm as B,
+  hm as V,
+  il as He,
+  lf as Ue,
+  mm as We,
+  ms as H,
+  nd as Ge,
+  nu as Ke,
+  of as qe,
+  pi as Je,
+  qo as Ye,
+  rf as Xe,
+  uc as Ze,
+  uf as Qe,
+  um as $e,
+  yu as U,
+} from "./main.js?contenthash=B3VTzWgT";
+import {
+  Q as et,
+  S as tt,
+} from "./broadcast_embeddable.module.js?contenthash=DH6WpcLe";
+import {
+  c as nt,
+  s as rt,
+} from "./broadcast_embeddable2.js?contenthash=C7OuAjkk";
+import { i as it, n as at, t as ot } from "./faqbbcode.js?contenthash=CJ-iofS0";
+import { r as st } from "./questions.js?contenthash=CYLuzfOS";
+import {
+  a as ct,
+  c as W,
+  i as G,
+  n as lt,
+  o as ut,
+  r as dt,
+  s as K,
+  t as ft,
+} from "./eventimpressiontracker.js?contenthash=B2s03S5E";
+var q = e(i()),
+  pt = class e {
+    m_mapConferences = a.map();
+    GetConferenceInfo(e) {
+      return this.m_mapConferences.get(e);
+    }
+    static s_Singleton;
+    static Get() {
+      return (
+        e.s_Singleton || ((e.s_Singleton = new e()), e.s_Singleton.Init()),
+        e.s_Singleton
+      );
+    }
+    async Init() {
+      let e = $e(`conferenceinfo`, `application_config`);
+      if (this.ValidateStoreDefault(e)) {
+        let t = z(V.LANGUAGE),
+          n = it(e.clan_faq_about_page),
+          r = at.Get().GetFAQPublishedContent(n, t),
+          i = {
+            strConferenceID: e.vanity,
+            rtStartTime: e.start_rtime,
+            rtEndTime: e.end_rtime,
+            clanSteamID: new L(e.event_group_steamid),
+            broadcastSteamID: new L(e.broadcast_steamid),
+            bPartnerOnly: e.partner_only,
+            faqAboutPage: r,
+            strLocalizedLogos: null,
+            strLocalizedMobileLogos: null,
+            globalQandASessionID: e.global_qanda_session_id,
+            youtubeVideoID: e.youtubeVideoID,
+          };
+        this.m_mapConferences.set(e.vanity, i);
+        let a = await f(e.localized_logo, t, r?.timestamp),
+          o = await f(e.localized_mobile_logo, t, r?.timestamp);
+        this.m_mapConferences.set(e.vanity, {
+          ...i,
+          strLocalizedLogos: typeof a == `string` ? [a] : a,
+          strLocalizedMobileLogos: typeof o == `string` ? [o] : o,
         });
-        function mt(a) {
-          const { eventModel: t, calendarEvent: n } = a,
-            o = (0, it.eT)(t.clanSteamID.GetAccountID()),
-            { elDialogElement: i, fnShowLogonDialog: r } = (0, lt.l)(),
-            d = I.useCallback(async () => {
-              S.iA.logged_in
-                ? (await nt.Fm.Get().UpdateFollowOrIgnoreCurator(
-                    t.clanSteamID,
-                    !0,
-                    !o,
-                  ),
-                  ct(!!o))
-                : r();
-            }, [o, t.clanSteamID, r]);
-          return (0, e.jsxs)(e.Fragment, {
-            children: [
-              (0, e.jsx)(
-                G.kt,
-                {
-                  onSelected: d,
-                  children: (0, e.jsx)(P.he, {
-                    toolTipContent: (0, c.we)(
-                      o
-                        ? "#EventCalendar_UnFollowCurator_ttip"
-                        : "#EventCalendar_FollowCurator_ttip",
-                    ),
-                    children: (0, c.we)(
-                      o
-                        ? "#EventCalendar_UnFollowCurator"
-                        : "#EventCalendar_FollowCurator",
-                      n.GetEntityName(),
-                    ),
-                  }),
-                },
-                t.GID + "followcurator",
-              ),
-              i,
-            ],
-          });
-        }
-        const ut = (0, K.y)(dt);
-        var vt = s(20035),
-          ht = s(68988),
-          M = s(90533),
-          Ct = s(85741),
-          ft = s(68266),
-          gt = s(53876),
-          xt = s(88812),
-          je = s(6221),
-          Ie = s(21659),
-          St = s(39239),
-          Ee = s(32608),
-          jt = s(70758),
-          le = s.n(jt),
-          pe = s(1123);
-        const be = (a) => {
-            const t = ["maxresdefault", "mqdefault", "default"],
-              [n, o] = I.useState(0);
-            I.useEffect(() => o(0), [a.video]);
-            const i = I.useRef(void 0);
-            if (a.altImgWithFallback && a.altImgWithFallback.length > 0)
-              return (0, e.jsx)(St.o, {
-                className: a.className,
-                srcs: a.altImgWithFallback,
-              });
-            if (a.altImg)
-              return (0, e.jsx)("img", {
-                src: a.altImg,
-                className: a.className,
-              });
-            {
-              const r =
-                  "https://img.youtube.com/vi/" + a.video + "/" + t[n] + ".jpg",
-                d = () => {
-                  n + 1 < t.length && o(n + 1);
-                },
-                m = () => {
-                  i.current && i.current.naturalHeight < 91 && d();
-                };
-              return (0, e.jsx)("img", {
-                ref: i,
-                onLoad: m,
-                onError: d,
-                src: r,
-                className: (0, C.A)(le().YoutubePreviewImage, a.className),
-              });
-            }
-          },
-          It = (a) => {
-            const [t, n] = I.useState(!1);
-            (0, Ee.VC)(!!a.preloadYoutubeScripts);
-            const o = (0, pe.Rp)("youtube");
-            if (!t || !o) {
-              const i = (r) => {
-                a.onPlayerActivated && a.onPlayerActivated(),
-                  n(!0),
-                  r.stopPropagation(),
-                  r.preventDefault();
-              };
-              return (0, e.jsxs)("div", {
-                className: (0, C.A)(
-                  "YoutubePreviewContainer",
-                  le().YoutubePreviewImage,
-                  a.imageClassnames,
-                ),
-                onClick: o ? i : void 0,
-                children: [
-                  (0, e.jsx)(be, {
-                    className: "YoutubePreviewImage",
-                    altImgWithFallback: a.altImgWithFallback,
-                    altImg: a.altImg,
-                    video: a.video,
-                  }),
-                  o &&
-                    (0, e.jsxs)(e.Fragment, {
-                      children: [
-                        (0, e.jsx)("div", {
-                          className: "YoutubePreviewPlay",
-                          children: (0, e.jsx)(w.IOc, {}),
-                        }),
-                        (0, e.jsx)("div", {
-                          className: "VideoHintText",
-                          children: (0, c.we)(
-                            "#EventCalendar_WatchYouTubeVideo",
-                          ),
-                        }),
-                      ],
-                    }),
-                ],
-              });
-            } else
-              return (0, e.jsx)(Ee.N1, {
-                ...a,
-                classnames: (0, C.A)(le().YoutubePlayer, a.classnames),
-              });
-          };
-        var ie = s(19730),
-          Et = s(71684),
-          pt = s(29522),
-          bt = s(40358);
-        function Tt(a) {
-          const {
-              eventModel: t,
-              calendarEvent: n,
-              bSuppressHoverEffects: o,
-              mode: i,
-              bHideGameTitle: r,
-              fnOnClicked: d,
-            } = a,
-            [m, u] = I.useState(!1),
-            f = (0, M.fm)(),
-            D = (0, pt.$5)(t.GetAppIDOrReferenceAppID());
-          (0, bt.lv)(D);
-          const A = (0, Ct.Mg)(t);
-          (0, ae.$5)(n.clanInfo?.clanid);
-          const E = (0, p.sfN)(S.TS.LANGUAGE),
-            v = "capsule",
-            [x, g, H, k, X, Q, ee, cn, dn, mn, un] = (0, _.q3)(() => [
-              t.has_live_stream,
-              t.GetEventType(),
-              t.GetAllTags(),
-              t.GetCategoryAsString(),
-              t.GetNameWithFallback(E),
-              t.BImageNeedScreenshotFallback(v, E),
-              t.appid,
-              t.GID,
-              t.GetStartTimeAndDateUnixSeconds(),
-              t.GetSubTitleWithLanguageFallback(E),
-              t.GetSummaryWithFallback(E),
-            ]),
-            [vn, hn] = I.useState(() =>
-              (0, Ie.c5)() && g == p.zeJ ? J.wI.full : J.wI.capsule_main,
-            ),
-            Cn = (0, pe.Ey)(),
-            fn = !!(Q && ee && A),
-            gn = (0, ft.m0)(fn ? void 0 : t, v, E, vn, Cn) ?? A,
-            xn = re(t, i),
-            Sn = (0, gt.uU)(cn),
-            Pe = l()[`EventType${g}`],
-            jn = H.map((te) => l()[`Tag-${te}`]),
-            In = (0, C.A)(
-              l().TileContainer,
-              Pe,
-              x && l().TileVideoIcon,
-              o ? l().DisableHovers : l().EnableHovers,
-              m && l().VideoPlayerReady,
-              xn && l().HasVideo,
-              Sn && l().HasBeenRead,
-              i === "wide" && l().WideMode,
-              i === "carousel" && l().CarouselMode,
-              i === "upcoming" && l().UpcomingMode,
-              ...jn,
-            );
-          let R = mn,
-            Z = un;
-          R === Z && (Z = void 0), R === X && (R = void 0);
-          const Fe = (0, qe.j3)(gn),
-            Le = (0, e.jsx)(Nt, {
-              setVideoPlayerReady: u,
-              calendarEvent: n,
-              eventModel: t,
-              mode: i,
-              artworkType: v,
-              strCapsuleImgURLForBackground: Fe,
-              fnSetCoverSize: hn,
-            }),
-            En = m && i !== "carousel",
-            Be = o && g != p.zeJ && !En,
-            pn = Be && Le,
-            bn = !Be && Le,
-            Tn =
-              g !== p.uYK && g !== p.Fwr && U.HD.GetTimeNowWithOverride() < dn,
-            Y = i !== "wide" || o,
-            Me =
-              Tn &&
-              (0, e.jsx)("div", {
-                className: (0, C.A)(l().ReminderContainer, Y && l().OnlyIcon),
-                children: (0, e.jsx)(je.j, {
-                  eventModel: t,
-                  lang: E,
-                  bShowStartTime: !0,
-                  bOnlyShowIcon: Y,
-                  bExpandLeft: Y,
-                }),
-              }),
-            He = !!(g !== p.Fwr && Z),
-            yn = !!(R && (!He || !yt(R, Z)));
-          return (0, e.jsxs)("div", {
-            className: In,
-            children: [
-              (0, e.jsx)(vt.C, { event: t, recordNewsHubStats: !0 }),
-              (0, e.jsx)(B.tj, {
-                eventModel: t,
-                route: B.PH.k_eView,
-                children: (0, e.jsxs)("div", {
-                  className: l().Tile,
-                  onClick: (te) => {
-                    f.RecordInteraction(M.Eg.k_eClickThrough),
-                      !(0, B.sY)() &&
-                        (d(t), te.stopPropagation(), te.preventDefault());
-                  },
-                  children: [
-                    g === p.zeJ &&
-                      (0, e.jsx)("div", {
-                        className: (0, C.A)(
-                          l().TileBackgroundImage,
-                          Q && l().FallbackImage,
-                        ),
-                        style: { backgroundImage: `url(${Fe})` },
-                      }),
-                    (0, e.jsxs)("div", {
-                      className: l().MainContentContainer,
-                      children: [
-                        bn,
-                        (0, e.jsxs)("div", {
-                          className: l().TileTextContainer,
-                          children: [
-                            g == p.Fwr &&
-                              (0, e.jsx)("div", {
-                                className: l().PatchIconCtn,
-                                children: (0, e.jsx)(w.vjL, {}),
-                              }),
-                            (0, e.jsxs)("div", {
-                              className: l().EventTitleCtn,
-                              children: [
-                                pn,
-                                !r &&
-                                  (0, e.jsxs)("div", {
-                                    className: l().GameSource,
-                                    children: [
-                                      (0, e.jsx)(wt, { ...a }),
-                                      n && (0, e.jsx)(Pt, { calendarEvent: n }),
-                                    ],
-                                  }),
-                                (0, e.jsx)("div", {
-                                  className: l().EventName,
-                                  children: X,
-                                }),
-                                (0, e.jsxs)("div", {
-                                  className: l().EventTypeAndDateCtn,
-                                  children: [
-                                    (0, e.jsx)("div", {
-                                      className: (0, C.A)(
-                                        l().TileTextCategoryType,
-                                        Pe,
-                                      ),
-                                      children: k,
-                                    }),
-                                    (0, e.jsx)(Gt, {
-                                      eventModel: t,
-                                      className: (0, C.A)(
-                                        Y && l().LeaveRoomForReminder,
-                                      ),
-                                    }),
-                                    Y && Me,
-                                  ],
-                                }),
-                                yn &&
-                                  (0, e.jsx)("div", {
-                                    className: l().EventSubTitle,
-                                    children: R,
-                                  }),
-                                He &&
-                                  (0, e.jsx)("div", {
-                                    className: (0, C.A)(
-                                      l().EventSummaryDefault,
-                                      R ? l().SubTitleShown : "",
-                                    ),
-                                    children: Z,
-                                  }),
-                              ],
-                            }),
-                            !Y && Me,
-                          ],
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              }),
-              (0, e.jsx)(Bt, { ...a }),
-            ],
-          });
-        }
-        function yt(a, t) {
-          const n = (r) => r.replace(/\W+/g, "").toLocaleLowerCase(),
-            o = n(a);
-          return n(t).startsWith(o);
-        }
-        function re(a, t) {
-          const { video_preview_type: n, video_preview_id: o, type: i } = a;
-          return !(t === "upcoming" || !o || i === p.Fwr || n !== "youtube");
-        }
-        function Dt(a) {
-          const { eventModel: t, fnSetVideoStateReady: n, mode: o } = a,
-            { video_preview_id: i, type: r } = a.eventModel,
-            d = (0, M.fm)(),
-            m = (0, p.sfN)(S.TS.LANGUAGE),
-            u = (0, Ie.c5)() && r == p.zeJ ? J.wI.full : J.wI.capsule_main,
-            f = (0, xt.WC)(t, "capsule", m, u, !0);
-          if (o === "carousel")
-            return (0, e.jsx)(be, {
-              altImgWithFallback: f,
-              video: i,
-              className: l().YoutubePreviewImage,
-            });
-          const D = () => {
-            d.RecordInteraction(M.Eg.k_ePlayedVideo), n(!0);
-          };
-          return (0, e.jsx)(It, {
-            video: i,
-            altImgWithFallback: f,
-            autoplay: !0,
-            autopause: !0,
-            showFullscreenBtn: !0,
-            controls: !0,
-            imageClassnames: l().YoutubePreviewImage,
-            onPlayerActivated: D,
-            preloadYoutubeScripts: !0,
-            playsInline: !0,
-          });
-        }
-        function Nt(a) {
-          const {
-              eventModel: t,
-              calendarEvent: n,
-              mode: o,
-              artworkType: i,
-              strCapsuleImgURLForBackground: r,
-              setVideoPlayerReady: d,
-              fnSetCoverSize: m,
-            } = a,
-            u = (0, p.sfN)(S.TS.LANGUAGE),
-            f = re(t, o),
-            D = !re(t, o) && o !== "upcoming",
-            [A, E, v, x, g, H] = (0, _.q3)(() => [
-              t.GetEventType(),
-              t.has_live_stream,
-              t.has_live_stream,
-              t.clanSteamID.GetAccountID(),
-              n.GetGameCapsule(),
-              t.BImageNeedScreenshotFallback(i, u),
-            ]);
-          I.useEffect(() => {
-            if (r) {
-              const ee = new Image();
-              (ee.src = r),
-                (ee.onerror = () => {
-                  m(J.wI.full);
-                });
-            }
-          }, [r, m]);
-          const [, k] = (0, ae.TB)(x),
-            X = k && !k.is_ogg;
-          let Q = t.GetSummaryWithFallback(u);
-          return (
-            t.GetSubTitleWithLanguageFallback(u) === Q && (Q = void 0),
-            (0, e.jsxs)("div", {
-              className: l().CoverImageCtn,
-              children: [
-                f &&
-                  (0, e.jsx)(Dt, {
-                    eventModel: t,
-                    mode: o,
-                    calendarEvent: n,
-                    fnSetVideoStateReady: d,
-                  }),
-                D &&
-                  (0, e.jsxs)(e.Fragment, {
-                    children: [
-                      A === p.Fwr &&
-                        (0, e.jsxs)(e.Fragment, {
-                          children: [
-                            (0, e.jsx)("div", {
-                              className: l().GameCapsuleCtn,
-                              children: (0, e.jsx)("div", {
-                                className: (0, C.A)({
-                                  [l().AppBannerLogo]: !0,
-                                  [l().FallbackImage]: H,
-                                  [l().ClanSource]: X,
-                                }),
-                                style: { backgroundImage: `url(${g})` },
-                              }),
-                            }),
-                            (0, e.jsx)("div", {
-                              className: l().GameShortDescription,
-                              children: Q,
-                            }),
-                          ],
-                        }),
-                      A !== p.Fwr &&
-                        (0, e.jsxs)("div", {
-                          className: (0, C.A)({
-                            [l().EventCapsuleCtn]: !0,
-                            [l().LiveBroadcastPreview]: v,
-                          }),
-                          children: [
-                            (0, e.jsx)("div", {
-                              className: (0, C.A)({
-                                [l().TileImage]: !0,
-                                [l().FallbackImage]: H,
-                                [l().ClanSource]: X,
-                              }),
-                              style: { backgroundImage: `url(${r})` },
-                            }),
-                            v &&
-                              (0, e.jsx)("div", {
-                                className: l().TileCoverImagePlayable,
-                              }),
-                            E &&
-                              (0, e.jsx)("div", {
-                                className: l().TileCoverLiveIcon,
-                                children: (0, c.we)(
-                                  "#home_page_live_broadcast",
-                                ),
-                              }),
-                            v &&
-                              (0, e.jsx)("div", {
-                                className: "VideoHintText",
-                                children: (0, c.we)(
-                                  "#EventCalendar_WatchLiveBroadcast",
-                                ),
-                              }),
-                          ],
-                        }),
-                    ],
-                  }),
-              ],
-            })
-          );
-        }
-        const At = (0, q.PA)((a) => {
-            const {
-                eventModel: t,
-                calendarEvent: n,
-                bSuppressHoverEffects: o,
-                history: i,
-              } = a,
-              r = (0, B.Bw)(t, B.PH.k_eStoreNewsHub, "allowRelative"),
-              d = (D) => {
-                r.startsWith("http") ? (window.location.href = r) : i.push(r),
-                  D.stopPropagation(),
-                  D.preventDefault();
-              },
-              m = n.GetEntityName(),
-              u = n.GetGameIcon(),
-              f = (0, C.A)(
-                l().GameTitleContainer,
-                o ? l().DisableHovers : l().EnableHovers,
-              );
-            return (0, e.jsx)(F.tH, {
-              children: (0, e.jsx)("div", {
-                className: l().TileTextHeader,
-                children: (0, e.jsxs)("div", {
-                  className: f,
-                  onClick: d,
-                  children: [
-                    (0, e.jsx)("img", { className: l().AppIcon, src: u }),
-                    (0, e.jsxs)("div", {
-                      className: l().TileTextAppName,
-                      children: [m, " "],
-                    }),
-                  ],
-                }),
-              }),
-            });
+      }
+    }
+    ValidateStoreDefault(e) {
+      let t = e;
+      return t && typeof t == `object`
+        ? typeof t.event_group_steamid == `string` &&
+            typeof t.start_rtime == `number` &&
+            typeof t.end_rtime == `number`
+        : !1;
+    }
+  },
+  mt = `rSAA9RImaO0-`,
+  J = s();
+function ht(e) {
+  let { conferenceInfo: t } = e,
+    n = t.broadcastSteamID.ConvertTo64BitString();
+  return (0, J.jsx)(F, {
+    children: (0, J.jsx)(re, {
+      steamIDBroadcast: n,
+      watchLocation: 5,
+      bStartMuted: !0,
+    }),
+  });
+}
+function gt(e) {
+  let { conferenceInfo: t } = e,
+    n = c(() => t.broadcastSteamID.ConvertTo64BitString());
+  return (0, J.jsx)(`div`, {
+    className: U(mt, e.className ? `${e.className}` : ``),
+    children: (0, J.jsx)(F, {
+      children: (0, J.jsx)(et, {
+        emoticonStore: rt,
+        watchLocation: 5,
+        steamID: n,
+        globalChat: !0,
+        bPartnerMemberOnlyChat: t.bPartnerOnly,
+        bInvertLayout: !0,
+      }),
+    }),
+  });
+}
+function _t(e) {
+  let { conferenceInfo: t } = e,
+    [n, r] = q.useState(!1);
+  return n
+    ? null
+    : (0, J.jsxs)(`div`, {
+        className: tt,
+        children: [
+          (0, J.jsx)(te, {
+            steamIDBroadcast: t.broadcastSteamID.ConvertTo64BitString(),
+            OnPreventPopup: () => r(!0),
           }),
-          wt = (0, K.y)(At),
-          Gt = (0, q.PA)((a) => {
-            const { eventModel: t, calendarEvent: n, className: o } = a,
-              i = (0, T.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
-              r = t ? t.GetStartTimeAndDateUnixSeconds() : n.start_time,
-              d = t && (0, Et.JS)(t.type) && t.GetEndTimeAndDateUnixSeconds();
-            if (d && r < i && i < d) {
-              const m = d - i,
-                u = (0, c.Hq)(m, !0);
-              return (0, e.jsxs)("div", {
-                className: (0, C.A)(l().LiveText, o),
-                children: [
-                  (0, e.jsx)(V.gS, {
-                    rtFullDate: r,
-                    stylesmodule: l(),
-                    children: (0, e.jsx)("div", {
-                      className: l().LiveNow,
-                      children: (0, c.we)("#EventCalendar_LiveNow"),
-                    }),
-                  }),
-                  (0, e.jsx)(V.gS, {
-                    rtFullDate: d,
-                    stylesmodule: l(),
-                    children: (0, c.we)("#EventCalendar_TimeLeft", u),
-                  }),
-                ],
-              });
-            } else if (r < i) {
-              const m = i - r,
-                u = m < 24 * 3600 ? (0, c.Hq)(m, !1, !0) : (0, c._l)(r);
-              return (0, e.jsx)(V.gS, {
-                className: o,
-                rtFullDate: r,
-                stylesmodule: l(),
-                children: (0, e.jsx)("div", {
-                  className: l().PastDateText,
-                  children: u,
-                }),
-              });
-            } else {
-              const m = new Date(i * 1e3);
-              m.setHours(0, 0, 0, 1);
-              const u = m.getTime() / 1e3,
-                f = Math.floor((r - u) / (24 * 3600)),
-                D =
-                  f > 1 && f <= 5 ? (0, c.cc)(new Date(r * 1e3)) : (0, c._l)(r),
-                A = (0, V.pg)(r);
-              return (0, e.jsx)(V.gS, {
-                className: o,
-                rtFullDate: r,
-                stylesmodule: l(),
-                children: (0, e.jsx)("div", {
-                  className: l().FutureDateText,
-                  children: (0, c.we)(
-                    "#EventCalendar_WillStartAtDateTime",
-                    D,
-                    A,
-                  ),
-                }),
-              });
-            }
+          (0, J.jsx)(ht, { conferenceInfo: t }),
+        ],
+      });
+}
+function vt(e) {
+  let { conferenceInfo: t } = e;
+  return null;
+}
+var yt = class e {
+    m_inFlight = null;
+    async LoadInitialCalendarData(e, t) {
+      return (
+        (this.m_inFlight ||= this.InternalLoadInitialCalendarData(e, t)),
+        this.m_inFlight
+      );
+    }
+    async InternalLoadInitialCalendarData(e, t) {
+      ct({ collectionid: t, bSectionByDay: !0, rtCalendarEnd: e });
+      let n = G(),
+        r = $e(`conference_calendar`, `application_config`);
+      r && (await n.RegisterCalendarEventsAndModels(r)),
+        n.SetFilteredView((e) => !0);
+    }
+    static m_singleton;
+    static Get() {
+      return (e.m_singleton ||= new e()), e.m_singleton;
+    }
+    constructor() {}
+  },
+  Y = t({
+    AppBannerLogo: () => rn,
+    AppIcon: () => St,
+    CarouselMode: () => An,
+    ClanSource: () => on,
+    CommentIcon: () => Dn,
+    CommentIconCtn: () => On,
+    CoverImageCtn: () => Tt,
+    DateAndSourceLine: () => It,
+    DateAndTime: () => Nn,
+    EnableHovers: () => X,
+    EventCapsuleCtn: () => un,
+    EventName: () => en,
+    EventSubTitle: () => tn,
+    EventSummaryDefault: () => _n,
+    EventTitleCtn: () => Q,
+    EventType10: () => Ht,
+    EventType11: () => Ut,
+    EventType12: () => $t,
+    EventType13: () => Kt,
+    EventType14: () => qt,
+    EventType15: () => Jt,
+    EventType23: () => Wt,
+    EventType28: () => Vt,
+    EventType35: () => Gt,
+    EventTypeAndDateCtn: () => Lt,
+    FallbackImage: () => an,
+    Footer: () => ln,
+    FooterRightSide: () => wn,
+    FooterStat: () => $,
+    FutureDateText: () => kt,
+    GameCapsuleCtn: () => nn,
+    GameShortDescription: () => Et,
+    GameSource: () => jt,
+    GameTitleContainer: () => xt,
+    HasVideo: () => Pn,
+    LeaveRoomForReminder: () => Rt,
+    LiveBroadcastPreview: () => dn,
+    LiveNow: () => Ot,
+    LiveText: () => Dt,
+    LoadingTile: () => kn,
+    MainContentContainer: () => Xt,
+    OnlyIcon: () => gn,
+    Options: () => Tn,
+    PastDateText: () => At,
+    PatchIconCtn: () => cn,
+    RateIcon: () => xn,
+    RecommendedSource: () => Pt,
+    ReminderContainer: () => hn,
+    SmallAppName: () => zt,
+    Source: () => Nt,
+    SourceList: () => Mt,
+    SourceRecommended: () => Ft,
+    SubTitleShown: () => Fn,
+    Tile: () => Yt,
+    TileBackgroundImage: () => fn,
+    TileContainer: () => wt,
+    TileCoverImagePlayable: () => pn,
+    TileCoverLiveIcon: () => mn,
+    TileImage: () => Zt,
+    TileTextAppName: () => Ct,
+    TileTextCategoryType: () => Bt,
+    TileTextContainer: () => Qt,
+    TileTextHeader: () => sn,
+    TileVideoIcon: () => Mn,
+    TileViewerCount: () => En,
+    UpcomingMode: () => jn,
+    VideoPlayerReady: () => In,
+    Vote_LimitedUser: () => yn,
+    Vote_Negative: () => Sn,
+    Vote_NotLoggedIn: () => vn,
+    Vote_Positive: () => bn,
+    Vote_Ready: () => Cn,
+    YoutubePreviewImage: () => Z,
+    default: () => Ln,
+    narrowWidth: () => bt,
+  }),
+  bt = `500px`,
+  xt = `Zlty4OIYdk8-`,
+  St = `go8QhZVoiDg-`,
+  Ct = `C2L2kTp8KYY-`,
+  X = `cJRhUD4vyks-`,
+  wt = `JTFHmASEfjQ-`,
+  Tt = `lSYF-snjG-M-`,
+  Et = `NH4KbTPWsVo-`,
+  Dt = `oKFVegN0DBM-`,
+  Ot = `b6-KxfcdLaA-`,
+  kt = `fTNya0ypDaA-`,
+  At = `xsBu3BpyRkM-`,
+  jt = `HcQu8--ilOI-`,
+  Mt = `Posg84PD4bE-`,
+  Nt = `k2N88JaY6V0-`,
+  Pt = `ZoGr1X5RSXM-`,
+  Ft = `EQ3XQ1YOQmQ-`,
+  It = `C0xcw-dBN9k-`,
+  Lt = `IF22HifrVkU-`,
+  Rt = `_6qTH13L4IdM-`,
+  zt = `_3tNrYR8q4PM-`,
+  Bt = `ohvlfUuwWIg-`,
+  Vt = `mo9oCL-5zMc-`,
+  Ht = `ZN1vuColBC4-`,
+  Ut = `icDmaRX1BV0-`,
+  Wt = `optYdsri3U8-`,
+  Gt = `_5zGVMek4WGM-`,
+  Kt = `KdEmVjNtWfQ-`,
+  qt = `LnEJdWlC4Ss-`,
+  Jt = `NG3wNiIIJXs-`,
+  Yt = `bOEXfqM27eQ-`,
+  Xt = `o-fQFsyOEMY-`,
+  Z = `q8QvDCYSn5E-`,
+  Zt = `_1ZYmIx0m7bo-`,
+  Qt = `OHAAoz1G1I4-`,
+  $t = `k1akHy9HHzA-`,
+  en = `SlFMYJwWSU4-`,
+  tn = `_9lDmRzgjqs4-`,
+  nn = `E-S8WDov49g-`,
+  rn = `fzWS9zjHBQA-`,
+  an = `yI-XQCfZhjU-`,
+  on = `zEB6Vo-lSoU-`,
+  sn = `hG0eaq6y-C8-`,
+  cn = `wdp2jpfiGas-`,
+  Q = `ym2tgXthxzw-`,
+  ln = `KQCQvl8Sul0-`,
+  un = `iogiG-p5PHg-`,
+  dn = `e2Xhb-5xMvY-`,
+  fn = `TtzbM79RcOo-`,
+  pn = `-y6T-NRjq1Q-`,
+  mn = `_0hsSPkL5myo-`,
+  hn = `-VpcmDHYJBs-`,
+  gn = `_8hZf0ZZtftA-`,
+  _n = `O79JneSzM9g-`,
+  vn = `je6TW3nEJQQ-`,
+  yn = `C-MokZjgv5M-`,
+  bn = `Ba6BoHg0H10-`,
+  xn = `bzgJpyO0RQM-`,
+  Sn = `-How-9UKQAA-`,
+  Cn = `EY35qqcJWWo-`,
+  wn = `_79iz6FtxgOc-`,
+  Tn = `ozmBXi7xV-Y-`,
+  En = `zxaNRVKQnTM-`,
+  $ = `CakmFSjnZaQ-`,
+  Dn = `Ilo9d6Bcf60-`,
+  On = `_2aS2MHSUX-U-`,
+  kn = `D2jHVCUP6G0-`,
+  An = `_6IHSOcZWQTI-`,
+  jn = `i7ABr2eulso-`,
+  Mn = `MVfZPnoopw0-`,
+  Nn = `ckxFzo4Jdqs-`,
+  Pn = `_4wxMhjLGDEo-`,
+  Fn = `h-oZBBAdgfo-`,
+  In = `utI2vL1PRLs-`,
+  Ln = {
+    narrowWidth: bt,
+    GameTitleContainer: xt,
+    AppIcon: St,
+    TileTextAppName: Ct,
+    EnableHovers: X,
+    TileContainer: wt,
+    CoverImageCtn: Tt,
+    GameShortDescription: Et,
+    LiveText: Dt,
+    LiveNow: Ot,
+    FutureDateText: kt,
+    PastDateText: At,
+    GameSource: jt,
+    SourceList: Mt,
+    Source: Nt,
+    RecommendedSource: Pt,
+    SourceRecommended: Ft,
+    DateAndSourceLine: It,
+    EventTypeAndDateCtn: Lt,
+    LeaveRoomForReminder: Rt,
+    SmallAppName: zt,
+    TileTextCategoryType: Bt,
+    EventType28: Vt,
+    EventType10: Ht,
+    EventType11: Ut,
+    EventType23: Wt,
+    EventType35: Gt,
+    EventType13: Kt,
+    EventType14: qt,
+    EventType15: Jt,
+    Tile: Yt,
+    MainContentContainer: Xt,
+    YoutubePreviewImage: Z,
+    TileImage: Zt,
+    TileTextContainer: Qt,
+    EventType12: $t,
+    EventName: en,
+    EventSubTitle: tn,
+    GameCapsuleCtn: nn,
+    AppBannerLogo: rn,
+    FallbackImage: an,
+    ClanSource: on,
+    TileTextHeader: sn,
+    PatchIconCtn: cn,
+    EventTitleCtn: Q,
+    Footer: ln,
+    EventCapsuleCtn: un,
+    LiveBroadcastPreview: dn,
+    TileBackgroundImage: fn,
+    TileCoverImagePlayable: pn,
+    TileCoverLiveIcon: mn,
+    ReminderContainer: hn,
+    OnlyIcon: gn,
+    EventSummaryDefault: _n,
+    Vote_NotLoggedIn: vn,
+    Vote_LimitedUser: yn,
+    Vote_Positive: bn,
+    RateIcon: xn,
+    Vote_Negative: Sn,
+    Vote_Ready: Cn,
+    FooterRightSide: wn,
+    Options: Tn,
+    TileViewerCount: En,
+    FooterStat: $,
+    CommentIcon: Dn,
+    CommentIconCtn: On,
+    LoadingTile: kn,
+    CarouselMode: An,
+    UpcomingMode: jn,
+    TileVideoIcon: Mn,
+    DateAndTime: Nn,
+    HasVideo: Pn,
+    SubTitleShown: Fn,
+    VideoPlayerReady: In,
+  };
+function Rn(e) {
+  let { closeModal: t } = e;
+  return (0, J.jsx)(A, {
+    strTitle: M(`#EventCalendar_GameSource_UnhideCuratorsDialog_Title`),
+    strDescription: M(
+      `#EventCalendar_GameSource_UnhideCuratorsDialog_Description`,
+    ),
+    strOKButtonText: M(
+      `#EventCalendar_GameSource_UnhideCuratorsDialog_OKButton`,
+    ),
+    strCancelButtonText: M(
+      `#EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton`,
+    ),
+    onOK: () => {
+      G().m_visibilityStore.SetGameSourceAllowed(K.k_ECurator, !0), t && t();
+    },
+    onCancel: () => {
+      G().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(!0),
+        t && t();
+    },
+  });
+}
+function zn(e) {
+  e ||
+    (dt() &&
+      (G().m_visibilityStore.BCuratorUnhideOnFollowDialogDismissed() ||
+        G().m_visibilityStore.BIsGameSourceAllowed(K.k_ECurator) ||
+        I((0, J.jsx)(Rn, {}), window)));
+}
+var Bn = n((e) => {
+  let { eventModel: t, calendarEvent: n, history: r } = e,
+    i = (e) => {
+      let t = n.GetEntityName();
+      I(
+        (0, J.jsx)(A, {
+          strTitle: M(`#EventCalendar_MuteApp_Title`, t),
+          strDescription: M(`#EventCalendar_MuteApp_details`, t),
+          onOK: () => G().UpdateEventBlockFromCalendarEvent(n, !1),
+          children: (0, J.jsx)(`a`, {
+            href: V.STORE_BASE_URL + `account/emailoptout/app`,
+            target: V.IN_CLIENT ? void 0 : `_blank`,
+            children: M(`#EventCalendar_ManageMutedSources`),
           }),
-          Pt = (0, q.PA)((a) => {
-            const t = a.calendarEvent.GetSource(),
-              n = [],
-              o = (0, T.v0)().m_visibilityStore;
-            t & b.bK.k_eLibrary && o.BIsGameSourceAllowed(y.FD.k_ELibrary)
-              ? n.push({
-                  id: b.bK.k_eLibrary,
-                  name: "#EventCalendar_GameSource_inLibrary",
-                  ttip: "#EventCalendar_GameSource_EventExplanation_ttip_library",
-                  styles: l().LibrarySource,
-                })
-              : t & b.bK.k_eWishlist && o.BIsGameSourceAllowed(y.FD.k_EWishlist)
-                ? n.push({
-                    id: b.bK.k_eWishlist,
-                    name: "#EventCalendar_GameSource_onWishlist",
-                    ttip: "#EventCalendar_GameSource_EventExplanation_ttip_wishlist",
-                    styles: l().WishlistSource,
-                  })
-                : t & b.bK.k_eRecommended &&
-                    o.BIsGameSourceAllowed(y.FD.k_ERecommended)
-                  ? n.push({
-                      id: b.bK.k_eRecommended,
-                      name: "#EventCalendar_GameSource_recommended_Verbose",
-                      ttip: "#EventCalendar_GameSource_EventExplanation_ttip_recommended",
-                      styles: l().RecommendedSource,
-                    })
-                  : t & b.bK.k_eFeatured &&
-                    o.BIsGameSourceAllowed(y.FD.k_EFeatured) &&
-                    n.push({
-                      id: b.bK.k_eFeatured,
-                      name: "#EventCalendar_GameSource_featured",
-                      ttip: "#EventCalendar_GameSource_ttip_featured",
-                      styles: l().FeaturedSource,
-                    }),
-              t & b.bK.k_eFollowing &&
-                o.BIsGameSourceAllowed(y.FD.k_EFollowing) &&
-                n.push({
-                  id: b.bK.k_eFollowing,
-                  name: "#EventCalendar_GameSource_followed",
-                  ttip: "#EventCalendar_GameSource_EventExplanation_ttip_following",
-                  styles: l().FollowingSource,
-                });
-            const i = n.map((r, d) => {
-              const m = a.calendarEvent.unique_id;
-              return Ft(
-                `item-source-${m}-${r.id}`,
-                r.name,
-                r.ttip,
-                r.styles,
-                d + 1 < n.length,
-              );
-            });
-            return (0, e.jsx)("div", {
-              className: l().SourceList,
-              children: i,
-            });
-          }),
-          Ft = (a, t, n, o, i) =>
-            (0, e.jsx)(
-              P.he,
+        }),
+        P(e),
+      );
+    },
+    a = () => {
+      G().UpdateEventBlockFromCalendarEvent(n, !0);
+    },
+    o = () => {
+      let e = s().MapClanEventTypeToGroup(t.GetEventType());
+      s().SetEventTypeGroupAllowed(e, !1);
+    },
+    s = () => G().m_visibilityStore,
+    c = (e, t, n, r = !0) => {
+      s().BIsGameSourceAllowed(t) &&
+        (r &&
+          e.push(
+            (0, J.jsx)(
+              R,
               {
-                className: (0, C.A)(l().Source, o),
-                toolTipContent: (0, c.we)(n),
-                children: (0, c.we)(t) + (i ? ", " : ""),
+                disabled: !0,
+                onSelected: () => {},
+                children: M(`#EventCalender_Reason_` + t),
               },
-              a,
-            );
-        function Lt(a) {
-          return S.iA.logged_in
-            ? S.iA.is_limited
-              ? l().Vote_LimitedUser
-              : a === "up"
-                ? l().Vote_Positive
-                : a === "down"
-                  ? l().Vote_Negative
-                  : l().Vote_Ready
-            : l().Vote_NotLoggedIn;
-        }
-        function Bt(a) {
-          const { eventModel: t } = a,
-            n = (0, M.fm)(),
-            { myVote: o, Vote: i } = (0, ht.C)(t, { bAsk: !1 }),
-            [, r] = (0, ae.TB)(t.clanSteamID.GetAccountID()),
-            d = () => {
-              o !== "up" &&
-                (0, et.W)() &&
-                (i("up"), n.RecordInteraction(M.Eg.k_eThumbsUp));
+              `item-source-${n}-${t}`,
+            ),
+          ),
+        e.push(
+          (0, J.jsx)(
+            R,
+            {
+              onSelected: () => {
+                s().SetGameSourceAllowed(t, !1);
+              },
+              children: M(`#EventCalender_Hide_Reason_` + t),
             },
-            m = () => {
-              n.RecordInteraction(M.Eg.k_eDiscussions);
-            },
-            [u, f, D] = (0, _.q3)(() => [
-              Math.max(0, t.nVotesUp - t.nVotesDown),
-              t.GetDiscussionURL(r?.vanity_url),
-              t.nCommentCount,
-            ]),
-            A = Lt(o),
-            E = !(0, S.Y2)() && f,
-            v =
-              t.live_stream_viewer_count > 0
-                ? t.live_stream_viewer_count
-                : void 0;
-          return (0, e.jsx)("div", {
-            className: l().Footer,
-            children: (0, e.jsxs)("div", {
-              className: l().FooterRightSide,
-              children: [
-                !!v &&
-                  (0, e.jsx)("div", {
-                    className: l().TileViewerCount,
-                    children: (0, ie.Dq)(v),
-                  }),
-                (0, e.jsxs)("div", {
-                  className: (0, C.A)(l().FooterStat, l().Vote, A),
-                  onClick: d,
-                  children: [
-                    (0, e.jsx)(w.bfp, { className: l().RateIcon }),
-                    (0, e.jsx)("span", { children: (0, ie.Dq)(Number(u)) }),
-                  ],
-                }),
-                E &&
-                  (0, e.jsx)("div", {
-                    className: l().FooterStat,
-                    children: (0, e.jsxs)("a", {
-                      href: f,
-                      className: l().CommentIconCtn,
-                      target: "_blank",
-                      onClick: m,
-                      children: [
-                        (0, e.jsx)(w._h6, { className: l().CommentIcon }),
-                        (0, e.jsx)("span", { children: (0, ie.Dq)(Number(D)) }),
-                      ],
-                    }),
-                  }),
-                (0, e.jsx)(ut, { ...a }),
-              ],
-            }),
-          });
-        }
-        var Mt = s(19188),
-          Te = s(179),
-          Ht = s(54963);
-        const kt = "emclan",
-          Rt = "emgid";
-        function ye(a) {
-          const { displayLocation: t, fnChangeModalEvent: n } = a,
-            [o, i] = I.useState(null),
-            [r, d] = (0, Te.QD)(Rt, null),
-            [m, u] = (0, Te.QD)(kt, null);
-          return (
-            (0, Ht.hL)(n, (f, D) => {
-              d(f), u($.b.InitFromClanID(D).ConvertTo64BitString());
-            }),
-            I.useEffect(() => {
-              if (r != null && m != null) {
-                const f = new $.b(m);
-                z.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                  f,
-                  r,
-                  0,
-                ).then(i);
-              }
-            }, [r, m]),
-            o
-              ? (0, e.jsx)(Mt.N, {
-                  appid: o.appid,
-                  trackingLocation: t,
-                  announcementGID: o.GetAnnouncementGID(),
-                  partnerEventStore: z.O3,
-                  eventModel: o,
-                  showAppHeader: !0,
-                  closeModal: () => {
-                    i(null), u(null), d(null);
-                  },
-                })
-              : null
-          );
-        }
-        var Ut = s(34736),
-          Vt = s(85599),
-          Ot = s(47689),
-          De = s(8323),
-          Wt = s(92264),
-          j = s(63585);
-        const Ne = 10;
-        function Qt(a) {
-          const t = (0, T.v0)(),
-            n = (0, U.P_)(Ne),
-            o = t.GetActiveEventsAt(n) || [],
-            [i] = I.useState(new De.lu()),
-            r = I.useCallback(
-              (d, m) => (0, _e.Y)(z.O3.GetClanEventModel(d), window),
-              [],
-            );
-          return t.GetNumEventsLoaded() == 0
-            ? (0, e.jsx)("div", {
-                children: (0, c.we)("#Conference_No_Schedule_Yet"),
-              })
-            : (0, e.jsxs)("div", {
-                className: j.EventsScheduleCtn,
-                children: [
-                  (0, e.jsx)(ye, {
-                    displayLocation: xe.Tc.My,
-                    fnChangeModalEvent: i,
-                  }),
-                  (0, e.jsx)(Jt, { rgActiveEvents: o, fnDisplayModalEvent: r }),
-                  (0, e.jsx)(Kt, {
-                    rgActiveEvents: o,
-                    fnDisplayModalEvent: r,
-                    rtNow: n,
-                  }),
-                  (0, e.jsx)("br", {}),
-                  (0, e.jsx)("br", {}),
-                  (0, e.jsx)($e.$n, {
-                    onClick: (d) =>
-                      (0, se.pg)((0, e.jsx)($t, {}), (0, Se.uX)(d)),
-                    children: (0, c.we)("#Conference_NeedHelp"),
-                  }),
-                ],
-              });
-        }
-        function Yt(a) {
-          return (0, e.jsx)(Ae, { ...a, children: (0, e.jsx)(Qt, { ...a }) });
-        }
-        function Kt(a) {
-          const { rgActiveEvents: t, rtNow: n } = a,
-            i = (0, T.v0)()
-              .GetCalendarItemsInTimeRange(n + 1)
-              .rgCalendarItems.filter(
-                (r) => !t.some((d) => d.GID == r.unique_id),
-              )
-              .sort((r, d) => r.start_time - d.start_time);
-          return i.length == 0
-            ? (0, e.jsx)("div", {
-                children: (0, c.we)("#Conference_No_More_Schedule"),
-              })
-            : (0, e.jsxs)("div", {
-                className: j.UpcomingEventsCtn,
-                children: [
-                  (0, e.jsx)("div", {
-                    className: j.SectionTitle,
-                    children: (0, c.we)("#Conference_ScheduleNext"),
-                  }),
-                  (0, e.jsx)("div", {
-                    className: j.EventSchedCtn,
-                    children: i.map((r, d) =>
-                      (0, e.jsx)(
-                        zt,
-                        {
-                          bDisplayAsUpNext: d == 0 && t.length >= 1,
-                          calendarItem: r,
-                          fnDisplayModalEvent: a.fnDisplayModalEvent,
-                          rtNow: n,
-                        },
-                        r.unique_id,
-                      ),
+            `item-hidesource-${n}-${t}`,
+          ),
+        ));
+    },
+    l = ye(t, me.k_eStoreNewsHub, `allowRelative`),
+    u = () => {
+      l.startsWith(`http`) ? (window.location.href = l) : r.push(l);
+    };
+  return (0, J.jsx)(`div`, {
+    className: U($, Tn),
+    onClick: (e) => {
+      let r = [],
+        l = n.GetSource(),
+        d = n.unique_id,
+        f = N(),
+        p = G();
+      p.BIsGlobalCalendar() &&
+        (l &&
+          l & W.k_eLibrary &&
+          (s().BIsGameSourceAllowed(K.k_ERecent) && n.appInfo
+            ? (r.push(
+                (0, J.jsx)(
+                  R,
+                  {
+                    disabled: !0,
+                    onSelected: () => {},
+                    children: M(
+                      `#EventCalender_LastPlayed`,
+                      Qe(Te.GetTimeNowWithOverride() - n.appInfo.last_played),
                     ),
-                  }),
-                ],
-              });
-        }
-        function zt(a) {
-          const {
-              calendarItem: t,
-              bDisplayAsUpNext: n,
-              fnDisplayModalEvent: o,
-              rtNow: i,
-            } = a,
-            r = z.O3.GetClanEventModel(t.unique_id),
-            d = (0, p.sfN)(S.TS.LANGUAGE),
-            m = r.GetStartTimeAndDateUnixSeconds(),
-            u = (0, ne.JD)(new Date(i * 1e3), new Date(m * 1e3));
-          return (0, e.jsxs)("div", {
-            className: j.EventItemCtn,
-            onClick: () => o(r.GID, r.clanSteamID.GetAccountID()),
-            children: [
-              (0, e.jsx)("div", {
-                className: j.Title,
-                children: r.GetNameWithFallback(d),
-              }),
-              (0, e.jsxs)("div", {
-                className: j.SessionTime,
-                children: [
-                  !u && (0, e.jsx)("div", { children: (0, c.TW)(m, !0) }),
-                  (0, e.jsx)("div", {
-                    children:
-                      n && u
-                        ? (0, c.we)(
-                            "#Conference_StartInMin",
-                            Math.max(1, Math.floor((m - i) / 60)),
-                          )
-                        : (0, c.we)(
-                            "#Conference_StartsAt",
-                            (0, Wt.KC)(m, { bForce24HourClock: !1 }),
-                          ),
-                  }),
-                ],
-              }),
-              (0, e.jsx)("div", {
-                className: (0, C.A)(j.ReminderContainer, j.OnlyIcon),
-                children: (0, e.jsx)(je.j, {
-                  eventModel: r,
-                  lang: d,
-                  bOnlyShowIcon: !0,
-                  bExpandLeft: !0,
-                  bShowStartTime: !1,
-                }),
-              }),
-            ],
-          });
-        }
-        function Jt(a) {
-          const { rgActiveEvents: t, fnDisplayModalEvent: n } = a;
-          if (!t || t.length == 0) return null;
-          const o = t[0],
-            i = (0, p.sfN)(S.TS.LANGUAGE),
-            r = Ze.m.ParseEventModelPresenters(o, i);
-          return (0, e.jsxs)("div", {
-            className: j.ActiveEventCtn,
-            children: [
-              (0, e.jsxs)("div", {
-                className: j.LiveNote,
-                children: [
-                  (0, e.jsx)("div", { className: j.LiveIcon }),
-                  "Live Now!",
-                ],
-              }),
-              (0, e.jsx)("div", {
-                className: j.Title,
-                children: o.GetNameWithFallback(i),
-              }),
-              !!r &&
-                r.map((d) =>
-                  (0, e.jsx)(
-                    Ut.fI,
-                    {
-                      name: d.name,
-                      title: d.title,
-                      photo: d.photo,
-                      company: d.company,
-                      bioString: d.bio,
-                      children: (0, e.jsx)("div", { children: d.name }),
-                    },
-                    "presenter_" + d.name,
-                  ),
+                  },
+                  `item-source-${d}-lastplayed`,
                 ),
-              (0, e.jsx)("div", {
-                className: j.EventDescription,
-                children: o.GetSummaryWithFallback(i),
-              }),
-              (0, e.jsx)("div", {
-                className: j.ReadMoreBtn,
-                onClick: () => n(o.GID, o.clanSteamID.GetAccountID()),
-                children: (0, c.we)("#EventEmail_Button_ClickForMoreDetails"),
-              }),
-            ],
-          });
-        }
-        function Xt(a) {
-          const { conferenceInfo: t } = a,
-            n = (0, T.v0)(),
-            o = (0, U.P_)(Ne),
-            i = n.GetActiveEventsAt(o) || [],
-            [r] = I.useState(new De.lu()),
-            d = n
-              .GetCalendarItemsInTimeRange(t.rtStartTime - 1, o)
-              .rgCalendarItems.filter(
-                (m) => i.length == 0 || i[0].GID != m.unique_id,
+              ),
+              c(r, K.k_ERecent, d, !1))
+            : c(r, K.k_ELibrary, d)),
+        l && l & W.k_eWishlist && c(r, K.k_EWishlist, d),
+        l && l & W.k_eFollowing && c(r, K.k_EFollowing, d),
+        !f && l && l & W.k_eCurator && c(r, K.k_ECurator, d),
+        l && l & W.k_eRecommended && c(r, K.k_ERecommended, d),
+        l && l & W.k_eSteam && c(r, K.k_ESteam, d),
+        l && l & W.k_eFeatured && c(r, K.k_EFeatured, d)),
+        r.push(
+          (0, J.jsx)(
+            R,
+            {
+              onSelected: o,
+              children: M(
+                `#EVentCalendar_Hide_EventType`,
+                M(
+                  `#EventCalendar_EventTypeGroup_` +
+                    s().MapClanEventTypeToGroup(t.GetEventType()),
+                ),
+              ),
+            },
+            t.GID + `hidetype`,
+          ),
+        ),
+        B.logged_in &&
+          (ut.Get().BIsEventBlocked(n)
+            ? r.push(
+                (0, J.jsx)(
+                  R,
+                  {
+                    onSelected: a,
+                    children: (0, J.jsx)(H, {
+                      toolTipContent: M(`#EventCalendar_UnMuteApp_ttip`),
+                      children: M(
+                        `#EventCalendar_UnMuteApp_Title`,
+                        n.GetEntityName(),
+                      ),
+                    }),
+                  },
+                  t.GID + `unmuteapp`,
+                ),
               )
-              .sort((m, u) => m.start_time - u.start_time);
-          return d.length == 0
-            ? (0, e.jsx)("div", {
-                children: (0, c.we)("#Conference_NoPastEvents"),
-              })
-            : (0, e.jsxs)("div", {
-                className: j.PastEventsCtn,
+            : r.push(
+                (0, J.jsx)(
+                  R,
+                  {
+                    onSelected: i,
+                    children: (0, J.jsx)(H, {
+                      toolTipContent: M(`#EventCalendar_MuteApp_ttip`),
+                      children: M(
+                        `#EventCalendar_MuteApp_Title`,
+                        n.GetEntityName(),
+                      ),
+                    }),
+                  },
+                  t.GID + `muteapp`,
+                ),
+              )),
+        !t.BIsOGGEvent() &&
+          !f &&
+          r.push((0, J.jsx)(Vn, { eventModel: t, calendarEvent: n })),
+        p.BIsSingleSourceCalendar() ||
+          r.push(
+            (0, J.jsx)(
+              R,
+              {
+                onSelected: u,
+                children: M(
+                  `#EventCalendar_Goto_SpecificCalendar`,
+                  n.GetEntityName(),
+                ),
+              },
+              t.GID + `goto`,
+            ),
+          ),
+        t.appid &&
+          r.push(
+            (0, J.jsx)(
+              R,
+              {
+                onSelected: () =>
+                  (window.location.href = Oe(
+                    V.STORE_BASE_URL + `app/` + t.appid,
+                  )),
+                children: M(`#EventDisplay_ViewStorePage`),
+              },
+              t.GID + `goto`,
+            ),
+          ),
+        Ne((0, J.jsx)(Me, { children: r }), e);
+    },
+    children: (0, J.jsx)(ke, {}),
+  });
+});
+function Vn(e) {
+  let { eventModel: t, calendarEvent: n } = e,
+    r = u(t.clanSteamID.GetAccountID()),
+    { elDialogElement: i, fnShowLogonDialog: a } = y(),
+    o = q.useCallback(async () => {
+      B.logged_in
+        ? (await _.Get().UpdateFollowOrIgnoreCurator(t.clanSteamID, !0, !r),
+          zn(!!r))
+        : a();
+    }, [r, t.clanSteamID, a]);
+  return (0, J.jsxs)(J.Fragment, {
+    children: [
+      (0, J.jsx)(
+        R,
+        {
+          onSelected: o,
+          children: (0, J.jsx)(H, {
+            toolTipContent: M(
+              r
+                ? `#EventCalendar_UnFollowCurator_ttip`
+                : `#EventCalendar_FollowCurator_ttip`,
+            ),
+            children: M(
+              r
+                ? `#EventCalendar_UnFollowCurator`
+                : `#EventCalendar_FollowCurator`,
+              n.GetEntityName(),
+            ),
+          }),
+        },
+        t.GID + `followcurator`,
+      ),
+      i,
+    ],
+  });
+}
+var Hn = r(Bn),
+  Un = `slvPA8f0gLM-`,
+  Wn = `kcXPMd3IHiw-`,
+  Gn = (e) => {
+    let t = [`maxresdefault`, `mqdefault`, `default`],
+      [n, r] = q.useState(0);
+    q.useEffect(() => r(0), [e.video]);
+    let i = q.useRef(void 0);
+    if (e.altImgWithFallback && e.altImgWithFallback.length > 0)
+      return (0, J.jsx)(v, {
+        className: e.className,
+        srcs: e.altImgWithFallback,
+      });
+    if (e.altImg)
+      return (0, J.jsx)(`img`, { src: e.altImg, className: e.className });
+    {
+      let a = `https://img.youtube.com/vi/` + e.video + `/` + t[n] + `.jpg`,
+        o = () => {
+          n + 1 < t.length && r(n + 1);
+        };
+      return (0, J.jsx)(`img`, {
+        ref: i,
+        onLoad: () => {
+          i.current && i.current.naturalHeight < 91 && o();
+        },
+        onError: o,
+        src: a,
+        className: U(Un, e.className),
+      });
+    }
+  },
+  Kn = (e) => {
+    let [t, n] = q.useState(!1);
+    le(!!e.preloadYoutubeScripts);
+    let r = se(`youtube`);
+    return !t || !r
+      ? (0, J.jsxs)(`div`, {
+          className: U(`YoutubePreviewContainer`, Un, e.imageClassnames),
+          onClick: r
+            ? (t) => {
+                e.onPlayerActivated && e.onPlayerActivated(),
+                  n(!0),
+                  t.stopPropagation(),
+                  t.preventDefault();
+              }
+            : void 0,
+          children: [
+            (0, J.jsx)(Gn, {
+              className: `YoutubePreviewImage`,
+              altImgWithFallback: e.altImgWithFallback,
+              altImg: e.altImg,
+              video: e.video,
+            }),
+            r &&
+              (0, J.jsxs)(J.Fragment, {
                 children: [
-                  (0, e.jsx)(ye, {
-                    displayLocation: xe.Tc.My,
-                    fnChangeModalEvent: r,
+                  (0, J.jsx)(`div`, {
+                    className: `YoutubePreviewPlay`,
+                    children: (0, J.jsx)(Ke, {}),
                   }),
-                  d.map((m) => {
-                    const u = z.O3.GetClanEventModel(m.unique_id);
-                    return (0, e.jsx)(
-                      Tt,
-                      {
-                        eventModel: u,
-                        calendarEvent: m,
-                        bSuppressHoverEffects: !1,
-                        mode: "wide",
-                        fnOnClicked: () =>
-                          r.Dispatch(u.GID, u.clanSteamID.GetAccountID()),
-                      },
-                      "row" + m.unique_id,
-                    );
+                  (0, J.jsx)(`div`, {
+                    className: `VideoHintText`,
+                    children: M(`#EventCalendar_WatchYouTubeVideo`),
                   }),
                 ],
-              });
-        }
-        function Zt(a) {
-          return (0, e.jsx)(Ae, { ...a, children: (0, e.jsx)(Xt, { ...a }) });
-        }
-        function Ae(a) {
-          const { conferenceInfo: t } = a,
-            n = (0, Ot.m)("WithCalendarStore"),
-            [o, i] = (0, I.useState)(!0);
-          return (
-            (0, I.useEffect)(() => {
-              n.token.reason ||
-                O.Get()
-                  .LoadInitialCalendarData(t.rtEndTime, t.strConferenceID)
-                  .finally(() => {
-                    n.token.reason || i(!1);
-                  });
-            }, [t.rtEndTime, t.strConferenceID, n]),
-            o
-              ? (0, e.jsx)(Vt.t, {})
-              : (0, e.jsx)(e.Fragment, { children: a.children })
-          );
-        }
-        function $t(a) {
-          const { closeModal: t } = a;
-          return (0, e.jsxs)(oe.o0, {
-            strTitle: (0, c.we)("#Conference_NeedHelp"),
-            bAlertDialog: !0,
-            onCancel: t,
-            onOK: t,
-            children: [
-              (0, e.jsx)("div", {
-                children: (0, c.we)("#Conference_NeedHelp_Desc1"),
               }),
-              (0, e.jsxs)("div", {
-                children: [
-                  (0, e.jsxs)("div", {
-                    className: j.HelpDialogDetailsCtn,
-                    children: [
-                      (0, e.jsx)("div", {
-                        children: (0, c.we)(
-                          "#Conference_NeedHelp_BroadcastChatQ",
-                        ),
-                      }),
-                      (0, e.jsxs)("ul", {
-                        className: j.HelpRequirements,
-                        children: [
-                          (0, e.jsx)("li", {
-                            children: (0, c.we)("#Conference_NeedHelp_ChatA1"),
-                          }),
-                          (0, e.jsx)("li", {
-                            children: (0, c.PP)(
-                              "#Conference_NeedHelp_BroadcastChatA1",
-                              (0, e.jsx)("a", {
-                                href: "https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A",
-                                children: (0, c.we)(
-                                  "#Conferenec_NeedHelp_LimitedAccounts",
-                                ),
-                              }),
-                            ),
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    className: j.HelpDialogDetailsCtn,
-                    children: [
-                      (0, e.jsx)("div", {
-                        children: (0, c.we)("#Conference_NeedHelp_QandAQ"),
-                      }),
-                      (0, e.jsx)("ul", {
-                        children: (0, e.jsx)("li", {
-                          children: (0, c.we)("#Conference_NeedHelp_ChatA1"),
-                        }),
-                      }),
-                    ],
-                  }),
-                  (0, e.jsxs)("div", {
-                    className: j.HelpDialogDetailsCtn,
-                    children: [
-                      (0, e.jsx)("span", {
-                        children: (0, c.we)(
-                          "#Conference_NeedHelp_StillHaveQuestions",
-                        ),
-                      }),
-                      (0, e.jsx)("a", {
-                        href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=933",
-                        children: (0, c.we)(
-                          "#Conference_NeedHelp_CreateTicket",
-                        ),
-                      }),
-                    ],
-                  }),
-                ],
+          ],
+        })
+      : (0, J.jsx)(ce, { ...e, classnames: U(Wn, e.classnames) });
+  };
+function qn(e) {
+  let {
+      eventModel: t,
+      calendarEvent: n,
+      bSuppressHoverEffects: r,
+      mode: i,
+      bHideGameTitle: a,
+      fnOnClicked: o,
+    } = e,
+    [s, l] = q.useState(!1),
+    u = w(),
+    f = h(t.GetAppIDOrReferenceAppID());
+  je(f);
+  let g = _e(t);
+  ne(n.clanInfo?.clanid);
+  let _ = z(V.LANGUAGE),
+    v = `capsule`,
+    [y, b, x, ee, te, S, re, ie, ae, se, ce] = c(() => [
+      t.has_live_stream,
+      t.GetEventType(),
+      t.GetAllTags(),
+      t.GetCategoryAsString(),
+      t.GetNameWithFallback(_),
+      t.BImageNeedScreenshotFallback(v, _),
+      t.appid,
+      t.GID,
+      t.GetStartTimeAndDateUnixSeconds(),
+      t.GetSubTitleWithLanguageFallback(_),
+      t.GetSummaryWithFallback(_),
+    ]),
+    [C, le] = q.useState(() => (p() && b == 14 ? d.full : d.capsule_main)),
+    ue = oe(),
+    fe = pe(S && re && g ? void 0 : t, v, _, C, ue) ?? g,
+    ve = Yn(t, i),
+    ye = Be(ie),
+    be = Y[`EventType${b}`],
+    xe = x.map((e) => Y[`Tag-${e}`]),
+    Se = U(
+      wt,
+      be,
+      y && `MVfZPnoopw0-`,
+      r ? void 0 : X,
+      s && `utI2vL1PRLs-`,
+      ve && `_4wxMhjLGDEo-`,
+      ye && void 0,
+      i === `wide` && void 0,
+      i === `carousel` && `_6IHSOcZWQTI-`,
+      i === `upcoming` && `i7ABr2eulso-`,
+      ...xe,
+    ),
+    E = se,
+    D = ce;
+  E === D && (D = void 0), E === te && (E = void 0);
+  let Ce = m(fe),
+    we = (0, J.jsx)(Zn, {
+      setVideoPlayerReady: l,
+      calendarEvent: n,
+      eventModel: t,
+      mode: i,
+      artworkType: v,
+      strCapsuleImgURLForBackground: Ce,
+      fnSetCoverSize: le,
+    }),
+    O = r && b != 14 && !(s && i !== `carousel`),
+    k = O && we,
+    A = !O && we,
+    Ee = b !== 28 && b !== 12 && Te.GetTimeNowWithOverride() < ae,
+    j = i !== `wide` || r,
+    M =
+      Ee &&
+      (0, J.jsx)(`div`, {
+        className: U(`-VpcmDHYJBs-`, j && `_8hZf0ZZtftA-`),
+        children: (0, J.jsx)(de, {
+          eventModel: t,
+          lang: _,
+          bShowStartTime: !0,
+          bOnlyShowIcon: j,
+          bExpandLeft: j,
+        }),
+      }),
+    N = !!(b !== 12 && D),
+    P = !(!E || (N && Jn(E, D)));
+  return (0, J.jsxs)(`div`, {
+    className: Se,
+    children: [
+      (0, J.jsx)(ft, { event: t, recordNewsHubStats: !0 }),
+      (0, J.jsx)(ge, {
+        eventModel: t,
+        route: me.k_eView,
+        children: (0, J.jsxs)(`div`, {
+          className: Yt,
+          onClick: (e) => {
+            u.RecordInteraction(T.k_eClickThrough),
+              !he() && (o(t), e.stopPropagation(), e.preventDefault());
+          },
+          children: [
+            b === 14 &&
+              (0, J.jsx)(`div`, {
+                className: U(`TtzbM79RcOo-`, S && `yI-XQCfZhjU-`),
+                style: { backgroundImage: `url(${Ce})` },
               }),
-            ],
-          });
-        }
-        var h = s(44104),
-          _t = s(43597);
-        const we = 30;
-        function qt(a) {
-          const { conferenceInfo: t, bShowYouTube: n } = a,
-            [o, i] = I.useState(!1),
-            d =
-              (0, U.P_)(ne.Kp.PerMinute) < t.rtStartTime - we * ne.Kp.PerMinute;
-          return (0, e.jsxs)("div", {
-            className: h.ConferenceHome,
-            children: [
-              (0, e.jsx)("div", {
-                className: (0, C.A)(h.LeftCol, o ? "Active" : "Hidden"),
-                children: (0, e.jsxs)("div", {
-                  className: h.AgendaCtn,
+            (0, J.jsxs)(`div`, {
+              className: Xt,
+              children: [
+                A,
+                (0, J.jsxs)(`div`, {
+                  className: Qt,
                   children: [
-                    (0, e.jsx)(Yt, { conferenceInfo: t }),
-                    (0, e.jsxs)("div", {
-                      className: h.AgendaToggle,
-                      onClick: () => {
-                        i(!o);
-                      },
+                    b == 12 &&
+                      (0, J.jsx)(`div`, {
+                        className: `wdp2jpfiGas-`,
+                        children: (0, J.jsx)(He, {}),
+                      }),
+                    (0, J.jsxs)(`div`, {
+                      className: Q,
                       children: [
-                        (0, e.jsx)(P.he, {
-                          toolTipContent: (0, c.we)("#QAndA_HideSchedule"),
-                          children: (0, e.jsx)("div", {
-                            className: h.CollapseBtn,
-                            children: (0, e.jsx)(w.F2T, { angle: 0 }),
-                          }),
-                        }),
-                        (0, e.jsx)(P.he, {
-                          toolTipContent: (0, c.we)("#QAndA_ShowSchedule"),
-                          children: (0, e.jsxs)("div", {
-                            className: h.CalendarBtn,
+                        k,
+                        !a &&
+                          (0, J.jsxs)(`div`, {
+                            className: `HcQu8--ilOI-`,
                             children: [
-                              (0, e.jsx)(w.VvS, {}),
-                              (0, e.jsx)("div", {
-                                className: h.CalendarText,
-                                children: "See Event Schedule",
-                              }),
+                              (0, J.jsx)($n, { ...e }),
+                              n && (0, J.jsx)(tr, { calendarEvent: n }),
                             ],
                           }),
+                        (0, J.jsx)(`div`, { className: en, children: te }),
+                        (0, J.jsxs)(`div`, {
+                          className: Lt,
+                          children: [
+                            (0, J.jsx)(`div`, {
+                              className: U(Bt, be),
+                              children: ee,
+                            }),
+                            (0, J.jsx)(er, {
+                              eventModel: t,
+                              className: U(j && `_6qTH13L4IdM-`),
+                            }),
+                            j && M,
+                          ],
                         }),
+                        P &&
+                          (0, J.jsx)(`div`, {
+                            className: `_9lDmRzgjqs4-`,
+                            children: E,
+                          }),
+                        N &&
+                          (0, J.jsx)(`div`, {
+                            className: U(
+                              `O79JneSzM9g-`,
+                              E ? `h-oZBBAdgfo-` : ``,
+                            ),
+                            children: D,
+                          }),
                       ],
+                    }),
+                    !j && M,
+                  ],
+                }),
+              ],
+            }),
+          ],
+        }),
+      }),
+      (0, J.jsx)(ir, { ...e }),
+    ],
+  });
+}
+function Jn(e, t) {
+  let n = (e) => e.replace(/\W+/g, ``).toLocaleLowerCase(),
+    r = n(e);
+  return n(t).startsWith(r);
+}
+function Yn(e, t) {
+  let { video_preview_type: n, video_preview_id: r, type: i } = e;
+  return !(t === `upcoming` || !r || i === 12 || n !== `youtube`);
+}
+function Xn(e) {
+  let { eventModel: t, fnSetVideoStateReady: n, mode: r } = e,
+    { video_preview_id: i, type: a } = e.eventModel,
+    o = w(),
+    s = z(V.LANGUAGE),
+    c = p() && a == 14 ? d.full : d.capsule_main,
+    l = ve(t, `capsule`, s, c, !0);
+  return r === `carousel`
+    ? (0, J.jsx)(Gn, { altImgWithFallback: l, video: i, className: Z })
+    : (0, J.jsx)(Kn, {
+        video: i,
+        altImgWithFallback: l,
+        autoplay: !0,
+        autopause: !0,
+        showFullscreenBtn: !0,
+        controls: !0,
+        imageClassnames: Z,
+        onPlayerActivated: () => {
+          o.RecordInteraction(T.k_ePlayedVideo), n(!0);
+        },
+        preloadYoutubeScripts: !0,
+        playsInline: !0,
+      });
+}
+function Zn(e) {
+  let {
+      eventModel: t,
+      calendarEvent: n,
+      mode: r,
+      artworkType: i,
+      strCapsuleImgURLForBackground: a,
+      setVideoPlayerReady: o,
+      fnSetCoverSize: s,
+    } = e,
+    l = z(V.LANGUAGE),
+    u = Yn(t, r),
+    f = !Yn(t, r) && r !== `upcoming`,
+    [p, m, h, g, _, v] = c(() => [
+      t.GetEventType(),
+      t.has_live_stream,
+      t.has_live_stream,
+      t.clanSteamID.GetAccountID(),
+      n.GetGameCapsule(),
+      t.BImageNeedScreenshotFallback(i, l),
+    ]);
+  q.useEffect(() => {
+    if (a) {
+      let e = new Image();
+      (e.src = a),
+        (e.onerror = () => {
+          s(d.full);
+        });
+    }
+  }, [a, s]);
+  let [, y] = S(g),
+    b = y && !y.is_ogg,
+    x = t.GetSummaryWithFallback(l);
+  return (
+    t.GetSubTitleWithLanguageFallback(l) === x && (x = void 0),
+    (0, J.jsxs)(`div`, {
+      className: Tt,
+      children: [
+        u &&
+          (0, J.jsx)(Xn, {
+            eventModel: t,
+            mode: r,
+            calendarEvent: n,
+            fnSetVideoStateReady: o,
+          }),
+        f &&
+          (0, J.jsxs)(J.Fragment, {
+            children: [
+              p === 12 &&
+                (0, J.jsxs)(J.Fragment, {
+                  children: [
+                    (0, J.jsx)(`div`, {
+                      className: `E-S8WDov49g-`,
+                      children: (0, J.jsx)(`div`, {
+                        className: U({
+                          "fzWS9zjHBQA-": !0,
+                          "yI-XQCfZhjU-": v,
+                          "zEB6Vo-lSoU-": b,
+                        }),
+                        style: { backgroundImage: `url(${_})` },
+                      }),
+                    }),
+                    (0, J.jsx)(`div`, {
+                      className: `NH4KbTPWsVo-`,
+                      children: x,
                     }),
                   ],
                 }),
-              }),
-              (0, e.jsxs)("div", {
-                className: h.MainCol,
-                children: [
-                  n &&
-                    (0, e.jsx)(_t.AX, {
-                      videoID: t.youtubeVideoID,
-                      bAutoPlay: !0,
-                      bShowVideoImmediately: !0,
+              p !== 12 &&
+                (0, J.jsxs)(`div`, {
+                  className: U({ "iogiG-p5PHg-": !0, "e2Xhb-5xMvY-": h }),
+                  children: [
+                    (0, J.jsx)(`div`, {
+                      className: U({
+                        "_1ZYmIx0m7bo-": !0,
+                        "yI-XQCfZhjU-": v,
+                        "zEB6Vo-lSoU-": b,
+                      }),
+                      style: { backgroundImage: `url(${a})` },
                     }),
-                  d
-                    ? (0, e.jsx)("div", {
-                        className: h.InteractionCtn,
-                        children: (0, e.jsx)("div", {
-                          className: h.PreEventNote,
-                          children: (0, c.we)("#Conference_ChatHidden", we),
-                        }),
-                      })
-                    : (0, e.jsx)(en, { conferenceInfo: t }),
+                    h && (0, J.jsx)(`div`, { className: `-y6T-NRjq1Q-` }),
+                    m &&
+                      (0, J.jsx)(`div`, {
+                        className: `_0hsSPkL5myo-`,
+                        children: M(`#home_page_live_broadcast`),
+                      }),
+                    h &&
+                      (0, J.jsx)(`div`, {
+                        className: `VideoHintText`,
+                        children: M(`#EventCalendar_WatchLiveBroadcast`),
+                      }),
+                  ],
+                }),
+            ],
+          }),
+      ],
+    })
+  );
+}
+var Qn = n((e) => {
+    let {
+        eventModel: t,
+        calendarEvent: n,
+        bSuppressHoverEffects: r,
+        history: i,
+      } = e,
+      a = ye(t, me.k_eStoreNewsHub, `allowRelative`),
+      o = (e) => {
+        a.startsWith(`http`) ? (window.location.href = a) : i.push(a),
+          e.stopPropagation(),
+          e.preventDefault();
+      },
+      s = n.GetEntityName(),
+      c = n.GetGameIcon(),
+      l = U(xt, r ? void 0 : X);
+    return (0, J.jsx)(F, {
+      children: (0, J.jsx)(`div`, {
+        className: sn,
+        children: (0, J.jsxs)(`div`, {
+          className: l,
+          onClick: o,
+          children: [
+            (0, J.jsx)(`img`, { className: St, src: c }),
+            (0, J.jsxs)(`div`, { className: Ct, children: [s, ` `] }),
+          ],
+        }),
+      }),
+    });
+  }),
+  $n = r(Qn),
+  er = n((e) => {
+    let { eventModel: t, calendarEvent: n, className: r } = e,
+      i = G().GetStoreInitializationTimestamp().getTime() / 1e3,
+      a = t ? t.GetStartTimeAndDateUnixSeconds() : n.start_time,
+      o = t && g(t.type) && t.GetEndTimeAndDateUnixSeconds();
+    if (o && a < i && i < o) {
+      let e = o - i,
+        t = Qe(e, !0);
+      return (0, J.jsxs)(`div`, {
+        className: U(Dt, r),
+        children: [
+          (0, J.jsx)(O, {
+            rtFullDate: a,
+            stylesmodule: Y,
+            children: (0, J.jsx)(`div`, {
+              className: Ot,
+              children: M(`#EventCalendar_LiveNow`),
+            }),
+          }),
+          (0, J.jsx)(O, {
+            rtFullDate: o,
+            stylesmodule: Y,
+            children: M(`#EventCalendar_TimeLeft`, t),
+          }),
+        ],
+      });
+    }
+    if (a < i) {
+      let e = i - a,
+        t = e < 86400 ? Qe(e, !1, !0) : Ue(a);
+      return (0, J.jsx)(O, {
+        className: r,
+        rtFullDate: a,
+        stylesmodule: Y,
+        children: (0, J.jsx)(`div`, { className: At, children: t }),
+      });
+    }
+    {
+      let e = new Date(i * 1e3);
+      e.setHours(0, 0, 0, 1);
+      let t = e.getTime() / 1e3,
+        n = Math.floor((a - t) / 86400),
+        o = n > 1 && n <= 5 ? ze(new Date(a * 1e3)) : Ue(a),
+        s = Ce(a);
+      return (0, J.jsx)(O, {
+        className: r,
+        rtFullDate: a,
+        stylesmodule: Y,
+        children: (0, J.jsx)(`div`, {
+          className: kt,
+          children: M(`#EventCalendar_WillStartAtDateTime`, o, s),
+        }),
+      });
+    }
+  }),
+  tr = n((e) => {
+    let t = e.calendarEvent.GetSource(),
+      n = [],
+      r = G().m_visibilityStore;
+    t & W.k_eLibrary && r.BIsGameSourceAllowed(K.k_ELibrary)
+      ? n.push({
+          id: W.k_eLibrary,
+          name: `#EventCalendar_GameSource_inLibrary`,
+          ttip: `#EventCalendar_GameSource_EventExplanation_ttip_library`,
+          styles: void 0,
+        })
+      : t & W.k_eWishlist && r.BIsGameSourceAllowed(K.k_EWishlist)
+        ? n.push({
+            id: W.k_eWishlist,
+            name: `#EventCalendar_GameSource_onWishlist`,
+            ttip: `#EventCalendar_GameSource_EventExplanation_ttip_wishlist`,
+            styles: void 0,
+          })
+        : t & W.k_eRecommended && r.BIsGameSourceAllowed(K.k_ERecommended)
+          ? n.push({
+              id: W.k_eRecommended,
+              name: `#EventCalendar_GameSource_recommended_Verbose`,
+              ttip: `#EventCalendar_GameSource_EventExplanation_ttip_recommended`,
+              styles: Pt,
+            })
+          : t & W.k_eFeatured &&
+            r.BIsGameSourceAllowed(K.k_EFeatured) &&
+            n.push({
+              id: W.k_eFeatured,
+              name: `#EventCalendar_GameSource_featured`,
+              ttip: `#EventCalendar_GameSource_ttip_featured`,
+              styles: void 0,
+            }),
+      t & W.k_eFollowing &&
+        r.BIsGameSourceAllowed(K.k_EFollowing) &&
+        n.push({
+          id: W.k_eFollowing,
+          name: `#EventCalendar_GameSource_followed`,
+          ttip: `#EventCalendar_GameSource_EventExplanation_ttip_following`,
+          styles: void 0,
+        });
+    let i = n.map((t, r) => {
+      let i = e.calendarEvent.unique_id;
+      return nr(
+        `item-source-${i}-${t.id}`,
+        t.name,
+        t.ttip,
+        t.styles,
+        r + 1 < n.length,
+      );
+    });
+    return (0, J.jsx)(`div`, { className: Mt, children: i });
+  }),
+  nr = (e, t, n, r, i) =>
+    (0, J.jsx)(
+      H,
+      {
+        className: U(Nt, r),
+        toolTipContent: M(n),
+        children: M(t) + (i ? `, ` : ``),
+      },
+      e,
+    );
+function rr(e) {
+  return B.logged_in
+    ? B.is_limited
+      ? yn
+      : e === `up`
+        ? bn
+        : e === `down`
+          ? Sn
+          : Cn
+    : vn;
+}
+function ir(e) {
+  let { eventModel: t } = e,
+    n = w(),
+    { myVote: r, Vote: i } = fe(t, { bAsk: !1 }),
+    [, a] = S(t.clanSteamID.GetAccountID()),
+    o = () => {
+      r !== `up` && ue() && (i(`up`), n.RecordInteraction(T.k_eThumbsUp));
+    },
+    s = () => {
+      n.RecordInteraction(T.k_eDiscussions);
+    },
+    [l, u, d] = c(() => [
+      Math.max(0, t.nVotesUp - t.nVotesDown),
+      t.GetDiscussionURL(a?.vanity_url),
+      t.nCommentCount,
+    ]),
+    f = rr(r),
+    p = !N() && u,
+    m = t.live_stream_viewer_count > 0 ? t.live_stream_viewer_count : void 0;
+  return (0, J.jsx)(`div`, {
+    className: ln,
+    children: (0, J.jsxs)(`div`, {
+      className: wn,
+      children: [
+        !!m && (0, J.jsx)(`div`, { className: `zxaNRVKQnTM-`, children: k(m) }),
+        (0, J.jsxs)(`div`, {
+          className: U($, void 0, f),
+          onClick: o,
+          children: [
+            (0, J.jsx)(Ee, { className: xn }),
+            (0, J.jsx)(`span`, { children: k(Number(l)) }),
+          ],
+        }),
+        p &&
+          (0, J.jsx)(`div`, {
+            className: `CakmFSjnZaQ-`,
+            children: (0, J.jsxs)(`a`, {
+              href: u,
+              className: `_2aS2MHSUX-U-`,
+              target: `_blank`,
+              onClick: s,
+              children: [
+                (0, J.jsx)(Fe, { className: `Ilo9d6Bcf60-` }),
+                (0, J.jsx)(`span`, { children: k(Number(d)) }),
+              ],
+            }),
+          }),
+        (0, J.jsx)(Hn, { ...e }),
+      ],
+    }),
+  });
+}
+var ar = `emclan`,
+  or = `emgid`;
+function sr(e) {
+  let { displayLocation: t, fnChangeModalEvent: n } = e,
+    [r, i] = q.useState(null),
+    [a, o] = xe(or, null),
+    [s, c] = xe(ar, null);
+  return (
+    Ge(n, (e, t) => {
+      o(e), c(L.InitFromClanID(t).ConvertTo64BitString());
+    }),
+    q.useEffect(() => {
+      if (a != null && s != null) {
+        let e = new L(s);
+        x.LoadPartnerEventFromClanEventGIDAndClanSteamID(e, a, 0).then(i);
+      }
+    }, [a, s]),
+    r
+      ? (0, J.jsx)(ee, {
+          appid: r.appid,
+          trackingLocation: t,
+          announcementGID: r.GetAnnouncementGID(),
+          partnerEventStore: x,
+          eventModel: r,
+          showAppHeader: !0,
+          closeModal: () => {
+            i(null), c(null), o(null);
+          },
+        })
+      : null
+  );
+}
+var cr = `_9ldA8d1EI20-`,
+  lr = `gR9r-CA9v-w-`,
+  ur = `qg0kDpti4nE-`,
+  dr = `RhSVO9z6QFw-`,
+  fr = `_52BS7g513UA-`,
+  pr = `_3HVlNg-lHhM-`,
+  mr = `NEE4v7KTl5A-`,
+  hr = `Ij-p0urNq-A-`,
+  gr = `m-cXhST-lJs-`,
+  _r = `_-0S-Vs5hcTA-`,
+  vr = `mf3O9nhppOo-`,
+  yr = `eRhFVaYP2IQ-`,
+  br = `EcxG9qqzLWQ-`,
+  xr = `HKC2EnBS1BQ-`,
+  Sr = `Mm-257yMXGI-`,
+  Cr = `_2tmnI4Ea2-o-`,
+  wr = `RiHHUUkg-WU-`,
+  Tr = 10;
+function Er(e) {
+  let t = G(),
+    n = D(Tr),
+    r = t.GetActiveEventsAt(n) || [],
+    [i] = q.useState(new De()),
+    a = q.useCallback((e, t) => lt(x.GetClanEventModel(e), window), []);
+  return t.GetNumEventsLoaded() == 0
+    ? (0, J.jsx)(`div`, { children: M(`#Conference_No_Schedule_Yet`) })
+    : (0, J.jsxs)(`div`, {
+        className: yr,
+        children: [
+          (0, J.jsx)(sr, { displayLocation: 6, fnChangeModalEvent: i }),
+          (0, J.jsx)(Ar, { rgActiveEvents: r, fnDisplayModalEvent: a }),
+          (0, J.jsx)(Or, {
+            rgActiveEvents: r,
+            fnDisplayModalEvent: a,
+            rtNow: n,
+          }),
+          (0, J.jsx)(`br`, {}),
+          (0, J.jsx)(`br`, {}),
+          (0, J.jsx)(Ye, {
+            onClick: (e) => I((0, J.jsx)(Pr, {}), P(e)),
+            children: M(`#Conference_NeedHelp`),
+          }),
+        ],
+      });
+}
+function Dr(e) {
+  return (0, J.jsx)(Nr, { ...e, children: (0, J.jsx)(Er, { ...e }) });
+}
+function Or(e) {
+  let { rgActiveEvents: t, rtNow: n } = e,
+    r = G()
+      .GetCalendarItemsInTimeRange(n + 1)
+      .rgCalendarItems.filter((e) => !t.some((t) => t.GID == e.unique_id))
+      .sort((e, t) => e.start_time - t.start_time);
+  return r.length == 0
+    ? (0, J.jsx)(`div`, { children: M(`#Conference_No_More_Schedule`) })
+    : (0, J.jsxs)(`div`, {
+        className: cr,
+        children: [
+          (0, J.jsx)(`div`, {
+            className: lr,
+            children: M(`#Conference_ScheduleNext`),
+          }),
+          (0, J.jsx)(`div`, {
+            className: ur,
+            children: r.map((r, i) =>
+              (0, J.jsx)(
+                kr,
+                {
+                  bDisplayAsUpNext: i == 0 && t.length >= 1,
+                  calendarItem: r,
+                  fnDisplayModalEvent: e.fnDisplayModalEvent,
+                  rtNow: n,
+                },
+                r.unique_id,
+              ),
+            ),
+          }),
+        ],
+      });
+}
+function kr(e) {
+  let {
+      calendarItem: t,
+      bDisplayAsUpNext: n,
+      fnDisplayModalEvent: r,
+      rtNow: i,
+    } = e,
+    a = x.GetClanEventModel(t.unique_id),
+    o = z(V.LANGUAGE),
+    s = a.GetStartTimeAndDateUnixSeconds(),
+    c = Ie(new Date(i * 1e3), new Date(s * 1e3));
+  return (0, J.jsxs)(`div`, {
+    className: dr,
+    onClick: () => r(a.GID, a.clanSteamID.GetAccountID()),
+    children: [
+      (0, J.jsx)(`div`, { className: fr, children: a.GetNameWithFallback(o) }),
+      (0, J.jsxs)(`div`, {
+        className: pr,
+        children: [
+          !c && (0, J.jsx)(`div`, { children: Xe(s, !0) }),
+          (0, J.jsx)(`div`, {
+            children:
+              n && c
+                ? M(
+                    `#Conference_StartInMin`,
+                    Math.max(1, Math.floor((s - i) / 60)),
+                  )
+                : M(`#Conference_StartsAt`, qe(s, { bForce24HourClock: !1 })),
+          }),
+        ],
+      }),
+      (0, J.jsx)(`div`, {
+        className: U(br, xr),
+        children: (0, J.jsx)(de, {
+          eventModel: a,
+          lang: o,
+          bOnlyShowIcon: !0,
+          bExpandLeft: !0,
+          bShowStartTime: !1,
+        }),
+      }),
+    ],
+  });
+}
+function Ar(e) {
+  let { rgActiveEvents: t, fnDisplayModalEvent: n } = e;
+  if (!t || t.length == 0) return null;
+  let r = t[0],
+    i = z(V.LANGUAGE),
+    a = nt.ParseEventModelPresenters(r, i);
+  return (0, J.jsxs)(`div`, {
+    className: mr,
+    children: [
+      (0, J.jsxs)(`div`, {
+        className: hr,
+        children: [(0, J.jsx)(`div`, { className: gr }), `Live Now!`],
+      }),
+      (0, J.jsx)(`div`, { className: fr, children: r.GetNameWithFallback(i) }),
+      !!a &&
+        a.map((e) =>
+          (0, J.jsx)(
+            b,
+            {
+              name: e.name,
+              title: e.title,
+              photo: e.photo,
+              company: e.company,
+              bioString: e.bio,
+              children: (0, J.jsx)(`div`, { children: e.name }),
+            },
+            `presenter_` + e.name,
+          ),
+        ),
+      (0, J.jsx)(`div`, {
+        className: _r,
+        children: r.GetSummaryWithFallback(i),
+      }),
+      (0, J.jsx)(`div`, {
+        className: vr,
+        onClick: () => n(r.GID, r.clanSteamID.GetAccountID()),
+        children: M(`#EventEmail_Button_ClickForMoreDetails`),
+      }),
+    ],
+  });
+}
+function jr(e) {
+  let { conferenceInfo: t } = e,
+    n = G(),
+    r = D(Tr),
+    i = n.GetActiveEventsAt(r) || [],
+    [a] = q.useState(new De()),
+    o = n
+      .GetCalendarItemsInTimeRange(t.rtStartTime - 1, r)
+      .rgCalendarItems.filter((e) => i.length == 0 || i[0].GID != e.unique_id)
+      .sort((e, t) => e.start_time - t.start_time);
+  return o.length == 0
+    ? (0, J.jsx)(`div`, { children: M(`#Conference_NoPastEvents`) })
+    : (0, J.jsxs)(`div`, {
+        className: Sr,
+        children: [
+          (0, J.jsx)(sr, { displayLocation: 6, fnChangeModalEvent: a }),
+          o.map((e) => {
+            let t = x.GetClanEventModel(e.unique_id);
+            return (0, J.jsx)(
+              qn,
+              {
+                eventModel: t,
+                calendarEvent: e,
+                bSuppressHoverEffects: !1,
+                mode: `wide`,
+                fnOnClicked: () =>
+                  a.Dispatch(t.GID, t.clanSteamID.GetAccountID()),
+              },
+              `row` + e.unique_id,
+            );
+          }),
+        ],
+      });
+}
+function Mr(e) {
+  return (0, J.jsx)(Nr, { ...e, children: (0, J.jsx)(jr, { ...e }) });
+}
+function Nr(e) {
+  let { conferenceInfo: t } = e,
+    n = be(`WithCalendarStore`),
+    [r, i] = (0, q.useState)(!0);
+  return (
+    (0, q.useEffect)(() => {
+      n.token.reason ||
+        yt
+          .Get()
+          .LoadInitialCalendarData(t.rtEndTime, t.strConferenceID)
+          .finally(() => {
+            n.token.reason || i(!1);
+          });
+    }, [t.rtEndTime, t.strConferenceID, n]),
+    r ? (0, J.jsx)(ie, {}) : (0, J.jsx)(J.Fragment, { children: e.children })
+  );
+}
+function Pr(e) {
+  let { closeModal: t } = e;
+  return (0, J.jsxs)(A, {
+    strTitle: M(`#Conference_NeedHelp`),
+    bAlertDialog: !0,
+    onCancel: t,
+    onOK: t,
+    children: [
+      (0, J.jsx)(`div`, { children: M(`#Conference_NeedHelp_Desc1`) }),
+      (0, J.jsxs)(`div`, {
+        children: [
+          (0, J.jsxs)(`div`, {
+            className: Cr,
+            children: [
+              (0, J.jsx)(`div`, {
+                children: M(`#Conference_NeedHelp_BroadcastChatQ`),
+              }),
+              (0, J.jsxs)(`ul`, {
+                className: wr,
+                children: [
+                  (0, J.jsx)(`li`, {
+                    children: M(`#Conference_NeedHelp_ChatA1`),
+                  }),
+                  (0, J.jsx)(`li`, {
+                    children: Pe(
+                      `#Conference_NeedHelp_BroadcastChatA1`,
+                      (0, J.jsx)(`a`, {
+                        href: `https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A`,
+                        children: M(`#Conferenec_NeedHelp_LimitedAccounts`),
+                      }),
+                    ),
+                  }),
                 ],
               }),
             ],
-          });
-        }
-        function en(a) {
-          const { conferenceInfo: t } = a,
-            [n, o] = I.useState(window.innerWidth > 910),
-            [i, r] = I.useState(!0),
-            d =
-              S.TS.COMMUNITY_BASE_URL +
-              "broadcast/chatonly/" +
-              t.broadcastSteamID.ConvertTo64BitString(),
-            m =
-              S.TS.COMMUNITY_BASE_URL +
-              "questions/" +
-              S.UF.VANITY_ID +
-              "/view/" +
-              t.globalQandASessionID;
-          return (0, e.jsxs)("div", {
-            className: h.InteractionCtn,
+          }),
+          (0, J.jsxs)(`div`, {
+            className: Cr,
             children: [
-              (0, e.jsxs)("div", {
-                className: h.TabControlsCtn,
-                children: [
-                  (0, e.jsxs)("div", {
-                    className: (0, C.A)(
-                      h.InnerChatTab,
-                      h.ChatTab,
-                      n ? h.Active : "",
-                    ),
+              (0, J.jsx)(`div`, { children: M(`#Conference_NeedHelp_QandAQ`) }),
+              (0, J.jsx)(`ul`, {
+                children: (0, J.jsx)(`li`, {
+                  children: M(`#Conference_NeedHelp_ChatA1`),
+                }),
+              }),
+            ],
+          }),
+          (0, J.jsxs)(`div`, {
+            className: Cr,
+            children: [
+              (0, J.jsx)(`span`, {
+                children: M(`#Conference_NeedHelp_StillHaveQuestions`),
+              }),
+              (0, J.jsx)(`a`, {
+                href: `https://help.steampowered.com/wizard/HelpWithPublishing?issueid=933`,
+                children: M(`#Conference_NeedHelp_CreateTicket`),
+              }),
+            ],
+          }),
+        ],
+      }),
+    ],
+  });
+}
+var Fr = `CosXX3EOimc-`,
+  Ir = `_2G0l2P7PdWE-`,
+  Lr = `Spx81IioUbg-`,
+  Rr = `_5GDAhGXpfUc-`,
+  zr = `yGA4wdnOjDA-`,
+  Br = `NxERYIoK1Cw-`,
+  Vr = `_8l8J-kgwB7U-`,
+  Hr = `aXXmPKkbnXQ-`,
+  Ur = `oOUQlEGxQVM-`,
+  Wr = `ytU2QJl67fo-`,
+  Gr = `_9VrU0Y2zPEY-`,
+  Kr = `EpnFxSwyOrQ-`,
+  qr = `_2wHhSwgxybU-`,
+  Jr = `EYfvQDnLzvo-`,
+  Yr = `bD4DgBpQoNM-`,
+  Xr = `oxOiIg7VE2E-`,
+  Zr = `EKfk3W5MSVw-`,
+  Qr = `_4cL0DDhwyxw-`,
+  $r = `_1A3aZ6j-Szc-`,
+  ei = 30;
+function ti(e) {
+  let { conferenceInfo: t, bShowYouTube: n } = e,
+    [r, i] = q.useState(!1),
+    a = D(Re.PerMinute) < t.rtStartTime - ei * Re.PerMinute;
+  return (0, J.jsxs)(`div`, {
+    className: Fr,
+    children: [
+      (0, J.jsx)(`div`, {
+        className: U(Ir, r ? `Active` : `Hidden`),
+        children: (0, J.jsxs)(`div`, {
+          className: void 0,
+          children: [
+            (0, J.jsx)(Dr, { conferenceInfo: t }),
+            (0, J.jsxs)(`div`, {
+              className: Lr,
+              onClick: () => {
+                i(!r);
+              },
+              children: [
+                (0, J.jsx)(H, {
+                  toolTipContent: M(`#QAndA_HideSchedule`),
+                  children: (0, J.jsx)(`div`, {
+                    className: Rr,
+                    children: (0, J.jsx)(Ae, { angle: 0 }),
+                  }),
+                }),
+                (0, J.jsx)(H, {
+                  toolTipContent: M(`#QAndA_ShowSchedule`),
+                  children: (0, J.jsxs)(`div`, {
+                    className: zr,
                     children: [
-                      (0, e.jsx)("div", {
-                        className: h.TabTitle,
-                        onClick: () => {
-                          o(!0), r(!1);
-                        },
-                        children: (0, c.we)("#Conference_Tab_Chat"),
-                      }),
-                      (0, e.jsx)(P.he, {
-                        toolTipContent: (0, c.we)("#QAndA_PopOutChat_ttip"),
-                        children: (0, e.jsx)("a", {
-                          className: h.Popout,
-                          href: d,
-                          target: "_blank",
-                          children: (0, e.jsx)(w.YNO, {}),
-                        }),
+                      (0, J.jsx)(Ze, {}),
+                      (0, J.jsx)(`div`, {
+                        className: Br,
+                        children: `See Event Schedule`,
                       }),
                     ],
                   }),
-                  (0, e.jsxs)("div", {
-                    className: (0, C.A)(
-                      h.InnerChatTab,
-                      h.QATab,
-                      i ? h.Active : "",
-                    ),
-                    children: [
-                      (0, e.jsx)("div", {
-                        className: h.TabTitle,
-                        onClick: () => {
-                          o(!1), r(!0);
-                        },
-                        children: (0, c.we)("#Conference_Tab_QandA"),
-                      }),
-                      (0, e.jsx)(P.he, {
-                        toolTipContent: (0, c.we)("#QAndA_PopOutQAndA_ttip"),
-                        children: (0, e.jsx)("a", {
-                          className: h.Popout,
-                          href: m,
-                          target: "_blank",
-                          children: (0, e.jsx)(w.YNO, {}),
-                        }),
-                      }),
-                    ],
-                  }),
-                  (0, e.jsx)(P.he, {
-                    toolTipContent: (0, c.we)("#QAndA_ChatToggle_ShowBoth"),
-                    children: (0, e.jsx)("div", {
-                      className: h.ShowBothTabs,
-                      onClick: () => {
-                        o(!0), r(!0);
-                      },
-                      children: (0, e.jsx)(w.QQ4, {}),
-                    }),
-                  }),
-                ],
-              }),
-              (0, e.jsxs)("div", {
-                className: h.ChatStack,
-                children: [
-                  !!((n && i) || (!i && !n)) &&
-                    (0, e.jsxs)(e.Fragment, {
-                      children: [
-                        (0, e.jsx)("div", {
-                          className: h.ChatColumn,
-                          children: (0, e.jsx)(he, {
-                            conferenceInfo: t,
-                            className: h.ChatCtn,
-                          }),
-                        }),
-                        (0, e.jsx)("div", {
-                          className: h.QAColumn,
-                          children: (0, e.jsx)(ge.u6, {
-                            gidSession: t.globalQandASessionID,
-                          }),
-                        }),
-                      ],
-                    }),
-                  !!(n && !i) &&
-                    (0, e.jsx)(he, { conferenceInfo: t, className: h.ChatCtn }),
-                  !!(!n && i) &&
-                    (0, e.jsx)(ge.u6, { gidSession: t.globalQandASessionID }),
-                ],
-              }),
-            ],
-          });
-        }
-        function tn(a) {
-          const { conferenceInfo: t } = a;
-          if (!t.faqAboutPage)
-            return (0, e.jsx)("div", {
-              children: (0, c.we)("#Conference_NoAbout"),
-            });
-          const { title: n, content: o, timestamp: i } = t.faqAboutPage;
-          return (0, e.jsxs)("div", {
-            children: [
-              (0, e.jsx)("div", { className: h.AboutTitle, children: n }),
-              (0, e.jsx)(Xe.u, { text: o, bShowErrorInfo: !1, version: "0" }),
-            ],
-          });
-        }
-        function nn(a) {
-          const { conferenceInfo: t } = a;
-          return (0, e.jsx)(Zt, { conferenceInfo: t });
-        }
-        var W = s(61937);
-        function an(a) {
-          const { strVanity: t } = a,
-            n = L.Get().GetConferenceInfo(t);
-          return n
-            ? (0, e.jsx)(F.tH, {
-                children: (0, e.jsx)("div", {
-                  className: W.ConferencePageCtn,
-                  children: (0, e.jsx)(on, { conferenceInfo: n }),
+                }),
+              ],
+            }),
+          ],
+        }),
+      }),
+      (0, J.jsxs)(`div`, {
+        className: Vr,
+        children: [
+          n &&
+            (0, J.jsx)(ae, {
+              videoID: t.youtubeVideoID,
+              bAutoPlay: !0,
+              bShowVideoImmediately: !0,
+            }),
+          a
+            ? (0, J.jsx)(`div`, {
+                className: Hr,
+                children: (0, J.jsx)(`div`, {
+                  className: Ur,
+                  children: M(`#Conference_ChatHidden`, ei),
                 }),
               })
-            : (0, e.jsx)("div", { children: (0, c.we)("#Conference_Invalid") });
-        }
-        function on(a) {
-          const { conferenceInfo: t } = a,
-            n = (r) =>
-              window.sessionStorage.setItem(
-                "conferenceCurrentTab",
-                `?tab=${r.key}`,
-              ),
-            o = [],
-            i = (0, U.f1)();
-          return (
-            i < t.rtEndTime &&
-              o.push({
-                name: (0, c.we)("#Conference_tab_Home"),
-                key: "live",
-                contents: (0, e.jsx)(F.tH, {
-                  children: (0, e.jsx)(qt, {
-                    bShowYouTube: !!t.youtubeVideoID,
-                    conferenceInfo: t,
-                  }),
-                }),
-                onClick: n,
-              }),
-            o.push({
-              name: (0, c.we)("#Conference_tab_Past"),
-              key: "past",
-              contents: (0, e.jsxs)(F.tH, {
-                children: [
-                  (0, e.jsx)(nn, { conferenceInfo: t }),
-                  !t.youtubeVideoID &&
-                    i < t.rtEndTime &&
-                    (0, e.jsx)(Ce, { conferenceInfo: t }),
-                ],
-              }),
-              onClick: n,
-            }),
-            o.push({
-              name: (0, c.we)("#Conference_tab_Info"),
-              key: "about",
-              contents: (0, e.jsxs)(F.tH, {
-                children: [
-                  (0, e.jsx)(tn, { conferenceInfo: t }),
-                  !t.youtubeVideoID &&
-                    i < t.rtEndTime &&
-                    (0, e.jsx)(Ce, { conferenceInfo: t }),
-                ],
-              }),
-              onClick: n,
-            }),
-            o.push({
-              name: "(VO/Internal) Debug",
-              key: "debug",
-              hidden: !0,
-              contents: (0, e.jsx)(F.tH, {
-                children: (0, e.jsx)(Je, { conferenceInfo: t }),
-              }),
-              onClick: n,
-            }),
-            (0, e.jsxs)("div", {
-              className: W.ConferenceContentsCtn,
-              children: [
-                (0, e.jsxs)("div", {
-                  className: W.ConferenceHeaderCtn,
-                  children: [
-                    (0, e.jsx)(ue.c, {
-                      className: W.LogoImage,
-                      rgSources: t.strLocalizedLogos,
-                    }),
-                    (0, e.jsx)(ue.c, {
-                      className: W.LogoImageMobile,
-                      rgSources: t.strLocalizedMobileLogos,
-                    }),
-                    (0, e.jsx)("div", {
-                      className: W.ConferenceDateRange,
-                      children: (0, e.jsx)(V.X0, {
-                        rtStartDate: t.rtStartTime,
-                        rtEndDate: t.rtEndTime,
-                      }),
-                    }),
-                  ],
-                }),
-                (0, e.jsx)(Ue.V, { tabs: o }),
-              ],
-            })
-          );
-        }
-        var sn = s(90783);
-        const Ge = {
-          LandingPage: (a) => `/(conference|steamworksvirtualconference)/${a}`,
-        };
-        function ln(a) {
-          return (0, e.jsxs)(K.dO, {
+            : (0, J.jsx)(ni, { conferenceInfo: t }),
+        ],
+      }),
+    ],
+  });
+}
+function ni(e) {
+  let { conferenceInfo: t } = e,
+    [n, r] = q.useState(window.innerWidth > 910),
+    [i, a] = q.useState(!0),
+    o =
+      V.COMMUNITY_BASE_URL +
+      `broadcast/chatonly/` +
+      t.broadcastSteamID.ConvertTo64BitString(),
+    s =
+      V.COMMUNITY_BASE_URL +
+      `questions/` +
+      We.VANITY_ID +
+      `/view/` +
+      t.globalQandASessionID;
+  return (0, J.jsxs)(`div`, {
+    className: Hr,
+    children: [
+      (0, J.jsxs)(`div`, {
+        className: Wr,
+        children: [
+          (0, J.jsxs)(`div`, {
+            className: U(Jr, Kr, n ? Zr : ``),
             children: [
-              (0, e.jsx)(K.qh, {
-                path: Ge.LandingPage(":vanity_str"),
-                render: (t) =>
-                  (0, e.jsx)(ke.X, {
-                    config: {
-                      "conference-root": () => {
-                        const { vanity_str: n } = t.match.params;
-                        return (0, e.jsx)(an, {
-                          strVanity: n.toLocaleLowerCase(),
-                        });
-                      },
-                    },
-                  }),
+              (0, J.jsx)(`div`, {
+                className: Yr,
+                onClick: () => {
+                  r(!0), a(!1);
+                },
+                children: M(`#Conference_Tab_Chat`),
               }),
-              (0, e.jsx)(K.qh, { component: sn.a }),
+              (0, J.jsx)(H, {
+                toolTipContent: M(`#QAndA_PopOutChat_ttip`),
+                children: (0, J.jsx)(`a`, {
+                  className: Xr,
+                  href: o,
+                  target: `_blank`,
+                  children: (0, J.jsx)(Le, {}),
+                }),
+              }),
             ],
-          });
-        }
-        const rn = ln;
-      },
-      88619: (N) => {
-        N.exports = { BroadcastChatCtn: "_28b1vPJH7sip9Uh_p3OJvD" };
-      },
-      63585: (N) => {
-        N.exports = {
-          narrowWidth: "500px",
-          UpcomingEventsCtn: "_2bWupCdqo2ydQKY6NnkUB6",
-          SectionTitle: "_7MpRs3COqajm5Yq2cyHCk",
-          EventSchedCtn: "Tn2UrQKNb5TtPYtu9eJOo",
-          EventItemCtn: "z6qIMnRuBMfsKvkgAMr4X",
-          Title: "_2EqgH8ow9heADdpLvDdJFn",
-          SessionTime: "_IkarZfcdwDZIzHBUAup1",
-          ActiveEventCtn: "_2lP0CenzIHyncnSquDOYX2",
-          LiveNote: "_3zSJmWuHhBAbq80HWDxRZg",
-          LiveIcon: "_38GJhGq-WQnIwnn8cr7h5p",
-          EventDescription: "_3hKDoSYfjaFvieDQXVYs82",
-          ReadMoreBtn: "_2z4bawzux4DqU5n4BaSssW",
-          EventsScheduleCtn: "_33-478dIs2y89VpwjBKd5Q",
-          ReminderContainer: "_2vLZTXCwfColAphn-AKL29",
-          OnlyIcon: "_3fZISAQ1UOTiyviS_bMh3-",
-          PastEventsCtn: "_3pfjFJ9WVi45La-eVD1EBw",
-          HelpDialogDetailsCtn: "_1IQeQq6EP-VdV6AZAJ3Rug",
-          HelpRequirements: "_3yMlxXljDQU9oAEzydEHBB",
-        };
-      },
-      44104: (N) => {
-        N.exports = {
-          narrowWidth: "500px",
-          ConferenceHome: "_3tSqDwD1rkt0nwIB8025VK",
-          LeftCol: "_19xFd3vdYEozXiTDzOEto9",
-          AgendaToggle: "_1rjE02_5_HPWGT3UJXQKL2",
-          CollapseBtn: "_2RCNdz1kCYXgL3wheg5ts6",
-          CalendarBtn: "_22bby_AsedipJlq0-5qtmY",
-          CalendarText: "kxtN0yE4qv3o_wwBWnnLs",
-          MainCol: "_1qlknQargwyqHQhwj_8oum",
-          InteractionCtn: "_39uHL_Fe3PpolZLRdah_VU",
-          BroadcastCtn: "_240cuck3u91loqxwvTCj-",
-          videoContainerSizer: "twsjQDioroj0pL68fDPZh",
-          Hidden: "aE3VL3T6yQRMd_AKTrhue",
-          ChatColumn: "_2ldId97FtoJ0M0Sw45iEC6",
-          ChatTitle: "_3CjWmRtkS-bipkNJfDvGal",
-          QAColumn: "_1RCLwKL1eycfalZ4MrKxB9",
-          PreEventNote: "__FhrYr6JkEOLBHADuZP0",
-          TabControlsCtn: "_1HJDDlNR32Jt_Ia9XJhZKH",
-          Close: "_3cKbt74603iNN2a2pFoDL",
-          ShowBothTabs: "fZBE8Pcls5-xbHBmWaIzC",
-          ChatTab: "_3WoUgyFb6zejRRjTzMR36x",
-          QATab: "_1An5OJv3NQypTb4kDdjRYq",
-          InnerChatTab: "_1g3oabV2KUxjOJOaAzfEUp",
-          TabTitle: "_24i11is7XyYPV89pSY3xBt",
-          Popout: "QHxXWore8H11Ach3U2g5V",
-          Active: "_3PSCm3SaHjGjYbM2kBZwKt",
-          ChatStack: "_1ogmvaT56600iCAZCN3hj3",
-          AboutTitle: "_3yWGoYvgAyD6vP018TFBNb",
-        };
-      },
-      61937: (N) => {
-        N.exports = {
-          narrowWidth: "500px",
-          ConferencePageCtn: "oP_SPwwzov5nQN2TQUAEf",
-          ConferenceContentsCtn: "_1HPPRdXNo8sgT-dXQ9h-5l",
-          ConferenceHeaderCtn: "_1AbLqPiq2KJuEV09TbddQW",
-          LogoImage: "_3i2i50OjRZCY5qTtlLvN7G",
-          LogoImageMobile: "_3iVf9n6tpBlwoSdiOW3Jhf",
-          ConferenceDateRange: "_2FSEt04eUDUO8y1rLtlEat",
-        };
-      },
-      72978: (N) => {
-        N.exports = {
-          narrowWidth: "500px",
-          GameTitleContainer: "WHJ_WMTSDKqO4yn_MLrau",
-          AppIcon: "_3gwk6hFh7bUc2K174mzjyQ",
-          TileTextAppName: "_71phFKOzg8aQlBU1rCA2T",
-          EnableHovers: "_2BniJe0boLDKV9lwtWTCtm",
-          TileContainer: "_1E3Anhs34BXsWWWqH4RNPL",
-          CoverImageCtn: "_3HF9tOy_soo1B_odf1XArk",
-          GameShortDescription: "_3Se1TZA5yo9V-vrUszNDAI",
-          LiveText: "RNDf0d63hDSUu28sIkteH",
-          LiveNow: "EVDkYKG_ikfyfH16lmQ-1",
-          FutureDateText: "_2xdhMrjKEposPfgPK9UPe-",
-          PastDateText: "_4-fqVd8yRSHEAjj7Hkx_V",
-          GameSource: "vfv1QjSe1vEobRaHWlf3",
-          SourceList: "_3BIx7glwN6Q0_mUUMyFyHu",
-          Source: "_2lYFqIB0i1IONPFV4BTvfl",
-          RecommendedSource: "_3ayJyXzZoAWy8wXs6YlftR",
-          SourceRecommended: "_1yaRLkRkzjuw8xLjPX-zlc",
-          DateAndSourceLine: "_2xxMBw-_ndXEC-SIBejGuu",
-          EventTypeAndDateCtn: "sUBHF-Qdb_RUPYOBkgO1a",
-          LeaveRoomForReminder: "_3djUmSsXnHX2qN5HdooYJz",
-          SmallAppName: "_1-Jl_evfBGuwaMNm1CNSR5",
-          TileTextCategoryType: "_1LkWXJVxWYdKiKf2Mxq3zs",
-          EventType28: "_1qGfEmcWJdG1dp2gDhH7oP",
-          EventType10: "_22QY5O4_i6LqHbtIXgilEV",
-          EventType11: "_2Gv13-3mXe6Q4QJmTs3mNX",
-          EventType23: "_590_lEtmh8atjjKVBT9t7",
-          EventType35: "_2wHiBVvtv56AMUWeVWRbuz",
-          EventType13: "_2D0ZNOuC3rrY9bf_BY1msw",
-          EventType14: "_2mVdtaB_oY5b1fladlbBaM",
-          EventType15: "_2Xke62sWB6bPMJuv72Qkw8",
-          Tile: "_3xvUZtQ1j-pu-l2xy-lFAq",
-          MainContentContainer: "_2pq2vP5kJ_wI2nw-igwJXF",
-          YoutubePreviewImage: "_1UgZvqy4xNDdu4gJ6tlT-Q",
-          TileImage: "d8bPiEt0DUII_mRqek_ht",
-          TileTextContainer: "_3IQK4rcEU5IYtZuW-Ogsgu",
-          EventType12: "_2X_hMZpqI8fyqbeFPi4JPj",
-          EventName: "_1M8-Pa3b3WboayCgd5VBJT",
-          EventSubTitle: "_1JjUp7sfpntpaOqu1_lyvO",
-          GameCapsuleCtn: "_3HJFiuJiM5fUKk0czInoZg",
-          AppBannerLogo: "u8z1m_ainssHj7AbLKOZs",
-          FallbackImage: "_9rv9PL7ZWe4vZofYqYl3M",
-          ClanSource: "_17Iog8CXlR0s8DuWS0rD0n",
-          TileTextHeader: "_3-0KOhYVQX2zIP3z-jCAdu",
-          PatchIconCtn: "Fm9_5yqk4wkh8BTsDC7CU",
-          EventTitleCtn: "_1h5cJPC1IYFGDEMbRAWSNy",
-          Footer: "_1tdf14bc7ZlvhWfiLIlpEf",
-          EventCapsuleCtn: "_27kWH1D3y2WfR8D-sD8Rw2",
-          LiveBroadcastPreview: "_4UYuS9QM4MsN9y4q5Livc",
-          TileBackgroundImage: "gGujG17QdIx5Nn89DjTl8",
-          TileCoverImagePlayable: "_2eoFkqfZovVT02IaU8nRNn",
-          TileCoverLiveIcon: "_dmbjH8bEtPkaRrVTzwov",
-          ReminderContainer: "_1_taBomEIggVub90iRWW1Y",
-          OnlyIcon: "iO5Eug6GGz9JIqPndBJIG",
-          EventSummaryDefault: "_2g3JjlrRkzgUWXF57w3leW",
-          Vote_NotLoggedIn: "_17oqR-EnZiAHLri2CKnxmC",
-          Vote_LimitedUser: "_2FlPoqF3vz8s8KjjoZ7sXn",
-          Vote_Positive: "ysX-kDvwrjduqk2LGUkUg",
-          RateIcon: "_2se4HtRbAckWOfTCGHox0X",
-          Vote_Negative: "_3LqNuO0ebCJ_aJo3YJYjdE",
-          Vote_Ready: "_3issE2anPtdsqPA_3_72Z0",
-          FooterRightSide: "_1Hhqg7g-POjV0ysalDN4YM",
-          Options: "_3nZg0h8xaxxZeW0g870Htl",
-          TileViewerCount: "pg-a3zK8HAVaAKqUDx7t-",
-          FooterStat: "_3_86JJo-1O_KkOZwRl2uZ6",
-          CommentIcon: "Wn7qAQikmqUtnSPDCnzi3",
-          CommentIconCtn: "PR8xM_Lig1kieA79gLjOB",
-          LoadingTile: "_24QfL3thPI_MZMIbgL7tmb",
-          CarouselMode: "_144ghSsl2jkmXzzHxgtQtX",
-          UpcomingMode: "_2vzY3sqcpyNcqGqlP6cLOv",
-          TileVideoIcon: "aK0jlBL0B6MxMGC4n-WzB",
-          DateAndTime: "_1gEM9daUydLT65bFx2wXwE",
-          HasVideo: "qbgBAwp3iK3ESknHvr2SQ",
-          SubTitleShown: "_5C13zntXVrSwbAGXNrmv6",
-          VideoPlayerReady: "_1onQjxTJsTnadbj-DAgoPK",
-        };
-      },
-      70758: (N) => {
-        N.exports = {
-          YoutubePreviewImage: "_3bVwKmAuh70AH8XVDnyf5z",
-          YoutubePlayer: "_3oXEPQSJY3yN1IVhfxeSy0",
-        };
-      },
-    },
-  ]);
-})();
+          }),
+          (0, J.jsxs)(`div`, {
+            className: U(Jr, qr, i ? Zr : ``),
+            children: [
+              (0, J.jsx)(`div`, {
+                className: Yr,
+                onClick: () => {
+                  r(!1), a(!0);
+                },
+                children: M(`#Conference_Tab_QandA`),
+              }),
+              (0, J.jsx)(H, {
+                toolTipContent: M(`#QAndA_PopOutQAndA_ttip`),
+                children: (0, J.jsx)(`a`, {
+                  className: Xr,
+                  href: s,
+                  target: `_blank`,
+                  children: (0, J.jsx)(Le, {}),
+                }),
+              }),
+            ],
+          }),
+          (0, J.jsx)(H, {
+            toolTipContent: M(`#QAndA_ChatToggle_ShowBoth`),
+            children: (0, J.jsx)(`div`, {
+              className: Gr,
+              onClick: () => {
+                r(!0), a(!0);
+              },
+              children: (0, J.jsx)(Ve, {}),
+            }),
+          }),
+        ],
+      }),
+      (0, J.jsxs)(`div`, {
+        className: Qr,
+        children: [
+          !!((n && i) || (!i && !n)) &&
+            (0, J.jsxs)(J.Fragment, {
+              children: [
+                (0, J.jsx)(`div`, {
+                  className: `udjEFKIUdiE-`,
+                  children: (0, J.jsx)(gt, {
+                    conferenceInfo: t,
+                    className: void 0,
+                  }),
+                }),
+                (0, J.jsx)(`div`, {
+                  className: `DIG-5XDM5sY-`,
+                  children: (0, J.jsx)(st, {
+                    gidSession: t.globalQandASessionID,
+                  }),
+                }),
+              ],
+            }),
+          !(!n || i) &&
+            (0, J.jsx)(gt, { conferenceInfo: t, className: void 0 }),
+          !(n || !i) && (0, J.jsx)(st, { gidSession: t.globalQandASessionID }),
+        ],
+      }),
+    ],
+  });
+}
+function ri(e) {
+  let { conferenceInfo: t } = e;
+  if (!t.faqAboutPage)
+    return (0, J.jsx)(`div`, { children: M(`#Conference_NoAbout`) });
+  let { title: n, content: r, timestamp: i } = t.faqAboutPage;
+  return (0, J.jsxs)(`div`, {
+    children: [
+      (0, J.jsx)(`div`, { className: $r, children: n }),
+      (0, J.jsx)(ot, { text: r, bShowErrorInfo: !1, version: `0` }),
+    ],
+  });
+}
+function ii(e) {
+  let { conferenceInfo: t } = e;
+  return (0, J.jsx)(Mr, { conferenceInfo: t });
+}
+var ai = `M42gpbQtAZI-`,
+  oi = `hdKB5VYayBQ-`,
+  si = `nMQQZr-aUcU-`,
+  ci = `t1L6jOPZ6ZI-`,
+  li = `erGrP-fnka8-`,
+  ui = `oAPQHisXVV4-`;
+function di(e) {
+  let { strVanity: t } = e,
+    n = pt.Get().GetConferenceInfo(t);
+  return n
+    ? (0, J.jsx)(F, {
+        children: (0, J.jsx)(`div`, {
+          className: ai,
+          children: (0, J.jsx)(fi, { conferenceInfo: n }),
+        }),
+      })
+    : (0, J.jsx)(`div`, { children: M(`#Conference_Invalid`) });
+}
+function fi(e) {
+  let { conferenceInfo: t } = e,
+    n = (e) =>
+      window.sessionStorage.setItem(`conferenceCurrentTab`, `?tab=${e.key}`),
+    r = [],
+    i = E();
+  return (
+    i < t.rtEndTime &&
+      r.push({
+        name: M(`#Conference_tab_Home`),
+        key: `live`,
+        contents: (0, J.jsx)(F, {
+          children: (0, J.jsx)(ti, {
+            bShowYouTube: !!t.youtubeVideoID,
+            conferenceInfo: t,
+          }),
+        }),
+        onClick: n,
+      }),
+    r.push({
+      name: M(`#Conference_tab_Past`),
+      key: `past`,
+      contents: (0, J.jsxs)(F, {
+        children: [
+          (0, J.jsx)(ii, { conferenceInfo: t }),
+          !t.youtubeVideoID &&
+            i < t.rtEndTime &&
+            (0, J.jsx)(_t, { conferenceInfo: t }),
+        ],
+      }),
+      onClick: n,
+    }),
+    r.push({
+      name: M(`#Conference_tab_Info`),
+      key: `about`,
+      contents: (0, J.jsxs)(F, {
+        children: [
+          (0, J.jsx)(ri, { conferenceInfo: t }),
+          !t.youtubeVideoID &&
+            i < t.rtEndTime &&
+            (0, J.jsx)(_t, { conferenceInfo: t }),
+        ],
+      }),
+      onClick: n,
+    }),
+    r.push({
+      name: `(VO/Internal) Debug`,
+      key: `debug`,
+      hidden: !0,
+      contents: (0, J.jsx)(F, {
+        children: (0, J.jsx)(vt, { conferenceInfo: t }),
+      }),
+      onClick: n,
+    }),
+    (0, J.jsxs)(`div`, {
+      className: oi,
+      children: [
+        (0, J.jsxs)(`div`, {
+          className: si,
+          children: [
+            (0, J.jsx)(C, { className: ci, rgSources: t.strLocalizedLogos }),
+            (0, J.jsx)(C, {
+              className: li,
+              rgSources: t.strLocalizedMobileLogos,
+            }),
+            (0, J.jsx)(`div`, {
+              className: ui,
+              children: (0, J.jsx)(we, {
+                rtStartDate: t.rtStartTime,
+                rtEndDate: t.rtEndTime,
+              }),
+            }),
+          ],
+        }),
+        (0, J.jsx)(Se, { tabs: r }),
+      ],
+    })
+  );
+}
+var pi = {
+  LandingPage: (e) => `/(conference|steamworksvirtualconference)/${e}`,
+};
+function mi(e) {
+  return (0, J.jsxs)(o, {
+    children: [
+      (0, J.jsx)(l, {
+        path: pi.LandingPage(`:vanity_str`),
+        render: (e) =>
+          (0, J.jsx)(Je, {
+            config: {
+              "conference-root": () => {
+                let { vanity_str: t } = e.match.params;
+                return (0, J.jsx)(di, { strVanity: t.toLocaleLowerCase() });
+              },
+            },
+          }),
+      }),
+      (0, J.jsx)(l, { component: j }),
+    ],
+  });
+}
+export { pi as ConferenceRoutes, mi as default };

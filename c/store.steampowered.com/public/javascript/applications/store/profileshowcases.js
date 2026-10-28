@@ -1,203 +1,166 @@
-(() => {
-  (self.webpackChunkstore = self.webpackChunkstore || []).push([
-    [45004],
-    {
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports),
-          __webpack_require__._(module_exports, {
-            ProfileShowcasesPage: () => _,
-            default: () => _,
-          });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ =
-          __webpack_require__._ +
-          "images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching";
-        var _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        const _ = (_) =>
-            (0, _.jsx)(_._, {
-              ..._,
-              onClick: (_) =>
-                (0, _._)(
-                  _,
-                  _.customization_type,
-                  _.current_level,
-                  _.desired_level,
-                ),
-            }),
-          _ = (_) =>
-            (0, _.jsx)(_._, {
-              ..._,
-              onClick: (_) =>
-                (0, _._)(
-                  _,
-                  _.customization_type,
-                  _.purchased_count,
-                  _.current_level,
-                ),
-            }),
-          _ = (_) =>
-            (0, _.jsx)(_._, {
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              paddingTop: "small",
-              className: _.PageContainer,
-              children: (0, _.jsx)("img", {
-                src: _,
-                className: _.ProfileShowcaseHeaderImage,
+import { _ } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
+import { _, _, _ } from "./libraries.js?contenthash=b0JzZ9xY";
+import { _, _ } from "./main.js?contenthash=C1XpPKHE";
+import { _, _ } from "./layout.js?contenthash=C9c-cUkp";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./loyalty.js?contenthash=DTyVKCuH";
+var _ = _(_()),
+  _ = `VlcajOpXVIQ-`,
+  _ = new URL(
+    `../../../images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching`,
+    import.meta.url,
+  ).href,
+  _ = _(),
+  _ = (_) =>
+    (0, _.jsx)(_, {
+      ..._,
+      onClick: (_) =>
+        _(_, _.customization_type, _.current_level, _.desired_level),
+    }),
+  _ = (_) =>
+    (0, _.jsx)(_, {
+      ..._,
+      onClick: (_) =>
+        _(_, _.customization_type, _.purchased_count, _.current_level),
+    }),
+  _ = (_) =>
+    (0, _.jsx)(_, {
+      display: `flex`,
+      flexDirection: `row`,
+      justifyContent: `center`,
+      alignItems: `center`,
+      paddingTop: `small`,
+      className: void 0,
+      children: (0, _.jsx)(`img`, {
+        src: _,
+        className: _,
+      }),
+    }),
+  _ = (_) => {
+    let { point_cost: _, upgradable_showcases: _, purchased_upgrades: _ } = _,
+      _ = new Map();
+    _.forEach((_) => {
+      _.set(_, 1);
+    }),
+      _ &&
+        _.forEach((_) => {
+          _.set(_.customization_type, _.level);
+        });
+    let _ = _.map((_) => {
+      let _ = _.get(_),
+        _ = _ + 1;
+      return (0, _.jsx)(
+        _,
+        {
+          point_cost: _,
+          customization_type: _,
+          current_level: _,
+          desired_level: _,
+        },
+        _,
+      );
+    });
+    return (0, _.jsx)(_, {
+      className: _,
+      itemClassName: _,
+      spacing: `xlarge`,
+      children: (0, _.jsx)(_, {
+        title: _(`#ProfileShowcases_Upgrades_Title`),
+        subtitle: _(`#ProfileShowcases_Upgrades_Subtitle`),
+        children: _,
+      }),
+    });
+  },
+  _ = (_) => {
+    let {
+        point_cost: _,
+        purchasable_showcases: _,
+        purchased_showcases: _,
+        purchased_upgrades: _,
+      } = _,
+      _ = new Map(),
+      _ = new Map();
+    _.forEach((_) => {
+      _.set(_, 0), _.set(_, 1);
+    }),
+      _ &&
+        _.forEach((_) => {
+          _.set(_.customization_type, _.count);
+        }),
+      _ &&
+        _.forEach((_) => {
+          _.set(_.customization_type, _.level);
+        });
+    let _ = _.map((_) =>
+      (0, _.jsx)(
+        _,
+        {
+          point_cost: _,
+          current_level: _.get(_),
+          customization_type: _,
+          purchased_count: _.get(_),
+        },
+        _,
+      ),
+    );
+    return (0, _.jsx)(_, {
+      className: _,
+      itemClassName: _,
+      spacing: `xlarge`,
+      children: (0, _.jsx)(_, {
+        title: _(`#ProfileShowcases_Slots_Title`),
+        subtitle: _(`#ProfileShowcases_Slots_Subtitle`),
+        children: _,
+      }),
+    });
+  },
+  _ = class extends _.Component {
+    render() {
+      let _ = _.Get().GetUpgradableProfileShowcaseCost(),
+        _ = _.Get().GetUpgradableProfileShowcases(),
+        _ = _.Get().GetUpgradedProfileCustomizations(),
+        _ = _.Get().GetPurchasableProfileShowcaseSlotCost(),
+        _ = _.Get().GetPurchasableProfileShowcaseSlots(),
+        _ = _.Get().GetPurchasedProfileCustomizations();
+      return (0, _.jsx)(_, {
+        children: (0, _.jsxs)(_, {
+          className: _,
+          itemClassName: _,
+          spacing: `xlarge`,
+          children: [
+            (0, _.jsx)(`div`, {
+              children: (0, _.jsx)(_, {
+                title: _(`#ShopPageTitle_ProfileShowcases`),
               }),
             }),
-          _ = (_) => {
-            const {
+            (0, _.jsx)(_, {}),
+            (0, _.jsx)(_, {
               point_cost: _,
               upgradable_showcases: _,
               purchased_upgrades: _,
-            } = _;
-            let _ = new Map();
-            _.forEach((_) => {
-              _.set(_, 1);
             }),
-              _ &&
-                _.forEach((_) => {
-                  _.set(_.customization_type, _.level);
-                });
-            let _ = _.map((_) => {
-              const _ = _.get(_),
-                _ = _ + 1;
-              return (0, _.jsx)(
-                _,
-                {
-                  point_cost: _,
-                  customization_type: _,
-                  current_level: _,
-                  desired_level: _,
-                },
-                _,
-              );
-            });
-            return (0, _.jsx)(_._, {
-              className: _.PageItemsContainer,
-              itemClassName: _.PageItemsContainerChildren,
-              spacing: "xlarge",
-              children: (0, _.jsx)(_._, {
-                title: (0, _._)("#ProfileShowcases_Upgrades_Title"),
-                subtitle: (0, _._)("#ProfileShowcases_Upgrades_Subtitle"),
-                children: _,
-              }),
-            });
-          },
-          _ = (_) => {
-            const {
+            (0, _.jsx)(_, {
               point_cost: _,
               purchasable_showcases: _,
               purchased_showcases: _,
               purchased_upgrades: _,
-            } = _;
-            let _ = new Map(),
-              _ = new Map();
-            _.forEach((_) => {
-              _.set(_, 0), _.set(_, 1);
             }),
-              _ &&
-                _.forEach((_) => {
-                  _.set(_.customization_type, _.count);
-                }),
-              _ &&
-                _.forEach((_) => {
-                  _.set(_.customization_type, _.level);
-                });
-            let _ = _.map((_) =>
-              (0, _.jsx)(
-                _,
-                {
-                  point_cost: _,
-                  current_level: _.get(_),
-                  customization_type: _,
-                  purchased_count: _.get(_),
-                },
-                _,
-              ),
-            );
-            return (0, _.jsx)(_._, {
-              className: _.PageItemsContainer,
-              itemClassName: _.PageItemsContainerChildren,
-              spacing: "xlarge",
-              children: (0, _.jsx)(_._, {
-                title: (0, _._)("#ProfileShowcases_Slots_Title"),
-                subtitle: (0, _._)("#ProfileShowcases_Slots_Subtitle"),
-                children: _,
-              }),
-            });
-          };
-        let _ = class extends _.Component {
-          render() {
-            let _ = _._.Get().GetUpgradableProfileShowcaseCost(),
-              _ = _._.Get().GetUpgradableProfileShowcases(),
-              _ = _._.Get().GetUpgradedProfileCustomizations(),
-              _ = _._.Get().GetPurchasableProfileShowcaseSlotCost(),
-              _ = _._.Get().GetPurchasableProfileShowcaseSlots(),
-              _ = _._.Get().GetPurchasedProfileCustomizations();
-            return (0, _.jsx)(_._, {
-              children: (0, _.jsxs)(_._, {
-                className: _.PageItemsContainer,
-                itemClassName: _.PageItemsContainerChildren,
-                spacing: "xlarge",
-                children: [
-                  (0, _.jsx)("div", {
-                    children: (0, _.jsx)(_._, {
-                      title: (0, _._)("#ShopPageTitle_ProfileShowcases"),
-                    }),
-                  }),
-                  (0, _.jsx)(_, {}),
-                  (0, _.jsx)(_, {
-                    point_cost: _,
-                    upgradable_showcases: _,
-                    purchased_upgrades: _,
-                  }),
-                  (0, _.jsx)(_, {
-                    point_cost: _,
-                    purchasable_showcases: _,
-                    purchased_showcases: _,
-                    purchased_upgrades: _,
-                  }),
-                  this.props.children,
-                ],
-              }),
-            });
-          }
-        };
-        _ = _([_._], _);
-        const _ = _;
-      },
-      chunkid: (module) => {
-        module.exports = {
-          ProfileShowcaseHeaderImage: "_2tjUy9meAE2vNIP6iYBRVU",
-          ShowcaseSubhead: "_2BmNvI5oqx2_EjWNkstqPt",
-        };
-      },
-    },
-  ]);
-})();
+            this.props.children,
+          ],
+        }),
+      });
+    }
+  };
+_ = _([_], _);
+var _ = _;
+export { _ as ProfileShowcasesPage, _ as default };

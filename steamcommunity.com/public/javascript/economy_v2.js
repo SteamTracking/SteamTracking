@@ -3924,9 +3924,56 @@ function SellCurrentSelection()
 			'Cannot sell item'
 		);
 	}
+	else if ( window.g_bReactSellDialog )
+	{
+		var item = g_ActiveInventory.selectedItem;
+		var rgRequest = {
+			item: item,
+			appContext: g_rgAppContextData[item.appid],
+			onSold: function( result ) { OnSellItemListed( item, result.quantity, result.requires_confirmation ); }
+		};
+
+		if ( window.ShowReactSellItemDialog )
+			window.ShowReactSellItemDialog( rgRequest.item, rgRequest.appContext, rgRequest.onSold );
+		else
+			window.g_PendingReactSellItemDialog = rgRequest;
+	}
 	else
 	{
 		SellItemDialog.Show( g_ActiveInventory.selectedItem );
+	}
+}
+
+function OnSellItemListed( item, nQuantity, bRequiresConfirmation )
+{
+	var idNameShow = ( bRequiresConfirmation ? '_pending' : '' );
+	var idNameHide = ( bRequiresConfirmation ? '' : '_pending' );
+
+	new Effect.BlindUp( 'market_headertip_itemsold' + idNameHide, { duration: 0.0 } );
+
+	if ( nQuantity > 1 )
+	{
+		$( 'market_headertip_itemsold_itemname'+idNameShow ).update( v_numberformat( nQuantity ) + ' ' + item.description.name.escapeHTML() );
+	}
+	else
+	{
+		$( 'market_headertip_itemsold_itemname'+idNameShow ).update( item.description.name.escapeHTML() );
+	}
+
+	if ( item.description.name_color )
+	{
+		$('market_headertip_itemsold_itemname'+idNameShow).style.color = '#' + item.description.name_color;
+	}
+	else
+	{
+		$('market_headertip_itemsold_itemname'+idNameShow).style.color = '';
+	}
+
+	new Effect.BlindDown( 'market_headertip_itemsold'+idNameShow, { duration: 0.25 } );
+
+	if ( !bRequiresConfirmation )
+	{
+		UserYou.ReloadInventory( item.appid, item.contextid, item.assetid );
 	}
 }
 
@@ -4436,30 +4483,7 @@ SellItemDialog = {
 		{
 			this.Dismiss();
 
-			var idNameShow = ( transport.responseJSON.requires_confirmation ? '_pending' : '' );
-			var idNameHide = ( transport.responseJSON.requires_confirmation ? '' : '_pending' );
-
-			new Effect.BlindUp( 'market_headertip_itemsold' + idNameHide, { duration: 0.0 } );
-
-			if ( this.m_nConfirmedQuantity > 1 )
-			{
-				$( 'market_headertip_itemsold_itemname'+idNameShow ).update( v_numberformat( this.m_nConfirmedQuantity ) + ' ' + this.m_item.description.name.escapeHTML() );
-			}
-			else
-			{
-				$( 'market_headertip_itemsold_itemname'+idNameShow ).update( this.m_item.description.name.escapeHTML() );
-			}
-
-			if ( this.m_item.description.name_color )
-			{
-				$('market_headertip_itemsold_itemname'+idNameShow).style.color = '#' + this.m_item.description.name_color;
-			}
-			else
-			{
-				$('market_headertip_itemsold_itemname'+idNameShow).style.color = '';
-			}
-
-			new Effect.BlindDown( 'market_headertip_itemsold'+idNameShow, { duration: 0.25 } );
+			OnSellItemListed( this.m_item, this.m_nConfirmedQuantity, !!transport.responseJSON.requires_confirmation );
 
 			if ( transport.responseJSON.requires_confirmation )
 			{
@@ -4483,10 +4507,6 @@ SellItemDialog = {
 					'Additional confirmation needed',
 					strText
 				);
-			}
-			else
-			{
-				UserYou.ReloadInventory( this.m_item.appid, this.m_item.contextid, this.m_item.assetid );
 			}
 		}
 		else

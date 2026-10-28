@@ -570,18 +570,18 @@
 	background-color: inherit;
 }
 .search_discount_and_price .discount_block.no_discount .discount_prices .discount_final_price {
-	font-size: 12px;
+	font-size: 14px;
 	text-align: right;
 	color: #c6d4df;
 	padding-right: 0;
 	white-space: nowrap;
 }
 .search_discount_and_price .discount_block:not(.no_discount) .discount_prices .discount_original_price {
-	color: #888888;
+	color: #8b929a;
 	white-space: nowrap;
 }
 .search_discount_and_price .discount_block:not(.no_discount) .discount_prices .discount_final_price {
-	font-size: 13px;
+	font-size: 14px;
 	white-space: nowrap;
 }
 .search_discount_icon_ctn {
@@ -600,12 +600,28 @@
 .search_discount_icon img {
     display: block;
 }
-.search_discount_and_price .bundle_base_discount {
+.search_discount_and_price .no_discount .bundle_base_discount {
 	display: none;
 }
 
+.search_discount_and_price .discount_block:not(.no_discount) {
+	height: 32px;
+	align-items: stretch;
+}
 .search_discount_and_price .discount_pct {
-	padding: 5px;
+	font-size: 14px;
+	line-height: 32px;
+	padding: 0 6px;
+}
+.search_discount_and_price .discount_block:not(.no_discount):has(.bundle_base_discount) .discount_pct {
+	line-height: 18px;
+}
+.search_discount_and_price .discount_block:not(.no_discount) .discount_prices {
+	background: none; 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 0 6px;
 }
 
 .page_content {

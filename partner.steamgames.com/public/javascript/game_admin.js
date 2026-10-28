@@ -12,40 +12,8 @@ function BBrowserSupportsFormData()
 //-----------------------------------------------------------------------------
 function GetSupportedLanguages()
 {
-	var languages = {
-			'english': 'English',
-				'german': 'German',
-				'french': 'French',
-				'italian': 'Italian',
-				'koreana': 'Korean',
-				'spanish': 'Spanish - Spain',
-				'schinese': 'Simplified Chinese',
-				'tchinese': 'Traditional Chinese',
-				'russian': 'Russian',
-				'thai': 'Thai',
-				'japanese': 'Japanese',
-				'portuguese': 'Portuguese - Portugal',
-				'polish': 'Polish',
-				'danish': 'Danish',
-				'dutch': 'Dutch',
-				'finnish': 'Finnish',
-				'norwegian': 'Norwegian',
-				'swedish': 'Swedish',
-				'hungarian': 'Hungarian',
-				'czech': 'Czech',
-				'romanian': 'Romanian',
-				'turkish': 'Turkish',
-				'arabic': 'Arabic',
-				'brazilian': 'Portuguese-Brazil',
-				'bulgarian': 'Bulgarian',
-				'greek': 'Greek',
-				'ukrainian': 'Ukrainian',
-				'vietnamese': 'Vietnamese',
-				'latam': 'Spanish - Latin America',
-				'sc_schinese': 'SteamChina - Simplified Chinese',
-				'indonesian': 'Indonesian',
-				'malay': 'Malay',
-			};
+	// language names are shown in the user's own language
+	var languages = {"english":"English","german":"German","french":"French","italian":"Italian","koreana":"Korean","spanish":"Spanish - Spain","schinese":"Simplified Chinese","tchinese":"Traditional Chinese","russian":"Russian","thai":"Thai","japanese":"Japanese","portuguese":"Portuguese - Portugal","polish":"Polish","danish":"Danish","dutch":"Dutch","finnish":"Finnish","norwegian":"Norwegian","swedish":"Swedish","hungarian":"Hungarian","czech":"Czech","romanian":"Romanian","turkish":"Turkish","arabic":"Arabic","brazilian":"Portuguese - Brazil","bulgarian":"Bulgarian","greek":"Greek","ukrainian":"Ukrainian","latam":"Spanish - Latin America","vietnamese":"Vietnamese","sc_schinese":"Simplified Chinese - SteamChina","indonesian":"Indonesian","malay":"Malay"};
 	return languages;
 }
 
@@ -189,25 +157,25 @@ function InitImageTypes( type )
 	var strHeaderPath = ( type == 'Package' || type == 'Bundle' ) ? 'header_image_ratio' : 'header_image';
 	g_ImageTypes =
 	[
-		{ name: 'Header Capsule', width: 920, height: 430, path: strHeaderPath + '|header|assets|' + strHeaderPath + '|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store' },
-		{ name: 'Small Capsule', width: 462, height: 174, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
-		{ name: 'Main Capsule', width: 1232, height: 706, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
-		{ name: 'Package Header', width: 1414, height: 464, path: 'header_image|header|assets|header_image|image', localized: true, confirmation_required: true, tab: 'store'  },
-		{ name: 'Vertical Capsule', width: 748, height: 896, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
-		{ name: 'Page Background', width: 1438, height: 810, path: 'page_background|page_bg_raw|assets|page_background_raw', localized: false, tab: 'store' },
+		{ name: 'Header Capsule', label: "Header Capsule", width: 920, height: 430, path: strHeaderPath + '|header|assets|' + strHeaderPath + '|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store' },
+		{ name: 'Small Capsule', label: "Small Capsule", width: 462, height: 174, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
+		{ name: 'Main Capsule', label: "Main Capsule", width: 1232, height: 706, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
+		{ name: 'Package Header', label: "Package Header", width: 1414, height: 464, path: 'header_image|header|assets|header_image|image', localized: true, confirmation_required: true, tab: 'store'  },
+		{ name: 'Vertical Capsule', label: "Vertical Capsule", width: 748, height: 896, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
+		{ name: 'Page Background', label: "Page Background", width: 1438, height: 810, path: 'page_background|page_bg_raw|assets|page_background_raw', localized: false, tab: 'store' },
 
 		{ name: 'Broadcast Left Side Panel (old dimensions)', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false, tab: 'broadcast', deprecated: true },
-		{ name: 'Broadcast Left Side Panel', width: 199, height: 433, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false, tab: 'broadcast' },
+		{ name: 'Broadcast Left Side Panel', label: "Broadcast Left Side Panel", width: 199, height: 433, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false, tab: 'broadcast' },
 		{ name: 'Broadcast Right Side Panel (old dimensions)', width: 155, height: 337, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false, tab: 'broadcast', deprecated: true },
-		{ name: 'Broadcast Right Side Panel', width: 199, height: 433, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false, tab: 'broadcast' },
+		{ name: 'Broadcast Right Side Panel', label: "Broadcast Right Side Panel", width: 199, height: 433, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false, tab: 'broadcast' },
 
-		{ name: 'Library Hero', width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
-		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_capsule|assets|library_capsule|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
-		{ name: 'Library Header', width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
-		{ name: 'Library Logo', width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, contained: true, confirmation_required: true, tab: 'library' },
+		{ name: 'Library Hero', label: "Library Hero", width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
+		{ name: 'Library Capsule', label: "Library Capsule", width: 600, height: 900, path: 'library_capsule|library_capsule|assets|library_capsule|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
+		{ name: 'Library Header', label: "Library Header", width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
+		{ name: 'Library Logo', label: "Library Logo", width: 1280, height: 720, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, contained: true, confirmation_required: true, tab: 'library' },
 
 		// Keep last for list priority ordering
-		{ name: 'Screenshot', width: 1920, height: 1080, path: 'screenshot|assets|screenshots|', localized: false, enforce_min: true, tab: 'screenshot' },
+		{ name: 'Screenshot', label: "Screenshot", width: 1920, height: 1080, path: 'screenshot|assets|screenshots|', localized: false, enforce_min: true, tab: 'screenshot' },
 		{ name: 'ScreenshotLocalized', width: 0, height: 0, path: 'screenshot_localized|assets|screenshots|', localized: true, hidden: true, enforce_min: true, tab: 'screenshot' },
 	];
 }
@@ -331,7 +299,7 @@ function OnScreenshotLoadComplete(target, nParentID, images )
 		var languages = GetSupportedLanguages();
 		for ( var key in languages )
 		{
-			var option = $J( '<option value="' + key + '">' + languages[key] + '</option>' );
+			var option = $J( '<option/>', { value: key } ).text( languages[key] );
 			option.appendTo( selectLanguage );
 
 			if ( BLanguageInFileName( key, filename ) )
@@ -548,7 +516,7 @@ function OnImagesLoadComplete( images )
 			const bPreventStoreTypeImages = bPreventStoreAssetUploads && IsImageTypeValid( image, g_ImageTypes[iImageType] ) && g_ImageTypes[iImageType].tab === 'store';
 			if ( IsImageTypeValid( image, g_ImageTypes[iImageType] ) && !g_ImageTypes[iImageType].hidden && !bPreventStoreTypeImages )
 			{
-				var option = $J ( '<option value="' + g_ImageTypes[ iImageType ].name + '">' + g_ImageTypes[ iImageType ].name + '</option>' );
+				var option = $J( '<option/>', { value: g_ImageTypes[ iImageType ].name } ).text( g_ImageTypes[ iImageType ].label || g_ImageTypes[ iImageType ].name );
 				option.appendTo ( selectType );
 				if ( g_ImageTypes[ iImageType ].name == imageType )
 				{
@@ -636,7 +604,7 @@ function OnImagesLoadComplete( images )
 		var languages = GetSupportedLanguages();
 		for ( var key in languages )
 		{
-			var option = $J( '<option value="' + key + '">' + languages[key] + '</option>' );
+			var option = $J( '<option/>', { value: key } ).text( languages[key] );
 			option.appendTo( selectLanguage );
 
 			if ( BLanguageInFileName( key, filename ) )

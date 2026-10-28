@@ -1372,7 +1372,7 @@ div.appselect div.appselect_inner {
 }
 
 .indented {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 .admin_note {

@@ -717,7 +717,6 @@
         async LoadSettings() {
           const _ = (_, _) => {
             try {
-              0;
               const _ = localStorage.getItem(_);
               return _ ? JSON.parse(_) : _;
             } catch {
@@ -774,8 +773,9 @@
         }
         static Get() {
           return (
-            null == window.g_LogManager && (window.g_LogManager = new _()),
-            window.g_LogManager
+            null == globalThis.g_LogManager &&
+              (globalThis.g_LogManager = new _()),
+            globalThis.g_LogManager
           );
         }
         get Loading() {
@@ -1206,8 +1206,16 @@
             return "none" !== _.gridTemplateAreas ? _.GEOMETRIC : _.GRID;
           if (_.childElementCount > 0) {
             const _ = _.getComputedStyle(_.firstElementChild);
-            if ("left" === _.float) return _.ROW;
-            if ("right" === _.float) return _.ROW_REVERSE;
+            let _ = _.float;
+            if (
+              ("inline-start" === _
+                ? ((_ = "left"), "rtl" === _.direction && (_ = "right"))
+                : "inline-end" === _ &&
+                  ((_ = "right"), "rtl" === _.direction && (_ = "left")),
+              "left" === _)
+            )
+              return _.ROW;
+            if ("right" === _) return _.ROW_REVERSE;
             if ("inline" === _.display || "inline-block" === _.display)
               return _.GRID;
           }

@@ -3,12 +3,12 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./greenenvelope.js?contenthash=B4c9iKkJ",
+      "./greenenvelope.js?contenthash=BqSDIoHD",
       "./rolldown-runtime.js?contenthash=Bk3-1wwW",
-      "./storenaveventcontext.js?contenthash=B0hquxXn",
-      "../../../css/applications/help/greenenvelope.css?contenthash=CfNXQmrA",
-      "./src.js?contenthash=Ej24kozt",
-      "../../../css/applications/help/src.css?contenthash=DRElReEs",
+      "./storenaveventcontext.js?contenthash=txejLlpB",
+      "../../../css/applications/help/greenenvelope.css?contenthash=Cl6SERdc",
+      "./src.js?contenthash=DJswXlWZ",
+      "../../../css/applications/help/src.css?contenthash=BbLhD5Ku",
     ]),
 ) => _.map((_) => _[_]);
 import { _, _, _ } from "./rolldown-runtime.js?contenthash=Bk3-1wwW";
@@ -135,7 +135,16 @@ import {
   _,
   _,
   _,
-} from "./storenaveventcontext.js?contenthash=B0hquxXn";
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./storenaveventcontext.js?contenthash=txejLlpB";
 var _ = (_, _, _) => {
   let _ = _.lastIndexOf(`?`),
     _ = _[_ === -1 || _ < _.lastIndexOf(`/`) ? _ : _.slice(0, _)];
@@ -12288,367 +12297,6 @@ Error generating stack: ` +
     }
     _(), (_.exports = _());
   }),
-  _ = _(_()),
-  _ = _(_());
-function _(_) {
-  return _ == 3 || _ == 6;
-}
-var _ = `18446744073709551615`;
-[
-  [`None`, `none`, -1],
-  [`Afrikaans`, `afrikaans`, 0],
-  [`Albanian`, `albanian`, 1],
-  [`Amharic`, `amharic`, 2],
-  [`Armenian`, `armenian`, 3],
-  [`Assamese`, `assamese`, 4],
-  [`Azerbaijani`, `azerbaijani`, 5],
-  [`Bangla`, `bangla`, 6],
-  [`Basque`, `basque`, 7],
-  [`Belarusian`, `belarusian`, 8],
-  [`Bosnian`, `bosnian`, 9],
-  [`Catalan`, `catalan`, 10],
-  [`Cherokee`, `cherokee`, 11],
-  [`Croatian`, `croatian`, 12],
-  [`Dari`, `dari`, 13],
-  [`Estonian`, `estonian`, 14],
-  [`Filipino`, `filipino`, 15],
-  [`Galician`, `galician`, 16],
-  [`Georgian`, `georgian`, 17],
-  [`Gujarati`, `gujarati`, 18],
-  [`Punjabi (Gurmukhi)`, `gurmukhi`, 19],
-  [`Hausa`, `hausa`, 20],
-  [`Hebrew`, `hebrew`, 21],
-  [`Hindi`, `hindi`, 22],
-  [`Icelandic`, `icelandic`, 23],
-  [`Igbo`, `igbo`, 24],
-  [`Indonesian`, `indonesian`, 25],
-  [`Irish`, `irish`, 26],
-  [`Kannada`, `kannada`, 27],
-  [`Kazakh`, `kazakh`, 28],
-  [`Khmer`, `khmer`, 29],
-  [`K'iche'`, `kiche`, 30],
-  [`Kinyarwanda`, `kinyarwanda`, 31],
-  [`Konkani`, `konkani`, 32],
-  [`Kyrgyz`, `kyrgyz`, 33],
-  [`Latvian`, `latvian`, 34],
-  [`Lithuanian`, `lithuanian`, 35],
-  [`Luxembourgish`, `luxembourgish`, 36],
-  [`Macedonian`, `macedonian`, 37],
-  [`Malay`, `malay`, 38],
-  [`Malayalam`, `malayalam`, 39],
-  [`Maltese`, `maltese`, 40],
-  [`Maori`, `maori`, 41],
-  [`Marathi`, `marathi`, 42],
-  [`Mongolian`, `mongolian`, 43],
-  [`Nepali`, `nepali`, 44],
-  [`Odia`, `odia`, 45],
-  [`Persian`, `persian`, 46],
-  [`Quechua`, `quechua`, 47],
-  [`Scots`, `scots`, 48],
-  [`Serbian`, `serbian`, 49],
-  [`Punjabi (Shahmukhi)`, `shahmukhi`, 50],
-  [`Sindhi`, `sindhi`, 51],
-  [`Sinhala`, `sinhala`, 52],
-  [`Slovak`, `slovak`, 53],
-  [`Slovenian`, `slovenian`, 54],
-  [`Sorani`, `sorani`, 55],
-  [`Sotho`, `sotho`, 56],
-  [`Swahili`, `swahili`, 57],
-  [`Tajik`, `tajik`, 58],
-  [`Tamil`, `tamil`, 59],
-  [`Tatar`, `tatar`, 60],
-  [`Telugu`, `telugu`, 61],
-  [`Tigrinya`, `tigrinya`, 62],
-  [`Tswana`, `tswana`, 63],
-  [`Turkmen`, `turkmen`, 64],
-  [`Urdu`, `urdu`, 65],
-  [`Uyghur`, `uyghur`, 66],
-  [`Uzbek`, `uzbek`, 67],
-  [`Valencian`, `valencian`, 68],
-  [`Welsh`, `welsh`, 69],
-  [`Wolof`, `wolof`, 70],
-  [`Xhosa`, `xhosa`, 71],
-  [`Yoruba`, `yoruba`, 72],
-  [`Zulu`, `zulu`, 73],
-].map((_) => ({
-  name: _[0],
-  shortName: _[1],
-  eAdditionalLanguage: _[2],
-}));
-function _(_, _ = `en`) {
-  switch (_) {
-    case 0:
-      return `en`;
-    case 1:
-      return `de`;
-    case 2:
-      return `fr`;
-    case 3:
-      return `it`;
-    case 4:
-      return `ko`;
-    case 5:
-      return `es`;
-    case 6:
-      return `zh-cn`;
-    case 7:
-      return `zh-tw`;
-    case 8:
-      return `ru`;
-    case 9:
-      return `th`;
-    case 10:
-      return `ja`;
-    case 11:
-      return `pt`;
-    case 12:
-      return `pl`;
-    case 13:
-      return `da`;
-    case 14:
-      return `nl`;
-    case 15:
-      return `fi`;
-    case 16:
-      return `no`;
-    case 17:
-      return `sv`;
-    case 18:
-      return `hu`;
-    case 19:
-      return `cs`;
-    case 20:
-      return `ro`;
-    case 21:
-      return `tr`;
-    case 25:
-      return `ar`;
-    case 22:
-      return `pt-br`;
-    case 23:
-      return `bg`;
-    case 24:
-      return `el`;
-    case 26:
-      return `uk`;
-    case 27:
-      return `es-419`;
-    case 28:
-      return `vi`;
-    case 29:
-      return `sc-sc`;
-    case 30:
-      return `id`;
-    case 31:
-      return `ms`;
-    default:
-      return _;
-  }
-}
-var _ = (_) => (_ === `koreana` ? `korean` : _);
-function _(_, _ = ``) {
-  switch (_) {
-    case 0:
-      return `english`;
-    case 1:
-      return `german`;
-    case 2:
-      return `french`;
-    case 3:
-      return `italian`;
-    case 4:
-      return `koreana`;
-    case 5:
-      return `spanish`;
-    case 6:
-      return `schinese`;
-    case 7:
-      return `tchinese`;
-    case 8:
-      return `russian`;
-    case 9:
-      return `thai`;
-    case 10:
-      return `japanese`;
-    case 11:
-      return `portuguese`;
-    case 12:
-      return `polish`;
-    case 13:
-      return `danish`;
-    case 14:
-      return `dutch`;
-    case 15:
-      return `finnish`;
-    case 16:
-      return `norwegian`;
-    case 17:
-      return `swedish`;
-    case 18:
-      return `hungarian`;
-    case 19:
-      return `czech`;
-    case 20:
-      return `romanian`;
-    case 21:
-      return `turkish`;
-    case 25:
-      return `arabic`;
-    case 22:
-      return `brazilian`;
-    case 23:
-      return `bulgarian`;
-    case 24:
-      return `greek`;
-    case 26:
-      return `ukrainian`;
-    case 27:
-      return `latam`;
-    case 28:
-      return `vietnamese`;
-    case 29:
-      return `sc_schinese`;
-    case 30:
-      return `indonesian`;
-    case 31:
-      return `malay`;
-    default:
-      return _;
-  }
-}
-function _(_, _ = 0) {
-  switch (_) {
-    case `english`:
-      return 0;
-    case `german`:
-      return 1;
-    case `french`:
-      return 2;
-    case `italian`:
-      return 3;
-    case `korean`:
-    case `koreana`:
-      return 4;
-    case `spanish`:
-      return 5;
-    case `schinese`:
-      return 6;
-    case `tchinese`:
-      return 7;
-    case `russian`:
-      return 8;
-    case `thai`:
-      return 9;
-    case `japanese`:
-      return 10;
-    case `portuguese`:
-      return 11;
-    case `polish`:
-      return 12;
-    case `danish`:
-      return 13;
-    case `dutch`:
-      return 14;
-    case `finnish`:
-      return 15;
-    case `norwegian`:
-      return 16;
-    case `swedish`:
-      return 17;
-    case `hungarian`:
-      return 18;
-    case `czech`:
-      return 19;
-    case `romanian`:
-      return 20;
-    case `turkish`:
-      return 21;
-    case `arabic`:
-      return 25;
-    case `brazilian`:
-      return 22;
-    case `bulgarian`:
-      return 23;
-    case `greek`:
-      return 24;
-    case `ukrainian`:
-      return 26;
-    case `latam`:
-      return 27;
-    case `vietnamese`:
-      return 28;
-    case `sc_schinese`:
-      return 29;
-    case `indonesian`:
-      return 30;
-    case `malay`:
-      return 31;
-    default:
-      return _;
-  }
-}
-function _(_) {
-  switch (_) {
-    default:
-      break;
-    case 4:
-    case 1:
-    case 8:
-      return !0;
-  }
-  return !1;
-}
-function _(_) {
-  switch (_) {
-    case 0:
-      return `invalid`;
-    case 1:
-      return `gamepad`;
-    case 2:
-      return `desktop`;
-    case 3:
-      return `tray`;
-    case 4:
-      return `all`;
-    case 5:
-      return `push`;
-  }
-}
-function _(_) {
-  switch (_) {
-    case 0:
-      return `vgui`;
-    case 1:
-      return `tenfoot`;
-    case 2:
-      return `mobile`;
-    case 3:
-      return `web`;
-    case 4:
-      return `gamepad`;
-    case 5:
-      return `mobilechat`;
-    case 6:
-      return `embedded`;
-    case 7:
-      return `desktop`;
-    default:
-      return `unknown`;
-  }
-}
-var _ = (function (_) {
-    return (
-      (_[(_.k_EWindowBringToFrontInvalid = 0)] =
-        `k_EWindowBringToFrontInvalid`),
-      (_[(_.k_EWindowBringToFrontAndForceOS = 1)] =
-        `k_EWindowBringToFrontAndForceOS`),
-      (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-        `k_EWindowBringToFrontWithoutForcingOS`),
-      (_[(_.k_EWindowBringToFrontUsingExistingOSState = 3)] =
-        `k_EWindowBringToFrontUsingExistingOSState`),
-      _
-    );
-  })({}),
   _ = (function (_) {
     return (
       (_[(_.EBrowserType_OffScreen = 0)] = `EBrowserType_OffScreen`),
@@ -12701,6 +12349,8 @@ var _ = (function (_) {
       _
     );
   })({}),
+  _ = _(_()),
+  _ = _(_()),
   _ = {
     DiagData: () => `/:anything*/diagdata`,
     ViewFAQ: () => `/:languageCode*/faqs/view/:faqid*`,
@@ -16295,3825 +15945,694 @@ var _ = _.prototype;
       );
     }));
 var _ = class _ {
-  m_ulSteamID;
-  constructor(_ = 0, _, _, _) {
-    _ instanceof _
-      ? (this.m_ulSteamID = _.m_ulSteamID)
-      : typeof _ == `string`
-        ? (this.m_ulSteamID = _.fromString(_, !0))
-        : _ && _ && _ !== void 0
-          ? this.SetFromComponents(_ ?? 0, _, _, _)
-          : (this.m_ulSteamID = _ ? _.fromNumber(_, !0) : _.UZERO);
-  }
-  static InitFromAccountID(_) {
-    return _ ? new _(Number(_), _.EUNIVERSE, 1, 1) : new _();
-  }
-  static InitFromClanID(_) {
-    return new _(Number(_), _.EUNIVERSE, 7, 0);
-  }
-  GetAccountID() {
-    return this.m_ulSteamID.getLowBitsUnsigned();
-  }
-  GetInstance() {
-    return this.m_ulSteamID.getHighBitsUnsigned() & 1048575;
-  }
-  GetAccountType() {
-    return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
-  }
-  GetUniverse() {
-    return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
-  }
-  ConvertTo64BitString() {
-    return this.m_ulSteamID.toString();
-  }
-  Render() {
-    switch (this.GetAccountType()) {
-      case 0:
-        return `[I:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
-      case 7:
-        return `[g:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
-      case 4:
-        return (
-          `[A:` +
-          this.GetUniverse() +
-          `:` +
-          this.GetAccountID() +
-          `:` +
-          this.GetInstance() +
-          `]`
-        );
-      case 3:
-        return `[G:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
-      case 2:
-        return (
-          `[M:` +
-          this.GetUniverse() +
-          `:` +
-          this.GetAccountID() +
-          `:` +
-          this.GetInstance() +
-          `]`
-        );
-      case 5:
-        return `[P:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
-      case 6:
-        return `[C:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
-      default:
-        return `[U:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+    m_ulSteamID;
+    constructor(_ = 0, _, _, _) {
+      _ instanceof _
+        ? (this.m_ulSteamID = _.m_ulSteamID)
+        : typeof _ == `string`
+          ? (this.m_ulSteamID = _.fromString(_, !0))
+          : _ && _ && _ !== void 0
+            ? this.SetFromComponents(_ ?? 0, _, _, _)
+            : (this.m_ulSteamID = _ ? _.fromNumber(_, !0) : _.UZERO);
     }
-  }
-  static InitFromString(_) {
-    let _ = new _();
-    try {
-      let [_, _, _, _, _] =
-          _.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
-        _ = Number(_),
-        _ = Number(_),
-        _ = _ ? Number(_) : 1;
-      switch (_) {
-        case `I`:
-          _.SetFromComponents(_, _, 0, _);
-        case `g`:
-          _.SetFromComponents(_, 0, 7, _);
-        case `A`:
-          _.SetFromComponents(_, _, 4, _);
-        case `G`:
-          _.SetFromComponents(_, _, 3, _);
-        case `M`:
-          _.SetFromComponents(_, _, 2, _);
-        case `P`:
-          _.SetFromComponents(_, _, 5, _);
-        case `C`:
-          _.SetFromComponents(_, _, 6, _);
-        case `U`:
-          _.SetFromComponents(_, _, 1, _);
-      }
-    } catch {}
-    return _;
-  }
-  BIsValid() {
-    let _ = this.GetAccountType();
-    if (_ <= 0 || _ >= 11) return !1;
-    let _ = this.GetUniverse();
-    if (_ <= 0 || _ >= 5) return !1;
-    if (_ == 1) {
-      if (this.GetAccountID() == 0 || this.GetInstance() > 4) return !1;
-    } else if (_ == 7) {
-      if (this.GetAccountID() == 0 || this.GetInstance() != 0) return !1;
-    } else if (_ == 3 && this.GetAccountID() == 0) return !1;
-    return !0;
-  }
-  BIsIndividualAccount() {
-    return this.GetAccountType() == 1;
-  }
-  BIsClanAccount() {
-    return this.GetAccountType() == 7;
-  }
-  SetAccountID(_) {
-    this.m_ulSteamID = new _(_, this.m_ulSteamID.getHighBitsUnsigned(), !0);
-  }
-  SetInstance(_) {
-    this.SetFromComponents(
-      this.GetAccountID(),
-      _,
-      this.GetAccountType(),
-      this.GetUniverse(),
-    );
-  }
-  SetAccountType(_) {
-    this.SetFromComponents(
-      this.GetAccountID(),
-      this.GetInstance(),
-      _,
-      this.GetUniverse(),
-    );
-  }
-  SetUniverse(_) {
-    this.SetFromComponents(
-      this.GetAccountID(),
-      this.GetInstance(),
-      this.GetAccountType(),
-      _,
-    );
-  }
-  SetFromComponents(_, _, _, _) {
-    let _ = ((_ & 255) << 24) + ((_ & 15) << 20) + (_ & 1048575),
-      _ = _ & 4294967295;
-    this.m_ulSteamID = new _(_, _, !0);
-  }
-};
-function _(_) {
-  var _ = [...arguments].slice(1);
-  throw Error(
-    typeof _ == `number`
-      ? `[MobX] minified error nr: ` +
-          _ +
-          (_.length ? ` ` + _.map(String).join(`,`) : ``) +
-          `. Find the full error at: https://github.com/mobxjs/mobx/blob/main/packages/mobx/src/errors.ts`
-      : `[MobX] ` + _,
-  );
-}
-var _ = {};
-function _() {
-  return typeof globalThis < `u`
-    ? globalThis
-    : typeof window < `u`
-      ? window
-      : typeof global < `u`
-        ? global
-        : typeof self < `u`
-          ? self
-          : _;
-}
-var _ = Object.assign,
-  _ = Object.getOwnPropertyDescriptor,
-  _ = Object.defineProperty,
-  _ = Object.prototype,
-  _ = [];
-Object.freeze(_);
-var _ = {};
-Object.freeze(_);
-var _ = typeof Proxy < `u`,
-  _ = Object.toString();
-function _() {
-  _ || _(`Proxy not available`);
-}
-function _(_) {
-  var _ = !1;
-  return function () {
-    if (!_) return (_ = !0), _.apply(this, arguments);
-  };
-}
-var _ = function () {};
-function _(_) {
-  return typeof _ == `function`;
-}
-function _(_) {
-  switch (typeof _) {
-    case `string`:
-    case `symbol`:
-    case `number`:
-      return !0;
-  }
-  return !1;
-}
-function _(_) {
-  return typeof _ == `object` && !!_;
-}
-function _(_) {
-  if (!_(_)) return !1;
-  var _ = Object.getPrototypeOf(_);
-  if (_ == null) return !0;
-  var _ = Object.hasOwnProperty.call(_, `constructor`) && _.constructor;
-  return typeof _ == `function` && _.toString() === _;
-}
-function _(_) {
-  var _ = _?.constructor;
-  return _
-    ? _.name === `GeneratorFunction` || _.displayName === `GeneratorFunction`
-    : !1;
-}
-function _(_, _, _) {
-  _(_, _, {
-    enumerable: !1,
-    writable: !0,
-    configurable: !0,
-    value: _,
-  });
-}
-function _(_, _, _) {
-  _(_, _, {
-    enumerable: !1,
-    writable: !1,
-    configurable: !0,
-    value: _,
-  });
-}
-function _(_, _) {
-  var _ = `isMobX` + _;
-  return (
-    (_.prototype[_] = !0),
-    function (_) {
-      return _(_) && _[_] === !0;
+    static InitFromAccountID(_) {
+      return _ ? new _(Number(_), _.EUNIVERSE, 1, 1) : new _();
     }
-  );
-}
-function _(_) {
-  return _ != null && Object.prototype.toString.call(_) === `[object Map]`;
-}
-function _(_) {
-  var _ = Object.getPrototypeOf(_),
-    _ = Object.getPrototypeOf(_);
-  return Object.getPrototypeOf(_) === null;
-}
-function _(_) {
-  return _ != null && Object.prototype.toString.call(_) === `[object Set]`;
-}
-var _ = Object.getOwnPropertySymbols !== void 0;
-function _(_) {
-  var _ = Object.keys(_);
-  if (!_) return _;
-  var _ = Object.getOwnPropertySymbols(_);
-  return _.length
-    ? [].concat(
-        _,
-        _.filter(function (_) {
-          return _.propertyIsEnumerable.call(_, _);
-        }),
-      )
-    : _;
-}
-var _ =
-  typeof Reflect < `u` && Reflect.ownKeys
-    ? Reflect.ownKeys
-    : _
-      ? function (_) {
-          return Object.getOwnPropertyNames(_).concat(
-            Object.getOwnPropertySymbols(_),
+    static InitFromClanID(_) {
+      return new _(Number(_), _.EUNIVERSE, 7, 0);
+    }
+    GetAccountID() {
+      return this.m_ulSteamID.getLowBitsUnsigned();
+    }
+    GetInstance() {
+      return this.m_ulSteamID.getHighBitsUnsigned() & 1048575;
+    }
+    GetAccountType() {
+      return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
+    }
+    GetUniverse() {
+      return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
+    }
+    ConvertTo64BitString() {
+      return this.m_ulSteamID.toString();
+    }
+    Render() {
+      switch (this.GetAccountType()) {
+        case 0:
+          return `[I:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+        case 7:
+          return `[g:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+        case 4:
+          return (
+            `[A:` +
+            this.GetUniverse() +
+            `:` +
+            this.GetAccountID() +
+            `:` +
+            this.GetInstance() +
+            `]`
           );
+        case 3:
+          return `[G:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+        case 2:
+          return (
+            `[M:` +
+            this.GetUniverse() +
+            `:` +
+            this.GetAccountID() +
+            `:` +
+            this.GetInstance() +
+            `]`
+          );
+        case 5:
+          return `[P:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+        case 6:
+          return `[C:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+        default:
+          return `[U:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+      }
+    }
+    static InitFromString(_) {
+      let _ = new _();
+      try {
+        let [_, _, _, _, _] =
+            _.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
+          _ = Number(_),
+          _ = Number(_),
+          _ = _ ? Number(_) : 1;
+        switch (_) {
+          case `I`:
+            _.SetFromComponents(_, _, 0, _);
+          case `g`:
+            _.SetFromComponents(_, 0, 7, _);
+          case `A`:
+            _.SetFromComponents(_, _, 4, _);
+          case `G`:
+            _.SetFromComponents(_, _, 3, _);
+          case `M`:
+            _.SetFromComponents(_, _, 2, _);
+          case `P`:
+            _.SetFromComponents(_, _, 5, _);
+          case `C`:
+            _.SetFromComponents(_, _, 6, _);
+          case `U`:
+            _.SetFromComponents(_, _, 1, _);
         }
-      : Object.getOwnPropertyNames;
-function _(_) {
-  return _ === null ? null : typeof _ == `object` ? `` + _ : _;
-}
-function _(_, _) {
-  return _.hasOwnProperty.call(_, _);
-}
-var _ =
-  Object.getOwnPropertyDescriptors ||
-  function (_) {
-    var _ = {};
-    return (
-      _(_).forEach(function (_) {
-        _[_] = _(_, _);
-      }),
-      _
-    );
-  };
-function _(_, _) {
-  return !!(_ & _);
-}
-function _(_, _, _) {
-  return _ ? (_ |= _) : (_ &= ~_), _;
-}
-function _(_, _) {
-  (_ == null || _ > _.length) && (_ = _.length);
-  for (var _ = 0, _ = Array(_); _ < _; _++) _[_] = _[_];
-  return _;
-}
-function _(_, _) {
-  for (var _ = 0; _ < _.length; _++) {
-    var _ = _[_];
-    (_.enumerable = _.enumerable || !1),
-      (_.configurable = !0),
-      `value` in _ && (_.writable = !0),
-      Object.defineProperty(_, _(_.key), _);
-  }
-}
-function _(_, _, _) {
-  return (
-    _ && _(_.prototype, _),
-    _ && _(_, _),
-    Object.defineProperty(_, "prototype", {
-      writable: !1,
-    }),
-    _
-  );
-}
-function _(_, _) {
-  var _ = (typeof Symbol < `u` && _[Symbol.iterator]) || _[`@@iterator`];
-  if (_) return (_ = _.call(_)).next.bind(_);
-  if (
-    Array.isArray(_) ||
-    (_ = _(_)) ||
-    (_ && _ && typeof _.length == `number`)
-  ) {
-    _ && (_ = _);
-    var _ = 0;
-    return function () {
-      return _ >= _.length
+      } catch {}
+      return _;
+    }
+    BIsValid() {
+      let _ = this.GetAccountType();
+      if (_ <= 0 || _ >= 11) return !1;
+      let _ = this.GetUniverse();
+      if (_ <= 0 || _ >= 5) return !1;
+      if (_ == 1) {
+        if (this.GetAccountID() == 0 || this.GetInstance() > 4) return !1;
+      } else if (_ == 7) {
+        if (this.GetAccountID() == 0 || this.GetInstance() != 0) return !1;
+      } else if (_ == 3 && this.GetAccountID() == 0) return !1;
+      return !0;
+    }
+    BIsIndividualAccount() {
+      return this.GetAccountType() == 1;
+    }
+    BIsClanAccount() {
+      return this.GetAccountType() == 7;
+    }
+    SetAccountID(_) {
+      this.m_ulSteamID = new _(_, this.m_ulSteamID.getHighBitsUnsigned(), !0);
+    }
+    SetInstance(_) {
+      this.SetFromComponents(
+        this.GetAccountID(),
+        _,
+        this.GetAccountType(),
+        this.GetUniverse(),
+      );
+    }
+    SetAccountType(_) {
+      this.SetFromComponents(
+        this.GetAccountID(),
+        this.GetInstance(),
+        _,
+        this.GetUniverse(),
+      );
+    }
+    SetUniverse(_) {
+      this.SetFromComponents(
+        this.GetAccountID(),
+        this.GetInstance(),
+        this.GetAccountType(),
+        _,
+      );
+    }
+    SetFromComponents(_, _, _, _) {
+      let _ = ((_ & 255) << 24) + ((_ & 15) << 20) + (_ & 1048575),
+        _ = _ & 4294967295;
+      this.m_ulSteamID = new _(_, _, !0);
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.version || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            version: {
+              _: 1,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+            preference_state: {
+              _: 2,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+            content_customization: {
+              _: 3,
+              _: _,
+            },
+            valve_analytics: {
+              _: 4,
+              _: _,
+            },
+            third_party_analytics: {
+              _: 5,
+              _: _,
+            },
+            third_party_content: {
+              _: 6,
+              _: _,
+            },
+            utm_enabled: {
+              _: 7,
+              _: !0,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.recentapps || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            recentapps: {
+              _: 1,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences_ContentCustomization`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.product_impressions_tracking || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            product_impressions_tracking: {
+              _: 1,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences_ValveAnalytics`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.google_analytics || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            google_analytics: {
+              _: 1,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences_ThirdPartyAnalytics`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.youtube || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            youtube: {
+              _: 1,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            vimeo: {
+              _: 2,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            sketchfab: {
+              _: 3,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            twitter: {
+              _: 4,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences_ThirdPartyContent`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _
         ? {
-            done: !0,
+            $jspbMessageInstance: _,
           }
-        : {
-            done: !1,
-            value: _[_++],
-          };
-    };
-  }
-  throw TypeError(`Invalid attempt to iterate non-iterable instance.
-In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
-}
-function _() {
-  return (
-    (_ = Object.assign
-      ? Object.assign.bind()
-      : function (_) {
-          for (var _ = 1; _ < arguments.length; _++) {
-            var _ = arguments[_];
-            for (var _ in _) ({}).hasOwnProperty.call(_, _) && (_[_] = _[_]);
-          }
-          return _;
-        }),
-    _.apply(null, arguments)
-  );
-}
-function _(_, _) {
-  (_.prototype = Object.create(_.prototype)),
-    (_.prototype.constructor = _),
-    _(_, _);
-}
-function _(_, _) {
-  return (
-    (_ = Object.setPrototypeOf
-      ? Object.setPrototypeOf.bind()
-      : function (_, _) {
-          return (_.__proto__ = _), _;
-        }),
-    _(_, _)
-  );
-}
-function _(_, _) {
-  if (typeof _ != `object` || !_) return _;
-  var _ = _[Symbol.toPrimitive];
-  if (_ !== void 0) {
-    var _ = _.call(_, _ || `default`);
-    if (typeof _ != `object`) return _;
-    throw TypeError(`@@toPrimitive must return a primitive value.`);
-  }
-  return (_ === `string` ? String : Number)(_);
-}
-function _(_) {
-  var _ = _(_, `string`);
-  return typeof _ == `symbol` ? _ : _ + ``;
-}
-function _(_, _) {
-  if (_) {
-    if (typeof _ == `string`) return _(_, _);
-    var _ = {}.toString.call(_).slice(8, -1);
-    return (
-      _ === `Object` && _.constructor && (_ = _.constructor.name),
-      _ === `Map` || _ === `Set`
-        ? Array.from(_)
-        : _ === `Arguments` ||
-            /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(_)
-          ? _(_, _)
-          : void 0
-    );
-  }
-}
-var _ = Symbol(`mobx-stored-annotations`);
-function _(_) {
-  function _(_, _) {
-    if (_(_)) return _.decorate_20223_(_, _);
-    _(_, _, _);
-  }
-  return Object.assign(_, _);
-}
-function _(_, _, _) {
-  _(_, _) || _(_, _, _({}, _[_])), _(_) || (_[_][_] = _);
-}
-function _(_) {
-  return _(_, _) || _(_, _, _({}, _[_])), _[_];
-}
-function _(_) {
-  return typeof _ == `object` && typeof _.kind == `string`;
-}
-var _ = Symbol(`mobx administration`),
-  _ = (function () {
-    function _(_) {
-      _ === void 0 && (_ = `Atom`),
-        (this.name_ = void 0),
-        (this.flags_ = 0),
-        (this.observers_ = new Set()),
-        (this.lastAccessedBy_ = 0),
-        (this.lowestObserverState_ = _.NOT_TRACKING_),
-        (this.onBOL = void 0),
-        (this.onBUOL = void 0),
-        (this.name_ = _);
+        : {};
     }
-    var _ = _.prototype;
-    return (
-      (_.onBO = function () {
-        this.onBOL &&
-          this.onBOL.forEach(function (_) {
-            return _();
-          });
-      }),
-      (_.onBUO = function () {
-        this.onBUOL &&
-          this.onBUOL.forEach(function (_) {
-            return _();
-          });
-      }),
-      (_.reportObserved = function () {
-        return _(this);
-      }),
-      (_.reportChanged = function () {
-        _(), _(this), _();
-      }),
-      (_.toString = function () {
-        return this.name_;
-      }),
-      _(_, [
-        {
-          key: `isBeingObserved`,
-          get: function () {
-            return _(this.flags_, _.isBeingObservedMask_);
-          },
-          set: function (_) {
-            this.flags_ = _(this.flags_, _.isBeingObservedMask_, _);
-          },
-        },
-        {
-          key: `isPendingUnobservation`,
-          get: function () {
-            return _(this.flags_, _.isPendingUnobservationMask_);
-          },
-          set: function (_) {
-            this.flags_ = _(this.flags_, _.isPendingUnobservationMask_, _);
-          },
-        },
-        {
-          key: `diffValue`,
-          get: function () {
-            return +!!_(this.flags_, _.diffValueMask_);
-          },
-          set: function (_) {
-            this.flags_ = _(this.flags_, _.diffValueMask_, _ === 1);
-          },
-        },
-      ])
-    );
-  })();
-(_.isBeingObservedMask_ = 1),
-  (_.isPendingUnobservationMask_ = 2),
-  (_.diffValueMask_ = 4);
-var _ = _(`Atom`, _);
-function _(_, _, _) {
-  _ === void 0 && (_ = _), _ === void 0 && (_ = _);
-  var _ = new _(_);
-  return _ !== _ && _(_, _), _ !== _ && _(_, _), _;
-}
-function _(_, _) {
-  return _ === _;
-}
-function _(_, _) {
-  return _(_, _);
-}
-function _(_, _) {
-  return _(_, _, 1);
-}
-function _(_, _) {
-  return Object._
-    ? Object._(_, _)
-    : _ === _
-      ? _ !== 0 || 1 / _ == 1 / _
-      : _ !== _ && _ !== _;
-}
-var _ = {
-  identity: _,
-  structural: _,
-  default: _,
-  shallow: _,
-};
-function _(_, _, _) {
-  return _(_)
-    ? _
-    : Array.isArray(_)
-      ? _.array(_, {
-          name: _,
-        })
-      : _(_)
-        ? _.object(_, void 0, {
-            name: _,
-          })
-        : _(_)
-          ? _.map(_, {
-              name: _,
-            })
-          : _(_)
-            ? _.set(_, {
-                name: _,
-              })
-            : typeof _ == `function` && !_(_) && !_(_)
-              ? _(_)
-                ? _(_)
-                : _(_, _)
-              : _;
-}
-function _(_, _, _) {
-  if (_ == null || _(_) || _(_) || _(_) || _(_)) return _;
-  if (Array.isArray(_))
-    return _.array(_, {
-      name: _,
-      deep: !1,
-    });
-  if (_(_))
-    return _.object(_, void 0, {
-      name: _,
-      deep: !1,
-    });
-  if (_(_))
-    return _.map(_, {
-      name: _,
-      deep: !1,
-    });
-  if (_(_))
-    return _.set(_, {
-      name: _,
-      deep: !1,
-    });
-}
-function _(_) {
-  return _;
-}
-function _(_, _) {
-  return _(_, _) ? _ : _;
-}
-var _ = `override`;
-function _(_) {
-  return _.annotationType_ === _;
-}
-function _(_, _) {
-  return {
-    annotationType_: _,
-    options_: _,
-    make_: _,
-    extend_: _,
-    decorate_20223_: _,
-  };
-}
-function _(_, _, _, _) {
-  var _;
-  return (_ = this.options_) != null && _.bound
-    ? this.extend_(_, _, _, !1) === null
-      ? 0
-      : 1
-    : _ === _.target_
-      ? this.extend_(_, _, _, !1) === null
-        ? 0
-        : 2
-      : _(_.value)
-        ? 1
-        : (_(_, _, _(_, this, _, _, !1)), 2);
-}
-function _(_, _, _, _) {
-  var _ = _(_, this, _, _);
-  return _.defineProperty_(_, _, _);
-}
-function _(_, _) {
-  var _ = _.kind,
-    _ = _.name,
-    _ = _.addInitializer,
-    _ = this,
-    _ = function (_) {
-      return _(
-        _.options_?.name ?? _.toString(),
-        _,
-        _.options_?.autoAction ?? !1,
-      );
-    };
-  if (_ == `field`)
-    return function (_) {
-      var _,
-        _ = _;
+    static fromObject(_) {
+      return new _();
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _;
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {}
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CAccountPrivacy_GetCookiePreferences_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.preferences || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
       return (
-        _(_) || (_ = _(_)),
-        (_ = _.options_) != null &&
-          _.bound &&
-          ((_ = _.bind(this)), (_.isMobxAction = !0)),
-        _
-      );
-    };
-  if (_ == `method`) {
-    var _;
-    return (
-      _(_) || (_ = _(_)),
-      (_ = this.options_) != null &&
-        _.bound &&
-        _(function () {
-          var _ = this,
-            _ = _[_].bind(_);
-          (_.isMobxAction = !0), (_[_] = _);
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            preferences: {
+              _: 1,
+              _: _,
+            },
+          },
         }),
-      _
-    );
-  }
-  _(
-    `Cannot apply '` +
-      _.annotationType_ +
-      `' to '` +
-      String(_) +
-      `' (kind: ` +
-      _ +
-      `):` +
-      (`
-'` +
-        _.annotationType_ +
-        `' can only be used on properties with a function value.`),
-  );
-}
-function _(_, _, _, _) {
-  _.annotationType_, _.value;
-}
-function _(_, _, _, _, _) {
-  var _, _;
-  _ === void 0 && (_ = _.safeDescriptors), _(_, _, _, _);
-  var _ = _.value;
-  return (
-    (_ = _.options_) != null && _.bound && (_ = _.bind(_.proxy_ ?? _.target_)),
-    {
-      value: _(
-        _.options_?.name ?? _.toString(),
-        _,
-        _.options_?.autoAction ?? !1,
-        (_ = _.options_) != null && _.bound ? (_.proxy_ ?? _.target_) : void 0,
-      ),
-      configurable: !_ || _.isPlainObject_,
-      enumerable: !1,
-      writable: !_,
-    }
-  );
-}
-function _(_, _) {
-  return {
-    annotationType_: _,
-    options_: _,
-    make_: _,
-    extend_: _,
-    decorate_20223_: _,
-  };
-}
-function _(_, _, _, _) {
-  var _;
-  return _ === _.target_
-    ? this.extend_(_, _, _, !1) === null
-      ? 0
-      : 2
-    : (_ = this.options_) != null &&
-        _.bound &&
-        (!_(_.target_, _) || !_(_.target_[_])) &&
-        this.extend_(_, _, _, !1) === null
-      ? 0
-      : _(_.value)
-        ? 1
-        : (_(_, _, _(_, this, _, _, !1, !1)), 2);
-}
-function _(_, _, _, _) {
-  var _ = _(_, this, _, _, this.options_?.bound);
-  return _.defineProperty_(_, _, _);
-}
-function _(_, _) {
-  var _,
-    _ = _.name,
-    _ = _.addInitializer;
-  return (
-    _(_) || (_ = _(_)),
-    (_ = this.options_) != null &&
-      _.bound &&
-      _(function () {
-        var _ = this,
-          _ = _[_].bind(_);
-        (_.isMobXFlow = !0), (_[_] = _);
-      }),
-    _
-  );
-}
-function _(_, _, _, _) {
-  _.annotationType_, _.value;
-}
-function _(_, _, _, _, _, _) {
-  _ === void 0 && (_ = _.safeDescriptors), _(_, _, _, _);
-  var _ = _.value;
-  return (
-    _(_) || (_ = _(_)),
-    _ && ((_ = _.bind(_.proxy_ ?? _.target_)), (_.isMobXFlow = !0)),
-    {
-      value: _,
-      configurable: !_ || _.isPlainObject_,
-      enumerable: !1,
-      writable: !_,
-    }
-  );
-}
-function _(_, _) {
-  return {
-    annotationType_: _,
-    options_: _,
-    make_: _,
-    extend_: _,
-    decorate_20223_: _,
-  };
-}
-function _(_, _, _) {
-  return this.extend_(_, _, _, !1) === null ? 0 : 1;
-}
-function _(_, _, _, _) {
-  return (
-    _(_, this, _, _),
-    _.defineComputedProperty_(
-      _,
-      _({}, this.options_, {
-        get: _.get,
-        set: _.set,
-      }),
-      _,
-    )
-  );
-}
-function _(_, _) {
-  var _ = this,
-    _ = _.name,
-    _ = _.addInitializer;
-  return (
-    _(function () {
-      var _ = _(this)[_],
-        _ = _({}, _.options_, {
-          get: _,
-          context: this,
-        });
-      (_.name ||= `ObservableObject.` + _.toString()),
-        _.values_.set(_, new _(_));
-    }),
-    function () {
-      return this[_].getObservablePropValue_(_);
-    }
-  );
-}
-function _(_, _, _, _) {
-  _.annotationType_, _.get;
-}
-function _(_, _) {
-  return {
-    annotationType_: _,
-    options_: _,
-    make_: _,
-    extend_: _,
-    decorate_20223_: _,
-  };
-}
-function _(_, _, _) {
-  return this.extend_(_, _, _, !1) === null ? 0 : 1;
-}
-function _(_, _, _, _) {
-  return (
-    _(_, this, _, _),
-    _.defineObservableProperty_(_, _.value, this.options_?.enhancer ?? _, _)
-  );
-}
-function _(_, _) {
-  var _ = this,
-    _ = _.kind,
-    _ = _.name,
-    _ = new WeakSet();
-  function _(_, _) {
-    var _ = _(_)[_],
-      _ = new _(
-        _,
-        _.options_?.enhancer ?? _,
-        `ObservableObject.` + _.toString(),
-        !1,
-      );
-    _.values_.set(_, _), _.add(_);
-  }
-  if (_ == `accessor`)
-    return {
-      get: function () {
-        return (
-          _.has(this) || _(this, _.get.call(this)),
-          this[_].getObservablePropValue_(_)
-        );
-      },
-      set: function (_) {
-        return _.has(this) || _(this, _), this[_].setObservablePropValue_(_, _);
-      },
-      init: function (_) {
-        return _.has(this) || _(this, _), _;
-      },
-    };
-}
-function _(_, _, _, _) {
-  _.annotationType_;
-}
-var _ = `true`,
-  _ = _();
-function _(_) {
-  return {
-    annotationType_: _,
-    options_: _,
-    make_: _,
-    extend_: _,
-    decorate_20223_: _,
-  };
-}
-function _(_, _, _, _) {
-  var _;
-  if (_.get) return _.make_(_, _, _, _);
-  if (_.set) {
-    var _ = _(_.set) ? _.set : _(_.toString(), _.set);
-    return _ === _.target_
-      ? _.defineProperty_(_, {
-          configurable: !_.safeDescriptors || _.isPlainObject_,
-          set: _,
-        }) === null
-        ? 0
-        : 2
-      : (_(_, _, {
-          configurable: !0,
-          set: _,
-        }),
-        2);
-  }
-  if (_ !== _.target_ && typeof _.value == `function`) {
-    var _;
-    if (_(_.value)) {
-      var _;
-      return ((_ = this.options_) != null && _.autoBind ? _.bound : _).make_(
-        _,
-        _,
-        _,
-        _,
+        _.sm_m
       );
     }
-    return ((_ = this.options_) != null && _.autoBind ? _.bound : _).make_(
-      _,
-      _,
-      _,
-      _,
-    );
-  }
-  var _ = this.options_?.deep === !1 ? _.ref : _;
-  return (
-    typeof _.value == `function` &&
-      (_ = this.options_) != null &&
-      _.autoBind &&
-      (_.value = _.value.bind(_.proxy_ ?? _.target_)),
-    _.make_(_, _, _, _)
-  );
-}
-function _(_, _, _, _) {
-  var _;
-  return _.get
-    ? _.extend_(_, _, _, _)
-    : _.set
-      ? _.defineProperty_(
-          _,
-          {
-            configurable: !_.safeDescriptors || _.isPlainObject_,
-            set: _(_.toString(), _.set),
-          },
-          _,
-        )
-      : (typeof _.value == `function` &&
-          (_ = this.options_) != null &&
-          _.autoBind &&
-          (_.value = _.value.bind(_.proxy_ ?? _.target_)),
-        (this.options_?.deep === !1 ? _.ref : _).extend_(_, _, _, _));
-}
-function _(_, _) {
-  _(`'` + this.annotationType_ + `' cannot be used as a decorator`);
-}
-var _ = `observable`,
-  _ = `observable.ref`,
-  _ = `observable.shallow`,
-  _ = `observable.struct`,
-  _ = {
-    deep: !0,
-    name: void 0,
-    defaultDecorator: void 0,
-    proxy: !0,
-  };
-Object.freeze(_);
-function _(_) {
-  return _ || _;
-}
-var _ = _(_),
-  _ = _(_, {
-    enhancer: _,
-  }),
-  _ = _(_, {
-    enhancer: _,
-  }),
-  _ = _(_, {
-    enhancer: _,
-  }),
-  _ = _(_);
-function _(_) {
-  return _.deep === !0 ? _ : _.deep === !1 ? _ : _(_.defaultDecorator);
-}
-function _(_) {
-  return _ ? (_.defaultDecorator ?? _(_)) : void 0;
-}
-function _(_) {
-  return _ ? (_.options_?.enhancer ?? _) : _;
-}
-function _(_, _, _) {
-  if (_(_)) return _.decorate_20223_(_, _);
-  if (_(_)) {
-    _(_, _, _);
-    return;
-  }
-  return _(_)
-    ? _
-    : _(_)
-      ? _.object(_, _, _)
-      : Array.isArray(_)
-        ? _.array(_, _)
-        : _(_)
-          ? _.map(_, _)
-          : _(_)
-            ? _.set(_, _)
-            : typeof _ == `object` && _
-              ? _
-              : _.box(_, _);
-}
-_(_, _);
-var _ = _(_, {
-    box: function (_, _) {
-      var _ = _(_);
-      return new _(_, _(_), _.name, !0, _.equals);
-    },
-    array: function (_, _) {
-      var _ = _(_);
-      return (_.useProxies === !1 || _.proxy === !1 ? _ : _)(_, _(_), _.name);
-    },
-    map: function (_, _) {
-      var _ = _(_);
-      return new _(_, _(_), _.name);
-    },
-    set: function (_, _) {
-      var _ = _(_);
-      return new _(_, _(_), _.name);
-    },
-    object: function (_, _, _) {
-      return _(function () {
-        return _(
-          _.useProxies === !1 || _?.proxy === !1 ? _({}, _) : _({}, _),
-          _,
-          _,
-        );
-      });
-    },
-    ref: _(_),
-    shallow: _(_),
-    deep: _,
-    struct: _(_),
-  }),
-  _ = `computed`,
-  _ = `computed.struct`,
-  _ = _(_),
-  _ = _(_, {
-    equals: _.structural,
-  }),
-  _ = function (_, _) {
-    if (_(_)) return _.decorate_20223_(_, _);
-    if (_(_)) return _(_, _, _);
-    if (_(_)) return _(_(_, _));
-    var _ = _(_) ? _ : {};
-    return (_.get = _), (_.name ||= _.name || ``), new _(_);
-  };
-Object.assign(_, _), (_.struct = _(_));
-var _ = 0,
-  _ = 1,
-  _ = _(function () {}, `name`)?.configurable ?? !1,
-  _ = {
-    value: `action`,
-    configurable: !0,
-    writable: !1,
-    enumerable: !1,
-  };
-function _(_, _, _, _) {
-  _ === void 0 && (_ = !1);
-  function _() {
-    return _(_, _, _, _ || this, arguments);
-  }
-  return (
-    (_.isMobxAction = !0),
-    (_.toString = function () {
-      return _.toString();
-    }),
-    _ && ((_.value = _), _(_, `name`, _)),
-    _
-  );
-}
-function _(_, _, _, _, _) {
-  var _ = _(_, _, _, _);
-  try {
-    return _.apply(_, _);
-  } catch (_) {
-    throw ((_.error_ = _), _);
-  } finally {
-    _(_);
-  }
-}
-function _(_, _, _, _) {
-  var _ = !1,
-    _ = 0,
-    _ = _.trackingDerivation,
-    _ = !_ || !_;
-  _();
-  var _ = _.allowStateChanges;
-  _ && (_(), (_ = _(!0)));
-  var _ = _(!0),
-    _ = {
-      runAsAction_: _,
-      prevDerivation_: _,
-      prevAllowStateChanges_: _,
-      prevAllowStateReads_: _,
-      notifySpy_: _,
-      startTime_: _,
-      actionId_: _++,
-      parentActionId_: _,
-    };
-  return (_ = _.actionId_), _;
-}
-function _(_) {
-  _ !== _.actionId_ && _(30),
-    (_ = _.parentActionId_),
-    _.error_ !== void 0 && (_.suppressReactionErrors = !0),
-    _(_.prevAllowStateChanges_),
-    _(_.prevAllowStateReads_),
-    _(),
-    _.runAsAction_ && _(_.prevDerivation_),
-    (_.suppressReactionErrors = !1);
-}
-function _(_, _) {
-  var _ = _(_);
-  try {
-    return _();
-  } finally {
-    _(_);
-  }
-}
-function _(_) {
-  var _ = _.allowStateChanges;
-  return (_.allowStateChanges = _), _;
-}
-function _(_) {
-  _.allowStateChanges = _;
-}
-var _ = (function (_) {
-    function _(_, _, _, _, _) {
-      var _;
-      return (
-        _ === void 0 && (_ = `ObservableValue`),
-        _ === void 0 && (_ = !0),
-        _ === void 0 && (_ = _.default),
-        (_ = _.call(this, _) || this),
-        (_.enhancer = void 0),
-        (_.name_ = void 0),
-        (_.equals = void 0),
-        (_.hasUnreportedChange_ = !1),
-        (_.interceptors_ = void 0),
-        (_.changeListeners_ = void 0),
-        (_.value_ = void 0),
-        (_.dehancer = void 0),
-        (_.enhancer = _),
-        (_.name_ = _),
-        (_.equals = _),
-        (_.value_ = _(_, void 0, _)),
-        _
-      );
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
     }
-    _(_, _);
-    var _ = _.prototype;
-    return (
-      (_.dehanceValue = function (_) {
-        return this.dehancer === void 0 ? _ : this.dehancer(_);
-      }),
-      (_.set = function (_) {
-        this.value_,
-          (_ = this.prepareNewValue_(_)),
-          _ !== _.UNCHANGED && this.setNewValue_(_);
-      }),
-      (_.prepareNewValue_ = function (_) {
-        if (_(this)) {
-          var _ = _(this, {
-            object: this,
-            type: _,
-            newValue: _,
-          });
-          if (!_) return _.UNCHANGED;
-          _ = _.newValue;
-        }
-        return (
-          (_ = this.enhancer(_, this.value_, this.name_)),
-          this.equals(this.value_, _) ? _.UNCHANGED : _
-        );
-      }),
-      (_.setNewValue_ = function (_) {
-        var _ = this.value_;
-        (this.value_ = _),
-          this.reportChanged(),
-          _(this) &&
-            _(this, {
-              type: _,
-              object: this,
-              newValue: _,
-              oldValue: _,
-            });
-      }),
-      (_.get = function () {
-        return this.reportObserved(), this.dehanceValue(this.value_);
-      }),
-      (_.intercept_ = function (_) {
-        return _(this, _);
-      }),
-      (_.observe_ = function (_, _) {
-        return (
-          _ &&
-            _({
-              observableKind: `value`,
-              debugObjectName: this.name_,
-              object: this,
-              type: _,
-              newValue: this.value_,
-              oldValue: void 0,
-            }),
-          _(this, _)
-        );
-      }),
-      (_.raw = function () {
-        return this.value_;
-      }),
-      (_.toJSON = function () {
-        return this.get();
-      }),
-      (_.toString = function () {
-        return this.name_ + `[` + this.value_ + `]`;
-      }),
-      (_.valueOf = function () {
-        return _(this.get());
-      }),
-      (_[Symbol.toPrimitive] = function () {
-        return this.valueOf();
-      }),
-      _
-    );
-  })(_),
-  _ = _(`ObservableValue`, _),
-  _ = (function () {
-    function _(_) {
-      (this.dependenciesState_ = _.NOT_TRACKING_),
-        (this.observing_ = []),
-        (this.newObserving_ = null),
-        (this.observers_ = new Set()),
-        (this.runId_ = 0),
-        (this.lastAccessedBy_ = 0),
-        (this.lowestObserverState_ = _.UP_TO_DATE_),
-        (this.unboundDepsCount_ = 0),
-        (this.value_ = new _(null)),
-        (this.name_ = void 0),
-        (this.triggeredBy_ = void 0),
-        (this.flags_ = 0),
-        (this.derivation = void 0),
-        (this.setter_ = void 0),
-        (this.isTracing_ = _.NONE),
-        (this.scope_ = void 0),
-        (this.equals_ = void 0),
-        (this.requiresReaction_ = void 0),
-        (this.keepAlive_ = void 0),
-        (this.onBOL = void 0),
-        (this.onBUOL = void 0),
-        _.get || _(31),
-        (this.derivation = _.get),
-        (this.name_ = _.name || `ComputedValue`),
-        _.set && (this.setter_ = _(`ComputedValue-setter`, _.set)),
-        (this.equals_ =
-          _.equals ||
-          (_.compareStructural || _.struct ? _.structural : _.default)),
-        (this.scope_ = _.context),
-        (this.requiresReaction_ = _.requiresReaction),
-        (this.keepAlive_ = !!_.keepAlive);
+    toObject(_ = !1) {
+      return _.toObject(_, this);
     }
-    var _ = _.prototype;
-    return (
-      (_.onBecomeStale_ = function () {
-        _(this);
-      }),
-      (_.onBO = function () {
-        this.onBOL &&
-          this.onBOL.forEach(function (_) {
-            return _();
-          });
-      }),
-      (_.onBUO = function () {
-        this.onBUOL &&
-          this.onBUOL.forEach(function (_) {
-            return _();
-          });
-      }),
-      (_.get = function () {
-        if (
-          (this.isComputing && _(32, this.name_, this.derivation),
-          _.inBatch === 0 && this.observers_.size === 0 && !this.keepAlive_)
-        )
-          _(this) &&
-            (this.warnAboutUntrackedRead_(),
-            _(),
-            (this.value_ = this.computeValue_(!1)),
-            _());
-        else if ((_(this), _(this))) {
-          var _ = _.trackingContext;
-          this.keepAlive_ && !_ && (_.trackingContext = this),
-            this.trackAndCompute() && _(this),
-            (_.trackingContext = _);
-        }
-        var _ = this.value_;
-        if (_(_)) throw _.cause;
-        return _;
-      }),
-      (_.set = function (_) {
-        if (this.setter_) {
-          this.isRunningSetter && _(33, this.name_),
-            (this.isRunningSetter = !0);
-          try {
-            this.setter_.call(this.scope_, _);
-          } finally {
-            this.isRunningSetter = !1;
-          }
-        } else _(34, this.name_);
-      }),
-      (_.trackAndCompute = function () {
-        var _ = this.value_,
-          _ = this.dependenciesState_ === _.NOT_TRACKING_,
-          _ = this.computeValue_(!0),
-          _ = _ || _(_) || _(_) || !this.equals_(_, _);
-        return _ && (this.value_ = _), _;
-      }),
-      (_.computeValue_ = function (_) {
-        this.isComputing = !0;
-        var _ = _(!1),
-          _;
-        if (_) _ = _(this, this.derivation, this.scope_);
-        else if (_.disableErrorBoundaries === !0)
-          _ = this.derivation.call(this.scope_);
-        else
-          try {
-            _ = this.derivation.call(this.scope_);
-          } catch (_) {
-            _ = new _(_);
-          }
-        return _(_), (this.isComputing = !1), _;
-      }),
-      (_.suspend_ = function () {
-        this.keepAlive_ || (_(this), (this.value_ = void 0));
-      }),
-      (_.observe_ = function (_, _) {
-        var _ = this,
-          _ = !0,
-          _ = void 0;
-        return _(function () {
-          var _ = _.get();
-          if (!_ || _) {
-            var _ = _();
-            _({
-              observableKind: `computed`,
-              debugObjectName: _.name_,
-              type: _,
-              object: _,
-              newValue: _,
-              oldValue: _,
-            }),
-              _(_);
-          }
-          (_ = !1), (_ = _);
-        });
-      }),
-      (_.warnAboutUntrackedRead_ = function () {}),
-      (_.toString = function () {
-        return this.name_ + `[` + this.derivation.toString() + `]`;
-      }),
-      (_.valueOf = function () {
-        return _(this.get());
-      }),
-      (_[Symbol.toPrimitive] = function () {
-        return this.valueOf();
-      }),
-      _(_, [
-        {
-          key: `isComputing`,
-          get: function () {
-            return _(this.flags_, _.isComputingMask_);
-          },
-          set: function (_) {
-            this.flags_ = _(this.flags_, _.isComputingMask_, _);
-          },
-        },
-        {
-          key: `isRunningSetter`,
-          get: function () {
-            return _(this.flags_, _.isRunningSetterMask_);
-          },
-          set: function (_) {
-            this.flags_ = _(this.flags_, _.isRunningSetterMask_, _);
-          },
-        },
-        {
-          key: `isBeingObserved`,
-          get: function () {
-            return _(this.flags_, _.isBeingObservedMask_);
-          },
-          set: function (_) {
-            this.flags_ = _(this.flags_, _.isBeingObservedMask_, _);
-          },
-        },
-        {
-          key: `isPendingUnobservation`,
-          get: function () {
-            return _(this.flags_, _.isPendingUnobservationMask_);
-          },
-          set: function (_) {
-            this.flags_ = _(this.flags_, _.isPendingUnobservationMask_, _);
-          },
-        },
-        {
-          key: `diffValue`,
-          get: function () {
-            return +!!_(this.flags_, _.diffValueMask_);
-          },
-          set: function (_) {
-            this.flags_ = _(this.flags_, _.diffValueMask_, _ === 1);
-          },
-        },
-      ])
-    );
-  })();
-(_.isComputingMask_ = 1),
-  (_.isRunningSetterMask_ = 2),
-  (_.isBeingObservedMask_ = 4),
-  (_.isPendingUnobservationMask_ = 8),
-  (_.diffValueMask_ = 16);
-var _ = _(`ComputedValue`, _),
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CAccountPrivacy_GetCookiePreferences_Response`;
+    }
+  },
   _;
 (function (_) {
-  (_[(_.NOT_TRACKING_ = -1)] = `NOT_TRACKING_`),
-    (_[(_.UP_TO_DATE_ = 0)] = `UP_TO_DATE_`),
-    (_[(_.POSSIBLY_STALE_ = 1)] = `POSSIBLY_STALE_`),
-    (_[(_.STALE_ = 2)] = `STALE_`);
+  function _(_, _, _) {
+    return _.SendMsg(`AccountPrivacy.GetCookiePreferences#1`, _(_, _, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 1,
+      rgBrowserAPISites: [`partner`, `help`],
+    });
+  }
+  _.GetCookiePreferences = _;
 })((_ ||= {}));
-var _;
-(function (_) {
-  (_[(_.NONE = 0)] = `NONE`),
-    (_[(_.LOG = 1)] = `LOG`),
-    (_[(_.BREAK = 2)] = `BREAK`);
-})((_ ||= {}));
-var _ = function (_) {
-  (this.cause = void 0), (this.cause = _);
-};
 function _(_) {
-  return _ instanceof _;
-}
-function _(_) {
-  switch (_.dependenciesState_) {
-    case _.UP_TO_DATE_:
-      return !1;
-    case _.NOT_TRACKING_:
-    case _.STALE_:
+  if (_.preferenceControls.isTechnicallyNecessary) return !0;
+  let _ = _();
+  if (!_) return !1;
+  switch (_.preference_state) {
+    case 1:
+    case 0:
       return !0;
-    case _.POSSIBLY_STALE_:
-      for (
-        var _ = _(!0), _ = _(), _ = _.observing_, _ = _.length, _ = 0;
-        _ < _;
-        _++
-      ) {
-        var _ = _[_];
-        if (_(_)) {
-          if (_.disableErrorBoundaries) _.get();
-          else
-            try {
-              _.get();
-            } catch {
-              return _(_), _(_), !0;
-            }
-          if (_.dependenciesState_ === _.STALE_) return _(_), _(_), !0;
-        }
-      }
-      return _(_), _(_), _(_), !1;
-  }
-}
-function _() {
-  return _.trackingDerivation !== null;
-}
-function _(_, _, _) {
-  var _ = _(!0);
-  _(_),
-    (_.newObserving_ = Array(_.runId_ === 0 ? 100 : _.observing_.length)),
-    (_.unboundDepsCount_ = 0),
-    (_.runId_ = ++_.runId);
-  var _ = _.trackingDerivation;
-  (_.trackingDerivation = _), _.inBatch++;
-  var _;
-  if (_.disableErrorBoundaries === !0) _ = _.call(_);
-  else
-    try {
-      _ = _.call(_);
-    } catch (_) {
-      _ = new _(_);
-    }
-  return _.inBatch--, (_.trackingDerivation = _), _(_), _(_), _;
-}
-function _(_) {
-  for (
-    var _ = _.observing_,
-      _ = (_.observing_ = _.newObserving_),
-      _ = _.UP_TO_DATE_,
-      _ = 0,
-      _ = _.unboundDepsCount_,
-      _ = 0;
-    _ < _;
-    _++
-  ) {
-    var _ = _[_];
-    _.diffValue === 0 && ((_.diffValue = 1), _ !== _ && (_[_] = _), _++),
-      _.dependenciesState_ > _ && (_ = _.dependenciesState_);
-  }
-  for (_.length = _, _.newObserving_ = null, _ = _.length; _--; ) {
-    var _ = _[_];
-    _.diffValue === 0 && _(_, _), (_.diffValue = 0);
-  }
-  for (; _--; ) {
-    var _ = _[_];
-    _.diffValue === 1 && ((_.diffValue = 0), _(_, _));
-  }
-  _ !== _.UP_TO_DATE_ && ((_.dependenciesState_ = _), _.onBecomeStale_());
-}
-function _(_) {
-  var _ = _.observing_;
-  _.observing_ = [];
-  for (var _ = _.length; _--; ) _(_[_], _);
-  _.dependenciesState_ = _.NOT_TRACKING_;
-}
-function _(_) {
-  var _ = _();
-  try {
-    return _();
-  } finally {
-    _(_);
-  }
-}
-function _() {
-  var _ = _.trackingDerivation;
-  return (_.trackingDerivation = null), _;
-}
-function _(_) {
-  _.trackingDerivation = _;
-}
-function _(_) {
-  var _ = _.allowStateReads;
-  return (_.allowStateReads = _), _;
-}
-function _(_) {
-  _.allowStateReads = _;
-}
-function _(_) {
-  if (_.dependenciesState_ !== _.UP_TO_DATE_) {
-    _.dependenciesState_ = _.UP_TO_DATE_;
-    for (var _ = _.observing_, _ = _.length; _--; )
-      _[_].lowestObserverState_ = _.UP_TO_DATE_;
-  }
-}
-var _ = function () {
-    (this.version = 6),
-      (this.UNCHANGED = {}),
-      (this.trackingDerivation = null),
-      (this.trackingContext = null),
-      (this.runId = 0),
-      (this.mobxGuid = 0),
-      (this.inBatch = 0),
-      (this.pendingUnobservations = []),
-      (this.pendingReactions = []),
-      (this.isRunningReactions = !1),
-      (this.allowStateChanges = !1),
-      (this.allowStateReads = !0),
-      (this.enforceActions = !0),
-      (this.spyListeners = []),
-      (this.globalReactionErrorHandlers = []),
-      (this.computedRequiresReaction = !1),
-      (this.reactionRequiresObservable = !1),
-      (this.observableRequiresReaction = !1),
-      (this.disableErrorBoundaries = !1),
-      (this.suppressReactionErrors = !1),
-      (this.useProxies = !0),
-      (this.verifyProxies = !1),
-      (this.safeDescriptors = !0);
-  },
-  _ = !0,
-  _ = !1,
-  _ = (function () {
-    var _ = _();
-    return (
-      _.__mobxInstanceCount > 0 && !_.__mobxGlobals && (_ = !1),
-      _.__mobxGlobals &&
-        _.__mobxGlobals.version !== new _().version &&
-        (_ = !1),
-      _
-        ? _.__mobxGlobals
-          ? ((_.__mobxInstanceCount += 1),
-            _.__mobxGlobals.UNCHANGED || (_.__mobxGlobals.UNCHANGED = {}),
-            _.__mobxGlobals)
-          : ((_.__mobxInstanceCount = 1), (_.__mobxGlobals = new _()))
-        : (setTimeout(function () {
-            _ || _(35);
-          }, 1),
-          new _())
-    );
-  })();
-function _() {
-  if (
-    ((_.pendingReactions.length || _.inBatch || _.isRunningReactions) && _(36),
-    (_ = !0),
-    _)
-  ) {
-    var _ = _();
-    --_.__mobxInstanceCount === 0 && (_.__mobxGlobals = void 0), (_ = new _());
-  }
-}
-function _(_, _) {
-  _.observers_.add(_),
-    _.lowestObserverState_ > _.dependenciesState_ &&
-      (_.lowestObserverState_ = _.dependenciesState_);
-}
-function _(_, _) {
-  _.observers_.delete(_), _.observers_.size === 0 && _(_);
-}
-function _(_) {
-  _.isPendingUnobservation === !1 &&
-    ((_.isPendingUnobservation = !0), _.pendingUnobservations.push(_));
-}
-function _() {
-  _.inBatch++;
-}
-function _() {
-  if (--_.inBatch === 0) {
-    _();
-    for (var _ = _.pendingUnobservations, _ = 0; _ < _.length; _++) {
-      var _ = _[_];
-      (_.isPendingUnobservation = !1),
-        _.observers_.size === 0 &&
-          (_.isBeingObserved && ((_.isBeingObserved = !1), _.onBUO()),
-          _ instanceof _ && _.suspend_());
-    }
-    _.pendingUnobservations = [];
-  }
-}
-function _(_) {
-  var _ = _.trackingDerivation;
-  return _ === null
-    ? (_.observers_.size === 0 && _.inBatch > 0 && _(_), !1)
-    : (_.runId_ !== _.lastAccessedBy_ &&
-        ((_.lastAccessedBy_ = _.runId_),
-        (_.newObserving_[_.unboundDepsCount_++] = _),
-        !_.isBeingObserved &&
-          _.trackingContext &&
-          ((_.isBeingObserved = !0), _.onBO())),
-      _.isBeingObserved);
-}
-function _(_) {
-  _.lowestObserverState_ !== _.STALE_ &&
-    ((_.lowestObserverState_ = _.STALE_),
-    _.observers_.forEach(function (_) {
-      _.dependenciesState_ === _.UP_TO_DATE_ && _.onBecomeStale_(),
-        (_.dependenciesState_ = _.STALE_);
-    }));
-}
-function _(_) {
-  _.lowestObserverState_ !== _.STALE_ &&
-    ((_.lowestObserverState_ = _.STALE_),
-    _.observers_.forEach(function (_) {
-      _.dependenciesState_ === _.POSSIBLY_STALE_
-        ? (_.dependenciesState_ = _.STALE_)
-        : _.dependenciesState_ === _.UP_TO_DATE_ &&
-          (_.lowestObserverState_ = _.UP_TO_DATE_);
-    }));
-}
-function _(_) {
-  _.lowestObserverState_ === _.UP_TO_DATE_ &&
-    ((_.lowestObserverState_ = _.POSSIBLY_STALE_),
-    _.observers_.forEach(function (_) {
-      _.dependenciesState_ === _.UP_TO_DATE_ &&
-        ((_.dependenciesState_ = _.POSSIBLY_STALE_), _.onBecomeStale_());
-    }));
-}
-var _ = (function () {
-  function _(_, _, _, _) {
-    _ === void 0 && (_ = `Reaction`),
-      (this.name_ = void 0),
-      (this.onInvalidate_ = void 0),
-      (this.errorHandler_ = void 0),
-      (this.requiresObservable_ = void 0),
-      (this.observing_ = []),
-      (this.newObserving_ = []),
-      (this.dependenciesState_ = _.NOT_TRACKING_),
-      (this.runId_ = 0),
-      (this.unboundDepsCount_ = 0),
-      (this.flags_ = 0),
-      (this.isTracing_ = _.NONE),
-      (this.name_ = _),
-      (this.onInvalidate_ = _),
-      (this.errorHandler_ = _),
-      (this.requiresObservable_ = _);
-  }
-  var _ = _.prototype;
-  return (
-    (_.onBecomeStale_ = function () {
-      this.schedule_();
-    }),
-    (_.schedule_ = function () {
-      this.isScheduled ||
-        ((this.isScheduled = !0), _.pendingReactions.push(this), _());
-    }),
-    (_.runReaction_ = function () {
-      if (!this.isDisposed) {
-        _(), (this.isScheduled = !1);
-        var _ = _.trackingContext;
-        if (((_.trackingContext = this), _(this))) {
-          this.isTrackPending = !0;
-          try {
-            this.onInvalidate_();
-          } catch (_) {
-            this.reportExceptionInDerivation_(_);
-          }
-        }
-        (_.trackingContext = _), _();
-      }
-    }),
-    (_.track = function (_) {
-      if (!this.isDisposed) {
-        _(), (this.isRunning = !0);
-        var _ = _.trackingContext;
-        _.trackingContext = this;
-        var _ = _(this, _, void 0);
-        (_.trackingContext = _),
-          (this.isRunning = !1),
-          (this.isTrackPending = !1),
-          this.isDisposed && _(this),
-          _(_) && this.reportExceptionInDerivation_(_.cause),
-          _();
-      }
-    }),
-    (_.reportExceptionInDerivation_ = function (_) {
-      var _ = this;
-      if (this.errorHandler_) {
-        this.errorHandler_(_, this);
-        return;
-      }
-      if (_.disableErrorBoundaries) throw _;
-      var _ = `[mobx] uncaught error in '` + this + `'`;
-      _.suppressReactionErrors || console.error(_, _),
-        _.globalReactionErrorHandlers.forEach(function (_) {
-          return _(_, _);
-        });
-    }),
-    (_.dispose = function () {
-      this.isDisposed ||
-        ((this.isDisposed = !0), this.isRunning || (_(), _(this), _()));
-    }),
-    (_.getDisposer_ = function (_) {
-      var _ = this,
-        _ = function _() {
-          _.dispose(),
-            _ == null ||
-              _.removeEventListener == null ||
-              _.removeEventListener(`abort`, _);
-        };
-      return (
-        _ == null ||
-          _.addEventListener == null ||
-          _.addEventListener(`abort`, _),
-        (_[_] = this),
-        `dispose` in Symbol &&
-          typeof Symbol.dispose == `symbol` &&
-          (_[Symbol.dispose] = _),
-        _
-      );
-    }),
-    (_.toString = function () {
-      return `Reaction[` + this.name_ + `]`;
-    }),
-    (_.trace = function (_) {
-      _ === void 0 && (_ = !1);
-    }),
-    _(_, [
-      {
-        key: `isDisposed`,
-        get: function () {
-          return _(this.flags_, _.isDisposedMask_);
-        },
-        set: function (_) {
-          this.flags_ = _(this.flags_, _.isDisposedMask_, _);
-        },
-      },
-      {
-        key: `isScheduled`,
-        get: function () {
-          return _(this.flags_, _.isScheduledMask_);
-        },
-        set: function (_) {
-          this.flags_ = _(this.flags_, _.isScheduledMask_, _);
-        },
-      },
-      {
-        key: `isTrackPending`,
-        get: function () {
-          return _(this.flags_, _.isTrackPendingMask_);
-        },
-        set: function (_) {
-          this.flags_ = _(this.flags_, _.isTrackPendingMask_, _);
-        },
-      },
-      {
-        key: `isRunning`,
-        get: function () {
-          return _(this.flags_, _.isRunningMask_);
-        },
-        set: function (_) {
-          this.flags_ = _(this.flags_, _.isRunningMask_, _);
-        },
-      },
-      {
-        key: `diffValue`,
-        get: function () {
-          return +!!_(this.flags_, _.diffValueMask_);
-        },
-        set: function (_) {
-          this.flags_ = _(this.flags_, _.diffValueMask_, _ === 1);
-        },
-      },
-    ])
-  );
-})();
-(_.isDisposedMask_ = 1),
-  (_.isScheduledMask_ = 2),
-  (_.isTrackPendingMask_ = 4),
-  (_.isRunningMask_ = 8),
-  (_.diffValueMask_ = 16);
-var _ = 100,
-  _ = function (_) {
-    return _();
-  };
-function _() {
-  _.inBatch > 0 || _.isRunningReactions || _(_);
-}
-function _() {
-  _.isRunningReactions = !0;
-  for (var _ = _.pendingReactions, _ = 0; _.length > 0; ) {
-    ++_ === _ &&
-      (console.error(`[mobx] cycle in reaction: ` + _[0]), _.splice(0));
-    for (var _ = _.splice(0), _ = 0, _ = _.length; _ < _; _++)
-      _[_].runReaction_();
-  }
-  _.isRunningReactions = !1;
-}
-var _ = _(`Reaction`, _);
-function _(_) {
-  var _ = _;
-  _ = function (_) {
-    return _(function () {
-      return _(_);
-    });
-  };
-}
-function _() {
-  return !1;
-}
-function _(_) {
-  return (
-    console.warn(`[mobx.spy] Is a no-op in production builds`), function () {}
-  );
-}
-var _ = `action`,
-  _ = `action.bound`,
-  _ = `autoAction`,
-  _ = `autoAction.bound`,
-  _ = `<unnamed action>`,
-  _ = _(_),
-  _ = _(_, {
-    bound: !0,
-  }),
-  _ = _(_, {
-    autoAction: !0,
-  }),
-  _ = _(_, {
-    autoAction: !0,
-    bound: !0,
-  });
-function _(_) {
-  return function (_, _) {
-    if (_(_)) return _(_.name || _, _, _);
-    if (_(_)) return _(_, _, _);
-    if (_(_)) return (_ ? _ : _).decorate_20223_(_, _);
-    if (_(_)) return _(_, _, _ ? _ : _);
-    if (_(_))
-      return _(
-        _(_ ? _ : _, {
-          name: _,
-          autoAction: _,
-        }),
-      );
-  };
-}
-var _ = _(!1);
-Object.assign(_, _);
-var _ = _(!0);
-Object.assign(_, _), (_.bound = _(_)), (_.bound = _(_));
-function _(_) {
-  return _(_.name || _, !1, _, this, void 0);
-}
-function _(_) {
-  return _(_) && _.isMobxAction === !0;
-}
-function _(_, _) {
-  var _;
-  _ === void 0 && (_ = _);
-  var _ = _?.name ?? `Autorun`,
-    _ = !_.scheduler && !_.delay,
-    _;
-  if (_)
-    _ = new _(
-      _,
-      function () {
-        this.track(_);
-      },
-      _.onError,
-      _.requiresObservable,
-    );
-  else {
-    var _ = _(_),
-      _ = !1;
-    _ = new _(
-      _,
-      function () {
-        _ ||
-          ((_ = !0),
-          _(function () {
-            (_ = !1), _.isDisposed || _.track(_);
-          }));
-      },
-      _.onError,
-      _.requiresObservable,
-    );
-  }
-  function _() {
-    _(_);
-  }
-  return (
-    ((_ = _) != null && (_ = _.signal) != null && _.aborted) || _.schedule_(),
-    _.getDisposer_(_?.signal)
-  );
-}
-var _ = function (_) {
-  return _();
-};
-function _(_) {
-  return _.scheduler
-    ? _.scheduler
-    : _.delay
-      ? function (_) {
-          return setTimeout(_, _.delay);
-        }
-      : _;
-}
-function _(_, _, _) {
-  var _;
-  _ === void 0 && (_ = _);
-  var _ = _.name ?? `Reaction`,
-    _ = _(_, _.onError ? _(_.onError, _) : _),
-    _ = !_.scheduler && !_.delay,
-    _ = _(_),
-    _ = !0,
-    _ = !1,
-    _,
-    _ = _.compareStructural ? _.structural : _.equals || _.default,
-    _ = new _(
-      _,
-      function () {
-        _ || _ ? _() : _ || ((_ = !0), _(_));
-      },
-      _.onError,
-      _.requiresObservable,
-    );
-  function _() {
-    if (((_ = !1), !_.isDisposed)) {
-      var _ = !1,
-        _ = _;
-      _.track(function () {
-        var _ = _(!1, function () {
-          return _(_);
-        });
-        (_ = _ || !_(_, _)), (_ = _);
-      }),
-        ((_ && _.fireImmediately) || (!_ && _)) && _(_, _, _),
-        (_ = !1);
-    }
-  }
-  return (
-    ((_ = _) != null && (_ = _.signal) != null && _.aborted) || _.schedule_(),
-    _.getDisposer_(_?.signal)
-  );
-}
-function _(_, _) {
-  return function () {
-    try {
-      return _.apply(this, arguments);
-    } catch (_) {
-      _.call(this, _);
-    }
-  };
-}
-var _ = `onBO`,
-  _ = `onBUO`;
-function _(_, _, _) {
-  return _(_, _, _, _);
-}
-function _(_, _, _) {
-  return _(_, _, _, _);
-}
-function _(_, _, _, _) {
-  var _ = typeof _ == `function` ? _(_, _) : _(_),
-    _ = _(_) ? _ : _,
-    _ = _ + `L`;
-  return (
-    _[_] ? _[_].add(_) : (_[_] = new Set([_])),
-    function () {
-      var _ = _[_];
-      _ && (_.delete(_), _.size === 0 && delete _[_]);
-    }
-  );
-}
-var _ = `never`,
-  _ = `always`,
-  _ = `observed`;
-function _(_) {
-  _.isolateGlobalState === !0 && _();
-  var _ = _.useProxies,
-    _ = _.enforceActions;
-  if (
-    (_ !== void 0 &&
-      (_.useProxies = _ === _ || (_ !== _ && typeof Proxy < `u`)),
-    _ === `ifavailable` && (_.verifyProxies = !0),
-    _ !== void 0)
-  ) {
-    var _ = _ === _ ? _ : _ === _;
-    (_.enforceActions = _), (_.allowStateChanges = _ !== !0 && _ !== _);
-  }
-  [
-    `computedRequiresReaction`,
-    `reactionRequiresObservable`,
-    `observableRequiresReaction`,
-    `disableErrorBoundaries`,
-    `safeDescriptors`,
-  ].forEach(function (_) {
-    _ in _ && (_[_] = !!_[_]);
-  }),
-    (_.allowStateReads = !_.observableRequiresReaction),
-    _.reactionScheduler && _(_.reactionScheduler);
-}
-function _(_, _, _, _) {
-  var _ = _(_);
-  return (
-    _(function () {
-      var _ = _(_, _)[_];
-      _(_).forEach(function (_) {
-        _.extend_(_, _[_], _ && _ in _ ? _[_] : !0);
-      });
-    }),
-    _
-  );
-}
-function _(_, _) {
-  return _(_(_, _));
-}
-function _(_) {
-  var _ = {
-    name: _.name_,
-  };
-  return (
-    _.observing_ &&
-      _.observing_.length > 0 &&
-      (_.dependencies = _(_.observing_).map(_)),
-    _
-  );
-}
-function _(_) {
-  return Array.from(new Set(_));
-}
-var _ = 0;
-function _() {
-  this.message = `FLOW_CANCELLED`;
-}
-_.prototype = Object.create(Error.prototype);
-var _ = _(`flow`),
-  _ = _(`flow.bound`, {
-    bound: !0,
-  }),
-  _ = Object.assign(function (_, _) {
-    if (_(_)) return _.decorate_20223_(_, _);
-    if (_(_)) return _(_, _, _);
-    var _ = _,
-      _ = _.name || `<unnamed flow>`,
-      _ = function () {
-        var _ = this,
-          _ = arguments,
-          _ = ++_,
-          _ = _(_ + ` - runid: ` + _ + ` - init`, _).apply(_, _),
-          _,
-          _ = void 0,
-          _ = new Promise(function (_, _) {
-            var _ = 0;
-            _ = _;
-            function _(_) {
-              _ = void 0;
-              var _;
-              try {
-                _ = _(_ + ` - runid: ` + _ + ` - yield ` + _++, _.next).call(
-                  _,
-                  _,
-                );
-              } catch (_) {
-                return _(_);
-              }
-              _(_);
-            }
-            function _(_) {
-              _ = void 0;
-              var _;
-              try {
-                _ = _(_ + ` - runid: ` + _ + ` - yield ` + _++, _.throw).call(
-                  _,
-                  _,
-                );
-              } catch (_) {
-                return _(_);
-              }
-              _(_);
-            }
-            function _(_) {
-              if (_(_?.then)) {
-                _.then(_, _);
-                return;
-              }
-              return _.done
-                ? _(_.value)
-                : ((_ = Promise.resolve(_.value)), _.then(_, _));
-            }
-            _(void 0);
-          });
-        return (
-          (_.cancel = _(_ + ` - runid: ` + _ + ` - cancel`, function () {
-            try {
-              _ && _(_);
-              var _ = _.return(void 0),
-                _ = Promise.resolve(_.value);
-              _.then(_, _), _(_), _(new _());
-            } catch (_) {
-              _(_);
-            }
-          })),
-          _
-        );
-      };
-    return (_.isMobXFlow = !0), _;
-  }, _);
-_.bound = _(_);
-function _(_) {
-  _(_.cancel) && _.cancel();
-}
-function _(_) {
-  return _?.isMobXFlow === !0;
-}
-function _(_, _) {
-  return _ === void 0
-    ? _(_)
-    : _(_) === !1 || !_[_].values_.has(_)
-      ? !1
-      : _(_(_, _));
-}
-function _(_) {
-  return _(_);
-}
-function _(_, _) {
-  return _(_, _);
-}
-function _(_, _) {
-  return _
-    ? _ === void 0
-      ? _(_) || !!_[_] || _(_) || _(_) || _(_)
-      : _(_)
-        ? _[_].values_.has(_)
-        : !1
-    : !1;
-}
-function _(_) {
-  return _(_);
-}
-function _(_) {
-  if (_(_)) return _[_].keys_();
-  if (_(_) || _(_)) return Array.from(_.keys());
-  if (_(_))
-    return _.map(function (_, _) {
-      return _;
-    });
-  _(5);
-}
-function _(_) {
-  if (_(_)) return _[_].ownKeys_();
-  _(38);
-}
-function _(_, _, _, _) {
-  return _(_) ? _(_, _, _, _) : _(_, _, _);
-}
-function _(_, _, _) {
-  return _(_).observe_(_, _);
-}
-function _(_, _, _, _) {
-  return _(_, _).observe_(_, _);
-}
-function _(_, _, _) {
-  return _.set(_, _), _;
-}
-function _(_, _) {
-  if (typeof _ != `object` || !_ || _ instanceof Date || !_(_)) return _;
-  if (_(_) || _(_)) return _(_.get(), _);
-  if (_.has(_)) return _.get(_);
-  if (_(_)) {
-    var _ = _(_, _, Array(_.length));
-    return (
-      _.forEach(function (_, _) {
-        _[_] = _(_, _);
-      }),
-      _
-    );
-  }
-  if (_(_)) {
-    var _ = _(_, _, new Set());
-    return (
-      _.forEach(function (_) {
-        _.add(_(_, _));
-      }),
-      _
-    );
-  }
-  if (_(_)) {
-    var _ = _(_, _, new Map());
-    return (
-      _.forEach(function (_, _) {
-        _.set(_, _(_, _));
-      }),
-      _
-    );
-  }
-  var _ = _(_, _, {});
-  return (
-    _(_).forEach(function (_) {
-      _.propertyIsEnumerable.call(_, _) && (_[_] = _(_[_], _));
-    }),
-    _
-  );
-}
-function _(_, _) {
-  return _(_, new Map());
-}
-function _(_, _) {
-  _ === void 0 && (_ = void 0), _();
-  try {
-    return _.apply(_);
-  } finally {
-    _();
-  }
-}
-function _(_) {
-  return _[_];
-}
-var _ = {
-  has: function (_, _) {
-    return _(_).has_(_);
-  },
-  get: function (_, _) {
-    return _(_).get_(_);
-  },
-  set: function (_, _, _) {
-    return _(_) ? (_(_).set_(_, _, !0) ?? !0) : !1;
-  },
-  deleteProperty: function (_, _) {
-    return _(_) ? (_(_).delete_(_, !0) ?? !0) : !1;
-  },
-  defineProperty: function (_, _, _) {
-    return _(_).defineProperty_(_, _) ?? !0;
-  },
-  ownKeys: function (_) {
-    return _(_).ownKeys_();
-  },
-  preventExtensions: function (_) {
-    _(13);
-  },
-};
-function _(_, _) {
-  var _;
-  return _(), (_ = _(_, _)), (_ = _[_]).proxy_ ?? (_.proxy_ = new Proxy(_, _));
-}
-function _(_) {
-  return _.interceptors_ !== void 0 && _.interceptors_.length > 0;
-}
-function _(_, _) {
-  var _ = (_.interceptors_ ||= []);
-  return (
-    _.push(_),
-    _(function () {
-      var _ = _.indexOf(_);
-      _ !== -1 && _.splice(_, 1);
-    })
-  );
-}
-function _(_, _) {
-  var _ = _();
-  try {
-    for (
-      var _ = [].concat(_.interceptors_ || []), _ = 0, _ = _.length;
-      _ < _ && ((_ = _[_](_)), _ && !_.type && _(14), _);
-      _++
-    );
-    return _;
-  } finally {
-    _(_);
-  }
-}
-function _(_) {
-  return _.changeListeners_ !== void 0 && _.changeListeners_.length > 0;
-}
-function _(_, _) {
-  var _ = (_.changeListeners_ ||= []);
-  return (
-    _.push(_),
-    _(function () {
-      var _ = _.indexOf(_);
-      _ !== -1 && _.splice(_, 1);
-    })
-  );
-}
-function _(_, _) {
-  var _ = _(),
-    _ = _.changeListeners_;
-  if (_) {
-    _ = _.slice();
-    for (var _ = 0, _ = _.length; _ < _; _++) _[_](_);
-    _(_);
-  }
-}
-function _(_, _, _) {
-  return (
-    _(function () {
-      var _ = _(_, _)[_];
-      (_ ??= _(_)),
-        _(_).forEach(function (_) {
-          return _.make_(_, _[_]);
-        });
-    }),
-    _
-  );
-}
-var _ = `splice`,
-  _ = `update`,
-  _ = 1e4,
-  _ = {
-    get: function (_, _) {
-      var _ = _[_];
-      return _ === _
-        ? _
-        : _ === `length`
-          ? _.getArrayLength_()
-          : typeof _ == `string` && !isNaN(_)
-            ? _.get_(parseInt(_))
-            : _(_, _)
-              ? _[_]
-              : _[_];
-    },
-    set: function (_, _, _) {
-      var _ = _[_];
-      return (
-        _ === `length` && _.setArrayLength_(_),
-        typeof _ == `symbol` || isNaN(_) ? (_[_] = _) : _.set_(parseInt(_), _),
-        !0
-      );
-    },
-    preventExtensions: function () {
-      _(15);
-    },
-  },
-  _ = (function () {
-    function _(_, _, _, _) {
-      _ === void 0 && (_ = `ObservableArray`),
-        (this.owned_ = void 0),
-        (this.legacyMode_ = void 0),
-        (this.atom_ = void 0),
-        (this.values_ = []),
-        (this.interceptors_ = void 0),
-        (this.changeListeners_ = void 0),
-        (this.enhancer_ = void 0),
-        (this.dehancer = void 0),
-        (this.proxy_ = void 0),
-        (this.lastKnownLength_ = 0),
-        (this.owned_ = _),
-        (this.legacyMode_ = _),
-        (this.atom_ = new _(_)),
-        (this.enhancer_ = function (_, _) {
-          return _(_, _, `ObservableArray[..]`);
-        });
-    }
-    var _ = _.prototype;
-    return (
-      (_.dehanceValue_ = function (_) {
-        return this.dehancer === void 0 ? _ : this.dehancer(_);
-      }),
-      (_.dehanceValues_ = function (_) {
-        return this.dehancer !== void 0 && _.length > 0
-          ? _.map(this.dehancer)
-          : _;
-      }),
-      (_.intercept_ = function (_) {
-        return _(this, _);
-      }),
-      (_.observe_ = function (_, _) {
-        return (
-          _ === void 0 && (_ = !1),
-          _ &&
-            _({
-              observableKind: `array`,
-              object: this.proxy_,
-              debugObjectName: this.atom_.name_,
-              type: `splice`,
-              index: 0,
-              added: this.values_.slice(),
-              addedCount: this.values_.length,
-              removed: [],
-              removedCount: 0,
-            }),
-          _(this, _)
-        );
-      }),
-      (_.getArrayLength_ = function () {
-        return this.atom_.reportObserved(), this.values_.length;
-      }),
-      (_.setArrayLength_ = function (_) {
-        (typeof _ != `number` || isNaN(_) || _ < 0) && _(`Out of range: ` + _);
-        var _ = this.values_.length;
-        if (_ !== _) {
-          if (_ > _) {
-            for (var _ = Array(_ - _), _ = 0; _ < _ - _; _++) _[_] = void 0;
-            this.spliceWithArray_(_, 0, _);
-          } else this.spliceWithArray_(_, _ - _);
-        }
-      }),
-      (_.updateArrayLength_ = function (_, _) {
-        _ !== this.lastKnownLength_ && _(16),
-          (this.lastKnownLength_ += _),
-          this.legacyMode_ && _ > 0 && _(_ + _ + 1);
-      }),
-      (_.spliceWithArray_ = function (_, _, _) {
-        var _ = this;
-        this.atom_;
-        var _ = this.values_.length;
-        if (
-          (_ === void 0
-            ? (_ = 0)
-            : _ > _
-              ? (_ = _)
-              : _ < 0 && (_ = Math.max(0, _ + _)),
-          (_ =
-            arguments.length === 1
-              ? _ - _
-              : _ == null
-                ? 0
-                : Math.max(0, Math.min(_, _ - _))),
-          _ === void 0 && (_ = _),
-          _(this))
-        ) {
-          var _ = _(this, {
-            object: this.proxy_,
-            type: _,
-            index: _,
-            removedCount: _,
-            added: _,
-          });
-          if (!_) return _;
-          (_ = _.removedCount), (_ = _.added);
-        }
-        if (
-          ((_ =
-            _.length === 0
-              ? _
-              : _.map(function (_) {
-                  return _.enhancer_(_, void 0);
-                })),
-          this.legacyMode_)
-        ) {
-          var _ = _.length - _;
-          this.updateArrayLength_(_, _);
-        }
-        var _ = this.spliceItemsIntoValues_(_, _, _);
-        return (
-          (_ !== 0 || _.length !== 0) && this.notifyArraySplice_(_, _, _),
-          this.dehanceValues_(_)
-        );
-      }),
-      (_.spliceItemsIntoValues_ = function (_, _, _) {
-        if (_.length < _) {
-          var _;
-          return (_ = this.values_).splice.apply(_, [_, _].concat(_));
-        }
-        var _ = this.values_.slice(_, _ + _),
-          _ = this.values_.slice(_ + _);
-        this.values_.length += _.length - _;
-        for (var _ = 0; _ < _.length; _++) this.values_[_ + _] = _[_];
-        for (var _ = 0; _ < _.length; _++)
-          this.values_[_ + _.length + _] = _[_];
-        return _;
-      }),
-      (_.notifyArrayChildUpdate_ = function (_, _, _) {
-        var _ = !this.owned_ && _(),
-          _ = _(this),
-          _ =
-            _ || _
-              ? {
-                  observableKind: `array`,
-                  object: this.proxy_,
-                  type: _,
-                  debugObjectName: this.atom_.name_,
-                  index: _,
-                  newValue: _,
-                  oldValue: _,
-                }
-              : null;
-        this.atom_.reportChanged(), _ && _(this, _);
-      }),
-      (_.notifyArraySplice_ = function (_, _, _) {
-        var _ = !this.owned_ && _(),
-          _ = _(this),
-          _ =
-            _ || _
-              ? {
-                  observableKind: `array`,
-                  object: this.proxy_,
-                  debugObjectName: this.atom_.name_,
-                  type: _,
-                  index: _,
-                  removed: _,
-                  added: _,
-                  removedCount: _.length,
-                  addedCount: _.length,
-                }
-              : null;
-        this.atom_.reportChanged(), _ && _(this, _);
-      }),
-      (_.get_ = function (_) {
-        if (this.legacyMode_ && _ >= this.values_.length) {
-          console.warn(`[mobx] Out of bounds read: ` + _);
-          return;
-        }
-        return this.atom_.reportObserved(), this.dehanceValue_(this.values_[_]);
-      }),
-      (_.set_ = function (_, _) {
-        var _ = this.values_;
-        if (
-          (this.legacyMode_ && _ > _.length && _(17, _, _.length), _ < _.length)
-        ) {
-          this.atom_;
-          var _ = _[_];
-          if (_(this)) {
-            var _ = _(this, {
-              type: _,
-              object: this.proxy_,
-              index: _,
-              newValue: _,
-            });
-            if (!_) return;
-            _ = _.newValue;
-          }
-          (_ = this.enhancer_(_, _)),
-            _ !== _ && ((_[_] = _), this.notifyArrayChildUpdate_(_, _, _));
-        } else {
-          for (var _ = Array(_ + 1 - _.length), _ = 0; _ < _.length - 1; _++)
-            _[_] = void 0;
-          (_[_.length - 1] = _), this.spliceWithArray_(_.length, 0, _);
-        }
-      }),
-      _
-    );
-  })();
-function _(_, _, _, _) {
-  return (
-    _ === void 0 && (_ = `ObservableArray`),
-    _ === void 0 && (_ = !1),
-    _(),
-    _(function () {
-      var _ = new _(_, _, _, !1);
-      _(_.values_, _, _);
-      var _ = new Proxy(_.values_, _);
-      return (_.proxy_ = _), _ && _.length && _.spliceWithArray_(0, 0, _), _;
-    })
-  );
-}
-var _ = {
-  clear: function () {
-    return this.splice(0);
-  },
-  replace: function (_) {
-    var _ = this[_];
-    return _.spliceWithArray_(0, _.values_.length, _);
-  },
-  toJSON: function () {
-    return this.slice();
-  },
-  splice: function (_, _) {
-    var _ = [...arguments].slice(2),
-      _ = this[_];
-    switch (arguments.length) {
-      case 0:
-        return [];
-      case 1:
-        return _.spliceWithArray_(_);
-      case 2:
-        return _.spliceWithArray_(_, _);
-    }
-    return _.spliceWithArray_(_, _, _);
-  },
-  spliceWithArray: function (_, _, _) {
-    return this[_].spliceWithArray_(_, _, _);
-  },
-  push: function () {
-    var _ = this[_],
-      _ = [...arguments];
-    return _.spliceWithArray_(_.values_.length, 0, _), _.values_.length;
-  },
-  pop: function () {
-    return this.splice(Math.max(this[_].values_.length - 1, 0), 1)[0];
-  },
-  shift: function () {
-    return this.splice(0, 1)[0];
-  },
-  unshift: function () {
-    var _ = this[_],
-      _ = [...arguments];
-    return _.spliceWithArray_(0, 0, _), _.values_.length;
-  },
-  reverse: function () {
-    return (
-      _.trackingDerivation && _(37, `reverse`),
-      this.replace(this.slice().reverse()),
-      this
-    );
-  },
-  sort: function () {
-    _.trackingDerivation && _(37, `sort`);
-    var _ = this.slice();
-    return _.sort.apply(_, arguments), this.replace(_), this;
-  },
-  remove: function (_) {
-    var _ = this[_],
-      _ = _.dehanceValues_(_.values_).indexOf(_);
-    return _ > -1 && (this.splice(_, 1), !0);
-  },
-};
-_(`at`, _),
-  _(`concat`, _),
-  _(`flat`, _),
-  _(`includes`, _),
-  _(`indexOf`, _),
-  _(`join`, _),
-  _(`lastIndexOf`, _),
-  _(`slice`, _),
-  _(`toString`, _),
-  _(`toLocaleString`, _),
-  _(`toSorted`, _),
-  _(`toSpliced`, _),
-  _(`with`, _),
-  _(`every`, _),
-  _(`filter`, _),
-  _(`find`, _),
-  _(`findIndex`, _),
-  _(`findLast`, _),
-  _(`findLastIndex`, _),
-  _(`flatMap`, _),
-  _(`forEach`, _),
-  _(`map`, _),
-  _(`some`, _),
-  _(`toReversed`, _),
-  _(`reduce`, _),
-  _(`reduceRight`, _);
-function _(_, _) {
-  typeof Array.prototype[_] == `function` && (_[_] = _(_));
-}
-function _(_) {
-  return function () {
-    var _ = this[_];
-    _.atom_.reportObserved();
-    var _ = _.dehanceValues_(_.values_);
-    return _[_].apply(_, arguments);
-  };
-}
-function _(_) {
-  return function (_, _) {
-    var _ = this,
-      _ = this[_];
-    return (
-      _.atom_.reportObserved(),
-      _.dehanceValues_(_.values_)[_](function (_, _) {
-        return _.call(_, _, _, _);
-      })
-    );
-  };
-}
-function _(_) {
-  return function () {
-    var _ = this,
-      _ = this[_];
-    _.atom_.reportObserved();
-    var _ = _.dehanceValues_(_.values_),
-      _ = arguments[0];
-    return (
-      (arguments[0] = function (_, _, _) {
-        return _(_, _, _, _);
-      }),
-      _[_].apply(_, arguments)
-    );
-  };
-}
-var _ = _(`ObservableArrayAdministration`, _);
-function _(_) {
-  return _(_) && _(_[_]);
-}
-var _ = {},
-  _ = `add`,
-  _ = `delete`,
-  _ = (function () {
-    function _(_, _, _) {
-      var _ = this;
-      _ === void 0 && (_ = _),
-        _ === void 0 && (_ = `ObservableMap`),
-        (this.enhancer_ = void 0),
-        (this.name_ = void 0),
-        (this[_] = _),
-        (this.data_ = void 0),
-        (this.hasMap_ = void 0),
-        (this.keysAtom_ = void 0),
-        (this.interceptors_ = void 0),
-        (this.changeListeners_ = void 0),
-        (this.dehancer = void 0),
-        (this.enhancer_ = _),
-        (this.name_ = _),
-        _(Map) || _(18),
-        _(function () {
-          (_.keysAtom_ = _(`ObservableMap.keys()`)),
-            (_.data_ = new Map()),
-            (_.hasMap_ = new Map()),
-            _ && _.merge(_);
-        });
-    }
-    var _ = _.prototype;
-    return (
-      (_.has_ = function (_) {
-        return this.data_.has(_);
-      }),
-      (_.has = function (_) {
-        var _ = this;
-        if (!_.trackingDerivation) return this.has_(_);
-        var _ = this.hasMap_.get(_);
-        if (!_) {
-          var _ = (_ = new _(this.has_(_), _, `ObservableMap.key?`, !1));
-          this.hasMap_.set(_, _),
-            _(_, function () {
-              return _.hasMap_.delete(_);
-            });
-        }
-        return _.get();
-      }),
-      (_.set = function (_, _) {
-        var _ = this.has_(_);
-        if (_(this)) {
-          var _ = _(this, {
-            type: _ ? _ : _,
-            object: this,
-            newValue: _,
-            name: _,
-          });
-          if (!_) return this;
-          _ = _.newValue;
-        }
-        return _ ? this.updateValue_(_, _) : this.addValue_(_, _), this;
-      }),
-      (_.delete = function (_) {
-        var _ = this;
-        if (
-          (this.keysAtom_,
-          _(this) &&
-            !_(this, {
-              type: _,
-              object: this,
-              name: _,
-            }))
-        )
-          return !1;
-        if (this.has_(_)) {
-          var _ = _(),
-            _ = _(this),
-            _ =
-              _ || _
-                ? {
-                    observableKind: `map`,
-                    debugObjectName: this.name_,
-                    type: _,
-                    object: this,
-                    oldValue: this.data_.get(_).value_,
-                    name: _,
-                  }
-                : null;
-          return (
-            _(function () {
-              var _;
-              _.keysAtom_.reportChanged(),
-                (_ = _.hasMap_.get(_)) == null || _.setNewValue_(!1),
-                _.data_.get(_).setNewValue_(void 0),
-                _.data_.delete(_);
-            }),
-            _ && _(this, _),
-            !0
-          );
-        }
-        return !1;
-      }),
-      (_.updateValue_ = function (_, _) {
-        var _ = this.data_.get(_);
-        if (((_ = _.prepareNewValue_(_)), _ !== _.UNCHANGED)) {
-          var _ = _(),
-            _ = _(this),
-            _ =
-              _ || _
-                ? {
-                    observableKind: `map`,
-                    debugObjectName: this.name_,
-                    type: _,
-                    object: this,
-                    oldValue: _.value_,
-                    name: _,
-                    newValue: _,
-                  }
-                : null;
-          _.setNewValue_(_), _ && _(this, _);
-        }
-      }),
-      (_.addValue_ = function (_, _) {
-        var _ = this;
-        this.keysAtom_,
-          _(function () {
-            var _,
-              _ = new _(_, _.enhancer_, `ObservableMap.key`, !1);
-            _.data_.set(_, _),
-              (_ = _.value_),
-              (_ = _.hasMap_.get(_)) == null || _.setNewValue_(!0),
-              _.keysAtom_.reportChanged();
-          });
-        var _ = _(),
-          _ = _(this),
-          _ =
-            _ || _
-              ? {
-                  observableKind: `map`,
-                  debugObjectName: this.name_,
-                  type: _,
-                  object: this,
-                  name: _,
-                  newValue: _,
-                }
-              : null;
-        _ && _(this, _);
-      }),
-      (_.get = function (_) {
-        return this.has(_)
-          ? this.dehanceValue_(this.data_.get(_).get())
-          : this.dehanceValue_(void 0);
-      }),
-      (_.dehanceValue_ = function (_) {
-        return this.dehancer === void 0 ? _ : this.dehancer(_);
-      }),
-      (_.keys = function () {
-        return this.keysAtom_.reportObserved(), this.data_.keys();
-      }),
-      (_.values = function () {
-        var _ = this,
-          _ = this.keys();
-        return _({
-          next: function () {
-            var _ = _.next(),
-              _ = _.done,
-              _ = _.value;
-            return {
-              done: _,
-              value: _ ? void 0 : _.get(_),
-            };
-          },
-        });
-      }),
-      (_.entries = function () {
-        var _ = this,
-          _ = this.keys();
-        return _({
-          next: function () {
-            var _ = _.next(),
-              _ = _.done,
-              _ = _.value;
-            return {
-              done: _,
-              value: _ ? void 0 : [_, _.get(_)],
-            };
-          },
-        });
-      }),
-      (_[Symbol.iterator] = function () {
-        return this.entries();
-      }),
-      (_.forEach = function (_, _) {
-        for (var _ = _(this), _; !(_ = _()).done; ) {
-          var _ = _.value,
-            _ = _[0],
-            _ = _[1];
-          _.call(_, _, _, this);
-        }
-      }),
-      (_.merge = function (_) {
-        var _ = this;
-        return (
-          _(_) && (_ = new Map(_)),
-          _(function () {
-            _(_)
-              ? _(_).forEach(function (_) {
-                  return _.set(_, _[_]);
-                })
-              : Array.isArray(_)
-                ? _.forEach(function (_) {
-                    var _ = _[0],
-                      _ = _[1];
-                    return _.set(_, _);
-                  })
-                : _(_)
-                  ? (_(_) || _(19, _),
-                    _.forEach(function (_, _) {
-                      return _.set(_, _);
-                    }))
-                  : _ != null && _(20, _);
-          }),
-          this
-        );
-      }),
-      (_.clear = function () {
-        var _ = this;
-        _(function () {
-          _(function () {
-            for (var _ = _(_.keys()), _; !(_ = _()).done; ) {
-              var _ = _.value;
-              _.delete(_);
-            }
-          });
-        });
-      }),
-      (_.replace = function (_) {
-        var _ = this;
-        return (
-          _(function () {
-            for (
-              var _ = _(_), _ = new Map(), _ = !1, _ = _(_.data_.keys()), _;
-              !(_ = _()).done;
-            ) {
-              var _ = _.value;
-              if (!_.has(_)) {
-                if (_.delete(_)) _ = !0;
-                else {
-                  var _ = _.data_.get(_);
-                  _.set(_, _);
-                }
-              }
-            }
-            for (var _ = _(_.entries()), _; !(_ = _()).done; ) {
-              var _ = _.value,
-                _ = _[0],
-                _ = _[1],
-                _ = _.data_.has(_);
-              if ((_.set(_, _), _.data_.has(_))) {
-                var _ = _.data_.get(_);
-                _.set(_, _), _ || (_ = !0);
-              }
-            }
-            if (!_) {
-              if (_.data_.size !== _.size) _.keysAtom_.reportChanged();
-              else
-                for (
-                  var _ = _.data_.keys(),
-                    _ = _.keys(),
-                    _ = _.next(),
-                    _ = _.next();
-                  !_.done;
-                ) {
-                  if (_.value !== _.value) {
-                    _.keysAtom_.reportChanged();
-                    break;
-                  }
-                  (_ = _.next()), (_ = _.next());
-                }
-            }
-            _.data_ = _;
-          }),
-          this
-        );
-      }),
-      (_.toString = function () {
-        return `[object ObservableMap]`;
-      }),
-      (_.toJSON = function () {
-        return Array.from(this);
-      }),
-      (_.observe_ = function (_, _) {
-        return _(this, _);
-      }),
-      (_.intercept_ = function (_) {
-        return _(this, _);
-      }),
-      _(_, [
-        {
-          key: `size`,
-          get: function () {
-            return this.keysAtom_.reportObserved(), this.data_.size;
-          },
-        },
-        {
-          key: Symbol.toStringTag,
-          get: function () {
-            return `Map`;
-          },
-        },
-      ])
-    );
-  })(),
-  _ = _(`ObservableMap`, _);
-function _(_) {
-  return (_[Symbol.toStringTag] = `MapIterator`), _(_);
-}
-function _(_) {
-  if (_(_) || _(_)) return _;
-  if (Array.isArray(_)) return new Map(_);
-  if (_(_)) {
-    var _ = new Map();
-    for (var _ in _) _.set(_, _[_]);
-    return _;
-  }
-  return _(21, _);
-}
-var _ = {},
-  _ = (function () {
-    function _(_, _, _) {
-      var _ = this;
-      _ === void 0 && (_ = _),
-        _ === void 0 && (_ = `ObservableSet`),
-        (this.name_ = void 0),
-        (this[_] = _),
-        (this.data_ = new Set()),
-        (this.atom_ = void 0),
-        (this.changeListeners_ = void 0),
-        (this.interceptors_ = void 0),
-        (this.dehancer = void 0),
-        (this.enhancer_ = void 0),
-        (this.name_ = _),
-        _(Set) || _(22),
-        (this.enhancer_ = function (_, _) {
-          return _(_, _, _);
-        }),
-        _(function () {
-          (_.atom_ = _(_.name_)), _ && _.replace(_);
-        });
-    }
-    var _ = _.prototype;
-    return (
-      (_.dehanceValue_ = function (_) {
-        return this.dehancer === void 0 ? _ : this.dehancer(_);
-      }),
-      (_.clear = function () {
-        var _ = this;
-        _(function () {
-          _(function () {
-            for (var _ = _(_.data_.values()), _; !(_ = _()).done; ) {
-              var _ = _.value;
-              _.delete(_);
-            }
-          });
-        });
-      }),
-      (_.forEach = function (_, _) {
-        for (var _ = _(this), _; !(_ = _()).done; ) {
-          var _ = _.value;
-          _.call(_, _, _, this);
-        }
-      }),
-      (_.add = function (_) {
-        var _ = this;
-        if ((this.atom_, _(this))) {
-          var _ = _(this, {
-            type: _,
-            object: this,
-            newValue: _,
-          });
-          if (!_) return this;
-          _ = _.newValue;
-        }
-        if (!this.has(_)) {
-          _(function () {
-            _.data_.add(_.enhancer_(_, void 0)), _.atom_.reportChanged();
-          });
-          var _ = _(this),
-            _ = _
-              ? {
-                  observableKind: `set`,
-                  debugObjectName: this.name_,
-                  type: _,
-                  object: this,
-                  newValue: _,
-                }
-              : null;
-          _ && _(this, _);
-        }
-        return this;
-      }),
-      (_.delete = function (_) {
-        var _ = this;
-        if (
-          _(this) &&
-          !_(this, {
-            type: _,
-            object: this,
-            oldValue: _,
-          })
-        )
-          return !1;
-        if (this.has(_)) {
-          var _ = _(this),
-            _ = _
-              ? {
-                  observableKind: `set`,
-                  debugObjectName: this.name_,
-                  type: _,
-                  object: this,
-                  oldValue: _,
-                }
-              : null;
-          return (
-            _(function () {
-              _.atom_.reportChanged(), _.data_.delete(_);
-            }),
-            _ && _(this, _),
-            !0
-          );
-        }
-        return !1;
-      }),
-      (_.has = function (_) {
-        return (
-          this.atom_.reportObserved(), this.data_.has(this.dehanceValue_(_))
-        );
-      }),
-      (_.entries = function () {
-        var _ = this.values();
-        return _({
-          next: function () {
-            var _ = _.next(),
-              _ = _.value,
-              _ = _.done;
-            return _
-              ? {
-                  value: void 0,
-                  done: _,
-                }
-              : {
-                  value: [_, _],
-                  done: _,
-                };
-          },
-        });
-      }),
-      (_.keys = function () {
-        return this.values();
-      }),
-      (_.values = function () {
-        this.atom_.reportObserved();
-        var _ = this,
-          _ = this.data_.values();
-        return _({
-          next: function () {
-            var _ = _.next(),
-              _ = _.value,
-              _ = _.done;
-            return _
-              ? {
-                  value: void 0,
-                  done: _,
-                }
-              : {
-                  value: _.dehanceValue_(_),
-                  done: _,
-                };
-          },
-        });
-      }),
-      (_.intersection = function (_) {
-        return _(_) && !_(_)
-          ? _.intersection(this)
-          : new Set(this).intersection(_);
-      }),
-      (_.union = function (_) {
-        return _(_) && !_(_) ? _.union(this) : new Set(this).union(_);
-      }),
-      (_.difference = function (_) {
-        return new Set(this).difference(_);
-      }),
-      (_.symmetricDifference = function (_) {
-        return _(_) && !_(_)
-          ? _.symmetricDifference(this)
-          : new Set(this).symmetricDifference(_);
-      }),
-      (_.isSubsetOf = function (_) {
-        return new Set(this).isSubsetOf(_);
-      }),
-      (_.isSupersetOf = function (_) {
-        return new Set(this).isSupersetOf(_);
-      }),
-      (_.isDisjointFrom = function (_) {
-        return _(_) && !_(_)
-          ? _.isDisjointFrom(this)
-          : new Set(this).isDisjointFrom(_);
-      }),
-      (_.replace = function (_) {
-        var _ = this;
-        return (
-          _(_) && (_ = new Set(_)),
-          _(function () {
-            Array.isArray(_) || _(_)
-              ? (_.clear(),
-                _.forEach(function (_) {
-                  return _.add(_);
-                }))
-              : _ != null && _(`Cannot initialize set from ` + _);
-          }),
-          this
-        );
-      }),
-      (_.observe_ = function (_, _) {
-        return _(this, _);
-      }),
-      (_.intercept_ = function (_) {
-        return _(this, _);
-      }),
-      (_.toJSON = function () {
-        return Array.from(this);
-      }),
-      (_.toString = function () {
-        return `[object ObservableSet]`;
-      }),
-      (_[Symbol.iterator] = function () {
-        return this.values();
-      }),
-      _(_, [
-        {
-          key: `size`,
-          get: function () {
-            return this.atom_.reportObserved(), this.data_.size;
-          },
-        },
-        {
-          key: Symbol.toStringTag,
-          get: function () {
-            return `Set`;
-          },
-        },
-      ])
-    );
-  })(),
-  _ = _(`ObservableSet`, _);
-function _(_) {
-  return (_[Symbol.toStringTag] = `SetIterator`), _(_);
-}
-var _ = Object.create(null),
-  _ = `remove`,
-  _ = (function () {
-    function _(_, _, _, _) {
-      _ === void 0 && (_ = new Map()),
-        _ === void 0 && (_ = _),
-        (this.target_ = void 0),
-        (this.values_ = void 0),
-        (this.name_ = void 0),
-        (this.defaultAnnotation_ = void 0),
-        (this.keysAtom_ = void 0),
-        (this.changeListeners_ = void 0),
-        (this.interceptors_ = void 0),
-        (this.proxy_ = void 0),
-        (this.isPlainObject_ = void 0),
-        (this.appliedAnnotations_ = void 0),
-        (this.pendingKeys_ = void 0),
-        (this.target_ = _),
-        (this.values_ = _),
-        (this.name_ = _),
-        (this.defaultAnnotation_ = _),
-        (this.keysAtom_ = new _(`ObservableObject.keys`)),
-        (this.isPlainObject_ = _(this.target_));
-    }
-    var _ = _.prototype;
-    return (
-      (_.getObservablePropValue_ = function (_) {
-        return this.values_.get(_).get();
-      }),
-      (_.setObservablePropValue_ = function (_, _) {
-        var _ = this.values_.get(_);
-        if (_ instanceof _) return _.set(_), !0;
-        if (_(this)) {
-          var _ = _(this, {
-            type: _,
-            object: this.proxy_ || this.target_,
-            name: _,
-            newValue: _,
-          });
-          if (!_) return null;
-          _ = _.newValue;
-        }
-        if (((_ = _.prepareNewValue_(_)), _ !== _.UNCHANGED)) {
-          var _ = _(this),
-            _ = _
-              ? {
-                  type: _,
-                  observableKind: `object`,
-                  debugObjectName: this.name_,
-                  object: this.proxy_ || this.target_,
-                  oldValue: _.value_,
-                  name: _,
-                  newValue: _,
-                }
-              : null;
-          _.setNewValue_(_), _ && _(this, _);
-        }
-        return !0;
-      }),
-      (_.get_ = function (_) {
-        return (
-          _.trackingDerivation && !_(this.target_, _) && this.has_(_),
-          this.target_[_]
-        );
-      }),
-      (_.set_ = function (_, _, _) {
-        return (
-          _ === void 0 && (_ = !1),
-          _(this.target_, _)
-            ? this.values_.has(_)
-              ? this.setObservablePropValue_(_, _)
-              : _
-                ? Reflect.set(this.target_, _, _)
-                : ((this.target_[_] = _), !0)
-            : this.extend_(
-                _,
-                {
-                  value: _,
-                  enumerable: !0,
-                  writable: !0,
-                  configurable: !0,
-                },
-                this.defaultAnnotation_,
-                _,
-              )
-        );
-      }),
-      (_.has_ = function (_) {
-        if (!_.trackingDerivation) return _ in this.target_;
-        this.pendingKeys_ ||= new Map();
-        var _ = this.pendingKeys_.get(_);
-        return (
-          _ ||
-            ((_ = new _(_ in this.target_, _, `ObservableObject.key?`, !1)),
-            this.pendingKeys_.set(_, _)),
-          _.get()
-        );
-      }),
-      (_.make_ = function (_, _) {
-        if ((_ === !0 && (_ = this.defaultAnnotation_), _ !== !1)) {
-          if (!(_ in this.target_)) {
-            var _;
-            if ((_ = this.target_[_]) != null && _[_]) return;
-            _(1, _.annotationType_, this.name_ + `.` + _.toString());
-          }
-          for (var _ = this.target_; _ && _ !== _; ) {
-            var _ = _(_, _);
-            if (_) {
-              var _ = _.make_(this, _, _, _);
-              if (_ === 0) return;
-              if (_ === 1) break;
-            }
-            _ = Object.getPrototypeOf(_);
-          }
-          _(this, _, _);
-        }
-      }),
-      (_.extend_ = function (_, _, _, _) {
-        if (
-          (_ === void 0 && (_ = !1),
-          _ === !0 && (_ = this.defaultAnnotation_),
-          _ === !1)
-        )
-          return this.defineProperty_(_, _, _);
-        var _ = _.extend_(this, _, _, _);
-        return _ && _(this, _, _), _;
-      }),
-      (_.defineProperty_ = function (_, _, _) {
-        _ === void 0 && (_ = !1), this.keysAtom_;
-        try {
-          _();
-          var _ = this.delete_(_);
-          if (!_) return _;
-          if (_(this)) {
-            var _ = _(this, {
-              object: this.proxy_ || this.target_,
-              name: _,
-              type: _,
-              newValue: _.value,
-            });
-            if (!_) return null;
-            var _ = _.newValue;
-            _.value !== _ &&
-              (_ = _({}, _, {
-                value: _,
-              }));
-          }
-          if (_) {
-            if (!Reflect.defineProperty(this.target_, _, _)) return !1;
-          } else _(this.target_, _, _);
-          this.notifyPropertyAddition_(_, _.value);
-        } finally {
-          _();
-        }
-        return !0;
-      }),
-      (_.defineObservableProperty_ = function (_, _, _, _) {
-        _ === void 0 && (_ = !1), this.keysAtom_;
-        try {
-          _();
-          var _ = this.delete_(_);
-          if (!_) return _;
-          if (_(this)) {
-            var _ = _(this, {
-              object: this.proxy_ || this.target_,
-              name: _,
-              type: _,
-              newValue: _,
-            });
-            if (!_) return null;
-            _ = _.newValue;
-          }
-          var _ = _(_),
-            _ = {
-              configurable: !_.safeDescriptors || this.isPlainObject_,
-              enumerable: !0,
-              get: _.get,
-              set: _.set,
-            };
-          if (_) {
-            if (!Reflect.defineProperty(this.target_, _, _)) return !1;
-          } else _(this.target_, _, _);
-          var _ = new _(_, _, `ObservableObject.key`, !1);
-          this.values_.set(_, _), this.notifyPropertyAddition_(_, _.value_);
-        } finally {
-          _();
-        }
-        return !0;
-      }),
-      (_.defineComputedProperty_ = function (_, _, _) {
-        _ === void 0 && (_ = !1), this.keysAtom_;
-        try {
-          _();
-          var _ = this.delete_(_);
-          if (!_) return _;
-          if (
-            _(this) &&
-            !_(this, {
-              object: this.proxy_ || this.target_,
-              name: _,
-              type: _,
-              newValue: void 0,
-            })
-          )
-            return null;
-          (_.name ||= `ObservableObject.key`),
-            (_.context = this.proxy_ || this.target_);
-          var _ = _(_),
-            _ = {
-              configurable: !_.safeDescriptors || this.isPlainObject_,
-              enumerable: !1,
-              get: _.get,
-              set: _.set,
-            };
-          if (_) {
-            if (!Reflect.defineProperty(this.target_, _, _)) return !1;
-          } else _(this.target_, _, _);
-          this.values_.set(_, new _(_)),
-            this.notifyPropertyAddition_(_, void 0);
-        } finally {
-          _();
-        }
-        return !0;
-      }),
-      (_.delete_ = function (_, _) {
-        if ((_ === void 0 && (_ = !1), this.keysAtom_, !_(this.target_, _)))
-          return !0;
-        if (
-          _(this) &&
-          !_(this, {
-            object: this.proxy_ || this.target_,
-            name: _,
-            type: _,
-          })
-        )
-          return null;
-        try {
-          var _;
-          _();
-          var _ = _(this),
-            _ = this.values_.get(_),
-            _ = void 0;
-          if ((!_ && _ && (_ = _(this.target_, _)?.value), _)) {
-            if (!Reflect.deleteProperty(this.target_, _)) return !1;
-          } else delete this.target_[_];
-          if (
-            (_ &&
-              (this.values_.delete(_), _ instanceof _ && (_ = _.value_), _(_)),
-            this.keysAtom_.reportChanged(),
-            (_ = this.pendingKeys_) == null ||
-              (_ = _.get(_)) == null ||
-              _.set(_ in this.target_),
-            _)
-          ) {
-            var _ = {
-              type: _,
-              observableKind: `object`,
-              object: this.proxy_ || this.target_,
-              debugObjectName: this.name_,
-              oldValue: _,
-              name: _,
-            };
-            _ && _(this, _);
-          }
-        } finally {
-          _();
-        }
-        return !0;
-      }),
-      (_.observe_ = function (_, _) {
-        return _(this, _);
-      }),
-      (_.intercept_ = function (_) {
-        return _(this, _);
-      }),
-      (_.notifyPropertyAddition_ = function (_, _) {
-        var _,
-          _ = _(this);
-        if (_) {
-          var _ = _
-            ? {
-                type: _,
-                observableKind: `object`,
-                debugObjectName: this.name_,
-                object: this.proxy_ || this.target_,
-                name: _,
-                newValue: _,
-              }
-            : null;
-          _ && _(this, _);
-        }
-        (_ = this.pendingKeys_) == null || (_ = _.get(_)) == null || _.set(!0),
-          this.keysAtom_.reportChanged();
-      }),
-      (_.ownKeys_ = function () {
-        return this.keysAtom_.reportObserved(), _(this.target_);
-      }),
-      (_.keys_ = function () {
-        return this.keysAtom_.reportObserved(), Object.keys(this.target_);
-      }),
-      _
-    );
-  })();
-function _(_, _) {
-  if (_(_, _)) return _;
-  var _ = _?.name ?? `ObservableObject`;
-  return _(_, _, new _(_, new Map(), String(_), _(_))), _;
-}
-var _ = _(`ObservableObjectAdministration`, _);
-function _(_) {
-  return (
-    _[_] ||
-    (_[_] = {
-      get: function () {
-        return this[_].getObservablePropValue_(_);
-      },
-      set: function (_) {
-        return this[_].setObservablePropValue_(_, _);
-      },
-    })
-  );
-}
-function _(_) {
-  return _(_) ? _(_[_]) : !1;
-}
-function _(_, _, _) {
-  var _;
-  (_ = _.target_[_]) == null || delete _[_];
-}
-var _ = _(0),
-  _ = (function () {
-    var _ = !1,
-      _ = {};
-    return (
-      Object.defineProperty(_, "0", {
-        set: function () {
-          _ = !0;
-        },
-      }),
-      (Object.create(_)[0] = 1),
-      _ === !1
-    );
-  })(),
-  _ = 0,
-  _ = function () {};
-function _(_, _) {
-  Object.setPrototypeOf
-    ? Object.setPrototypeOf(_.prototype, _)
-    : _.prototype.__proto__ === void 0
-      ? (_.prototype = _)
-      : (_.prototype.__proto__ = _);
-}
-_(_, Array.prototype);
-var _ = (function (_) {
-  function _(_, _, _, _) {
-    var _;
-    return (
-      _ === void 0 && (_ = `ObservableArray`),
-      _ === void 0 && (_ = !1),
-      (_ = _.call(this) || this),
-      _(function () {
-        var _ = new _(_, _, _, !0);
-        (_.proxy_ = _),
-          _(_, _, _),
-          _ && _.length && _.spliceWithArray(0, 0, _),
-          _ && Object.defineProperty(_, "0", _);
-      }),
-      _
-    );
-  }
-  _(_, _);
-  var _ = _.prototype;
-  return (
-    (_.concat = function () {
-      this[_].atom_.reportObserved();
-      var _ = [...arguments];
-      return Array.prototype.concat.apply(
-        this.slice(),
-        _.map(function (_) {
-          return _(_) ? _.slice() : _;
-        }),
-      );
-    }),
-    (_[Symbol.iterator] = function () {
-      var _ = this,
-        _ = 0;
-      return _({
-        next: function () {
-          return _ < _.length
-            ? {
-                value: _[_++],
-                done: !1,
-              }
-            : {
-                done: !0,
-                value: void 0,
-              };
-        },
-      });
-    }),
-    _(_, [
-      {
-        key: `length`,
-        get: function () {
-          return this[_].getArrayLength_();
-        },
-        set: function (_) {
-          this[_].setArrayLength_(_);
-        },
-      },
-      {
-        key: Symbol.toStringTag,
-        get: function () {
-          return `Array`;
-        },
-      },
-    ])
-  );
-})(_);
-Object.entries(_).forEach(function (_) {
-  var _ = _[0],
-    _ = _[1];
-  _ !== `concat` && _(_.prototype, _, _);
-});
-function _(_) {
-  return {
-    enumerable: !1,
-    configurable: !0,
-    get: function () {
-      return this[_].get_(_);
-    },
-    set: function (_) {
-      this[_].set_(_, _);
-    },
-  };
-}
-function _(_) {
-  _(_.prototype, `` + _, _(_));
-}
-function _(_) {
-  if (_ > _) {
-    for (var _ = _; _ < _ + 100; _++) _(_);
-    _ = _;
-  }
-}
-_(1e3);
-function _(_, _, _) {
-  return new _(_, _, _);
-}
-function _(_, _) {
-  if (typeof _ == `object` && _) {
-    if (_(_)) return _ !== void 0 && _(23), _[_].atom_;
-    if (_(_)) return _.atom_;
-    if (_(_)) {
-      if (_ === void 0) return _.keysAtom_;
-      var _ = _.data_.get(_) || _.hasMap_.get(_);
-      return _ || _(25, _, _(_)), _;
-    }
-    if (_(_)) {
-      if (!_) return _(26);
-      var _ = _[_].values_.get(_);
-      return _ || _(27, _, _(_)), _;
-    }
-    if (_(_) || _(_) || _(_)) return _;
-  } else if (_(_) && _(_[_])) return _[_];
-  _(28);
-}
-function _(_, _) {
-  if ((_ || _(29), _ !== void 0)) return _(_(_, _));
-  if (_(_) || _(_) || _(_) || _(_) || _(_)) return _;
-  if (_[_]) return _[_];
-  _(24, _);
-}
-function _(_, _) {
-  var _;
-  if (_ !== void 0) _ = _(_, _);
-  else if (_(_)) return _.name;
-  else _ = _(_) || _(_) || _(_) ? _(_) : _(_);
-  return _.name_;
-}
-function _(_) {
-  var _ = _(),
-    _ = _(!0);
-  _();
-  try {
-    return _();
-  } finally {
-    _(), _(_), _(_);
-  }
-}
-var _ = _.toString;
-function _(_, _, _) {
-  return _ === void 0 && (_ = -1), _(_, _, _);
-}
-function _(_, _, _, _, _) {
-  if (_ === _) return _ !== 0 || 1 / _ == 1 / _;
-  if (_ == null || _ == null) return !1;
-  if (_ !== _) return _ !== _;
-  var _ = typeof _;
-  if (_ !== `function` && _ !== `object` && typeof _ != `object`) return !1;
-  var _ = _.call(_);
-  if (_ !== _.call(_)) return !1;
-  switch (_) {
-    case `[object RegExp]`:
-    case `[object String]`:
-      return `` + _ == `` + _;
-    case `[object Number]`:
-      return +_ == +_ ? (+_ == 0 ? 1 / _ == 1 / _ : +_ == +_) : +_ != +_;
-    case `[object Date]`:
-    case `[object Boolean]`:
-      return +_ == +_;
-    case `[object Symbol]`:
-      return (
-        typeof Symbol < `u` && Symbol.valueOf.call(_) === Symbol.valueOf.call(_)
-      );
-    case `[object Map]`:
-    case `[object Set]`:
-      _ >= 0 && _++;
-  }
-  (_ = _(_)), (_ = _(_));
-  var _ = _ === `[object Array]`;
-  if (!_) {
-    if (typeof _ != `object` || typeof _ != `object`) return !1;
-    var _ = _.constructor,
-      _ = _.constructor;
-    if (
-      _ !== _ &&
-      !(_(_) && _ instanceof _ && _(_) && _ instanceof _) &&
-      `constructor` in _ &&
-      `constructor` in _
-    )
+    case 2:
+    case 4:
       return !1;
   }
-  if (_ === 0) return !1;
-  _ < 0 && (_ = -1), (_ ||= []), (_ ||= []);
-  for (var _ = _.length; _--; ) if (_[_] === _) return _[_] === _;
-  if ((_.push(_), _.push(_), _)) {
-    if (((_ = _.length), _ !== _.length)) return !1;
-    for (; _--; ) if (!_(_[_], _[_], _ - 1, _, _)) return !1;
-  } else {
-    var _ = Object.keys(_),
-      _ = _.length;
-    if (Object.keys(_).length !== _) return !1;
-    for (var _ = 0; _ < _; _++) {
-      var _ = _[_];
-      if (!(_(_, _) && _(_[_], _[_], _ - 1, _, _))) return !1;
-    }
-  }
-  return _.pop(), _.pop(), !0;
+  return (
+    `IsAllowed` in _.preferenceControls && _.preferenceControls.IsAllowed(_)
+  );
+}
+var _ = {
+    name: `cookieSettings`,
+    options: {
+      secure: !0,
+      httpOnly: !1,
+      path: `/`,
+      sameSite: `none`,
+      maxAge: 31536e6,
+    },
+    preferenceControls: {
+      isTechnicallyNecessary: !0,
+    },
+  },
+  _ = {
+    name: `sessionid`,
+    options: {
+      secure: !0,
+      path: `/`,
+      sameSite: `none`,
+    },
+    preferenceControls: {
+      isTechnicallyNecessary: !0,
+    },
+  },
+  _ = {
+    name: `strResponsiveViewPrefs`,
+    options: {
+      maxAge: 31536e6,
+    },
+    preferenceControls: {
+      isTechnicallyNecessary: !0,
+    },
+  },
+  _ = {
+    name: `steamLoginSpoofSteamID`,
+    options: {
+      path: `/`,
+      secure: !0,
+    },
+    preferenceControls: {
+      isTechnicallyNecessary: !0,
+    },
+  };
+function _(_) {
+  if (!document.cookie) return;
+  let _ = document.cookie.match(`(^|; )` + _.name + `=([^;]*)`);
+  if (_ && _[2]) return decodeURIComponent(_[2]);
+}
+function _(_, _) {
+  if (!(`document` in globalThis) || !_(_)) return;
+  let _ = _.options?.path ?? `/`,
+    _ = ``;
+  _.options?.expires
+    ? (_ += `;expires=` + _.options.expires.toUTCString())
+    : _.options?.maxAge &&
+      (_ += `;max-age=` + Math.floor(_.options.maxAge / 1e3)),
+    _.options?.secure && (_ += `;secure`),
+    (document.cookie =
+      encodeURIComponent(_.name) +
+      `=` +
+      encodeURIComponent(_) +
+      _ +
+      `;path=` +
+      _);
 }
 function _(_) {
-  return _(_)
-    ? _.slice()
-    : _(_) || _(_) || _(_) || _(_)
-      ? Array.from(_.entries())
-      : _;
-}
-var _ = _().Iterator?.prototype || {};
-function _(_) {
-  return (_[Symbol.iterator] = _), Object.assign(Object.create(_), _);
+  return _(
+    {
+      ..._,
+      options: {
+        ..._.options,
+        expires: new Date(0),
+      },
+    },
+    ``,
+  );
 }
 function _() {
-  return this;
+  return window.SSR?.renderContext?.cookiePrefs;
 }
-[`Symbol`, `Map`, `Set`].forEach(function (_) {
-  _()[_] === void 0 &&
-    _(`MobX requires global '` + _ + `' to be available or polyfilled`);
-}),
-  typeof __MOBX_DEVTOOLS_GLOBAL_HOOK__ == `object` &&
-    __MOBX_DEVTOOLS_GLOBAL_HOOK__.injectMobx({
-      spy: _,
-      extras: {
-        getDebugName: _,
-      },
-      $mobx: _,
-    });
 var _ = _(_()),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
@@ -24752,164 +21271,216 @@ function _(_) {
   };
 }
 var _ = (function (_) {
+  return (
+    (_[(_.k_Success = 0)] = `k_Success`),
+    (_[(_.k_PrimaryDomainFail = 1)] = `k_PrimaryDomainFail`),
+    (_[(_.k_SecondaryDomainFail = 2)] = `k_SecondaryDomainFail`),
+    _
+  );
+})({});
+function _(_, _) {
+  let _ = Object.keys(_);
+  return (
+    _.length === Object.keys(_).length && _.every((_) => Object._(_[_], _[_]))
+  );
+}
+var _ = class {
+  m_setListeners = new Set();
+  m_snapshot;
+  m_bNotifyPending = !1;
+  m_transport;
+  m_strClientID;
+  m_msPollInterval;
+  m_activeTimerID;
+  m_rgRequestID;
+  m_strTokenToRevoke;
+  m_strChallengeURLValue = void 0;
+  get m_strChallengeURL() {
+    return this.m_strChallengeURLValue;
+  }
+  set m_strChallengeURL(_) {
+    (this.m_strChallengeURLValue = _), this.NotifyChanged();
+  }
+  m_onShowAgreement;
+  m_bRemoteInteractionValue = !1;
+  get m_bRemoteInteraction() {
+    return this.m_bRemoteInteractionValue;
+  }
+  set m_bRemoteInteraction(_) {
+    (this.m_bRemoteInteractionValue = _), this.NotifyChanged();
+  }
+  m_onCompleteCallback;
+  m_eFailureStateValue = 0;
+  get m_eFailureState() {
+    return this.m_eFailureStateValue;
+  }
+  set m_eFailureState(_) {
+    (this.m_eFailureStateValue = _), this.NotifyChanged();
+  }
+  m_strExtendedErrorMessageValue = ``;
+  get m_strExtendedErrorMessage() {
+    return this.m_strExtendedErrorMessageValue;
+  }
+  set m_strExtendedErrorMessage(_) {
+    (this.m_strExtendedErrorMessageValue = _), this.NotifyChanged();
+  }
+  m_onDeviceDetailsCallback;
+  constructor(_, _, _, _) {
+    (this.m_transport = _),
+      (this.m_onCompleteCallback = _),
+      (this.m_onDeviceDetailsCallback = _),
+      (this.m_onShowAgreement = _);
+  }
+  Subscribe(_) {
     return (
-      (_[(_.k_Success = 0)] = `k_Success`),
-      (_[(_.k_PrimaryDomainFail = 1)] = `k_PrimaryDomainFail`),
-      (_[(_.k_SecondaryDomainFail = 2)] = `k_SecondaryDomainFail`),
-      _
+      this.m_setListeners.add(_),
+      () => {
+        this.m_setListeners.delete(_);
+      }
     );
-  })({}),
-  _ = class {
-    m_transport;
-    m_strClientID;
-    m_msPollInterval;
-    m_activeTimerID;
-    m_rgRequestID;
-    m_strTokenToRevoke;
-    m_strChallengeURL = void 0;
-    m_onShowAgreement;
-    m_bRemoteInteraction = !1;
-    m_onCompleteCallback;
-    m_eFailureState = 0;
-    m_strExtendedErrorMessage = ``;
-    m_onDeviceDetailsCallback;
-    constructor(_, _, _, _) {
-      _(this),
-        (this.m_transport = _),
-        (this.m_onCompleteCallback = _),
-        (this.m_onDeviceDetailsCallback = _),
-        (this.m_onShowAgreement = _);
-    }
-    StartPolling(_ = !0) {
-      this.m_activeTimerID != null && this.StopPolling(),
-        _
-          ? this.PollForUpdate()
-          : (this.m_activeTimerID = window.setTimeout(
-              this.PollForUpdate,
-              this.m_msPollInterval,
-            ));
-    }
-    StopPolling() {
-      window.clearTimeout(this.m_activeTimerID),
-        (this.m_activeTimerID = void 0);
-    }
-    async PollForUpdate() {
-      try {
-        let _ = _.Init(_);
-        _.SetEMsg(_),
-          _.Body().set_client_id(this.m_strClientID),
-          _.Body().set_request_id(this.m_rgRequestID),
-          this.m_strTokenToRevoke &&
-            _.Body().set_token_to_revoke(this.m_strTokenToRevoke);
-        let _ = await _.PollAuthSessionStatus(this.m_transport, _),
-          _ = _.GetEResult();
-        if (_ !== 1) {
-          if (_ === 2) {
-            let _ = _.Hdr().transport_error();
-            if (
-              (_(
-                `Failed to poll auth session. Result ${_}. Transport Error: ${_}`,
-              ),
-              _ === 2 || _ === 3)
-            )
-              return this.m_transport.MakeReady(), this.StartPolling(!1), 1;
+  }
+  GetSnapshot() {
+    let _ = this.BuildSnapshot();
+    return (
+      (!this.m_snapshot || !_(this.m_snapshot, _)) && (this.m_snapshot = _),
+      this.m_snapshot
+    );
+  }
+  NotifyChanged() {
+    this.m_bNotifyPending ||
+      ((this.m_bNotifyPending = !0),
+      queueMicrotask(() => {
+        this.m_bNotifyPending = !1;
+        for (let _ of this.m_setListeners) _();
+      }));
+  }
+  StartPolling(_ = !0) {
+    this.m_activeTimerID != null && this.StopPolling(),
+      _
+        ? this.PollForUpdate()
+        : (this.m_activeTimerID = window.setTimeout(
+            this.PollForUpdate,
+            this.m_msPollInterval,
+          ));
+  }
+  StopPolling() {
+    window.clearTimeout(this.m_activeTimerID), (this.m_activeTimerID = void 0);
+  }
+  async PollForUpdate() {
+    try {
+      let _ = _.Init(_);
+      _.SetEMsg(_),
+        _.Body().set_client_id(this.m_strClientID),
+        _.Body().set_request_id(this.m_rgRequestID),
+        this.m_strTokenToRevoke &&
+          _.Body().set_token_to_revoke(this.m_strTokenToRevoke);
+      let _ = await _.PollAuthSessionStatus(this.m_transport, _),
+        _ = _.GetEResult();
+      if (_ !== 1) {
+        if (_ === 2) {
+          let _ = _.Hdr().transport_error();
+          if (
+            (_(
+              `Failed to poll auth session. Result ${_}. Transport Error: ${_}`,
+            ),
+            _ === 2 || _ === 3)
+          )
+            return this.m_transport.MakeReady(), this.StartPolling(!1), 1;
+        }
+        if (_ === 9 || _ === 27) this.m_eFailureState = 2;
+        else if (_ === 84) this.m_eFailureState = 5;
+        else if (_ == 118) {
+          let _ = _.Body().agreement_session_url();
+          if (
+            (_(!!_, `Missing agreement session URL for result`, _),
+            this.m_onShowAgreement)
+          )
+            this.m_onShowAgreement(_);
+          else {
+            let _ = location.href;
+            window.location.href = `${_}&redir=${encodeURIComponent(_)}`;
           }
-          if (_ === 9 || _ === 27) this.m_eFailureState = 2;
-          else if (_ === 84) this.m_eFailureState = 5;
-          else if (_ == 118) {
-            let _ = _.Body().agreement_session_url();
-            if (
-              (_(!!_, `Missing agreement session URL for result`, _),
-              this.m_onShowAgreement)
-            )
-              this.m_onShowAgreement(_);
-            else {
-              let _ = document.location.href;
-              window.location.href = `${_}&redir=${encodeURIComponent(_)}`;
-            }
-            return (
-              this.m_onCompleteCallback({
-                bSuccess: !1,
-              }),
-              _
-            );
-          } else
-            _(`Failed to poll auth session. Result: ${_}`),
-              (this.m_eFailureState = 1);
           return (
             this.m_onCompleteCallback({
               bSuccess: !1,
             }),
             _
           );
-        }
-        let {
-          new_challenge_url: _,
-          new_client_id: _,
-          refresh_token: _,
-          access_token: _,
-          account_name: _,
-          had_remote_interaction: _,
-          new_guard_data: _,
-        } = _.Body().toObject();
+        } else
+          _(`Failed to poll auth session. Result: ${_}`),
+            (this.m_eFailureState = 1);
         return (
-          (this.m_bRemoteInteraction = !!_),
-          _
-            ? (_(
-                !!_ && !!_,
-                `Missing access token or account name with refresh token`,
-              ),
-              this.m_onCompleteCallback({
-                bSuccess: !0,
-                strRefreshToken: _,
-                strAccessToken: _,
-                strAccountName: _,
-                strNewGuardData: _,
-              }),
-              _)
-            : (_ && (this.m_strChallengeURL = _),
-              _ && (this.m_strClientID = _),
-              this.StartPolling(!1),
-              _)
-        );
-      } catch (_) {
-        return (
-          _(`Failed to poll auth session. ${_}`),
-          (this.m_eFailureState = 1),
           this.m_onCompleteCallback({
             bSuccess: !1,
           }),
-          2
+          _
         );
       }
+      let {
+        new_challenge_url: _,
+        new_client_id: _,
+        refresh_token: _,
+        access_token: _,
+        account_name: _,
+        had_remote_interaction: _,
+        new_guard_data: _,
+      } = _.Body().toObject();
+      return (
+        (this.m_bRemoteInteraction = !!_),
+        _
+          ? (_(
+              !!_ && !!_,
+              `Missing access token or account name with refresh token`,
+            ),
+            this.m_onCompleteCallback({
+              bSuccess: !0,
+              strRefreshToken: _,
+              strAccessToken: _,
+              strAccountName: _,
+              strNewGuardData: _,
+            }),
+            _)
+          : (_ && (this.m_strChallengeURL = _),
+            _ && (this.m_strClientID = _),
+            this.StartPolling(!1),
+            _)
+      );
+    } catch (_) {
+      return (
+        _(`Failed to poll auth session. ${_}`),
+        (this.m_eFailureState = 1),
+        this.m_onCompleteCallback({
+          bSuccess: !1,
+        }),
+        2
+      );
     }
-    SetTokenToRevoke(_) {
-      this.m_strTokenToRevoke = _;
-    }
-    GetFailureState() {
-      return this.m_eFailureState;
-    }
-    GetExtendedErrorMessage() {
-      return this.m_strExtendedErrorMessage;
-    }
-    BHadRemoteInteraction() {
-      return this.m_bRemoteInteraction;
-    }
-    async GetDeviceDetails() {
-      let _ = await this.m_onDeviceDetailsCallback();
-      return _.fromObject(_);
-    }
-  };
-_([_], _.prototype, `m_strChallengeURL`, void 0),
-  _([_], _.prototype, `m_bRemoteInteraction`, void 0),
-  _([_], _.prototype, `m_eFailureState`, void 0),
-  _([_], _.prototype, `m_strExtendedErrorMessage`, void 0),
+  }
+  SetTokenToRevoke(_) {
+    this.m_strTokenToRevoke = _;
+  }
+  GetFailureState() {
+    return this.m_eFailureState;
+  }
+  GetExtendedErrorMessage() {
+    return this.m_strExtendedErrorMessage;
+  }
+  BHadRemoteInteraction() {
+    return this.m_bRemoteInteraction;
+  }
+  async GetDeviceDetails() {
+    let _ = await this.m_onDeviceDetailsCallback();
+    return _.fromObject(_);
+  }
+};
+_([_], _.prototype, `Subscribe`, null),
+  _([_], _.prototype, `GetSnapshot`, null),
   _([_], _.prototype, `PollForUpdate`, null),
   _([_], _.prototype, `SetTokenToRevoke`, null);
 function _(_) {
   let _ = new FormData();
-  _.append(`nonce`, _), _.append(`sessionid`, _());
-  let _ = new URL(document.location.href),
+  _.append(`nonce`, _), _.append(`sessionid`, _(_) ?? ``);
+  let _ = new URL(location.href),
     _ = new URLSearchParams(_.search);
   _.has(`need_password`) &&
     (_.delete(`need_password`), (_.search = _.toString())),
@@ -24981,609 +21552,390 @@ async function _(_, _) {
     domain: _.host,
   };
 }
-if (!_.useState)
-  throw Error(`mobx-react-lite requires React with Hooks support`);
-if (!_)
-  throw Error(
-    `mobx-react-lite@3 requires mobx at least version 6 to be available`,
-  );
-function _(_) {
-  _();
-}
-function _(_) {
-  (_ ||= _),
-    _({
-      reactionScheduler: _,
-    });
-}
-function _(_) {
-  return _(_);
-}
-var _ = !1;
-function _() {
-  return _;
-}
-var _ = 1e4,
-  _ = 1e4,
-  _ = (function () {
-    function _(_) {
-      var _ = this;
-      Object.defineProperty(this, "finalize", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: _,
-      }),
-        Object.defineProperty(this, "registrations", {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: new Map(),
-        }),
-        Object.defineProperty(this, "sweepTimeout", {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: void 0,
-        }),
-        Object.defineProperty(this, "sweep", {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: function (_) {
-            _ === void 0 && (_ = _),
-              clearTimeout(_.sweepTimeout),
-              (_.sweepTimeout = void 0);
-            var _ = Date.now();
-            _.registrations.forEach(function (_, _) {
-              _ - _.registeredAt >= _ &&
-                (_.finalize(_.value), _.registrations.delete(_));
-            }),
-              _.registrations.size > 0 && _.scheduleSweep();
-          },
-        }),
-        Object.defineProperty(this, "finalizeAllImmediately", {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: function () {
-            _.sweep(0);
-          },
-        });
+var _ = class _ {
+  m_ulSteamID = _.UZERO;
+  constructor(_ = 0, _, _, _) {
+    _ instanceof _
+      ? (this.m_ulSteamID = _.m_ulSteamID)
+      : typeof _ == `string`
+        ? (this.m_ulSteamID = _.fromString(_, !0))
+        : _ && _ && _ !== void 0
+          ? this.SetFromComponents(_, _, _, _)
+          : (this.m_ulSteamID = _ ? _.fromNumber(_, !0) : _.UZERO);
+  }
+  static InitFromAccountID(_, _) {
+    return new _(Number(_), _, 1, 1);
+  }
+  static InitFromClanID(_, _) {
+    return new _(Number(_), _, 7, 0);
+  }
+  static ToAccountID(_) {
+    return _.ExtractAccountID(_.fromString(_, !0));
+  }
+  static ExtractAccountID(_) {
+    return _.getLowBitsUnsigned();
+  }
+  GetAccountID() {
+    return _.ExtractAccountID(this.m_ulSteamID);
+  }
+  GetInstance() {
+    return this.m_ulSteamID.getHighBitsUnsigned() & 1048575;
+  }
+  GetAccountType() {
+    return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
+  }
+  GetUniverse() {
+    return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
+  }
+  ConvertTo64BitString() {
+    return this.m_ulSteamID.toString();
+  }
+  Render() {
+    switch (this.GetAccountType()) {
+      case 0:
+        return `[I:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+      case 7:
+        return `[g:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+      case 4:
+        return (
+          `[A:` +
+          this.GetUniverse() +
+          `:` +
+          this.GetAccountID() +
+          `:` +
+          this.GetInstance() +
+          `]`
+        );
+      case 3:
+        return `[G:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+      case 2:
+        return (
+          `[M:` +
+          this.GetUniverse() +
+          `:` +
+          this.GetAccountID() +
+          `:` +
+          this.GetInstance() +
+          `]`
+        );
+      case 5:
+        return `[P:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+      case 6:
+        return `[C:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
+      default:
+        return `[U:` + this.GetUniverse() + `:` + this.GetAccountID() + `]`;
     }
-    return (
-      Object.defineProperty(_.prototype, "register", {
-        enumerable: !1,
-        configurable: !0,
-        writable: !0,
-        value: function (_, _, _) {
-          this.registrations.set(_, {
-            value: _,
-            registeredAt: Date.now(),
-          }),
-            this.scheduleSweep();
-        },
-      }),
-      Object.defineProperty(_.prototype, "unregister", {
-        enumerable: !1,
-        configurable: !0,
-        writable: !0,
-        value: function (_) {
-          this.registrations.delete(_);
-        },
-      }),
-      Object.defineProperty(_.prototype, "scheduleSweep", {
-        enumerable: !1,
-        configurable: !0,
-        writable: !0,
-        value: function () {
-          this.sweepTimeout === void 0 &&
-            (this.sweepTimeout = setTimeout(this.sweep, _));
-        },
-      }),
-      _
+  }
+  static InitFromString(_) {
+    let _ = new _();
+    try {
+      let [_, _, _, _, _] =
+          _.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
+        _ = Number(_),
+        _ = Number(_),
+        _ = _ ? Number(_) : 1;
+      switch (_) {
+        case `I`:
+          _.SetFromComponents(_, _, 0, _);
+          break;
+        case `g`:
+          _.SetFromComponents(_, 0, 7, _);
+          break;
+        case `A`:
+          _.SetFromComponents(_, _, 4, _);
+          break;
+        case `G`:
+          _.SetFromComponents(_, _, 3, _);
+          break;
+        case `M`:
+          _.SetFromComponents(_, _, 2, _);
+          break;
+        case `P`:
+          _.SetFromComponents(_, _, 5, _);
+          break;
+        case `C`:
+          _.SetFromComponents(_, _, 6, _);
+          break;
+        case `U`:
+          _.SetFromComponents(_, _, 1, _);
+      }
+    } catch {}
+    return _;
+  }
+  BIsValid() {
+    let _ = this.GetAccountType();
+    if (_ <= 0 || _ >= 11) return !1;
+    let _ = this.GetUniverse();
+    if (_ <= 0 || _ >= 5) return !1;
+    if (_ == 1) {
+      if (this.GetAccountID() == 0 || this.GetInstance() > 4) return !1;
+    } else if (_ == 7) {
+      if (this.GetAccountID() == 0 || this.GetInstance() != 0) return !1;
+    } else if (_ == 3 && this.GetAccountID() == 0) return !1;
+    return !0;
+  }
+  BIsIndividualAccount() {
+    return this.GetAccountType() == 1;
+  }
+  BIsClanAccount() {
+    return this.GetAccountType() == 7;
+  }
+  SetAccountID(_) {
+    this.m_ulSteamID = new _(_, this.m_ulSteamID.getHighBitsUnsigned(), !0);
+  }
+  SetInstance(_) {
+    this.SetFromComponents(
+      this.GetAccountID(),
+      _,
+      this.GetAccountType(),
+      this.GetUniverse(),
     );
-  })(),
-  _ = new (typeof FinalizationRegistry < `u` ? FinalizationRegistry : _)(
-    function (_) {
-      var _;
-      (_ = _.reaction) == null || _.dispose(), (_.reaction = null);
-    },
-  ),
-  _ = _((_) => {
-    var _ = _();
-    function _(_, _) {
-      return (_ === _ && (_ !== 0 || 1 / _ == 1 / _)) || (_ !== _ && _ !== _);
-    }
-    var _ = typeof Object._ == `function` ? Object._ : _,
-      _ = _.useState,
-      _ = _.useEffect,
-      _ = _.useLayoutEffect,
-      _ = _.useDebugValue;
-    function _(_, _) {
-      var _ = _(),
-        _ = _({
-          inst: {
-            value: _,
-            getSnapshot: _,
-          },
+  }
+  SetAccountType(_) {
+    this.SetFromComponents(
+      this.GetAccountID(),
+      this.GetInstance(),
+      _,
+      this.GetUniverse(),
+    );
+  }
+  SetUniverse(_) {
+    this.SetFromComponents(
+      this.GetAccountID(),
+      this.GetInstance(),
+      this.GetAccountType(),
+      _,
+    );
+  }
+  SetFromComponents(_, _, _, _) {
+    let _ = ((_ & 255) << 24) + ((_ & 15) << 20) + (_ & 1048575),
+      _ = _ & 4294967295;
+    this.m_ulSteamID = new _(_, _, !0);
+  }
+};
+function _(_) {
+  try {
+    if (!_ || typeof _ != `string`) return null;
+    let _ = _.split(`.`);
+    if (_.length !== 3) return null;
+    let [_, _] = _,
+      _ = _(_),
+      _ = _(_);
+    return !_ || !_
+      ? null
+      : {
+          header: JSON.parse(_),
+          body: JSON.parse(_),
+        };
+  } catch (_) {
+    return (
+      console.error(`Exception while attempting to decode token: "${_}"`), null
+    );
+  }
+}
+function _(_) {
+  return _ ? _.body.exp : 0;
+}
+function _(_) {
+  return _ ? _.body.nbf || _.body.iat : 0;
+}
+function _(_) {
+  let _ = _(_),
+    _ = _(_),
+    _ = 900,
+    _ = _ - _;
+  return _ < 1350 && (_ = _ <= 60 ? 0 : 60), _(_) - _ < Date.now() / 1e3;
+}
+function _(_) {
+  return atob(_.replace(/-/g, `+`).replace(/_/g, `/`));
+}
+var _ = class {
+    m_ServiceTransport;
+    m_AnonymousServiceTransport;
+    m_strWebAPIBaseURL;
+    m_webApiAccessToken = ``;
+    m_bJsonMode = !1;
+    m_bJWTToken = !1;
+    m_fnRequestNewAccessToken;
+    m_refreshAccessTokenPromise;
+    m_dtLastExpireCheck = 0;
+    m_strSpoofedSteamID = ``;
+    constructor(_, _ = ``, _ = !1, _) {
+      (this.m_strWebAPIBaseURL = _),
+        (this.m_webApiAccessToken = _),
+        (this.m_bJsonMode = _),
+        (this.m_fnRequestNewAccessToken = _),
+        (this.m_bJWTToken = _(_) != null),
+        (this.m_ServiceTransport = {
+          SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+            bSendAuth: !0,
+          }),
+          SendNotification: this.SendNotification.bind(this, {
+            bSendAuth: !0,
+          }),
+          MakeReady: this.MakeReady.bind(this),
         }),
-        _ = _[0].inst,
-        _ = _[1];
+        (this.m_AnonymousServiceTransport = {
+          SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+            bSendAuth: !1,
+          }),
+          SendNotification: this.SendNotification.bind(this, {
+            bSendAuth: !1,
+          }),
+          MakeReady: this.MakeReady.bind(this),
+        });
+      let _ = _(_);
+      _ && /[0-9]+/g.test(_) && (this.m_strSpoofedSteamID = _);
+    }
+    WaitUntilLoggedOn() {
+      return Promise.resolve();
+    }
+    GetServerRTime32() {
+      return Number(new Date());
+    }
+    get steamid() {
+      return new _();
+    }
+    RTime32ToDate(_) {
+      return new Date(_ * 1e3);
+    }
+    MakeReady() {
+      return Promise.resolve({
+        result: 1,
+        message: `ready`,
+      });
+    }
+    GetServiceTransport() {
+      return this.m_ServiceTransport;
+    }
+    GetWebAPIAccessToken() {
+      return this.m_webApiAccessToken;
+    }
+    GetAnonymousServiceTransport() {
+      return this.m_AnonymousServiceTransport;
+    }
+    async SendMsgAndAwaitResponse(_, _, _, _, _) {
+      let _,
+        _ = 0;
+      try {
+        if (this.m_bJWTToken && _.bSendAuth && this.m_webApiAccessToken) {
+          let _ = Date.now() / 1e3;
+          this.m_refreshAccessTokenPromise
+            ? await this.m_refreshAccessTokenPromise
+            : (window.bForceTokenRefresh ||
+                (this.m_fnRequestNewAccessToken &&
+                  _ - this.m_dtLastExpireCheck > 60)) &&
+              ((this.m_dtLastExpireCheck = _),
+              _(_(this.m_webApiAccessToken)) &&
+                (await this.AttemptTokenRefresh()));
+        }
+        let _ = await this.Send(_, _, _, _);
+        if (((_ = _.status), _ == 200)) {
+          if (
+            ((_ = _.Init(_, 147)),
+            _.headers &&
+              (_.headers.get(`x-eresult`) &&
+                _.Hdr().set_eresult(parseInt(_.headers.get(`x-eresult`))),
+              _.headers.get(`x-error_message`) &&
+                _.Hdr().set_error_message(_.headers.get(`x-error_message`))),
+            this.m_bJsonMode)
+          )
+            _.SetBodyJSON(await _.json());
+          else {
+            let _ = new _(await _.arrayBuffer());
+            _.ReadBodyFromBuffer(_, _);
+          }
+        }
+      } catch {}
+      let _ = _ === 401;
+      if (!_) {
+        let _ = _ ? `Unauthorized` : void 0;
+        _ = this.CreateFailedMsgProtobuf(_, 3, _);
+      }
       return (
-        _(
-          function () {
-            (_.value = _),
-              (_.getSnapshot = _),
-              _(_) &&
-                _({
-                  inst: _,
-                });
-          },
-          [_, _, _],
-        ),
-        _(
-          function () {
-            return (
-              _(_) &&
-                _({
-                  inst: _,
-                }),
-              _(function () {
-                _(_) &&
-                  _({
-                    inst: _,
-                  });
-              })
-            );
-          },
-          [_],
-        ),
-        _(_),
+        _ &&
+          !this.m_refreshAccessTokenPromise &&
+          this.m_bJWTToken &&
+          _.bSendAuth &&
+          this.m_fnRequestNewAccessToken &&
+          this.m_webApiAccessToken &&
+          (await this.AttemptTokenRefresh()),
         _
       );
     }
-    function _(_) {
-      var _ = _.getSnapshot;
-      _ = _.value;
-      try {
-        var _ = _();
-        return !_(_, _);
-      } catch {
-        return !0;
-      }
+    SendNotification(_, _, _, _) {
+      return this.Send(_, _, _, _), !0;
     }
-    function _(_, _) {
-      return _();
-    }
-    var _ =
-      typeof window > `u` ||
-      window.document === void 0 ||
-      window.document.createElement === void 0
-        ? _
-        : _;
-    _.useSyncExternalStore =
-      _.useSyncExternalStore === void 0 ? _ : _.useSyncExternalStore;
-  }),
-  _ = _((_, _) => {
-    _.exports = _();
-  })(),
-  _ = function () {};
-function _(_) {
-  _.reaction = new _(`observer${_.name}`, function () {
-    var _;
-    (_.stateVersion = Symbol()), (_ = _.onStoreChange) == null || _.call(_);
-  });
-}
-function _(_, _) {
-  if ((_ === void 0 && (_ = `observed`), _())) return _();
-  var _ = _.useRef(null);
-  if (!_.current) {
-    var _ = {
-      reaction: null,
-      onStoreChange: null,
-      stateVersion: Symbol(),
-      name: _,
-      subscribe: function (_) {
+    Send(_, _, _, _) {
+      let _ = this.CreateWebAPIURL(_),
+        _ = _.SerializeBody(),
+        _ = _.fromByteArray(_),
+        _ = _.eWebAPIKeyRequirement,
+        _ = _.ePrivilege == 0 && _ == 1,
+        _ = {},
+        _ = new URLSearchParams();
+      if (
+        (!_.bSendAuth &&
+          _ != 1 &&
+          console.error(
+            `Attempting to invoke service ${_} without auth, but auth is required.`,
+          ),
+        _.bSendAuth,
+        this.m_webApiAccessToken &&
+          _.bSendAuth &&
+          !_ &&
+          (_.append(`access_token`, this.m_webApiAccessToken),
+          this.m_strSpoofedSteamID &&
+            _.append(`spoof_steamid`, this.m_strSpoofedSteamID)),
+        _.bConstMethod)
+      )
         return (
-          _.unregister(_),
-          (_.onStoreChange = _),
-          _.reaction || (_(_), (_.stateVersion = Symbol())),
-          function () {
-            var _;
-            (_.onStoreChange = null),
-              (_ = _.reaction) == null || _.dispose(),
-              (_.reaction = null);
-          }
+          _.append(`origin`, self.origin),
+          this.m_bJsonMode
+            ? _.append(`input_json`, JSON.stringify(_.Body().toObject()))
+            : _.append(`input_protobuf_encoded`, _),
+          fetch(`${_}?${_.toString()}`, _)
         );
-      },
-      getSnapshot: function () {
-        return _.stateVersion;
-      },
-    };
-    _.current = _;
-  }
-  var _ = _.current;
-  _.reaction || (_(_), _.register(_, _, _)),
-    _.useDebugValue(_.reaction, _),
-    (0, _.useSyncExternalStore)(_.subscribe, _.getSnapshot, _);
-  var _, _;
-  if (
-    (_.reaction.track(function () {
-      try {
-        _ = _();
-      } catch (_) {
-        _ = _;
+      {
+        let _ = new FormData();
+        return (
+          this.m_bJsonMode
+            ? _.append(`input_json`, JSON.stringify(_.Body().toObject()))
+            : _.append(`input_protobuf_encoded`, _),
+          fetch(`${_}?${_.toString()}`, {
+            ..._,
+            method: `POST`,
+            body: _,
+          })
+        );
       }
-    }),
-    _)
-  )
-    throw _;
-  return _;
-}
-var _ = typeof Symbol == `function` && Symbol.for,
-  _ = _
-    ? Symbol.for(`react.forward_ref`)
-    : typeof _.forwardRef == `function` &&
-      (0, _.forwardRef)(function (_) {
-        return null;
-      }).$$typeof,
-  _ = _
-    ? Symbol.for(`react.memo`)
-    : typeof _.memo == `function` &&
-      (0, _.memo)(function (_) {
-        return null;
-      }).$$typeof;
-function _(_, _) {
-  if (_ && _.$$typeof === _)
-    throw Error(
-      "[mobx-react-lite] You are trying to use `observer` on a function component wrapped in either another `observer` or `React.memo`. The observer already applies 'React.memo' for you.",
-    );
-  if (_()) return _;
-  var _ = _?.forwardRef ?? !1,
-    _ = _,
-    _ = _.displayName || _.name;
-  if (
-    _ &&
-    _.$$typeof === _ &&
-    ((_ = !0), (_ = _.render), typeof _ != `function`)
-  )
-    throw Error(
-      "[mobx-react-lite] `render` property of ForwardRef was not a function",
-    );
-  var _ = function (_, _) {
-    return _(function () {
-      return _(_, _);
-    }, _);
-  };
-  return (
-    (_.displayName = _.displayName),
-    Object.defineProperty(_, "name", {
-      value: _.name,
-      writable: !0,
-      configurable: !0,
-    }),
-    _.contextTypes && (_.contextTypes = _.contextTypes),
-    _ && (_ = (0, _.forwardRef)(_)),
-    (_ = (0, _.memo)(_)),
-    _(_, _),
-    _
-  );
-}
-var _ = {
-  $$typeof: !0,
-  render: !0,
-  compare: !0,
-  type: !0,
-  displayName: !0,
-};
-function _(_, _) {
-  Object.keys(_).forEach(function (_) {
-    _[_] || Object.defineProperty(_, _, Object.getOwnPropertyDescriptor(_, _));
-  });
-}
-_(_.unstable_batchedUpdates), _.finalizeAllImmediately;
-function _(_, _) {
-  return _ === void 0 && (_ = `observed`), _(_, _);
-}
-function _(_, _) {
-  if (_(_, _)) return !0;
-  if (typeof _ != `object` || !_ || typeof _ != `object` || !_) return !1;
-  var _ = Object.keys(_),
-    _ = Object.keys(_);
-  if (_.length !== _.length) return !1;
-  for (var _ = 0; _ < _.length; _++)
-    if (!Object.hasOwnProperty.call(_, _[_]) || !_(_[_[_]], _[_[_]])) return !1;
-  return !0;
-}
-function _(_, _) {
-  return _ === _ ? _ !== 0 || 1 / _ == 1 / _ : _ !== _ && _ !== _;
-}
-var _ = Symbol(`patchMixins`),
-  _ = Symbol(`patchedDefinition`);
-function _(_, _) {
-  var _ = (_[_] = _[_] || {}),
-    _ = (_[_] = _[_] || {});
-  return (_.locks = _.locks || 0), (_.methods = _.methods || []), _;
-}
-function _(_, _) {
-  var _ = this,
-    _ = [...arguments].slice(2);
-  _.locks++;
-  try {
-    var _;
-    return _ != null && (_ = _.apply(this, _)), _;
-  } finally {
-    _.locks--,
-      _.locks === 0 &&
-        _.methods.forEach(function (_) {
-          _.apply(_, _);
-        });
-  }
-}
-function _(_, _) {
-  return function () {
-    var _ = [...arguments];
-    _.call.apply(_, [this, _, _].concat(_));
-  };
-}
-function _(_, _, _) {
-  var _ = _(_, _);
-  _.methods.indexOf(_) < 0 && _.methods.push(_);
-  var _ = Object.getOwnPropertyDescriptor(_, _);
-  if (!(_ && _[_])) {
-    var _ = _[_],
-      _ = _(_, _, _ ? _.enumerable : void 0, _, _);
-    Object.defineProperty(_, _, _);
-  }
-}
-function _(_, _, _, _, _) {
-  var _,
-    _ = _(_, _);
-  return (
-    (_ = {}),
-    (_[_] = !0),
-    (_.get = function () {
-      return _;
-    }),
-    (_.set = function (_) {
-      if (this === _) _ = _(_, _);
-      else {
-        var _ = _(this, _, _, _, _);
-        Object.defineProperty(this, _, _);
-      }
-    }),
-    (_.configurable = !0),
-    (_.enumerable = _),
-    _
-  );
-}
-var _ = Symbol(`ObserverAdministration`),
-  _ = Symbol(`isMobXReactObserver`);
-function _(_) {
-  return (
-    _[_] ??
-    (_[_] = {
-      reaction: null,
-      mounted: !1,
-      reactionInvalidatedBeforeMount: !1,
-      forceUpdate: null,
-      name: _(_.constructor),
-      state: void 0,
-      props: void 0,
-      context: void 0,
-    })
-  );
-}
-function _(_) {
-  var _ = _.prototype;
-  if (_[_]) {
-    var _ = _(_);
-    throw Error(
-      `The provided component class (` +
-        _ +
-        `) has already been declared as an observer component.`,
-    );
-  }
-  if (((_[_] = !0), _.componentWillReact))
-    throw Error(
-      `The componentWillReact life-cycle event is no longer supported`,
-    );
-  if (_.__proto__ !== _.PureComponent) {
-    if (!_.shouldComponentUpdate) _.shouldComponentUpdate = _;
-    else if (_.shouldComponentUpdate !== _)
-      throw Error(
-        `It is not allowed to use shouldComponentUpdate in observer based components.`,
-      );
-  }
-  var _ = _.render;
-  if (typeof _ != `function`) {
-    var _ = _(_);
-    throw Error(
-      `[mobx-react] class component (` +
-        _ +
-        ") is missing `render` method.\n`observer` requires `render` being a function defined on prototype.\n`render = () => {}` or `render = function() {}` is not supported.",
-    );
-  }
-  _.render = function () {
-    return (
-      Object.defineProperty(this, "render", {
-        configurable: !1,
-        writable: !1,
-        value: _() ? _ : _.call(this, _),
-      }),
-      this.render()
-    );
-  };
-  var _ = _.componentDidMount;
-  return (
-    (_.componentDidMount = function () {
-      var _ = this,
-        _ = _(this);
+    }
+    CreateWebAPIURL(_) {
+      let _ = _.match(/([^.]+)\.(.+)#(\d+)/);
+      if (!_ || _.length != 4) throw `Invalid service name: ${_}`;
+      return `${this.m_strWebAPIBaseURL}I${_[1]}Service/${_[2]}/v${_[3]}`;
+    }
+    CreateFailedMsgProtobuf(_, _, _) {
+      let _ = _.Init(_);
       return (
-        (_.mounted = !0),
-        _.unregister(this),
-        (_.forceUpdate = function () {
-          return _.forceUpdate();
-        }),
-        (!_.reaction || _.reactionInvalidatedBeforeMount) && _.forceUpdate(),
-        _?.apply(this, arguments)
+        _.Hdr().set_eresult(2),
+        _.Hdr().set_transport_error(_),
+        _ && _.Hdr().set_error_message(_),
+        _
       );
-    }),
-    _(_, `componentWillUnmount`, function () {
-      var _;
-      if (!_()) {
-        var _ = _(this);
-        (_ = _.reaction) == null || _.dispose(),
-          (_.reaction = null),
-          (_.forceUpdate = null),
-          (_.mounted = !1),
-          (_.reactionInvalidatedBeforeMount = !1);
+    }
+    async AttemptTokenRefresh() {
+      if (this.m_fnRequestNewAccessToken) {
+        this.m_refreshAccessTokenPromise = this.m_fnRequestNewAccessToken(
+          this.m_webApiAccessToken,
+        );
+        let _ = await this.m_refreshAccessTokenPromise;
+        (this.m_refreshAccessTokenPromise = void 0),
+          _ && (this.m_webApiAccessToken = _);
       }
-    }),
-    _
-  );
-}
-function _(_) {
-  return _.displayName || _.name || `<component>`;
-}
-function _(_) {
-  var _ = _.bind(this),
-    _ = _(this);
-  function _() {
-    _.reaction || ((_.reaction = _(_)), _.mounted || _.register(this, _, this));
-    var _ = void 0,
-      _ = void 0;
-    if (
-      (_.reaction.track(function () {
-        try {
-          _ = _(!1, _);
-        } catch (_) {
-          _ = _;
-        }
-      }),
-      _)
-    )
-      throw _;
-    return _;
-  }
-  return _;
-}
-function _(_) {
-  return new _(_.name + `.render()`, function () {
-    if (!_.mounted) {
-      _.reactionInvalidatedBeforeMount = !0;
-      return;
     }
-    try {
-      _.forceUpdate == null || _.forceUpdate();
-    } catch {
-      var _;
-      (_ = _.reaction) == null || _.dispose(), (_.reaction = null);
-    }
-  });
-}
-function _(_, _) {
-  return (
-    _() &&
-      console.warn(
-        `[mobx-react] It seems that a re-rendering of a React component is triggered while in static (server-side) mode. Please make sure components are rendered only once server-side.`,
-      ),
-    this.state !== _ || !_(this.props, _)
-  );
-}
-function _(_, _) {
-  if (_ && _.kind !== `class`)
-    throw Error(`The @observer decorator can be used on classes only`);
-  return (
-    _.isMobxInjector === !0 &&
-      console.warn(
-        "Mobx observer: You are trying to use `observer` on a component that already has `inject`. Please apply `observer` before applying `inject`",
-      ),
-    Object.prototype.isPrototypeOf.call(_.Component, _) ||
-    Object.prototype.isPrototypeOf.call(_.PureComponent, _)
-      ? _(_)
-      : _(_)
-  );
-}
-if ((`19.1.1`.split(`.`)[0], !_.Component))
-  throw Error(`mobx-react requires React to be available`);
-if (!_) throw Error(`mobx-react requires mobx to be available`);
-function _(_, _, _) {
-  return _(
-    (_) => {
-      if (_ && _)
-        return _.addEventListener(_, _, _), () => _.removeEventListener(_, _);
-    },
-    [_, _],
-  );
-}
-function _(_, _, _, _) {
-  _.useEffect(() => {
-    if (_ && _)
-      return _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _);
-  }, [_, _, _]);
-}
-function _(_, _, _, _) {
-  return _(
-    _,
-    `message`,
-    _.useCallback(
-      function (_) {
-        _.data === _ && _(_, _);
-      },
-      [_, _, _],
-    ),
-    _,
-  );
-}
-function _(_, _) {
-  return _(
-    (_) => {
-      if (!_) return;
-      let _ = _(_.ownerDocument.defaultView, (_) => {
-        _(_[0]);
-      });
-      return _.observe(_), () => _.unobserve(_);
-    },
-    [_, _],
-  );
-}
-function _(_) {
-  return _(
-    _,
-    _.useCallback(
-      (_, _) =>
-        _.ResizeObserver
-          ? new _.ResizeObserver(_)
-          : (_(!1, `ResizeObserver is not available`),
-            {
-              observe: () => {},
-              unobserve: () => {},
-              disconnect: () => {},
-            }),
-      [],
-    ),
-  );
-}
-function _(_, _) {
-  let _ = _.lastIndexOf(`.`);
-  if (_ == -1) return !1;
-  let _ = _.substring(0, _),
-    _ = _.substring(_ + 1),
-    _ = _(_, _);
-  return _ !== null && typeof _[_] == `function`;
-}
-function _(_, _) {
-  let _ = (_) => _ && typeof _ == `object`,
-    _ = _?.SteamClient;
-  for (let _ of _.split(`.`)) {
-    if (!_(_) || !(_ in _)) return null;
-    _ = _[_];
-  }
-  return _(_) ? _ : null;
-}
-var _ = class _ extends _.Message {
+  },
+  _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
@@ -27036,7 +23388,13 @@ var _ = class _ extends _.Message {
   _.RemoveAuthenticatorViaChallengeContinue = _;
 })((_ ||= {}));
 var _ = class extends _ {
-  m_eStatus = 0;
+  m_eStatusValue = 0;
+  get m_eStatus() {
+    return this.m_eStatusValue;
+  }
+  set m_eStatus(_) {
+    (this.m_eStatusValue = _), this.NotifyChanged();
+  }
   m_steamid;
   m_strAccountName;
   m_strConfirmationAssociatedMessage = ``;
@@ -27045,7 +23403,13 @@ var _ = class extends _ {
   m_weakAuthWebInterface;
   m_onGetMachineAuth;
   m_replacementAuthenticator;
-  m_strErrorReference = ``;
+  m_strErrorReferenceValue = ``;
+  get m_strErrorReference() {
+    return this.m_strErrorReferenceValue;
+  }
+  set m_strErrorReference(_) {
+    (this.m_strErrorReferenceValue = _), this.NotifyChanged();
+  }
   m_onLoginComplete;
   constructor(_) {
     super(
@@ -27054,9 +23418,21 @@ var _ = class extends _ {
       _.onDeviceDetails,
       _.onShowAgreement,
     ),
-      _(this),
       (this.m_onLoginComplete = _.onComplete),
       (this.m_onGetMachineAuth = _.onGetMachineAuth);
+  }
+  BuildSnapshot() {
+    return {
+      strAccountName: this.GetAccountName(),
+      steamid: this.GetSteamID(),
+      eFailureState: this.GetFailureState(),
+      strExtendedErrorMessage: this.GetExtendedErrorMessage(),
+      strErrorReference: this.GetErrorReference(),
+      strConfirmationAssociatedMessage: this.GetConfirmationAssociatedMessage(),
+      eStatus: this.GetStatus(),
+      bCanGoBack: this.BCanGoBack(),
+      replacementAuthenticator: this.GetReplacementAuthenticator(),
+    };
   }
   async Start(_, _, _) {
     if (this.m_eStatus !== 0 && this.m_eStatus !== 2)
@@ -27088,8 +23464,9 @@ var _ = class extends _ {
         _.Body().set_encrypted_password(_ ?? void 0),
         _.Body().set_encryption_timestamp(_.timestamp),
         _.Body().set_remember_login(!!_),
-        _.Body().set_persistence(+!!_),
-        _.Body().set_website_id(_.WEBSITE_ID);
+        _.Body().set_persistence(+!!_);
+      let _ = _();
+      _ && _.Body().set_website_id(_.WEBSITE_ID);
       try {
         _.Body().set_device_details(await this.GetDeviceDetails());
       } catch (_) {
@@ -27103,147 +23480,138 @@ var _ = class extends _ {
       }
       await this.m_transport.MakeReady();
       let _ = await _.BeginAuthSessionViaCredentials(this.m_transport, _);
-      return (
-        _.DEBUG_LogToConsole(),
-        _(async () => {
-          let _ = _.GetEResult(),
-            _ = _.Hdr().transport_error();
-          if (_ !== 1)
-            switch (_) {
-              case 5:
-                return (this.m_eStatus = 2), _;
-              case 20:
-              case 3:
-                return this.SetFailureState(_.Network, _.EResult(20)), _;
-              case 84:
-                return (
-                  this.SetFailureState(_.RateLimitExceeded, _.EResult(_)), _
-                );
-              case 118: {
-                let _ = _.Body().agreement_session_url();
-                if (
-                  (_(!!_, `Missing agreement session URL for result`, _),
-                  this.m_onShowAgreement)
-                )
-                  this.m_onShowAgreement(_);
-                else {
-                  let _ = document.location.href;
-                  window.location.href = `${_}&redir=${encodeURIComponent(_)}`;
-                }
-                return (
-                  this.m_onCompleteCallback({
-                    bSuccess: !1,
-                  }),
-                  (this.m_eStatus = 0),
-                  _
-                );
-              }
-              default:
-                return (
-                  _(
-                    `Failed to start auth session. Result: ${_} Transport: ${_}`,
-                  ),
-                  this.SetFailureState(
-                    _.Generic,
-                    _.EResult(_),
-                    _.Body().extended_error_message(),
-                  ),
-                  this.m_onCompleteCallback({
-                    bSuccess: !1,
-                  }),
-                  _
-                );
+      _.DEBUG_LogToConsole();
+      let _ = _.GetEResult(),
+        _ = _.Hdr().transport_error();
+      if (_ !== 1)
+        switch (_) {
+          case 5:
+            return (this.m_eStatus = 2), _;
+          case 20:
+          case 3:
+            return this.SetFailureState(_.Network, _.EResult(20)), _;
+          case 84:
+            return this.SetFailureState(_.RateLimitExceeded, _.EResult(_)), _;
+          case 118: {
+            let _ = _.Body().agreement_session_url();
+            if (
+              (_(!!_, `Missing agreement session URL for result`, _),
+              this.m_onShowAgreement)
+            )
+              this.m_onShowAgreement(_);
+            else {
+              let _ = location.href;
+              window.location.href = `${_}&redir=${encodeURIComponent(_)}`;
             }
-          this.m_strAccountName = _;
-          let {
-            client_id: _,
-            request_id: _,
-            interval: _,
-            allowed_confirmations: _ = [],
-            steamid: _,
-            weak_token: _,
-          } = _.Body().toObject();
-          if (
-            (_(
-              _ !== void 0 && !!_ && !!_,
-              `Missing poll interval, client ID, or steamid for result`,
-              _,
-            ),
-            (this.m_msPollInterval = _ * 1e3),
-            (this.m_strClientID = _),
-            (this.m_rgRequestID = _),
-            (this.m_steamid = _),
-            (this.m_strWeakAuthToken = _ ?? ``),
-            _.find(({ confirmation_type: _ }) => _ === 6))
-          ) {
-            let _ = new FormData();
-            _.append(`clientid`, _), _.append(`steamid`, _);
-            let _ = `${_.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
-            try {
-              if (
-                (
-                  await _.default.post(_, _, {
-                    headers: {
-                      "Content-Type": `multipart/form-data`,
-                    },
-                    withCredentials: !0,
-                  })
-                ).data.result == 1
-              )
-                return (this.m_eStatus = 4), this.StartPolling(!0), 1;
-            } catch (_) {
-              if (
-                (_(`checkdevice ajax to ${_} failed: ${_.message}`),
-                _ instanceof _.AxiosError)
-              ) {
-                let _ = _;
-                return _.response
-                  ? (this.SetFailureState(
-                      _.Network,
-                      _.AjaxFailureWithCode(_.response.status),
-                    ),
-                    20)
-                  : (this.SetFailureState(_.Network, _.AjaxFailureNoCode()),
-                    20);
-              }
-              return this.SetFailureState(_.Network, _.EResult(79)), 79;
-            }
+            return (
+              this.m_onCompleteCallback({
+                bSuccess: !1,
+              }),
+              (this.m_eStatus = 0),
+              _
+            );
           }
-          let _ = _(
-              _.map(
-                ({ confirmation_type: _ }) => (
-                  _(
-                    _ !== void 0,
-                    `Missing confirmation type in allowed confirmations`,
-                  ),
-                  _
-                ),
+          default:
+            return (
+              _(`Failed to start auth session. Result: ${_} Transport: ${_}`),
+              this.SetFailureState(
+                _.Generic,
+                _.EResult(_),
+                _.Body().extended_error_message(),
               ),
-            ),
-            _ = _.find(({ confirmation_type: _ }) => _ === _);
-          switch (
-            (_ &&
-              _.associated_message &&
-              (this.m_strConfirmationAssociatedMessage = _.associated_message),
-            _)
+              this.m_onCompleteCallback({
+                bSuccess: !1,
+              }),
+              _
+            );
+        }
+      this.m_strAccountName = _;
+      let {
+        client_id: _,
+        request_id: _,
+        interval: _,
+        allowed_confirmations: _ = [],
+        steamid: _,
+        weak_token: _,
+      } = _.Body().toObject();
+      if (
+        (_(
+          _ !== void 0 && !!_ && !!_,
+          `Missing poll interval, client ID, or steamid for result`,
+          _,
+        ),
+        (this.m_msPollInterval = _ * 1e3),
+        (this.m_strClientID = _),
+        (this.m_rgRequestID = _),
+        (this.m_steamid = _),
+        (this.m_strWeakAuthToken = _ ?? ``),
+        _.find(({ confirmation_type: _ }) => _ === 6))
+      ) {
+        let _ = new FormData();
+        _.append(`clientid`, _), _.append(`steamid`, _);
+        let _ = `${_.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
+        try {
+          if (
+            (
+              await _.default.post(_, _, {
+                headers: {
+                  "Content-Type": `multipart/form-data`,
+                },
+                withCredentials: !0,
+              })
+            ).data.result == 1
+          )
+            return (this.m_eStatus = 4), this.StartPolling(!0), 1;
+        } catch (_) {
+          if (
+            (_(`checkdevice ajax to ${_} failed: ${_.message}`),
+            _ instanceof _.AxiosError)
           ) {
-            case 1:
-              return (this.m_eStatus = 13), this.StartPolling(), _;
-            case 2:
-              this.m_eStatus = 3;
-              break;
-            case 5:
-              (this.m_eStatus = 4), this.StartPolling(!1);
-              break;
-            case 3:
-              (this.m_eStatus = 5), this.StartPolling(!1);
-              break;
-            case 4:
-              (this.m_eStatus = 6), this.StartPolling(!1);
+            let _ = _;
+            return _.response
+              ? (this.SetFailureState(
+                  _.Network,
+                  _.AjaxFailureWithCode(_.response.status),
+                ),
+                20)
+              : (this.SetFailureState(_.Network, _.AjaxFailureNoCode()), 20);
           }
-          return _;
-        })
-      );
+          return this.SetFailureState(_.Network, _.EResult(79)), 79;
+        }
+      }
+      let _ = _(
+          _.map(
+            ({ confirmation_type: _ }) => (
+              _(
+                _ !== void 0,
+                `Missing confirmation type in allowed confirmations`,
+              ),
+              _
+            ),
+          ),
+        ),
+        _ = _.find(({ confirmation_type: _ }) => _ === _);
+      switch (
+        (_ &&
+          _.associated_message &&
+          (this.m_strConfirmationAssociatedMessage = _.associated_message),
+        _)
+      ) {
+        case 1:
+          return (this.m_eStatus = 13), this.StartPolling(), _;
+        case 2:
+          this.m_eStatus = 3;
+          break;
+        case 5:
+          (this.m_eStatus = 4), this.StartPolling(!1);
+          break;
+        case 3:
+          (this.m_eStatus = 5), this.StartPolling(!1);
+          break;
+        case 4:
+          (this.m_eStatus = 6), this.StartPolling(!1);
+      }
+      return _;
     } catch (_) {
       return (
         _(`Failed to start auth session. Exception: ${JSON.stringify(_)}`),
@@ -27341,7 +23709,7 @@ var _ = class extends _ {
             )
               this.m_onShowAgreement(_);
             else {
-              let _ = document.location.href;
+              let _ = location.href;
               window.location.href = `${_}&redir=${encodeURIComponent(_)}`;
             }
             return (
@@ -27538,9 +23906,7 @@ var _ = class extends _ {
     this.m_onLoginComplete = _;
   }
 };
-_([_], _.prototype, `m_eStatus`, void 0),
-  _([_], _.prototype, `m_strErrorReference`, void 0),
-  _([_], _.prototype, `Start`, null),
+_([_], _.prototype, `Start`, null),
   _([_], _.prototype, `SendSteamGuardCode`, null),
   _([_], _.prototype, `UseCodeOverride`, null),
   _([_], _.prototype, `CantAccessCode`, null),
@@ -27549,7 +23915,6 @@ _([_], _.prototype, `m_eStatus`, void 0),
   _([_], _.prototype, `FinishMoveAuthenticator`, null),
   _([_], _.prototype, `FinishMoveRecovery`, null),
   _([_], _.prototype, `GoBack`, null),
-  _([_], _.prototype, `SetFailureState`, null),
   _([_], _.prototype, `SetOnLoginComplete`, null);
 async function _(_, _) {
   let _ = _.Init(_);
@@ -27588,20 +23953,13 @@ function _(_) {
   return _.length > 1 && (_ = _.sort((_, _) => _[_] - _[_])[0]), _;
 }
 function _(_) {
-  let [_, _] = (0, _.useState)(new _(_));
+  let [_, _] = (0, _.useState)(() => new _(_));
   return (
     (0, _.useEffect)(() => {
       _?.SetOnLoginComplete(_.onComplete);
     }, [_, _.onComplete]),
-    _(() => ({
-      strAccountName: _.GetAccountName(),
-      steamid: _.GetSteamID(),
-      eFailureState: _.GetFailureState(),
-      strExtendedErrorMessage: _.GetExtendedErrorMessage(),
-      strErrorReference: _.GetErrorReference(),
-      strConfirmationAssociatedMessage: _.GetConfirmationAssociatedMessage(),
-      eStatus: _.GetStatus(),
-      bCanGoBack: _.BCanGoBack(),
+    {
+      ...(0, _.useSyncExternalStore)(_.Subscribe, _.GetSnapshot, _.GetSnapshot),
       start: _.Start,
       addCode: _.SendSteamGuardCode,
       useCodeOverride: _.UseCodeOverride,
@@ -27610,11 +23968,10 @@ function _(_) {
       resendMoveCode: _.ResendMoveCode,
       finishMoveAuthenticator: _.FinishMoveAuthenticator,
       finishMoveRecovery: _.FinishMoveRecovery,
-      replacementAuthenticator: _.GetReplacementAuthenticator(),
       reset: () => _(new _(_)),
       goBack: _.GoBack,
       setTokenToRevoke: _.SetTokenToRevoke,
-    }))
+    }
   );
 }
 function _(_) {
@@ -27634,7 +23991,13 @@ var _ = {
     AjaxFailureWithCode: (_) => `af-${_}`,
   },
   _ = class extends _ {
-    m_eStatus = 0;
+    m_eStatusValue = 0;
+    get m_eStatus() {
+      return this.m_eStatusValue;
+    }
+    set m_eStatus(_) {
+      (this.m_eStatusValue = _), this.NotifyChanged();
+    }
     constructor(_) {
       super(
         _.transport,
@@ -27642,8 +24005,16 @@ var _ = {
           (this.m_eStatus = _.bSuccess ? 3 : 4), _.onComplete(_);
         },
         _.onDeviceDetails,
-      ),
-        _(this);
+      );
+    }
+    BuildSnapshot() {
+      return {
+        strChallengeURL: this.GetChallengeURL(),
+        strClientID: this.GetClientID(),
+        eFailureState: this.GetFailureState(),
+        eStatus: this.GetStatus(),
+        bHadRemoteInteraction: this.BHadRemoteInteraction(),
+      };
     }
     async Start() {
       if (this.m_eStatus !== 0)
@@ -27663,7 +24034,8 @@ var _ = {
         } catch (_) {
           console.error(`Failed to GetDeviceDetails`), console.log(_);
         }
-        _.Body().set_website_id(_.WEBSITE_ID);
+        let _ = _();
+        _ && _.Body().set_website_id(_.WEBSITE_ID);
         let _ = await _.BeginAuthSessionViaQR(this.m_transport, _),
           _ = _.GetEResult(),
           _ = _.Hdr().transport_error();
@@ -27718,9 +24090,8 @@ var _ = {
       return this.m_eStatus;
     }
   };
-_([_], _.prototype, `m_eStatus`, void 0);
 function _(_) {
-  let [_, _] = (0, _.useState)(new _(_));
+  let [_, _] = (0, _.useState)(() => new _(_));
   return (
     (0, _.useEffect)(
       () => (
@@ -27731,19 +24102,12 @@ function _(_) {
       ),
       [_],
     ),
-    _(() => ({
-      strChallengeURL: _.GetChallengeURL(),
-      strClientID: _.GetClientID(),
-      eFailureState: _.GetFailureState(),
-      eStatus: _.GetStatus(),
-      bHadRemoteInteraction: _.BHadRemoteInteraction(),
+    {
+      ...(0, _.useSyncExternalStore)(_.Subscribe, _.GetSnapshot, _.GetSnapshot),
       reset: () => _(new _(_)),
       setTokenToRevoke: _.SetTokenToRevoke,
-    }))
+    }
   );
-}
-function _(_) {
-  return atob(_.replace(/-/g, `+`).replace(/_/g, `/`));
 }
 function _(_) {
   try {
@@ -27778,142 +24142,145 @@ function _(_) {
     _ = _ - _;
   return _ < 1350 && (_ = _ <= 60 ? 0 : 60), _(_) - _ < Date.now() / 1e3;
 }
+function _(_) {
+  return atob(_.replace(/-/g, `+`).replace(/_/g, `/`));
+}
 var _ = {};
 (_.arabic = () =>
   _(
-    () => import(`./shared_arabic.js?contenthash=DqTrYIXe`),
+    () => import(`./shared_arabic.js?contenthash=K11QHnXw`),
     [],
     import.meta.url,
   )),
   (_.brazilian = () =>
     _(
-      () => import(`./shared_brazilian.js?contenthash=BzBpl9jM`),
+      () => import(`./shared_brazilian.js?contenthash=Ds8L9Oyw`),
       [],
       import.meta.url,
     )),
   (_.bulgarian = () =>
     _(
-      () => import(`./shared_bulgarian.js?contenthash=Dwd0zMWP`),
+      () => import(`./shared_bulgarian.js?contenthash=CyeWIMTg`),
       [],
       import.meta.url,
     )),
   (_.czech = () =>
     _(
-      () => import(`./shared_czech.js?contenthash=CHiJhRSl`),
+      () => import(`./shared_czech.js?contenthash=CrJ41fou`),
       [],
       import.meta.url,
     )),
   (_.danish = () =>
     _(
-      () => import(`./shared_danish.js?contenthash=CO4Ydk4y`),
+      () => import(`./shared_danish.js?contenthash=RtbgC4vh`),
       [],
       import.meta.url,
     )),
   (_.dutch = () =>
     _(
-      () => import(`./shared_dutch.js?contenthash=Dus3q1Mo`),
+      () => import(`./shared_dutch.js?contenthash=B6g1F31E`),
       [],
       import.meta.url,
     )),
   (_.english = () =>
     _(
-      () => import(`./shared_english.js?contenthash=Bf6PznqK`),
+      () => import(`./shared_english.js?contenthash=BISKVH1-`),
       [],
       import.meta.url,
     )),
   (_.finnish = () =>
     _(
-      () => import(`./shared_finnish.js?contenthash=D6Eopka3`),
+      () => import(`./shared_finnish.js?contenthash=DG_GfJi9`),
       [],
       import.meta.url,
     )),
   (_.french = () =>
     _(
-      () => import(`./shared_french.js?contenthash=BF8WFWm0`),
+      () => import(`./shared_french.js?contenthash=h8IH7VwV`),
       [],
       import.meta.url,
     )),
   (_.german = () =>
     _(
-      () => import(`./shared_german.js?contenthash=DqSnNtov`),
+      () => import(`./shared_german.js?contenthash=DSkprCCn`),
       [],
       import.meta.url,
     )),
   (_.greek = () =>
     _(
-      () => import(`./shared_greek.js?contenthash=Bqn-_UH5`),
+      () => import(`./shared_greek.js?contenthash=Pcug8jWx`),
       [],
       import.meta.url,
     )),
   (_.hungarian = () =>
     _(
-      () => import(`./shared_hungarian.js?contenthash=R6setlfa`),
+      () => import(`./shared_hungarian.js?contenthash=D3Td11S4`),
       [],
       import.meta.url,
     )),
   (_.indonesian = () =>
     _(
-      () => import(`./shared_indonesian.js?contenthash=_lipLND7`),
+      () => import(`./shared_indonesian.js?contenthash=Bo3waWKw`),
       [],
       import.meta.url,
     )),
   (_.italian = () =>
     _(
-      () => import(`./shared_italian.js?contenthash=JMv-n-m-`),
+      () => import(`./shared_italian.js?contenthash=DS2YSnzp`),
       [],
       import.meta.url,
     )),
   (_.japanese = () =>
     _(
-      () => import(`./shared_japanese.js?contenthash=0D3qGclQ`),
+      () => import(`./shared_japanese.js?contenthash=BewHcFID`),
       [],
       import.meta.url,
     )),
   (_.koreana = () =>
     _(
-      () => import(`./shared_koreana.js?contenthash=C6liAhZ0`),
+      () => import(`./shared_koreana.js?contenthash=qoHbGbI1`),
       [],
       import.meta.url,
     )),
   (_.latam = () =>
     _(
-      () => import(`./shared_latam.js?contenthash=4922Pza3`),
+      () => import(`./shared_latam.js?contenthash=CtWowZjX`),
       [],
       import.meta.url,
     )),
   (_.malay = () =>
     _(
-      () => import(`./shared_malay.js?contenthash=DsJlRyqj`),
+      () => import(`./shared_malay.js?contenthash=DRtdyzRI`),
       [],
       import.meta.url,
     )),
   (_.norwegian = () =>
     _(
-      () => import(`./shared_norwegian.js?contenthash=BksXPd6k`),
+      () => import(`./shared_norwegian.js?contenthash=KdsUUPwE`),
       [],
       import.meta.url,
     )),
   (_.polish = () =>
     _(
-      () => import(`./shared_polish.js?contenthash=CV-7hZlw`),
+      () => import(`./shared_polish.js?contenthash=DomFIOcj`),
       [],
       import.meta.url,
     )),
   (_.portuguese = () =>
     _(
-      () => import(`./shared_portuguese.js?contenthash=BCLMkL5D`),
+      () => import(`./shared_portuguese.js?contenthash=LXfTPIQG`),
       [],
       import.meta.url,
     )),
   (_.romanian = () =>
     _(
-      () => import(`./shared_romanian.js?contenthash=DFfQAkOo`),
+      () => import(`./shared_romanian.js?contenthash=B9hMOEo7`),
       [],
       import.meta.url,
     )),
   (_.russian = () =>
     _(
-      () => import(`./shared_russian.js?contenthash=BKqxElTU`),
+      () => import(`./shared_russian.js?contenthash=1Cpyd1a0`),
       [],
       import.meta.url,
     )),
@@ -27925,1315 +24292,56 @@ var _ = {};
     )),
   (_.schinese = () =>
     _(
-      () => import(`./shared_schinese.js?contenthash=DSd1HCI4`),
+      () => import(`./shared_schinese.js?contenthash=Bt2Q8jSJ`),
       [],
       import.meta.url,
     )),
   (_.spanish = () =>
     _(
-      () => import(`./shared_spanish.js?contenthash=DUEA3H2D`),
+      () => import(`./shared_spanish.js?contenthash=D9hJbndv`),
       [],
       import.meta.url,
     )),
   (_.swedish = () =>
     _(
-      () => import(`./shared_swedish.js?contenthash=DwyoE4Od`),
+      () => import(`./shared_swedish.js?contenthash=DQnHJYUg`),
       [],
       import.meta.url,
     )),
   (_.tchinese = () =>
     _(
-      () => import(`./shared_tchinese.js?contenthash=_FHN8pLB`),
+      () => import(`./shared_tchinese.js?contenthash=CaASsoYa`),
       [],
       import.meta.url,
     )),
   (_.thai = () =>
     _(
-      () => import(`./shared_thai.js?contenthash=DoTs8Y4J`),
+      () => import(`./shared_thai.js?contenthash=vU3KE6OF`),
       [],
       import.meta.url,
     )),
   (_.turkish = () =>
     _(
-      () => import(`./shared_turkish.js?contenthash=8Qq2IFGF`),
+      () => import(`./shared_turkish.js?contenthash=Bd8vGW6p`),
       [],
       import.meta.url,
     )),
   (_.ukrainian = () =>
     _(
-      () => import(`./shared_ukrainian.js?contenthash=DhLmUj3S`),
+      () => import(`./shared_ukrainian.js?contenthash=Dy02404-`),
       [],
       import.meta.url,
     )),
   (_.vietnamese = () =>
     _(
-      () => import(`./shared_vietnamese.js?contenthash=rvM2g6qF`),
+      () => import(`./shared_vietnamese.js?contenthash=Ds6kk_3y`),
       [],
       import.meta.url,
     ));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
-var _ = _(_),
-  _ = function () {};
-function _(_) {
-  throw Error(`[mobx-utils] ` + _);
-}
-function _(_, _) {
-  _ === void 0 && (_ = `Illegal state`), _ || _(_);
-}
-var _ = function (_) {
-    return (
-      _ &&
-      _ !== Object.prototype &&
-      Object.getOwnPropertyNames(_).concat(_(Object.getPrototypeOf(_)) || [])
-    );
-  },
-  _ = function (_) {
-    var _ = _(_);
-    return _.filter(function (_, _) {
-      return _.indexOf(_) === _;
-    });
-  },
-  _ = function (_) {
-    return _(_).filter(function (_) {
-      return _ !== `constructor` && !~_.indexOf(`__`);
-    });
-  },
-  _ = `pending`,
-  _ = `fulfilled`,
-  _ = `rejected`;
-function _(_) {
-  switch (this.state) {
-    case _:
-      return _.pending && _.pending(this.value);
-    case _:
-      return _.rejected && _.rejected(this.value);
-    case _:
-      return _.fulfilled ? _.fulfilled(this.value) : this.value;
-  }
-}
-function _(_, _) {
-  if (
-    (_(arguments.length <= 2, `fromPromise expects up to two arguments`),
-    _(
-      typeof _ == `function` ||
-        (typeof _ == `object` && _ && typeof _.then == `function`),
-      `Please pass a promise or function to fromPromise`,
-    ),
-    _.isPromiseBasedObservable === !0)
-  )
-    return _;
-  typeof _ == `function` && (_ = new Promise(_));
-  var _ = _;
-  return (
-    _.then(
-      _(`observableFromPromise-resolve`, function (_) {
-        (_.value = _), (_.state = _);
-      }),
-      _(`observableFromPromise-reject`, function (_) {
-        (_.value = _), (_.state = _);
-      }),
-    ),
-    (_.isPromiseBasedObservable = !0),
-    (_.case = _),
-    _(
-      _,
-      {
-        value:
-          _ && (_.state === `fulfilled` || _.state === `pending`)
-            ? _.value
-            : void 0,
-        state: _,
-      },
-      {},
-      {
-        deep: !1,
-      },
-    ),
-    _
-  );
-}
-(function (_) {
-  _.reject = _(`fromPromise.reject`, function (_) {
-    var _ = _(Promise.reject(_));
-    return (_.state = _), (_.value = _), _;
-  });
-  function _(_) {
-    _ === void 0 && (_ = void 0);
-    var _ = _(Promise.resolve(_));
-    return (_.state = _), (_.value = _), _;
-  }
-  _.resolve = _(`fromPromise.resolve`, _);
-})((_ ||= {}));
-function _(_, _, _) {
-  _ === void 0 && (_ = _), _ === void 0 && (_ = void 0);
-  var _ = !1,
-    _ = !1,
-    _ = _,
-    _ = function () {
-      _ && ((_ = !1), _());
-    },
-    _ = _(
-      `ResourceBasedObservable`,
-      function () {
-        _(!_ && !_),
-          (_ = !0),
-          _(function (_) {
-            _(!0, function () {
-              (_ = _), _.reportChanged();
-            });
-          });
-      },
-      _,
-    );
-  return {
-    current: function () {
-      return (
-        _(!_, `subscribingObservable has already been disposed`),
-        !_.reportObserved() &&
-          !_ &&
-          console.warn(
-            "Called `get` of a subscribingObservable outside a reaction. Current value will be returned but no new subscription has started",
-          ),
-        _
-      );
-    },
-    dispose: function () {
-      (_ = !0), _();
-    },
-    isAlive: function () {
-      return _;
-    },
-  };
-}
-var _ = function (_, _, _, _) {
-  var _ = arguments.length,
-    _ =
-      _ < 3 ? _ : _ === null ? (_ = Object.getOwnPropertyDescriptor(_, _)) : _,
-    _;
-  if (typeof Reflect == `object` && typeof Reflect.decorate == `function`)
-    _ = Reflect.decorate(_, _, _, _);
-  else
-    for (var _ = _.length - 1; _ >= 0; _--)
-      (_ = _[_]) && (_ = (_ < 3 ? _(_) : _ > 3 ? _(_, _, _) : _(_, _)) || _);
-  return _ > 3 && _ && Object.defineProperty(_, _, _), _;
-};
-(function () {
-  function _(_, _) {
-    var _ = this;
-    Object.defineProperty(this, "current", {
-      enumerable: !0,
-      configurable: !0,
-      writable: !0,
-      value: void 0,
-    }),
-      Object.defineProperty(this, "subscription", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      _(this),
-      _(function () {
-        (_.current = _), (_.subscription = _.subscribe(_));
-      });
-  }
-  return (
-    Object.defineProperty(_.prototype, "dispose", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        this.subscription && this.subscription.unsubscribe();
-      },
-    }),
-    Object.defineProperty(_.prototype, "next", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_) {
-        this.current = _;
-      },
-    }),
-    Object.defineProperty(_.prototype, "complete", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        this.dispose();
-      },
-    }),
-    Object.defineProperty(_.prototype, "error", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_) {
-        (this.current = _), this.dispose();
-      },
-    }),
-    _([_.ref], _.prototype, `current`, void 0),
-    _([_.bound], _.prototype, `next`, null),
-    _([_.bound], _.prototype, `complete`, null),
-    _([_.bound], _.prototype, `error`, null),
-    _
-  );
-})();
-var _ = function () {
-    return (
-      (_ =
-        Object.assign ||
-        function (_) {
-          for (var _, _ = 1, _ = arguments.length; _ < _; _++)
-            for (var _ in ((_ = arguments[_]), _))
-              Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
-          return _;
-        }),
-      _.apply(this, arguments)
-    );
-  },
-  _ = function (_, _, _, _) {
-    var _ = arguments.length,
-      _ =
-        _ < 3
-          ? _
-          : _ === null
-            ? (_ = Object.getOwnPropertyDescriptor(_, _))
-            : _,
-      _;
-    if (typeof Reflect == `object` && typeof Reflect.decorate == `function`)
-      _ = Reflect.decorate(_, _, _, _);
-    else
-      for (var _ = _.length - 1; _ >= 0; _--)
-        (_ = _[_]) && (_ = (_ < 3 ? _(_) : _ > 3 ? _(_, _, _) : _(_, _)) || _);
-    return _ > 3 && _ && Object.defineProperty(_, _, _), _;
-  },
-  _ = [
-    `model`,
-    `reset`,
-    `submit`,
-    `isDirty`,
-    `isPropertyDirty`,
-    `resetProperty`,
-  ];
-(function () {
-  function _(_) {
-    var _ = this;
-    Object.defineProperty(this, "model", {
-      enumerable: !0,
-      configurable: !0,
-      writable: !0,
-      value: _,
-    }),
-      Object.defineProperty(this, "localValues", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: _.map({}),
-      }),
-      Object.defineProperty(this, "localComputedValues", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: _.map({}),
-      }),
-      Object.defineProperty(this, "isPropertyDirty", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: function (_) {
-          return _.localValues.has(_);
-        },
-      }),
-      _(this),
-      _(_(_), `createViewModel expects an observable object`);
-    var _ = _(this);
-    _(_).forEach(function (_) {
-      if (!_.includes(_) && _ !== _ && _ !== `__mobxDidRunLazyInitializers`) {
-        if (
-          (_(
-            _.indexOf(_) === -1,
-            `The propertyname ` +
-              _ +
-              ` is reserved and cannot be used with viewModels`,
-          ),
-          _(_, _))
-        ) {
-          var _ = _(_, _),
-            _ = _.derivation.bind(_),
-            _ = _.setter_?.bind(_);
-          _.localComputedValues.set(
-            _,
-            _(_, {
-              set: _,
-            }),
-          );
-        }
-        var _ = Object.getOwnPropertyDescriptor(_, _),
-          _ = _
-            ? {
-                enumerable: _.enumerable,
-              }
-            : {};
-        Object.defineProperty(
-          _,
-          _,
-          _(_({}, _), {
-            configurable: !0,
-            get: function () {
-              return _(_, _)
-                ? _.localComputedValues.get(_).get()
-                : _.isPropertyDirty(_)
-                  ? _.localValues.get(_)
-                  : _.model[_];
-            },
-            set: _(function (_) {
-              _(_, _)
-                ? _.localComputedValues.get(_).set(_)
-                : _ === _.model[_]
-                  ? _.localValues.delete(_)
-                  : _.localValues.set(_, _);
-            }),
-          }),
-        );
-      }
-    });
-  }
-  return (
-    Object.defineProperty(_.prototype, "isDirty", {
-      get: function () {
-        return this.localValues.size > 0;
-      },
-      enumerable: !1,
-      configurable: !0,
-    }),
-    Object.defineProperty(_.prototype, "changedValues", {
-      get: function () {
-        return new Map(this.localValues);
-      },
-      enumerable: !1,
-      configurable: !0,
-    }),
-    Object.defineProperty(_.prototype, "submit", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        var _ = this;
-        _(this.localValues).forEach(function (_) {
-          var _ = _.localValues.get(_),
-            _ = _.model[_];
-          _(_)
-            ? _.replace(_)
-            : _(_)
-              ? (_.clear(), _.merge(_))
-              : _(_) || (_.model[_] = _);
-        }),
-          this.localValues.clear();
-      },
-    }),
-    Object.defineProperty(_.prototype, "reset", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        this.localValues.clear();
-      },
-    }),
-    Object.defineProperty(_.prototype, "resetProperty", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_) {
-        this.localValues.delete(_);
-      },
-    }),
-    _([_], _.prototype, `isDirty`, null),
-    _([_], _.prototype, `changedValues`, null),
-    _([_.bound], _.prototype, `submit`, null),
-    _([_.bound], _.prototype, `reset`, null),
-    _([_.bound], _.prototype, `resetProperty`, null),
-    _
-  );
-})();
-var _ = {};
-function _(_) {
-  return (
-    _ === void 0 && (_ = 1e3),
-    _()
-      ? (_[_] || (typeof _ == `number` ? (_[_] = _(_)) : (_[_] = _())),
-        _[_].current())
-      : Date.now()
-  );
-}
-function _(_) {
-  var _;
-  return _(
-    function (_) {
-      _(Date.now()),
-        (_ = setInterval(function () {
-          return _(Date.now());
-        }, _));
-    },
-    function () {
-      clearInterval(_);
-    },
-    Date.now(),
-  );
-}
-function _() {
-  var _ = _(
-    function (_) {
-      _(Date.now());
-      function _() {
-        window.requestAnimationFrame(function () {
-          _(Date.now()), _.isAlive() && _();
-        });
-      }
-      _();
-    },
-    function () {},
-    Date.now(),
-  );
-  return _;
-}
-var _ = (function () {
-  var _ = function (_, _) {
-    return (
-      (_ =
-        Object.setPrototypeOf ||
-        ({
-          __proto__: [],
-        } instanceof Array &&
-          function (_, _) {
-            _.__proto__ = _;
-          }) ||
-        function (_, _) {
-          for (var _ in _)
-            Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
-        }),
-      _(_, _)
-    );
-  };
-  return function (_, _) {
-    _(_, _);
-    function _() {
-      this.constructor = _;
-    }
-    _.prototype =
-      _ === null ? Object.create(_) : ((_.prototype = _.prototype), new _());
-  };
-})();
-(function (_) {
-  _(_, _);
-  function _(_, _, _) {
-    var _ = _ === void 0 ? {} : _,
-      _ = _.name,
-      _ = _ === void 0 ? `ogm` + ((Math.random() * 1e3) | 0) : _,
-      _ = _.keyToName,
-      _ =
-        _ === void 0
-          ? function (_) {
-              return `` + _;
-            }
-          : _,
-      _ = _.call(this) || this;
-    Object.defineProperty(_, "_base", {
-      enumerable: !0,
-      configurable: !0,
-      writable: !0,
-      value: void 0,
-    }),
-      Object.defineProperty(_, "_ogmInfoKey", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(_, "_groupBy", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(_, "_keyToName", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(_, "_disposeBaseObserver", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      (_._keyToName = _),
-      (_._groupBy = _),
-      (_._ogmInfoKey = Symbol(`ogmInfo` + _)),
-      (_._base = _);
-    for (var _ = 0; _ < _.length; _++) _._addItem(_[_]);
-    return (
-      (_._disposeBaseObserver = _(_._base, function (_) {
-        if (_.type === `splice`)
-          _(function () {
-            for (var _ = 0, _ = _.removed; _ < _.length; _++) {
-              var _ = _[_];
-              _._removeItem(_);
-            }
-            for (var _ = 0, _ = _.added; _ < _.length; _++) {
-              var _ = _[_];
-              _._addItem(_);
-            }
-          });
-        else if (_.type === `update`)
-          _(function () {
-            _._removeItem(_.oldValue), _._addItem(_.newValue);
-          });
-        else throw Error(`illegal state`);
-      })),
-      _
-    );
-  }
-  return (
-    Object.defineProperty(_.prototype, "clear", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        throw Error(`not supported`);
-      },
-    }),
-    Object.defineProperty(_.prototype, "delete", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_) {
-        throw Error(`not supported`);
-      },
-    }),
-    Object.defineProperty(_.prototype, "set", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_, _) {
-        throw Error(`not supported`);
-      },
-    }),
-    Object.defineProperty(_.prototype, "dispose", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        this._disposeBaseObserver();
-        for (var _ = 0; _ < this._base.length; _++) {
-          var _ = this._base[_];
-          _[this._ogmInfoKey].reaction(), delete _[this._ogmInfoKey];
-        }
-      },
-    }),
-    Object.defineProperty(_.prototype, "_getGroupArr", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_) {
-        var _ = _.prototype.get.call(this, _);
-        return (
-          _ === void 0 &&
-            ((_ = _([], {
-              name: `GroupArray[` + this._keyToName(_) + `]`,
-              deep: !1,
-            })),
-            _.prototype.set.call(this, _, _)),
-          _
-        );
-      },
-    }),
-    Object.defineProperty(_.prototype, "_removeFromGroupArr", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_, _) {
-        var _ = _.prototype.get.call(this, _);
-        _.length === 1
-          ? _.prototype.delete.call(this, _)
-          : _ === _.length - 1
-            ? _.length--
-            : ((_[_] = _[_.length - 1]),
-              (_[_][this._ogmInfoKey].groupArrIndex = _),
-              _.length--);
-      },
-    }),
-    Object.defineProperty(_.prototype, "_addItem", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_) {
-        var _ = this,
-          _ = this._groupBy(_),
-          _ = this._getGroupArr(_),
-          _ = {
-            groupByValue: _,
-            groupArrIndex: _.length,
-            reaction: _(
-              function () {
-                return _._groupBy(_);
-              },
-              function (_, _) {
-                var _ = _[_._ogmInfoKey];
-                _._removeFromGroupArr(_.groupByValue, _.groupArrIndex);
-                var _ = _._getGroupArr(_),
-                  _ = _.length;
-                _.push(_), (_.groupByValue = _), (_.groupArrIndex = _);
-              },
-            ),
-          };
-        Object.defineProperty(_, this._ogmInfoKey, {
-          configurable: !0,
-          enumerable: !1,
-          value: _,
-        }),
-          _.push(_);
-      },
-    }),
-    Object.defineProperty(_.prototype, "_removeItem", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_) {
-        var _ = _[this._ogmInfoKey];
-        this._removeFromGroupArr(_.groupByValue, _.groupArrIndex),
-          _.reaction(),
-          delete _[this._ogmInfoKey];
-      },
-    }),
-    _
-  );
-})(_);
-var _ = (function () {
-  function _(_, _) {
-    Object.defineProperty(this, "base", {
-      enumerable: !0,
-      configurable: !0,
-      writable: !0,
-      value: _,
-    }),
-      Object.defineProperty(this, "args", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: _,
-      }),
-      Object.defineProperty(this, "root", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(this, "closest", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      }),
-      Object.defineProperty(this, "closestIdx", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: 0,
-      }),
-      Object.defineProperty(this, "isDisposed", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: !1,
-      });
-    for (
-      var _ = (this.closest = this.root = _), _ = 0;
-      _ < this.args.length - 1 && ((_ = _.get(_[_])), _);
-      _++
-    )
-      this.closest = _;
-    this.closestIdx = _;
-  }
-  return (
-    Object.defineProperty(_.prototype, "exists", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        this.assertNotDisposed();
-        var _ = this.args.length;
-        return this.closestIdx >= _ - 1 && this.closest.has(this.args[_ - 1]);
-      },
-    }),
-    Object.defineProperty(_.prototype, "get", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        if ((this.assertNotDisposed(), !this.exists()))
-          throw Error(`Entry doesn't exist`);
-        return this.closest.get(this.args[this.args.length - 1]);
-      },
-    }),
-    Object.defineProperty(_.prototype, "set", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_) {
-        this.assertNotDisposed();
-        for (
-          var _ = this.args.length, _ = this.closest, _ = this.closestIdx;
-          _ < _ - 1;
-          _++
-        ) {
-          var _ = new Map();
-          _.set(this.args[_], _), (_ = _);
-        }
-        (this.closestIdx = _ - 1),
-          (this.closest = _),
-          _.set(this.args[_ - 1], _);
-      },
-    }),
-    Object.defineProperty(_.prototype, "delete", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        if ((this.assertNotDisposed(), !this.exists()))
-          throw Error(`Entry doesn't exist`);
-        var _ = this.args.length;
-        this.closest.delete(this.args[_ - 1]);
-        for (var _ = this.root, _ = [_], _ = 0; _ < _ - 1; _++)
-          (_ = _.get(this.args[_])), _.push(_);
-        for (var _ = _.length - 1; _ > 0; _--)
-          _[_].size === 0 && _[_ - 1].delete(this.args[_ - 1]);
-        this.isDisposed = !0;
-      },
-    }),
-    Object.defineProperty(_.prototype, "assertNotDisposed", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function () {
-        if (this.isDisposed) throw Error(`Concurrent modification exception`);
-      },
-    }),
-    _
-  );
-})();
-(function () {
-  function _() {
-    Object.defineProperty(this, "store", {
-      enumerable: !0,
-      configurable: !0,
-      writable: !0,
-      value: new Map(),
-    }),
-      Object.defineProperty(this, "argsLength", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: -1,
-      }),
-      Object.defineProperty(this, "last", {
-        enumerable: !0,
-        configurable: !0,
-        writable: !0,
-        value: void 0,
-      });
-  }
-  return (
-    Object.defineProperty(_.prototype, "entry", {
-      enumerable: !1,
-      configurable: !0,
-      writable: !0,
-      value: function (_) {
-        if (this.argsLength === -1) this.argsLength = _.length;
-        else if (this.argsLength !== _.length)
-          throw Error(
-            `DeepMap should be used with functions with a consistent length, expected: ` +
-              this.argsLength +
-              `, got: ` +
-              _.length,
-          );
-        return (
-          this.last && (this.last.isDisposed = !0),
-          (this.last = new _(this.store, _))
-        );
-      },
-    }),
-    _
-  );
-})();
-var _ = {
-  PerYear: 31536e3,
-  PerMonth: 2628e3,
-  PerWeek: 604800,
-  PerDay: 86400,
-  PerHour: 3600,
-  PerMinute: 60,
-};
-function _(_, _) {
-  return (
-    _.getFullYear() == _.getFullYear() &&
-    _.getMonth() == _.getMonth() &&
-    _.getDate() == _.getDate()
-  );
-}
-function _() {
-  return Math.floor(Date.now() / 1e3);
-}
-function _(_, _, _) {
-  let _;
-  _ =
-    typeof _ == `boolean`
-      ? {
-          eSuffix: +!_,
-          bForceSingleUnits: _,
-          bHighGranularity: !1,
-        }
-      : {
-          eSuffix: 1,
-          bForceSingleUnits: !1,
-          bHighGranularity: !1,
-          ..._,
-        };
-  let _ = `#TimeInterval_`;
-  _.eSuffix == 1
-    ? (_ = `#TimeSince_`)
-    : _.eSuffix == 2 && (_ = `#TimeRemaining_`);
-  let _ = (_) => Math.floor(_);
-  if (
-    (_.bAllowDecimal && (_ = (_) => Math.round(_ * 10) / 10),
-    _ >= _.PerYear * 2)
-  )
-    return _(_ + `XYears`, _(_ / _.PerYear));
-  if (_ >= _.PerYear)
-    return (
-      (_ -= _.PerYear),
-      _ >= _.PerMonth * 2 && !_.bForceSingleUnits
-        ? _(_ + `1YearXMonths`, _(_ / _.PerMonth))
-        : _(_ + `1Year`)
-    );
-  if (_ >= _.PerMonth * 2) return _(_ + `XMonths`, _(_ / _.PerMonth));
-  if (_ >= _.PerWeek * 2) return _(_ + `XWeeks`, _(_ / _.PerWeek));
-  if (_ >= _.PerWeek) return _(_ + `1Week`, _(_ / _.PerWeek));
-  if (_ >= _.PerDay * 2) return _(_ + `XDays`, _(_ / _.PerDay));
-  if (_ >= _.PerDay)
-    return (
-      (_ -= _.PerDay),
-      _ >= _.PerHour * 2 && !_.bForceSingleUnits
-        ? _(_ + `1DayXHours`, _(_ / _.PerHour))
-        : _(_ + `1Day`)
-    );
-  if (_ >= _.PerHour * 2) return _(_ + `XHours`, _(_ / _.PerHour));
-  if (_ >= _.PerHour)
-    return (
-      (_ -= _.PerHour),
-      _ >= _.PerMinute * 2 && !_.bForceSingleUnits
-        ? _(_ + `1HourXMinutes`, _(_ / _.PerMinute))
-        : _(_ + `1Hour`)
-    );
-  if (_ >= _.PerMinute * 2) {
-    let _ = Math.floor(_ / _.PerMinute),
-      _ = _ % _.PerMinute;
-    return !_.bHighGranularity || _ == 0
-      ? _(_ + `XMinutes`, _(_ / _.PerMinute))
-      : _ == 1
-        ? _(_ + `XMinutes1Second`, _)
-        : _(_ + `XMinutesXSeconds`, _, _);
-  }
-  if (_ >= _.PerMinute) {
-    let _ = _ % _.PerMinute;
-    return !_.bHighGranularity || _ == 0
-      ? _(_ + `1Minute`)
-      : _ == 1
-        ? _(_ + `1Minute1Second`)
-        : _(_ + `1MinuteXSeconds`, _);
-  }
-  return _.bHighGranularity
-    ? _ == 1
-      ? _(_ + `1Second`)
-      : _(_ + `XSeconds`, _)
-    : _(_ + `LessThanAMinute`);
-}
-function _(_, _, _) {
-  let _;
-  _ =
-    _ === void 0 || _ === !0 || _ === !1
-      ? {
-          weekday: _ ? `long` : `short`,
-          year: _ ? void 0 : `numeric`,
-        }
-      : _;
-  let _ = new Date(_ * 1e3),
-    _ = {
-      weekday: `short`,
-      month: `long`,
-      day: `numeric`,
-      year: `numeric`,
-      ..._,
-    };
-  return _.toLocaleDateString(_.GetPreferredLocales(), _);
-}
-function _(_, _) {
-  let _ = new Date(_ * 1e3),
-    _ = {
-      year: `numeric`,
-      month: `short`,
-      day: `numeric`,
-      ..._,
-    };
-  return _.toLocaleDateString(_.GetPreferredLocales(), _);
-}
-var _ = new Map();
-function _(_) {
-  let _ = _.get(_);
-  if (_ === !0 || _ === !1) return _;
-  let _ = new Date();
-  return (
-    _.setHours(15),
-    (_ =
-      _.toLocaleTimeString(_, {
-        hour: `numeric`,
-      }) ==
-      _.toLocaleTimeString(_, {
-        hour: `numeric`,
-        hour12: !1,
-      })),
-    _.set(_, _),
-    _
-  );
-}
-function _(_, _, _) {
-  let _ = new Date(_ * 1e3),
-    _ = {
-      hour: `numeric`,
-      minute: `2-digit`,
-      hourCycle: `h23`,
-    },
-    _ = {
-      hour: `numeric`,
-      minute: `2-digit`,
-    },
-    _ = _.GetPreferredLocales(),
-    _ = {
-      ...(_?.bForce24HourClock || _(_[0]) ? _ : _),
-      ..._,
-    };
-  return _.toLocaleTimeString(_, _);
-}
-var _ = new Map();
-function _(_, _, _ = !0, _ = !0, _ = !1) {
-  let _ = new Date(),
-    _ = new Date(_ * 1e3);
-  if (_.getFullYear() != _.getFullYear()) return _(_);
-  _ && _(new Date().setHours(24, 0, 0, 0) - _.getTime());
-  let _ = new Date();
-  if ((_.setHours(0, 0, 0, 0), _)) {
-    if (_ >= _) {
-      if ((_.setDate(_.getDate() + 1), _ < _)) return _(`#Time_Today`);
-      if ((_.setDate(_.getDate() + 1), _ < _)) return _(`#Time_Tomorrow`);
-    } else if ((_.setDate(_.getDate() - 1), _ >= _))
-      return _(`#Time_Yesterday`);
-  }
-  let _ = {
-    month: _ ? `long` : `short`,
-    day: `numeric`,
-  };
-  _ && (_.weekday = `long`);
-  let _ = _.setHours(0, 0, 0, 0) + _.month,
-    _ = _.get(_);
-  return (
-    _ ||
-    ((_ = _.toLocaleDateString(_.GetPreferredLocales(), _)), _.set(_, _), _)
-  );
-}
-var _ = new Map(),
-  _ = new Map();
-function _(_) {
-  let _ = _.get(_.getFullYear());
-  return (
-    _ ||
-    ((_ = _.toLocaleDateString(_.GetPreferredLocales(), {
-      year: `numeric`,
-    })),
-    _.set(_.getFullYear(), _),
-    _)
-  );
-}
-function _(_) {
-  let _ = _.getMonth() + 12 * _.getFullYear(),
-    _ = _.get(_);
-  return (
-    _ ||
-    ((_ = _.toLocaleDateString(_.GetPreferredLocales(), {
-      month: `long`,
-      year: `numeric`,
-    })),
-    _.set(_, _),
-    _)
-  );
-}
-function _(_, _) {
-  switch (_.getUTCMonth()) {
-    case 0:
-    case 1:
-    case 2:
-      return _(
-        _ ? `#Time_QuarterOfYear_Expanded_Q1` : `#Time_QuarterOfYear_Q1`,
-        _.getUTCFullYear(),
-      );
-    case 3:
-    case 4:
-    case 5:
-      return _(
-        _ ? `#Time_QuarterOfYear_Expanded_Q2` : `#Time_QuarterOfYear_Q2`,
-        _.getUTCFullYear(),
-      );
-    case 6:
-    case 7:
-    case 8:
-      return _(
-        _ ? `#Time_QuarterOfYear_Expanded_Q3` : `#Time_QuarterOfYear_Q3`,
-        _.getUTCFullYear(),
-      );
-    default:
-      return _(
-        _ ? `#Time_QuarterOfYear_Expanded_Q4` : `#Time_QuarterOfYear_Q4`,
-        _.getUTCFullYear(),
-      );
-  }
-}
-var _ = class _ {
-  m_mapTokens = new Map();
-  m_mapFallbackTokens = new Map();
-  m_cbkTokensChanged = new _();
-  m_rgLocalesToUse;
-  m_bReportIndividualMissingTokens = !0;
-  m_bReady = !1;
-  static GetLanguageFallback(_) {
-    return _ === `sc_schinese` ? `schinese` : `english`;
-  }
-  static GetELanguageFallback(_) {
-    return _ === 29 ? 6 : 0;
-  }
-  static IsELanguageValidInRealm(_, _) {
-    return _ === (_ === 29 ? _.k_ESteamRealmChina : _.k_ESteamRealmGlobal);
-  }
-  static GetLanguageListForRealms(_) {
-    let _ = [];
-    for (let _ = 0; _ < 32; _++)
-      for (let _ of _)
-        if (this.IsELanguageValidInRealm(_, _)) {
-          _.push(_);
-          break;
-        }
-    return _;
-  }
-  InitFromObjects(_, _, _, _) {
-    _ && (this.m_bReportIndividualMissingTokens = !1),
-      _ || this.m_mapTokens.clear(),
-      this.AddTokens(_, _ || {}),
-      this.m_cbkTokensChanged.Dispatch();
-  }
-  InitDirect(_, _) {
-    this.m_mapTokens.clear(),
-      this.m_mapFallbackTokens.clear(),
-      this.AddTokens(_, _),
-      this.m_cbkTokensChanged.Dispatch();
-  }
-  SetReady(_) {
-    this.m_bReady = _;
-  }
-  AddTokens(_, _) {
-    Object.keys(_).forEach((_) => {
-      this.m_mapTokens.set(_, _[_]);
-    }),
-      _ &&
-        Object.keys(_).forEach((_) => {
-          this.m_mapTokens.has(_) || this.m_mapTokens.set(_, _[_]),
-            this.m_mapFallbackTokens.set(_, _[_]);
-        });
-  }
-  GetTokensChangedCallbackList() {
-    return this.m_cbkTokensChanged;
-  }
-  GetPreferredLocales() {
-    return this.m_rgLocalesToUse
-      ? this.m_rgLocalesToUse
-      : navigator && navigator.languages
-        ? navigator.languages
-        : [`en-US`];
-  }
-  GetELanguageFallbackOrder(_ = null) {
-    let _ = [];
-    return (
-      _.push(_(_.LANGUAGE)),
-      (_.SUPPORTED_LANGUAGES || []).forEach((_) => {
-        _.value != _.LANGUAGE && _.push(_(_.value));
-      }),
-      _ &&
-        _.GetLanguageListForRealms(_).forEach((_) => {
-          _.indexOf(_) == -1 && _.push(_);
-        }),
-      _
-    );
-  }
-  SetPreferredLocales(_) {
-    this.m_rgLocalesToUse = _;
-  }
-  BLooksLikeToken(_) {
-    return !!_ && _.length > 0 && _.charAt(0) == `#`;
-  }
-  LocalizeIfToken(_, _) {
-    return this.BLooksLikeToken(_) ? this.LocalizeString(_, _) : _;
-  }
-  LocalizeString(_, _) {
-    if (!this.BLooksLikeToken(_)) return;
-    let _ = this.m_mapTokens.get(_.substring(1));
-    if (_ === void 0) {
-      if (_.HasKey(_)) return _.Localize(_);
-      this.m_mapTokens.size === 0
-        ? _(
-            !1,
-            `Attempting to localize token '${_}' with no tokens in our map for language '${_.LANGUAGE}'. SharedLoc ready: ${_.IsReady()}. site has inited: ${this.m_bReady}`,
-          )
-        : !_ &&
-          this.m_bReportIndividualMissingTokens &&
-          _().ReportError(
-            Error(
-              `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${_.IsReady()}. site has inited: ${this.m_bReady}`,
-            ),
-            {
-              bIncludeMessageInIdentifier: !0,
-            },
-          );
-      return;
-    }
-    return _;
-  }
-  LocalizeStringFromFallback(_) {
-    if (!_ || _.length == 0 || _.charAt(0) != `#`) return;
-    let _ = this.m_mapFallbackTokens.get(_.substring(1));
-    if (_ !== void 0) return _;
-  }
-  static GetTokenWithFallback(_) {
-    if (!_) return ``;
-    let _ = _(_.LANGUAGE),
-      _ = _.find((_) => _.language == _);
-    if (_) return _.localized_string;
-    let _ = _.GetELanguageFallback(_);
-    return _.find((_) => _.language == _)?.localized_string ?? ``;
-  }
-  static BHasTokenLanguage(_, _) {
-    return !!_.find((_) => _.language == _);
-  }
-};
-function _(_, ..._) {
-  let _ = _.LocalizeString(_);
-  return _ === void 0 ? _ : _(_, ..._);
-}
-function _(_, ..._) {
-  let _ = _.LocalizeString(_);
-  if (_ === void 0) return _;
-  let _ = [],
-    _ = /(.*?)%(\d+)\$s/g,
-    _ = 0,
-    _;
-  for (; (_ = _.exec(_)); ) {
-    (_ += _[0].length), _.push(_[1]);
-    let _ = parseInt(_[2]);
-    _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
-  }
-  return _.push(_.substr(_)), _.createElement(_.Fragment, null, ..._);
-}
-function _(_, ..._) {
-  let _ = _.LocalizeIfToken(_);
-  return _ === void 0 ? _ : _(_, ..._);
-}
-function _(_, ..._) {
-  let _ = [],
-    _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, `gs`),
-    _ = 0,
-    _;
-  for (; (_ = _.exec(_)); ) {
-    (_ += _[0].length), _.push(_[1]);
-    let _ = parseInt(_[2]),
-      _ = _[3] || ``,
-      _ = _(_, ..._),
-      _ =
-        _ >= 1 && _ <= _.length && _[_ - 1]
-          ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
-          : _;
-    _.push(_);
-  }
-  return _.push(_.substr(_)), _.createElement(_.Fragment, null, ..._);
-}
-function _(_, _, ..._) {
-  return _(_ === 1 || _ === `1` ? _ : _ + `_Plural`, _, ..._);
-}
-function _(_, ..._) {
-  return (
-    _.length == 0 ||
-      (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
-        if (_ <= _.length && _ >= 1) {
-          let _ = _[_ - 1];
-          return String(_ ?? ``);
-        }
-        return _;
-      })),
-    _
-  );
-}
-var _ = {
-  english: `en`,
-  german: `de`,
-  french: `fr`,
-  italian: `it`,
-  korean: `ko`,
-  latam: `es-419`,
-  spanish: `es`,
-  schinese: `zh-cn`,
-  tchinese: `zh-tw`,
-  russian: `ru`,
-  thai: `th`,
-  japanese: `ja`,
-  brazilian: `pt-br`,
-  portuguese: `pt`,
-  polish: `pl`,
-  danish: `da`,
-  dutch: `nl`,
-  finnish: `fi`,
-  norwegian: `no`,
-  swedish: `sv`,
-  hungarian: `hu`,
-  czech: `cs`,
-  romanian: `ro`,
-  turkish: `tr`,
-  arabic: `ar`,
-  bulgarian: `bg`,
-  greek: `el`,
-  ukrainian: `uk`,
-  vietnamese: `vi`,
-  indonesian: `id`,
-  malay: `ms`,
-  sc_schinese: `zh-cn`,
-  koreana: `ko`,
-};
-function _() {
-  return _[_.LANGUAGE] || null;
-}
-function _(_) {
-  return (
-    typeof _ == `number` && (_ = _(_)),
-    _ === `none` ? `None` : _(`#language_selection_${_}`)
-  );
-}
-var _ = new _();
-window.LocalizationManager = _;
+var _ = _(_);
 async function _() {
   let [_, _, _, _] = await Promise.all([
     SteamClient.System.GetOSType(),
@@ -29255,6 +24363,7 @@ async function _() {
     platform_type: 2,
   };
 }
+var _ = `Login_RememberMeSetting`;
 function _(_) {
   let { onSuccess: _, secureComputer: _ = !0, isProbablySharedPC: _ = !1 } = _,
     _ = (0, _.useCallback)(
@@ -29284,13 +24393,15 @@ function _(_) {
       onShowAgreement: _.onShowAgreement,
     }),
     [_, _] = (0, _.useState)(0),
-    _ = `Login_RememberMeSetting`,
     [_, _] = (0, _.useState)(
       _.refreshInfo?.account_name ?? _.defaultAccountName ?? ``,
     ),
     [_, _] = (0, _.useState)(``),
-    [_, _] = (0, _.useState)(_ && !_ && localStorage?.getItem(_) != `0`),
-    _ = _.eStatus !== 0 && _.eStatus !== 1 && _.eStatus !== 2;
+    [_, _] = (0, _.useState)(_ && !_);
+  (0, _.useLayoutEffect)(() => {
+    typeof localStorage < `u` && localStorage.getItem(_) == `0` && _(!1);
+  }, []);
+  let _ = _.eStatus !== 0 && _.eStatus !== 1 && _.eStatus !== 2;
   return (
     (0, _.useEffect)(() => {
       _.refreshInfo?.login_token_id &&
@@ -29333,39 +24444,39 @@ function _(_, _ = ``) {
       };
     case _.Expired:
       _ = {
-        title: _(`#Login_Error_Expired_Title`),
-        description: _(`#Login_Error_Expired_Description`),
+        title: _.Localize(`#Login_Error_Expired_Title`),
+        description: _.Localize(`#Login_Error_Expired_Description`),
       };
       break;
     case _.Network:
       _ = {
-        title: _(`#Login_Error_Network_Title`),
-        description: _(`#Login_Error_Network_Description`),
+        title: _.Localize(`#Login_Error_Network_Title`),
+        description: _.Localize(`#Login_Error_Network_Description`),
       };
       break;
     case _.MoveAuthenticator:
       _ = {
-        title: _(`#Error_Generic`),
-        description: _(`#Login_Error_MoveAuthenticator_Description`),
+        title: _.Localize(`#Error_Generic`),
+        description: _.Localize(`#Login_Error_MoveAuthenticator_Description`),
       };
       break;
     case _.RateLimitExceeded:
       _ = {
-        title: _(`#Login_Error_RateLimit_Title`),
-        description: _(`#Login_Error_RateLimit_Description`),
+        title: _.Localize(`#Login_Error_RateLimit_Title`),
+        description: _.Localize(`#Login_Error_RateLimit_Description`),
       };
       break;
     case _.AnonymousLogin:
       _ = {
-        title: _(`#Login_Error_Anonymous_Title`),
-        description: _(`#Login_Error_Anonymous_Description`),
+        title: _.Localize(`#Login_Error_Anonymous_Title`),
+        description: _.Localize(`#Login_Error_Anonymous_Description`),
       };
       break;
     case _.Generic:
     default:
       _ = {
-        title: _(`#Error_Generic`),
-        description: _(`#Login_Error_Default_Description`),
+        title: _.Localize(`#Error_Generic`),
+        description: _.Localize(`#Login_Error_Default_Description`),
       };
   }
   return _ && (_.description = _), _;
@@ -29565,6 +24676,3678 @@ var _ = class {
 _([_], _.prototype, `SendMsgAndAwaitResponse`, null),
   _([_], _.prototype, `SendNotification`, null),
   _([_], _.prototype, `Send`, null);
+function _(_) {
+  var _ = [...arguments].slice(1);
+  throw Error(
+    typeof _ == `number`
+      ? `[MobX] minified error nr: ` +
+          _ +
+          (_.length ? ` ` + _.map(String).join(`,`) : ``) +
+          `. Find the full error at: https://github.com/mobxjs/mobx/blob/main/packages/mobx/src/errors.ts`
+      : `[MobX] ` + _,
+  );
+}
+var _ = {};
+function _() {
+  return typeof globalThis < `u`
+    ? globalThis
+    : typeof window < `u`
+      ? window
+      : typeof global < `u`
+        ? global
+        : typeof self < `u`
+          ? self
+          : _;
+}
+var _ = Object.assign,
+  _ = Object.getOwnPropertyDescriptor,
+  _ = Object.defineProperty,
+  _ = Object.prototype,
+  _ = [];
+Object.freeze(_);
+var _ = {};
+Object.freeze(_);
+var _ = typeof Proxy < `u`,
+  _ = Object.toString();
+function _() {
+  _ || _(`Proxy not available`);
+}
+function _(_) {
+  var _ = !1;
+  return function () {
+    if (!_) return (_ = !0), _.apply(this, arguments);
+  };
+}
+var _ = function () {};
+function _(_) {
+  return typeof _ == `function`;
+}
+function _(_) {
+  switch (typeof _) {
+    case `string`:
+    case `symbol`:
+    case `number`:
+      return !0;
+  }
+  return !1;
+}
+function _(_) {
+  return typeof _ == `object` && !!_;
+}
+function _(_) {
+  if (!_(_)) return !1;
+  var _ = Object.getPrototypeOf(_);
+  if (_ == null) return !0;
+  var _ = Object.hasOwnProperty.call(_, `constructor`) && _.constructor;
+  return typeof _ == `function` && _.toString() === _;
+}
+function _(_) {
+  var _ = _?.constructor;
+  return _
+    ? _.name === `GeneratorFunction` || _.displayName === `GeneratorFunction`
+    : !1;
+}
+function _(_, _, _) {
+  _(_, _, {
+    enumerable: !1,
+    writable: !0,
+    configurable: !0,
+    value: _,
+  });
+}
+function _(_, _, _) {
+  _(_, _, {
+    enumerable: !1,
+    writable: !1,
+    configurable: !0,
+    value: _,
+  });
+}
+function _(_, _) {
+  var _ = `isMobX` + _;
+  return (
+    (_.prototype[_] = !0),
+    function (_) {
+      return _(_) && _[_] === !0;
+    }
+  );
+}
+function _(_) {
+  return _ != null && Object.prototype.toString.call(_) === `[object Map]`;
+}
+function _(_) {
+  var _ = Object.getPrototypeOf(_),
+    _ = Object.getPrototypeOf(_);
+  return Object.getPrototypeOf(_) === null;
+}
+function _(_) {
+  return _ != null && Object.prototype.toString.call(_) === `[object Set]`;
+}
+var _ = Object.getOwnPropertySymbols !== void 0;
+function _(_) {
+  var _ = Object.keys(_);
+  if (!_) return _;
+  var _ = Object.getOwnPropertySymbols(_);
+  return _.length
+    ? [].concat(
+        _,
+        _.filter(function (_) {
+          return _.propertyIsEnumerable.call(_, _);
+        }),
+      )
+    : _;
+}
+var _ =
+  typeof Reflect < `u` && Reflect.ownKeys
+    ? Reflect.ownKeys
+    : _
+      ? function (_) {
+          return Object.getOwnPropertyNames(_).concat(
+            Object.getOwnPropertySymbols(_),
+          );
+        }
+      : Object.getOwnPropertyNames;
+function _(_) {
+  return _ === null ? null : typeof _ == `object` ? `` + _ : _;
+}
+function _(_, _) {
+  return _.hasOwnProperty.call(_, _);
+}
+var _ =
+  Object.getOwnPropertyDescriptors ||
+  function (_) {
+    var _ = {};
+    return (
+      _(_).forEach(function (_) {
+        _[_] = _(_, _);
+      }),
+      _
+    );
+  };
+function _(_, _) {
+  return !!(_ & _);
+}
+function _(_, _, _) {
+  return _ ? (_ |= _) : (_ &= ~_), _;
+}
+function _(_, _) {
+  (_ == null || _ > _.length) && (_ = _.length);
+  for (var _ = 0, _ = Array(_); _ < _; _++) _[_] = _[_];
+  return _;
+}
+function _(_, _) {
+  for (var _ = 0; _ < _.length; _++) {
+    var _ = _[_];
+    (_.enumerable = _.enumerable || !1),
+      (_.configurable = !0),
+      `value` in _ && (_.writable = !0),
+      Object.defineProperty(_, _(_.key), _);
+  }
+}
+function _(_, _, _) {
+  return (
+    _ && _(_.prototype, _),
+    _ && _(_, _),
+    Object.defineProperty(_, "prototype", {
+      writable: !1,
+    }),
+    _
+  );
+}
+function _(_, _) {
+  var _ = (typeof Symbol < `u` && _[Symbol.iterator]) || _[`@@iterator`];
+  if (_) return (_ = _.call(_)).next.bind(_);
+  if (
+    Array.isArray(_) ||
+    (_ = _(_)) ||
+    (_ && _ && typeof _.length == `number`)
+  ) {
+    _ && (_ = _);
+    var _ = 0;
+    return function () {
+      return _ >= _.length
+        ? {
+            done: !0,
+          }
+        : {
+            done: !1,
+            value: _[_++],
+          };
+    };
+  }
+  throw TypeError(`Invalid attempt to iterate non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
+}
+function _() {
+  return (
+    (_ = Object.assign
+      ? Object.assign.bind()
+      : function (_) {
+          for (var _ = 1; _ < arguments.length; _++) {
+            var _ = arguments[_];
+            for (var _ in _) ({}).hasOwnProperty.call(_, _) && (_[_] = _[_]);
+          }
+          return _;
+        }),
+    _.apply(null, arguments)
+  );
+}
+function _(_, _) {
+  (_.prototype = Object.create(_.prototype)),
+    (_.prototype.constructor = _),
+    _(_, _);
+}
+function _(_, _) {
+  return (
+    (_ = Object.setPrototypeOf
+      ? Object.setPrototypeOf.bind()
+      : function (_, _) {
+          return (_.__proto__ = _), _;
+        }),
+    _(_, _)
+  );
+}
+function _(_, _) {
+  if (typeof _ != `object` || !_) return _;
+  var _ = _[Symbol.toPrimitive];
+  if (_ !== void 0) {
+    var _ = _.call(_, _ || `default`);
+    if (typeof _ != `object`) return _;
+    throw TypeError(`@@toPrimitive must return a primitive value.`);
+  }
+  return (_ === `string` ? String : Number)(_);
+}
+function _(_) {
+  var _ = _(_, `string`);
+  return typeof _ == `symbol` ? _ : _ + ``;
+}
+function _(_, _) {
+  if (_) {
+    if (typeof _ == `string`) return _(_, _);
+    var _ = {}.toString.call(_).slice(8, -1);
+    return (
+      _ === `Object` && _.constructor && (_ = _.constructor.name),
+      _ === `Map` || _ === `Set`
+        ? Array.from(_)
+        : _ === `Arguments` ||
+            /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(_)
+          ? _(_, _)
+          : void 0
+    );
+  }
+}
+var _ = Symbol(`mobx-stored-annotations`);
+function _(_) {
+  function _(_, _) {
+    if (_(_)) return _.decorate_20223_(_, _);
+    _(_, _, _);
+  }
+  return Object.assign(_, _);
+}
+function _(_, _, _) {
+  _(_, _) || _(_, _, _({}, _[_])), _(_) || (_[_][_] = _);
+}
+function _(_) {
+  return _(_, _) || _(_, _, _({}, _[_])), _[_];
+}
+function _(_) {
+  return typeof _ == `object` && typeof _.kind == `string`;
+}
+var _ = Symbol(`mobx administration`),
+  _ = (function () {
+    function _(_) {
+      _ === void 0 && (_ = `Atom`),
+        (this.name_ = void 0),
+        (this.flags_ = 0),
+        (this.observers_ = new Set()),
+        (this.lastAccessedBy_ = 0),
+        (this.lowestObserverState_ = _.NOT_TRACKING_),
+        (this.onBOL = void 0),
+        (this.onBUOL = void 0),
+        (this.name_ = _);
+    }
+    var _ = _.prototype;
+    return (
+      (_.onBO = function () {
+        this.onBOL &&
+          this.onBOL.forEach(function (_) {
+            return _();
+          });
+      }),
+      (_.onBUO = function () {
+        this.onBUOL &&
+          this.onBUOL.forEach(function (_) {
+            return _();
+          });
+      }),
+      (_.reportObserved = function () {
+        return _(this);
+      }),
+      (_.reportChanged = function () {
+        _(), _(this), _();
+      }),
+      (_.toString = function () {
+        return this.name_;
+      }),
+      _(_, [
+        {
+          key: `isBeingObserved`,
+          get: function () {
+            return _(this.flags_, _.isBeingObservedMask_);
+          },
+          set: function (_) {
+            this.flags_ = _(this.flags_, _.isBeingObservedMask_, _);
+          },
+        },
+        {
+          key: `isPendingUnobservation`,
+          get: function () {
+            return _(this.flags_, _.isPendingUnobservationMask_);
+          },
+          set: function (_) {
+            this.flags_ = _(this.flags_, _.isPendingUnobservationMask_, _);
+          },
+        },
+        {
+          key: `diffValue`,
+          get: function () {
+            return +!!_(this.flags_, _.diffValueMask_);
+          },
+          set: function (_) {
+            this.flags_ = _(this.flags_, _.diffValueMask_, _ === 1);
+          },
+        },
+      ])
+    );
+  })();
+(_.isBeingObservedMask_ = 1),
+  (_.isPendingUnobservationMask_ = 2),
+  (_.diffValueMask_ = 4);
+var _ = _(`Atom`, _);
+function _(_, _, _) {
+  _ === void 0 && (_ = _), _ === void 0 && (_ = _);
+  var _ = new _(_);
+  return _ !== _ && _(_, _), _ !== _ && _(_, _), _;
+}
+function _(_, _) {
+  return _ === _;
+}
+function _(_, _) {
+  return _(_, _);
+}
+function _(_, _) {
+  return _(_, _, 1);
+}
+function _(_, _) {
+  return Object._
+    ? Object._(_, _)
+    : _ === _
+      ? _ !== 0 || 1 / _ == 1 / _
+      : _ !== _ && _ !== _;
+}
+var _ = {
+  identity: _,
+  structural: _,
+  default: _,
+  shallow: _,
+};
+function _(_, _, _) {
+  return _(_)
+    ? _
+    : Array.isArray(_)
+      ? _.array(_, {
+          name: _,
+        })
+      : _(_)
+        ? _.object(_, void 0, {
+            name: _,
+          })
+        : _(_)
+          ? _.map(_, {
+              name: _,
+            })
+          : _(_)
+            ? _.set(_, {
+                name: _,
+              })
+            : typeof _ == `function` && !_(_) && !_(_)
+              ? _(_)
+                ? _(_)
+                : _(_, _)
+              : _;
+}
+function _(_, _, _) {
+  if (_ == null || _(_) || _(_) || _(_) || _(_)) return _;
+  if (Array.isArray(_))
+    return _.array(_, {
+      name: _,
+      deep: !1,
+    });
+  if (_(_))
+    return _.object(_, void 0, {
+      name: _,
+      deep: !1,
+    });
+  if (_(_))
+    return _.map(_, {
+      name: _,
+      deep: !1,
+    });
+  if (_(_))
+    return _.set(_, {
+      name: _,
+      deep: !1,
+    });
+}
+function _(_) {
+  return _;
+}
+function _(_, _) {
+  return _(_, _) ? _ : _;
+}
+var _ = `override`;
+function _(_) {
+  return _.annotationType_ === _;
+}
+function _(_, _) {
+  return {
+    annotationType_: _,
+    options_: _,
+    make_: _,
+    extend_: _,
+    decorate_20223_: _,
+  };
+}
+function _(_, _, _, _) {
+  var _;
+  return (_ = this.options_) != null && _.bound
+    ? this.extend_(_, _, _, !1) === null
+      ? 0
+      : 1
+    : _ === _.target_
+      ? this.extend_(_, _, _, !1) === null
+        ? 0
+        : 2
+      : _(_.value)
+        ? 1
+        : (_(_, _, _(_, this, _, _, !1)), 2);
+}
+function _(_, _, _, _) {
+  var _ = _(_, this, _, _);
+  return _.defineProperty_(_, _, _);
+}
+function _(_, _) {
+  var _ = _.kind,
+    _ = _.name,
+    _ = _.addInitializer,
+    _ = this,
+    _ = function (_) {
+      return _(
+        _.options_?.name ?? _.toString(),
+        _,
+        _.options_?.autoAction ?? !1,
+      );
+    };
+  if (_ == `field`)
+    return function (_) {
+      var _,
+        _ = _;
+      return (
+        _(_) || (_ = _(_)),
+        (_ = _.options_) != null &&
+          _.bound &&
+          ((_ = _.bind(this)), (_.isMobxAction = !0)),
+        _
+      );
+    };
+  if (_ == `method`) {
+    var _;
+    return (
+      _(_) || (_ = _(_)),
+      (_ = this.options_) != null &&
+        _.bound &&
+        _(function () {
+          var _ = this,
+            _ = _[_].bind(_);
+          (_.isMobxAction = !0), (_[_] = _);
+        }),
+      _
+    );
+  }
+  _(
+    `Cannot apply '` +
+      _.annotationType_ +
+      `' to '` +
+      String(_) +
+      `' (kind: ` +
+      _ +
+      `):` +
+      (`
+'` +
+        _.annotationType_ +
+        `' can only be used on properties with a function value.`),
+  );
+}
+function _(_, _, _, _) {
+  _.annotationType_, _.value;
+}
+function _(_, _, _, _, _) {
+  var _, _;
+  _ === void 0 && (_ = _.safeDescriptors), _(_, _, _, _);
+  var _ = _.value;
+  return (
+    (_ = _.options_) != null && _.bound && (_ = _.bind(_.proxy_ ?? _.target_)),
+    {
+      value: _(
+        _.options_?.name ?? _.toString(),
+        _,
+        _.options_?.autoAction ?? !1,
+        (_ = _.options_) != null && _.bound ? (_.proxy_ ?? _.target_) : void 0,
+      ),
+      configurable: !_ || _.isPlainObject_,
+      enumerable: !1,
+      writable: !_,
+    }
+  );
+}
+function _(_, _) {
+  return {
+    annotationType_: _,
+    options_: _,
+    make_: _,
+    extend_: _,
+    decorate_20223_: _,
+  };
+}
+function _(_, _, _, _) {
+  var _;
+  return _ === _.target_
+    ? this.extend_(_, _, _, !1) === null
+      ? 0
+      : 2
+    : (_ = this.options_) != null &&
+        _.bound &&
+        (!_(_.target_, _) || !_(_.target_[_])) &&
+        this.extend_(_, _, _, !1) === null
+      ? 0
+      : _(_.value)
+        ? 1
+        : (_(_, _, _(_, this, _, _, !1, !1)), 2);
+}
+function _(_, _, _, _) {
+  var _ = _(_, this, _, _, this.options_?.bound);
+  return _.defineProperty_(_, _, _);
+}
+function _(_, _) {
+  var _,
+    _ = _.name,
+    _ = _.addInitializer;
+  return (
+    _(_) || (_ = _(_)),
+    (_ = this.options_) != null &&
+      _.bound &&
+      _(function () {
+        var _ = this,
+          _ = _[_].bind(_);
+        (_.isMobXFlow = !0), (_[_] = _);
+      }),
+    _
+  );
+}
+function _(_, _, _, _) {
+  _.annotationType_, _.value;
+}
+function _(_, _, _, _, _, _) {
+  _ === void 0 && (_ = _.safeDescriptors), _(_, _, _, _);
+  var _ = _.value;
+  return (
+    _(_) || (_ = _(_)),
+    _ && ((_ = _.bind(_.proxy_ ?? _.target_)), (_.isMobXFlow = !0)),
+    {
+      value: _,
+      configurable: !_ || _.isPlainObject_,
+      enumerable: !1,
+      writable: !_,
+    }
+  );
+}
+function _(_, _) {
+  return {
+    annotationType_: _,
+    options_: _,
+    make_: _,
+    extend_: _,
+    decorate_20223_: _,
+  };
+}
+function _(_, _, _) {
+  return this.extend_(_, _, _, !1) === null ? 0 : 1;
+}
+function _(_, _, _, _) {
+  return (
+    _(_, this, _, _),
+    _.defineComputedProperty_(
+      _,
+      _({}, this.options_, {
+        get: _.get,
+        set: _.set,
+      }),
+      _,
+    )
+  );
+}
+function _(_, _) {
+  var _ = this,
+    _ = _.name,
+    _ = _.addInitializer;
+  return (
+    _(function () {
+      var _ = _(this)[_],
+        _ = _({}, _.options_, {
+          get: _,
+          context: this,
+        });
+      (_.name ||= `ObservableObject.` + _.toString()),
+        _.values_.set(_, new _(_));
+    }),
+    function () {
+      return this[_].getObservablePropValue_(_);
+    }
+  );
+}
+function _(_, _, _, _) {
+  _.annotationType_, _.get;
+}
+function _(_, _) {
+  return {
+    annotationType_: _,
+    options_: _,
+    make_: _,
+    extend_: _,
+    decorate_20223_: _,
+  };
+}
+function _(_, _, _) {
+  return this.extend_(_, _, _, !1) === null ? 0 : 1;
+}
+function _(_, _, _, _) {
+  return (
+    _(_, this, _, _),
+    _.defineObservableProperty_(_, _.value, this.options_?.enhancer ?? _, _)
+  );
+}
+function _(_, _) {
+  var _ = this,
+    _ = _.kind,
+    _ = _.name,
+    _ = new WeakSet();
+  function _(_, _) {
+    var _ = _(_)[_],
+      _ = new _(
+        _,
+        _.options_?.enhancer ?? _,
+        `ObservableObject.` + _.toString(),
+        !1,
+      );
+    _.values_.set(_, _), _.add(_);
+  }
+  if (_ == `accessor`)
+    return {
+      get: function () {
+        return (
+          _.has(this) || _(this, _.get.call(this)),
+          this[_].getObservablePropValue_(_)
+        );
+      },
+      set: function (_) {
+        return _.has(this) || _(this, _), this[_].setObservablePropValue_(_, _);
+      },
+      init: function (_) {
+        return _.has(this) || _(this, _), _;
+      },
+    };
+}
+function _(_, _, _, _) {
+  _.annotationType_;
+}
+var _ = `true`,
+  _ = _();
+function _(_) {
+  return {
+    annotationType_: _,
+    options_: _,
+    make_: _,
+    extend_: _,
+    decorate_20223_: _,
+  };
+}
+function _(_, _, _, _) {
+  var _;
+  if (_.get) return _.make_(_, _, _, _);
+  if (_.set) {
+    var _ = _(_.set) ? _.set : _(_.toString(), _.set);
+    return _ === _.target_
+      ? _.defineProperty_(_, {
+          configurable: !_.safeDescriptors || _.isPlainObject_,
+          set: _,
+        }) === null
+        ? 0
+        : 2
+      : (_(_, _, {
+          configurable: !0,
+          set: _,
+        }),
+        2);
+  }
+  if (_ !== _.target_ && typeof _.value == `function`) {
+    var _;
+    if (_(_.value)) {
+      var _;
+      return ((_ = this.options_) != null && _.autoBind ? _.bound : _).make_(
+        _,
+        _,
+        _,
+        _,
+      );
+    }
+    return ((_ = this.options_) != null && _.autoBind ? _.bound : _).make_(
+      _,
+      _,
+      _,
+      _,
+    );
+  }
+  var _ = this.options_?.deep === !1 ? _.ref : _;
+  return (
+    typeof _.value == `function` &&
+      (_ = this.options_) != null &&
+      _.autoBind &&
+      (_.value = _.value.bind(_.proxy_ ?? _.target_)),
+    _.make_(_, _, _, _)
+  );
+}
+function _(_, _, _, _) {
+  var _;
+  return _.get
+    ? _.extend_(_, _, _, _)
+    : _.set
+      ? _.defineProperty_(
+          _,
+          {
+            configurable: !_.safeDescriptors || _.isPlainObject_,
+            set: _(_.toString(), _.set),
+          },
+          _,
+        )
+      : (typeof _.value == `function` &&
+          (_ = this.options_) != null &&
+          _.autoBind &&
+          (_.value = _.value.bind(_.proxy_ ?? _.target_)),
+        (this.options_?.deep === !1 ? _.ref : _).extend_(_, _, _, _));
+}
+function _(_, _) {
+  _(`'` + this.annotationType_ + `' cannot be used as a decorator`);
+}
+var _ = `observable`,
+  _ = `observable.ref`,
+  _ = `observable.shallow`,
+  _ = `observable.struct`,
+  _ = {
+    deep: !0,
+    name: void 0,
+    defaultDecorator: void 0,
+    proxy: !0,
+  };
+Object.freeze(_);
+function _(_) {
+  return _ || _;
+}
+var _ = _(_),
+  _ = _(_, {
+    enhancer: _,
+  }),
+  _ = _(_, {
+    enhancer: _,
+  }),
+  _ = _(_, {
+    enhancer: _,
+  }),
+  _ = _(_);
+function _(_) {
+  return _.deep === !0 ? _ : _.deep === !1 ? _ : _(_.defaultDecorator);
+}
+function _(_) {
+  return _ ? (_.defaultDecorator ?? _(_)) : void 0;
+}
+function _(_) {
+  return _ ? (_.options_?.enhancer ?? _) : _;
+}
+function _(_, _, _) {
+  if (_(_)) return _.decorate_20223_(_, _);
+  if (_(_)) {
+    _(_, _, _);
+    return;
+  }
+  return _(_)
+    ? _
+    : _(_)
+      ? _.object(_, _, _)
+      : Array.isArray(_)
+        ? _.array(_, _)
+        : _(_)
+          ? _.map(_, _)
+          : _(_)
+            ? _.set(_, _)
+            : typeof _ == `object` && _
+              ? _
+              : _.box(_, _);
+}
+_(_, _);
+var _ = _(_, {
+    box: function (_, _) {
+      var _ = _(_);
+      return new _(_, _(_), _.name, !0, _.equals);
+    },
+    array: function (_, _) {
+      var _ = _(_);
+      return (_.useProxies === !1 || _.proxy === !1 ? _ : _)(_, _(_), _.name);
+    },
+    map: function (_, _) {
+      var _ = _(_);
+      return new _(_, _(_), _.name);
+    },
+    set: function (_, _) {
+      var _ = _(_);
+      return new _(_, _(_), _.name);
+    },
+    object: function (_, _, _) {
+      return _(function () {
+        return _(
+          _.useProxies === !1 || _?.proxy === !1 ? _({}, _) : _({}, _),
+          _,
+          _,
+        );
+      });
+    },
+    ref: _(_),
+    shallow: _(_),
+    deep: _,
+    struct: _(_),
+  }),
+  _ = `computed`,
+  _ = `computed.struct`,
+  _ = _(_),
+  _ = _(_, {
+    equals: _.structural,
+  }),
+  _ = function (_, _) {
+    if (_(_)) return _.decorate_20223_(_, _);
+    if (_(_)) return _(_, _, _);
+    if (_(_)) return _(_(_, _));
+    var _ = _(_) ? _ : {};
+    return (_.get = _), (_.name ||= _.name || ``), new _(_);
+  };
+Object.assign(_, _), (_.struct = _(_));
+var _ = 0,
+  _ = 1,
+  _ = _(function () {}, `name`)?.configurable ?? !1,
+  _ = {
+    value: `action`,
+    configurable: !0,
+    writable: !1,
+    enumerable: !1,
+  };
+function _(_, _, _, _) {
+  _ === void 0 && (_ = !1);
+  function _() {
+    return _(_, _, _, _ || this, arguments);
+  }
+  return (
+    (_.isMobxAction = !0),
+    (_.toString = function () {
+      return _.toString();
+    }),
+    _ && ((_.value = _), _(_, `name`, _)),
+    _
+  );
+}
+function _(_, _, _, _, _) {
+  var _ = _(_, _, _, _);
+  try {
+    return _.apply(_, _);
+  } catch (_) {
+    throw ((_.error_ = _), _);
+  } finally {
+    _(_);
+  }
+}
+function _(_, _, _, _) {
+  var _ = !1,
+    _ = 0,
+    _ = _.trackingDerivation,
+    _ = !_ || !_;
+  _();
+  var _ = _.allowStateChanges;
+  _ && (_(), (_ = _(!0)));
+  var _ = _(!0),
+    _ = {
+      runAsAction_: _,
+      prevDerivation_: _,
+      prevAllowStateChanges_: _,
+      prevAllowStateReads_: _,
+      notifySpy_: _,
+      startTime_: _,
+      actionId_: _++,
+      parentActionId_: _,
+    };
+  return (_ = _.actionId_), _;
+}
+function _(_) {
+  _ !== _.actionId_ && _(30),
+    (_ = _.parentActionId_),
+    _.error_ !== void 0 && (_.suppressReactionErrors = !0),
+    _(_.prevAllowStateChanges_),
+    _(_.prevAllowStateReads_),
+    _(),
+    _.runAsAction_ && _(_.prevDerivation_),
+    (_.suppressReactionErrors = !1);
+}
+function _(_, _) {
+  var _ = _(_);
+  try {
+    return _();
+  } finally {
+    _(_);
+  }
+}
+function _(_) {
+  var _ = _.allowStateChanges;
+  return (_.allowStateChanges = _), _;
+}
+function _(_) {
+  _.allowStateChanges = _;
+}
+var _ = (function (_) {
+    function _(_, _, _, _, _) {
+      var _;
+      return (
+        _ === void 0 && (_ = `ObservableValue`),
+        _ === void 0 && (_ = !0),
+        _ === void 0 && (_ = _.default),
+        (_ = _.call(this, _) || this),
+        (_.enhancer = void 0),
+        (_.name_ = void 0),
+        (_.equals = void 0),
+        (_.hasUnreportedChange_ = !1),
+        (_.interceptors_ = void 0),
+        (_.changeListeners_ = void 0),
+        (_.value_ = void 0),
+        (_.dehancer = void 0),
+        (_.enhancer = _),
+        (_.name_ = _),
+        (_.equals = _),
+        (_.value_ = _(_, void 0, _)),
+        _
+      );
+    }
+    _(_, _);
+    var _ = _.prototype;
+    return (
+      (_.dehanceValue = function (_) {
+        return this.dehancer === void 0 ? _ : this.dehancer(_);
+      }),
+      (_.set = function (_) {
+        this.value_,
+          (_ = this.prepareNewValue_(_)),
+          _ !== _.UNCHANGED && this.setNewValue_(_);
+      }),
+      (_.prepareNewValue_ = function (_) {
+        if (_(this)) {
+          var _ = _(this, {
+            object: this,
+            type: _,
+            newValue: _,
+          });
+          if (!_) return _.UNCHANGED;
+          _ = _.newValue;
+        }
+        return (
+          (_ = this.enhancer(_, this.value_, this.name_)),
+          this.equals(this.value_, _) ? _.UNCHANGED : _
+        );
+      }),
+      (_.setNewValue_ = function (_) {
+        var _ = this.value_;
+        (this.value_ = _),
+          this.reportChanged(),
+          _(this) &&
+            _(this, {
+              type: _,
+              object: this,
+              newValue: _,
+              oldValue: _,
+            });
+      }),
+      (_.get = function () {
+        return this.reportObserved(), this.dehanceValue(this.value_);
+      }),
+      (_.intercept_ = function (_) {
+        return _(this, _);
+      }),
+      (_.observe_ = function (_, _) {
+        return (
+          _ &&
+            _({
+              observableKind: `value`,
+              debugObjectName: this.name_,
+              object: this,
+              type: _,
+              newValue: this.value_,
+              oldValue: void 0,
+            }),
+          _(this, _)
+        );
+      }),
+      (_.raw = function () {
+        return this.value_;
+      }),
+      (_.toJSON = function () {
+        return this.get();
+      }),
+      (_.toString = function () {
+        return this.name_ + `[` + this.value_ + `]`;
+      }),
+      (_.valueOf = function () {
+        return _(this.get());
+      }),
+      (_[Symbol.toPrimitive] = function () {
+        return this.valueOf();
+      }),
+      _
+    );
+  })(_),
+  _ = _(`ObservableValue`, _),
+  _ = (function () {
+    function _(_) {
+      (this.dependenciesState_ = _.NOT_TRACKING_),
+        (this.observing_ = []),
+        (this.newObserving_ = null),
+        (this.observers_ = new Set()),
+        (this.runId_ = 0),
+        (this.lastAccessedBy_ = 0),
+        (this.lowestObserverState_ = _.UP_TO_DATE_),
+        (this.unboundDepsCount_ = 0),
+        (this.value_ = new _(null)),
+        (this.name_ = void 0),
+        (this.triggeredBy_ = void 0),
+        (this.flags_ = 0),
+        (this.derivation = void 0),
+        (this.setter_ = void 0),
+        (this.isTracing_ = _.NONE),
+        (this.scope_ = void 0),
+        (this.equals_ = void 0),
+        (this.requiresReaction_ = void 0),
+        (this.keepAlive_ = void 0),
+        (this.onBOL = void 0),
+        (this.onBUOL = void 0),
+        _.get || _(31),
+        (this.derivation = _.get),
+        (this.name_ = _.name || `ComputedValue`),
+        _.set && (this.setter_ = _(`ComputedValue-setter`, _.set)),
+        (this.equals_ =
+          _.equals ||
+          (_.compareStructural || _.struct ? _.structural : _.default)),
+        (this.scope_ = _.context),
+        (this.requiresReaction_ = _.requiresReaction),
+        (this.keepAlive_ = !!_.keepAlive);
+    }
+    var _ = _.prototype;
+    return (
+      (_.onBecomeStale_ = function () {
+        _(this);
+      }),
+      (_.onBO = function () {
+        this.onBOL &&
+          this.onBOL.forEach(function (_) {
+            return _();
+          });
+      }),
+      (_.onBUO = function () {
+        this.onBUOL &&
+          this.onBUOL.forEach(function (_) {
+            return _();
+          });
+      }),
+      (_.get = function () {
+        if (
+          (this.isComputing && _(32, this.name_, this.derivation),
+          _.inBatch === 0 && this.observers_.size === 0 && !this.keepAlive_)
+        )
+          _(this) &&
+            (this.warnAboutUntrackedRead_(),
+            _(),
+            (this.value_ = this.computeValue_(!1)),
+            _());
+        else if ((_(this), _(this))) {
+          var _ = _.trackingContext;
+          this.keepAlive_ && !_ && (_.trackingContext = this),
+            this.trackAndCompute() && _(this),
+            (_.trackingContext = _);
+        }
+        var _ = this.value_;
+        if (_(_)) throw _.cause;
+        return _;
+      }),
+      (_.set = function (_) {
+        if (this.setter_) {
+          this.isRunningSetter && _(33, this.name_),
+            (this.isRunningSetter = !0);
+          try {
+            this.setter_.call(this.scope_, _);
+          } finally {
+            this.isRunningSetter = !1;
+          }
+        } else _(34, this.name_);
+      }),
+      (_.trackAndCompute = function () {
+        var _ = this.value_,
+          _ = this.dependenciesState_ === _.NOT_TRACKING_,
+          _ = this.computeValue_(!0),
+          _ = _ || _(_) || _(_) || !this.equals_(_, _);
+        return _ && (this.value_ = _), _;
+      }),
+      (_.computeValue_ = function (_) {
+        this.isComputing = !0;
+        var _ = _(!1),
+          _;
+        if (_) _ = _(this, this.derivation, this.scope_);
+        else if (_.disableErrorBoundaries === !0)
+          _ = this.derivation.call(this.scope_);
+        else
+          try {
+            _ = this.derivation.call(this.scope_);
+          } catch (_) {
+            _ = new _(_);
+          }
+        return _(_), (this.isComputing = !1), _;
+      }),
+      (_.suspend_ = function () {
+        this.keepAlive_ || (_(this), (this.value_ = void 0));
+      }),
+      (_.observe_ = function (_, _) {
+        var _ = this,
+          _ = !0,
+          _ = void 0;
+        return _(function () {
+          var _ = _.get();
+          if (!_ || _) {
+            var _ = _();
+            _({
+              observableKind: `computed`,
+              debugObjectName: _.name_,
+              type: _,
+              object: _,
+              newValue: _,
+              oldValue: _,
+            }),
+              _(_);
+          }
+          (_ = !1), (_ = _);
+        });
+      }),
+      (_.warnAboutUntrackedRead_ = function () {}),
+      (_.toString = function () {
+        return this.name_ + `[` + this.derivation.toString() + `]`;
+      }),
+      (_.valueOf = function () {
+        return _(this.get());
+      }),
+      (_[Symbol.toPrimitive] = function () {
+        return this.valueOf();
+      }),
+      _(_, [
+        {
+          key: `isComputing`,
+          get: function () {
+            return _(this.flags_, _.isComputingMask_);
+          },
+          set: function (_) {
+            this.flags_ = _(this.flags_, _.isComputingMask_, _);
+          },
+        },
+        {
+          key: `isRunningSetter`,
+          get: function () {
+            return _(this.flags_, _.isRunningSetterMask_);
+          },
+          set: function (_) {
+            this.flags_ = _(this.flags_, _.isRunningSetterMask_, _);
+          },
+        },
+        {
+          key: `isBeingObserved`,
+          get: function () {
+            return _(this.flags_, _.isBeingObservedMask_);
+          },
+          set: function (_) {
+            this.flags_ = _(this.flags_, _.isBeingObservedMask_, _);
+          },
+        },
+        {
+          key: `isPendingUnobservation`,
+          get: function () {
+            return _(this.flags_, _.isPendingUnobservationMask_);
+          },
+          set: function (_) {
+            this.flags_ = _(this.flags_, _.isPendingUnobservationMask_, _);
+          },
+        },
+        {
+          key: `diffValue`,
+          get: function () {
+            return +!!_(this.flags_, _.diffValueMask_);
+          },
+          set: function (_) {
+            this.flags_ = _(this.flags_, _.diffValueMask_, _ === 1);
+          },
+        },
+      ])
+    );
+  })();
+(_.isComputingMask_ = 1),
+  (_.isRunningSetterMask_ = 2),
+  (_.isBeingObservedMask_ = 4),
+  (_.isPendingUnobservationMask_ = 8),
+  (_.diffValueMask_ = 16);
+var _ = _(`ComputedValue`, _),
+  _;
+(function (_) {
+  (_[(_.NOT_TRACKING_ = -1)] = `NOT_TRACKING_`),
+    (_[(_.UP_TO_DATE_ = 0)] = `UP_TO_DATE_`),
+    (_[(_.POSSIBLY_STALE_ = 1)] = `POSSIBLY_STALE_`),
+    (_[(_.STALE_ = 2)] = `STALE_`);
+})((_ ||= {}));
+var _;
+(function (_) {
+  (_[(_.NONE = 0)] = `NONE`),
+    (_[(_.LOG = 1)] = `LOG`),
+    (_[(_.BREAK = 2)] = `BREAK`);
+})((_ ||= {}));
+var _ = function (_) {
+  (this.cause = void 0), (this.cause = _);
+};
+function _(_) {
+  return _ instanceof _;
+}
+function _(_) {
+  switch (_.dependenciesState_) {
+    case _.UP_TO_DATE_:
+      return !1;
+    case _.NOT_TRACKING_:
+    case _.STALE_:
+      return !0;
+    case _.POSSIBLY_STALE_:
+      for (
+        var _ = _(!0), _ = _(), _ = _.observing_, _ = _.length, _ = 0;
+        _ < _;
+        _++
+      ) {
+        var _ = _[_];
+        if (_(_)) {
+          if (_.disableErrorBoundaries) _.get();
+          else
+            try {
+              _.get();
+            } catch {
+              return _(_), _(_), !0;
+            }
+          if (_.dependenciesState_ === _.STALE_) return _(_), _(_), !0;
+        }
+      }
+      return _(_), _(_), _(_), !1;
+  }
+}
+function _() {
+  return _.trackingDerivation !== null;
+}
+function _(_, _, _) {
+  var _ = _(!0);
+  _(_),
+    (_.newObserving_ = Array(_.runId_ === 0 ? 100 : _.observing_.length)),
+    (_.unboundDepsCount_ = 0),
+    (_.runId_ = ++_.runId);
+  var _ = _.trackingDerivation;
+  (_.trackingDerivation = _), _.inBatch++;
+  var _;
+  if (_.disableErrorBoundaries === !0) _ = _.call(_);
+  else
+    try {
+      _ = _.call(_);
+    } catch (_) {
+      _ = new _(_);
+    }
+  return _.inBatch--, (_.trackingDerivation = _), _(_), _(_), _;
+}
+function _(_) {
+  for (
+    var _ = _.observing_,
+      _ = (_.observing_ = _.newObserving_),
+      _ = _.UP_TO_DATE_,
+      _ = 0,
+      _ = _.unboundDepsCount_,
+      _ = 0;
+    _ < _;
+    _++
+  ) {
+    var _ = _[_];
+    _.diffValue === 0 && ((_.diffValue = 1), _ !== _ && (_[_] = _), _++),
+      _.dependenciesState_ > _ && (_ = _.dependenciesState_);
+  }
+  for (_.length = _, _.newObserving_ = null, _ = _.length; _--; ) {
+    var _ = _[_];
+    _.diffValue === 0 && _(_, _), (_.diffValue = 0);
+  }
+  for (; _--; ) {
+    var _ = _[_];
+    _.diffValue === 1 && ((_.diffValue = 0), _(_, _));
+  }
+  _ !== _.UP_TO_DATE_ && ((_.dependenciesState_ = _), _.onBecomeStale_());
+}
+function _(_) {
+  var _ = _.observing_;
+  _.observing_ = [];
+  for (var _ = _.length; _--; ) _(_[_], _);
+  _.dependenciesState_ = _.NOT_TRACKING_;
+}
+function _(_) {
+  var _ = _();
+  try {
+    return _();
+  } finally {
+    _(_);
+  }
+}
+function _() {
+  var _ = _.trackingDerivation;
+  return (_.trackingDerivation = null), _;
+}
+function _(_) {
+  _.trackingDerivation = _;
+}
+function _(_) {
+  var _ = _.allowStateReads;
+  return (_.allowStateReads = _), _;
+}
+function _(_) {
+  _.allowStateReads = _;
+}
+function _(_) {
+  if (_.dependenciesState_ !== _.UP_TO_DATE_) {
+    _.dependenciesState_ = _.UP_TO_DATE_;
+    for (var _ = _.observing_, _ = _.length; _--; )
+      _[_].lowestObserverState_ = _.UP_TO_DATE_;
+  }
+}
+var _ = function () {
+    (this.version = 6),
+      (this.UNCHANGED = {}),
+      (this.trackingDerivation = null),
+      (this.trackingContext = null),
+      (this.runId = 0),
+      (this.mobxGuid = 0),
+      (this.inBatch = 0),
+      (this.pendingUnobservations = []),
+      (this.pendingReactions = []),
+      (this.isRunningReactions = !1),
+      (this.allowStateChanges = !1),
+      (this.allowStateReads = !0),
+      (this.enforceActions = !0),
+      (this.spyListeners = []),
+      (this.globalReactionErrorHandlers = []),
+      (this.computedRequiresReaction = !1),
+      (this.reactionRequiresObservable = !1),
+      (this.observableRequiresReaction = !1),
+      (this.disableErrorBoundaries = !1),
+      (this.suppressReactionErrors = !1),
+      (this.useProxies = !0),
+      (this.verifyProxies = !1),
+      (this.safeDescriptors = !0);
+  },
+  _ = !0,
+  _ = !1,
+  _ = (function () {
+    var _ = _();
+    return (
+      _.__mobxInstanceCount > 0 && !_.__mobxGlobals && (_ = !1),
+      _.__mobxGlobals &&
+        _.__mobxGlobals.version !== new _().version &&
+        (_ = !1),
+      _
+        ? _.__mobxGlobals
+          ? ((_.__mobxInstanceCount += 1),
+            _.__mobxGlobals.UNCHANGED || (_.__mobxGlobals.UNCHANGED = {}),
+            _.__mobxGlobals)
+          : ((_.__mobxInstanceCount = 1), (_.__mobxGlobals = new _()))
+        : (setTimeout(function () {
+            _ || _(35);
+          }, 1),
+          new _())
+    );
+  })();
+function _() {
+  if (
+    ((_.pendingReactions.length || _.inBatch || _.isRunningReactions) && _(36),
+    (_ = !0),
+    _)
+  ) {
+    var _ = _();
+    --_.__mobxInstanceCount === 0 && (_.__mobxGlobals = void 0), (_ = new _());
+  }
+}
+function _(_, _) {
+  _.observers_.add(_),
+    _.lowestObserverState_ > _.dependenciesState_ &&
+      (_.lowestObserverState_ = _.dependenciesState_);
+}
+function _(_, _) {
+  _.observers_.delete(_), _.observers_.size === 0 && _(_);
+}
+function _(_) {
+  _.isPendingUnobservation === !1 &&
+    ((_.isPendingUnobservation = !0), _.pendingUnobservations.push(_));
+}
+function _() {
+  _.inBatch++;
+}
+function _() {
+  if (--_.inBatch === 0) {
+    _();
+    for (var _ = _.pendingUnobservations, _ = 0; _ < _.length; _++) {
+      var _ = _[_];
+      (_.isPendingUnobservation = !1),
+        _.observers_.size === 0 &&
+          (_.isBeingObserved && ((_.isBeingObserved = !1), _.onBUO()),
+          _ instanceof _ && _.suspend_());
+    }
+    _.pendingUnobservations = [];
+  }
+}
+function _(_) {
+  var _ = _.trackingDerivation;
+  return _ === null
+    ? (_.observers_.size === 0 && _.inBatch > 0 && _(_), !1)
+    : (_.runId_ !== _.lastAccessedBy_ &&
+        ((_.lastAccessedBy_ = _.runId_),
+        (_.newObserving_[_.unboundDepsCount_++] = _),
+        !_.isBeingObserved &&
+          _.trackingContext &&
+          ((_.isBeingObserved = !0), _.onBO())),
+      _.isBeingObserved);
+}
+function _(_) {
+  _.lowestObserverState_ !== _.STALE_ &&
+    ((_.lowestObserverState_ = _.STALE_),
+    _.observers_.forEach(function (_) {
+      _.dependenciesState_ === _.UP_TO_DATE_ && _.onBecomeStale_(),
+        (_.dependenciesState_ = _.STALE_);
+    }));
+}
+function _(_) {
+  _.lowestObserverState_ !== _.STALE_ &&
+    ((_.lowestObserverState_ = _.STALE_),
+    _.observers_.forEach(function (_) {
+      _.dependenciesState_ === _.POSSIBLY_STALE_
+        ? (_.dependenciesState_ = _.STALE_)
+        : _.dependenciesState_ === _.UP_TO_DATE_ &&
+          (_.lowestObserverState_ = _.UP_TO_DATE_);
+    }));
+}
+function _(_) {
+  _.lowestObserverState_ === _.UP_TO_DATE_ &&
+    ((_.lowestObserverState_ = _.POSSIBLY_STALE_),
+    _.observers_.forEach(function (_) {
+      _.dependenciesState_ === _.UP_TO_DATE_ &&
+        ((_.dependenciesState_ = _.POSSIBLY_STALE_), _.onBecomeStale_());
+    }));
+}
+var _ = (function () {
+  function _(_, _, _, _) {
+    _ === void 0 && (_ = `Reaction`),
+      (this.name_ = void 0),
+      (this.onInvalidate_ = void 0),
+      (this.errorHandler_ = void 0),
+      (this.requiresObservable_ = void 0),
+      (this.observing_ = []),
+      (this.newObserving_ = []),
+      (this.dependenciesState_ = _.NOT_TRACKING_),
+      (this.runId_ = 0),
+      (this.unboundDepsCount_ = 0),
+      (this.flags_ = 0),
+      (this.isTracing_ = _.NONE),
+      (this.name_ = _),
+      (this.onInvalidate_ = _),
+      (this.errorHandler_ = _),
+      (this.requiresObservable_ = _);
+  }
+  var _ = _.prototype;
+  return (
+    (_.onBecomeStale_ = function () {
+      this.schedule_();
+    }),
+    (_.schedule_ = function () {
+      this.isScheduled ||
+        ((this.isScheduled = !0), _.pendingReactions.push(this), _());
+    }),
+    (_.runReaction_ = function () {
+      if (!this.isDisposed) {
+        _(), (this.isScheduled = !1);
+        var _ = _.trackingContext;
+        if (((_.trackingContext = this), _(this))) {
+          this.isTrackPending = !0;
+          try {
+            this.onInvalidate_();
+          } catch (_) {
+            this.reportExceptionInDerivation_(_);
+          }
+        }
+        (_.trackingContext = _), _();
+      }
+    }),
+    (_.track = function (_) {
+      if (!this.isDisposed) {
+        _(), (this.isRunning = !0);
+        var _ = _.trackingContext;
+        _.trackingContext = this;
+        var _ = _(this, _, void 0);
+        (_.trackingContext = _),
+          (this.isRunning = !1),
+          (this.isTrackPending = !1),
+          this.isDisposed && _(this),
+          _(_) && this.reportExceptionInDerivation_(_.cause),
+          _();
+      }
+    }),
+    (_.reportExceptionInDerivation_ = function (_) {
+      var _ = this;
+      if (this.errorHandler_) {
+        this.errorHandler_(_, this);
+        return;
+      }
+      if (_.disableErrorBoundaries) throw _;
+      var _ = `[mobx] uncaught error in '` + this + `'`;
+      _.suppressReactionErrors || console.error(_, _),
+        _.globalReactionErrorHandlers.forEach(function (_) {
+          return _(_, _);
+        });
+    }),
+    (_.dispose = function () {
+      this.isDisposed ||
+        ((this.isDisposed = !0), this.isRunning || (_(), _(this), _()));
+    }),
+    (_.getDisposer_ = function (_) {
+      var _ = this,
+        _ = function _() {
+          _.dispose(),
+            _ == null ||
+              _.removeEventListener == null ||
+              _.removeEventListener(`abort`, _);
+        };
+      return (
+        _ == null ||
+          _.addEventListener == null ||
+          _.addEventListener(`abort`, _),
+        (_[_] = this),
+        `dispose` in Symbol &&
+          typeof Symbol.dispose == `symbol` &&
+          (_[Symbol.dispose] = _),
+        _
+      );
+    }),
+    (_.toString = function () {
+      return `Reaction[` + this.name_ + `]`;
+    }),
+    (_.trace = function (_) {
+      _ === void 0 && (_ = !1);
+    }),
+    _(_, [
+      {
+        key: `isDisposed`,
+        get: function () {
+          return _(this.flags_, _.isDisposedMask_);
+        },
+        set: function (_) {
+          this.flags_ = _(this.flags_, _.isDisposedMask_, _);
+        },
+      },
+      {
+        key: `isScheduled`,
+        get: function () {
+          return _(this.flags_, _.isScheduledMask_);
+        },
+        set: function (_) {
+          this.flags_ = _(this.flags_, _.isScheduledMask_, _);
+        },
+      },
+      {
+        key: `isTrackPending`,
+        get: function () {
+          return _(this.flags_, _.isTrackPendingMask_);
+        },
+        set: function (_) {
+          this.flags_ = _(this.flags_, _.isTrackPendingMask_, _);
+        },
+      },
+      {
+        key: `isRunning`,
+        get: function () {
+          return _(this.flags_, _.isRunningMask_);
+        },
+        set: function (_) {
+          this.flags_ = _(this.flags_, _.isRunningMask_, _);
+        },
+      },
+      {
+        key: `diffValue`,
+        get: function () {
+          return +!!_(this.flags_, _.diffValueMask_);
+        },
+        set: function (_) {
+          this.flags_ = _(this.flags_, _.diffValueMask_, _ === 1);
+        },
+      },
+    ])
+  );
+})();
+(_.isDisposedMask_ = 1),
+  (_.isScheduledMask_ = 2),
+  (_.isTrackPendingMask_ = 4),
+  (_.isRunningMask_ = 8),
+  (_.diffValueMask_ = 16);
+var _ = 100,
+  _ = function (_) {
+    return _();
+  };
+function _() {
+  _.inBatch > 0 || _.isRunningReactions || _(_);
+}
+function _() {
+  _.isRunningReactions = !0;
+  for (var _ = _.pendingReactions, _ = 0; _.length > 0; ) {
+    ++_ === _ &&
+      (console.error(`[mobx] cycle in reaction: ` + _[0]), _.splice(0));
+    for (var _ = _.splice(0), _ = 0, _ = _.length; _ < _; _++)
+      _[_].runReaction_();
+  }
+  _.isRunningReactions = !1;
+}
+var _ = _(`Reaction`, _);
+function _(_) {
+  var _ = _;
+  _ = function (_) {
+    return _(function () {
+      return _(_);
+    });
+  };
+}
+function _() {
+  return !1;
+}
+function _(_) {
+  return (
+    console.warn(`[mobx.spy] Is a no-op in production builds`), function () {}
+  );
+}
+var _ = `action`,
+  _ = `action.bound`,
+  _ = `autoAction`,
+  _ = `autoAction.bound`,
+  _ = `<unnamed action>`,
+  _ = _(_),
+  _ = _(_, {
+    bound: !0,
+  }),
+  _ = _(_, {
+    autoAction: !0,
+  }),
+  _ = _(_, {
+    autoAction: !0,
+    bound: !0,
+  });
+function _(_) {
+  return function (_, _) {
+    if (_(_)) return _(_.name || _, _, _);
+    if (_(_)) return _(_, _, _);
+    if (_(_)) return (_ ? _ : _).decorate_20223_(_, _);
+    if (_(_)) return _(_, _, _ ? _ : _);
+    if (_(_))
+      return _(
+        _(_ ? _ : _, {
+          name: _,
+          autoAction: _,
+        }),
+      );
+  };
+}
+var _ = _(!1);
+Object.assign(_, _);
+var _ = _(!0);
+Object.assign(_, _), (_.bound = _(_)), (_.bound = _(_));
+function _(_) {
+  return _(_.name || _, !1, _, this, void 0);
+}
+function _(_) {
+  return _(_) && _.isMobxAction === !0;
+}
+function _(_, _) {
+  var _;
+  _ === void 0 && (_ = _);
+  var _ = _?.name ?? `Autorun`,
+    _ = !_.scheduler && !_.delay,
+    _;
+  if (_)
+    _ = new _(
+      _,
+      function () {
+        this.track(_);
+      },
+      _.onError,
+      _.requiresObservable,
+    );
+  else {
+    var _ = _(_),
+      _ = !1;
+    _ = new _(
+      _,
+      function () {
+        _ ||
+          ((_ = !0),
+          _(function () {
+            (_ = !1), _.isDisposed || _.track(_);
+          }));
+      },
+      _.onError,
+      _.requiresObservable,
+    );
+  }
+  function _() {
+    _(_);
+  }
+  return (
+    ((_ = _) != null && (_ = _.signal) != null && _.aborted) || _.schedule_(),
+    _.getDisposer_(_?.signal)
+  );
+}
+var _ = function (_) {
+  return _();
+};
+function _(_) {
+  return _.scheduler
+    ? _.scheduler
+    : _.delay
+      ? function (_) {
+          return setTimeout(_, _.delay);
+        }
+      : _;
+}
+function _(_, _, _) {
+  var _;
+  _ === void 0 && (_ = _);
+  var _ = _.name ?? `Reaction`,
+    _ = _(_, _.onError ? _(_.onError, _) : _),
+    _ = !_.scheduler && !_.delay,
+    _ = _(_),
+    _ = !0,
+    _ = !1,
+    _,
+    _ = _.compareStructural ? _.structural : _.equals || _.default,
+    _ = new _(
+      _,
+      function () {
+        _ || _ ? _() : _ || ((_ = !0), _(_));
+      },
+      _.onError,
+      _.requiresObservable,
+    );
+  function _() {
+    if (((_ = !1), !_.isDisposed)) {
+      var _ = !1,
+        _ = _;
+      _.track(function () {
+        var _ = _(!1, function () {
+          return _(_);
+        });
+        (_ = _ || !_(_, _)), (_ = _);
+      }),
+        ((_ && _.fireImmediately) || (!_ && _)) && _(_, _, _),
+        (_ = !1);
+    }
+  }
+  return (
+    ((_ = _) != null && (_ = _.signal) != null && _.aborted) || _.schedule_(),
+    _.getDisposer_(_?.signal)
+  );
+}
+function _(_, _) {
+  return function () {
+    try {
+      return _.apply(this, arguments);
+    } catch (_) {
+      _.call(this, _);
+    }
+  };
+}
+var _ = `onBO`,
+  _ = `onBUO`;
+function _(_, _, _) {
+  return _(_, _, _, _);
+}
+function _(_, _, _) {
+  return _(_, _, _, _);
+}
+function _(_, _, _, _) {
+  var _ = typeof _ == `function` ? _(_, _) : _(_),
+    _ = _(_) ? _ : _,
+    _ = _ + `L`;
+  return (
+    _[_] ? _[_].add(_) : (_[_] = new Set([_])),
+    function () {
+      var _ = _[_];
+      _ && (_.delete(_), _.size === 0 && delete _[_]);
+    }
+  );
+}
+var _ = `never`,
+  _ = `always`,
+  _ = `observed`;
+function _(_) {
+  _.isolateGlobalState === !0 && _();
+  var _ = _.useProxies,
+    _ = _.enforceActions;
+  if (
+    (_ !== void 0 &&
+      (_.useProxies = _ === _ || (_ !== _ && typeof Proxy < `u`)),
+    _ === `ifavailable` && (_.verifyProxies = !0),
+    _ !== void 0)
+  ) {
+    var _ = _ === _ ? _ : _ === _;
+    (_.enforceActions = _), (_.allowStateChanges = _ !== !0 && _ !== _);
+  }
+  [
+    `computedRequiresReaction`,
+    `reactionRequiresObservable`,
+    `observableRequiresReaction`,
+    `disableErrorBoundaries`,
+    `safeDescriptors`,
+  ].forEach(function (_) {
+    _ in _ && (_[_] = !!_[_]);
+  }),
+    (_.allowStateReads = !_.observableRequiresReaction),
+    _.reactionScheduler && _(_.reactionScheduler);
+}
+function _(_, _, _, _) {
+  var _ = _(_);
+  return (
+    _(function () {
+      var _ = _(_, _)[_];
+      _(_).forEach(function (_) {
+        _.extend_(_, _[_], _ && _ in _ ? _[_] : !0);
+      });
+    }),
+    _
+  );
+}
+function _(_, _) {
+  return _(_(_, _));
+}
+function _(_) {
+  var _ = {
+    name: _.name_,
+  };
+  return (
+    _.observing_ &&
+      _.observing_.length > 0 &&
+      (_.dependencies = _(_.observing_).map(_)),
+    _
+  );
+}
+function _(_) {
+  return Array.from(new Set(_));
+}
+var _ = 0;
+function _() {
+  this.message = `FLOW_CANCELLED`;
+}
+_.prototype = Object.create(Error.prototype);
+var _ = _(`flow`),
+  _ = _(`flow.bound`, {
+    bound: !0,
+  }),
+  _ = Object.assign(function (_, _) {
+    if (_(_)) return _.decorate_20223_(_, _);
+    if (_(_)) return _(_, _, _);
+    var _ = _,
+      _ = _.name || `<unnamed flow>`,
+      _ = function () {
+        var _ = this,
+          _ = arguments,
+          _ = ++_,
+          _ = _(_ + ` - runid: ` + _ + ` - init`, _).apply(_, _),
+          _,
+          _ = void 0,
+          _ = new Promise(function (_, _) {
+            var _ = 0;
+            _ = _;
+            function _(_) {
+              _ = void 0;
+              var _;
+              try {
+                _ = _(_ + ` - runid: ` + _ + ` - yield ` + _++, _.next).call(
+                  _,
+                  _,
+                );
+              } catch (_) {
+                return _(_);
+              }
+              _(_);
+            }
+            function _(_) {
+              _ = void 0;
+              var _;
+              try {
+                _ = _(_ + ` - runid: ` + _ + ` - yield ` + _++, _.throw).call(
+                  _,
+                  _,
+                );
+              } catch (_) {
+                return _(_);
+              }
+              _(_);
+            }
+            function _(_) {
+              if (_(_?.then)) {
+                _.then(_, _);
+                return;
+              }
+              return _.done
+                ? _(_.value)
+                : ((_ = Promise.resolve(_.value)), _.then(_, _));
+            }
+            _(void 0);
+          });
+        return (
+          (_.cancel = _(_ + ` - runid: ` + _ + ` - cancel`, function () {
+            try {
+              _ && _(_);
+              var _ = _.return(void 0),
+                _ = Promise.resolve(_.value);
+              _.then(_, _), _(_), _(new _());
+            } catch (_) {
+              _(_);
+            }
+          })),
+          _
+        );
+      };
+    return (_.isMobXFlow = !0), _;
+  }, _);
+_.bound = _(_);
+function _(_) {
+  _(_.cancel) && _.cancel();
+}
+function _(_) {
+  return _?.isMobXFlow === !0;
+}
+function _(_, _) {
+  return _ === void 0
+    ? _(_)
+    : _(_) === !1 || !_[_].values_.has(_)
+      ? !1
+      : _(_(_, _));
+}
+function _(_) {
+  return _(_);
+}
+function _(_, _) {
+  return _(_, _);
+}
+function _(_, _) {
+  return _
+    ? _ === void 0
+      ? _(_) || !!_[_] || _(_) || _(_) || _(_)
+      : _(_)
+        ? _[_].values_.has(_)
+        : !1
+    : !1;
+}
+function _(_) {
+  return _(_);
+}
+function _(_) {
+  if (_(_)) return _[_].keys_();
+  if (_(_) || _(_)) return Array.from(_.keys());
+  if (_(_))
+    return _.map(function (_, _) {
+      return _;
+    });
+  _(5);
+}
+function _(_) {
+  if (_(_)) return _[_].ownKeys_();
+  _(38);
+}
+function _(_, _, _, _) {
+  return _(_) ? _(_, _, _, _) : _(_, _, _);
+}
+function _(_, _, _) {
+  return _(_).observe_(_, _);
+}
+function _(_, _, _, _) {
+  return _(_, _).observe_(_, _);
+}
+function _(_, _, _) {
+  return _.set(_, _), _;
+}
+function _(_, _) {
+  if (typeof _ != `object` || !_ || _ instanceof Date || !_(_)) return _;
+  if (_(_) || _(_)) return _(_.get(), _);
+  if (_.has(_)) return _.get(_);
+  if (_(_)) {
+    var _ = _(_, _, Array(_.length));
+    return (
+      _.forEach(function (_, _) {
+        _[_] = _(_, _);
+      }),
+      _
+    );
+  }
+  if (_(_)) {
+    var _ = _(_, _, new Set());
+    return (
+      _.forEach(function (_) {
+        _.add(_(_, _));
+      }),
+      _
+    );
+  }
+  if (_(_)) {
+    var _ = _(_, _, new Map());
+    return (
+      _.forEach(function (_, _) {
+        _.set(_, _(_, _));
+      }),
+      _
+    );
+  }
+  var _ = _(_, _, {});
+  return (
+    _(_).forEach(function (_) {
+      _.propertyIsEnumerable.call(_, _) && (_[_] = _(_[_], _));
+    }),
+    _
+  );
+}
+function _(_, _) {
+  return _(_, new Map());
+}
+function _(_, _) {
+  _ === void 0 && (_ = void 0), _();
+  try {
+    return _.apply(_);
+  } finally {
+    _();
+  }
+}
+function _(_) {
+  return _[_];
+}
+var _ = {
+  has: function (_, _) {
+    return _(_).has_(_);
+  },
+  get: function (_, _) {
+    return _(_).get_(_);
+  },
+  set: function (_, _, _) {
+    return _(_) ? (_(_).set_(_, _, !0) ?? !0) : !1;
+  },
+  deleteProperty: function (_, _) {
+    return _(_) ? (_(_).delete_(_, !0) ?? !0) : !1;
+  },
+  defineProperty: function (_, _, _) {
+    return _(_).defineProperty_(_, _) ?? !0;
+  },
+  ownKeys: function (_) {
+    return _(_).ownKeys_();
+  },
+  preventExtensions: function (_) {
+    _(13);
+  },
+};
+function _(_, _) {
+  var _;
+  return _(), (_ = _(_, _)), (_ = _[_]).proxy_ ?? (_.proxy_ = new Proxy(_, _));
+}
+function _(_) {
+  return _.interceptors_ !== void 0 && _.interceptors_.length > 0;
+}
+function _(_, _) {
+  var _ = (_.interceptors_ ||= []);
+  return (
+    _.push(_),
+    _(function () {
+      var _ = _.indexOf(_);
+      _ !== -1 && _.splice(_, 1);
+    })
+  );
+}
+function _(_, _) {
+  var _ = _();
+  try {
+    for (
+      var _ = [].concat(_.interceptors_ || []), _ = 0, _ = _.length;
+      _ < _ && ((_ = _[_](_)), _ && !_.type && _(14), _);
+      _++
+    );
+    return _;
+  } finally {
+    _(_);
+  }
+}
+function _(_) {
+  return _.changeListeners_ !== void 0 && _.changeListeners_.length > 0;
+}
+function _(_, _) {
+  var _ = (_.changeListeners_ ||= []);
+  return (
+    _.push(_),
+    _(function () {
+      var _ = _.indexOf(_);
+      _ !== -1 && _.splice(_, 1);
+    })
+  );
+}
+function _(_, _) {
+  var _ = _(),
+    _ = _.changeListeners_;
+  if (_) {
+    _ = _.slice();
+    for (var _ = 0, _ = _.length; _ < _; _++) _[_](_);
+    _(_);
+  }
+}
+function _(_, _, _) {
+  return (
+    _(function () {
+      var _ = _(_, _)[_];
+      (_ ??= _(_)),
+        _(_).forEach(function (_) {
+          return _.make_(_, _[_]);
+        });
+    }),
+    _
+  );
+}
+var _ = `splice`,
+  _ = `update`,
+  _ = 1e4,
+  _ = {
+    get: function (_, _) {
+      var _ = _[_];
+      return _ === _
+        ? _
+        : _ === `length`
+          ? _.getArrayLength_()
+          : typeof _ == `string` && !isNaN(_)
+            ? _.get_(parseInt(_))
+            : _(_, _)
+              ? _[_]
+              : _[_];
+    },
+    set: function (_, _, _) {
+      var _ = _[_];
+      return (
+        _ === `length` && _.setArrayLength_(_),
+        typeof _ == `symbol` || isNaN(_) ? (_[_] = _) : _.set_(parseInt(_), _),
+        !0
+      );
+    },
+    preventExtensions: function () {
+      _(15);
+    },
+  },
+  _ = (function () {
+    function _(_, _, _, _) {
+      _ === void 0 && (_ = `ObservableArray`),
+        (this.owned_ = void 0),
+        (this.legacyMode_ = void 0),
+        (this.atom_ = void 0),
+        (this.values_ = []),
+        (this.interceptors_ = void 0),
+        (this.changeListeners_ = void 0),
+        (this.enhancer_ = void 0),
+        (this.dehancer = void 0),
+        (this.proxy_ = void 0),
+        (this.lastKnownLength_ = 0),
+        (this.owned_ = _),
+        (this.legacyMode_ = _),
+        (this.atom_ = new _(_)),
+        (this.enhancer_ = function (_, _) {
+          return _(_, _, `ObservableArray[..]`);
+        });
+    }
+    var _ = _.prototype;
+    return (
+      (_.dehanceValue_ = function (_) {
+        return this.dehancer === void 0 ? _ : this.dehancer(_);
+      }),
+      (_.dehanceValues_ = function (_) {
+        return this.dehancer !== void 0 && _.length > 0
+          ? _.map(this.dehancer)
+          : _;
+      }),
+      (_.intercept_ = function (_) {
+        return _(this, _);
+      }),
+      (_.observe_ = function (_, _) {
+        return (
+          _ === void 0 && (_ = !1),
+          _ &&
+            _({
+              observableKind: `array`,
+              object: this.proxy_,
+              debugObjectName: this.atom_.name_,
+              type: `splice`,
+              index: 0,
+              added: this.values_.slice(),
+              addedCount: this.values_.length,
+              removed: [],
+              removedCount: 0,
+            }),
+          _(this, _)
+        );
+      }),
+      (_.getArrayLength_ = function () {
+        return this.atom_.reportObserved(), this.values_.length;
+      }),
+      (_.setArrayLength_ = function (_) {
+        (typeof _ != `number` || isNaN(_) || _ < 0) && _(`Out of range: ` + _);
+        var _ = this.values_.length;
+        if (_ !== _) {
+          if (_ > _) {
+            for (var _ = Array(_ - _), _ = 0; _ < _ - _; _++) _[_] = void 0;
+            this.spliceWithArray_(_, 0, _);
+          } else this.spliceWithArray_(_, _ - _);
+        }
+      }),
+      (_.updateArrayLength_ = function (_, _) {
+        _ !== this.lastKnownLength_ && _(16),
+          (this.lastKnownLength_ += _),
+          this.legacyMode_ && _ > 0 && _(_ + _ + 1);
+      }),
+      (_.spliceWithArray_ = function (_, _, _) {
+        var _ = this;
+        this.atom_;
+        var _ = this.values_.length;
+        if (
+          (_ === void 0
+            ? (_ = 0)
+            : _ > _
+              ? (_ = _)
+              : _ < 0 && (_ = Math.max(0, _ + _)),
+          (_ =
+            arguments.length === 1
+              ? _ - _
+              : _ == null
+                ? 0
+                : Math.max(0, Math.min(_, _ - _))),
+          _ === void 0 && (_ = _),
+          _(this))
+        ) {
+          var _ = _(this, {
+            object: this.proxy_,
+            type: _,
+            index: _,
+            removedCount: _,
+            added: _,
+          });
+          if (!_) return _;
+          (_ = _.removedCount), (_ = _.added);
+        }
+        if (
+          ((_ =
+            _.length === 0
+              ? _
+              : _.map(function (_) {
+                  return _.enhancer_(_, void 0);
+                })),
+          this.legacyMode_)
+        ) {
+          var _ = _.length - _;
+          this.updateArrayLength_(_, _);
+        }
+        var _ = this.spliceItemsIntoValues_(_, _, _);
+        return (
+          (_ !== 0 || _.length !== 0) && this.notifyArraySplice_(_, _, _),
+          this.dehanceValues_(_)
+        );
+      }),
+      (_.spliceItemsIntoValues_ = function (_, _, _) {
+        if (_.length < _) {
+          var _;
+          return (_ = this.values_).splice.apply(_, [_, _].concat(_));
+        }
+        var _ = this.values_.slice(_, _ + _),
+          _ = this.values_.slice(_ + _);
+        this.values_.length += _.length - _;
+        for (var _ = 0; _ < _.length; _++) this.values_[_ + _] = _[_];
+        for (var _ = 0; _ < _.length; _++)
+          this.values_[_ + _.length + _] = _[_];
+        return _;
+      }),
+      (_.notifyArrayChildUpdate_ = function (_, _, _) {
+        var _ = !this.owned_ && _(),
+          _ = _(this),
+          _ =
+            _ || _
+              ? {
+                  observableKind: `array`,
+                  object: this.proxy_,
+                  type: _,
+                  debugObjectName: this.atom_.name_,
+                  index: _,
+                  newValue: _,
+                  oldValue: _,
+                }
+              : null;
+        this.atom_.reportChanged(), _ && _(this, _);
+      }),
+      (_.notifyArraySplice_ = function (_, _, _) {
+        var _ = !this.owned_ && _(),
+          _ = _(this),
+          _ =
+            _ || _
+              ? {
+                  observableKind: `array`,
+                  object: this.proxy_,
+                  debugObjectName: this.atom_.name_,
+                  type: _,
+                  index: _,
+                  removed: _,
+                  added: _,
+                  removedCount: _.length,
+                  addedCount: _.length,
+                }
+              : null;
+        this.atom_.reportChanged(), _ && _(this, _);
+      }),
+      (_.get_ = function (_) {
+        if (this.legacyMode_ && _ >= this.values_.length) {
+          console.warn(`[mobx] Out of bounds read: ` + _);
+          return;
+        }
+        return this.atom_.reportObserved(), this.dehanceValue_(this.values_[_]);
+      }),
+      (_.set_ = function (_, _) {
+        var _ = this.values_;
+        if (
+          (this.legacyMode_ && _ > _.length && _(17, _, _.length), _ < _.length)
+        ) {
+          this.atom_;
+          var _ = _[_];
+          if (_(this)) {
+            var _ = _(this, {
+              type: _,
+              object: this.proxy_,
+              index: _,
+              newValue: _,
+            });
+            if (!_) return;
+            _ = _.newValue;
+          }
+          (_ = this.enhancer_(_, _)),
+            _ !== _ && ((_[_] = _), this.notifyArrayChildUpdate_(_, _, _));
+        } else {
+          for (var _ = Array(_ + 1 - _.length), _ = 0; _ < _.length - 1; _++)
+            _[_] = void 0;
+          (_[_.length - 1] = _), this.spliceWithArray_(_.length, 0, _);
+        }
+      }),
+      _
+    );
+  })();
+function _(_, _, _, _) {
+  return (
+    _ === void 0 && (_ = `ObservableArray`),
+    _ === void 0 && (_ = !1),
+    _(),
+    _(function () {
+      var _ = new _(_, _, _, !1);
+      _(_.values_, _, _);
+      var _ = new Proxy(_.values_, _);
+      return (_.proxy_ = _), _ && _.length && _.spliceWithArray_(0, 0, _), _;
+    })
+  );
+}
+var _ = {
+  clear: function () {
+    return this.splice(0);
+  },
+  replace: function (_) {
+    var _ = this[_];
+    return _.spliceWithArray_(0, _.values_.length, _);
+  },
+  toJSON: function () {
+    return this.slice();
+  },
+  splice: function (_, _) {
+    var _ = [...arguments].slice(2),
+      _ = this[_];
+    switch (arguments.length) {
+      case 0:
+        return [];
+      case 1:
+        return _.spliceWithArray_(_);
+      case 2:
+        return _.spliceWithArray_(_, _);
+    }
+    return _.spliceWithArray_(_, _, _);
+  },
+  spliceWithArray: function (_, _, _) {
+    return this[_].spliceWithArray_(_, _, _);
+  },
+  push: function () {
+    var _ = this[_],
+      _ = [...arguments];
+    return _.spliceWithArray_(_.values_.length, 0, _), _.values_.length;
+  },
+  pop: function () {
+    return this.splice(Math.max(this[_].values_.length - 1, 0), 1)[0];
+  },
+  shift: function () {
+    return this.splice(0, 1)[0];
+  },
+  unshift: function () {
+    var _ = this[_],
+      _ = [...arguments];
+    return _.spliceWithArray_(0, 0, _), _.values_.length;
+  },
+  reverse: function () {
+    return (
+      _.trackingDerivation && _(37, `reverse`),
+      this.replace(this.slice().reverse()),
+      this
+    );
+  },
+  sort: function () {
+    _.trackingDerivation && _(37, `sort`);
+    var _ = this.slice();
+    return _.sort.apply(_, arguments), this.replace(_), this;
+  },
+  remove: function (_) {
+    var _ = this[_],
+      _ = _.dehanceValues_(_.values_).indexOf(_);
+    return _ > -1 && (this.splice(_, 1), !0);
+  },
+};
+_(`at`, _),
+  _(`concat`, _),
+  _(`flat`, _),
+  _(`includes`, _),
+  _(`indexOf`, _),
+  _(`join`, _),
+  _(`lastIndexOf`, _),
+  _(`slice`, _),
+  _(`toString`, _),
+  _(`toLocaleString`, _),
+  _(`toSorted`, _),
+  _(`toSpliced`, _),
+  _(`with`, _),
+  _(`every`, _),
+  _(`filter`, _),
+  _(`find`, _),
+  _(`findIndex`, _),
+  _(`findLast`, _),
+  _(`findLastIndex`, _),
+  _(`flatMap`, _),
+  _(`forEach`, _),
+  _(`map`, _),
+  _(`some`, _),
+  _(`toReversed`, _),
+  _(`reduce`, _),
+  _(`reduceRight`, _);
+function _(_, _) {
+  typeof Array.prototype[_] == `function` && (_[_] = _(_));
+}
+function _(_) {
+  return function () {
+    var _ = this[_];
+    _.atom_.reportObserved();
+    var _ = _.dehanceValues_(_.values_);
+    return _[_].apply(_, arguments);
+  };
+}
+function _(_) {
+  return function (_, _) {
+    var _ = this,
+      _ = this[_];
+    return (
+      _.atom_.reportObserved(),
+      _.dehanceValues_(_.values_)[_](function (_, _) {
+        return _.call(_, _, _, _);
+      })
+    );
+  };
+}
+function _(_) {
+  return function () {
+    var _ = this,
+      _ = this[_];
+    _.atom_.reportObserved();
+    var _ = _.dehanceValues_(_.values_),
+      _ = arguments[0];
+    return (
+      (arguments[0] = function (_, _, _) {
+        return _(_, _, _, _);
+      }),
+      _[_].apply(_, arguments)
+    );
+  };
+}
+var _ = _(`ObservableArrayAdministration`, _);
+function _(_) {
+  return _(_) && _(_[_]);
+}
+var _ = {},
+  _ = `add`,
+  _ = `delete`,
+  _ = (function () {
+    function _(_, _, _) {
+      var _ = this;
+      _ === void 0 && (_ = _),
+        _ === void 0 && (_ = `ObservableMap`),
+        (this.enhancer_ = void 0),
+        (this.name_ = void 0),
+        (this[_] = _),
+        (this.data_ = void 0),
+        (this.hasMap_ = void 0),
+        (this.keysAtom_ = void 0),
+        (this.interceptors_ = void 0),
+        (this.changeListeners_ = void 0),
+        (this.dehancer = void 0),
+        (this.enhancer_ = _),
+        (this.name_ = _),
+        _(Map) || _(18),
+        _(function () {
+          (_.keysAtom_ = _(`ObservableMap.keys()`)),
+            (_.data_ = new Map()),
+            (_.hasMap_ = new Map()),
+            _ && _.merge(_);
+        });
+    }
+    var _ = _.prototype;
+    return (
+      (_.has_ = function (_) {
+        return this.data_.has(_);
+      }),
+      (_.has = function (_) {
+        var _ = this;
+        if (!_.trackingDerivation) return this.has_(_);
+        var _ = this.hasMap_.get(_);
+        if (!_) {
+          var _ = (_ = new _(this.has_(_), _, `ObservableMap.key?`, !1));
+          this.hasMap_.set(_, _),
+            _(_, function () {
+              return _.hasMap_.delete(_);
+            });
+        }
+        return _.get();
+      }),
+      (_.set = function (_, _) {
+        var _ = this.has_(_);
+        if (_(this)) {
+          var _ = _(this, {
+            type: _ ? _ : _,
+            object: this,
+            newValue: _,
+            name: _,
+          });
+          if (!_) return this;
+          _ = _.newValue;
+        }
+        return _ ? this.updateValue_(_, _) : this.addValue_(_, _), this;
+      }),
+      (_.delete = function (_) {
+        var _ = this;
+        if (
+          (this.keysAtom_,
+          _(this) &&
+            !_(this, {
+              type: _,
+              object: this,
+              name: _,
+            }))
+        )
+          return !1;
+        if (this.has_(_)) {
+          var _ = _(),
+            _ = _(this),
+            _ =
+              _ || _
+                ? {
+                    observableKind: `map`,
+                    debugObjectName: this.name_,
+                    type: _,
+                    object: this,
+                    oldValue: this.data_.get(_).value_,
+                    name: _,
+                  }
+                : null;
+          return (
+            _(function () {
+              var _;
+              _.keysAtom_.reportChanged(),
+                (_ = _.hasMap_.get(_)) == null || _.setNewValue_(!1),
+                _.data_.get(_).setNewValue_(void 0),
+                _.data_.delete(_);
+            }),
+            _ && _(this, _),
+            !0
+          );
+        }
+        return !1;
+      }),
+      (_.updateValue_ = function (_, _) {
+        var _ = this.data_.get(_);
+        if (((_ = _.prepareNewValue_(_)), _ !== _.UNCHANGED)) {
+          var _ = _(),
+            _ = _(this),
+            _ =
+              _ || _
+                ? {
+                    observableKind: `map`,
+                    debugObjectName: this.name_,
+                    type: _,
+                    object: this,
+                    oldValue: _.value_,
+                    name: _,
+                    newValue: _,
+                  }
+                : null;
+          _.setNewValue_(_), _ && _(this, _);
+        }
+      }),
+      (_.addValue_ = function (_, _) {
+        var _ = this;
+        this.keysAtom_,
+          _(function () {
+            var _,
+              _ = new _(_, _.enhancer_, `ObservableMap.key`, !1);
+            _.data_.set(_, _),
+              (_ = _.value_),
+              (_ = _.hasMap_.get(_)) == null || _.setNewValue_(!0),
+              _.keysAtom_.reportChanged();
+          });
+        var _ = _(),
+          _ = _(this),
+          _ =
+            _ || _
+              ? {
+                  observableKind: `map`,
+                  debugObjectName: this.name_,
+                  type: _,
+                  object: this,
+                  name: _,
+                  newValue: _,
+                }
+              : null;
+        _ && _(this, _);
+      }),
+      (_.get = function (_) {
+        return this.has(_)
+          ? this.dehanceValue_(this.data_.get(_).get())
+          : this.dehanceValue_(void 0);
+      }),
+      (_.dehanceValue_ = function (_) {
+        return this.dehancer === void 0 ? _ : this.dehancer(_);
+      }),
+      (_.keys = function () {
+        return this.keysAtom_.reportObserved(), this.data_.keys();
+      }),
+      (_.values = function () {
+        var _ = this,
+          _ = this.keys();
+        return _({
+          next: function () {
+            var _ = _.next(),
+              _ = _.done,
+              _ = _.value;
+            return {
+              done: _,
+              value: _ ? void 0 : _.get(_),
+            };
+          },
+        });
+      }),
+      (_.entries = function () {
+        var _ = this,
+          _ = this.keys();
+        return _({
+          next: function () {
+            var _ = _.next(),
+              _ = _.done,
+              _ = _.value;
+            return {
+              done: _,
+              value: _ ? void 0 : [_, _.get(_)],
+            };
+          },
+        });
+      }),
+      (_[Symbol.iterator] = function () {
+        return this.entries();
+      }),
+      (_.forEach = function (_, _) {
+        for (var _ = _(this), _; !(_ = _()).done; ) {
+          var _ = _.value,
+            _ = _[0],
+            _ = _[1];
+          _.call(_, _, _, this);
+        }
+      }),
+      (_.merge = function (_) {
+        var _ = this;
+        return (
+          _(_) && (_ = new Map(_)),
+          _(function () {
+            _(_)
+              ? _(_).forEach(function (_) {
+                  return _.set(_, _[_]);
+                })
+              : Array.isArray(_)
+                ? _.forEach(function (_) {
+                    var _ = _[0],
+                      _ = _[1];
+                    return _.set(_, _);
+                  })
+                : _(_)
+                  ? (_(_) || _(19, _),
+                    _.forEach(function (_, _) {
+                      return _.set(_, _);
+                    }))
+                  : _ != null && _(20, _);
+          }),
+          this
+        );
+      }),
+      (_.clear = function () {
+        var _ = this;
+        _(function () {
+          _(function () {
+            for (var _ = _(_.keys()), _; !(_ = _()).done; ) {
+              var _ = _.value;
+              _.delete(_);
+            }
+          });
+        });
+      }),
+      (_.replace = function (_) {
+        var _ = this;
+        return (
+          _(function () {
+            for (
+              var _ = _(_), _ = new Map(), _ = !1, _ = _(_.data_.keys()), _;
+              !(_ = _()).done;
+            ) {
+              var _ = _.value;
+              if (!_.has(_)) {
+                if (_.delete(_)) _ = !0;
+                else {
+                  var _ = _.data_.get(_);
+                  _.set(_, _);
+                }
+              }
+            }
+            for (var _ = _(_.entries()), _; !(_ = _()).done; ) {
+              var _ = _.value,
+                _ = _[0],
+                _ = _[1],
+                _ = _.data_.has(_);
+              if ((_.set(_, _), _.data_.has(_))) {
+                var _ = _.data_.get(_);
+                _.set(_, _), _ || (_ = !0);
+              }
+            }
+            if (!_) {
+              if (_.data_.size !== _.size) _.keysAtom_.reportChanged();
+              else
+                for (
+                  var _ = _.data_.keys(),
+                    _ = _.keys(),
+                    _ = _.next(),
+                    _ = _.next();
+                  !_.done;
+                ) {
+                  if (_.value !== _.value) {
+                    _.keysAtom_.reportChanged();
+                    break;
+                  }
+                  (_ = _.next()), (_ = _.next());
+                }
+            }
+            _.data_ = _;
+          }),
+          this
+        );
+      }),
+      (_.toString = function () {
+        return `[object ObservableMap]`;
+      }),
+      (_.toJSON = function () {
+        return Array.from(this);
+      }),
+      (_.observe_ = function (_, _) {
+        return _(this, _);
+      }),
+      (_.intercept_ = function (_) {
+        return _(this, _);
+      }),
+      _(_, [
+        {
+          key: `size`,
+          get: function () {
+            return this.keysAtom_.reportObserved(), this.data_.size;
+          },
+        },
+        {
+          key: Symbol.toStringTag,
+          get: function () {
+            return `Map`;
+          },
+        },
+      ])
+    );
+  })(),
+  _ = _(`ObservableMap`, _);
+function _(_) {
+  return (_[Symbol.toStringTag] = `MapIterator`), _(_);
+}
+function _(_) {
+  if (_(_) || _(_)) return _;
+  if (Array.isArray(_)) return new Map(_);
+  if (_(_)) {
+    var _ = new Map();
+    for (var _ in _) _.set(_, _[_]);
+    return _;
+  }
+  return _(21, _);
+}
+var _ = {},
+  _ = (function () {
+    function _(_, _, _) {
+      var _ = this;
+      _ === void 0 && (_ = _),
+        _ === void 0 && (_ = `ObservableSet`),
+        (this.name_ = void 0),
+        (this[_] = _),
+        (this.data_ = new Set()),
+        (this.atom_ = void 0),
+        (this.changeListeners_ = void 0),
+        (this.interceptors_ = void 0),
+        (this.dehancer = void 0),
+        (this.enhancer_ = void 0),
+        (this.name_ = _),
+        _(Set) || _(22),
+        (this.enhancer_ = function (_, _) {
+          return _(_, _, _);
+        }),
+        _(function () {
+          (_.atom_ = _(_.name_)), _ && _.replace(_);
+        });
+    }
+    var _ = _.prototype;
+    return (
+      (_.dehanceValue_ = function (_) {
+        return this.dehancer === void 0 ? _ : this.dehancer(_);
+      }),
+      (_.clear = function () {
+        var _ = this;
+        _(function () {
+          _(function () {
+            for (var _ = _(_.data_.values()), _; !(_ = _()).done; ) {
+              var _ = _.value;
+              _.delete(_);
+            }
+          });
+        });
+      }),
+      (_.forEach = function (_, _) {
+        for (var _ = _(this), _; !(_ = _()).done; ) {
+          var _ = _.value;
+          _.call(_, _, _, this);
+        }
+      }),
+      (_.add = function (_) {
+        var _ = this;
+        if ((this.atom_, _(this))) {
+          var _ = _(this, {
+            type: _,
+            object: this,
+            newValue: _,
+          });
+          if (!_) return this;
+          _ = _.newValue;
+        }
+        if (!this.has(_)) {
+          _(function () {
+            _.data_.add(_.enhancer_(_, void 0)), _.atom_.reportChanged();
+          });
+          var _ = _(this),
+            _ = _
+              ? {
+                  observableKind: `set`,
+                  debugObjectName: this.name_,
+                  type: _,
+                  object: this,
+                  newValue: _,
+                }
+              : null;
+          _ && _(this, _);
+        }
+        return this;
+      }),
+      (_.delete = function (_) {
+        var _ = this;
+        if (
+          _(this) &&
+          !_(this, {
+            type: _,
+            object: this,
+            oldValue: _,
+          })
+        )
+          return !1;
+        if (this.has(_)) {
+          var _ = _(this),
+            _ = _
+              ? {
+                  observableKind: `set`,
+                  debugObjectName: this.name_,
+                  type: _,
+                  object: this,
+                  oldValue: _,
+                }
+              : null;
+          return (
+            _(function () {
+              _.atom_.reportChanged(), _.data_.delete(_);
+            }),
+            _ && _(this, _),
+            !0
+          );
+        }
+        return !1;
+      }),
+      (_.has = function (_) {
+        return (
+          this.atom_.reportObserved(), this.data_.has(this.dehanceValue_(_))
+        );
+      }),
+      (_.entries = function () {
+        var _ = this.values();
+        return _({
+          next: function () {
+            var _ = _.next(),
+              _ = _.value,
+              _ = _.done;
+            return _
+              ? {
+                  value: void 0,
+                  done: _,
+                }
+              : {
+                  value: [_, _],
+                  done: _,
+                };
+          },
+        });
+      }),
+      (_.keys = function () {
+        return this.values();
+      }),
+      (_.values = function () {
+        this.atom_.reportObserved();
+        var _ = this,
+          _ = this.data_.values();
+        return _({
+          next: function () {
+            var _ = _.next(),
+              _ = _.value,
+              _ = _.done;
+            return _
+              ? {
+                  value: void 0,
+                  done: _,
+                }
+              : {
+                  value: _.dehanceValue_(_),
+                  done: _,
+                };
+          },
+        });
+      }),
+      (_.intersection = function (_) {
+        return _(_) && !_(_)
+          ? _.intersection(this)
+          : new Set(this).intersection(_);
+      }),
+      (_.union = function (_) {
+        return _(_) && !_(_) ? _.union(this) : new Set(this).union(_);
+      }),
+      (_.difference = function (_) {
+        return new Set(this).difference(_);
+      }),
+      (_.symmetricDifference = function (_) {
+        return _(_) && !_(_)
+          ? _.symmetricDifference(this)
+          : new Set(this).symmetricDifference(_);
+      }),
+      (_.isSubsetOf = function (_) {
+        return new Set(this).isSubsetOf(_);
+      }),
+      (_.isSupersetOf = function (_) {
+        return new Set(this).isSupersetOf(_);
+      }),
+      (_.isDisjointFrom = function (_) {
+        return _(_) && !_(_)
+          ? _.isDisjointFrom(this)
+          : new Set(this).isDisjointFrom(_);
+      }),
+      (_.replace = function (_) {
+        var _ = this;
+        return (
+          _(_) && (_ = new Set(_)),
+          _(function () {
+            Array.isArray(_) || _(_)
+              ? (_.clear(),
+                _.forEach(function (_) {
+                  return _.add(_);
+                }))
+              : _ != null && _(`Cannot initialize set from ` + _);
+          }),
+          this
+        );
+      }),
+      (_.observe_ = function (_, _) {
+        return _(this, _);
+      }),
+      (_.intercept_ = function (_) {
+        return _(this, _);
+      }),
+      (_.toJSON = function () {
+        return Array.from(this);
+      }),
+      (_.toString = function () {
+        return `[object ObservableSet]`;
+      }),
+      (_[Symbol.iterator] = function () {
+        return this.values();
+      }),
+      _(_, [
+        {
+          key: `size`,
+          get: function () {
+            return this.atom_.reportObserved(), this.data_.size;
+          },
+        },
+        {
+          key: Symbol.toStringTag,
+          get: function () {
+            return `Set`;
+          },
+        },
+      ])
+    );
+  })(),
+  _ = _(`ObservableSet`, _);
+function _(_) {
+  return (_[Symbol.toStringTag] = `SetIterator`), _(_);
+}
+var _ = Object.create(null),
+  _ = `remove`,
+  _ = (function () {
+    function _(_, _, _, _) {
+      _ === void 0 && (_ = new Map()),
+        _ === void 0 && (_ = _),
+        (this.target_ = void 0),
+        (this.values_ = void 0),
+        (this.name_ = void 0),
+        (this.defaultAnnotation_ = void 0),
+        (this.keysAtom_ = void 0),
+        (this.changeListeners_ = void 0),
+        (this.interceptors_ = void 0),
+        (this.proxy_ = void 0),
+        (this.isPlainObject_ = void 0),
+        (this.appliedAnnotations_ = void 0),
+        (this.pendingKeys_ = void 0),
+        (this.target_ = _),
+        (this.values_ = _),
+        (this.name_ = _),
+        (this.defaultAnnotation_ = _),
+        (this.keysAtom_ = new _(`ObservableObject.keys`)),
+        (this.isPlainObject_ = _(this.target_));
+    }
+    var _ = _.prototype;
+    return (
+      (_.getObservablePropValue_ = function (_) {
+        return this.values_.get(_).get();
+      }),
+      (_.setObservablePropValue_ = function (_, _) {
+        var _ = this.values_.get(_);
+        if (_ instanceof _) return _.set(_), !0;
+        if (_(this)) {
+          var _ = _(this, {
+            type: _,
+            object: this.proxy_ || this.target_,
+            name: _,
+            newValue: _,
+          });
+          if (!_) return null;
+          _ = _.newValue;
+        }
+        if (((_ = _.prepareNewValue_(_)), _ !== _.UNCHANGED)) {
+          var _ = _(this),
+            _ = _
+              ? {
+                  type: _,
+                  observableKind: `object`,
+                  debugObjectName: this.name_,
+                  object: this.proxy_ || this.target_,
+                  oldValue: _.value_,
+                  name: _,
+                  newValue: _,
+                }
+              : null;
+          _.setNewValue_(_), _ && _(this, _);
+        }
+        return !0;
+      }),
+      (_.get_ = function (_) {
+        return (
+          _.trackingDerivation && !_(this.target_, _) && this.has_(_),
+          this.target_[_]
+        );
+      }),
+      (_.set_ = function (_, _, _) {
+        return (
+          _ === void 0 && (_ = !1),
+          _(this.target_, _)
+            ? this.values_.has(_)
+              ? this.setObservablePropValue_(_, _)
+              : _
+                ? Reflect.set(this.target_, _, _)
+                : ((this.target_[_] = _), !0)
+            : this.extend_(
+                _,
+                {
+                  value: _,
+                  enumerable: !0,
+                  writable: !0,
+                  configurable: !0,
+                },
+                this.defaultAnnotation_,
+                _,
+              )
+        );
+      }),
+      (_.has_ = function (_) {
+        if (!_.trackingDerivation) return _ in this.target_;
+        this.pendingKeys_ ||= new Map();
+        var _ = this.pendingKeys_.get(_);
+        return (
+          _ ||
+            ((_ = new _(_ in this.target_, _, `ObservableObject.key?`, !1)),
+            this.pendingKeys_.set(_, _)),
+          _.get()
+        );
+      }),
+      (_.make_ = function (_, _) {
+        if ((_ === !0 && (_ = this.defaultAnnotation_), _ !== !1)) {
+          if (!(_ in this.target_)) {
+            var _;
+            if ((_ = this.target_[_]) != null && _[_]) return;
+            _(1, _.annotationType_, this.name_ + `.` + _.toString());
+          }
+          for (var _ = this.target_; _ && _ !== _; ) {
+            var _ = _(_, _);
+            if (_) {
+              var _ = _.make_(this, _, _, _);
+              if (_ === 0) return;
+              if (_ === 1) break;
+            }
+            _ = Object.getPrototypeOf(_);
+          }
+          _(this, _, _);
+        }
+      }),
+      (_.extend_ = function (_, _, _, _) {
+        if (
+          (_ === void 0 && (_ = !1),
+          _ === !0 && (_ = this.defaultAnnotation_),
+          _ === !1)
+        )
+          return this.defineProperty_(_, _, _);
+        var _ = _.extend_(this, _, _, _);
+        return _ && _(this, _, _), _;
+      }),
+      (_.defineProperty_ = function (_, _, _) {
+        _ === void 0 && (_ = !1), this.keysAtom_;
+        try {
+          _();
+          var _ = this.delete_(_);
+          if (!_) return _;
+          if (_(this)) {
+            var _ = _(this, {
+              object: this.proxy_ || this.target_,
+              name: _,
+              type: _,
+              newValue: _.value,
+            });
+            if (!_) return null;
+            var _ = _.newValue;
+            _.value !== _ &&
+              (_ = _({}, _, {
+                value: _,
+              }));
+          }
+          if (_) {
+            if (!Reflect.defineProperty(this.target_, _, _)) return !1;
+          } else _(this.target_, _, _);
+          this.notifyPropertyAddition_(_, _.value);
+        } finally {
+          _();
+        }
+        return !0;
+      }),
+      (_.defineObservableProperty_ = function (_, _, _, _) {
+        _ === void 0 && (_ = !1), this.keysAtom_;
+        try {
+          _();
+          var _ = this.delete_(_);
+          if (!_) return _;
+          if (_(this)) {
+            var _ = _(this, {
+              object: this.proxy_ || this.target_,
+              name: _,
+              type: _,
+              newValue: _,
+            });
+            if (!_) return null;
+            _ = _.newValue;
+          }
+          var _ = _(_),
+            _ = {
+              configurable: !_.safeDescriptors || this.isPlainObject_,
+              enumerable: !0,
+              get: _.get,
+              set: _.set,
+            };
+          if (_) {
+            if (!Reflect.defineProperty(this.target_, _, _)) return !1;
+          } else _(this.target_, _, _);
+          var _ = new _(_, _, `ObservableObject.key`, !1);
+          this.values_.set(_, _), this.notifyPropertyAddition_(_, _.value_);
+        } finally {
+          _();
+        }
+        return !0;
+      }),
+      (_.defineComputedProperty_ = function (_, _, _) {
+        _ === void 0 && (_ = !1), this.keysAtom_;
+        try {
+          _();
+          var _ = this.delete_(_);
+          if (!_) return _;
+          if (
+            _(this) &&
+            !_(this, {
+              object: this.proxy_ || this.target_,
+              name: _,
+              type: _,
+              newValue: void 0,
+            })
+          )
+            return null;
+          (_.name ||= `ObservableObject.key`),
+            (_.context = this.proxy_ || this.target_);
+          var _ = _(_),
+            _ = {
+              configurable: !_.safeDescriptors || this.isPlainObject_,
+              enumerable: !1,
+              get: _.get,
+              set: _.set,
+            };
+          if (_) {
+            if (!Reflect.defineProperty(this.target_, _, _)) return !1;
+          } else _(this.target_, _, _);
+          this.values_.set(_, new _(_)),
+            this.notifyPropertyAddition_(_, void 0);
+        } finally {
+          _();
+        }
+        return !0;
+      }),
+      (_.delete_ = function (_, _) {
+        if ((_ === void 0 && (_ = !1), this.keysAtom_, !_(this.target_, _)))
+          return !0;
+        if (
+          _(this) &&
+          !_(this, {
+            object: this.proxy_ || this.target_,
+            name: _,
+            type: _,
+          })
+        )
+          return null;
+        try {
+          var _;
+          _();
+          var _ = _(this),
+            _ = this.values_.get(_),
+            _ = void 0;
+          if ((!_ && _ && (_ = _(this.target_, _)?.value), _)) {
+            if (!Reflect.deleteProperty(this.target_, _)) return !1;
+          } else delete this.target_[_];
+          if (
+            (_ &&
+              (this.values_.delete(_), _ instanceof _ && (_ = _.value_), _(_)),
+            this.keysAtom_.reportChanged(),
+            (_ = this.pendingKeys_) == null ||
+              (_ = _.get(_)) == null ||
+              _.set(_ in this.target_),
+            _)
+          ) {
+            var _ = {
+              type: _,
+              observableKind: `object`,
+              object: this.proxy_ || this.target_,
+              debugObjectName: this.name_,
+              oldValue: _,
+              name: _,
+            };
+            _ && _(this, _);
+          }
+        } finally {
+          _();
+        }
+        return !0;
+      }),
+      (_.observe_ = function (_, _) {
+        return _(this, _);
+      }),
+      (_.intercept_ = function (_) {
+        return _(this, _);
+      }),
+      (_.notifyPropertyAddition_ = function (_, _) {
+        var _,
+          _ = _(this);
+        if (_) {
+          var _ = _
+            ? {
+                type: _,
+                observableKind: `object`,
+                debugObjectName: this.name_,
+                object: this.proxy_ || this.target_,
+                name: _,
+                newValue: _,
+              }
+            : null;
+          _ && _(this, _);
+        }
+        (_ = this.pendingKeys_) == null || (_ = _.get(_)) == null || _.set(!0),
+          this.keysAtom_.reportChanged();
+      }),
+      (_.ownKeys_ = function () {
+        return this.keysAtom_.reportObserved(), _(this.target_);
+      }),
+      (_.keys_ = function () {
+        return this.keysAtom_.reportObserved(), Object.keys(this.target_);
+      }),
+      _
+    );
+  })();
+function _(_, _) {
+  if (_(_, _)) return _;
+  var _ = _?.name ?? `ObservableObject`;
+  return _(_, _, new _(_, new Map(), String(_), _(_))), _;
+}
+var _ = _(`ObservableObjectAdministration`, _);
+function _(_) {
+  return (
+    _[_] ||
+    (_[_] = {
+      get: function () {
+        return this[_].getObservablePropValue_(_);
+      },
+      set: function (_) {
+        return this[_].setObservablePropValue_(_, _);
+      },
+    })
+  );
+}
+function _(_) {
+  return _(_) ? _(_[_]) : !1;
+}
+function _(_, _, _) {
+  var _;
+  (_ = _.target_[_]) == null || delete _[_];
+}
+var _ = _(0),
+  _ = (function () {
+    var _ = !1,
+      _ = {};
+    return (
+      Object.defineProperty(_, "0", {
+        set: function () {
+          _ = !0;
+        },
+      }),
+      (Object.create(_)[0] = 1),
+      _ === !1
+    );
+  })(),
+  _ = 0,
+  _ = function () {};
+function _(_, _) {
+  Object.setPrototypeOf
+    ? Object.setPrototypeOf(_.prototype, _)
+    : _.prototype.__proto__ === void 0
+      ? (_.prototype = _)
+      : (_.prototype.__proto__ = _);
+}
+_(_, Array.prototype);
+var _ = (function (_) {
+  function _(_, _, _, _) {
+    var _;
+    return (
+      _ === void 0 && (_ = `ObservableArray`),
+      _ === void 0 && (_ = !1),
+      (_ = _.call(this) || this),
+      _(function () {
+        var _ = new _(_, _, _, !0);
+        (_.proxy_ = _),
+          _(_, _, _),
+          _ && _.length && _.spliceWithArray(0, 0, _),
+          _ && Object.defineProperty(_, "0", _);
+      }),
+      _
+    );
+  }
+  _(_, _);
+  var _ = _.prototype;
+  return (
+    (_.concat = function () {
+      this[_].atom_.reportObserved();
+      var _ = [...arguments];
+      return Array.prototype.concat.apply(
+        this.slice(),
+        _.map(function (_) {
+          return _(_) ? _.slice() : _;
+        }),
+      );
+    }),
+    (_[Symbol.iterator] = function () {
+      var _ = this,
+        _ = 0;
+      return _({
+        next: function () {
+          return _ < _.length
+            ? {
+                value: _[_++],
+                done: !1,
+              }
+            : {
+                done: !0,
+                value: void 0,
+              };
+        },
+      });
+    }),
+    _(_, [
+      {
+        key: `length`,
+        get: function () {
+          return this[_].getArrayLength_();
+        },
+        set: function (_) {
+          this[_].setArrayLength_(_);
+        },
+      },
+      {
+        key: Symbol.toStringTag,
+        get: function () {
+          return `Array`;
+        },
+      },
+    ])
+  );
+})(_);
+Object.entries(_).forEach(function (_) {
+  var _ = _[0],
+    _ = _[1];
+  _ !== `concat` && _(_.prototype, _, _);
+});
+function _(_) {
+  return {
+    enumerable: !1,
+    configurable: !0,
+    get: function () {
+      return this[_].get_(_);
+    },
+    set: function (_) {
+      this[_].set_(_, _);
+    },
+  };
+}
+function _(_) {
+  _(_.prototype, `` + _, _(_));
+}
+function _(_) {
+  if (_ > _) {
+    for (var _ = _; _ < _ + 100; _++) _(_);
+    _ = _;
+  }
+}
+_(1e3);
+function _(_, _, _) {
+  return new _(_, _, _);
+}
+function _(_, _) {
+  if (typeof _ == `object` && _) {
+    if (_(_)) return _ !== void 0 && _(23), _[_].atom_;
+    if (_(_)) return _.atom_;
+    if (_(_)) {
+      if (_ === void 0) return _.keysAtom_;
+      var _ = _.data_.get(_) || _.hasMap_.get(_);
+      return _ || _(25, _, _(_)), _;
+    }
+    if (_(_)) {
+      if (!_) return _(26);
+      var _ = _[_].values_.get(_);
+      return _ || _(27, _, _(_)), _;
+    }
+    if (_(_) || _(_) || _(_)) return _;
+  } else if (_(_) && _(_[_])) return _[_];
+  _(28);
+}
+function _(_, _) {
+  if ((_ || _(29), _ !== void 0)) return _(_(_, _));
+  if (_(_) || _(_) || _(_) || _(_) || _(_)) return _;
+  if (_[_]) return _[_];
+  _(24, _);
+}
+function _(_, _) {
+  var _;
+  if (_ !== void 0) _ = _(_, _);
+  else if (_(_)) return _.name;
+  else _ = _(_) || _(_) || _(_) ? _(_) : _(_);
+  return _.name_;
+}
+function _(_) {
+  var _ = _(),
+    _ = _(!0);
+  _();
+  try {
+    return _();
+  } finally {
+    _(), _(_), _(_);
+  }
+}
+var _ = _.toString;
+function _(_, _, _) {
+  return _ === void 0 && (_ = -1), _(_, _, _);
+}
+function _(_, _, _, _, _) {
+  if (_ === _) return _ !== 0 || 1 / _ == 1 / _;
+  if (_ == null || _ == null) return !1;
+  if (_ !== _) return _ !== _;
+  var _ = typeof _;
+  if (_ !== `function` && _ !== `object` && typeof _ != `object`) return !1;
+  var _ = _.call(_);
+  if (_ !== _.call(_)) return !1;
+  switch (_) {
+    case `[object RegExp]`:
+    case `[object String]`:
+      return `` + _ == `` + _;
+    case `[object Number]`:
+      return +_ == +_ ? (+_ == 0 ? 1 / _ == 1 / _ : +_ == +_) : +_ != +_;
+    case `[object Date]`:
+    case `[object Boolean]`:
+      return +_ == +_;
+    case `[object Symbol]`:
+      return (
+        typeof Symbol < `u` && Symbol.valueOf.call(_) === Symbol.valueOf.call(_)
+      );
+    case `[object Map]`:
+    case `[object Set]`:
+      _ >= 0 && _++;
+  }
+  (_ = _(_)), (_ = _(_));
+  var _ = _ === `[object Array]`;
+  if (!_) {
+    if (typeof _ != `object` || typeof _ != `object`) return !1;
+    var _ = _.constructor,
+      _ = _.constructor;
+    if (
+      _ !== _ &&
+      !(_(_) && _ instanceof _ && _(_) && _ instanceof _) &&
+      `constructor` in _ &&
+      `constructor` in _
+    )
+      return !1;
+  }
+  if (_ === 0) return !1;
+  _ < 0 && (_ = -1), (_ ||= []), (_ ||= []);
+  for (var _ = _.length; _--; ) if (_[_] === _) return _[_] === _;
+  if ((_.push(_), _.push(_), _)) {
+    if (((_ = _.length), _ !== _.length)) return !1;
+    for (; _--; ) if (!_(_[_], _[_], _ - 1, _, _)) return !1;
+  } else {
+    var _ = Object.keys(_),
+      _ = _.length;
+    if (Object.keys(_).length !== _) return !1;
+    for (var _ = 0; _ < _; _++) {
+      var _ = _[_];
+      if (!(_(_, _) && _(_[_], _[_], _ - 1, _, _))) return !1;
+    }
+  }
+  return _.pop(), _.pop(), !0;
+}
+function _(_) {
+  return _(_)
+    ? _.slice()
+    : _(_) || _(_) || _(_) || _(_)
+      ? Array.from(_.entries())
+      : _;
+}
+var _ = _().Iterator?.prototype || {};
+function _(_) {
+  return (_[Symbol.iterator] = _), Object.assign(Object.create(_), _);
+}
+function _() {
+  return this;
+}
+[`Symbol`, `Map`, `Set`].forEach(function (_) {
+  _()[_] === void 0 &&
+    _(`MobX requires global '` + _ + `' to be available or polyfilled`);
+}),
+  typeof __MOBX_DEVTOOLS_GLOBAL_HOOK__ == `object` &&
+    __MOBX_DEVTOOLS_GLOBAL_HOOK__.injectMobx({
+      spy: _,
+      extras: {
+        getDebugName: _,
+      },
+      $mobx: _,
+    });
 function _(_) {
   if (_.default.isCancel(_))
     return {
@@ -36167,7 +34950,7 @@ var _ = class _ extends _.Message {
             },
             store_items: {
               _: 3,
-              _,
+              _: _,
               _: !0,
               _: !0,
             },
@@ -36338,7 +35121,7 @@ var _ = class _ extends _.Message {
             },
             store_items: {
               _: 3,
-              _,
+              _: _,
               _: !0,
               _: !0,
             },
@@ -36553,7 +35336,7 @@ var _ = class _ extends _.Message {
             },
             store_items: {
               _: 3,
-              _,
+              _: _,
               _: !0,
               _: !0,
             },
@@ -37052,6 +35835,318 @@ var _ = class _ extends _.Message {
       return `CStoreQuery_GetItemByUserCombinedTagsPriority_Response`;
     }
   },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.context || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [4], null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            context: {
+              _: 1,
+              _: _,
+            },
+            flavor: {
+              _: 2,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+            store_page_filter: {
+              _: 3,
+              _: _,
+            },
+            excluded_content_descriptors: {
+              _: 4,
+              _: !0,
+              _: !0,
+              _: _.readEnum,
+              pbr: _.readPackedEnum,
+              _: _.writeRepeatedEnum,
+            },
+            start: {
+              _: 5,
+              _: 0,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            count: {
+              _: 6,
+              _: 50,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            prioritize_discounts: {
+              _: 7,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            allow_demos: {
+              _: 8,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            request_facet_counts: {
+              _: 9,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            search_term: {
+              _: 10,
+              _: _.readString,
+              _: _.writeString,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CStoreQuery_GetSaleBrowserItems_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.ids || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1, 4], null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            ids: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            total_matching: {
+              _: 2,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            more_results_remaining: {
+              _: 3,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            facet_fields: {
+              _: 4,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CStoreQuery_GetSaleBrowserItems_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.value || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            value: {
+              _: 1,
+              _: _.readString,
+              _: _.writeString,
+            },
+            count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CStoreQuery_GetSaleBrowserItems_Response_FacetValue`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.field || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            field: {
+              _: 1,
+              _: _.readString,
+              _: _.writeString,
+            },
+            values: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CStoreQuery_GetSaleBrowserItems_Response_FacetField`;
+    }
+  },
   _;
 (function (_) {
   function _(_, _, _) {
@@ -37105,6 +36200,14 @@ var _ = class _ extends _.Message {
     );
   }
   _.GetItemByUserCombinedTagsPriority = _;
+  function _(_, _, _) {
+    return _.SendMsg(`StoreQuery.GetSaleBrowserItems#1`, _(_, _, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 0,
+      rgBrowserAPISites: [`store`],
+    });
+  }
+  _.GetSaleBrowserItems = _;
 })((_ ||= {}));
 function _(_) {
   if (_.bIncludeUnpublished) return `partner-unpublished`;
@@ -38231,525 +37334,23 @@ function _(_) {
       }, _);
   };
 }
-var _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      super(),
-        _.prototype.version || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            version: {
-              _: 1,
-              _: _.readEnum,
-              _: _.writeEnum,
-            },
-            preference_state: {
-              _: 2,
-              _: _.readEnum,
-              _: _.writeEnum,
-            },
-            content_customization: {
-              _: 3,
-              _: _,
-            },
-            valve_analytics: {
-              _: 4,
-              _: _,
-            },
-            third_party_analytics: {
-              _: 5,
-              _: _,
-            },
-            third_party_content: {
-              _: 6,
-              _: _,
-            },
-            utm_enabled: {
-              _: 7,
-              _: !0,
-              _: _.readBool,
-              _: _.writeBool,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-    }
-    getClassName() {
-      return `CAccountPrivacyCookiePreferences`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      super(),
-        _.prototype.recentapps || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            recentapps: {
-              _: 1,
-              _: _.readBool,
-              _: _.writeBool,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-    }
-    getClassName() {
-      return `CAccountPrivacyCookiePreferences_ContentCustomization`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      super(),
-        _.prototype.product_impressions_tracking || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            product_impressions_tracking: {
-              _: 1,
-              _: _.readBool,
-              _: _.writeBool,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-    }
-    getClassName() {
-      return `CAccountPrivacyCookiePreferences_ValveAnalytics`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      super(),
-        _.prototype.google_analytics || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            google_analytics: {
-              _: 1,
-              _: _.readBool,
-              _: _.writeBool,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-    }
-    getClassName() {
-      return `CAccountPrivacyCookiePreferences_ThirdPartyAnalytics`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      super(),
-        _.prototype.youtube || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            youtube: {
-              _: 1,
-              _: _.readBool,
-              _: _.writeBool,
-            },
-            vimeo: {
-              _: 2,
-              _: _.readBool,
-              _: _.writeBool,
-            },
-            sketchfab: {
-              _: 3,
-              _: _.readBool,
-              _: _.writeBool,
-            },
-            twitter: {
-              _: 4,
-              _: _.readBool,
-              _: _.writeBool,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-    }
-    getClassName() {
-      return `CAccountPrivacyCookiePreferences_ThirdPartyContent`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _
-        ? {
-            $jspbMessageInstance: _,
-          }
-        : {};
-    }
-    static fromObject(_) {
-      return new _();
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _;
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-    }
-    static serializeBinaryToWriter(_, _) {}
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-    }
-    getClassName() {
-      return `CAccountPrivacy_GetCookiePreferences_Request`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      super(),
-        _.prototype.preferences || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            preferences: {
-              _: 1,
-              _: _,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-    }
-    getClassName() {
-      return `CAccountPrivacy_GetCookiePreferences_Response`;
-    }
-  },
-  _;
-(function (_) {
-  function _(_, _, _) {
-    return _.SendMsg(`AccountPrivacy.GetCookiePreferences#1`, _(_, _, _), _, {
-      bConstMethod: !0,
-      ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`],
-    });
-  }
-  _.GetCookiePreferences = _;
-})((_ ||= {}));
-function _(_) {
-  if (_.preferenceControls.isTechnicallyNecessary) return !0;
-  let _ = _();
-  if (!_) return !1;
-  switch (_.preference_state) {
-    case 1:
-    case 0:
-      return !0;
-    case 2:
-    case 4:
-      return !1;
-  }
-  return (
-    `IsAllowed` in _.preferenceControls && _.preferenceControls.IsAllowed(_)
-  );
-}
 var _ = {
-    name: `cookieSettings`,
-    options: {
-      secure: !0,
-      httpOnly: !1,
-      path: `/`,
-      sameSite: `none`,
-      maxAge: 31536e6,
-    },
-    preferenceControls: {
-      isTechnicallyNecessary: !0,
-    },
-  },
-  _ = {
-    name: `strResponsiveViewPrefs`,
-    options: {
-      maxAge: 31536e6,
-    },
-    preferenceControls: {
-      isTechnicallyNecessary: !0,
-    },
-  };
-function _(_) {
-  if (!document.cookie) return;
-  let _ = document.cookie.match(`(^|; )` + _.name + `=([^;]*)`);
-  if (_ && _[2]) return decodeURIComponent(_[2]);
-}
+  PerYear: 31536e3,
+  PerMonth: 2628e3,
+  PerWeek: 604800,
+  PerDay: 86400,
+  PerHour: 3600,
+  PerMinute: 60,
+};
 function _(_, _) {
-  if (!(`document` in globalThis) || !_(_)) return;
-  let _ = _.options?.path ?? `/`,
-    _ = ``;
-  _.options?.expires
-    ? (_ += `;expires=` + _.options.expires.toUTCString())
-    : _.options?.maxAge &&
-      (_ += `;max-age=` + Math.floor(_.options.maxAge / 1e3)),
-    _.options?.secure && (_ += `;secure`),
-    (document.cookie =
-      encodeURIComponent(_.name) +
-      `=` +
-      encodeURIComponent(_) +
-      _ +
-      `;path=` +
-      _);
-}
-function _(_) {
-  return _(
-    {
-      ..._,
-      options: {
-        ..._.options,
-        expires: new Date(0),
-      },
-    },
-    ``,
+  return (
+    _.getFullYear() == _.getFullYear() &&
+    _.getMonth() == _.getMonth() &&
+    _.getDate() == _.getDate()
   );
 }
 function _() {
-  return window.SSR?.renderContext?.cookiePrefs;
+  return Math.floor(Date.now() / 1e3);
 }
 var _ = function () {
   return null;
@@ -39020,7 +37621,7 @@ var _ = class _ extends _.Message {
             },
             associated_item: {
               _: 5,
-              _,
+              _: _,
             },
             associated_name: {
               _: 6,
@@ -39047,6 +37648,11 @@ var _ = class _ extends _.Message {
               _: 13,
               _: _.readUint32,
               _: _.writeUint32,
+            },
+            recommended_items_include_dlc: {
+              _: 14,
+              _: _.readBool,
+              _: _.writeBool,
             },
           },
         }),
@@ -41926,6 +40532,1225 @@ var _ = class _ extends _.Message {
   }
   _.GetMarketingMessagesForApps = _;
 })((_ ||= {}));
+var _ = function () {};
+function _(_) {
+  throw Error(`[mobx-utils] ` + _);
+}
+function _(_, _) {
+  _ === void 0 && (_ = `Illegal state`), _ || _(_);
+}
+var _ = function (_) {
+    return (
+      _ &&
+      _ !== Object.prototype &&
+      Object.getOwnPropertyNames(_).concat(_(Object.getPrototypeOf(_)) || [])
+    );
+  },
+  _ = function (_) {
+    var _ = _(_);
+    return _.filter(function (_, _) {
+      return _.indexOf(_) === _;
+    });
+  },
+  _ = function (_) {
+    return _(_).filter(function (_) {
+      return _ !== `constructor` && !~_.indexOf(`__`);
+    });
+  },
+  _ = `pending`,
+  _ = `fulfilled`,
+  _ = `rejected`;
+function _(_) {
+  switch (this.state) {
+    case _:
+      return _.pending && _.pending(this.value);
+    case _:
+      return _.rejected && _.rejected(this.value);
+    case _:
+      return _.fulfilled ? _.fulfilled(this.value) : this.value;
+  }
+}
+function _(_, _) {
+  if (
+    (_(arguments.length <= 2, `fromPromise expects up to two arguments`),
+    _(
+      typeof _ == `function` ||
+        (typeof _ == `object` && _ && typeof _.then == `function`),
+      `Please pass a promise or function to fromPromise`,
+    ),
+    _.isPromiseBasedObservable === !0)
+  )
+    return _;
+  typeof _ == `function` && (_ = new Promise(_));
+  var _ = _;
+  return (
+    _.then(
+      _(`observableFromPromise-resolve`, function (_) {
+        (_.value = _), (_.state = _);
+      }),
+      _(`observableFromPromise-reject`, function (_) {
+        (_.value = _), (_.state = _);
+      }),
+    ),
+    (_.isPromiseBasedObservable = !0),
+    (_.case = _),
+    _(
+      _,
+      {
+        value:
+          _ && (_.state === `fulfilled` || _.state === `pending`)
+            ? _.value
+            : void 0,
+        state: _,
+      },
+      {},
+      {
+        deep: !1,
+      },
+    ),
+    _
+  );
+}
+(function (_) {
+  _.reject = _(`fromPromise.reject`, function (_) {
+    var _ = _(Promise.reject(_));
+    return (_.state = _), (_.value = _), _;
+  });
+  function _(_) {
+    _ === void 0 && (_ = void 0);
+    var _ = _(Promise.resolve(_));
+    return (_.state = _), (_.value = _), _;
+  }
+  _.resolve = _(`fromPromise.resolve`, _);
+})((_ ||= {}));
+function _(_, _, _) {
+  _ === void 0 && (_ = _), _ === void 0 && (_ = void 0);
+  var _ = !1,
+    _ = !1,
+    _ = _,
+    _ = function () {
+      _ && ((_ = !1), _());
+    },
+    _ = _(
+      `ResourceBasedObservable`,
+      function () {
+        _(!_ && !_),
+          (_ = !0),
+          _(function (_) {
+            _(!0, function () {
+              (_ = _), _.reportChanged();
+            });
+          });
+      },
+      _,
+    );
+  return {
+    current: function () {
+      return (
+        _(!_, `subscribingObservable has already been disposed`),
+        !_.reportObserved() &&
+          !_ &&
+          console.warn(
+            "Called `get` of a subscribingObservable outside a reaction. Current value will be returned but no new subscription has started",
+          ),
+        _
+      );
+    },
+    dispose: function () {
+      (_ = !0), _();
+    },
+    isAlive: function () {
+      return _;
+    },
+  };
+}
+var _ = function (_, _, _, _) {
+  var _ = arguments.length,
+    _ =
+      _ < 3 ? _ : _ === null ? (_ = Object.getOwnPropertyDescriptor(_, _)) : _,
+    _;
+  if (typeof Reflect == `object` && typeof Reflect.decorate == `function`)
+    _ = Reflect.decorate(_, _, _, _);
+  else
+    for (var _ = _.length - 1; _ >= 0; _--)
+      (_ = _[_]) && (_ = (_ < 3 ? _(_) : _ > 3 ? _(_, _, _) : _(_, _)) || _);
+  return _ > 3 && _ && Object.defineProperty(_, _, _), _;
+};
+(function () {
+  function _(_, _) {
+    var _ = this;
+    Object.defineProperty(this, "current", {
+      enumerable: !0,
+      configurable: !0,
+      writable: !0,
+      value: void 0,
+    }),
+      Object.defineProperty(this, "subscription", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      _(this),
+      _(function () {
+        (_.current = _), (_.subscription = _.subscribe(_));
+      });
+  }
+  return (
+    Object.defineProperty(_.prototype, "dispose", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        this.subscription && this.subscription.unsubscribe();
+      },
+    }),
+    Object.defineProperty(_.prototype, "next", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_) {
+        this.current = _;
+      },
+    }),
+    Object.defineProperty(_.prototype, "complete", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        this.dispose();
+      },
+    }),
+    Object.defineProperty(_.prototype, "error", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_) {
+        (this.current = _), this.dispose();
+      },
+    }),
+    _([_.ref], _.prototype, `current`, void 0),
+    _([_.bound], _.prototype, `next`, null),
+    _([_.bound], _.prototype, `complete`, null),
+    _([_.bound], _.prototype, `error`, null),
+    _
+  );
+})();
+var _ = function () {
+    return (
+      (_ =
+        Object.assign ||
+        function (_) {
+          for (var _, _ = 1, _ = arguments.length; _ < _; _++)
+            for (var _ in ((_ = arguments[_]), _))
+              Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
+          return _;
+        }),
+      _.apply(this, arguments)
+    );
+  },
+  _ = function (_, _, _, _) {
+    var _ = arguments.length,
+      _ =
+        _ < 3
+          ? _
+          : _ === null
+            ? (_ = Object.getOwnPropertyDescriptor(_, _))
+            : _,
+      _;
+    if (typeof Reflect == `object` && typeof Reflect.decorate == `function`)
+      _ = Reflect.decorate(_, _, _, _);
+    else
+      for (var _ = _.length - 1; _ >= 0; _--)
+        (_ = _[_]) && (_ = (_ < 3 ? _(_) : _ > 3 ? _(_, _, _) : _(_, _)) || _);
+    return _ > 3 && _ && Object.defineProperty(_, _, _), _;
+  },
+  _ = [
+    `model`,
+    `reset`,
+    `submit`,
+    `isDirty`,
+    `isPropertyDirty`,
+    `resetProperty`,
+  ];
+(function () {
+  function _(_) {
+    var _ = this;
+    Object.defineProperty(this, "model", {
+      enumerable: !0,
+      configurable: !0,
+      writable: !0,
+      value: _,
+    }),
+      Object.defineProperty(this, "localValues", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: _.map({}),
+      }),
+      Object.defineProperty(this, "localComputedValues", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: _.map({}),
+      }),
+      Object.defineProperty(this, "isPropertyDirty", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: function (_) {
+          return _.localValues.has(_);
+        },
+      }),
+      _(this),
+      _(_(_), `createViewModel expects an observable object`);
+    var _ = _(this);
+    _(_).forEach(function (_) {
+      if (!_.includes(_) && _ !== _ && _ !== `__mobxDidRunLazyInitializers`) {
+        if (
+          (_(
+            _.indexOf(_) === -1,
+            `The propertyname ` +
+              _ +
+              ` is reserved and cannot be used with viewModels`,
+          ),
+          _(_, _))
+        ) {
+          var _ = _(_, _),
+            _ = _.derivation.bind(_),
+            _ = _.setter_?.bind(_);
+          _.localComputedValues.set(
+            _,
+            _(_, {
+              set: _,
+            }),
+          );
+        }
+        var _ = Object.getOwnPropertyDescriptor(_, _),
+          _ = _
+            ? {
+                enumerable: _.enumerable,
+              }
+            : {};
+        Object.defineProperty(
+          _,
+          _,
+          _(_({}, _), {
+            configurable: !0,
+            get: function () {
+              return _(_, _)
+                ? _.localComputedValues.get(_).get()
+                : _.isPropertyDirty(_)
+                  ? _.localValues.get(_)
+                  : _.model[_];
+            },
+            set: _(function (_) {
+              _(_, _)
+                ? _.localComputedValues.get(_).set(_)
+                : _ === _.model[_]
+                  ? _.localValues.delete(_)
+                  : _.localValues.set(_, _);
+            }),
+          }),
+        );
+      }
+    });
+  }
+  return (
+    Object.defineProperty(_.prototype, "isDirty", {
+      get: function () {
+        return this.localValues.size > 0;
+      },
+      enumerable: !1,
+      configurable: !0,
+    }),
+    Object.defineProperty(_.prototype, "changedValues", {
+      get: function () {
+        return new Map(this.localValues);
+      },
+      enumerable: !1,
+      configurable: !0,
+    }),
+    Object.defineProperty(_.prototype, "submit", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        var _ = this;
+        _(this.localValues).forEach(function (_) {
+          var _ = _.localValues.get(_),
+            _ = _.model[_];
+          _(_)
+            ? _.replace(_)
+            : _(_)
+              ? (_.clear(), _.merge(_))
+              : _(_) || (_.model[_] = _);
+        }),
+          this.localValues.clear();
+      },
+    }),
+    Object.defineProperty(_.prototype, "reset", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        this.localValues.clear();
+      },
+    }),
+    Object.defineProperty(_.prototype, "resetProperty", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_) {
+        this.localValues.delete(_);
+      },
+    }),
+    _([_], _.prototype, `isDirty`, null),
+    _([_], _.prototype, `changedValues`, null),
+    _([_.bound], _.prototype, `submit`, null),
+    _([_.bound], _.prototype, `reset`, null),
+    _([_.bound], _.prototype, `resetProperty`, null),
+    _
+  );
+})();
+var _ = {};
+function _(_) {
+  return (
+    _ === void 0 && (_ = 1e3),
+    _()
+      ? (_[_] || (typeof _ == `number` ? (_[_] = _(_)) : (_[_] = _())),
+        _[_].current())
+      : Date.now()
+  );
+}
+function _(_) {
+  var _;
+  return _(
+    function (_) {
+      _(Date.now()),
+        (_ = setInterval(function () {
+          return _(Date.now());
+        }, _));
+    },
+    function () {
+      clearInterval(_);
+    },
+    Date.now(),
+  );
+}
+function _() {
+  var _ = _(
+    function (_) {
+      _(Date.now());
+      function _() {
+        window.requestAnimationFrame(function () {
+          _(Date.now()), _.isAlive() && _();
+        });
+      }
+      _();
+    },
+    function () {},
+    Date.now(),
+  );
+  return _;
+}
+var _ = (function () {
+  var _ = function (_, _) {
+    return (
+      (_ =
+        Object.setPrototypeOf ||
+        ({
+          __proto__: [],
+        } instanceof Array &&
+          function (_, _) {
+            _.__proto__ = _;
+          }) ||
+        function (_, _) {
+          for (var _ in _)
+            Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
+        }),
+      _(_, _)
+    );
+  };
+  return function (_, _) {
+    _(_, _);
+    function _() {
+      this.constructor = _;
+    }
+    _.prototype =
+      _ === null ? Object.create(_) : ((_.prototype = _.prototype), new _());
+  };
+})();
+(function (_) {
+  _(_, _);
+  function _(_, _, _) {
+    var _ = _ === void 0 ? {} : _,
+      _ = _.name,
+      _ = _ === void 0 ? `ogm` + ((Math.random() * 1e3) | 0) : _,
+      _ = _.keyToName,
+      _ =
+        _ === void 0
+          ? function (_) {
+              return `` + _;
+            }
+          : _,
+      _ = _.call(this) || this;
+    Object.defineProperty(_, "_base", {
+      enumerable: !0,
+      configurable: !0,
+      writable: !0,
+      value: void 0,
+    }),
+      Object.defineProperty(_, "_ogmInfoKey", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(_, "_groupBy", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(_, "_keyToName", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(_, "_disposeBaseObserver", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      (_._keyToName = _),
+      (_._groupBy = _),
+      (_._ogmInfoKey = Symbol(`ogmInfo` + _)),
+      (_._base = _);
+    for (var _ = 0; _ < _.length; _++) _._addItem(_[_]);
+    return (
+      (_._disposeBaseObserver = _(_._base, function (_) {
+        if (_.type === `splice`)
+          _(function () {
+            for (var _ = 0, _ = _.removed; _ < _.length; _++) {
+              var _ = _[_];
+              _._removeItem(_);
+            }
+            for (var _ = 0, _ = _.added; _ < _.length; _++) {
+              var _ = _[_];
+              _._addItem(_);
+            }
+          });
+        else if (_.type === `update`)
+          _(function () {
+            _._removeItem(_.oldValue), _._addItem(_.newValue);
+          });
+        else throw Error(`illegal state`);
+      })),
+      _
+    );
+  }
+  return (
+    Object.defineProperty(_.prototype, "clear", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        throw Error(`not supported`);
+      },
+    }),
+    Object.defineProperty(_.prototype, "delete", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_) {
+        throw Error(`not supported`);
+      },
+    }),
+    Object.defineProperty(_.prototype, "set", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_, _) {
+        throw Error(`not supported`);
+      },
+    }),
+    Object.defineProperty(_.prototype, "dispose", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        this._disposeBaseObserver();
+        for (var _ = 0; _ < this._base.length; _++) {
+          var _ = this._base[_];
+          _[this._ogmInfoKey].reaction(), delete _[this._ogmInfoKey];
+        }
+      },
+    }),
+    Object.defineProperty(_.prototype, "_getGroupArr", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_) {
+        var _ = _.prototype.get.call(this, _);
+        return (
+          _ === void 0 &&
+            ((_ = _([], {
+              name: `GroupArray[` + this._keyToName(_) + `]`,
+              deep: !1,
+            })),
+            _.prototype.set.call(this, _, _)),
+          _
+        );
+      },
+    }),
+    Object.defineProperty(_.prototype, "_removeFromGroupArr", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_, _) {
+        var _ = _.prototype.get.call(this, _);
+        _.length === 1
+          ? _.prototype.delete.call(this, _)
+          : _ === _.length - 1
+            ? _.length--
+            : ((_[_] = _[_.length - 1]),
+              (_[_][this._ogmInfoKey].groupArrIndex = _),
+              _.length--);
+      },
+    }),
+    Object.defineProperty(_.prototype, "_addItem", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_) {
+        var _ = this,
+          _ = this._groupBy(_),
+          _ = this._getGroupArr(_),
+          _ = {
+            groupByValue: _,
+            groupArrIndex: _.length,
+            reaction: _(
+              function () {
+                return _._groupBy(_);
+              },
+              function (_, _) {
+                var _ = _[_._ogmInfoKey];
+                _._removeFromGroupArr(_.groupByValue, _.groupArrIndex);
+                var _ = _._getGroupArr(_),
+                  _ = _.length;
+                _.push(_), (_.groupByValue = _), (_.groupArrIndex = _);
+              },
+            ),
+          };
+        Object.defineProperty(_, this._ogmInfoKey, {
+          configurable: !0,
+          enumerable: !1,
+          value: _,
+        }),
+          _.push(_);
+      },
+    }),
+    Object.defineProperty(_.prototype, "_removeItem", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_) {
+        var _ = _[this._ogmInfoKey];
+        this._removeFromGroupArr(_.groupByValue, _.groupArrIndex),
+          _.reaction(),
+          delete _[this._ogmInfoKey];
+      },
+    }),
+    _
+  );
+})(_);
+var _ = (function () {
+  function _(_, _) {
+    Object.defineProperty(this, "base", {
+      enumerable: !0,
+      configurable: !0,
+      writable: !0,
+      value: _,
+    }),
+      Object.defineProperty(this, "args", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: _,
+      }),
+      Object.defineProperty(this, "root", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(this, "closest", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      }),
+      Object.defineProperty(this, "closestIdx", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: 0,
+      }),
+      Object.defineProperty(this, "isDisposed", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: !1,
+      });
+    for (
+      var _ = (this.closest = this.root = _), _ = 0;
+      _ < this.args.length - 1 && ((_ = _.get(_[_])), _);
+      _++
+    )
+      this.closest = _;
+    this.closestIdx = _;
+  }
+  return (
+    Object.defineProperty(_.prototype, "exists", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        this.assertNotDisposed();
+        var _ = this.args.length;
+        return this.closestIdx >= _ - 1 && this.closest.has(this.args[_ - 1]);
+      },
+    }),
+    Object.defineProperty(_.prototype, "get", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        if ((this.assertNotDisposed(), !this.exists()))
+          throw Error(`Entry doesn't exist`);
+        return this.closest.get(this.args[this.args.length - 1]);
+      },
+    }),
+    Object.defineProperty(_.prototype, "set", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_) {
+        this.assertNotDisposed();
+        for (
+          var _ = this.args.length, _ = this.closest, _ = this.closestIdx;
+          _ < _ - 1;
+          _++
+        ) {
+          var _ = new Map();
+          _.set(this.args[_], _), (_ = _);
+        }
+        (this.closestIdx = _ - 1),
+          (this.closest = _),
+          _.set(this.args[_ - 1], _);
+      },
+    }),
+    Object.defineProperty(_.prototype, "delete", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        if ((this.assertNotDisposed(), !this.exists()))
+          throw Error(`Entry doesn't exist`);
+        var _ = this.args.length;
+        this.closest.delete(this.args[_ - 1]);
+        for (var _ = this.root, _ = [_], _ = 0; _ < _ - 1; _++)
+          (_ = _.get(this.args[_])), _.push(_);
+        for (var _ = _.length - 1; _ > 0; _--)
+          _[_].size === 0 && _[_ - 1].delete(this.args[_ - 1]);
+        this.isDisposed = !0;
+      },
+    }),
+    Object.defineProperty(_.prototype, "assertNotDisposed", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function () {
+        if (this.isDisposed) throw Error(`Concurrent modification exception`);
+      },
+    }),
+    _
+  );
+})();
+(function () {
+  function _() {
+    Object.defineProperty(this, "store", {
+      enumerable: !0,
+      configurable: !0,
+      writable: !0,
+      value: new Map(),
+    }),
+      Object.defineProperty(this, "argsLength", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: -1,
+      }),
+      Object.defineProperty(this, "last", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: void 0,
+      });
+  }
+  return (
+    Object.defineProperty(_.prototype, "entry", {
+      enumerable: !1,
+      configurable: !0,
+      writable: !0,
+      value: function (_) {
+        if (this.argsLength === -1) this.argsLength = _.length;
+        else if (this.argsLength !== _.length)
+          throw Error(
+            `DeepMap should be used with functions with a consistent length, expected: ` +
+              this.argsLength +
+              `, got: ` +
+              _.length,
+          );
+        return (
+          this.last && (this.last.isDisposed = !0),
+          (this.last = new _(this.store, _))
+        );
+      },
+    }),
+    _
+  );
+})();
+function _(_, _, _) {
+  let _;
+  _ =
+    typeof _ == `boolean`
+      ? {
+          eSuffix: +!_,
+          bForceSingleUnits: _,
+          bHighGranularity: !1,
+        }
+      : {
+          eSuffix: 1,
+          bForceSingleUnits: !1,
+          bHighGranularity: !1,
+          ..._,
+        };
+  let _ = `#TimeInterval_`;
+  _.eSuffix == 1
+    ? (_ = `#TimeSince_`)
+    : _.eSuffix == 2 && (_ = `#TimeRemaining_`);
+  let _ = (_) => Math.floor(_);
+  if (
+    (_.bAllowDecimal && (_ = (_) => Math.round(_ * 10) / 10),
+    _ >= _.PerYear * 2)
+  )
+    return _(_ + `XYears`, _(_ / _.PerYear));
+  if (_ >= _.PerYear)
+    return (
+      (_ -= _.PerYear),
+      _ >= _.PerMonth * 2 && !_.bForceSingleUnits
+        ? _(_ + `1YearXMonths`, _(_ / _.PerMonth))
+        : _(_ + `1Year`)
+    );
+  if (_ >= _.PerMonth * 2) return _(_ + `XMonths`, _(_ / _.PerMonth));
+  if (_ >= _.PerWeek * 2) return _(_ + `XWeeks`, _(_ / _.PerWeek));
+  if (_ >= _.PerWeek) return _(_ + `1Week`, _(_ / _.PerWeek));
+  if (_ >= _.PerDay * 2) return _(_ + `XDays`, _(_ / _.PerDay));
+  if (_ >= _.PerDay)
+    return (
+      (_ -= _.PerDay),
+      _ >= _.PerHour * 2 && !_.bForceSingleUnits
+        ? _(_ + `1DayXHours`, _(_ / _.PerHour))
+        : _(_ + `1Day`)
+    );
+  if (_ >= _.PerHour * 2) return _(_ + `XHours`, _(_ / _.PerHour));
+  if (_ >= _.PerHour)
+    return (
+      (_ -= _.PerHour),
+      _ >= _.PerMinute * 2 && !_.bForceSingleUnits
+        ? _(_ + `1HourXMinutes`, _(_ / _.PerMinute))
+        : _(_ + `1Hour`)
+    );
+  if (_ >= _.PerMinute * 2) {
+    let _ = Math.floor(_ / _.PerMinute),
+      _ = _ % _.PerMinute;
+    return !_.bHighGranularity || _ == 0
+      ? _(_ + `XMinutes`, _(_ / _.PerMinute))
+      : _ == 1
+        ? _(_ + `XMinutes1Second`, _)
+        : _(_ + `XMinutesXSeconds`, _, _);
+  }
+  if (_ >= _.PerMinute) {
+    let _ = _ % _.PerMinute;
+    return !_.bHighGranularity || _ == 0
+      ? _(_ + `1Minute`)
+      : _ == 1
+        ? _(_ + `1Minute1Second`)
+        : _(_ + `1MinuteXSeconds`, _);
+  }
+  return _.bHighGranularity
+    ? _ == 1
+      ? _(_ + `1Second`)
+      : _(_ + `XSeconds`, _)
+    : _(_ + `LessThanAMinute`);
+}
+function _(_, _, _) {
+  let _;
+  _ =
+    _ === void 0 || _ === !0 || _ === !1
+      ? {
+          weekday: _ ? `long` : `short`,
+          year: _ ? void 0 : `numeric`,
+        }
+      : _;
+  let _ = new Date(_ * 1e3),
+    _ = {
+      weekday: `short`,
+      month: `long`,
+      day: `numeric`,
+      year: `numeric`,
+      ..._,
+    };
+  return _.toLocaleDateString(_.GetPreferredLocales(), _);
+}
+function _(_, _) {
+  let _ = new Date(_ * 1e3),
+    _ = {
+      year: `numeric`,
+      month: `short`,
+      day: `numeric`,
+      ..._,
+    };
+  return _.toLocaleDateString(_.GetPreferredLocales(), _);
+}
+var _ = new Map();
+function _(_) {
+  let _ = _.get(_);
+  if (_ === !0 || _ === !1) return _;
+  let _ = new Date();
+  return (
+    _.setHours(15),
+    (_ =
+      _.toLocaleTimeString(_, {
+        hour: `numeric`,
+      }) ==
+      _.toLocaleTimeString(_, {
+        hour: `numeric`,
+        hour12: !1,
+      })),
+    _.set(_, _),
+    _
+  );
+}
+function _(_, _, _) {
+  let _ = new Date(_ * 1e3),
+    _ = {
+      hour: `numeric`,
+      minute: `2-digit`,
+      hourCycle: `h23`,
+    },
+    _ = {
+      hour: `numeric`,
+      minute: `2-digit`,
+    },
+    _ = _.GetPreferredLocales(),
+    _ = {
+      ...(_?.bForce24HourClock || _(_[0]) ? _ : _),
+      ..._,
+    };
+  return _.toLocaleTimeString(_, _);
+}
+var _ = new Map();
+function _(_, _, _ = !0, _ = !0, _ = !1) {
+  let _ = new Date(),
+    _ = new Date(_ * 1e3);
+  if (_.getFullYear() != _.getFullYear()) return _(_);
+  _ && _(new Date().setHours(24, 0, 0, 0) - _.getTime());
+  let _ = new Date();
+  if ((_.setHours(0, 0, 0, 0), _)) {
+    if (_ >= _) {
+      if ((_.setDate(_.getDate() + 1), _ < _)) return _(`#Time_Today`);
+      if ((_.setDate(_.getDate() + 1), _ < _)) return _(`#Time_Tomorrow`);
+    } else if ((_.setDate(_.getDate() - 1), _ >= _))
+      return _(`#Time_Yesterday`);
+  }
+  let _ = {
+    month: _ ? `long` : `short`,
+    day: `numeric`,
+  };
+  _ && (_.weekday = `long`);
+  let _ = _.setHours(0, 0, 0, 0) + _.month,
+    _ = _.get(_);
+  return (
+    _ ||
+    ((_ = _.toLocaleDateString(_.GetPreferredLocales(), _)), _.set(_, _), _)
+  );
+}
+var _ = new Map(),
+  _ = new Map();
+function _(_) {
+  let _ = _.get(_.getFullYear());
+  return (
+    _ ||
+    ((_ = _.toLocaleDateString(_.GetPreferredLocales(), {
+      year: `numeric`,
+    })),
+    _.set(_.getFullYear(), _),
+    _)
+  );
+}
+function _(_) {
+  let _ = _.getMonth() + 12 * _.getFullYear(),
+    _ = _.get(_);
+  return (
+    _ ||
+    ((_ = _.toLocaleDateString(_.GetPreferredLocales(), {
+      month: `long`,
+      year: `numeric`,
+    })),
+    _.set(_, _),
+    _)
+  );
+}
+function _(_, _) {
+  switch (_.getUTCMonth()) {
+    case 0:
+    case 1:
+    case 2:
+      return _(
+        _ ? `#Time_QuarterOfYear_Expanded_Q1` : `#Time_QuarterOfYear_Q1`,
+        _.getUTCFullYear(),
+      );
+    case 3:
+    case 4:
+    case 5:
+      return _(
+        _ ? `#Time_QuarterOfYear_Expanded_Q2` : `#Time_QuarterOfYear_Q2`,
+        _.getUTCFullYear(),
+      );
+    case 6:
+    case 7:
+    case 8:
+      return _(
+        _ ? `#Time_QuarterOfYear_Expanded_Q3` : `#Time_QuarterOfYear_Q3`,
+        _.getUTCFullYear(),
+      );
+    default:
+      return _(
+        _ ? `#Time_QuarterOfYear_Expanded_Q4` : `#Time_QuarterOfYear_Q4`,
+        _.getUTCFullYear(),
+      );
+  }
+}
+var _ = class _ {
+  m_mapTokens = new Map();
+  m_mapFallbackTokens = new Map();
+  m_cbkTokensChanged = new _();
+  m_rgLocalesToUse;
+  m_bReportIndividualMissingTokens = !0;
+  m_bReady = !1;
+  static GetLanguageFallback(_) {
+    return _ === `sc_schinese` ? `schinese` : `english`;
+  }
+  static GetELanguageFallback(_) {
+    return _ === 29 ? 6 : 0;
+  }
+  static IsELanguageValidInRealm(_, _) {
+    return _ === (_ === 29 ? _.k_ESteamRealmChina : _.k_ESteamRealmGlobal);
+  }
+  static GetLanguageListForRealms(_) {
+    let _ = [];
+    for (let _ = 0; _ < 32; _++)
+      for (let _ of _)
+        if (this.IsELanguageValidInRealm(_, _)) {
+          _.push(_);
+          break;
+        }
+    return _;
+  }
+  InitFromObjects(_, _, _, _) {
+    _ && (this.m_bReportIndividualMissingTokens = !1),
+      _ || this.m_mapTokens.clear(),
+      this.AddTokens(_, _ || {}),
+      this.m_cbkTokensChanged.Dispatch();
+  }
+  InitDirect(_, _) {
+    this.m_mapTokens.clear(),
+      this.m_mapFallbackTokens.clear(),
+      this.AddTokens(_, _),
+      this.m_cbkTokensChanged.Dispatch();
+  }
+  SetReady(_) {
+    this.m_bReady = _;
+  }
+  AddTokens(_, _) {
+    Object.keys(_).forEach((_) => {
+      this.m_mapTokens.set(_, _[_]);
+    }),
+      _ &&
+        Object.keys(_).forEach((_) => {
+          this.m_mapTokens.has(_) || this.m_mapTokens.set(_, _[_]),
+            this.m_mapFallbackTokens.set(_, _[_]);
+        });
+  }
+  GetTokensChangedCallbackList() {
+    return this.m_cbkTokensChanged;
+  }
+  GetPreferredLocales() {
+    return this.m_rgLocalesToUse
+      ? this.m_rgLocalesToUse
+      : navigator && navigator.languages
+        ? navigator.languages
+        : [`en-US`];
+  }
+  GetELanguageFallbackOrder(_ = null) {
+    let _ = [];
+    return (
+      _.push(_(_.LANGUAGE)),
+      (_.SUPPORTED_LANGUAGES || []).forEach((_) => {
+        _.value != _.LANGUAGE && _.push(_(_.value));
+      }),
+      _ &&
+        _.GetLanguageListForRealms(_).forEach((_) => {
+          _.indexOf(_) == -1 && _.push(_);
+        }),
+      _
+    );
+  }
+  SetPreferredLocales(_) {
+    this.m_rgLocalesToUse = _;
+  }
+  BLooksLikeToken(_) {
+    return !!_ && _.length > 0 && _.charAt(0) == `#`;
+  }
+  LocalizeIfToken(_, _) {
+    return this.BLooksLikeToken(_) ? this.LocalizeString(_, _) : _;
+  }
+  LocalizeString(_, _) {
+    if (!this.BLooksLikeToken(_)) return;
+    let _ = this.m_mapTokens.get(_.substring(1));
+    if (_ === void 0) {
+      if (_.HasKey(_)) return _.Localize(_);
+      this.m_mapTokens.size === 0
+        ? _(
+            !1,
+            `Attempting to localize token '${_}' with no tokens in our map for language '${_.LANGUAGE}'. SharedLoc ready: ${_.IsReady()}. site has inited: ${this.m_bReady}`,
+          )
+        : !_ &&
+          this.m_bReportIndividualMissingTokens &&
+          _().ReportError(
+            Error(
+              `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map. SharedLoc ready: ${_.IsReady()}. site has inited: ${this.m_bReady}`,
+            ),
+            {
+              bIncludeMessageInIdentifier: !0,
+            },
+          );
+      return;
+    }
+    return _;
+  }
+  LocalizeStringFromFallback(_) {
+    if (!_ || _.length == 0 || _.charAt(0) != `#`) return;
+    let _ = this.m_mapFallbackTokens.get(_.substring(1));
+    if (_ !== void 0) return _;
+  }
+  static GetTokenWithFallback(_) {
+    if (!_) return ``;
+    let _ = _(_.LANGUAGE),
+      _ = _.find((_) => _.language == _);
+    if (_) return _.localized_string;
+    let _ = _.GetELanguageFallback(_);
+    return _.find((_) => _.language == _)?.localized_string ?? ``;
+  }
+  static BHasTokenLanguage(_, _) {
+    return !!_.find((_) => _.language == _);
+  }
+};
+function _(_, ..._) {
+  let _ = _.LocalizeString(_);
+  return _ === void 0 ? _ : _(_, ..._);
+}
+function _(_, ..._) {
+  let _ = _.LocalizeString(_);
+  if (_ === void 0) return _;
+  let _ = [],
+    _ = /(.*?)%(\d+)\$s/g,
+    _ = 0,
+    _;
+  for (; (_ = _.exec(_)); ) {
+    (_ += _[0].length), _.push(_[1]);
+    let _ = parseInt(_[2]);
+    _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
+  }
+  return _.push(_.substr(_)), _.createElement(_.Fragment, null, ..._);
+}
+function _(_, _, ..._) {
+  return _(_ === 1 || _ === `1` ? _ : _ + `_Plural`, _, ..._);
+}
+function _(_, ..._) {
+  return (
+    _.length == 0 ||
+      (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
+        if (_ <= _.length && _ >= 1) {
+          let _ = _[_ - 1];
+          return String(_ ?? ``);
+        }
+        return _;
+      })),
+    _
+  );
+}
+var _ = {
+  english: `en`,
+  german: `de`,
+  french: `fr`,
+  italian: `it`,
+  korean: `ko`,
+  latam: `es-419`,
+  spanish: `es`,
+  schinese: `zh-cn`,
+  tchinese: `zh-tw`,
+  russian: `ru`,
+  thai: `th`,
+  japanese: `ja`,
+  brazilian: `pt-br`,
+  portuguese: `pt`,
+  polish: `pl`,
+  danish: `da`,
+  dutch: `nl`,
+  finnish: `fi`,
+  norwegian: `no`,
+  swedish: `sv`,
+  hungarian: `hu`,
+  czech: `cs`,
+  romanian: `ro`,
+  turkish: `tr`,
+  arabic: `ar`,
+  bulgarian: `bg`,
+  greek: `el`,
+  ukrainian: `uk`,
+  vietnamese: `vi`,
+  indonesian: `id`,
+  malay: `ms`,
+  sc_schinese: `zh-cn`,
+  koreana: `ko`,
+};
+function _() {
+  return _[_.LANGUAGE] || null;
+}
+function _(_) {
+  return (
+    typeof _ == `number` && (_ = _(_)),
+    _ === `none` ? `None` : _(`#language_selection_${_}`)
+  );
+}
+var _ = new _();
+window.LocalizationManager = _;
 function _(_) {
   return _(
     _.coming_soon_display,
@@ -43877,6 +43702,80 @@ var _ = class extends _.Component {
   }
 };
 _.Component;
+function _(_, _, _) {
+  return _(
+    (_) => {
+      if (_ && _)
+        return _.addEventListener(_, _, _), () => _.removeEventListener(_, _);
+    },
+    [_, _],
+  );
+}
+function _(_, _, _, _) {
+  _.useEffect(() => {
+    if (_ && _)
+      return _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _);
+  }, [_, _, _]);
+}
+function _(_, _, _, _) {
+  return _(
+    _,
+    `message`,
+    _.useCallback(
+      function (_) {
+        _.data === _ && _(_, _);
+      },
+      [_, _, _],
+    ),
+    _,
+  );
+}
+function _(_, _) {
+  return _(
+    (_) => {
+      if (!_) return;
+      let _ = _(_.ownerDocument.defaultView, (_) => {
+        _(_[0]);
+      });
+      return _.observe(_), () => _.unobserve(_);
+    },
+    [_, _],
+  );
+}
+function _(_) {
+  return _(
+    _,
+    _.useCallback(
+      (_, _) =>
+        _.ResizeObserver
+          ? new _.ResizeObserver(_)
+          : (_(!1, `ResizeObserver is not available`),
+            {
+              observe: () => {},
+              unobserve: () => {},
+              disconnect: () => {},
+            }),
+      [],
+    ),
+  );
+}
+function _(_, _) {
+  let _ = _.lastIndexOf(`.`);
+  if (_ == -1) return !1;
+  let _ = _.substring(0, _),
+    _ = _.substring(_ + 1),
+    _ = _(_, _);
+  return _ !== null && typeof _[_] == `function`;
+}
+function _(_, _) {
+  let _ = (_) => _ && typeof _ == `object`,
+    _ = _?.SteamClient;
+  for (let _ of _.split(`.`)) {
+    if (!_(_) || !(_ in _)) return null;
+    _ = _[_];
+  }
+  return _(_) ? _ : null;
+}
 function _(_) {
   return function (_) {
     return (0, _.jsx)(_, {
@@ -44095,6 +43994,534 @@ function _(_, _) {
     ? _.BFocusFirstChild(_.GAMEPAD)
     : _ == _.BACKWARD && _.BFocusLastChild(_.GAMEPAD);
 }
+if (!_.useState)
+  throw Error(`mobx-react-lite requires React with Hooks support`);
+if (!_)
+  throw Error(
+    `mobx-react-lite@3 requires mobx at least version 6 to be available`,
+  );
+function _(_) {
+  _();
+}
+function _(_) {
+  (_ ||= _),
+    _({
+      reactionScheduler: _,
+    });
+}
+function _(_) {
+  return _(_);
+}
+var _ = !1;
+function _() {
+  return _;
+}
+var _ = 1e4,
+  _ = 1e4,
+  _ = (function () {
+    function _(_) {
+      var _ = this;
+      Object.defineProperty(this, "finalize", {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: _,
+      }),
+        Object.defineProperty(this, "registrations", {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: new Map(),
+        }),
+        Object.defineProperty(this, "sweepTimeout", {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: void 0,
+        }),
+        Object.defineProperty(this, "sweep", {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: function (_) {
+            _ === void 0 && (_ = _),
+              clearTimeout(_.sweepTimeout),
+              (_.sweepTimeout = void 0);
+            var _ = Date.now();
+            _.registrations.forEach(function (_, _) {
+              _ - _.registeredAt >= _ &&
+                (_.finalize(_.value), _.registrations.delete(_));
+            }),
+              _.registrations.size > 0 && _.scheduleSweep();
+          },
+        }),
+        Object.defineProperty(this, "finalizeAllImmediately", {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: function () {
+            _.sweep(0);
+          },
+        });
+    }
+    return (
+      Object.defineProperty(_.prototype, "register", {
+        enumerable: !1,
+        configurable: !0,
+        writable: !0,
+        value: function (_, _, _) {
+          this.registrations.set(_, {
+            value: _,
+            registeredAt: Date.now(),
+          }),
+            this.scheduleSweep();
+        },
+      }),
+      Object.defineProperty(_.prototype, "unregister", {
+        enumerable: !1,
+        configurable: !0,
+        writable: !0,
+        value: function (_) {
+          this.registrations.delete(_);
+        },
+      }),
+      Object.defineProperty(_.prototype, "scheduleSweep", {
+        enumerable: !1,
+        configurable: !0,
+        writable: !0,
+        value: function () {
+          this.sweepTimeout === void 0 &&
+            (this.sweepTimeout = setTimeout(this.sweep, _));
+        },
+      }),
+      _
+    );
+  })(),
+  _ = new (typeof FinalizationRegistry < `u` ? FinalizationRegistry : _)(
+    function (_) {
+      var _;
+      (_ = _.reaction) == null || _.dispose(), (_.reaction = null);
+    },
+  ),
+  _ = _((_) => {
+    var _ = _();
+    function _(_, _) {
+      return (_ === _ && (_ !== 0 || 1 / _ == 1 / _)) || (_ !== _ && _ !== _);
+    }
+    var _ = typeof Object._ == `function` ? Object._ : _,
+      _ = _.useState,
+      _ = _.useEffect,
+      _ = _.useLayoutEffect,
+      _ = _.useDebugValue;
+    function _(_, _) {
+      var _ = _(),
+        _ = _({
+          inst: {
+            value: _,
+            getSnapshot: _,
+          },
+        }),
+        _ = _[0].inst,
+        _ = _[1];
+      return (
+        _(
+          function () {
+            (_.value = _),
+              (_.getSnapshot = _),
+              _(_) &&
+                _({
+                  inst: _,
+                });
+          },
+          [_, _, _],
+        ),
+        _(
+          function () {
+            return (
+              _(_) &&
+                _({
+                  inst: _,
+                }),
+              _(function () {
+                _(_) &&
+                  _({
+                    inst: _,
+                  });
+              })
+            );
+          },
+          [_],
+        ),
+        _(_),
+        _
+      );
+    }
+    function _(_) {
+      var _ = _.getSnapshot;
+      _ = _.value;
+      try {
+        var _ = _();
+        return !_(_, _);
+      } catch {
+        return !0;
+      }
+    }
+    function _(_, _) {
+      return _();
+    }
+    var _ =
+      typeof window > `u` ||
+      window.document === void 0 ||
+      window.document.createElement === void 0
+        ? _
+        : _;
+    _.useSyncExternalStore =
+      _.useSyncExternalStore === void 0 ? _ : _.useSyncExternalStore;
+  }),
+  _ = _((_, _) => {
+    _.exports = _();
+  })(),
+  _ = function () {};
+function _(_) {
+  _.reaction = new _(`observer${_.name}`, function () {
+    var _;
+    (_.stateVersion = Symbol()), (_ = _.onStoreChange) == null || _.call(_);
+  });
+}
+function _(_, _) {
+  if ((_ === void 0 && (_ = `observed`), _())) return _();
+  var _ = _.useRef(null);
+  if (!_.current) {
+    var _ = {
+      reaction: null,
+      onStoreChange: null,
+      stateVersion: Symbol(),
+      name: _,
+      subscribe: function (_) {
+        return (
+          _.unregister(_),
+          (_.onStoreChange = _),
+          _.reaction || (_(_), (_.stateVersion = Symbol())),
+          function () {
+            var _;
+            (_.onStoreChange = null),
+              (_ = _.reaction) == null || _.dispose(),
+              (_.reaction = null);
+          }
+        );
+      },
+      getSnapshot: function () {
+        return _.stateVersion;
+      },
+    };
+    _.current = _;
+  }
+  var _ = _.current;
+  _.reaction || (_(_), _.register(_, _, _)),
+    _.useDebugValue(_.reaction, _),
+    (0, _.useSyncExternalStore)(_.subscribe, _.getSnapshot, _);
+  var _, _;
+  if (
+    (_.reaction.track(function () {
+      try {
+        _ = _();
+      } catch (_) {
+        _ = _;
+      }
+    }),
+    _)
+  )
+    throw _;
+  return _;
+}
+var _ = typeof Symbol == `function` && Symbol.for,
+  _ = _
+    ? Symbol.for(`react.forward_ref`)
+    : typeof _.forwardRef == `function` &&
+      (0, _.forwardRef)(function (_) {
+        return null;
+      }).$$typeof,
+  _ = _
+    ? Symbol.for(`react.memo`)
+    : typeof _.memo == `function` &&
+      (0, _.memo)(function (_) {
+        return null;
+      }).$$typeof;
+function _(_, _) {
+  if (_ && _.$$typeof === _)
+    throw Error(
+      "[mobx-react-lite] You are trying to use `observer` on a function component wrapped in either another `observer` or `React.memo`. The observer already applies 'React.memo' for you.",
+    );
+  if (_()) return _;
+  var _ = _?.forwardRef ?? !1,
+    _ = _,
+    _ = _.displayName || _.name;
+  if (
+    _ &&
+    _.$$typeof === _ &&
+    ((_ = !0), (_ = _.render), typeof _ != `function`)
+  )
+    throw Error(
+      "[mobx-react-lite] `render` property of ForwardRef was not a function",
+    );
+  var _ = function (_, _) {
+    return _(function () {
+      return _(_, _);
+    }, _);
+  };
+  return (
+    (_.displayName = _.displayName),
+    Object.defineProperty(_, "name", {
+      value: _.name,
+      writable: !0,
+      configurable: !0,
+    }),
+    _.contextTypes && (_.contextTypes = _.contextTypes),
+    _ && (_ = (0, _.forwardRef)(_)),
+    (_ = (0, _.memo)(_)),
+    _(_, _),
+    _
+  );
+}
+var _ = {
+  $$typeof: !0,
+  render: !0,
+  compare: !0,
+  type: !0,
+  displayName: !0,
+};
+function _(_, _) {
+  Object.keys(_).forEach(function (_) {
+    _[_] || Object.defineProperty(_, _, Object.getOwnPropertyDescriptor(_, _));
+  });
+}
+_(_.unstable_batchedUpdates), _.finalizeAllImmediately;
+function _(_, _) {
+  return _ === void 0 && (_ = `observed`), _(_, _);
+}
+function _(_, _) {
+  if (_(_, _)) return !0;
+  if (typeof _ != `object` || !_ || typeof _ != `object` || !_) return !1;
+  var _ = Object.keys(_),
+    _ = Object.keys(_);
+  if (_.length !== _.length) return !1;
+  for (var _ = 0; _ < _.length; _++)
+    if (!Object.hasOwnProperty.call(_, _[_]) || !_(_[_[_]], _[_[_]])) return !1;
+  return !0;
+}
+function _(_, _) {
+  return _ === _ ? _ !== 0 || 1 / _ == 1 / _ : _ !== _ && _ !== _;
+}
+var _ = Symbol(`patchMixins`),
+  _ = Symbol(`patchedDefinition`);
+function _(_, _) {
+  var _ = (_[_] = _[_] || {}),
+    _ = (_[_] = _[_] || {});
+  return (_.locks = _.locks || 0), (_.methods = _.methods || []), _;
+}
+function _(_, _) {
+  var _ = this,
+    _ = [...arguments].slice(2);
+  _.locks++;
+  try {
+    var _;
+    return _ != null && (_ = _.apply(this, _)), _;
+  } finally {
+    _.locks--,
+      _.locks === 0 &&
+        _.methods.forEach(function (_) {
+          _.apply(_, _);
+        });
+  }
+}
+function _(_, _) {
+  return function () {
+    var _ = [...arguments];
+    _.call.apply(_, [this, _, _].concat(_));
+  };
+}
+function _(_, _, _) {
+  var _ = _(_, _);
+  _.methods.indexOf(_) < 0 && _.methods.push(_);
+  var _ = Object.getOwnPropertyDescriptor(_, _);
+  if (!(_ && _[_])) {
+    var _ = _[_],
+      _ = _(_, _, _ ? _.enumerable : void 0, _, _);
+    Object.defineProperty(_, _, _);
+  }
+}
+function _(_, _, _, _, _) {
+  var _,
+    _ = _(_, _);
+  return (
+    (_ = {}),
+    (_[_] = !0),
+    (_.get = function () {
+      return _;
+    }),
+    (_.set = function (_) {
+      if (this === _) _ = _(_, _);
+      else {
+        var _ = _(this, _, _, _, _);
+        Object.defineProperty(this, _, _);
+      }
+    }),
+    (_.configurable = !0),
+    (_.enumerable = _),
+    _
+  );
+}
+var _ = Symbol(`ObserverAdministration`),
+  _ = Symbol(`isMobXReactObserver`);
+function _(_) {
+  return (
+    _[_] ??
+    (_[_] = {
+      reaction: null,
+      mounted: !1,
+      reactionInvalidatedBeforeMount: !1,
+      forceUpdate: null,
+      name: _(_.constructor),
+      state: void 0,
+      props: void 0,
+      context: void 0,
+    })
+  );
+}
+function _(_) {
+  var _ = _.prototype;
+  if (_[_]) {
+    var _ = _(_);
+    throw Error(
+      `The provided component class (` +
+        _ +
+        `) has already been declared as an observer component.`,
+    );
+  }
+  if (((_[_] = !0), _.componentWillReact))
+    throw Error(
+      `The componentWillReact life-cycle event is no longer supported`,
+    );
+  if (_.__proto__ !== _.PureComponent) {
+    if (!_.shouldComponentUpdate) _.shouldComponentUpdate = _;
+    else if (_.shouldComponentUpdate !== _)
+      throw Error(
+        `It is not allowed to use shouldComponentUpdate in observer based components.`,
+      );
+  }
+  var _ = _.render;
+  if (typeof _ != `function`) {
+    var _ = _(_);
+    throw Error(
+      `[mobx-react] class component (` +
+        _ +
+        ") is missing `render` method.\n`observer` requires `render` being a function defined on prototype.\n`render = () => {}` or `render = function() {}` is not supported.",
+    );
+  }
+  _.render = function () {
+    return (
+      Object.defineProperty(this, "render", {
+        configurable: !1,
+        writable: !1,
+        value: _() ? _ : _.call(this, _),
+      }),
+      this.render()
+    );
+  };
+  var _ = _.componentDidMount;
+  return (
+    (_.componentDidMount = function () {
+      var _ = this,
+        _ = _(this);
+      return (
+        (_.mounted = !0),
+        _.unregister(this),
+        (_.forceUpdate = function () {
+          return _.forceUpdate();
+        }),
+        (!_.reaction || _.reactionInvalidatedBeforeMount) && _.forceUpdate(),
+        _?.apply(this, arguments)
+      );
+    }),
+    _(_, `componentWillUnmount`, function () {
+      var _;
+      if (!_()) {
+        var _ = _(this);
+        (_ = _.reaction) == null || _.dispose(),
+          (_.reaction = null),
+          (_.forceUpdate = null),
+          (_.mounted = !1),
+          (_.reactionInvalidatedBeforeMount = !1);
+      }
+    }),
+    _
+  );
+}
+function _(_) {
+  return _.displayName || _.name || `<component>`;
+}
+function _(_) {
+  var _ = _.bind(this),
+    _ = _(this);
+  function _() {
+    _.reaction || ((_.reaction = _(_)), _.mounted || _.register(this, _, this));
+    var _ = void 0,
+      _ = void 0;
+    if (
+      (_.reaction.track(function () {
+        try {
+          _ = _(!1, _);
+        } catch (_) {
+          _ = _;
+        }
+      }),
+      _)
+    )
+      throw _;
+    return _;
+  }
+  return _;
+}
+function _(_) {
+  return new _(_.name + `.render()`, function () {
+    if (!_.mounted) {
+      _.reactionInvalidatedBeforeMount = !0;
+      return;
+    }
+    try {
+      _.forceUpdate == null || _.forceUpdate();
+    } catch {
+      var _;
+      (_ = _.reaction) == null || _.dispose(), (_.reaction = null);
+    }
+  });
+}
+function _(_, _) {
+  return (
+    _() &&
+      console.warn(
+        `[mobx-react] It seems that a re-rendering of a React component is triggered while in static (server-side) mode. Please make sure components are rendered only once server-side.`,
+      ),
+    this.state !== _ || !_(this.props, _)
+  );
+}
+function _(_, _) {
+  if (_ && _.kind !== `class`)
+    throw Error(`The @observer decorator can be used on classes only`);
+  return (
+    _.isMobxInjector === !0 &&
+      console.warn(
+        "Mobx observer: You are trying to use `observer` on a component that already has `inject`. Please apply `observer` before applying `inject`",
+      ),
+    Object.prototype.isPrototypeOf.call(_.Component, _) ||
+    Object.prototype.isPrototypeOf.call(_.PureComponent, _)
+      ? _(_)
+      : _(_)
+  );
+}
+if ((`19.1.1`.split(`.`)[0], !_.Component))
+  throw Error(`mobx-react requires React to be available`);
+if (!_) throw Error(`mobx-react requires mobx to be available`);
 function _(..._) {
   return _.reduce(
     (_, _) =>
@@ -44198,15 +44625,6 @@ var _ = _({
   });
 _.displayName = `MenuItem`;
 var _ = `bEpnbOp1x2c-`;
-function _() {
-  let _ = _.useId(),
-    _ = _.useRef(void 0);
-  return (
-    _.current === void 0 &&
-      (_.current = `svgid_ssr_` + _.replace(/[^A-Za-z0-9_-]/g, ``)),
-    [_.current, `url(#${_.current})`]
-  );
-}
 function _(_) {
   return (0, _.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
@@ -44262,36 +44680,6 @@ function _(_) {
       clipRule: `evenodd`,
       _: `M2 7H11V12H2V7ZM2 16H11V23L16 20.9545V31H2V16ZM20 31V20.9545L25 23V16H34V31H20ZM34 12H25V7H34V12ZM22 7H14V19L18 17.3636L22 19V7Z`,
     }),
-  });
-}
-function _(_) {
-  let [_, _] = _();
-  return (0, _.jsxs)(`svg`, {
-    xmlns: `http://www.w3.org/2000/svg`,
-    viewBox: `0 0 15 23`,
-    fill: `none`,
-    ..._,
-    children: [
-      (0, _.jsx)(`g`, {
-        clipPath: _,
-        children: (0, _.jsx)(`path`, {
-          fill: `currentColor`,
-          fillRule: `evenodd`,
-          clipRule: `evenodd`,
-          _: `M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z`,
-        }),
-      }),
-      (0, _.jsx)(`defs`, {
-        children: (0, _.jsx)(`clipPath`, {
-          _: _,
-          children: (0, _.jsx)(`rect`, {
-            fill: `currentColor`,
-            width: `15`,
-            height: `23`,
-          }),
-        }),
-      }),
-    ],
   });
 }
 function _(_) {
@@ -44500,30 +44888,6 @@ function _() {
         _: `M178.51,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.99,66.99,66.99c36.997,0,66.99-29.992,66.99-66.99 S215.508,103.892,178.51,103.892z`,
       }),
     ],
-  });
-}
-function _(_) {
-  let { color: _ = `#fff`, ..._ } = _;
-  return (0, _.jsx)(`svg`, {
-    version: `1.1`,
-    _: `base`,
-    xmlns: `http://www.w3.org/2000/svg`,
-    className: `SVGIcon_Button SVGIcon_Check`,
-    _: `0px`,
-    _: `0px`,
-    width: `256px`,
-    height: `256px`,
-    viewBox: `0 0 256 256`,
-    strokeWidth: `24`,
-    stroke: _,
-    strokeLinecap: `round`,
-    strokeLinejoin: `round`,
-    strokeMiterlimit: `10`,
-    ..._,
-    children: (0, _.jsx)(`polyline`, {
-      fill: `none`,
-      points: `49.5,147.75 95,210.75 206.5,45.25 `,
-    }),
   });
 }
 function _() {
@@ -45722,7 +46086,7 @@ function _(_) {
           `paste`,
         ),
       ),
-    _.IN_CLIENT && _.DEV_MODE)
+    _.IN_CLIENT && _()?.DEV_MODE)
   ) {
     let _ = [];
     _(_, `Browser.OpenDevTools`) &&
@@ -46184,11 +46548,14 @@ var _ = {
     m_unPID: 0,
     m_nBrowserID: -1,
   },
+  _ = [],
+  _ = 1e3,
   _ = class {
     m_fnRender;
     m_rgLoadingLinks = [];
+    m_doc;
     constructor(_, _, _) {
-      if (((this.m_rgLoadingLinks = []), _))
+      if (((this.m_doc = _), (this.m_rgLoadingLinks = []), _))
         for (let _ = 0; _ < _.length; _++) this.AddLink(_[_], !0);
       else if (_) {
         let _ = _.getElementsByTagName(`link`);
@@ -46214,17 +46581,34 @@ var _ = {
     }
     SetTarget(_) {
       (this.m_fnRender = _),
-        this.m_rgLoadingLinks.length == 0 &&
-          (this.m_fnRender(), (this.m_fnRender = void 0));
+        this.m_rgLoadingLinks.length == 0 && this.RenderWhenFontsReady();
+    }
+    RenderWhenFontsReady() {
+      let _ = this.m_doc?.fonts,
+        _ = _ ? _.filter((_) => !_.check(_)) : [];
+      if (_.length == 0) {
+        this.Render();
+        return;
+      }
+      let _ = window.setTimeout(this.Render, _);
+      Promise.all(_.map((_) => _.load(_)))
+        .catch((_) =>
+          console.warn(`CRenderWhenLinksReady: font load failed`, _),
+        )
+        .then(() => {
+          window.clearTimeout(_), this.Render();
+        });
+    }
+    Render() {
+      this.m_fnRender?.(), (this.m_fnRender = void 0);
     }
     OnLinkLoad(_) {
       _.currentTarget.removeEventListener(`load`, this.OnLinkLoad),
         _(this.m_rgLoadingLinks, _.currentTarget),
-        this.m_rgLoadingLinks.length == 0 &&
-          (this.m_fnRender?.(), (this.m_fnRender = void 0));
+        this.m_rgLoadingLinks.length == 0 && this.RenderWhenFontsReady();
     }
   };
-_([_], _.prototype, `OnLinkLoad`, null);
+_([_], _.prototype, `Render`, null), _([_], _.prototype, `OnLinkLoad`, null);
 var _ = (function (_) {
     return (
       (_[(_.None = 0)] = `None`),
@@ -52342,7 +52726,7 @@ function _(_, _, _, _, _, _, _) {
   return _;
 }
 function _(_, _) {
-  return (_ ||= _(_ || window)), _.USE_POPUPS && _.BUsePopups();
+  return (_ ||= _(_ || window)), _.IN_CLIENT && _.BUsePopups();
 }
 function _(_) {
   return _.BOnlyPopups && _.BOnlyPopups();
@@ -54344,20 +54728,1284 @@ function _() {
   return (0, _.useContext)(_)._;
 }
 _.reduce((_, _, _) => ((_[_] = _), _), {});
-var _ = `xtBr-L5Owus-`;
+var _ = `_3HgSSqEdwS4-`;
+function _(_) {
+  let { children: _, "flow-children": _, ..._ } = _,
+    { gamepadEvents: _ } = _(_);
+  _ && (_.layout = _(_)),
+    _.onOKButton ||
+      (`onClick` in _.props && _.props.onClick && (_.onOKButton = _));
+  let _;
+  _.focusable && (_ = _.props.tabIndex || 0);
+  let { ref: _, node: _ } = _(_);
+  _(_, _);
+  let _ = _(_),
+    _ = _(_, _.props?.ref, _);
+  return (0, _.jsx)(_.Provider, {
+    value: _,
+    children: _.cloneElement(_, {
+      ..._.props,
+      ref: _,
+      tabIndex: _,
+    }),
+  });
+}
+var _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
+function _(_, _) {
+  if (typeof _ != `object`) return _;
+  for (let _ = _[_]; _ >= 0; _--) if (_[_] in _) return _[_[_]];
+  return _.initial;
+}
+var _ = {
+  0: !0,
+  1: !0,
+  2: !0,
+  3: !0,
+  4: !0,
+  5: !0,
+  6: !0,
+  7: !0,
+  8: !0,
+  9: !0,
+};
+function _(_) {
+  return !!_[_];
+}
+function _(_, _, _) {
+  let _ = [],
+    _ = {},
+    _ = {},
+    { extracted: _, remaining: _ } = _(_, _);
+  for (let _ of _) {
+    if (!(_.prop in _)) continue;
+    let _ = _[_.prop];
+    if (
+      _ !== void 0 &&
+      (_.responsive && (_ = _(_, _.formFactor)), _ !== void 0)
+    ) {
+      if (_.className) {
+        if (
+          !_.cssProperty &&
+          !_.dataProperty &&
+          typeof _.className == `string` &&
+          !_
+        )
+          continue;
+        let _ = typeof _.className == `function` ? _.className(_) : _.className;
+        _.push(_);
+      }
+      if (_.cssProperty) {
+        if (typeof _.cssProperty == `function`) {
+          let _ = _.cssProperty(_, _, _.formFactor);
+          if (_.length && Array.isArray(_[0]))
+            _.forEach(([_, _]) => (_[_] = _));
+          else {
+            let _ = _;
+            _[_[0]] = _[1];
+          }
+        } else _[_.cssProperty] = _;
+      }
+      if (_.dataProperty) {
+        if (typeof _.dataProperty == `function`) {
+          let [_, _] = _.dataProperty(_);
+          _[`data-${_}`] = _;
+        } else _[`data-${_.dataProperty}`] = _;
+      }
+    }
+  }
+  return (
+    `className` in _ && typeof _.className == `string` && _.push(_.className),
+    `style` in _ &&
+      _.style &&
+      typeof _.style == `object` &&
+      Object.assign(_, _.style),
+    {
+      ..._,
+      ..._,
+      className: _.join(` `),
+      style: _,
+    }
+  );
+}
+function _(_, _) {
+  let _ = {
+    remaining: {
+      ..._,
+    },
+    extracted: {},
+  };
+  for (let _ of _) {
+    let _ = _.prop;
+    _ in _.remaining &&
+      ((_.extracted[_] = _.remaining[_]), delete _.remaining[_]);
+  }
+  return _;
+}
+function _(_, _) {
+  return _(_, _, {
+    formFactor: _(),
+  });
+}
+function _(_) {
+  return _(_) ? `var(--spacing-${_})` : _;
+}
+function _(_) {
+  if (_[_.length - 1] != `%`) return `var(--color-${_})`;
+  let [_, _] = _.split(` `);
+  return `rgb( from ${`var(--color-${_})`} r g b / ${_} )`;
+}
+function _(_, _) {
+  return _.startsWith(`text`) ? `var(--color-${_}-${_})` : _(_);
+}
+var _ = _({
+    AlignSelf: () => _,
+    AspectRatio: () => _,
+    Background: () => _,
+    Border: () => _,
+    BorderColor: () => _,
+    Cursor: () => _,
+    Display: () => _,
+    Elevation: () => _,
+    FlexBasis: () => _,
+    FlexGrow: () => _,
+    FlexShrink: () => _,
+    GridArea: () => _,
+    GridColumn: () => _,
+    GridColumnEnd: () => _,
+    GridColumnStart: () => _,
+    GridRow: () => _,
+    GridRowEnd: () => _,
+    GridRowStart: () => _,
+    Height: () => _,
+    Inset: () => _,
+    JustifySelf: () => _,
+    MaxHeight: () => _,
+    MaxWidth: () => _,
+    MinHeight: () => _,
+    MinWidth: () => _,
+    Outline: () => _,
+    Overflow: () => _,
+    Position: () => _,
+    "Radius-full": () => _,
+    "Radius-lg": () => _,
+    "Radius-md": () => _,
+    "Radius-none": () => _,
+    "Radius-sm": () => _,
+    TextAlign: () => _,
+    Width: () => _,
+    ZIndex: () => _,
+    default: () => _,
+    "m-0": () => _,
+    "m-1": () => _,
+    "m-2": () => _,
+    "m-3": () => _,
+    "m-4": () => _,
+    "m-5": () => _,
+    "m-6": () => _,
+    "m-7": () => _,
+    "m-8": () => _,
+    "m-9": () => _,
+    "mb-0": () => _,
+    "mb-1": () => _,
+    "mb-2": () => _,
+    "mb-3": () => _,
+    "mb-4": () => _,
+    "mb-5": () => _,
+    "mb-6": () => _,
+    "mb-7": () => _,
+    "mb-8": () => _,
+    "mb-9": () => _,
+    "me-0": () => _,
+    "me-1": () => _,
+    "me-2": () => _,
+    "me-3": () => _,
+    "me-4": () => _,
+    "me-5": () => _,
+    "me-6": () => _,
+    "me-7": () => _,
+    "me-8": () => _,
+    "me-9": () => _,
+    "ml-0": () => _,
+    "ml-1": () => _,
+    "ml-2": () => _,
+    "ml-3": () => _,
+    "ml-4": () => _,
+    "ml-5": () => _,
+    "ml-6": () => _,
+    "ml-7": () => _,
+    "ml-8": () => _,
+    "ml-9": () => _,
+    "mr-0": () => _,
+    "mr-1": () => _,
+    "mr-2": () => _,
+    "mr-3": () => _,
+    "mr-4": () => _,
+    "mr-5": () => _,
+    "mr-6": () => _,
+    "mr-7": () => _,
+    "mr-8": () => _,
+    "mr-9": () => _,
+    "ms-0": () => _,
+    "ms-1": () => _,
+    "ms-2": () => _,
+    "ms-3": () => _,
+    "ms-4": () => _,
+    "ms-5": () => _,
+    "ms-6": () => _,
+    "ms-7": () => _,
+    "ms-8": () => _,
+    "ms-9": () => _,
+    "mt-0": () => _,
+    "mt-1": () => _,
+    "mt-2": () => _,
+    "mt-3": () => _,
+    "mt-4": () => _,
+    "mt-5": () => _,
+    "mt-6": () => _,
+    "mt-7": () => _,
+    "mt-8": () => _,
+    "mt-9": () => _,
+    "mx-0": () => _,
+    "mx-1": () => _,
+    "mx-2": () => _,
+    "mx-3": () => _,
+    "mx-4": () => _,
+    "mx-5": () => _,
+    "mx-6": () => _,
+    "mx-7": () => _,
+    "mx-8": () => _,
+    "mx-9": () => _,
+    "my-0": () => _,
+    "my-1": () => _,
+    "my-2": () => _,
+    "my-3": () => _,
+    "my-4": () => _,
+    "my-5": () => _,
+    "my-6": () => _,
+    "my-7": () => _,
+    "my-8": () => _,
+    "my-9": () => _,
+    "p-0": () => _,
+    "p-1": () => _,
+    "p-2": () => _,
+    "p-3": () => _,
+    "p-4": () => _,
+    "p-5": () => _,
+    "p-6": () => _,
+    "p-7": () => _,
+    "p-8": () => _,
+    "p-9": () => _,
+    "pb-0": () => _,
+    "pb-1": () => _,
+    "pb-2": () => _,
+    "pb-3": () => _,
+    "pb-4": () => _,
+    "pb-5": () => _,
+    "pb-6": () => _,
+    "pb-7": () => _,
+    "pb-8": () => _,
+    "pb-9": () => _,
+    "pe-0": () => _,
+    "pe-1": () => _,
+    "pe-2": () => _,
+    "pe-3": () => _,
+    "pe-4": () => _,
+    "pe-5": () => _,
+    "pe-6": () => _,
+    "pe-7": () => _,
+    "pe-8": () => _,
+    "pe-9": () => _,
+    "pl-0": () => _,
+    "pl-1": () => _,
+    "pl-2": () => _,
+    "pl-3": () => _,
+    "pl-4": () => _,
+    "pl-5": () => _,
+    "pl-6": () => _,
+    "pl-7": () => _,
+    "pl-8": () => _,
+    "pl-9": () => _,
+    "pr-0": () => _,
+    "pr-1": () => _,
+    "pr-2": () => _,
+    "pr-3": () => _,
+    "pr-4": () => _,
+    "pr-5": () => _,
+    "pr-6": () => _,
+    "pr-7": () => _,
+    "pr-8": () => _,
+    "pr-9": () => _,
+    "ps-0": () => _,
+    "ps-1": () => _,
+    "ps-2": () => _,
+    "ps-3": () => _,
+    "ps-4": () => _,
+    "ps-5": () => _,
+    "ps-6": () => _,
+    "ps-7": () => _,
+    "ps-8": () => _,
+    "ps-9": () => _,
+    "pt-0": () => _,
+    "pt-1": () => _,
+    "pt-2": () => _,
+    "pt-3": () => _,
+    "pt-4": () => _,
+    "pt-5": () => _,
+    "pt-6": () => _,
+    "pt-7": () => _,
+    "pt-8": () => _,
+    "pt-9": () => _,
+    "px-0": () => _,
+    "px-1": () => _,
+    "px-2": () => _,
+    "px-3": () => _,
+    "px-4": () => _,
+    "px-5": () => _,
+    "px-6": () => _,
+    "px-7": () => _,
+    "px-8": () => _,
+    "px-9": () => _,
+    "py-0": () => _,
+    "py-1": () => _,
+    "py-2": () => _,
+    "py-3": () => _,
+    "py-4": () => _,
+    "py-5": () => _,
+    "py-6": () => _,
+    "py-7": () => _,
+    "py-8": () => _,
+    "py-9": () => _,
+  }),
+  _ = `eclzI6sdg2M-`,
+  _ = `OET6f-D0V5E-`,
+  _ = `_6sp8cDKTCLU-`,
+  _ = `XySMHrD5hLY-`,
+  _ = `J4MnNoFI-oI-`,
+  _ = `uV-Qjqt1sVg-`,
+  _ = `olAnEghDOr0-`,
+  _ = `_3BUaFjdV2LE-`,
+  _ = `YmQQPtiNqmU-`,
+  _ = `VruIH79rBqw-`,
+  _ = `dURWKxl2Do0-`,
+  _ = `qS-bkqlKzwU-`,
+  _ = `tceW312QAsw-`,
+  _ = `DJTK3K35ICQ-`,
+  _ = `ZP65E-erOK4-`,
+  _ = `X7sE2S62NkI-`,
+  _ = `_5-KblbnyKRg-`,
+  _ = `Em3UumfVnuU-`,
+  _ = `d4laauFH2Xk-`,
+  _ = `_3SRN-rICSdA-`,
+  _ = `C8Yx-FjgFW4-`,
+  _ = `_0RFSf5tFmz4-`,
+  _ = `X9cxQuOx9-M-`,
+  _ = `L9t-s63sM-g-`,
+  _ = `dBtOdloI9LI-`,
+  _ = `o3aO5wl7pYw-`,
+  _ = `_4bQujlF8l-w-`,
+  _ = `-MUHaqZOitw-`,
+  _ = `tEfXMPNeVPs-`,
+  _ = `a-RUQoByT1o-`,
+  _ = `mN19uo4aB9c-`,
+  _ = `FL6oGmLhByQ-`,
+  _ = `VLdURefDSgM-`,
+  _ = `LcmLHt-QJQs-`,
+  _ = `_9NWdntHSpFE-`,
+  _ = `ymhJlaxKKdc-`,
+  _ = `J3LTpJFygpM-`,
+  _ = `_9FCSlvyFwt8-`,
+  _ = `FbQUL2kYjPw-`,
+  _ = `h8NcgWP-9cc-`,
+  _ = `ltev0FUbOrE-`,
+  _ = `hMYxPjTzIbg-`,
+  _ = `bZy0GT5PQKc-`,
+  _ = `_82MIx5F6PBs-`,
+  _ = `ra7ZmAKw-Pk-`,
+  _ = `APQ324IoHa4-`,
+  _ = `uFKnE5TLyX8-`,
+  _ = `cHoV-Uqm1vU-`,
+  _ = `gEfj9KNJ-6Y-`,
+  _ = `_8yB7Wt5Bx5w-`,
+  _ = `VOx62wXVslo-`,
+  _ = `TaAq10eoTwM-`,
+  _ = `zFCPo1NnTZc-`,
+  _ = `K1bSlovaw8M-`,
+  _ = `hoWhsU-UyYs-`,
+  _ = `wKUUd9TJp-8-`,
+  _ = `WL0mLLVvUUw-`,
+  _ = `uqdrWvuTvDc-`,
+  _ = `muzrkQtyEyM-`,
+  _ = `_0932hlwAxXU-`,
+  _ = `_5zVVdcsEcIU-`,
+  _ = `sTT0BANqYOk-`,
+  _ = `E-gcZsV1D2Q-`,
+  _ = `_7NCaKn1lnXQ-`,
+  _ = `bcJrKQvP1vI-`,
+  _ = `x1ugUPtcqW0-`,
+  _ = `PwO20KYqq9Q-`,
+  _ = `G8SP7zRhw2M-`,
+  _ = `Wfja8EAHLJ8-`,
+  _ = `H2wfJj1wboY-`,
+  _ = `BVmiSv-Z3es-`,
+  _ = `RKIoo3yKjug-`,
+  _ = `JizR39R3hIA-`,
+  _ = `fkHPsZfU3NE-`,
+  _ = `xuEgsl8loAU-`,
+  _ = `EZMXk27jhS0-`,
+  _ = `aHy8BhW-71o-`,
+  _ = `CuGlODrVe7Q-`,
+  _ = `gGOe--gPQIE-`,
+  _ = `gtTCjeyt0d4-`,
+  _ = `-wWCN9Pi0UE-`,
+  _ = `nwn7dT0ciNM-`,
+  _ = `uyVpqZLchKg-`,
+  _ = `_1VY0i2RpHfU-`,
+  _ = `ri1GMR0bSCo-`,
+  _ = `pRB6wTtl9n4-`,
+  _ = `_4P-3S5YlUnU-`,
+  _ = `l8RDxa3uyrw-`,
+  _ = `KWAHE8bdQvw-`,
+  _ = `yi-8-oIqm3U-`,
+  _ = `NxUB7cL1MvU-`,
+  _ = `qUXb6MBcClg-`,
+  _ = `gEM5qnbRU58-`,
+  _ = `icJTR-r-wDw-`,
+  _ = `HEEsuypcul0-`,
+  _ = `_8xvqsidQRw8-`,
+  _ = `NQnLyMY1r-E-`,
+  _ = `bV2ueI7Mam8-`,
+  _ = `fKNsGNbPWHA-`,
+  _ = `p0lvEL23f1s-`,
+  _ = `M8eEjooTqwI-`,
+  _ = `bEoYeP62vKg-`,
+  _ = `JI70sNXU-F0-`,
+  _ = `QKlzhnHROyA-`,
+  _ = `Syca5vmthuQ-`,
+  _ = `VPvuSU7AjD8-`,
+  _ = `RXC1XNbMMW0-`,
+  _ = `mm3xzbHpm8k-`,
+  _ = `acp-9VVWd2o-`,
+  _ = `SDtfyXjgcSo-`,
+  _ = `oO8cHrFC6bc-`,
+  _ = `_2l8Zmi4dQh4-`,
+  _ = `mh8aBu-Ya2Y-`,
+  _ = `hA-ldQzzhLQ-`,
+  _ = `dscWMXtEYqA-`,
+  _ = `_1KyIjvCsRIg-`,
+  _ = `ctrqfHXnR5Q-`,
+  _ = `z-DfrUJmdSs-`,
+  _ = `HCr-OXW32FQ-`,
+  _ = `RFYtZOc5SNY-`,
+  _ = `DJFs9VUUl90-`,
+  _ = `_45aiUtQ4AQQ-`,
+  _ = `lLdowZ-8Mo8-`,
+  _ = `PsjzYM9us1s-`,
+  _ = `el0rQTeK5JM-`,
+  _ = `KPgD-GcS5v0-`,
+  _ = `EkQHIUqwHCw-`,
+  _ = `bi54Dv5OCX0-`,
+  _ = `Rks89SEFpRQ-`,
+  _ = `B0q4MiiTwNg-`,
+  _ = `tEoL0UNrEb0-`,
+  _ = `TFfcfaU-yiE-`,
+  _ = `F8Ksjg0n-RQ-`,
+  _ = `_36K1WfxS3eY-`,
+  _ = `b67XdgjVxJM-`,
+  _ = `s2gpZIoMDgg-`,
+  _ = `_3ggT5I7zXoQ-`,
+  _ = `DPsTT2K-fwU-`,
+  _ = `u-tyqVlIKcI-`,
+  _ = `_01jXQmps9e8-`,
+  _ = `D5SEZGfMKag-`,
+  _ = `_2W-WTUmk-rI-`,
+  _ = `c8D9ObEiGls-`,
+  _ = `Q9Io7j3-vDg-`,
+  _ = `_45y3p7WUvHU-`,
+  _ = `UtclkKyWIjw-`,
+  _ = `QzBwx1d4O3w-`,
+  _ = `CCyhaDN2aRs-`,
+  _ = `NtltCfuAGiY-`,
+  _ = `kYUCzn-htEg-`,
+  _ = `x0oPABf8fXY-`,
+  _ = `m-udPQ79lAg-`,
+  _ = `MZdK4NNjCj8-`,
+  _ = `_4JLDaGmvcsk-`,
+  _ = `Hk3I3WALSsA-`,
+  _ = `uiOeAZp4VaY-`,
+  _ = `_7Oiep76eWWI-`,
+  _ = `siWKNUeJudQ-`,
+  _ = `_7nCMv-NHH5A-`,
+  _ = `tYey-adp5Zg-`,
+  _ = `Yn612HbVmsc-`,
+  _ = `ziBTSfZVYhg-`,
+  _ = `zMvCm1h-OHs-`,
+  _ = `_2t0SB4RkHXE-`,
+  _ = `_7b4cEwhjmXQ-`,
+  _ = `foa3eScS1z8-`,
+  _ = `Be2Eotc8DQI-`,
+  _ = `Z5VqL3cRIqo-`,
+  _ = `rAqt9XWxOXo-`,
+  _ = `_25pCHyTD-hM-`,
+  _ = `-qd6I3tJBUQ-`,
+  _ = `_4LJ0nGuwjpY-`,
+  _ = `ZW2qp59a0cU-`,
+  _ = `Vycl2A5dcuk-`,
+  _ = `mB1gNDP-Qjo-`,
+  _ = `Ar1HtksUl58-`,
+  _ = `Rgi6ZFNtTBE-`,
+  _ = `gnuEf0idTlQ-`,
+  _ = `TRKBX73nzYk-`,
+  _ = `p3f0wJIWWzU-`,
+  _ = `LXuyTO7ejPo-`,
+  _ = `_6EO-B9227bY-`,
+  _ = `BfBoDdNJ2hc-`,
+  _ = `sa-yPhXDpWI-`,
+  _ = `tL7M4lwOkCU-`,
+  _ = `pMmT9Mc1hok-`,
+  _ = `zFvTSzAjiO4-`,
+  _ = `xuzc3QDXAUA-`,
+  _ = `Yf-BDVYAocE-`,
+  _ = `L6F1vgJ7QGI-`,
+  _ = `yDw9gqlgbxM-`,
+  _ = `N4yONvg-bK8-`,
+  _ = `zANRA1HSa28-`,
+  _ = `PRQtAssp1sU-`,
+  _ = `_1-rWRVfT3WY-`,
+  _ = `tAC3I9C0M5A-`,
+  _ = `iAKWNM19q0U-`,
+  _ = `zJ6-t0HvtWA-`,
+  _ = `abDPfu64slU-`,
+  _ = `AfzNHiFzXQQ-`,
+  _ = `MBtWFtzpBz4-`,
+  _ = `PFPWwoAdkHY-`,
+  _ = `Y-Y-o4ja9Fo-`,
+  _ = `_0W8PpldYK-Q-`,
+  _ = `GHgOdVtfrgI-`,
+  _ = `yMG3LQVyb4c-`,
+  _ = `_6GQVMv8tMXs-`,
+  _ = `zamIm-gLIMs-`,
+  _ = `aiYqj6TT82w-`,
+  _ = `ZHwuNyPjFYY-`,
+  _ = `_60WSfkXr2MM-`,
+  _ = `ADD3QF-elQY-`,
+  _ = `yIGUGD6-xG0-`,
+  _ = `pcbB-x-xXEA-`,
+  _ = `uGLQ-lijlWA-`,
+  _ = `U7HgSIvBMLk-`,
+  _ = {
+    "m-0": `eclzI6sdg2M-`,
+    "m-1": `OET6f-D0V5E-`,
+    "m-2": `_6sp8cDKTCLU-`,
+    "m-3": `XySMHrD5hLY-`,
+    "m-4": `J4MnNoFI-oI-`,
+    "m-5": `uV-Qjqt1sVg-`,
+    "m-6": `olAnEghDOr0-`,
+    "m-7": `_3BUaFjdV2LE-`,
+    "m-8": `YmQQPtiNqmU-`,
+    "m-9": `VruIH79rBqw-`,
+    "mx-0": `dURWKxl2Do0-`,
+    "mx-1": `qS-bkqlKzwU-`,
+    "mx-2": `tceW312QAsw-`,
+    "mx-3": `DJTK3K35ICQ-`,
+    "mx-4": `ZP65E-erOK4-`,
+    "mx-5": `X7sE2S62NkI-`,
+    "mx-6": `_5-KblbnyKRg-`,
+    "mx-7": `Em3UumfVnuU-`,
+    "mx-8": `d4laauFH2Xk-`,
+    "mx-9": `_3SRN-rICSdA-`,
+    "my-0": `C8Yx-FjgFW4-`,
+    "my-1": `_0RFSf5tFmz4-`,
+    "my-2": `X9cxQuOx9-M-`,
+    "my-3": `L9t-s63sM-g-`,
+    "my-4": `dBtOdloI9LI-`,
+    "my-5": `o3aO5wl7pYw-`,
+    "my-6": `_4bQujlF8l-w-`,
+    "my-7": `-MUHaqZOitw-`,
+    "my-8": `tEfXMPNeVPs-`,
+    "my-9": `a-RUQoByT1o-`,
+    "mt-0": `mN19uo4aB9c-`,
+    "mt-1": `FL6oGmLhByQ-`,
+    "mt-2": `VLdURefDSgM-`,
+    "mt-3": `LcmLHt-QJQs-`,
+    "mt-4": `_9NWdntHSpFE-`,
+    "mt-5": `ymhJlaxKKdc-`,
+    "mt-6": `J3LTpJFygpM-`,
+    "mt-7": `_9FCSlvyFwt8-`,
+    "mt-8": `FbQUL2kYjPw-`,
+    "mt-9": `h8NcgWP-9cc-`,
+    "mr-0": `ltev0FUbOrE-`,
+    "mr-1": `hMYxPjTzIbg-`,
+    "mr-2": `bZy0GT5PQKc-`,
+    "mr-3": `_82MIx5F6PBs-`,
+    "mr-4": `ra7ZmAKw-Pk-`,
+    "mr-5": `APQ324IoHa4-`,
+    "mr-6": `uFKnE5TLyX8-`,
+    "mr-7": `cHoV-Uqm1vU-`,
+    "mr-8": `gEfj9KNJ-6Y-`,
+    "mr-9": `_8yB7Wt5Bx5w-`,
+    "mb-0": `VOx62wXVslo-`,
+    "mb-1": `TaAq10eoTwM-`,
+    "mb-2": `zFCPo1NnTZc-`,
+    "mb-3": `K1bSlovaw8M-`,
+    "mb-4": `hoWhsU-UyYs-`,
+    "mb-5": `wKUUd9TJp-8-`,
+    "mb-6": `WL0mLLVvUUw-`,
+    "mb-7": `uqdrWvuTvDc-`,
+    "mb-8": `muzrkQtyEyM-`,
+    "mb-9": `_0932hlwAxXU-`,
+    "ml-0": `_5zVVdcsEcIU-`,
+    "ml-1": `sTT0BANqYOk-`,
+    "ml-2": `E-gcZsV1D2Q-`,
+    "ml-3": `_7NCaKn1lnXQ-`,
+    "ml-4": `bcJrKQvP1vI-`,
+    "ml-5": `x1ugUPtcqW0-`,
+    "ml-6": `PwO20KYqq9Q-`,
+    "ml-7": `G8SP7zRhw2M-`,
+    "ml-8": `Wfja8EAHLJ8-`,
+    "ml-9": `H2wfJj1wboY-`,
+    "ms-0": `BVmiSv-Z3es-`,
+    "ms-1": `RKIoo3yKjug-`,
+    "ms-2": `JizR39R3hIA-`,
+    "ms-3": `fkHPsZfU3NE-`,
+    "ms-4": `xuEgsl8loAU-`,
+    "ms-5": `EZMXk27jhS0-`,
+    "ms-6": `aHy8BhW-71o-`,
+    "ms-7": `CuGlODrVe7Q-`,
+    "ms-8": `gGOe--gPQIE-`,
+    "ms-9": `gtTCjeyt0d4-`,
+    "me-0": `-wWCN9Pi0UE-`,
+    "me-1": `nwn7dT0ciNM-`,
+    "me-2": `uyVpqZLchKg-`,
+    "me-3": `_1VY0i2RpHfU-`,
+    "me-4": `ri1GMR0bSCo-`,
+    "me-5": `pRB6wTtl9n4-`,
+    "me-6": `_4P-3S5YlUnU-`,
+    "me-7": `l8RDxa3uyrw-`,
+    "me-8": `KWAHE8bdQvw-`,
+    "me-9": `yi-8-oIqm3U-`,
+    "p-0": `NxUB7cL1MvU-`,
+    "p-1": `qUXb6MBcClg-`,
+    "p-2": `gEM5qnbRU58-`,
+    "p-3": `icJTR-r-wDw-`,
+    "p-4": `HEEsuypcul0-`,
+    "p-5": `_8xvqsidQRw8-`,
+    "p-6": `NQnLyMY1r-E-`,
+    "p-7": `bV2ueI7Mam8-`,
+    "p-8": `fKNsGNbPWHA-`,
+    "p-9": `p0lvEL23f1s-`,
+    "px-0": `M8eEjooTqwI-`,
+    "px-1": `bEoYeP62vKg-`,
+    "px-2": `JI70sNXU-F0-`,
+    "px-3": `QKlzhnHROyA-`,
+    "px-4": `Syca5vmthuQ-`,
+    "px-5": `VPvuSU7AjD8-`,
+    "px-6": `RXC1XNbMMW0-`,
+    "px-7": `mm3xzbHpm8k-`,
+    "px-8": `acp-9VVWd2o-`,
+    "px-9": `SDtfyXjgcSo-`,
+    "py-0": `oO8cHrFC6bc-`,
+    "py-1": `_2l8Zmi4dQh4-`,
+    "py-2": `mh8aBu-Ya2Y-`,
+    "py-3": `hA-ldQzzhLQ-`,
+    "py-4": `dscWMXtEYqA-`,
+    "py-5": `_1KyIjvCsRIg-`,
+    "py-6": `ctrqfHXnR5Q-`,
+    "py-7": `z-DfrUJmdSs-`,
+    "py-8": `HCr-OXW32FQ-`,
+    "py-9": `RFYtZOc5SNY-`,
+    "pt-0": `DJFs9VUUl90-`,
+    "pt-1": `_45aiUtQ4AQQ-`,
+    "pt-2": `lLdowZ-8Mo8-`,
+    "pt-3": `PsjzYM9us1s-`,
+    "pt-4": `el0rQTeK5JM-`,
+    "pt-5": `KPgD-GcS5v0-`,
+    "pt-6": `EkQHIUqwHCw-`,
+    "pt-7": `bi54Dv5OCX0-`,
+    "pt-8": `Rks89SEFpRQ-`,
+    "pt-9": `B0q4MiiTwNg-`,
+    "pr-0": `tEoL0UNrEb0-`,
+    "pr-1": `TFfcfaU-yiE-`,
+    "pr-2": `F8Ksjg0n-RQ-`,
+    "pr-3": `_36K1WfxS3eY-`,
+    "pr-4": `b67XdgjVxJM-`,
+    "pr-5": `s2gpZIoMDgg-`,
+    "pr-6": `_3ggT5I7zXoQ-`,
+    "pr-7": `DPsTT2K-fwU-`,
+    "pr-8": `u-tyqVlIKcI-`,
+    "pr-9": `_01jXQmps9e8-`,
+    "pb-0": `D5SEZGfMKag-`,
+    "pb-1": `_2W-WTUmk-rI-`,
+    "pb-2": `c8D9ObEiGls-`,
+    "pb-3": `Q9Io7j3-vDg-`,
+    "pb-4": `_45y3p7WUvHU-`,
+    "pb-5": `UtclkKyWIjw-`,
+    "pb-6": `QzBwx1d4O3w-`,
+    "pb-7": `CCyhaDN2aRs-`,
+    "pb-8": `NtltCfuAGiY-`,
+    "pb-9": `kYUCzn-htEg-`,
+    "pl-0": `x0oPABf8fXY-`,
+    "pl-1": `m-udPQ79lAg-`,
+    "pl-2": `MZdK4NNjCj8-`,
+    "pl-3": `_4JLDaGmvcsk-`,
+    "pl-4": `Hk3I3WALSsA-`,
+    "pl-5": `uiOeAZp4VaY-`,
+    "pl-6": `_7Oiep76eWWI-`,
+    "pl-7": `siWKNUeJudQ-`,
+    "pl-8": `_7nCMv-NHH5A-`,
+    "pl-9": `tYey-adp5Zg-`,
+    "ps-0": `Yn612HbVmsc-`,
+    "ps-1": `ziBTSfZVYhg-`,
+    "ps-2": `zMvCm1h-OHs-`,
+    "ps-3": `_2t0SB4RkHXE-`,
+    "ps-4": `_7b4cEwhjmXQ-`,
+    "ps-5": `foa3eScS1z8-`,
+    "ps-6": `Be2Eotc8DQI-`,
+    "ps-7": `Z5VqL3cRIqo-`,
+    "ps-8": `rAqt9XWxOXo-`,
+    "ps-9": `_25pCHyTD-hM-`,
+    "pe-0": `-qd6I3tJBUQ-`,
+    "pe-1": `_4LJ0nGuwjpY-`,
+    "pe-2": `ZW2qp59a0cU-`,
+    "pe-3": `Vycl2A5dcuk-`,
+    "pe-4": `mB1gNDP-Qjo-`,
+    "pe-5": `Ar1HtksUl58-`,
+    "pe-6": `Rgi6ZFNtTBE-`,
+    "pe-7": `gnuEf0idTlQ-`,
+    "pe-8": `TRKBX73nzYk-`,
+    "pe-9": `p3f0wJIWWzU-`,
+    Width: _,
+    MaxWidth: _,
+    MinWidth: _,
+    Height: _,
+    MaxHeight: _,
+    MinHeight: _,
+    FlexBasis: _,
+    FlexGrow: _,
+    FlexShrink: _,
+    "Radius-none": `L6F1vgJ7QGI-`,
+    "Radius-sm": `yDw9gqlgbxM-`,
+    "Radius-md": `N4yONvg-bK8-`,
+    "Radius-lg": `zANRA1HSa28-`,
+    "Radius-full": `PRQtAssp1sU-`,
+    Cursor: _,
+    Position: _,
+    Inset: _,
+    GridColumn: _,
+    GridColumnStart: _,
+    GridColumnEnd: _,
+    GridRow: _,
+    GridRowStart: _,
+    GridRowEnd: _,
+    GridArea: _,
+    Background: _,
+    Overflow: _,
+    ZIndex: _,
+    Display: _,
+    Elevation: _,
+    Border: _,
+    BorderColor: _,
+    Outline: _,
+    AlignSelf: _,
+    JustifySelf: _,
+    TextAlign: _,
+    AspectRatio: _,
+  },
+  _ = [
+    {
+      prop: `margin`,
+      responsive: !0,
+      className: (_) => _[`m-${_}`],
+    },
+    {
+      prop: `marginX`,
+      responsive: !0,
+      className: (_) => _[`mx-${_}`],
+    },
+    {
+      prop: `marginY`,
+      responsive: !0,
+      className: (_) => _[`my-${_}`],
+    },
+    {
+      prop: `marginTop`,
+      responsive: !0,
+      className: (_) => _[`mt-${_}`],
+    },
+    {
+      prop: `marginRight`,
+      responsive: !0,
+      className: (_) => _[`mr-${_}`],
+    },
+    {
+      prop: `marginBottom`,
+      responsive: !0,
+      className: (_) => _[`mb-${_}`],
+    },
+    {
+      prop: `marginLeft`,
+      responsive: !0,
+      className: (_) => _[`ml-${_}`],
+    },
+    {
+      prop: `marginStart`,
+      responsive: !0,
+      className: (_) => _[`ms-${_}`],
+    },
+    {
+      prop: `marginEnd`,
+      responsive: !0,
+      className: (_) => _[`me-${_}`],
+    },
+  ],
+  _ = [
+    ..._,
+    {
+      prop: `padding`,
+      responsive: !0,
+      className: (_) => _[`p-${_}`],
+    },
+    {
+      prop: `paddingX`,
+      responsive: !0,
+      className: (_) => _[`px-${_}`],
+    },
+    {
+      prop: `paddingY`,
+      responsive: !0,
+      className: (_) => _[`py-${_}`],
+    },
+    {
+      prop: `paddingTop`,
+      responsive: !0,
+      className: (_) => _[`pt-${_}`],
+    },
+    {
+      prop: `paddingRight`,
+      responsive: !0,
+      className: (_) => _[`pr-${_}`],
+    },
+    {
+      prop: `paddingBottom`,
+      responsive: !0,
+      className: (_) => _[`pb-${_}`],
+    },
+    {
+      prop: `paddingLeft`,
+      responsive: !0,
+      className: (_) => _[`pl-${_}`],
+    },
+    {
+      prop: `paddingStart`,
+      responsive: !0,
+      className: (_) => _[`ps-${_}`],
+    },
+    {
+      prop: `paddingEnd`,
+      responsive: !0,
+      className: (_) => _[`pe-${_}`],
+    },
+    {
+      prop: `width`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--width`,
+    },
+    {
+      prop: `minWidth`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--min-width`,
+    },
+    {
+      prop: `maxWidth`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--max-width`,
+    },
+    {
+      prop: `height`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--height`,
+    },
+    {
+      prop: `minHeight`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--min-height`,
+    },
+    {
+      prop: `maxHeight`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--max-height`,
+    },
+    {
+      prop: `flexBasis`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--flex-basis`,
+    },
+    {
+      prop: `flexGrow`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--flex-grow`,
+    },
+    {
+      prop: `flexShrink`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--flex-shrink`,
+    },
+    {
+      prop: `radius`,
+      responsive: !0,
+      className: (_) => _[`Radius-${_}`],
+    },
+    {
+      prop: `cursor`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--cursor`,
+    },
+    {
+      prop: `position`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--position`,
+    },
+    {
+      prop: `inset`,
+      responsive: !0,
+      className: _,
+      cssProperty: (_) => [`--inset`, _(_)],
+    },
+    {
+      prop: `gridColumn`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--grid-column`,
+    },
+    {
+      prop: `gridColumnStart`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--grid-column-start`,
+    },
+    {
+      prop: `gridColumnEnd`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--grid-column-end`,
+    },
+    {
+      prop: `gridRow`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--grid-row`,
+    },
+    {
+      prop: `gridRowStart`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--grid-row-start`,
+    },
+    {
+      prop: `gridRowEnd`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--grid-row-end`,
+    },
+    {
+      prop: `gridArea`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--grid-area`,
+    },
+    {
+      prop: `alignSelf`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--align-self`,
+    },
+    {
+      prop: `justifySelf`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--justify-self`,
+    },
+    {
+      prop: `background`,
+      responsive: !0,
+      className: _,
+      cssProperty: (_) => [`--background`, _(_)],
+    },
+    {
+      prop: `overflow`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--overflow`,
+    },
+    {
+      prop: `zIndex`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--z-index`,
+    },
+    {
+      prop: `display`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--display`,
+    },
+    {
+      prop: `elevation`,
+      responsive: !0,
+      className: _,
+      dataProperty: `elevation`,
+    },
+    {
+      prop: `border`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--border`,
+    },
+    {
+      prop: `borderColor`,
+      responsive: !0,
+      className: [_, _].join(` `),
+      cssProperty: (_) => [`--border-color`, _(_)],
+    },
+    {
+      prop: `outline`,
+      responsive: !0,
+      className: _,
+      cssProperty: (_) => [`--outline-color`, _(_)],
+    },
+    {
+      prop: `textAlign`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--text-align`,
+    },
+    {
+      prop: `aspectRatio`,
+      responsive: !0,
+      className: _,
+      cssProperty: `--aspect-ratio`,
+    },
+  ],
+  _ = `xtBr-L5Owus-`;
 function _() {
   return _;
 }
-var _ = (0, _.createContext)({
-  Button: `basic`,
-  Checkbox: `basic`,
-  Combobox: `basic`,
-  LoadingSpinner: `basic`,
-  SegmentedControl: `basic`,
-  Select: `basic`,
-  TextArea: `basic`,
-  TextInput: `basic`,
-});
+function _(_) {
+  let { _: _ = `div`, focusable: _, navProps: _, ref: _, ..._ } = _,
+    _ = _(),
+    _ = _(
+      {
+        ..._,
+        className: (0, _.default)(_, _(), _.className),
+      },
+      _,
+    ),
+    _ = _ ?? _?.focusable ?? !!_.onClick,
+    _ = (0, _.jsx)(_, {
+      ref: _,
+      ..._,
+    });
+  return _ && (_ || _)
+    ? (0, _.jsx)(_, {
+        ...(_ || {}),
+        focusable: _,
+        children: _,
+      })
+    : _;
+}
+var _ = _,
+  _ = `PmISXgz3FoQ-`,
+  _ = `Bj8vGJI7AGo-`,
+  _ = `_2AVS3LuARvU-`,
+  _ = `rC6xro2ZWbk-`,
+  _ = `oln6i1TGpO0-`,
+  _ = `xTWnfrOQ1MU-`,
+  _ = `h31r9FtdgH0-`,
+  _ = `AwByPYmuf2E-`,
+  _ = `rPm-B0T-Plk-`;
+function _(_) {
+  let { _: _ = `div`, focusable: _, navProps: _, ref: _, ..._ } = _,
+    _ = _(),
+    _ = _(
+      {
+        ..._,
+        className: (0, _.default)(_.className, _),
+      },
+      _,
+    ),
+    _ = _ ?? _?.focusable ?? !!_.onClick,
+    _ = (0, _.jsx)(_, {
+      ref: _,
+      ..._,
+    }),
+    _ = _();
+  if (_) {
+    let _ = _(_.wrap, _),
+      _ = _(_.direction, _) ?? `row`;
+    return (
+      _ === `wrap` && _ === `row` && (_ = `grid`),
+      (0, _.jsx)(_, {
+        ...(_ || {}),
+        focusable: _,
+        "flow-children": _,
+        children: _,
+      })
+    );
+  }
+  return _;
+}
+var _ = [
+  ..._,
+  {
+    prop: `direction`,
+    responsive: !0,
+    className: _,
+    cssProperty: `--direction`,
+  },
+  {
+    prop: `justify`,
+    responsive: !0,
+    className: _,
+    cssProperty: (_) => [`--justify`, _(_)],
+  },
+  {
+    prop: `align`,
+    responsive: !0,
+    className: _,
+    cssProperty: `--align`,
+  },
+  {
+    prop: `gap`,
+    responsive: !0,
+    className: _,
+    cssProperty: (_) => [`--gap`, `var(--spacing-${_})`],
+  },
+  {
+    prop: `gapX`,
+    responsive: !0,
+    className: _,
+    cssProperty: (_) => [`--gap-x`, `var(--spacing-${_})`],
+  },
+  {
+    prop: `gapY`,
+    responsive: !0,
+    className: _,
+    cssProperty: (_) => [`--gap-y`, `var(--spacing-${_})`],
+  },
+  {
+    prop: `wrap`,
+    responsive: !0,
+    className: _,
+    cssProperty: `--wrap`,
+  },
+  {
+    prop: `inline`,
+    responsive: !0,
+    className: _,
+  },
+];
+function _(_) {
+  return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
+}
+var _ = _({
+    Button: () => _,
+    Icon: () => _,
+    MinWidth: () => _,
+    "Size-1": () => _,
+    "Size-2": () => _,
+    "Size-3": () => _,
+    "Variant-basic": () => _,
+    "Variant-dark": () => _,
+    "Variant-ghost": () => _,
+    "Variant-inverted": () => _,
+    "Variant-outline": () => _,
+    "Variant-vibrant": () => _,
+    Width: () => _,
+    default: () => _,
+  }),
+  _ = `Yyx5Rkc0C04-`,
+  _ = `_-56FHcFNl2U-`,
+  _ = `hRuF7XXiT3w-`,
+  _ = `j8iZOirRLc8-`,
+  _ = `ZTzpqIMdFCM-`,
+  _ = `XSeLQJSkxyo-`,
+  _ = `efbor0Of1bY-`,
+  _ = `qOJkwUKt2Zo-`,
+  _ = `BvwOpySHMzk-`,
+  _ = `oKBOG5g3nvk-`,
+  _ = `_3PvnjdbEKFQ-`,
+  _ = `_5M7IKs5LW3Y-`,
+  _ = `n-Q3jnI7IeY-`,
+  _ = {
+    Button: _,
+    "Size-1": `_-56FHcFNl2U-`,
+    Icon: _,
+    "Size-2": `j8iZOirRLc8-`,
+    "Size-3": `ZTzpqIMdFCM-`,
+    "Variant-basic": `XSeLQJSkxyo-`,
+    "Variant-dark": `efbor0Of1bY-`,
+    "Variant-inverted": `qOJkwUKt2Zo-`,
+    "Variant-outline": `BvwOpySHMzk-`,
+    "Variant-ghost": `oKBOG5g3nvk-`,
+    "Variant-vibrant": `_3PvnjdbEKFQ-`,
+    Width: _,
+    MinWidth: _,
+  },
+  _ = _({
+    ChildContainer: () => _,
+    LoadingSpinnerAmin: () => _,
+    "Size-1": () => _,
+    "Size-2": () => _,
+    "Size-3": () => _,
+    "Size-4": () => _,
+    "Size-5": () => _,
+    Spinner: () => _,
+    "Variant-bright": () => _,
+    "Variant-solid": () => _,
+    default: () => _,
+  }),
+  _ = `ghKPu7ElHI4-`,
+  _ = `THS4EmXO7Qo-`,
+  _ = `_2tFyZDh3n70-`,
+  _ = `y-F5xF-Ar74-`,
+  _ = `Fqhcc7xFmsM-`,
+  _ = `h9zlfqYx76Q-`,
+  _ = `iTGGFwEa2MQ-`,
+  _ = `_88ugmg-q8D8-`,
+  _ = `MKSxe-MWyrs-`,
+  _ = `n-XnuapupJI-`,
+  _ = {
+    Spinner: _,
+    LoadingSpinnerAmin: _,
+    "Size-1": `_2tFyZDh3n70-`,
+    "Size-2": `y-F5xF-Ar74-`,
+    "Size-3": `Fqhcc7xFmsM-`,
+    "Size-4": `h9zlfqYx76Q-`,
+    "Size-5": `iTGGFwEa2MQ-`,
+    "Variant-solid": `_88ugmg-q8D8-`,
+    "Variant-bright": `MKSxe-MWyrs-`,
+    ChildContainer: _,
+  },
+  _ = (0, _.createContext)({
+    Button: `basic`,
+    Checkbox: `basic`,
+    Combobox: `basic`,
+    LoadingSpinner: `basic`,
+    SegmentedControl: `basic`,
+    Select: `basic`,
+    TextArea: `basic`,
+    TextInput: `basic`,
+  });
 function _(_) {
   let { variants: _ = {}, children: _ } = _,
     _ = (0, _.use)(_);
@@ -54376,6 +56024,233 @@ function _(_, _) {
   let _ = _(_);
   return !_ || _ === "default" ? _ : _;
 }
+function _(_) {
+  let {
+      size: _ = `3`,
+      loading: _ = !0,
+      children: _,
+      color: _,
+      variant: _,
+      ..._
+    } = _,
+    _ = _(`LoadingSpinner`, _);
+  return _ || !_
+    ? (0, _.jsxs)(_, {
+        position: `relative`,
+        ..._,
+        width: `fit-content`,
+        children: [
+          (0, _.jsx)(`div`, {
+            "data-visibility": !_,
+            className: _,
+            children: _,
+          }),
+          _ &&
+            (0, _.jsx)(_, {
+              position: `absolute`,
+              inset: `0`,
+              justify: `center`,
+              align: `center`,
+              children: (0, _.jsx)(_, {
+                size: _,
+                color: _,
+                variant: _,
+              }),
+            }),
+        ],
+      })
+    : (0, _.jsx)(_, {
+        size: _,
+        color: _,
+        variant: _,
+        ..._,
+      });
+}
+function _(_) {
+  let { className: _, color: _, ..._ } = _(_, _);
+  return (0, _.jsx)(`div`, {
+    "data-accent-color": _,
+    className: (0, _.default)(_, _),
+    ..._,
+  });
+}
+var _ = [
+    ..._,
+    {
+      prop: `size`,
+      responsive: !0,
+      className: (_) => _[`Size-${_}`],
+    },
+    {
+      prop: `variant`,
+      className: (_) => _[`Variant-${_}`],
+    },
+  ],
+  _ = _.createContext(!1);
+function _() {
+  return _.useContext(_);
+}
+function _(_) {
+  let {
+    snr: _,
+    focusable: _,
+    navProps: _,
+    href: _,
+    openInNewWindow: _,
+    target: _,
+    rel: _,
+    ..._
+  } = _;
+  _(!(_ && _), `Link: pass either openInNewWindow or target, not both`);
+  let _ = _(),
+    _ = _(),
+    _ = _(_, _),
+    _ = _ ?? _?.focusable ?? !!_,
+    _ = _ ? `_blank` : _;
+  !_ && _ && (_ = `_top`);
+  let _ = _;
+  !_ && _ && (_ = `noreferrer noopener`);
+  let _ = {
+    href: _,
+    target: _,
+    rel: _,
+    ..._,
+  };
+  return _ && (_ || _)
+    ? (0, _.jsx)(_, {
+        ..._,
+        focusable: _,
+        ..._,
+      })
+    : (0, _.jsx)(`a`, {
+        ..._,
+      });
+}
+function _(_, _) {
+  let _ = _();
+  return !_ || !_
+    ? _
+    : _(
+        _ === !0
+          ? _
+          : {
+              ..._,
+              ..._,
+            },
+        _,
+      );
+}
+function _(_) {
+  let {
+      variant: _,
+      size: _ = `2`,
+      minWidth: _ = `fit-content`,
+      color: _,
+      loading: _,
+      children: _,
+      onClick: _,
+      icon: _,
+      focusable: _,
+      navProps: _,
+      ..._
+    } = _,
+    _ = _(),
+    _ = _
+      ? (0, _.jsx)(_, {
+          size: _,
+          color: _,
+          variant: `bright`,
+          children: _,
+        })
+      : _,
+    _ = _ ? void 0 : _,
+    _ = _ ?? _?.focusable ?? !!_,
+    _ = _(`Button`, _),
+    _ = {
+      type: `button`,
+      ..._(
+        {
+          ..._,
+          variant: _,
+          size: _,
+          minWidth: _,
+          color: _,
+          className: (0, _.default)(_, _ && `hRuF7XXiT3w-`),
+          onClick: _,
+        },
+        _,
+      ),
+      children: _,
+    };
+  return _ && (_ || _)
+    ? (0, _.jsx)(_, {
+        ..._,
+        ...(_ || {}),
+        focusable: _,
+      })
+    : (0, _.jsx)(`button`, {
+        ..._,
+      });
+}
+function _(_) {
+  let {
+      variant: _,
+      size: _ = `2`,
+      minWidth: _ = `fit-content`,
+      disabled: _,
+      icon: _,
+      ..._
+    } = _,
+    _ = _(`Button`, _),
+    _ = _(
+      {
+        onClick: _ ? _ : void 0,
+        "aria-disabled": _,
+        ..._,
+        variant: _,
+        size: _,
+        minWidth: _,
+        className: (0, _.default)(_, _ && `hRuF7XXiT3w-`, _()),
+      },
+      _,
+    );
+  return (0, _.jsx)(_, {
+    ..._,
+  });
+}
+function _(_) {
+  _.preventDefault();
+}
+var _ = [
+    ..._,
+    {
+      prop: `size`,
+      responsive: !0,
+      className: (_) => _[`Size-${_}`],
+    },
+    {
+      prop: `variant`,
+      className: (_) => _[`Variant-${_}`],
+    },
+    {
+      prop: `color`,
+      dataProperty: (_) => [`accent-color`, `${_}`],
+    },
+    {
+      prop: `width`,
+      className: _,
+      cssProperty: `--width`,
+      responsive: !0,
+    },
+    {
+      prop: `minWidth`,
+      className: _,
+      cssProperty: `--min-width`,
+      responsive: !0,
+    },
+  ],
+  _ = _,
+  _ = _;
 function _() {
   return typeof window < `u`;
 }
@@ -57990,6 +59865,53 @@ function _(_) {
     ],
   });
 }
+function _(_, ..._) {
+  let _ = [],
+    _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, `gs`),
+    _ = 0,
+    _;
+  for (; (_ = _.exec(_)); ) {
+    (_ += _[0].length), _.push(_[1]);
+    let _ = parseInt(_[2]),
+      _ = _[3] || ``,
+      _ = _(_, ..._),
+      _ =
+        _ >= 1 && _ <= _.length && _[_ - 1]
+          ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
+          : _;
+    _.push(_);
+  }
+  return _.push(_.substr(_)), _.createElement(_.Fragment, null, ..._);
+}
+function _(_, _ = [`b`, `i`, `br`]) {
+  let _ = _.join(`|`),
+    _ = [],
+    _ = RegExp(
+      `(?<before>.*?)<(?<tagname>${_})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
+      `gs`,
+    ),
+    _ = 0,
+    _;
+  for (; (_ = _.exec(_)); ) {
+    if (!_.groups) continue;
+    if (!_.groups?.endtag) {
+      let _ = _.groups.before.length + _.groups.tagname.length + 2;
+      (_ += _), (_.lastIndex = _.index + _), _.push(_.groups.before);
+      let _ = _[2],
+        _ = _.createElement(_);
+      _.push(_);
+      continue;
+    }
+    (_ += _[0].length), _.push(_.groups.before);
+    let _ = _.groups.tagname,
+      _ = _.groups.contents || ``,
+      _ = null;
+    _ && (_ = _(_, _));
+    let _ = _.createElement(_, {}, _);
+    _.push(_);
+  }
+  return _.push(_.slice(_)), _.createElement(_.Fragment, null, ..._);
+}
 function _() {
   return _().languages.map((_) => _(_.strISOCode));
 }
@@ -59651,7 +61573,8 @@ var _ = `_5ZSIN7wAn6E-`,
     import.meta.url,
   ).href;
 function _() {
-  return _.IN_CLIENT && _(_.LAUNCHER_TYPE);
+  let _ = _();
+  return _ ? _(_.LAUNCHER_TYPE) : !1;
 }
 var _ = _.memo(function (_) {
   let {
@@ -78619,90 +80542,74 @@ var _ = `wT3kSyT1vtw-`,
         }),
       ],
     }),
-  _ = `T4CXm9zTzmU-`,
-  _ = `Nok-bFLm3A8-`,
-  _ = `iHE5eE7Atis-`,
-  _ = `NGjJDCfoLI4-`,
-  _ = `ForK9oeeDlI-`,
-  _ = `N93RARa4CrE-`,
-  _ = `BsFJpJpBAMc-`,
-  _ = `as7qRAv6Zhc-`,
-  _ = `JTrnUcTHgGo-`,
-  _ = `hMXQtrsmGpI-`,
-  _ = `Qrsp-ncJGoo-`,
-  _ = `_3BM8hUmp4zs-`,
-  _ = `NrSDDOzYubc-`,
-  _ = `_5pvNaNR7hSU-`,
-  _ = `-tMJPYp4Htc-`,
-  _ = `CIZqfP9kYOk-`,
-  _ = `BNtCLC9qkFE-`,
-  _ = `l7xNw9PYg1M-`,
-  _ = `UVgB-OoF-00-`,
-  _ = `_5-aRHkCSzt0-`,
-  _ = `zHfGaiM5Ho0-`,
-  _ = `_2V53S1QKDvM-`,
-  _ = `lM23G7oQ7ro-`,
-  _ = `ajCUSTgLCfU-`,
-  _ = `w-iushXI7cA-`,
-  _ = `cpIFISIx0CM-`,
-  _ = `UoluM-B5hJQ-`,
-  _ = `qweYjGew3rA-`,
-  _ = `v46fGQ5hpIY-`,
-  _ = `_7xOIZU3MaPg-`,
-  _ = `Xyo8cbmpHl0-`,
-  _ = `_8g-ptnGaS2w-`,
-  _ = `OnZT5h35034-`,
-  _ = `SxHTL4WoQ1g-`,
-  _ = `-eibDjPzYLU-`,
-  _ = `h1bsDOJgcZU-`,
-  _ = `RXWN54ON7Uc-`,
-  _ = `JowGMHJQ1XY-`,
-  _ = `dA47dT-iylI-`,
-  _ = `_7Es7IVbz9qg-`,
-  _ = `ipYCYcP65-0-`,
-  _ = `qKqg36FoJQg-`,
-  _ = `yspakS-2qAA-`,
-  _ = `Pd71xKUUZO0-`,
-  _ = `RgVaSnxI11Q-`,
-  _ = `XV5hsMCFmkE-`,
-  _ = `_7qlIPX-XNns-`,
-  _ = `cMVYOxJQOu8-`,
-  _ = `sJNu80EwQ2k-`,
-  _ = `aarHWM10WQI-`,
-  _ = `X8IJTRF4JpA-`,
-  _ = `t-YxatNmPt0-`,
-  _ = `VZxojHG3IVo-`,
-  _ = `_4hgei-H2D2g-`,
-  _ = `dz6zcmGg6tc-`,
-  _ = `E1i9vy0A6zA-`,
-  _ = `P5pyU6WSfJo-`,
-  _ = `pbVtHKTw5y0-`,
-  _ = `Evb9PF7IFUM-`,
-  _ = `aCqF0Lr5-Ms-`,
-  _ = `Q6ULRbhcZlI-`,
-  _ = `NDMhUzJJMgE-`,
-  _ = `_3Rt-7B6GP98-`,
-  _ = `XNrY1FFiGvk-`,
-  _ = `juqOoBqivOQ-`,
-  _ = `KVKd6iDl9kE-`,
-  _ = new URL(
-    `../../../images/applications/help/login_mobile_auth.png?v=valveisgoodatcaching`,
-    import.meta.url,
-  ).href;
-function _(_, _) {
-  let _;
-  if (typeof _ == `string`) _ = _;
-  else if (`location` in _) _ = _.location.search;
-  else if (`search` in _) _ = _.search;
-  else return;
-  let _ = new URLSearchParams(_.substring(1));
-  if (_.has(_)) {
-    let _ = _.getAll(_);
-    return _[_.length - 1];
-  }
-}
-var _ = `rwoD2WCje0U-`,
-  _ = `mG-Zj7I7-hc-`;
+  _ = `ZhRwp4aSW-8-`,
+  _ = `QV15rhpdkBI-`,
+  _ = `_3M1tVbU6uAM-`,
+  _ = `p0lt1P2vwbI-`,
+  _ = `Lw5H9Bgq0ww-`,
+  _ = `HD-XkY2oIS0-`,
+  _ = `t972389vN-Y-`,
+  _ = `_5U7-qgmzcvo-`,
+  _ = `-HdQ6mrZKtA-`,
+  _ = `Tr28R97XrnU-`,
+  _ = `_17vA1ePJ-dw-`,
+  _ = `hYiUBswjB8E-`,
+  _ = `l-m0O8YsKvg-`,
+  _ = `WNU0cJCzPqA-`,
+  _ = `sljnSz9B7VM-`,
+  _ = `KE-CI3fCrt4-`,
+  _ = `F2-23fRyFdg-`,
+  _ = `_9ehBJOSNpjY-`,
+  _ = `H2e67uoFTZo-`,
+  _ = `_0O9XQ4NvNgg-`,
+  _ = `SJJMt5-Nlqc-`,
+  _ = `_5HbDhenxKKA-`,
+  _ = `JRre8-r--eY-`,
+  _ = `-wYn7tUZ-Qc-`,
+  _ = `Y0ZBzWFxTiU-`,
+  _ = `Rq9MD5lNpxw-`,
+  _ = `aDxXoSR2-2M-`,
+  _ = `A44IVG2oXaA-`,
+  _ = `DJzHz8vrR58-`,
+  _ = `_6uA-qQnXgqs-`,
+  _ = `zS2JKIAoqLs-`,
+  _ = `g2m1tomZf5Y-`,
+  _ = `DSy9L5eaj5o-`,
+  _ = `riI5q82cESo-`,
+  _ = `gjs7dr1G9B4-`,
+  _ = `_8tHxNur8iVQ-`,
+  _ = `QDXFvQ1VRGs-`,
+  _ = `iI4-KPYmClQ-`,
+  _ = `FCVI1-X5QXI-`,
+  _ = `_-7t7WL8ib4U-`,
+  _ = `_4cSRMvOczro-`,
+  _ = `urTXd9G8cNM-`,
+  _ = `tk1GT5on9gQ-`,
+  _ = `EUZmbwRThEY-`,
+  _ = `koI0X-poWGo-`,
+  _ = `ik9s3tnOv3M-`,
+  _ = `e5FVer86lmY-`,
+  _ = `O8iS-RxIxMc-`,
+  _ = `EWu0dHs0CgM-`,
+  _ = `G3u-Es6yEe8-`,
+  _ = `nr0J1UoEl8s-`,
+  _ = `_19NDBszdpt8-`,
+  _ = `_4p53BqicMtw-`,
+  _ = `LJXTU0Fs0Mc-`,
+  _ = `NoRFObwpjo0-`,
+  _ = `u95III-ojfU-`,
+  _ = `dfnWU-vLcuI-`,
+  _ = `-iy7zxvavFA-`,
+  _ = `_0wUoYmLYupw-`,
+  _ = `V6VD9IECTcA-`,
+  _ = `eDuVIFYKU84-`,
+  _ = `sH-b0kW7QCY-`,
+  _ = `z8NjGLKg3z0-`,
+  _ = `_4pLGekYMMsE-`,
+  _ = `X1k4Ip6MIC8-`,
+  _ = `qeijEUL7oHU-`,
+  _ = `SoYZJobaqlk-`,
+  _ = `KQdWHvm1kCY-`;
 function _(_) {
   let {
     length: _,
@@ -78794,17 +80701,17 @@ function _(_) {
       ),
     );
   return (0, _.jsxs)(_, {
-    className: _(
+    className: (0, _.default)(
       _,
-      _ === `danger` && `LpaDex3sAdU-`,
-      _ && `kc1-1TP1Tjo-`,
-      _ && `toA2pYRPGhQ-`,
+      _ === `danger` && `faQ-XEuPsJg-`,
+      _ && `mIAxC7mq9-I-`,
+      _ && `eQsO7wBQCBc-`,
     ),
     onClick: _,
     children: [
       _ &&
         (0, _.jsx)(`div`, {
-          className: `GaHGvDhO5QI-`,
+          className: `_4vkP-m3oW-0-`,
           children: (0, _.jsx)(_, {
             size: `small`,
           }),
@@ -78813,7 +80720,68 @@ function _(_) {
     ],
   });
 }
-var _ = _((_, _) => {
+function _() {
+  let _ = `svgid_` + (0, _.useId)().replace(/[^A-Za-z0-9_-]/g, ``);
+  return [_, `url(#${_})`];
+}
+function _(_) {
+  let [_, _] = _();
+  return (0, _.jsxs)(`svg`, {
+    xmlns: `http://www.w3.org/2000/svg`,
+    viewBox: `0 0 15 23`,
+    fill: `none`,
+    ..._,
+    children: [
+      (0, _.jsx)(`g`, {
+        clipPath: _,
+        children: (0, _.jsx)(`path`, {
+          fill: `currentColor`,
+          fillRule: `evenodd`,
+          clipRule: `evenodd`,
+          _: `M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z`,
+        }),
+      }),
+      (0, _.jsx)(`defs`, {
+        children: (0, _.jsx)(`clipPath`, {
+          _: _,
+          children: (0, _.jsx)(`rect`, {
+            fill: `currentColor`,
+            width: `15`,
+            height: `23`,
+          }),
+        }),
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { color: _ = `#fff`, ..._ } = _;
+  return (0, _.jsx)(`svg`, {
+    version: `1.1`,
+    xmlns: `http://www.w3.org/2000/svg`,
+    className: `SVGIcon_Button SVGIcon_Check`,
+    _: `0px`,
+    _: `0px`,
+    width: `256px`,
+    height: `256px`,
+    viewBox: `0 0 256 256`,
+    strokeWidth: `24`,
+    stroke: _,
+    strokeLinecap: `round`,
+    strokeLinejoin: `round`,
+    strokeMiterlimit: `10`,
+    ..._,
+    children: (0, _.jsx)(`polyline`, {
+      fill: `none`,
+      points: `49.5,147.75 95,210.75 206.5,45.25 `,
+    }),
+  });
+}
+var _ = new URL(
+    `../../../images/applications/help/login_mobile_auth.png?v=valveisgoodatcaching`,
+    import.meta.url,
+  ).href,
+  _ = _((_, _) => {
     _.exports = {
       MODE_NUMBER: 1,
       MODE_ALPHA_NUM: 2,
@@ -79608,9 +81576,9 @@ var _ = _((_, _) => {
       };
     (_.ErrorCorrectLevel = _), (_.exports = _);
   }),
-  _ = `_96aUCy32Z5U-`,
-  _ = `EKo3aIRWG-4-`,
-  _ = _(_()),
+  _ = `RuVnOcF9yRI-`,
+  _ = `QhysrBJX1dU-`,
+  _ = _(_(), 1),
   _ = (function (_) {
     return (
       (_[(_._ = 1)] = `L`),
@@ -79731,13 +81699,9 @@ function _(_) {
       borderWidth: _,
     });
   if (!_) return null;
-  let _ = new Blob([_], {
-      type: `image/gif`,
-    }),
-    _ = URL.createObjectURL(_),
-    _ = `rgb(${_[0]}, ${_[1]}, ${_[2]})`;
+  let _ = `rgb(${_[0]}, ${_[1]}, ${_[2]})`;
   return (0, _.jsx)(`div`, {
-    className: _(_, _),
+    className: (0, _.default)(_, _),
     style: {
       "--qr-bright-color": _,
     },
@@ -79756,22 +81720,21 @@ function _(_, _) {
     inactiveBitColor: _,
     borderWidth: _,
   } = _;
-  return (0, _.useMemo)(
-    () =>
-      _(
-        _,
-        {
-          activeBitColor: _,
-          inactiveBitColor: _,
-          borderWidth: _,
-        },
-        {
-          typeNumber: _,
-          errorCorrectLevel: _,
-        },
-      ),
-    [_, _, _, _, _, _],
-  );
+  return (0, _.useMemo)(() => {
+    let _ = _(
+      _,
+      {
+        activeBitColor: _,
+        inactiveBitColor: _,
+        borderWidth: _,
+      },
+      {
+        typeNumber: _,
+        errorCorrectLevel: _,
+      },
+    );
+    return _ ? `data:image/gif;base64,${(0, _.fromByteArray)(_)}` : null;
+  }, [_, _, _, _, _, _]);
 }
 var _ = `WrkY9vjgO-o-`,
   _ = `S5cukRF3668-`,
@@ -79831,7 +81794,7 @@ function _(_) {
           activeBitColor: [21, 23, 28],
           inactiveBitColor: _ ? [_, 0, _] : [_, _, _],
           quality: _(_),
-          className: _(
+          className: (0, _.default)(
             _,
             _ == `deck` && `LfwdeqflbQQ-`,
             _ == `vr` && `DlrZAVV1kSM-`,
@@ -79861,7 +81824,7 @@ function _(_) {
 function _(_) {
   let { size: _ } = _;
   return (0, _.jsx)(`div`, {
-    className: _(
+    className: (0, _.default)(
       _,
       _ == `small` && `UmXCdAcOnc0-`,
       (_ == `medium` || !_) && `dkcbyneVVOc-`,
@@ -79871,8 +81834,9 @@ function _(_) {
 }
 function _(_) {
   return (0, _.jsx)(_, {
+    color: `dull`,
+    variant: `ghost`,
     onClick: _.reset,
-    className: void 0,
     children: (0, _.jsx)(_, {}),
   });
 }
@@ -79984,11 +81948,11 @@ function _(_) {
   return typeof _ == `function`
     ? (0, _.jsx)(_, {
         onClick: _,
-        children: _(`#Login_Help_SignIn`),
+        children: _.Localize(`#Login_Help_SignIn`),
       })
     : (0, _.jsx)(_, {
-        href: `${_.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
-        children: _(`#Login_Help_SignIn`),
+        href: `${_.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
+        children: _.Localize(`#Login_Help_SignIn`),
       });
 }
 function _(_) {
@@ -79997,7 +81961,7 @@ function _(_) {
     return (0, _.jsx)(_, {
       inline: !0,
       onClick: _,
-      children: _(`#Login_CreateAccount`),
+      children: _.Localize(`#Login_CreateAccount`),
     });
   {
     let _ = _ ? `?redir=${encodeURIComponent(_)}` : ``;
@@ -80007,13 +81971,13 @@ function _(_) {
         return (0, _.jsx)(_, {
           inline: !0,
           href: `${_.STORE_BASE_URL}join/${_}`,
-          children: _(`#Login_CreateAccount`),
+          children: _.Localize(`#Login_CreateAccount`),
         });
       case `partner`:
         return (0, _.jsx)(_, {
           inline: !0,
           href: `${_.PARTNER_BASE_URL}${_}`,
-          children: _(`#Login_CreateSteamworksAccount`),
+          children: _.Localize(`#Login_CreateSteamworksAccount`),
         });
       case `none`:
         return null;
@@ -80034,11 +81998,11 @@ function _(_) {
       _ = `#Login_NoSteamworksAccount`;
   }
   return (0, _.jsxs)(`div`, {
-    className: _(_, _ && `sWf4Wjqg-RU-`),
+    className: (0, _.default)(_, _ && `Kv7QdVcb2UI-`),
     children: [
       (0, _.jsx)(`span`, {
         className: _,
-        children: _(_),
+        children: _.Localize(_),
       }),
       (0, _.jsx)(_, {
         variant: _,
@@ -80048,7 +82012,9 @@ function _(_) {
   });
 }
 function _() {
-  let _ = window?.location && _(window.location, `need_password`);
+  let _ =
+    window?.location &&
+    new URLSearchParams(window.location.search).getAll(`need_password`).pop();
   return _ !== void 0 && _ !== `false` && _ !== `0`;
 }
 function _(_) {
@@ -80094,10 +82060,10 @@ function _(_) {
         extendedErrorMessage: _.password.strExtendedErrorMessage,
       }),
     });
-  let _ = !_();
+  let _ = _.EREALM !== _.k_ESteamRealmChina;
   if (!_.bInPasswordFlow) {
     let _ = (0, _.jsxs)(`div`, {
-      className: _(_, _ && `_1J6JPt07wYU-`),
+      className: (0, _.default)(_, _ && `rvRWTXNBcK4-`),
       children: [
         (0, _.jsx)(_, {
           strAccountName: _.strAccountName,
@@ -80124,16 +82090,16 @@ function _(_) {
     });
     if (_) {
       let _ = _.IN_STEAMUI,
-        _ = _ ? _.LAUNCHER_TYPE : void 0;
+        _ = _()?.LAUNCHER_TYPE;
       return (0, _.jsxs)(_, {
-        className: _(_, _ && `sWf4Wjqg-RU-`),
+        className: (0, _.default)(_, _ && `Kv7QdVcb2UI-`),
         children: [
           !_ && !1,
           !_.refreshInfo &&
             (0, _.jsx)(_, {
               realm: _.EREALM,
               launcherType: _,
-              className: `t-YxatNmPt0-`,
+              className: `_19NDBszdpt8-`,
               onBack: _.onBack,
             }),
           (0, _.jsx)(_, {
@@ -80141,7 +82107,7 @@ function _(_) {
           }),
           _,
           (0, _.jsxs)(`div`, {
-            className: _(_, _ && `sWf4Wjqg-RU-`),
+            className: (0, _.default)(_, _ && `Kv7QdVcb2UI-`),
             children: [
               (0, _.jsx)(_, {
                 variant: _.helpLinkVariant,
@@ -80169,8 +82135,8 @@ function _(_) {
           className: _,
           _: _,
           children: _.refreshInfo
-            ? _(`#Login_RefreshSignIn`)
-            : _(`#Login_SignInTitle`),
+            ? _.Localize(`#Login_RefreshSignIn`)
+            : _.Localize(`#Login_SignInTitle`),
         }),
         (0, _.jsx)(_, {
           refreshInfo: _.refreshInfo,
@@ -80297,11 +82263,11 @@ function _(_) {
     children: [
       (0, _.jsx)(`div`, {
         className: _,
-        children: _(`#Login_RefreshSignIn`),
+        children: _.Localize(`#Login_RefreshSignIn`),
       }),
       (0, _.jsx)(`div`, {
         className: _,
-        children: _(_),
+        children: _.Localize(_),
       }),
     ],
   });
@@ -80309,7 +82275,7 @@ function _(_) {
 function _() {
   return (0, _.jsx)(`div`, {
     className: _,
-    children: _(`#Login_ConfirmCredentials`),
+    children: _.Localize(`#Login_ConfirmCredentials`),
   });
 }
 function _(_) {
@@ -80338,7 +82304,7 @@ function _(_) {
     _ = _ === 2 && !_,
     _ = _
       ? (0, _.jsx)(_, {
-          children: _(`#Login_CheckCredentials`),
+          children: _.Localize(`#Login_CheckCredentials`),
         })
       : (0, _.jsx)(_, {
           children: `\xA0`,
@@ -80357,7 +82323,7 @@ function _(_) {
         label: (0, _.jsx)(_, {
           highlight: !0,
           inputId: _,
-          children: _(`#Login_SignIn_WithAccountName`),
+          children: _.Localize(`#Login_SignIn_WithAccountName`),
         }),
         value: _,
         onChange: (_) => {
@@ -80371,7 +82337,7 @@ function _(_) {
         tone: _ ? `danger` : void 0,
         label: (0, _.jsx)(_, {
           inputId: _,
-          children: _(`#Login_Password`),
+          children: _.Localize(`#Login_Password`),
         }),
         value: _,
         onChange: (_) => {
@@ -80383,17 +82349,14 @@ function _(_) {
       }),
       _
         ? (0, _.jsx)(_, {
-            toolTipContent: _(`#Login_RememberMe_Tooltip`),
-            direction: `bottom`,
-            children: (0, _.jsx)(_, {
-              label: _(`#Login_RememberMe_Short`),
-              value: _,
-              onChange: _,
-            }),
+            label: _.Localize(`#Login_RememberMe_Short`),
+            title: _.Localize(`#Login_RememberMe_Tooltip`),
+            value: _,
+            onChange: _,
           })
         : (0, _.jsx)(`div`, {
             className: _,
-            children: _(`#Login_InsecureComputer`),
+            children: _.Localize(`#Login_InsecureComputer`),
           }),
       (0, _.jsx)(_, {
         loading: _,
@@ -80402,9 +82365,9 @@ function _(_) {
       _,
       !_ &&
         (0, _.jsx)(_, {
-          href: `${_.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
+          href: `${_.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
           align: `center`,
-          children: _(`#Login_Help_SignIn`),
+          children: _.Localize(`#Login_Help_SignIn`),
         }),
     ],
   });
@@ -80412,11 +82375,13 @@ function _(_) {
 var _ = 700;
 function _(_) {
   let _ = _(),
-    _ = () => _.ownerWindow.screen.width < _,
-    [_, _] = (0, _.useState)(_());
+    [_, _] = (0, _.useState)(!1);
   return (
+    (0, _.useLayoutEffect)(() => {
+      _(_.ownerWindow.screen.width < _);
+    }, [_.ownerWindow]),
     _(_.ownerWindow, `resize`, () => {
-      _(_());
+      _(_.ownerWindow.screen.width < _);
     }),
     (0, _.jsx)(`div`, {
       className: _,
@@ -80453,25 +82418,25 @@ function _(_) {
     children: [
       (0, _.jsx)(`div`, {
         className: _,
-        children: _(`#Login_MobileFlow_New`),
+        children: _.Localize(`#Login_MobileFlow_New`),
       }),
       (0, _.jsx)(`div`, {
         className: _,
         children: (0, _.jsx)(`div`, {
           className: _,
-          children: _(`#Login_MobileFlow_SignIn_ScanQR`),
+          children: _.Localize(`#Login_MobileFlow_SignIn_ScanQR`),
         }),
       }),
       (0, _.jsx)(`button`, {
         type: `button`,
         className: _,
         onClick: () => _.setShowQR(!0),
-        children: _(`#Login_MobileFlow_ShowMeQR_Button`),
+        children: _.Localize(`#Login_MobileFlow_ShowMeQR_Button`),
       }),
       (0, _.jsx)(`a`, {
         href: `${_.STORE_BASE_URL}mobile`,
         className: _,
-        children: _(`#Login_JoinBeta_Button`),
+        children: _.Localize(`#Login_JoinBeta_Button`),
       }),
     ],
   });
@@ -80491,7 +82456,7 @@ function _(_) {
     children: [
       (0, _.jsx)(_, {
         highlight: !0,
-        children: _(`#Login_SignIn_OrWithQRCode`),
+        children: _.Localize(`#Login_SignIn_OrWithQRCode`),
       }),
       (0, _.jsx)(`div`, {
         className: _,
@@ -80507,14 +82472,14 @@ function _(_) {
         _ &&
         (0, _.jsx)(`button`, {
           type: `button`,
-          className: `Tm-jfRMtBRM-`,
+          className: `X1WW6U5nVKQ-`,
           onClick: () => _(!1),
-          children: _(`#Button_Hide`),
+          children: _.Localize(`#Button_Hide`),
         }),
       (0, _.jsx)(`div`, {
         className: _,
         children: _(
-          `#Login_UseMobileAppForQR_Inline`,
+          _.Localize(`#Login_UseMobileAppForQR_Inline`),
           (0, _.jsx)(_, {
             href: `${_.STORE_BASE_URL}mobile`,
             align: `center`,
@@ -80553,7 +82518,7 @@ function _(_) {
 function _(_) {
   let { children: _, inputId: _, highlight: _ } = _;
   return (0, _.jsx)(`label`, {
-    className: _(_, _ && `uuyZ6LjUfmM-`),
+    className: (0, _.default)(_, _ && `jAjiX6ujKzY-`),
     htmlFor: _,
     children: _,
   });
@@ -80574,7 +82539,7 @@ function _(_) {
     type: _,
     autoFocus: _,
     onChange: (_) => _(_.target.value),
-    className: _(_, _ === `danger` && `UEoqhuWOzRQ-`, _),
+    className: (0, _.default)(_, _ === `danger` && `kbZo38RXgJ0-`, _),
     disabled: _,
     _: _,
   });
@@ -80582,12 +82547,12 @@ function _(_) {
 function _(_) {
   let { children: _, type: _ } = _;
   return (0, _.jsx)(`div`, {
-    className: _(void 0, _ === `error` && void 0),
+    className: (0, _.default)(void 0, _ === `error` && void 0),
     children: _,
   });
 }
 function _(_) {
-  let { label: _, onChange: _, value: _ } = _,
+  let { label: _, title: _, onChange: _, value: _ } = _,
     _ = () => {
       _ && _(!_);
     },
@@ -80595,6 +82560,7 @@ function _(_) {
   return (0, _.jsxs)(`div`, {
     role: `presentation`,
     className: _,
+    title: _,
     onClick: _,
     onKeyPress: (_) => {
       _.key == ` ` && (_(), _.preventDefault());
@@ -80623,7 +82589,7 @@ function _(_) {
     children:
       _ &&
       (0, _.jsx)(`div`, {
-        className: `YJe0LHTp6ck-`,
+        className: `GHsuNp6HqyY-`,
         children: (0, _.jsx)(_, {
           strokeWidth: 35,
         }),
@@ -80646,7 +82612,7 @@ function _(_) {
     className: _,
     children: (0, _.jsx)(_, {
       ..._,
-      children: _(`#Login_SignIn`),
+      children: _.Localize(`#Login_SignIn`),
     }),
   });
 }
@@ -80657,12 +82623,12 @@ function _() {
       (0, _.jsx)(`button`, {
         className: _,
         type: `submit`,
-        children: _(`#Login_SignIn`),
+        children: _.Localize(`#Login_SignIn`),
       }),
       (0, _.jsx)(`button`, {
         className: _,
         onClick: () => SteamClient.User.StartShutdown(!0),
-        children: _(`#Login_ExitSteam`),
+        children: _.Localize(`#Login_ExitSteam`),
       }),
     ],
   });
@@ -80677,14 +82643,14 @@ function _(_) {
   let { className: _, loading: _, disabled: _, children: _, ..._ } = _,
     _ = _ || _;
   return (0, _.jsxs)(`button`, {
-    className: _(_, _ && `RxbqvJUtVkY-`, _),
+    className: (0, _.default)(_, _ && `QAA-fChDQFA-`, _),
     disabled: _,
     ..._,
     children: [
       _,
       _ &&
         (0, _.jsx)(`div`, {
-          className: `awC7VwKQbig-`,
+          className: `_7C2-lQ9GWRA-`,
           children: (0, _.jsx)(_, {
             size: `small`,
           }),
@@ -80704,14 +82670,14 @@ function _() {
     compact: !0,
     children: (0, _.jsxs)(_, {
       alignItems: `center`,
-      className: _(_, _.IN_STEAMUI && `_4RvpbYTZ8BY-`),
+      className: (0, _.default)(_, _.IN_STEAMUI && `ZV64fnc7PdA-`),
       children: [
         (0, _.jsx)(_, {
           size: `xlarge`,
         }),
         (0, _.jsx)(`div`, {
-          className: _(_),
-          children: _(
+          className: (0, _.default)(_),
+          children: _.Localize(
             _.IN_STEAMUI
               ? `#Login_ConnectingToSteam`
               : `#Login_LoadingAccountInfo`,
@@ -80724,11 +82690,11 @@ function _() {
 function _(_) {
   let { size: _ } = _;
   return (0, _.jsx)(`div`, {
-    className: _(
+    className: (0, _.default)(
       _,
-      _ == `small` && `iqNLO3lgZOA-`,
-      (_ == `medium` || !_) && `Ex3FgjEO79s-`,
-      _ == `large` && `ztr499IaIWk-`,
+      _ == `small` && `-GciojHJFJo-`,
+      (_ == `medium` || !_) && `aNnjBlEgXeE-`,
+      _ == `large` && `SkijseWcXzM-`,
     ),
   });
 }
@@ -80738,7 +82704,7 @@ function _(_) {
     children: (0, _.jsx)(`button`, {
       className: _,
       onClick: _.onRequestOffline,
-      children: _(`#Login_GoOffline_Button`),
+      children: _.Localize(`#Login_GoOffline_Button`),
     }),
   });
 }
@@ -80769,8 +82735,8 @@ function _(_) {
           }),
           _ &&
             (0, _.jsx)(`div`, {
-              className: `NDMhUzJJMgE-`,
-              children: _(`#Login_GoOffline_Description`),
+              className: `sH-b0kW7QCY-`,
+              children: _.Localize(`#Login_GoOffline_Description`),
             }),
           (0, _.jsxs)(_, {
             className: _,
@@ -80778,7 +82744,7 @@ function _(_) {
               (0, _.jsx)(_, {
                 className: _,
                 onClick: _,
-                children: _(`#Button_Retry`),
+                children: _.Localize(`#Button_Retry`),
               }),
               _ &&
                 _ &&
@@ -80791,8 +82757,8 @@ function _(_) {
       }),
       _ &&
         (0, _.jsx)(`div`, {
-          className: `GhZ9shks4kE-`,
-          children: _(`#Login_Error_Reference`, _),
+          className: `La0SBF0lXr0-`,
+          children: _.Localize(`#Login_Error_Reference`, _),
         }),
     ],
   });
@@ -80875,7 +82841,7 @@ function _(_) {
                   children: [
                     _ &&
                       (0, _.jsx)(_, {
-                        children: _(`#Login_IncorrectSteamGuard`),
+                        children: _.Localize(`#Login_IncorrectSteamGuard`),
                       }),
                     (0, _.jsx)(
                       _,
@@ -80897,7 +82863,7 @@ function _(_) {
               (0, _.jsx)(_, {
                 onClick: _,
                 align: `center`,
-                children: _(_),
+                children: _.Localize(_),
               }),
             (0, _.jsx)(_, {
               type: _,
@@ -80915,9 +82881,9 @@ function _(_) {
   return (
     _.type === `mobile`
       ? ((_ = `${_.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`),
-        (_ = _(`#Login_Help_AccessMobileApp`)))
+        (_ = _.Localize(`#Login_Help_AccessMobileApp`)))
       : ((_ = `${_.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
-        (_ = _(`#Login_Help_AccessEmail`))),
+        (_ = _.Localize(`#Login_Help_AccessEmail`))),
     _.onCodeHelp
       ? (0, _.jsx)(_, {
           onClick: () => _.onCodeHelp(_),
@@ -80940,11 +82906,11 @@ function _() {
       children: [
         (0, _.jsx)(`div`, {
           className: _,
-          children: _(`#Login_EnterBackupCode`),
+          children: _.Localize(`#Login_EnterBackupCode`),
         }),
         (0, _.jsx)(`div`, {
           className: _,
-          children: _(`#Login_EnterBackupCodeDescription`),
+          children: _.Localize(`#Login_EnterBackupCodeDescription`),
         }),
       ],
     }),
@@ -80958,7 +82924,7 @@ function _() {
     children: [
       (0, _.jsx)(`div`, {
         className: _,
-        children: _(`#Login_EnterMobileCode`),
+        children: _.Localize(`#Login_EnterMobileCode`),
       }),
       (0, _.jsx)(_, {
         className: _,
@@ -80977,7 +82943,7 @@ function _(_) {
         spacing: 6,
         children: (0, _.jsx)(`div`, {
           className: _,
-          children: _(
+          children: _.LocalizeReact(
             `#Login_EnterEmailCode`,
             (0, _.jsx)(`span`, {
               className: _,
@@ -80994,18 +82960,17 @@ function _(_) {
 }
 function _(_) {
   let { accountName: _, type: _ } = _,
-    _ = _(
+    _ =
       _ === `mobile`
-        ? `#Login_MobileProtectingAccount`
-        : `#Login_EmailProtectingAccount`,
-    ),
+        ? _.Localize(`#Login_MobileProtectingAccount`)
+        : _.Localize(`#Login_EmailProtectingAccount`),
     _ = _();
   return (0, _.jsxs)(`div`, {
     className: _,
     children: [
       (0, _.jsx)(`div`, {
         className: _,
-        children: _(
+        children: _.LocalizeReact(
           `#Login_ActiveAccountName`,
           (0, _.jsx)(`span`, {
             className: _,
@@ -81015,7 +82980,7 @@ function _(_) {
       }),
       !_ &&
         (0, _.jsx)(`div`, {
-          className: `OnZT5h35034-`,
+          className: `DSy9L5eaj5o-`,
           children: _,
         }),
     ],
@@ -81033,7 +82998,7 @@ function _() {
         }),
         (0, _.jsx)(`div`, {
           className: _,
-          children: _(`#Login_AwaitingMobileConfirmation`),
+          children: _(_.Localize(`#Login_AwaitingMobileConfirmation`)),
         }),
       ],
     }),
@@ -81100,7 +83065,7 @@ function _(_) {
           children: (0, _.jsx)(_, {
             align: `center`,
             onClick: _,
-            children: _(`#Login_EnterCodeInstead`),
+            children: _.Localize(`#Login_EnterCodeInstead`),
           }),
         })
       : (0, _.jsx)(`div`, {
@@ -81108,7 +83073,7 @@ function _(_) {
           children: (0, _.jsx)(_, {
             align: `center`,
             onClick: _,
-            children: _(`#Login_EnterCodeInstead`),
+            children: _.Localize(`#Login_EnterCodeInstead`),
           }),
         });
   return (0, _.jsx)(_, {
@@ -81132,7 +83097,7 @@ function _(_) {
 }
 function _(_) {
   let { children: _, align: _, inline: _ } = _,
-    _ = _(_, _ === `center` && `l7sOdMjkbL4-`);
+    _ = (0, _.default)(_, _ === `center` && `p1pxbjr1kTM-`);
   if (`href` in _) {
     let _ = _.IN_STEAMUI ? `steam://openurl_external/${_.href}` : _.href;
     return (0, _.jsx)(`a`, {
@@ -81164,10 +83129,10 @@ function _(_) {
       ariaLabelledBy: _,
       children: _,
     } = _,
-    _ = _(
+    _ = (0, _.default)(
       _,
-      _ === `center` && `fk1O8iYiDHE-`,
-      _ === `center` && `sNXGff0pTcw-`,
+      _ === `center` && `mQfJWqZo0U8-`,
+      _ === `center` && `h53Pyn--gk4-`,
       _,
     ),
     _ = _
@@ -81233,10 +83198,10 @@ function _(_) {
     _ = (0, _.useId)();
   return (0, _.jsxs)(_, {
     gap: _.IN_STEAMUI ? 0 : 32,
-    className: _(
+    className: (0, _.default)(
       _,
-      _ && `_1J6JPt07wYU-`,
-      _ && `kuD9SQFqlC4-`,
+      _ && `rvRWTXNBcK4-`,
+      _ && `L35Fcv9fbYo-`,
       _.IN_STEAMUI && `IN_CLIENT`,
     ),
     ariaLabelledBy: _ ?? _,
@@ -81258,7 +83223,7 @@ function _(_) {
 function _(_) {
   let {
     realm: _ = _.EREALM,
-    launcherType: _ = _.IN_STEAMUI ? _.LAUNCHER_TYPE : void 0,
+    launcherType: _ = _()?.LAUNCHER_TYPE,
     className: _ = _,
   } = _;
   return _ === 8
@@ -81288,7 +83253,7 @@ function _(_) {
         type: `button`,
         className: _,
         onClick: _.onBack,
-        "aria-label": _(`#Button_Back`),
+        "aria-label": _.Localize(`#Button_Back`),
         children: (0, _.jsx)(_, {
           className: _,
         }),
@@ -81421,11 +83386,10 @@ function _() {
 function _(_) {
   let _ = (0, _.useRef)(_);
   _.current = _;
-  let [_, _] = (0, _.useState)(!0),
-    _ = _();
+  let [_, _] = (0, _.useState)(!0);
   return (
     (0, _.useEffect)(() => {
-      if (new URLSearchParams(_.search).get(`need_password`)) {
+      if (new URLSearchParams(location.search).get(`need_password`)) {
         _(!1);
         return;
       }
@@ -81440,7 +83404,7 @@ function _(_) {
         .catch((_) => {
           _(`PerformRefresh exception`, _), _(!1);
         });
-    }, [_, _.search]),
+    }, [_]),
     _
   );
 }
@@ -81498,7 +83462,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
     _(
-      () => import(`./greenenvelope.js?contenthash=B4c9iKkJ`),
+      () => import(`./greenenvelope.js?contenthash=BqSDIoHD`),
       __vite__mapDeps([0, 1, 2, 3]),
       import.meta.url,
     ),
@@ -81508,7 +83472,7 @@ var _ = _.lazy(() =>
       await _(
         async () => {
           let { GlobalFooter: _ } = await import(
-            `./src.js?contenthash=Ej24kozt`
+            `./src.js?contenthash=DJswXlWZ`
           );
           return {
             GlobalFooter: _,
@@ -81793,7 +83757,7 @@ async function _(_) {
               ),
             "../localization/main_malay.json": () =>
               _(
-                () => import(`./main_malay.js?contenthash=JQqbNLiA`),
+                () => import(`./main_malay.js?contenthash=BToBUTtY`),
                 [],
                 import.meta.url,
               ),
@@ -81993,7 +83957,7 @@ async function _(_) {
                   ),
                 "../localization/main_malay.json": () =>
                   _(
-                    () => import(`./main_malay.js?contenthash=JQqbNLiA`),
+                    () => import(`./main_malay.js?contenthash=BToBUTtY`),
                     [],
                     import.meta.url,
                   ),
@@ -82093,6 +84057,11 @@ async function _(_) {
   _ = void 0;
 }
 export {
+  _,
+  _,
+  _,
+  _,
+  _,
   _,
   _,
   _,

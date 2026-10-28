@@ -4952,7 +4952,7 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 .daily_deal .bundle_base_discount {
     font-size: 19px;
 }
-.daily_deal.store_capsule .bundle_base_discount {
+.daily_deal.store_capsule .no_discount .bundle_base_discount {
     display: none;
 }
 

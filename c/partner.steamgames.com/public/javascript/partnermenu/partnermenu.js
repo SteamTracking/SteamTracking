@@ -33203,6 +33203,11 @@ Error generating stack: ` +
                 _: ReaderProto.readBool,
                 _: WriterProto.writeBool,
               },
+              combined_discount_pct: {
+                _: 57,
+                _: ReaderProto.readInt32,
+                _: WriterProto.writeInt32,
+              },
             },
           }),
           _.sm_m
@@ -33518,6 +33523,16 @@ Error generating stack: ` +
                 _: 2,
                 _: ReaderProto.readInt32,
                 _: WriterProto.writeInt32,
+              },
+              alt_text: {
+                _: 3,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+              category: {
+                _: 4,
+                _: ReaderProto.readEnum,
+                _: WriterProto.writeEnum,
               },
             },
           }),
@@ -33846,6 +33861,16 @@ Error generating stack: ` +
                 _: 14,
                 _: ReaderProto.readBool,
                 _: WriterProto.writeBool,
+              },
+              screenshot_small: {
+                _: 15,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+              trailer_id: {
+                _: 16,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
               },
             },
           }),
@@ -34228,7 +34253,7 @@ Error generating stack: ` +
             _,
             0,
             -1,
-            [1, 10, 13, 15, 18, 31],
+            [1, 10, 13, 15, 18, 31, 36],
             null,
           );
       }
@@ -34397,6 +34422,20 @@ Error generating stack: ` +
                 _: 33,
                 _: ReaderProto.readBool,
                 _: WriterProto.writeBool,
+              },
+              event_spotlight: {
+                _: 34,
+                _: StoreItem_ExtraDetails_EventSpotlight,
+              },
+              music_album: {
+                _: 35,
+                _: StoreItem_ExtraDetails_MusicAlbum,
+              },
+              sale_pages: {
+                _: 36,
+                _: StoreItem_ExtraDetails_SalePage,
+                _: !0,
+                _: !0,
               },
             },
           }),
@@ -35704,6 +35743,319 @@ Error generating stack: ` +
       }
       getClassName() {
         return `StoreItem_ExtraDetails_Season`;
+      }
+    },
+    StoreItem_ExtraDetails_EventSpotlight = class _ extends import_google_protobuf.Message {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        super(),
+          _.prototype.clan_account_id || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(
+            this,
+            _,
+            0,
+            -1,
+            void 0,
+            null,
+          );
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              clan_account_id: {
+                _: 1,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              event_gid: {
+                _: 2,
+                _: ReaderProto.readFixed64String,
+                _: WriterProto.writeFixed64String,
+              },
+              announcement_gid: {
+                _: 3,
+                _: ReaderProto.readFixed64String,
+                _: WriterProto.writeFixed64String,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_EventSpotlight`;
+      }
+    },
+    StoreItem_ExtraDetails_MusicAlbum = class _ extends import_google_protobuf.Message {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        super(),
+          _.prototype.tracks || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(this, _, 0, -1, [1], null);
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              tracks: {
+                _: 1,
+                _: StoreItem_ExtraDetails_MusicAlbum_Track,
+                _: !0,
+                _: !0,
+              },
+              artist: {
+                _: 2,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+              composer: {
+                _: 3,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+              label: {
+                _: 4,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+              other_credits: {
+                _: 5,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_MusicAlbum`;
+      }
+    },
+    StoreItem_ExtraDetails_MusicAlbum_Track = class _ extends import_google_protobuf.Message {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        super(),
+          _.prototype.disc_number || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(
+            this,
+            _,
+            0,
+            -1,
+            void 0,
+            null,
+          );
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              disc_number: {
+                _: 1,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              track_number: {
+                _: 2,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              name: {
+                _: 3,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+              other_name: {
+                _: 4,
+                _: ReaderProto.readString,
+                _: WriterProto.writeString,
+              },
+              duration_seconds: {
+                _: 5,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_MusicAlbum_Track`;
+      }
+    },
+    StoreItem_ExtraDetails_SalePage = class _ extends import_google_protobuf.Message {
+      static ImplementsStaticInterface() {}
+      constructor(_ = null) {
+        super(),
+          _.prototype.clan_account_id || AddAccessors(_._()),
+          import_google_protobuf.Message.initialize(
+            this,
+            _,
+            0,
+            -1,
+            void 0,
+            null,
+          );
+      }
+      static sm_m;
+      static sm_mbf;
+      static M() {
+        return (
+          (_.sm_m ||= {
+            proto: _,
+            fields: {
+              clan_account_id: {
+                _: 1,
+                _: ReaderProto.readUint32,
+                _: WriterProto.writeUint32,
+              },
+              event_gid: {
+                _: 2,
+                _: ReaderProto.readFixed64String,
+                _: WriterProto.writeFixed64String,
+              },
+            },
+          }),
+          _.sm_m
+        );
+      }
+      static MBF() {
+        return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+      }
+      toObject(_ = !1) {
+        return _.toObject(_, this);
+      }
+      static toObject(_, _) {
+        return ToObject(_._(), _, _);
+      }
+      static fromObject(_) {
+        return FromObject(_._(), _);
+      }
+      static deserializeBinary(_) {
+        let _ = new import_google_protobuf.BinaryReader(_),
+          _ = new _();
+        return _.deserializeBinaryFromReader(_, _);
+      }
+      static deserializeBinaryFromReader(_, _) {
+        return DeserializeBinary(_.MBF(), _, _);
+      }
+      serializeBinary() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+      }
+      static serializeBinaryToWriter(_, _) {
+        SerializeBinary(_._(), _, _);
+      }
+      serializeBase64String() {
+        var _ = new import_google_protobuf.BinaryWriter();
+        return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+      }
+      getClassName() {
+        return `StoreItem_ExtraDetails_SalePage`;
       }
     },
     StoreItem_OptInRegistrationTags = class _ extends import_google_protobuf.Message {
@@ -37887,6 +38239,11 @@ Error generating stack: ` +
                 _: ReaderProto.readBool,
                 _: WriterProto.writeBool,
               },
+              ignored_creator: {
+                _: 8,
+                _: ReaderProto.readBool,
+                _: WriterProto.writeBool,
+              },
               not_in_users_language: {
                 _: 10,
                 _: ReaderProto.readBool,
@@ -38114,7 +38471,6 @@ Error generating stack: ` +
       MEDIA_CDN_COMMUNITY_URL: ``,
       MEDIA_CDN_URL: ``,
       CLAN_CDN_ASSET_URL: ``,
-      COMMUNITY_ASSETS_BASE_URL: ``,
       VIDEO_CDN_URL: ``,
       COMMUNITY_CDN_URL: ``,
       COMMUNITY_CDN_ASSET_URL: ``,
@@ -38127,7 +38483,6 @@ Error generating stack: ` +
       STORE_CHECKOUT_BASE_URL: ``,
       LOGIN_BASE_URL: ``,
       SUPPORT_BASE_URL: ``,
-      STORE_ICON_BASE_URL: ``,
       STORE_ITEM_BASE_URL: ``,
       IMG_URL: ``,
       STEAMTV_BASE_URL: ``,
@@ -38135,21 +38490,12 @@ Error generating stack: ` +
       PARTNER_BASE_URL: ``,
       STATS_BASE_URL: ``,
       INTERNAL_STATS_BASE_URL: ``,
-      BASE_URL_STORE_CDN_ASSETS: ``,
       IN_CLIENT: !1,
-      USE_POPUPS: !1,
       IN_MOBILE: !1,
       IN_MOBILE_WEBVIEW: !1,
-      IN_TENFOOT: !1,
       PLATFORM: ``,
-      ARCH: ``,
       SNR: ``,
-      LAUNCHER_TYPE: 0,
       EREALM: 0,
-      IN_CHROMEOS: !1,
-      TESLA: !1,
-      LOCAL_HOSTNAME: ``,
-      PACKAGE_CL: ``,
       WEBAPI_BASE_URL: ``,
       TOKEN_URL: ``,
       BUILD_TIMESTAMP: 0,
@@ -38157,15 +38503,6 @@ Error generating stack: ` +
       FROM_WEB: !1,
       WEBSITE_ID: `Unknown`,
       IN_STEAMUI: !1,
-      FORCED_DISPLAY_MODE: void 0,
-      ON_FRAME: !1,
-      IS_STEAMOS: !1,
-      ON_STEAMOS_CLIENT_BRANCH: !1,
-      IN_GAMESCOPE: !1,
-      USE_LONGEST_LOC_STRING: !1,
-      SILENT_STARTUP: !1,
-      DEV_MODE: !1,
-      CLIENT_SESSION: 0,
       NOW: 0,
     },
     UserConfig$1 = {
@@ -38281,6 +38618,28 @@ Error generating stack: ` +
       BCanAccessCookies() && (_ = GetCookie(k_PresentationModeCookie)),
       !!(_ && Number.parseInt(_) === 1)
     );
+  }
+  document.currentScript?.src;
+  function AssetURL(_) {
+    return _;
+  }
+  var Config = window.Config ?? Config$1,
+    UserConfig = window.UserConfig ?? UserConfig$1,
+    WaitForConfigReady = window.Config
+      ? () => Promise.resolve()
+      : WaitForConfigLoad;
+  window.Config && Object.assign(Config$1, window.Config),
+    window.UserConfig && Object.assign(UserConfig$1, window.UserConfig),
+    window.WebConfig && Object.assign(Config$1, window.WebConfig);
+  var WebConfig = InitWebConfig();
+  function InitWebConfig() {
+    return window.WebConfig
+      ? window.WebConfig
+      : {
+          get WEBSITE_ID() {
+            return Config$1.WEBSITE_ID;
+          },
+        };
   }
   var ConfigContext = import_react.createContext({}),
     useConfigContext = (_) => {
@@ -39210,8 +39569,8 @@ Error generating stack: ` +
     }
     static Get() {
       return (
-        window.g_LogManager ?? (window.g_LogManager = new _()),
-        window.g_LogManager
+        globalThis.g_LogManager ?? (globalThis.g_LogManager = new _()),
+        globalThis.g_LogManager
       );
     }
     get Loading() {
@@ -39815,9 +40174,17 @@ Error generating stack: ` +
         ? ENavLayout.GRID
         : ENavLayout.GEOMETRIC;
     else if (_.childElementCount > 0) {
-      let _ = _.getComputedStyle(_.firstElementChild);
-      if (_.float === `left`) return ENavLayout.ROW;
-      if (_.float === `right`) return ENavLayout.ROW_REVERSE;
+      let _ = _.getComputedStyle(_.firstElementChild),
+        _ = _.float;
+      if (
+        (_ === `inline-start`
+          ? ((_ = `left`), _.direction === `rtl` && (_ = `right`))
+          : _ === `inline-end` &&
+            ((_ = `right`), _.direction === `rtl` && (_ = `left`)),
+        _ === `left`)
+      )
+        return ENavLayout.ROW;
+      if (_ === `right`) return ENavLayout.ROW_REVERSE;
       if (_.display === `inline` || _.display === `inline-block`)
         return ENavLayout.GRID;
     }
@@ -43818,6 +44185,7 @@ Error generating stack: ` +
     verifiedprogram = 100756,
     trailercarousel = 100757,
     greatonframe = 100804,
+    salesmartsale_events_only = 100805,
     naveventdictionary_default$1 = {
       unknown: 0,
       "store.steampowered.com": 1,
@@ -44512,101 +44880,91 @@ Error generating stack: ` +
       "personalcalendar-calendar": 100802,
       "personalcalendar-homepage": 100803,
       greatonframe,
+      salesmartsale_events_only,
     },
     naveventdictionary_default = naveventdictionary_default$1;
   function BIsKnownEventComponent(_) {
     return _ in naveventdictionary_default;
   }
   var CStoreNavEvents = class _ {
-    static InstrumentLink(_, _, _ = null) {
-      let _ = _.GetSNRLinkParam(_, _),
-        _ = _.GetCuratorClanIDParam(_);
-      return _.AddNavParamToURL(_, _, _);
-    }
-    static ParseSNR(_) {
-      let _ = _.split(`_`) || [];
-      return {
-        domain: _.DecodeEventComponent(_[0]),
-        controller: _.DecodeEventComponent(_[1]),
-        method: _.DecodeEventComponent(_[2]),
-        submethod: _.DecodeEventComponent(_[3]),
-        feature: _.DecodeEventComponent(_[4]),
-        depth: _[5] ? Number(_[5]) : void 0,
-      };
-    }
-    static GetSNRLinkParam(_, _ = null) {
-      let _ = _.ComputeLinkPrefix(
-        _.domain,
-        _.controller,
-        _.method,
-        _.submethod,
-      );
-      _ = _ ?? _.depth ?? null;
-      let _ = _.EncodeEventComponent(_.feature);
-      return _ && ((_ += `_` + _), _ && (_ += `_` + _)), _;
-    }
-    static GetCuratorClanIDParam(_) {
-      return _.curator_clanid ?? null;
-    }
-    static AddNavParamToURL(_, _, _) {
-      if (!_ || _.length == 0) return _;
-      try {
-        let _ = new URL(EnsureKnownURLScheme(_)),
-          _ = new URLSearchParams(_.search);
-        return (
-          _.set(`snr`, encodeURIComponent(_ ?? ``)),
-          _ && _.set(`curator_clanid`, encodeURIComponent(_ ?? ``)),
-          _.origin + _.pathname + `?` + _.toString() + _.hash
+      static InstrumentLink(_, _, _ = null) {
+        let _ = _.GetSNRLinkParam(_, _),
+          _ = _.GetCuratorClanIDParam(_);
+        return _.AddNavParamToURL(_, _, _);
+      }
+      static ParseSNR(_) {
+        let _ = _.split(`_`) || [];
+        return {
+          domain: _.DecodeEventComponent(_[0]),
+          controller: _.DecodeEventComponent(_[1]),
+          method: _.DecodeEventComponent(_[2]),
+          submethod: _.DecodeEventComponent(_[3]),
+          feature: _.DecodeEventComponent(_[4]),
+          depth: _[5] ? Number(_[5]) : void 0,
+        };
+      }
+      static GetSNRLinkParam(_, _ = null) {
+        let _ = _.ComputeLinkPrefix(
+          _.domain,
+          _.controller,
+          _.method,
+          _.submethod,
         );
-      } catch (_) {
-        return console.error(_, _), _;
+        _ = _ ?? _.depth ?? null;
+        let _ = _.EncodeEventComponent(_.feature);
+        return _ && ((_ += `_` + _), _ && (_ += `_` + _)), _;
       }
-    }
-    static ComputeLinkPrefix(_, _, _, _) {
-      let _ = ``;
-      return (
-        (_ += _.EncodeEventComponent(_)),
-        (_ += `_`),
-        (_ += _.EncodeEventComponent(_)),
-        (_ += `_`),
-        (_ += _.EncodeEventComponent(_)),
-        (_ += `_`),
-        (_ += _.EncodeEventComponent(_)),
-        _
-      );
-    }
-    static EncodeEventComponent(_) {
-      return _
-        ? BIsKnownEventComponent(_)
-          ? `` + naveventdictionary_default[_]
-          : (_.match(/^[0-9]+$/) || (_ = _.replace(/^[0-9]+/, ``)),
-            _.replace(/[^a-zA-Z0-9\- ]+/g, ``))
-        : ``;
-    }
-    static DecodeEventComponent(_) {
-      let _ = _ && parseInt(_);
-      if (_ && naveventdictionary_default) {
-        for (let _ in naveventdictionary_default)
-          if (naveventdictionary_default[_] == _) return _;
+      static GetCuratorClanIDParam(_) {
+        return _.curator_clanid ?? null;
       }
-      return _.SanitizeEventComponent(_);
-    }
-    static SanitizeEventComponent(_) {
-      return !_ || !_.match(/^[a-zA-Z0-9\-.]*$/) ? `` : _;
-    }
-  };
-  document.currentScript?.src;
-  function AssetURL(_) {
-    return _;
-  }
-  var Config = window.Config ?? Config$1,
-    UserConfig = window.UserConfig ?? UserConfig$1,
-    WaitForConfigReady = window.Config
-      ? () => Promise.resolve()
-      : WaitForConfigLoad;
-  window.Config && Object.assign(Config$1, window.Config),
-    window.UserConfig && Object.assign(UserConfig$1, window.UserConfig);
-  var _NavEventContext = import_react.createContext({}),
+      static AddNavParamToURL(_, _, _) {
+        if (!_ || _.length == 0) return _;
+        try {
+          let _ = new URL(EnsureKnownURLScheme(_)),
+            _ = new URLSearchParams(_.search);
+          return (
+            _.set(`snr`, encodeURIComponent(_ ?? ``)),
+            _ && _.set(`curator_clanid`, encodeURIComponent(_ ?? ``)),
+            _.origin + _.pathname + `?` + _.toString() + _.hash
+          );
+        } catch (_) {
+          return console.error(_, _), _;
+        }
+      }
+      static ComputeLinkPrefix(_, _, _, _) {
+        let _ = ``;
+        return (
+          (_ += _.EncodeEventComponent(_)),
+          (_ += `_`),
+          (_ += _.EncodeEventComponent(_)),
+          (_ += `_`),
+          (_ += _.EncodeEventComponent(_)),
+          (_ += `_`),
+          (_ += _.EncodeEventComponent(_)),
+          _
+        );
+      }
+      static EncodeEventComponent(_) {
+        return _
+          ? BIsKnownEventComponent(_)
+            ? `` + naveventdictionary_default[_]
+            : (_.match(/^[0-9]+$/) || (_ = _.replace(/^[0-9]+/, ``)),
+              _.replace(/[^a-zA-Z0-9\- ]+/g, ``))
+          : ``;
+      }
+      static DecodeEventComponent(_) {
+        let _ = _ && parseInt(_);
+        if (_ && naveventdictionary_default) {
+          for (let _ in naveventdictionary_default)
+            if (naveventdictionary_default[_] == _) return _;
+        }
+        return _.SanitizeEventComponent(_);
+      }
+      static SanitizeEventComponent(_) {
+        return !_ || !_.match(/^[a-zA-Z0-9\-.]*$/) ? `` : _;
+      }
+    },
+    _NavEventContext = import_react.createContext({}),
     _OriginatingNavEventContext = import_react.createContext(void 0);
   function useStoreNavEventContext() {
     return import_react.useContext(_NavEventContext);
@@ -53553,7 +53911,7 @@ Error generating stack: ` +
         (Header_Nav_UsersPermissions_Overview$17 = `Panoramica`),
         (Header_Nav_UsersPermissions_CompanyDetails$17 = `Dettagli della società`),
         (Header_Nav_UsersPermissions_Applications$17 = `Mostra le applicazioni`),
-        (Header_Nav_UsersPermissions_Users$17 = `Gestisci gli utenti`),
+        (Header_Nav_UsersPermissions_Users$17 = `Gestione utenti`),
         (Header_Nav_UsersPermissions_Groups$17 = `Gestisci i gruppi`),
         (Header_Nav_FinancialInfo$17 = `Dati finanziari`),
         (Header_Nav_DocumentationHelp$17 = `Documentazione e aiuto`),

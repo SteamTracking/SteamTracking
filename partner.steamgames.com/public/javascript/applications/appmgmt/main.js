@@ -5,358 +5,365 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./rootlogin.js?contenthash=Da8I1HML",
-      "./mobx.esm.js?contenthash=CuqnC1HA",
-      "./dialogs.js?contenthash=Ef6x5QZW",
-      "./long.js?contenthash=BCeVig72",
-      "./react-router.js?contenthash=BY_BIsGq",
+      "./rootlogin.js?contenthash=DzemQLxh",
+      "./mobx.esm.js?contenthash=BRGZcCup",
+      "./dialogs.js?contenthash=D1pxcxuf",
+      "./long.js?contenthash=DWB27pGN",
+      "./react-router.js?contenthash=nQj0_J23",
       "../../../css/applications/appmgmt/dialogs.css?contenthash=BSBzYtmn",
-      "./modals.js?contenthash=BkJN1F7L",
-      "./browserapi.js?contenthash=MutfO-e5",
-      "./axios.js?contenthash=BJ1Ik0cP",
-      "./stringutils.js?contenthash=BDvx82Qs",
-      "./steamid.js?contenthash=M22uw5Sj",
-      "./base64-js.js?contenthash=BHvtON3p",
-      "./newlogindialog.js?contenthash=C2ZZKSeL",
-      "./historyutils.js?contenthash=By1ZfcRb",
-      "./throbber.js?contenthash=DT0j8i1L",
-      "../../../css/applications/appmgmt/throbber.css?contenthash=B5cG3W4v",
-      "../../../css/applications/appmgmt/newlogindialog.css?contenthash=CnHDYOW7",
-      "./steamml_routing.js?contenthash=CjkjQ6pr",
-      "./react-router-dom.js?contenthash=DhWJoSjQ",
-      "./formatnumber.js?contenthash=DWn3Ey-H",
-      "./getpreferredlocales.js?contenthash=D7VZe_5-",
-      "../../../css/applications/appmgmt/steamml_routing.css?contenthash=COhnPqGs",
-      "./steamdeckcompatibilitydetails.js?contenthash=im06qYXx",
-      "./deckverified.js?contenthash=CNumniKJ",
-      "./storebrowsequerycontext.js?contenthash=B76-TDtt",
-      "./servicetransportprovider.js?contenthash=CCnsd9OK",
-      "./utils.js?contenthash=DYuUgnil",
-      "./useQuery.js?contenthash=DLhLtH8F",
-      "./dataloader.js?contenthash=tOrZtG9l",
-      "./axiosutils.js?contenthash=DP-p1hH0",
-      "../../../css/applications/appmgmt/deckverified.css?contenthash=BTgEGrV2",
-      "./steamdeckcompatibilitydetails_admin.js?contenthash=CM-AdzOa",
-      "./pricing_routing.js?contenthash=CA0thmAt",
-      "./playerstore.js?contenthash=tsQOvGez",
-      "./reactqueryroot.js?contenthash=BRWegL9C",
-      "./mutation.js?contenthash=BUldeZVU",
-      "./currencyformat.js?contenthash=lqE5xB1s",
-      "./appinfo.js?contenthash=imb3XXH6",
-      "./steammessages_player_pb.js?contenthash=BylXZrR9",
-      "./appinfostore.js?contenthash=G3q5yx18",
-      "./steammessages_community_pb.js?contenthash=Cl3PrhFl",
-      "./pricingguidelineobject.js?contenthash=zLI3iiBM",
-      "./currencyutils.js?contenthash=DLilGjyJ",
-      "./tabulatorutils.js?contenthash=DjJCijIL",
-      "./render.js?contenthash=DtkfYyDz",
-      "./formfactor.js?contenthash=DTYIXSXL",
-      "./useclienthints.js?contenthash=wu2Qg6YR",
-      "./text.js?contenthash=Cyl0Hm-O",
-      "../../../css/applications/appmgmt/text.css?contenthash=COa9wYXf",
-      "./variantdefaults.js?contenthash=Cm8I2gIx",
+      "./modals.js?contenthash=Bi1vin1f",
+      "./logindialog.js?contenthash=C69DEsgZ",
+      "./cookiedefinitions.js?contenthash=DyujrOaq",
+      "./cookies.client.js?contenthash=COwwz8KA",
+      "./button.js?contenthash=CU33iYfg",
+      "./flex.js?contenthash=BqvwdiAv",
+      "./formfactor.js?contenthash=PvnRLh_o",
+      "./useclienthints.js?contenthash=Dfr17cBR",
+      "./layout.js?contenthash=D-HixbCM",
+      "../../../css/applications/appmgmt/layout.css?contenthash=DoE9LMAn",
+      "./variantdefaults.js?contenthash=CybMBV5N",
       "../../../css/applications/appmgmt/variantdefaults.css?contenthash=QnA4YZGU",
-      "../../../css/applications/appmgmt/render.css?contenthash=LKqXWYdL",
-      "../../../css/applications/appmgmt/tabulatorutils.css?contenthash=DbzYDbls",
-      "./eventdevfeaturestore.js?contenthash=DhrGkbYa",
-      "./ajaxhooks.js?contenthash=CXJiwPpE",
-      "./eventtime.js?contenthash=DNAxosnM",
-      "./debugglobal.js?contenthash=Bxli5Vsy",
-      "./pricinggridcell.js?contenthash=DiY9Ygmu",
-      "./useMutation.js?contenthash=D8rfPQfp",
-      "./button.js?contenthash=DOIwfHfd",
-      "./linkbase.js?contenthash=CLDVLUC4",
-      "./storenaveventcontext.js?contenthash=CrGsfo-T",
+      "../../../css/applications/appmgmt/flex.css?contenthash=LKqXWYdL",
+      "./linkbase.js?contenthash=BaP4bGE1",
+      "./storenaveventcontext.js?contenthash=BcTEXyXR",
       "../../../css/applications/appmgmt/button.css?contenthash=B8R8ZmOl",
-      "./simplesuccesserror.js?contenthash=B-IH9Fe6",
+      "./axios.js?contenthash=ftGxbJpA",
+      "./throbber.js?contenthash=1eooMzHf",
+      "../../../css/applications/appmgmt/throbber.css?contenthash=B5cG3W4v",
+      "./base64-js.js?contenthash=CvuH4Mv9",
+      "./webapiinterface.js?contenthash=DeyRwKxB",
+      "./browserapi.js?contenthash=DnrLKuKB",
+      "./steamid.js?contenthash=DnyzW3N-",
+      "../../../css/applications/appmgmt/logindialog.css?contenthash=CV-OyCnF",
+      "./steamml_routing.js?contenthash=DbBmdwm8",
+      "./react-router-dom.js?contenthash=CFu_nAlI",
+      "./formatnumber.js?contenthash=DC8qwfxA",
+      "./getpreferredlocales.js?contenthash=DW-T3c2O",
+      "../../../css/applications/appmgmt/steamml_routing.css?contenthash=COhnPqGs",
+      "./steamdeckcompatibilitydetails.js?contenthash=DI0MT26h",
+      "./deckverified.js?contenthash=BjOjd2Vl",
+      "./storebrowsequerycontext.js?contenthash=C5iguZTL",
+      "./servicetransportprovider.js?contenthash=CWMOM-p-",
+      "./utils.js?contenthash=CtvqX2oo",
+      "./useQuery.js?contenthash=Cju4VOwO",
+      "./dataloader.js?contenthash=_BYkk4vd",
+      "./axiosutils.js?contenthash=B2ZC7U2N",
+      "./historyutils.js?contenthash=DmvWR4sr",
+      "./stringutils.js?contenthash=MvxgDsyH",
+      "../../../css/applications/appmgmt/deckverified.css?contenthash=BTgEGrV2",
+      "./steamdeckcompatibilitydetails_admin.js?contenthash=BQBge5JA",
+      "./pricing_routing.js?contenthash=CawdBXG5",
+      "./pricingguidelineobject.js?contenthash=BkbRq0Li",
+      "./reactqueryroot.js?contenthash=6HNzcxAU",
+      "./mutation.js?contenthash=mVgehZd5",
+      "./currencyutils.js?contenthash=BLJDeGzO",
+      "./tabulatorutils.js?contenthash=BiwL1JH9",
+      "./text.js?contenthash=eLRF4CUL",
+      "../../../css/applications/appmgmt/text.css?contenthash=B7RzJx_9",
+      "./render.js?contenthash=CgVeluzX",
+      "../../../css/applications/appmgmt/tabulatorutils.css?contenthash=DbzYDbls",
+      "./eventdevfeaturestore.js?contenthash=qZXue2n5",
+      "./ajaxhooks.js?contenthash=BZKMmssH",
+      "./eventtime.js?contenthash=glI9glwu",
+      "./debugglobal.js?contenthash=Bxli5Vsy",
+      "./playerstore.js?contenthash=B9D7ITtf",
+      "./usedataloader.client.js?contenthash=DAd0LgAa",
+      "./personautils.js?contenthash=BmoGeKuQ",
+      "./steammessages_player_pb.js?contenthash=D5oAAU5l",
+      "./appinfostore.js?contenthash=DjkW-WwW",
+      "./appinfo.js?contenthash=C1DAXfJ9",
+      "./steammessages_community_pb.js?contenthash=Cp_tm3v4",
+      "./pricinggridcell.js?contenthash=LyzAlx0S",
+      "./useMutation.js?contenthash=Dj5NzgSW",
+      "./simplesuccesserror.js?contenthash=DwQ2OuT3",
       "./partnereventdialog.module.js?contenthash=Bx2fOKRM",
       "../../../css/applications/appmgmt/partnereventdialog.css?contenthash=CX73M240",
-      "./localization2.js?contenthash=DWWvuCzj",
+      "./localization3.js?contenthash=B4lvHMmE",
       "../../../css/applications/appmgmt/pricinggridcell.css?contenthash=B6dxXnND",
       "../../../css/applications/appmgmt/shared_dialog.css?contenthash=C9HgcjP9",
-      "./configdatadiag.js?contenthash=CVxjt9uu",
-      "./unknownroute.js?contenthash=BBdYiwN1",
-      "./importexport.js?contenthash=3OQviV9M",
-      "./storebrowsesetup.js?contenthash=BqlzmPqA",
-      "./storeitemcache.js?contenthash=ChWiHeCp",
-      "./storeitem.js?contenthash=DPh6d898",
+      "./configdatadiag.js?contenthash=BNSwwRC7",
+      "./unknownroute.js?contenthash=C2vrZ8Y1",
+      "./importexport.js?contenthash=caUXw7b8",
+      "./storebrowsesetup.js?contenthash=D3C8ffeq",
+      "./storeitemcache.js?contenthash=BObwenaX",
+      "./storeitem.js?contenthash=CubZ5fnh",
       "./shared_common.module.js?contenthash=DMZ38Ep5",
       "../../../css/applications/appmgmt/shared_common.css?contenthash=Ct0mtd7G",
-      "./fancytable.js?contenthash=BrwA4o0C",
-      "./esm.js?contenthash=CO6I6xwZ",
+      "./fancytable.js?contenthash=BiBqH93f",
+      "./esm.js?contenthash=Ui3GdsU6",
       "../../../css/applications/appmgmt/fancytable.css?contenthash=BK5le-B9",
-      "./profilestore.js?contenthash=_1Ae-7Wi",
-      "./timeutils.js?contenthash=BAK4X-TG",
-      "./moment-timezone.js?contenthash=BvWa1mSA",
+      "./profilestore.js?contenthash=3wVpz-0i",
+      "./timeutils.js?contenthash=mEPRYI0f",
+      "./moment-timezone.js?contenthash=VCVkqSKf",
       "../../../css/applications/appmgmt/profilestore.css?contenthash=CzpZEyQF",
       "./discountgridheaders.module.js?contenthash=CRZHLaeb",
       "../../../css/applications/appmgmt/discountgridheaders.css?contenthash=B1oqOlNM",
-      "./saveprices.js?contenthash=Dv7n3JSX",
+      "./saveprices.js?contenthash=B2VMWVQE",
       "../../../css/applications/appmgmt/saveprices.css?contenthash=CEy2TD8X",
       "../../../css/applications/appmgmt/pricing_routing.css?contenthash=BebE6H5L",
-      "./buildpatchnotes.js?contenthash=CSq8vkaq",
-      "./saletags.js?contenthash=DII44t2-",
-      "./steammessages_store_pb.js?contenthash=CXOsGjLl",
-      "./steammessages_clan_pb.js?contenthash=DrxmJQJu",
-      "./appidutils.js?contenthash=Cr3Thj1w",
-      "./csstransitionwrapper.js?contenthash=CnrFdwNo",
-      "./basebuttons.js?contenthash=DeB_bgJx",
+      "./buildpatchnotes.js?contenthash=B_wSZpcb",
+      "./saletags.js?contenthash=BDV8J3LD",
+      "./steammessages_store_pb.js?contenthash=QykHXvzm",
+      "./steammessages_clan_pb.js?contenthash=cgfcIuVH",
+      "./appidutils.js?contenthash=CdtuXm9X",
+      "./csstransitionwrapper.js?contenthash=DaU8lpLB",
+      "./basebuttons.js?contenthash=B-gcG1sD",
       "../../../css/applications/appmgmt/basebuttons.css?contenthash=BJx2zq6Y",
-      "./linkfilter.js?contenthash=CEX7WYmL",
+      "./localization2.js?contenthash=CtKg-Xtn",
       "./partnereventshared.module.js?contenthash=P6Lsyb-l",
       "../../../css/applications/appmgmt/partnereventshared.css?contenthash=B7LNJQ8W",
-      "./loadingspinner.js?contenthash=DilV4paB",
+      "./loadingspinner.js?contenthash=BlPb8h20",
       "../../../css/applications/appmgmt/loadingspinner.css?contenthash=5k1i5yPG",
-      "../../../css/applications/appmgmt/saletags.css?contenthash=BbPCq3cp",
-      "./emoticonstorecontext.js?contenthash=DYJ1qQtk",
-      "./lazyrenderchildren.js?contenthash=C21h9_Mc",
-      "./useresizeobserver.js?contenthash=DhQ6ws8-",
-      "./emoticon_php.js?contenthash=DaKD_ah_",
+      "../../../css/applications/appmgmt/saletags.css?contenthash=qfRuF0Dy",
+      "./emoticonstorecontext.js?contenthash=CBYO4eyx",
+      "./lazyrenderchildren.js?contenthash=BAp3cwMp",
+      "./useresizeobserver.js?contenthash=OEPUjHil",
+      "./emoticon_php.js?contenthash=DIKFyekK",
       "../../../css/applications/appmgmt/emoticonstorecontext.css?contenthash=U_pDgl6-",
-      "./importexportdialog.js?contenthash=BGWJ49AG",
-      "./meetsteamregistrationhooks.js?contenthash=0ytIokHY",
-      "./meetsteamclanid.js?contenthash=D_dSD5jW",
-      "./textlink.js?contenthash=6V1PXkY-",
+      "./importexportdialog.js?contenthash=DbNroVNp",
+      "./meetsteamregistrationhooks.js?contenthash=CPbf6JRv",
+      "./meetsteamclanid.js?contenthash=CxNAqjE2",
+      "./textlink.js?contenthash=DqM5ftUk",
       "../../../css/applications/appmgmt/textlink.css?contenthash=CMU1nJhL",
-      "./emoticonbutton.js?contenthash=t4dAKbll",
+      "./emoticonbutton.js?contenthash=k3Ijq928",
       "./bbcodes.module.js?contenthash=9AAwTmEw",
       "../../../css/applications/appmgmt/bbcodes.css?contenthash=DxrOPR5M",
-      "./partnereventutils.js?contenthash=B5Zw5C35",
-      "./uploadutils.js?contenthash=56rGQE9s",
-      "./numberformats.js?contenthash=CKlVZdPm",
-      "./storeitemhooks.js?contenthash=DF8ajThV",
+      "./partnereventutils.js?contenthash=CWK2rfLN",
+      "./uploadutils.js?contenthash=DHT_Jf3T",
+      "./numberformats.js?contenthash=orYQHRkm",
+      "./storeitemhooks.js?contenthash=BzHF6TiJ",
       "../../../css/applications/appmgmt/emoticonbutton.css?contenthash=BDMPn0sz",
-      "./bbcodeeditor.js?contenthash=Cx1pAyO6",
-      "./salepreviewwidgets.js?contenthash=BjyEH4Ds",
-      "./salestoreitemutils.js?contenthash=DkCAv11f",
+      "./bbcodeeditor.js?contenthash=C1U-JUCy",
+      "./salepreviewwidgets.js?contenthash=FFHzDjl8",
+      "./salestoreitemutils.js?contenthash=Dbsk-BqK",
       "../../../css/applications/appmgmt/salestoreitemutils.css?contenthash=CleW4EQ0",
       "../../../css/applications/appmgmt/salepreviewwidgets.css?contenthash=Lzpt6uF4",
-      "./multisourceimage.js?contenthash=BBHUSgPz",
-      "./shared_svg_gamerecordings.js?contenthash=DgB31P5w",
+      "./multisourceimage.js?contenthash=Dx8RP27v",
+      "./shared_svg_gamerecordings.js?contenthash=OZ8Tft9-",
       "../../../css/applications/appmgmt/shared_svg_gamerecordings.css?contenthash=C9ahyCu_",
-      "./dashplayer.js?contenthash=AIhOSAGP",
+      "./dashplayer.js?contenthash=C4ZMh7T5",
       "./reorderablelist.module.js?contenthash=D-LznI21",
       "../../../css/applications/appmgmt/reorderablelist.css?contenthash=8xWWn2uG",
-      "./genericimageupload.js?contenthash=CJesdfDm",
-      "./linkregionbox.js?contenthash=CZPEfTtd",
+      "./genericimageupload.js?contenthash=w3XAUvxw",
+      "./linkregionbox.js?contenthash=B1xRlJfv",
       "../../../css/applications/appmgmt/linkregionbox.css?contenthash=HkLONVRS",
       "../../../css/applications/appmgmt/genericimageupload.css?contenthash=NERScwG6",
       "../../../css/applications/appmgmt/bbcodeeditor.css?contenthash=3hagutKz",
-      "./partnereventhooks.js?contenthash=CiWvNi2F",
-      "./giveawayregistration.js?contenthash=B5Jjw97-",
-      "./vodquery.js?contenthash=-JKTPvLi",
+      "./giveawayregistration.js?contenthash=D_8Jo1eW",
+      "./partnereventstore.js?contenthash=CtMrvi9J",
+      "./vodquery.js?contenthash=C1wF90CE",
       "../../../css/applications/appmgmt/importexportdialog.css?contenthash=Ba2ec_ow",
-      "./creatorhomestore.js?contenthash=DhcAvqYS",
-      "./eventtrackinghook.js?contenthash=BijTidUM",
-      "./storegamehover.js?contenthash=B1dTuiiR",
+      "./creatorhomestore.js?contenthash=B1m-EXl5",
+      "./eventtrackinghook.js?contenthash=rq3nTZ02",
+      "./storegamehover.js?contenthash=_qWaCHEy",
       "./discussionwidget.module.js?contenthash=CdiHbfPb",
       "../../../css/applications/appmgmt/discussionwidget.css?contenthash=2bhRMVOg",
-      "./clanstore.js?contenthash=DDtdpSFB",
-      "./salebanner.js?contenthash=DsnOm59o",
+      "./clanstore.js?contenthash=BmJxyVxj",
+      "./salebanner.js?contenthash=D49NetKA",
       "../../../css/applications/appmgmt/salebanner.css?contenthash=4Er4A1Al",
-      "./languagepicker.js?contenthash=BTGniVDu",
-      "./editorlocalizationstore.js?contenthash=DnWti2pm",
+      "./languagepicker.js?contenthash=CsFIgnIR",
+      "./editorlocalizationstore.js?contenthash=B1C0NS5O",
       "../../../css/applications/appmgmt/buildpatchnotes.css?contenthash=C45g-Uv0",
-      "./promotion_routing.js?contenthash=D6B6Ynnb",
-      "./promotionoperationowner.js?contenthash=LWSe_UB7",
-      "./marketingmessageevent.js?contenthash=CKjNqr-D",
+      "./promotion_routing.js?contenthash=HgOhTeDS",
+      "./promotionoperationowner.js?contenthash=CXyNwhPP",
+      "./marketingmessageevent.js?contenthash=LKE2TOi_",
       "../../../css/applications/appmgmt/marketingmessageevent.css?contenthash=B9jmZ-iU",
-      "./primarypartnercontext.js?contenthash=BZgNlPoN",
+      "./primarypartnercontext.js?contenthash=rhsTdcsW",
       "./assertThisInitialized.js?contenthash=UThVrofZ",
-      "./cloudlocalizedartdisplay.js?contenthash=fjKDXjAS",
-      "./modaldialog.js?contenthash=DBYgqldN",
+      "./cloudlocalizedartdisplay.js?contenthash=DpbNyXJq",
+      "./modaldialog.js?contenthash=iwZHjmGl",
       "../../../css/applications/appmgmt/modaldialog.css?contenthash=DIzQc6yp",
       "./adminshared.module.js?contenthash=DQBfJqXN",
       "../../../css/applications/appmgmt/adminshared.css?contenthash=Bdafyp0R",
       "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css?contenthash=BKjBu2__",
-      "./imageuploaderpanel.js?contenthash=BHWpebfK",
+      "./imageuploaderpanel.js?contenthash=Dd42Uh2o",
       "../../../css/applications/appmgmt/imageuploaderpanel.css?contenthash=Dkju2lA2",
-      "./colorpickerdialog.js?contenthash=ehHSQV_i",
-      "./localization.js?contenthash=D__SjrCZ",
-      "./popoversurface.js?contenthash=BCsZFUvE",
+      "./colorpickerdialog.js?contenthash=Bs9TZkSy",
+      "./localization.js?contenthash=DSaSbP1v",
+      "./popoversurface.js?contenthash=8cl5-r03",
       "../../../css/applications/appmgmt/popoversurface.css?contenthash=CQEcKe8B",
       "../../../css/applications/appmgmt/localization.css?contenthash=B2mQWwgU",
-      "./dashboardutilities.js?contenthash=CuiPrjhc",
+      "./dashboardutilities.js?contenthash=bw7pEkaU",
       "../../../css/applications/appmgmt/dashboardutilities.css?contenthash=DxafS6Qx",
-      "./fast-deep-equal.js?contenthash=BQAjeNDn",
+      "./fast-deep-equal.js?contenthash=BA1UP7yr",
       "../../../css/applications/appmgmt/fast-deep-equal.css?contenthash=iPcpBsJv",
       "./objectSpread2.js?contenthash=DLG10zro",
-      "./filechangepoll.js?contenthash=CensuOrv",
+      "./filechangepoll.js?contenthash=fCc3hcU7",
       "../../../css/applications/appmgmt/filechangepoll.css?contenthash=Br-8R0Ql",
-      "./partnerstats.module.js?contenthash=DN09lZk4",
-      "./react-is.js?contenthash=D6tVLRzx",
+      "./partnerstats.module.js?contenthash=-g211IIf",
+      "./react-is.js?contenthash=C-_QD00a",
       "../../../css/applications/appmgmt/partnerstats.css?contenthash=tAeOf2hA",
-      "./partnereventshareddates.js?contenthash=cS8VXtx0",
+      "./partnereventshareddates.js?contenthash=BlsNEhTx",
       "./cross.js?contenthash=BC8w4gvU",
       "../../../css/applications/appmgmt/partnereventshareddates.css?contenthash=CbM88CZ9",
       "../../../css/applications/appmgmt/react-datetime2.css?contenthash=ByP4wuA0",
-      "./themefestplanning.js?contenthash=COqxrzPa",
+      "./themefestplanning.js?contenthash=BcDI-_rw",
       "../../../css/applications/appmgmt/themefestplanning.css?contenthash=NA_CPQH-",
-      "./react-select.cjs.js?contenthash=BkDEIcN9",
-      "./reorderablelist.js?contenthash=Cmr3NtDh",
-      "./partnervalvecontactstore.js?contenthash=j2xcvowG",
+      "./react-select.cjs.js?contenthash=uGmlgC6g",
+      "./reorderablelist.js?contenthash=BLedTbCJ",
+      "./partnervalvecontactstore.js?contenthash=C5521KxS",
       "../../../css/applications/appmgmt/partnervalvecontactstore.css?contenthash=DTazZ76p",
-      "./adminaccount.js?contenthash=D18QX9jh",
-      "./collapseablesection.js?contenthash=DdQitV5w",
+      "./adminaccount.js?contenthash=D5XEaJ5A",
+      "./collapseablesection.js?contenthash=DXFFvw-N",
       "../../../css/applications/appmgmt/collapseablesection.css?contenthash=CY5rgv5g",
-      "./userprofile.js?contenthash=BXur7VM0",
+      "./userprofile.js?contenthash=1PVbQ0GS",
       "../../../css/applications/appmgmt/userprofile.css?contenthash=CVciQcNY",
-      "./partnerinfostore.js?contenthash=Dhq2jJrp",
-      "./localization3.js?contenthash=B0mVjA4G",
+      "./partnerinfostore.js?contenthash=0waiYeuN",
+      "./localization4.js?contenthash=73n-ZBjU",
       "../../../css/applications/appmgmt/localization2.css?contenthash=DbStjDdD",
-      "./gamerecordinglog.js?contenthash=0kU2tsS_",
-      "../../../css/applications/appmgmt/promotionoperationowner.css?contenthash=BwI5-Qam",
-      "./salesrouting.js?contenthash=BlKFnGUO",
-      "./optin_routing.js?contenthash=DKjFltmJ",
-      "./appadminrouter.js?contenthash=CRYow-ke",
-      "./phpintegration.js?contenthash=CHDQW7hW",
-      "./releasedateinfo.js?contenthash=BAmEkvgn",
+      "./gamerecordinglog.js?contenthash=BbKO-wPT",
+      "../../../css/applications/appmgmt/promotionoperationowner.css?contenthash=oQrtq8co",
+      "./salesrouting.js?contenthash=BLKV-Dht",
+      "./optin_routing.js?contenthash=IPnxO4c9",
+      "./appadminrouter.js?contenthash=r9jz5Q-q",
+      "./phpintegration.js?contenthash=CCsRwFZl",
+      "./releasedateinfo.js?contenthash=DAd1DpKc",
       "../../../css/applications/appmgmt/releasedateinfo.css?contenthash=Llx8JmM3",
       "../../../css/applications/appmgmt/appadminrouter.css?contenthash=CyDP4Tb6",
-      "./storeadmin.js?contenthash=DGOT9Iln",
-      "./select.js?contenthash=C5FPqnGV",
-      "./heading.js?contenthash=BTG9Wh20",
+      "./storeadmin.js?contenthash=DslvhO_r",
+      "./select.js?contenthash=CPNVF0ci",
+      "./heading.js?contenthash=JlFqtEbo",
       "../../../css/applications/appmgmt/heading.css?contenthash=BUJSDlhm",
-      "./grid.js?contenthash=DaXeEixe",
+      "./grid.js?contenthash=Co4HwLPJ",
       "../../../css/applications/appmgmt/grid.css?contenthash=CmLumJCG",
-      "./richgamedescriptioneditor.js?contenthash=Dw78P9IW",
-      "./simplemodaldialog.js?contenthash=D6zh1ZUJ",
+      "./richgamedescriptioneditor.js?contenthash=DAHb-JkZ",
+      "./simplemodaldialog.js?contenthash=D3ZDxsKb",
       "../../../css/applications/appmgmt/simplemodaldialog.css?contenthash=U5XJc_k7",
       "../../../css/applications/appmgmt/richgamedescriptioneditor.css?contenthash=SwmxS47z",
       "../../../css/applications/appmgmt/storeadmin.css?contenthash=hvuUUzkI",
-      "./packageadmin.js?contenthash=YgVEq-m-",
+      "./packageadmin.js?contenthash=zckG18Al",
       "../../../css/applications/appmgmt/packageadmin.css?contenthash=D1QLSM5y",
-      "./connections.js?contenthash=DThJO9Hk",
+      "./connections.js?contenthash=CtLn45mX",
       "../../../css/applications/appmgmt/connections.css?contenthash=C2Hy6zmN",
-      "./landing.js?contenthash=y0jW-hPP",
-      "./recentapps.js?contenthash=5RT9uxbA",
+      "./landing.js?contenthash=Dt9ZEeYl",
+      "./recentapps.js?contenthash=C1c7X91C",
       "../../../css/applications/appmgmt/recentapps.css?contenthash=BF2THleY",
-      "./steammessages_partnerdeadline_pb.js?contenthash=DYGWs19k",
-      "./seasonpasshooks.js?contenthash=BUMx4Y_H",
+      "./steammessages_partnerdeadline_pb.js?contenthash=Aj08Pemg",
+      "./seasonpasshooks.js?contenthash=Dsrhz5gF",
       "../../../css/applications/appmgmt/landing.css?contenthash=Cm17kpCU",
-      "./timelinemarkereditorlanding.js?contenthash=DefioZgY",
+      "./timelinemarkereditorlanding.js?contenthash=C90d_1SH",
       "./webuitransportdefaults.js?contenthash=B2A3Z7Xe",
-      "./raf-schd.esm.js?contenthash=BQ5mlGBk",
-      "./tour.js?contenthash=D-O4PeLo",
+      "./raf-schd.esm.js?contenthash=CYgBqMfr",
+      "./tour.js?contenthash=CvplQJ9h",
       "../../../css/applications/appmgmt/tour.css?contenthash=a_0H_DmF",
       "../../../css/applications/appmgmt/timelinemarkereditorlanding.css?contenthash=DdAPOu_W",
-      "./promotionreviewdashboard.js?contenthash=CeVfERpu",
+      "./promotionreviewdashboard.js?contenthash=Dfbc1Yb3",
       "../../../css/applications/appmgmt/promotionreviewdashboard.css?contenthash=x1XGuNl0",
-      "./reservationqueuemessagingdashboard.js?contenthash=D_Xyr-mP",
+      "./reservationqueuemessagingdashboard.js?contenthash=GJ0ywuS6",
       "../../../css/applications/appmgmt/reservationqueuemessagingdashboard.css?contenthash=DlqQi-f_",
-      "./contenthub_routing.js?contenthash=DeDW4SM4",
+      "./contenthub_routing.js?contenthash=DScTm1zH",
       "../../../css/applications/appmgmt/contenthub_routing.css?contenthash=0kfC_Hr7",
-      "./recap_routing.js?contenthash=BZL_lWo6",
-      "./deadlinelanding.js?contenthash=F7VvgAoQ",
+      "./recap_routing.js?contenthash=DpTIE29V",
+      "./deadlinelanding.js?contenthash=BgCyQjQW",
       "../../../css/applications/appmgmt/deadlinelanding.css?contenthash=Dqt7byuq",
-      "./taxrequirementlanding.js?contenthash=C105qSp2",
+      "./taxrequirementlanding.js?contenthash=B1OHPS-A",
       "../../../css/applications/appmgmt/taxrequirementlanding.css?contenthash=DVgGvYeX",
-      "./meetsteamrouting.js?contenthash=BKIN2q4g",
+      "./meetsteamrouting.js?contenthash=BbLc10SA",
       "../../../css/applications/appmgmt/meetsteamrouting.css?contenthash=CfXSry69",
-      "./achievementseditorlanding.js?contenthash=YQc51h1P",
+      "./achievementseditorlanding.js?contenthash=TVHl86cN",
       "../../../css/applications/appmgmt/achievementseditorlanding.css?contenthash=BHcdEcUs",
-      "./creatorhomeadmindashboard.js?contenthash=DeVZCZ9k",
+      "./creatorhomeadmindashboard.js?contenthash=BKoryV5K",
       "../../../css/applications/appmgmt/creatorhomeadmindashboard.css?contenthash=DOp5Ycpn",
-      "./logoedtior.js?contenthash=BX304gkG",
-      "./canvas.js?contenthash=Bf7603mp",
+      "./logoedtior.js?contenthash=D1NEy59j",
+      "./canvas.js?contenthash=DpU2TNRk",
       "../../../css/applications/appmgmt/logoedtior.css?contenthash=eDFvnAjT",
     ]),
 ) => i.map((i) => d[i]);
 
 import {
-  A as e,
-  Bt as t,
-  J as n,
-  R as r,
-  U as i,
-  Wt as a,
+  $t as e,
+  A as t,
+  Ot as n,
+  Q as r,
+  R as i,
+  U as a,
   X as o,
   Y as s,
-  c,
-  et as l,
-  gt as u,
-  ht as d,
-  it as f,
-  j as p,
-  q as m,
-  qt as h,
-} from "./mobx.esm.js?contenthash=CuqnC1HA"; /* empty css                                   */
+  Z as c,
+  _t as l,
+  c as u,
+  j as d,
+  kt as f,
+  nt as p,
+  on as m,
+  rn as h,
+} from "./mobx.esm.js?contenthash=BRGZcCup"; /* empty css                                   */
 import {
-  $t as g,
-  At as _,
-  Ba as v,
+  $a as g,
+  $t as _,
+  At as v,
   Bn as ee,
   C as te,
-  Ca as ne,
-  Ea as re,
-  Jo as ie,
-  Lt as ae,
-  Po as oe,
-  Ra as se,
-  T as ce,
-  Yo as y,
-  _ as b,
+  Jo as y,
+  Ka as ne,
+  La as re,
+  Lt as ie,
+  No as ae,
+  Ra as b,
+  Sa as oe,
+  T as se,
+  Ta as ce,
+  _ as x,
   a as le,
+  aa as S,
   ao as ue,
-  eo as de,
-  h as fe,
-  io as pe,
-  lo as me,
+  co as de,
+  ea as fe,
+  h as pe,
+  io as me,
   m as he,
-  na as ge,
-  o as _e,
-  oa as x,
-  oo as ve,
-  p as ye,
-  qa as be,
-  rn as xe,
-  sa as S,
-  so as Se,
-  t as Ce,
-  ta as we,
-  un as Te,
-  za as C,
-} from "./dialogs.js?contenthash=Ef6x5QZW";
-import { l as Ee, n as w } from "./long.js?contenthash=BCeVig72";
-import { t as De } from "./storebrowsequerycontext.js?contenthash=B76-TDtt";
+  o as ge,
+  oa as C,
+  oo as _e,
+  p as ve,
+  qo as ye,
+  rn as be,
+  ro as xe,
+  t as Se,
+  ta as Ce,
+  un as we,
+  za as Te,
+} from "./dialogs.js?contenthash=D1pxcxuf";
+import { l as Ee, n as w } from "./long.js?contenthash=DWB27pGN";
+import { t as De } from "./storebrowsequerycontext.js?contenthash=C5iguZTL";
 import {
   a as Oe,
   k as ke,
   r as T,
   w as Ae,
-} from "./react-router.js?contenthash=BY_BIsGq";
-import { t as je } from "./servicetransportprovider.js?contenthash=CCnsd9OK";
-import { n as Me } from "./reactqueryroot.js?contenthash=BRWegL9C";
-import { t as Ne } from "./useMutation.js?contenthash=D8rfPQfp";
+} from "./react-router.js?contenthash=nQj0_J23";
+import { t as je } from "./servicetransportprovider.js?contenthash=CWMOM-p-";
+import { n as Me } from "./reactqueryroot.js?contenthash=6HNzcxAU";
+import { t as Ne } from "./useMutation.js?contenthash=Dj5NzgSW";
 import {
   i as E,
   r as Pe,
   t as Fe,
-} from "./react-router-dom.js?contenthash=DhWJoSjQ";
-import { t as Ie } from "./primarypartnercontext.js?contenthash=BZgNlPoN";
+} from "./react-router-dom.js?contenthash=CFu_nAlI";
+import { t as Ie } from "./primarypartnercontext.js?contenthash=rhsTdcsW";
 import {
   i as Le,
   t as Re,
-} from "./emoticonstorecontext.js?contenthash=DYJ1qQtk";
-import { r as ze } from "./modals.js?contenthash=BkJN1F7L";
-import { n as Be, t as Ve } from "./formfactor.js?contenthash=DTYIXSXL";
-import { t as He } from "./variantdefaults.js?contenthash=Cm8I2gIx";
-import { t as Ue } from "./popoversurface.js?contenthash=BCsZFUvE";
-import { t as D } from "./formatnumber.js?contenthash=DWn3Ey-H";
-import { t as We } from "./axios.js?contenthash=BJ1Ik0cP";
-import { a as Ge } from "./historyutils.js?contenthash=By1ZfcRb";
+} from "./emoticonstorecontext.js?contenthash=CBYO4eyx";
+import { r as ze } from "./modals.js?contenthash=Bi1vin1f";
+import { n as Be, t as Ve } from "./formfactor.js?contenthash=PvnRLh_o";
+import { t as He } from "./variantdefaults.js?contenthash=CybMBV5N";
+import { t as Ue } from "./popoversurface.js?contenthash=8cl5-r03";
+import { t as D } from "./formatnumber.js?contenthash=DC8qwfxA";
+import { t as We } from "./axios.js?contenthash=ftGxbJpA";
+import { a as Ge } from "./historyutils.js?contenthash=DmvWR4sr";
 import {
   i as Ke,
   r as qe,
   t as Je,
-} from "./browserapi.js?contenthash=MutfO-e5";
-import { t as Ye } from "./eventtrackinghook.js?contenthash=BijTidUM"; /* empty css                                  */
-import { n as Xe, t as Ze } from "./simplesuccesserror.js?contenthash=B-IH9Fe6";
+} from "./browserapi.js?contenthash=DnrLKuKB";
+import { t as Ye } from "./eventtrackinghook.js?contenthash=rq3nTZ02"; /* empty css                                  */
+import { n as Xe, t as Ze } from "./simplesuccesserror.js?contenthash=DwQ2OuT3";
 import { t as Qe } from "./localstorage.js?contenthash=CDvEuPjQ";
-import { t as $e } from "./configdatadiag.js?contenthash=CVxjt9uu";
-import { t as O } from "./phpintegration.js?contenthash=CHDQW7hW";
-import { t as et } from "./unknownroute.js?contenthash=BBdYiwN1";
-import { i as tt, o as nt } from "./filechangepoll.js?contenthash=CensuOrv";
+import { t as $e } from "./configdatadiag.js?contenthash=BNSwwRC7";
+import { t as O } from "./phpintegration.js?contenthash=CCsRwFZl";
+import { t as et } from "./unknownroute.js?contenthash=C2vrZ8Y1";
+import { i as tt, o as nt } from "./filechangepoll.js?contenthash=fCc3hcU7";
 var k = (e, t, n) => {
   let r = t.lastIndexOf(`?`),
     i = e[r === -1 || r < t.lastIndexOf(`/`) ? t : t.slice(0, r)];
@@ -386,11 +393,11 @@ var k = (e, t, n) => {
     ),
   Array.from(new Set([123]))[0] !== 123 &&
     console.error(`Should not include prototypejs.`);
-var rt = h(ie(), 1),
+var rt = m(ye(), 1),
   it = `_7u8JcHTlx8M-`,
   at = `KWtRH19ERaI-`,
-  A = h(u(), 1),
-  j = f(),
+  A = m(f(), 1),
+  j = l(),
   ot = (0, A.createContext)({}),
   st = (0, A.createContext)(() => {});
 function ct(e) {
@@ -538,7 +545,7 @@ var ht = `zFLaTiNrHiA-`,
         (0, j.jsx)(Ot, {}),
         (0, j.jsx)(`div`, {
           className: `agenda_title`,
-          children: S(`#SteamworksEvents_BuildingCommunity_Speakers`),
+          children: C(`#SteamworksEvents_BuildingCommunity_Speakers`),
         }),
         (0, j.jsx)(kt, {}),
       ],
@@ -551,7 +558,7 @@ var ht = `zFLaTiNrHiA-`,
           className: _t,
           children: (0, j.jsx)(`img`, {
             className: vt,
-            src: l.COMMUNITY_CDN_ASSET_URL + e.screenshot,
+            src: p.COMMUNITY_CDN_ASSET_URL + e.screenshot,
           }),
         }),
         (0, j.jsxs)(`div`, {
@@ -573,7 +580,7 @@ var ht = `zFLaTiNrHiA-`,
         }),
       ],
     }),
-  Ot = (t) =>
+  Ot = (e) =>
     (0, j.jsx)(`div`, {
       className: void 0,
       children: (0, j.jsxs)(Le, {
@@ -582,16 +589,16 @@ var ht = `zFLaTiNrHiA-`,
         useTestScrollbar: !1,
         bLazyRenderChildren: !1,
         disableEdgeWrap: !1,
-        className: e(gt),
+        className: t(gt),
         children: [
           (0, j.jsx)(
             P,
             {
-              strDesc: S(`#SteamworksEvents_BuildingCommunity_Session1_Desc`),
+              strDesc: C(`#SteamworksEvents_BuildingCommunity_Session1_Desc`),
               screenshot: `steamworksevents/screenshot_gautam.png`,
-              strTime: S(`#SteamworksEvents_BuildingCommunity_Session1_Time`),
-              strTitle: S(`#SteamworksEvents_BuildingCommunity_Session1_Title`),
-              strSpeakers: S(
+              strTime: C(`#SteamworksEvents_BuildingCommunity_Session1_Time`),
+              strTitle: C(`#SteamworksEvents_BuildingCommunity_Session1_Title`),
+              strSpeakers: C(
                 `#SteamworksEvents_BuildingCommunity_Session1_Speakers`,
               ),
             },
@@ -600,11 +607,11 @@ var ht = `zFLaTiNrHiA-`,
           (0, j.jsx)(
             P,
             {
-              strDesc: S(`#SteamworksEvents_BuildingCommunity_Session2_Desc`),
+              strDesc: C(`#SteamworksEvents_BuildingCommunity_Session2_Desc`),
               screenshot: `steamworksevents/screenshot_alden_and_adil.png`,
-              strTime: S(`#SteamworksEvents_BuildingCommunity_Session2_Time`),
-              strTitle: S(`#SteamworksEvents_BuildingCommunity_Session2_Title`),
-              strSpeakers: S(
+              strTime: C(`#SteamworksEvents_BuildingCommunity_Session2_Time`),
+              strTitle: C(`#SteamworksEvents_BuildingCommunity_Session2_Title`),
+              strSpeakers: C(
                 `#SteamworksEvents_BuildingCommunity_Session2_Speakers`,
               ),
             },
@@ -613,11 +620,11 @@ var ht = `zFLaTiNrHiA-`,
           (0, j.jsx)(
             P,
             {
-              strDesc: S(`#SteamworksEvents_BuildingCommunity_Session3_Desc`),
+              strDesc: C(`#SteamworksEvents_BuildingCommunity_Session3_Desc`),
               screenshot: `steamworksevents/screenshot_jenny.png`,
-              strTime: S(`#SteamworksEvents_BuildingCommunity_Session3_Time`),
-              strTitle: S(`#SteamworksEvents_BuildingCommunity_Session3_Title`),
-              strSpeakers: S(
+              strTime: C(`#SteamworksEvents_BuildingCommunity_Session3_Time`),
+              strTitle: C(`#SteamworksEvents_BuildingCommunity_Session3_Title`),
+              strSpeakers: C(
                 `#SteamworksEvents_BuildingCommunity_Session3_Speakers`,
               ),
             },
@@ -626,11 +633,11 @@ var ht = `zFLaTiNrHiA-`,
           (0, j.jsx)(
             P,
             {
-              strDesc: S(`#SteamworksEvents_BuildingCommunity_Session4_Desc`),
+              strDesc: C(`#SteamworksEvents_BuildingCommunity_Session4_Desc`),
               screenshot: `steamworksevents/screenshot_joe.png`,
-              strTime: S(`#SteamworksEvents_BuildingCommunity_Session4_Time`),
-              strTitle: S(`#SteamworksEvents_BuildingCommunity_Session4_Title`),
-              strSpeakers: S(
+              strTime: C(`#SteamworksEvents_BuildingCommunity_Session4_Time`),
+              strTitle: C(`#SteamworksEvents_BuildingCommunity_Session4_Title`),
+              strSpeakers: C(
                 `#SteamworksEvents_BuildingCommunity_Session4_Speakers`,
               ),
             },
@@ -645,7 +652,7 @@ var ht = `zFLaTiNrHiA-`,
       children: [
         (0, j.jsx)(`img`, {
           title: e.strTitle,
-          src: l.COMMUNITY_CDN_ASSET_URL + e.imgHeadshot,
+          src: p.COMMUNITY_CDN_ASSET_URL + e.imgHeadshot,
         }),
         (0, j.jsxs)(`div`, {
           className: Tt,
@@ -662,32 +669,32 @@ var ht = `zFLaTiNrHiA-`,
       children: [
         (0, j.jsx)(F, {
           imgHeadshot: `steamworksevents/gautam_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_GautamTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Gautam`),
+          strTitle: C(`#SteamworksEvents_BuildingCommunity_GautamTitle`),
+          strBio: C(`#SteamworksEvents_BuildingCommunity_Gautam`),
         }),
         (0, j.jsx)(F, {
           imgHeadshot: `steamworksevents/alden_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_AldenTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Alden`),
+          strTitle: C(`#SteamworksEvents_BuildingCommunity_AldenTitle`),
+          strBio: C(`#SteamworksEvents_BuildingCommunity_Alden`),
         }),
         (0, j.jsx)(F, {
           imgHeadshot: `steamworksevents/adil_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_AdilTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Adil`),
+          strTitle: C(`#SteamworksEvents_BuildingCommunity_AdilTitle`),
+          strBio: C(`#SteamworksEvents_BuildingCommunity_Adil`),
         }),
         (0, j.jsx)(F, {
           imgHeadshot: `steamworksevents/jenny_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_JennyTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Jenny`),
+          strTitle: C(`#SteamworksEvents_BuildingCommunity_JennyTitle`),
+          strBio: C(`#SteamworksEvents_BuildingCommunity_Jenny`),
         }),
         (0, j.jsx)(F, {
           imgHeadshot: `steamworksevents/joe_headshot.png`,
-          strTitle: S(`#SteamworksEvents_BuildingCommunity_JoeTitle`),
-          strBio: S(`#SteamworksEvents_BuildingCommunity_Joe`),
+          strTitle: C(`#SteamworksEvents_BuildingCommunity_JoeTitle`),
+          strBio: C(`#SteamworksEvents_BuildingCommunity_Joe`),
         }),
       ],
     }),
-  At = a({
+  At = h({
     Arrow: () => Bt,
     BasicContextMenuContainer: () => L,
     BasicContextMenuHeader: () => Mt,
@@ -768,17 +775,17 @@ function Ht(e) {
   let { managerOverride: t } = e,
     n = te(),
     r = t ?? n,
-    i = Se();
+    i = _e();
   return (
-    ve(r.OnMenusChanged, i),
+    ue(r.OnMenusChanged, i),
     (0, j.jsx)(ze, {
       active: !!r.ActiveMenu,
       children: (0, j.jsx)(Ut, { ActiveMenu: r.ActiveMenu }),
     })
   );
 }
-function Ut(t) {
-  let { ActiveMenu: n } = t,
+function Ut(e) {
+  let { ActiveMenu: n } = e,
     r = A.useCallback(() => {
       n?.OnCancel();
     }, [n]);
@@ -799,7 +806,7 @@ function Ut(t) {
     padding: `none`,
     children: (0, j.jsxs)(`div`, {
       onClick: o,
-      className: e(`BasicUIContextMenu`, I),
+      className: t(`BasicUIContextMenu`, I),
       children: [
         a &&
           (0, j.jsx)(j.Fragment, {
@@ -808,7 +815,7 @@ function Ut(t) {
               children: a,
             }),
           }),
-        (0, j.jsx)(C, {
+        (0, j.jsx)(b, {
           className: L,
           onCancelButton: r,
           onClick: o,
@@ -820,18 +827,18 @@ function Ut(t) {
 }
 function Wt(e) {
   let { instance: t } = e,
-    n = r(),
-    i = A.useCallback(() => {
-      n && pe.PlayNavSound(ue.FailedNav);
+    n = i(),
+    r = A.useCallback(() => {
+      n && xe.PlayNavSound(me.FailedNav);
     }, [n]),
     a = A.useMemo(
       () => ({
         instance: t,
         styles: At,
         presentation: 1,
-        callbacks: { onDisabledItemSelected: i },
+        callbacks: { onDisabledItemSelected: r },
       }),
-      [t, i],
+      [t, r],
     );
   return (0, j.jsx)(w, {
     children: (0, j.jsx)(ee.Provider, { value: a, children: t.ReactElement }),
@@ -850,9 +857,9 @@ function Kt() {
         modalKey: a,
       } = e,
       o = A.useRef(void 0);
-    be(o, r, !0);
+    ne(o, r, !0);
     let s = Ee(o, t);
-    return (0, j.jsx)(de, {
+    return (0, j.jsx)(g, {
       className: n,
       navTreeRef: s,
       modal: !0,
@@ -862,33 +869,33 @@ function Kt() {
     });
   };
 }
-function qt(t) {
+function qt(e) {
   let {
       className: n,
       onEscKeypress: r,
       padding: i = `standard`,
       bGamepadUIScrollWithin: a,
       children: o,
-    } = t,
-    s = e(ce, i == `standard` && `S9g96mcfmi4-`, a && `_3voolpCtr6w-`, n);
-  return (0, j.jsx)(C, {
+    } = e,
+    s = t(se, i == `standard` && `S9g96mcfmi4-`, a && `_3voolpCtr6w-`, n);
+  return (0, j.jsx)(b, {
     className: s,
     onCancelButton: r,
     focusableIfEmpty: !0,
-    children: (0, j.jsx)(v, { children: (0, j.jsx)(w, { children: o }) }),
+    children: (0, j.jsx)(Te, { children: (0, j.jsx)(w, { children: o }) }),
   });
 }
 function Jt(e) {
   let t = A.useMemo(() => ({ ModalPosition: qt }), []);
-  return (0, j.jsx)(fe.Provider, { value: t, children: e.children });
+  return (0, j.jsx)(pe.Provider, { value: t, children: e.children });
 }
 function Yt(e) {
   let t = Gt(),
-    n = A.useMemo(() => ({ DropDownMenu: _e, Content: Ce }), []);
-  return (0, j.jsx)(Te.Provider, {
+    n = A.useMemo(() => ({ DropDownMenu: ge, Content: Se }), []);
+  return (0, j.jsx)(we.Provider, {
     value: n,
     children: (0, j.jsx)(Jt, {
-      children: (0, j.jsx)(b, {
+      children: (0, j.jsx)(x, {
         ...e,
         bUseDialogElement: !1,
         DialogWrapper: t,
@@ -898,27 +905,27 @@ function Yt(e) {
   });
 }
 function Xt(e) {
-  let t = r(),
+  let t = i(),
     n = { bRenderOverlayAtRoot: !0, bUsePopups: !1, ...e };
-  return t ? (0, j.jsx)(Yt, { ...n }) : (0, j.jsx)(b, { ...n });
+  return t ? (0, j.jsx)(Yt, { ...n }) : (0, j.jsx)(x, { ...n });
 }
-var Zt = h(We()),
+var Zt = m(We()),
   Qt = `NRLdpp5SW8Q-`,
   $t = `XWkt0fWtpXM-`,
   en = `_05insej4ZsY-`,
   tn = `BfhwqcpG0-8-`;
 function nn() {
-  let [e] = (0, A.useState)(() => o(`rgPackageInfo`, `application_config`));
+  let [e] = (0, A.useState)(() => r(`rgPackageInfo`, `application_config`));
   return e;
 }
 async function rn(e, t) {
   let n = new FormData();
-  n.append(`sessionid`, m()), n.append(`keys`, JSON.stringify(t));
-  let r = `${l.PARTNER_BASE_URL}apps/requestkeys/${e}`,
+  n.append(`sessionid`, s()), n.append(`keys`, JSON.stringify(t));
+  let r = `${p.PARTNER_BASE_URL}apps/requestkeys/${e}`,
     i = await Zt.default.post(r, n);
   return i?.data?.message
     ? i.data
-    : { success: !1, message: S(`#Error_Generic`) };
+    : { success: !1, message: C(`#Error_Generic`) };
 }
 function an(e, t, n, r, i) {
   return Ne({
@@ -934,11 +941,11 @@ function an(e, t, n, r, i) {
         },
       ]),
     onSuccess: (e) => i(e.success, e.message),
-    onError: () => i(!1, S(`#Error_Generic`)),
+    onError: () => i(!1, C(`#Error_Generic`)),
   });
 }
-function on(t) {
-  let n = (0, A.useMemo)(() => Number.parseInt(t.appId), [t.appId]),
+function on(e) {
+  let n = (0, A.useMemo)(() => Number.parseInt(e.appId), [e.appId]),
     r = nn(),
     [i, a] = (0, A.useState)(1),
     [o, s] = (0, A.useState)(``);
@@ -947,54 +954,54 @@ function on(t) {
     children: [
       (0, j.jsx)(`div`, {
         className: `title2`,
-        children: S(`#KeyWizard_Title`),
+        children: C(`#KeyWizard_Title`),
       }),
       (0, j.jsx)(`div`, {
         className: `titleHelper`,
         children: (0, j.jsx)(`a`, {
-          href: `${l.PARTNER_BASE_URL}doc/features/playtest#4`,
+          href: `${p.PARTNER_BASE_URL}doc/features/playtest#4`,
           target: `_blank`,
-          children: S(`#ViewDocumentation`),
+          children: C(`#ViewDocumentation`),
         }),
       }),
       (0, j.jsx)(`br`, { style: { clear: `left` } }),
       (0, j.jsxs)(`div`, {
         className: `instructions`,
         children: [
-          (0, j.jsx)(`p`, { children: S(`#KeyWizard_Playtest_Desc`) }),
-          (0, j.jsx)(`p`, { children: S(`#KeyWizard_Request_notes`) }),
+          (0, j.jsx)(`p`, { children: C(`#KeyWizard_Playtest_Desc`) }),
+          (0, j.jsx)(`p`, { children: C(`#KeyWizard_Request_notes`) }),
           (0, j.jsx)(`div`, {
             className: en,
-            children: (0, j.jsx)(ae, {
+            children: (0, j.jsx)(ie, {
               type: `number`,
-              label: S(`#KeyWizard_NumKeys`, r.name),
+              label: C(`#KeyWizard_NumKeys`, r.name),
               min: 1,
               max: 1e8,
               value: i,
               onChange: (e) => a(Number.parseInt(e.currentTarget.value)),
             }),
           }),
-          (0, j.jsx)(g, { children: S(`#KeyWizard_KeyUsage`) }),
+          (0, j.jsx)(_, { children: C(`#KeyWizard_KeyUsage`) }),
           (0, j.jsx)(`textarea`, {
-            className: e(`DialogTextInputBase`, tn),
+            className: t(`DialogTextInputBase`, tn),
             value: o || ``,
             onChange: (e) => s(e?.currentTarget?.value || ``),
           }),
           (0, j.jsx)(`div`, {
             className: $t,
-            children: (0, j.jsx)(xe, {
+            children: (0, j.jsx)(be, {
               onClick: (e) =>
-                ye(
+                ve(
                   (0, j.jsx)(sn, {
                     unAppID: n,
                     oPackage: r,
                     nKeys: i,
                     strNotes: o,
                   }),
-                  oe(e),
+                  ae(e),
                 ),
               disabled: i <= 0,
-              children: S(`#Button_Submit`),
+              children: C(`#Button_Submit`),
             }),
           }),
         ],
@@ -1016,14 +1023,14 @@ function sn(e) {
     }, []),
     (0, j.jsx)(Ze, {
       state: o,
-      strDialogTitle: S(`#KeyWizard_Dialog_Title`),
+      strDialogTitle: C(`#KeyWizard_Dialog_Title`),
       closeModal: a,
     })
   );
 }
 function cn() {
   let [e] = (0, A.useState)(() =>
-    s(`year_in_review_proress`, `application_config`),
+    c(`year_in_review_proress`, `application_config`),
   );
   return e;
 }
@@ -1060,10 +1067,10 @@ function ln(e) {
     })
   );
 }
-function un(t) {
-  let { oMonth: n, nActiveQueue: r } = t;
+function un(e) {
+  let { oMonth: n, nActiveQueue: r } = e;
   return (0, j.jsxs)(`div`, {
-    className: e(nt, void 0),
+    className: t(nt, void 0),
     children: [
       (0, j.jsxs)(`h3`, {
         children: [
@@ -1196,29 +1203,30 @@ function un(t) {
 }
 function X(e) {
   let { rtTime: t } = e;
-  return (0, j.jsxs)(`span`, { children: [ne(t), ` as `, re(t)] });
+  return (0, j.jsxs)(`span`, { children: [oe(t), ` as `, ce(t)] });
 }
 var dn = A.lazy(() =>
     y(
-      () => import(`./rootlogin.js?contenthash=Da8I1HML`),
+      () => import(`./rootlogin.js?contenthash=DzemQLxh`),
       __vite__mapDeps([
-        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
       ]),
       import.meta.url,
     ),
   ),
   fn = A.lazy(() =>
     y(
-      () => import(`./steamml_routing.js?contenthash=CjkjQ6pr`),
-      __vite__mapDeps([17, 1, 4, 18, 19, 20, 8, 21]),
+      () => import(`./steamml_routing.js?contenthash=DbBmdwm8`),
+      __vite__mapDeps([30, 1, 4, 31, 32, 33, 22, 34]),
       import.meta.url,
     ),
   );
 A.lazy(() =>
   y(
-    () => import(`./steamdeckcompatibilitydetails.js?contenthash=im06qYXx`),
+    () => import(`./steamdeckcompatibilitydetails.js?contenthash=DI0MT26h`),
     __vite__mapDeps([
-      22, 23, 1, 2, 3, 4, 5, 24, 25, 26, 27, 28, 6, 8, 29, 13, 14, 15, 9, 30,
+      35, 36, 1, 2, 3, 4, 5, 37, 38, 39, 40, 41, 6, 22, 42, 43, 23, 24, 44, 45,
     ]),
     import.meta.url,
   ),
@@ -1226,197 +1234,201 @@ A.lazy(() =>
 var Z = A.lazy(() =>
     y(
       () =>
-        import(`./steamdeckcompatibilitydetails_admin.js?contenthash=CM-AdzOa`),
+        import(`./steamdeckcompatibilitydetails_admin.js?contenthash=BQBge5JA`),
       __vite__mapDeps([
-        31, 1, 23, 2, 3, 4, 5, 24, 25, 26, 27, 28, 6, 8, 29, 13, 14, 15, 9, 30,
+        46, 1, 36, 2, 3, 4, 5, 37, 38, 39, 40, 41, 6, 22, 42, 43, 23, 24, 44,
+        45,
       ]),
       import.meta.url,
     ),
   ),
   pn = A.lazy(() =>
     y(
-      () => import(`./pricing_routing.js?contenthash=CA0thmAt`),
+      () => import(`./pricing_routing.js?contenthash=CawdBXG5`),
       __vite__mapDeps([
-        32, 1, 2, 3, 4, 5, 33, 25, 27, 26, 34, 35, 36, 28, 37, 10, 38, 39, 40,
-        41, 42, 18, 6, 43, 44, 45, 46, 47, 48, 49, 50, 51, 8, 29, 9, 52, 13, 14,
-        15, 53, 54, 55, 56, 57, 24, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68,
-        69, 70, 71, 72, 73, 74, 7, 11, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
-        85, 86, 87, 88,
+        47, 1, 2, 3, 4, 5, 48, 40, 39, 49, 50, 51, 31, 6, 52, 11, 12, 13, 14,
+        15, 16, 17, 18, 53, 54, 55, 22, 42, 44, 56, 43, 23, 24, 57, 58, 59, 60,
+        61, 62, 38, 41, 28, 63, 64, 65, 66, 67, 68, 37, 69, 10, 19, 20, 21, 70,
+        71, 72, 73, 74, 75, 76, 77, 78, 79, 27, 25, 80, 81, 9, 82, 83, 84, 85,
+        86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
       ]),
       import.meta.url,
     ),
   ),
   mn = A.lazy(() =>
     y(
-      () => import(`./buildpatchnotes.js?contenthash=CSq8vkaq`),
+      () => import(`./buildpatchnotes.js?contenthash=B_wSZpcb`),
       __vite__mapDeps([
-        89, 1, 2, 3, 4, 5, 24, 25, 26, 27, 28, 90, 61, 34, 35, 36, 58, 91, 74,
-        92, 93, 37, 94, 95, 96, 6, 20, 23, 8, 29, 13, 14, 15, 9, 30, 54, 97, 42,
-        98, 99, 10, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 82, 53,
-        55, 56, 110, 19, 111, 47, 45, 46, 48, 60, 112, 113, 114, 115, 116, 117,
-        40, 11, 118, 119, 73, 7, 120, 121, 33, 38, 39, 122, 123, 124, 125, 126,
-        127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 64, 65, 137, 138, 63,
-        71, 139, 140, 68, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151,
+        96, 1, 2, 3, 4, 5, 62, 39, 40, 37, 38, 41, 97, 20, 49, 50, 69, 98, 8, 9,
+        81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23, 24, 44, 45, 58,
+        51, 104, 105, 106, 28, 63, 107, 108, 109, 110, 111, 112, 113, 114, 115,
+        116, 89, 57, 59, 60, 117, 32, 118, 14, 12, 13, 15, 19, 53, 54, 119, 120,
+        121, 122, 123, 124, 67, 25, 125, 126, 80, 27, 127, 128, 129, 130, 131,
+        132, 133, 134, 135, 136, 26, 64, 61, 65, 66, 137, 138, 139, 140, 141,
+        142, 143, 71, 72, 144, 145, 70, 78, 146, 147, 75, 148, 149, 150, 151,
+        152, 153, 154, 155, 156, 157, 158,
       ]),
       import.meta.url,
     ),
   ),
   hn = A.lazy(() =>
     y(
-      () => import(`./promotion_routing.js?contenthash=D6B6Ynnb`),
+      () => import(`./promotion_routing.js?contenthash=HgOhTeDS`),
       __vite__mapDeps([
-        152, 153, 1, 2, 3, 4, 5, 33, 25, 27, 26, 34, 35, 36, 28, 37, 10, 38, 39,
-        40, 117, 24, 90, 61, 58, 91, 74, 92, 93, 94, 95, 96, 6, 20, 23, 8, 29,
-        13, 14, 15, 9, 30, 54, 97, 42, 98, 99, 100, 101, 102, 154, 123, 124, 53,
-        55, 56, 64, 65, 118, 141, 7, 11, 143, 119, 73, 146, 155, 122, 125, 18,
-        156, 103, 104, 105, 106, 107, 157, 158, 159, 160, 150, 132, 133, 134,
-        135, 161, 162, 163, 164, 75, 76, 165, 166, 59, 44, 45, 46, 47, 48, 49,
-        50, 51, 60, 62, 167, 168, 169, 170, 19, 171, 172, 173, 78, 174, 43, 41,
-        52, 108, 109, 82, 110, 111, 112, 113, 114, 115, 116, 120, 121, 126, 127,
-        128, 129, 130, 131, 136, 137, 138, 63, 71, 139, 140, 68, 12, 16, 175,
-        69, 70, 176, 177, 178, 179, 180, 72, 81, 181, 182, 183, 184, 77, 79,
-        149, 185, 186, 187, 188, 189, 190, 191, 80, 83, 192, 193, 194, 195, 196,
-        84, 85, 197, 198, 199, 200,
+        159, 160, 1, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
+        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
+        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
+        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
+        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
+        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
+        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
+        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
+        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
+        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
+        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
   gn = A.lazy(() =>
     y(
-      () => import(`./salesrouting.js?contenthash=BlKFnGUO`),
+      () => import(`./salesrouting.js?contenthash=BLKV-Dht`),
       __vite__mapDeps([
-        201, 1, 153, 2, 3, 4, 5, 33, 25, 27, 26, 34, 35, 36, 28, 37, 10, 38, 39,
-        40, 117, 24, 90, 61, 58, 91, 74, 92, 93, 94, 95, 96, 6, 20, 23, 8, 29,
-        13, 14, 15, 9, 30, 54, 97, 42, 98, 99, 100, 101, 102, 154, 123, 124, 53,
-        55, 56, 64, 65, 118, 141, 7, 11, 143, 119, 73, 146, 155, 122, 125, 18,
-        156, 103, 104, 105, 106, 107, 157, 158, 159, 160, 150, 132, 133, 134,
-        135, 161, 162, 163, 164, 75, 76, 165, 166, 59, 44, 45, 46, 47, 48, 49,
-        50, 51, 60, 62, 167, 168, 169, 170, 19, 171, 172, 173, 78, 174, 43, 41,
-        52, 108, 109, 82, 110, 111, 112, 113, 114, 115, 116, 120, 121, 126, 127,
-        128, 129, 130, 131, 136, 137, 138, 63, 71, 139, 140, 68, 12, 16, 175,
-        69, 70, 176, 177, 178, 179, 180, 72, 81, 181, 182, 183, 184, 77, 79,
-        149, 185, 186, 187, 188, 189, 190, 191, 80, 83, 192, 193, 194, 195, 196,
-        84, 85, 197, 198, 199, 200,
+        208, 1, 160, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
+        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
+        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
+        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
+        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
+        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
+        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
+        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
+        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
+        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
+        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
   _n = A.lazy(() =>
     y(
-      () => import(`./optin_routing.js?contenthash=DKjFltmJ`),
+      () => import(`./optin_routing.js?contenthash=IPnxO4c9`),
       __vite__mapDeps([
-        202, 153, 1, 2, 3, 4, 5, 33, 25, 27, 26, 34, 35, 36, 28, 37, 10, 38, 39,
-        40, 117, 24, 90, 61, 58, 91, 74, 92, 93, 94, 95, 96, 6, 20, 23, 8, 29,
-        13, 14, 15, 9, 30, 54, 97, 42, 98, 99, 100, 101, 102, 154, 123, 124, 53,
-        55, 56, 64, 65, 118, 141, 7, 11, 143, 119, 73, 146, 155, 122, 125, 18,
-        156, 103, 104, 105, 106, 107, 157, 158, 159, 160, 150, 132, 133, 134,
-        135, 161, 162, 163, 164, 75, 76, 165, 166, 59, 44, 45, 46, 47, 48, 49,
-        50, 51, 60, 62, 167, 168, 169, 170, 19, 171, 172, 173, 78, 174, 43, 41,
-        52, 108, 109, 82, 110, 111, 112, 113, 114, 115, 116, 120, 121, 126, 127,
-        128, 129, 130, 131, 136, 137, 138, 63, 71, 139, 140, 68, 12, 16, 175,
-        69, 70, 176, 177, 178, 179, 180, 72, 81, 181, 182, 183, 184, 77, 79,
-        149, 185, 186, 187, 188, 189, 190, 191, 80, 83, 192, 193, 194, 195, 196,
-        84, 85, 197, 198, 199, 200,
+        209, 160, 1, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
+        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
+        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
+        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
+        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
+        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
+        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
+        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
+        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
+        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
+        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
   Q = A.lazy(() =>
     y(
-      () => import(`./appadminrouter.js?contenthash=CRYow-ke`),
+      () => import(`./appadminrouter.js?contenthash=r9jz5Q-q`),
       __vite__mapDeps([
-        203, 1, 2, 3, 4, 5, 117, 40, 24, 25, 26, 27, 28, 34, 35, 91, 93, 156,
-        164, 6, 29, 8, 14, 15, 150, 98, 99, 132, 133, 134, 135, 75, 76, 165, 19,
-        20, 119, 73, 74, 56, 7, 9, 10, 11, 204, 205, 58, 166, 81, 82, 53, 54,
-        55, 181, 182, 183, 184, 206, 178, 179, 180, 72, 207,
+        210, 1, 2, 3, 4, 5, 124, 67, 37, 38, 39, 40, 41, 49, 50, 98, 100, 163,
+        171, 6, 42, 22, 23, 24, 157, 105, 106, 139, 140, 141, 142, 82, 83, 172,
+        32, 33, 126, 80, 81, 9, 60, 27, 28, 25, 211, 212, 69, 173, 88, 89, 57,
+        58, 59, 188, 189, 190, 191, 213, 185, 186, 187, 79, 214,
       ]),
       import.meta.url,
     ),
   ),
   $ = A.lazy(() =>
     y(
-      () => import(`./storeadmin.js?contenthash=DGOT9Iln`),
+      () => import(`./storeadmin.js?contenthash=DslvhO_r`),
       __vite__mapDeps([
-        208, 1, 2, 3, 4, 5, 24, 25, 26, 27, 28, 90, 61, 34, 35, 36, 58, 91, 74,
-        92, 93, 37, 94, 95, 96, 6, 20, 23, 8, 29, 13, 14, 15, 9, 30, 54, 97, 42,
-        98, 99, 10, 100, 101, 102, 154, 123, 124, 53, 55, 56, 64, 65, 118, 141,
-        7, 11, 143, 119, 73, 146, 155, 41, 44, 45, 46, 47, 48, 49, 50, 51, 59,
-        60, 62, 167, 168, 169, 170, 209, 210, 211, 171, 172, 212, 213, 43, 52,
-        150, 63, 57, 33, 38, 39, 40, 66, 67, 68, 204, 70, 161, 162, 205, 166,
-        164, 132, 117, 133, 134, 135, 75, 76, 165, 81, 82, 181, 182, 183, 184,
-        206, 72, 149, 187, 188, 130, 131, 191, 192, 193, 194, 195, 196, 214,
-        105, 158, 159, 160, 163, 215, 216, 114, 115, 217, 218,
+        215, 1, 2, 3, 4, 5, 62, 39, 40, 37, 38, 41, 97, 20, 49, 50, 69, 98, 8,
+        9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23, 24, 44, 45,
+        58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131, 57, 59, 60,
+        71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 48, 11, 12, 13, 14,
+        15, 16, 17, 18, 10, 19, 21, 53, 54, 174, 175, 176, 55, 177, 216, 217,
+        218, 178, 179, 219, 220, 52, 56, 157, 70, 68, 61, 64, 65, 66, 67, 73,
+        74, 75, 211, 77, 168, 169, 212, 173, 171, 139, 124, 140, 141, 142, 82,
+        83, 172, 88, 89, 188, 189, 190, 191, 213, 79, 156, 194, 195, 137, 138,
+        198, 199, 200, 201, 202, 203, 221, 112, 165, 166, 167, 170, 222, 223,
+        121, 122, 224, 225,
       ]),
       import.meta.url,
     ),
   ),
   vn = A.lazy(() =>
     y(
-      () => import(`./packageadmin.js?contenthash=YgVEq-m-`),
+      () => import(`./packageadmin.js?contenthash=zckG18Al`),
       __vite__mapDeps([
-        219, 1, 2, 3, 4, 5, 36, 26, 27, 41, 34, 35, 42, 6, 44, 45, 46, 47, 48,
-        49, 50, 51, 59, 60, 61, 62, 210, 211, 111, 112, 43, 8, 29, 9, 52, 14,
-        15, 57, 33, 25, 28, 37, 10, 38, 39, 40, 24, 58, 63, 64, 65, 66, 67, 68,
-        204, 70, 77, 78, 79, 80, 54, 53, 55, 56, 73, 74, 7, 11, 81, 82, 83, 86,
-        87, 197, 198, 220,
+        226, 1, 2, 3, 4, 5, 62, 39, 40, 48, 49, 50, 51, 6, 11, 12, 13, 14, 15,
+        16, 17, 18, 10, 19, 20, 21, 53, 54, 217, 218, 118, 119, 52, 55, 22, 42,
+        44, 56, 23, 24, 68, 37, 38, 41, 69, 70, 71, 72, 61, 28, 63, 64, 65, 66,
+        67, 73, 74, 75, 211, 77, 84, 85, 86, 87, 58, 57, 59, 60, 80, 81, 9, 27,
+        25, 88, 89, 90, 93, 94, 204, 205, 227,
       ]),
       import.meta.url,
     ),
   ),
   yn = A.lazy(() =>
     y(
-      () => import(`./connections.js?contenthash=DThJO9Hk`),
-      __vite__mapDeps([221, 1, 2, 3, 4, 5, 20, 8, 29, 14, 15, 222]),
+      () => import(`./connections.js?contenthash=CtLn45mX`),
+      __vite__mapDeps([228, 1, 2, 3, 4, 5, 33, 22, 42, 23, 24, 229]),
       import.meta.url,
     ),
   ),
   bn = A.lazy(() =>
     y(
-      () => import(`./landing.js?contenthash=y0jW-hPP`),
+      () => import(`./landing.js?contenthash=Dt9ZEeYl`),
       __vite__mapDeps([
-        223, 1, 2, 3, 4, 5, 153, 33, 25, 27, 26, 34, 35, 36, 28, 37, 10, 38, 39,
-        40, 117, 24, 90, 61, 58, 91, 74, 92, 93, 94, 95, 96, 6, 20, 23, 8, 29,
-        13, 14, 15, 9, 30, 54, 97, 42, 98, 99, 100, 101, 102, 154, 123, 124, 53,
-        55, 56, 64, 65, 118, 141, 7, 11, 143, 119, 73, 146, 155, 122, 125, 18,
-        156, 103, 104, 105, 106, 107, 157, 158, 159, 160, 150, 132, 133, 134,
-        135, 161, 162, 163, 164, 75, 76, 165, 166, 59, 44, 45, 46, 47, 48, 49,
-        50, 51, 60, 62, 167, 168, 169, 170, 19, 171, 172, 173, 78, 174, 43, 41,
-        52, 108, 109, 82, 110, 111, 112, 113, 114, 115, 116, 120, 121, 126, 127,
-        128, 129, 130, 131, 136, 137, 138, 63, 71, 139, 140, 68, 12, 16, 175,
-        69, 70, 176, 177, 178, 179, 180, 72, 81, 181, 182, 183, 184, 77, 79,
-        149, 185, 186, 187, 188, 189, 190, 191, 80, 83, 192, 193, 194, 195, 196,
-        84, 85, 197, 198, 199, 200, 224, 225, 226, 227, 228,
+        230, 1, 2, 3, 4, 5, 160, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
+        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
+        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
+        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
+        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
+        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
+        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
+        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
+        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
+        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
+        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207, 231, 232, 233,
+        234, 235,
       ]),
       import.meta.url,
     ),
   ),
   xn = A.lazy(() =>
     y(
-      () => import(`./timelinemarkereditorlanding.js?contenthash=DefioZgY`),
+      () => import(`./timelinemarkereditorlanding.js?contenthash=C90d_1SH`),
       __vite__mapDeps([
-        229, 1, 2, 3, 4, 5, 230, 37, 6, 8, 54, 29, 13, 98, 99, 64, 65, 127, 128,
-        129, 10, 118, 20, 7, 9, 11, 63, 14, 15, 39, 40, 161, 162, 231, 175, 199,
-        232, 25, 233, 234,
+        236, 1, 2, 3, 4, 5, 237, 66, 63, 6, 22, 58, 42, 43, 105, 106, 71, 72,
+        134, 135, 136, 28, 125, 33, 27, 25, 70, 23, 24, 65, 67, 168, 169, 238,
+        182, 206, 239, 38, 240, 241,
       ]),
       import.meta.url,
     ),
   ),
   Sn = A.lazy(() =>
     y(
-      () => import(`./promotionreviewdashboard.js?contenthash=CeVfERpu`),
+      () => import(`./promotionreviewdashboard.js?contenthash=Dfbc1Yb3`),
       __vite__mapDeps([
-        235, 1, 153, 2, 3, 4, 5, 33, 25, 27, 26, 34, 35, 36, 28, 37, 10, 38, 39,
-        40, 117, 24, 90, 61, 58, 91, 74, 92, 93, 94, 95, 96, 6, 20, 23, 8, 29,
-        13, 14, 15, 9, 30, 54, 97, 42, 98, 99, 100, 101, 102, 154, 123, 124, 53,
-        55, 56, 64, 65, 118, 141, 7, 11, 143, 119, 73, 146, 155, 122, 125, 18,
-        156, 103, 104, 105, 106, 107, 157, 158, 159, 160, 150, 132, 133, 134,
-        135, 161, 162, 163, 164, 75, 76, 165, 166, 59, 44, 45, 46, 47, 48, 49,
-        50, 51, 60, 62, 167, 168, 169, 170, 19, 171, 172, 173, 78, 174, 43, 41,
-        52, 108, 109, 82, 110, 111, 112, 113, 114, 115, 116, 120, 121, 126, 127,
-        128, 129, 130, 131, 136, 137, 138, 63, 71, 139, 140, 68, 12, 16, 175,
-        69, 70, 176, 177, 178, 179, 180, 72, 81, 181, 182, 183, 184, 77, 79,
-        149, 185, 186, 187, 188, 189, 190, 191, 80, 83, 192, 193, 194, 195, 196,
-        84, 85, 197, 198, 199, 200, 236,
+        242, 1, 160, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
+        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
+        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
+        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
+        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
+        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
+        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
+        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
+        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
+        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
+        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207, 243,
       ]),
       import.meta.url,
     ),
@@ -1424,103 +1436,104 @@ var Z = A.lazy(() =>
   Cn = A.lazy(() =>
     y(
       () =>
-        import(`./reservationqueuemessagingdashboard.js?contenthash=D_Xyr-mP`),
+        import(`./reservationqueuemessagingdashboard.js?contenthash=GJ0ywuS6`),
       __vite__mapDeps([
-        237, 1, 2, 3, 4, 5, 91, 6, 19, 20, 29, 8, 97, 61, 53, 54, 55, 56, 98,
-        99, 7, 9, 10, 11, 63, 14, 15, 64, 65, 161, 162, 181, 82, 182, 183, 184,
-        187, 192, 25, 26, 27, 34, 35, 28, 38, 193, 194, 195, 238,
+        244, 1, 2, 3, 4, 5, 98, 6, 32, 33, 42, 22, 104, 20, 57, 58, 59, 60, 105,
+        106, 27, 28, 25, 70, 23, 24, 71, 72, 168, 169, 188, 89, 189, 190, 191,
+        194, 199, 38, 39, 40, 49, 50, 41, 64, 200, 201, 202, 245,
       ]),
       import.meta.url,
     ),
   ),
   wn = A.lazy(() =>
     y(
-      () => import(`./contenthub_routing.js?contenthash=DeDW4SM4`),
+      () => import(`./contenthub_routing.js?contenthash=DScTm1zH`),
       __vite__mapDeps([
-        239, 1, 2, 3, 4, 5, 18, 6, 209, 44, 45, 46, 47, 48, 49, 50, 51, 167,
-        168, 169, 170, 8, 13, 14, 15, 70, 161, 162, 71, 185, 24, 25, 26, 27, 28,
-        90, 61, 34, 35, 36, 58, 91, 74, 92, 93, 37, 94, 95, 96, 20, 23, 29, 9,
-        30, 54, 97, 42, 98, 99, 10, 100, 101, 102, 104, 105, 118, 186, 187, 188,
-        130, 131, 182, 75, 76, 240,
+        246, 1, 2, 3, 4, 5, 31, 6, 216, 11, 12, 13, 14, 15, 16, 17, 18, 53, 54,
+        174, 175, 176, 55, 177, 22, 43, 23, 24, 77, 168, 169, 78, 192, 37, 38,
+        39, 40, 41, 97, 62, 20, 49, 50, 69, 98, 8, 9, 81, 99, 100, 101, 102,
+        103, 33, 36, 42, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109,
+        111, 112, 125, 193, 194, 195, 137, 138, 189, 82, 83, 247,
       ]),
       import.meta.url,
     ),
   ),
   Tn = A.lazy(() =>
     y(
-      () => import(`./recap_routing.js?contenthash=BZL_lWo6`),
+      () => import(`./recap_routing.js?contenthash=DpTIE29V`),
       __vite__mapDeps([
-        241, 1, 153, 2, 3, 4, 5, 33, 25, 27, 26, 34, 35, 36, 28, 37, 10, 38, 39,
-        40, 117, 24, 90, 61, 58, 91, 74, 92, 93, 94, 95, 96, 6, 20, 23, 8, 29,
-        13, 14, 15, 9, 30, 54, 97, 42, 98, 99, 100, 101, 102, 154, 123, 124, 53,
-        55, 56, 64, 65, 118, 141, 7, 11, 143, 119, 73, 146, 155, 122, 125, 18,
-        156, 103, 104, 105, 106, 107, 157, 158, 159, 160, 150, 132, 133, 134,
-        135, 161, 162, 163, 164, 75, 76, 165, 166, 59, 44, 45, 46, 47, 48, 49,
-        50, 51, 60, 62, 167, 168, 169, 170, 19, 171, 172, 173, 78, 174, 43, 41,
-        52, 108, 109, 82, 110, 111, 112, 113, 114, 115, 116, 120, 121, 126, 127,
-        128, 129, 130, 131, 136, 137, 138, 63, 71, 139, 140, 68, 12, 16, 175,
-        69, 70, 176, 177, 178, 179, 180, 72, 81, 181, 182, 183, 184, 77, 79,
-        149, 185, 186, 187, 188, 189, 190, 191, 80, 83, 192, 193, 194, 195, 196,
-        84, 85, 197, 198, 199, 200,
+        248, 1, 160, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
+        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
+        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
+        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
+        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
+        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
+        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
+        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
+        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
+        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
+        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207,
       ]),
       import.meta.url,
     ),
   ),
   En = A.lazy(() =>
     y(
-      () => import(`./deadlinelanding.js?contenthash=F7VvgAoQ`),
+      () => import(`./deadlinelanding.js?contenthash=BgCyQjQW`),
       __vite__mapDeps([
-        242, 1, 2, 3, 4, 5, 27, 26, 8, 13, 98, 99, 73, 24, 25, 28, 74, 29, 56,
-        7, 9, 10, 11, 100, 101, 119, 226, 196, 227, 243,
+        249, 1, 2, 3, 4, 5, 40, 39, 22, 43, 105, 106, 107, 108, 80, 37, 38, 41,
+        81, 9, 42, 60, 27, 28, 25, 126, 233, 203, 234, 250,
       ]),
       import.meta.url,
     ),
   ),
   Dn = A.lazy(() =>
     y(
-      () => import(`./taxrequirementlanding.js?contenthash=C105qSp2`),
-      __vite__mapDeps([244, 1, 2, 3, 4, 5, 8, 29, 161, 162, 226, 245]),
+      () => import(`./taxrequirementlanding.js?contenthash=B1OHPS-A`),
+      __vite__mapDeps([251, 1, 2, 3, 4, 5, 22, 42, 168, 169, 233, 252]),
       import.meta.url,
     ),
   ),
   On = A.lazy(() =>
     y(
-      () => import(`./meetsteamrouting.js?contenthash=BKIN2q4g`),
+      () => import(`./meetsteamrouting.js?contenthash=BbLc10SA`),
       __vite__mapDeps([
-        246, 1, 2, 3, 4, 5, 33, 25, 27, 26, 34, 35, 36, 28, 37, 10, 38, 39, 40,
-        24, 90, 61, 58, 91, 74, 92, 93, 94, 95, 96, 6, 20, 23, 8, 29, 13, 14,
-        15, 9, 30, 54, 97, 42, 98, 99, 100, 101, 102, 18, 109, 82, 53, 55, 56,
-        110, 19, 73, 7, 11, 64, 65, 137, 116, 117, 69, 70, 161, 162, 71, 72, 77,
-        46, 78, 79, 149, 150, 189, 190, 191, 192, 193, 196, 247,
+        253, 1, 2, 3, 4, 5, 62, 39, 40, 37, 38, 41, 97, 20, 49, 50, 69, 98, 8,
+        9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23, 24, 44, 45,
+        58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 31, 116, 89, 57, 59, 60,
+        117, 32, 71, 72, 27, 25, 145, 66, 123, 124, 67, 80, 61, 64, 65, 76, 77,
+        168, 169, 78, 79, 84, 13, 85, 86, 156, 157, 196, 197, 198, 199, 200,
+        203, 254,
       ]),
       import.meta.url,
     ),
   ),
   kn = A.lazy(() =>
     y(
-      () => import(`./achievementseditorlanding.js?contenthash=YQc51h1P`),
+      () => import(`./achievementseditorlanding.js?contenthash=TVHl86cN`),
       __vite__mapDeps([
-        248, 1, 2, 3, 4, 5, 24, 25, 26, 27, 28, 58, 35, 215, 159, 160, 216, 6,
-        44, 45, 46, 47, 48, 49, 50, 51, 59, 60, 61, 62, 167, 168, 169, 170, 20,
-        209, 111, 112, 171, 172, 173, 78, 174, 212, 213, 8, 29, 11, 127, 128,
-        38, 161, 162, 71, 231, 175, 179, 224, 225, 249,
+        255, 1, 2, 3, 4, 5, 37, 38, 39, 40, 41, 69, 50, 222, 166, 167, 223, 6,
+        11, 12, 13, 14, 15, 16, 17, 18, 10, 19, 20, 21, 53, 54, 174, 175, 176,
+        55, 177, 33, 216, 118, 119, 178, 179, 180, 85, 181, 219, 220, 22, 42,
+        25, 134, 135, 64, 168, 169, 78, 238, 182, 186, 231, 232, 256,
       ]),
       import.meta.url,
     ),
   ),
   An = A.lazy(() =>
     y(
-      () => import(`./creatorhomeadmindashboard.js?contenthash=DeVZCZ9k`),
+      () => import(`./creatorhomeadmindashboard.js?contenthash=BKoryV5K`),
       __vite__mapDeps([
-        250, 1, 3, 34, 26, 27, 35, 14, 15, 141, 92, 8, 56, 10, 7, 9, 11, 251,
+        257, 1, 3, 49, 39, 40, 50, 23, 24, 148, 99, 22, 60, 28, 27, 25, 258,
       ]),
       import.meta.url,
     ),
   );
 function jn(e) {
-  let t = s(`publisherid`, `application_config`),
-    n = A.useMemo(() => ({ country: l.COUNTRY, language: l.LANGUAGE }), []);
-  return (0, j.jsx)(p, {
+  let t = c(`publisherid`, `application_config`),
+    n = A.useMemo(() => ({ country: p.COUNTRY, language: p.LANGUAGE }), []);
+  return (0, j.jsx)(d, {
     IN_DESKTOPUI: !1,
     IN_GAMEPADUI: !1,
     IN_VR: !1,
@@ -1555,10 +1568,10 @@ function Nn(e) {
   let [t, n] = A.useState(!1);
   return (
     A.useEffect(() => {
-      let e = ge();
+      let e = Ce();
       e &&
         (document.documentElement.setAttribute(`lang`, e),
-        x.SetPreferredLocales([e])),
+        S.SetPreferredLocales([e])),
         n(!0);
     }, []),
     t
@@ -1641,7 +1654,7 @@ function Nn(e) {
                             "deck-verified-results": (e) =>
                               (0, j.jsx)(Z, {
                                 dataprops: e,
-                                results: s(
+                                results: c(
                                   `deckcompatibility`,
                                   `application_config`,
                                 ),
@@ -1657,7 +1670,7 @@ function Nn(e) {
                             "deck-verified-results-inflight": (e) =>
                               (0, j.jsx)(Z, {
                                 dataprops: e,
-                                results: s(
+                                results: c(
                                   `deckcompatibility_inflight`,
                                   `application_config`,
                                 ),
@@ -1665,7 +1678,7 @@ function Nn(e) {
                             "deck-verified-results-submitted": (e) =>
                               (0, j.jsx)(Z, {
                                 dataprops: e,
-                                results: s(
+                                results: c(
                                   `deckcompatibility_submitted`,
                                   `application_config`,
                                 ),
@@ -1673,7 +1686,7 @@ function Nn(e) {
                             "deck-verified-results-published": (e) =>
                               (0, j.jsx)(Z, {
                                 dataprops: e,
-                                results: s(
+                                results: c(
                                   `deckcompatibility_published`,
                                   `application_config`,
                                 ),
@@ -1689,7 +1702,7 @@ function Nn(e) {
                             "deck-verified-results-reports": (e) =>
                               (0, j.jsx)(Z, {
                                 dataprops: e,
-                                results: s(
+                                results: c(
                                   `deckcompatibility_reports`,
                                   `application_config`,
                                 ),
@@ -1764,31 +1777,31 @@ function Nn(e) {
   );
 }
 function Pn() {
-  return Je(new Ke(l.WEBAPI_BASE_URL));
+  return Je(new Ke(p.WEBAPI_BASE_URL));
 }
 function Fn(e) {
-  let t = me(Pn),
-    n = me(A.useCallback(() => new Qe(), []));
+  let t = de(Pn),
+    n = de(A.useCallback(() => new Qe(), []));
   return (0, j.jsx)(je, {
     useActiveSteamInterface: t,
     useStorage: n,
     children: e.children,
   });
 }
-var In = h(_());
+var In = m(v());
 function Ln() {
   let e = [];
   return (
-    i.IN_MOBILE_WEBVIEW && e.push(`in_mobile_app`),
-    i.IN_CLIENT && e.push(`in_client`),
+    a.IN_MOBILE_WEBVIEW && e.push(`in_mobile_app`),
+    a.IN_CLIENT && e.push(`in_client`),
     e
   );
 }
-c({ enforceActions: `never` });
+u({ enforceActions: `never` });
 function Rn() {
-  let e = document.querySelectorAll(`.StoreAdminReactRoot`);
-  for (let n = 0; n < e.length; n++) {
-    let r = e[n],
+  let t = document.querySelectorAll(`.StoreAdminReactRoot`);
+  for (let n = 0; n < t.length; n++) {
+    let r = t[n],
       i = r.getAttribute(`data-component`);
     switch (i) {
       case `LibraryLogoEditor`:
@@ -1796,28 +1809,28 @@ function Rn() {
         y(
           async () => {
             let { Init_LibraryLogoEditor: e } = await import(
-              `./logoedtior.js?contenthash=BX304gkG`
+              `./logoedtior.js?contenthash=D1NEy59j`
             );
             return { Init_LibraryLogoEditor: e };
           },
-          __vite__mapDeps([252, 1, 2, 3, 4, 5, 94, 8, 14, 15, 126, 253, 254]),
+          __vite__mapDeps([259, 1, 2, 3, 4, 5, 101, 22, 23, 24, 133, 260, 261]),
           import.meta.url,
         ).then(({ Init_LibraryLogoEditor: e }) =>
           e(i == `LibraryLogoEditorPopup`, r),
         );
         break;
       default:
-        t(!1, `unknown component: "${i}"`);
+        e(!1, `unknown component: "${i}"`);
     }
   }
 }
 document.addEventListener(`DOMContentLoaded`, async function () {
   let e = document.getElementById(`application_root`);
-  n(e ? `application_config` : void 0),
-    d().Init(`Partner`, CLSTAMP, new qe().GetServiceTransport(), {
+  o(e ? `application_config` : void 0),
+    n().Init(`Partner`, CLSTAMP, new qe().GetServiceTransport(), {
       fnGetReportTags: Ln,
     }),
-    await zn(l.LANGUAGE),
+    await zn(p.LANGUAGE),
     e ? In.createRoot(e).render(A.createElement(Nn, {})) : Rn();
 });
 async function zn(e) {
@@ -1933,7 +1946,7 @@ async function zn(e) {
             ),
           "../../../shared/localization/marketing/marketing_malay.json": () =>
             y(
-              () => import(`./marketing_malay.js?contenthash=CgQiPnkj`),
+              () => import(`./marketing_malay.js?contenthash=CaugIytj`),
               [],
               import.meta.url,
             ),
@@ -2115,7 +2128,7 @@ async function zn(e) {
             ),
           "../../../shared/localization/sales/sales_italian.json": () =>
             y(
-              () => import(`./sales_italian.js?contenthash=DINnmR-9`),
+              () => import(`./sales_italian.js?contenthash=biyfj6H6`),
               [],
               import.meta.url,
             ),
@@ -2139,7 +2152,7 @@ async function zn(e) {
             ),
           "../../../shared/localization/sales/sales_malay.json": () =>
             y(
-              () => import(`./sales_malay.js?contenthash=CeYH9QQd`),
+              () => import(`./sales_malay.js?contenthash=DUQen0LL`),
               [],
               import.meta.url,
             ),
@@ -2235,187 +2248,187 @@ async function zn(e) {
         Object.assign({
           "../localization/main_arabic.json": () =>
             y(
-              () => import(`./main_arabic.js?contenthash=D7vgaD5g`),
+              () => import(`./main_arabic.js?contenthash=DugEoX0F`),
               [],
               import.meta.url,
             ),
           "../localization/main_brazilian.json": () =>
             y(
-              () => import(`./main_brazilian.js?contenthash=yjTGRB3z`),
+              () => import(`./main_brazilian.js?contenthash=1bbNXK48`),
               [],
               import.meta.url,
             ),
           "../localization/main_bulgarian.json": () =>
             y(
-              () => import(`./main_bulgarian.js?contenthash=DvhzrkV2`),
+              () => import(`./main_bulgarian.js?contenthash=B3Zbvizn`),
               [],
               import.meta.url,
             ),
           "../localization/main_czech.json": () =>
             y(
-              () => import(`./main_czech.js?contenthash=h2hGaRSA`),
+              () => import(`./main_czech.js?contenthash=D75A8-ln`),
               [],
               import.meta.url,
             ),
           "../localization/main_danish.json": () =>
             y(
-              () => import(`./main_danish.js?contenthash=DDCtn6QP`),
+              () => import(`./main_danish.js?contenthash=B92BSZ4m`),
               [],
               import.meta.url,
             ),
           "../localization/main_dutch.json": () =>
             y(
-              () => import(`./main_dutch.js?contenthash=C-a-eRpa`),
+              () => import(`./main_dutch.js?contenthash=inFD542G`),
               [],
               import.meta.url,
             ),
           "../localization/main_english.json": () =>
             y(
-              () => import(`./main_english.js?contenthash=dRz0dceC`),
+              () => import(`./main_english.js?contenthash=oj6wa0X5`),
               [],
               import.meta.url,
             ),
           "../localization/main_finnish.json": () =>
             y(
-              () => import(`./main_finnish.js?contenthash=D9V4ySQr`),
+              () => import(`./main_finnish.js?contenthash=q96imtH3`),
               [],
               import.meta.url,
             ),
           "../localization/main_french.json": () =>
             y(
-              () => import(`./main_french.js?contenthash=LoiXl2DS`),
+              () => import(`./main_french.js?contenthash=CmidYc_D`),
               [],
               import.meta.url,
             ),
           "../localization/main_german.json": () =>
             y(
-              () => import(`./main_german.js?contenthash=BG7a0Jly`),
+              () => import(`./main_german.js?contenthash=BDsZBn39`),
               [],
               import.meta.url,
             ),
           "../localization/main_greek.json": () =>
             y(
-              () => import(`./main_greek.js?contenthash=BDdymnSp`),
+              () => import(`./main_greek.js?contenthash=DImW1hpa`),
               [],
               import.meta.url,
             ),
           "../localization/main_hungarian.json": () =>
             y(
-              () => import(`./main_hungarian.js?contenthash=D5Ar4V19`),
+              () => import(`./main_hungarian.js?contenthash=3CubEZCh`),
               [],
               import.meta.url,
             ),
           "../localization/main_indonesian.json": () =>
             y(
-              () => import(`./main_indonesian.js?contenthash=CbxYsHg0`),
+              () => import(`./main_indonesian.js?contenthash=B4YebdNE`),
               [],
               import.meta.url,
             ),
           "../localization/main_italian.json": () =>
             y(
-              () => import(`./main_italian.js?contenthash=DbYVq7IK`),
+              () => import(`./main_italian.js?contenthash=Dk_W8PbZ`),
               [],
               import.meta.url,
             ),
           "../localization/main_japanese.json": () =>
             y(
-              () => import(`./main_japanese.js?contenthash=DDoADJuI`),
+              () => import(`./main_japanese.js?contenthash=DzfVly7V`),
               [],
               import.meta.url,
             ),
           "../localization/main_koreana.json": () =>
             y(
-              () => import(`./main_koreana.js?contenthash=1MNXCPTB`),
+              () => import(`./main_koreana.js?contenthash=D2XULwrU`),
               [],
               import.meta.url,
             ),
           "../localization/main_latam.json": () =>
             y(
-              () => import(`./main_latam.js?contenthash=C6PoOJn1`),
+              () => import(`./main_latam.js?contenthash=BJb77zsR`),
               [],
               import.meta.url,
             ),
           "../localization/main_malay.json": () =>
             y(
-              () => import(`./main_malay.js?contenthash=BI53EbWp`),
+              () => import(`./main_malay.js?contenthash=B57Y9GCH`),
               [],
               import.meta.url,
             ),
           "../localization/main_norwegian.json": () =>
             y(
-              () => import(`./main_norwegian.js?contenthash=WhYs38jt`),
+              () => import(`./main_norwegian.js?contenthash=p6goKBYl`),
               [],
               import.meta.url,
             ),
           "../localization/main_polish.json": () =>
             y(
-              () => import(`./main_polish.js?contenthash=BOZ2C1ni`),
+              () => import(`./main_polish.js?contenthash=Cnf9qq0H`),
               [],
               import.meta.url,
             ),
           "../localization/main_portuguese.json": () =>
             y(
-              () => import(`./main_portuguese.js?contenthash=Wg7JzlCI`),
+              () => import(`./main_portuguese.js?contenthash=EeiJzYvJ`),
               [],
               import.meta.url,
             ),
           "../localization/main_romanian.json": () =>
             y(
-              () => import(`./main_romanian.js?contenthash=CK7k5Nse`),
+              () => import(`./main_romanian.js?contenthash=CMKz87zD`),
               [],
               import.meta.url,
             ),
           "../localization/main_russian.json": () =>
             y(
-              () => import(`./main_russian.js?contenthash=boxRCW4W`),
+              () => import(`./main_russian.js?contenthash=DYXay8Sr`),
               [],
               import.meta.url,
             ),
           "../localization/main_schinese.json": () =>
             y(
-              () => import(`./main_schinese.js?contenthash=C27fmk34`),
+              () => import(`./main_schinese.js?contenthash=CsgSWPk_`),
               [],
               import.meta.url,
             ),
           "../localization/main_spanish.json": () =>
             y(
-              () => import(`./main_spanish.js?contenthash=C9WmEhqy`),
+              () => import(`./main_spanish.js?contenthash=Dej_QNGq`),
               [],
               import.meta.url,
             ),
           "../localization/main_swedish.json": () =>
             y(
-              () => import(`./main_swedish.js?contenthash=apBu_dpS`),
+              () => import(`./main_swedish.js?contenthash=BuIKrKKr`),
               [],
               import.meta.url,
             ),
           "../localization/main_tchinese.json": () =>
             y(
-              () => import(`./main_tchinese.js?contenthash=Dy7xjwhF`),
+              () => import(`./main_tchinese.js?contenthash=BDZAKZnx`),
               [],
               import.meta.url,
             ),
           "../localization/main_thai.json": () =>
             y(
-              () => import(`./main_thai.js?contenthash=Nc20GAq7`),
+              () => import(`./main_thai.js?contenthash=BDMJN0Dz`),
               [],
               import.meta.url,
             ),
           "../localization/main_turkish.json": () =>
             y(
-              () => import(`./main_turkish.js?contenthash=BjU1bXRs`),
+              () => import(`./main_turkish.js?contenthash=j3uLK3QS`),
               [],
               import.meta.url,
             ),
           "../localization/main_ukrainian.json": () =>
             y(
-              () => import(`./main_ukrainian.js?contenthash=DIm3dT-a`),
+              () => import(`./main_ukrainian.js?contenthash=B0m33Raz`),
               [],
               import.meta.url,
             ),
           "../localization/main_vietnamese.json": () =>
             y(
-              () => import(`./main_vietnamese.js?contenthash=8O5PQG1c`),
+              () => import(`./main_vietnamese.js?contenthash=D-M0iyS7`),
               [],
               import.meta.url,
             ),
@@ -2426,7 +2439,7 @@ async function zn(e) {
       ke(),
     ]),
     i = { ...r.default },
-    a = we.GetLanguageFallback(e);
+    a = fe.GetLanguageFallback(e);
   if (e !== a) {
     let [e, r, o] = await Promise.all([
         k(
@@ -2549,7 +2562,7 @@ async function zn(e) {
               ),
             "../../../shared/localization/marketing/marketing_malay.json": () =>
               y(
-                () => import(`./marketing_malay.js?contenthash=CgQiPnkj`),
+                () => import(`./marketing_malay.js?contenthash=CaugIytj`),
                 [],
                 import.meta.url,
               ),
@@ -2739,7 +2752,7 @@ async function zn(e) {
               ),
             "../../../shared/localization/sales/sales_italian.json": () =>
               y(
-                () => import(`./sales_italian.js?contenthash=DINnmR-9`),
+                () => import(`./sales_italian.js?contenthash=biyfj6H6`),
                 [],
                 import.meta.url,
               ),
@@ -2763,7 +2776,7 @@ async function zn(e) {
               ),
             "../../../shared/localization/sales/sales_malay.json": () =>
               y(
-                () => import(`./sales_malay.js?contenthash=CeYH9QQd`),
+                () => import(`./sales_malay.js?contenthash=DUQen0LL`),
                 [],
                 import.meta.url,
               ),
@@ -2859,187 +2872,187 @@ async function zn(e) {
           Object.assign({
             "../localization/main_arabic.json": () =>
               y(
-                () => import(`./main_arabic.js?contenthash=D7vgaD5g`),
+                () => import(`./main_arabic.js?contenthash=DugEoX0F`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_brazilian.json": () =>
               y(
-                () => import(`./main_brazilian.js?contenthash=yjTGRB3z`),
+                () => import(`./main_brazilian.js?contenthash=1bbNXK48`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_bulgarian.json": () =>
               y(
-                () => import(`./main_bulgarian.js?contenthash=DvhzrkV2`),
+                () => import(`./main_bulgarian.js?contenthash=B3Zbvizn`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_czech.json": () =>
               y(
-                () => import(`./main_czech.js?contenthash=h2hGaRSA`),
+                () => import(`./main_czech.js?contenthash=D75A8-ln`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_danish.json": () =>
               y(
-                () => import(`./main_danish.js?contenthash=DDCtn6QP`),
+                () => import(`./main_danish.js?contenthash=B92BSZ4m`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_dutch.json": () =>
               y(
-                () => import(`./main_dutch.js?contenthash=C-a-eRpa`),
+                () => import(`./main_dutch.js?contenthash=inFD542G`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_english.json": () =>
               y(
-                () => import(`./main_english.js?contenthash=dRz0dceC`),
+                () => import(`./main_english.js?contenthash=oj6wa0X5`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_finnish.json": () =>
               y(
-                () => import(`./main_finnish.js?contenthash=D9V4ySQr`),
+                () => import(`./main_finnish.js?contenthash=q96imtH3`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_french.json": () =>
               y(
-                () => import(`./main_french.js?contenthash=LoiXl2DS`),
+                () => import(`./main_french.js?contenthash=CmidYc_D`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_german.json": () =>
               y(
-                () => import(`./main_german.js?contenthash=BG7a0Jly`),
+                () => import(`./main_german.js?contenthash=BDsZBn39`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_greek.json": () =>
               y(
-                () => import(`./main_greek.js?contenthash=BDdymnSp`),
+                () => import(`./main_greek.js?contenthash=DImW1hpa`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_hungarian.json": () =>
               y(
-                () => import(`./main_hungarian.js?contenthash=D5Ar4V19`),
+                () => import(`./main_hungarian.js?contenthash=3CubEZCh`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_indonesian.json": () =>
               y(
-                () => import(`./main_indonesian.js?contenthash=CbxYsHg0`),
+                () => import(`./main_indonesian.js?contenthash=B4YebdNE`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_italian.json": () =>
               y(
-                () => import(`./main_italian.js?contenthash=DbYVq7IK`),
+                () => import(`./main_italian.js?contenthash=Dk_W8PbZ`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_japanese.json": () =>
               y(
-                () => import(`./main_japanese.js?contenthash=DDoADJuI`),
+                () => import(`./main_japanese.js?contenthash=DzfVly7V`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_koreana.json": () =>
               y(
-                () => import(`./main_koreana.js?contenthash=1MNXCPTB`),
+                () => import(`./main_koreana.js?contenthash=D2XULwrU`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_latam.json": () =>
               y(
-                () => import(`./main_latam.js?contenthash=C6PoOJn1`),
+                () => import(`./main_latam.js?contenthash=BJb77zsR`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_malay.json": () =>
               y(
-                () => import(`./main_malay.js?contenthash=BI53EbWp`),
+                () => import(`./main_malay.js?contenthash=B57Y9GCH`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_norwegian.json": () =>
               y(
-                () => import(`./main_norwegian.js?contenthash=WhYs38jt`),
+                () => import(`./main_norwegian.js?contenthash=p6goKBYl`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_polish.json": () =>
               y(
-                () => import(`./main_polish.js?contenthash=BOZ2C1ni`),
+                () => import(`./main_polish.js?contenthash=Cnf9qq0H`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_portuguese.json": () =>
               y(
-                () => import(`./main_portuguese.js?contenthash=Wg7JzlCI`),
+                () => import(`./main_portuguese.js?contenthash=EeiJzYvJ`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_romanian.json": () =>
               y(
-                () => import(`./main_romanian.js?contenthash=CK7k5Nse`),
+                () => import(`./main_romanian.js?contenthash=CMKz87zD`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_russian.json": () =>
               y(
-                () => import(`./main_russian.js?contenthash=boxRCW4W`),
+                () => import(`./main_russian.js?contenthash=DYXay8Sr`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_schinese.json": () =>
               y(
-                () => import(`./main_schinese.js?contenthash=C27fmk34`),
+                () => import(`./main_schinese.js?contenthash=CsgSWPk_`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_spanish.json": () =>
               y(
-                () => import(`./main_spanish.js?contenthash=C9WmEhqy`),
+                () => import(`./main_spanish.js?contenthash=Dej_QNGq`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_swedish.json": () =>
               y(
-                () => import(`./main_swedish.js?contenthash=apBu_dpS`),
+                () => import(`./main_swedish.js?contenthash=BuIKrKKr`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_tchinese.json": () =>
               y(
-                () => import(`./main_tchinese.js?contenthash=Dy7xjwhF`),
+                () => import(`./main_tchinese.js?contenthash=BDZAKZnx`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_thai.json": () =>
               y(
-                () => import(`./main_thai.js?contenthash=Nc20GAq7`),
+                () => import(`./main_thai.js?contenthash=BDMJN0Dz`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_turkish.json": () =>
               y(
-                () => import(`./main_turkish.js?contenthash=BjU1bXRs`),
+                () => import(`./main_turkish.js?contenthash=j3uLK3QS`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_ukrainian.json": () =>
               y(
-                () => import(`./main_ukrainian.js?contenthash=DIm3dT-a`),
+                () => import(`./main_ukrainian.js?contenthash=B0m33Raz`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_vietnamese.json": () =>
               y(
-                () => import(`./main_vietnamese.js?contenthash=8O5PQG1c`),
+                () => import(`./main_vietnamese.js?contenthash=D-M0iyS7`),
                 [],
                 import.meta.url,
               ),
@@ -3047,13 +3060,13 @@ async function zn(e) {
           `../localization/main_${a}.json`,
           3,
         ),
-        se.Ready(),
+        re.Ready(),
       ]),
       s = { ...o.default };
-    x.InitFromObjects(i, s), x.AddTokens(t, e), x.AddTokens(n, r);
-  } else x.InitFromObjects(i, null), x.AddTokens(t, null), x.AddTokens(n, null);
+    S.InitFromObjects(i, s), S.AddTokens(t, e), S.AddTokens(n, r);
+  } else S.InitFromObjects(i, null), S.AddTokens(t, null), S.AddTokens(n, null);
 }
-function Bn(e, n, r) {
-  t(n === `manifest`, `Expected manifest not "${n}"`), x.InitDirect(r);
+function Bn(t, n, r) {
+  e(n === `manifest`, `Expected manifest not "${n}"`), S.InitDirect(r);
 }
 window.LocalizationManifestReady = Bn;

@@ -1196,6 +1196,32 @@ function EnterBankDetails()
 	dialog.SetRemoveContentOnDismissal( false );
 }
 
+function EnterKYCDetails( eKYCProvider )
+{
+	var waitingDialog = ShowBlockingWaitDialog( 'Please Wait', 'Contacting the third party service...' );
+	$J.ajax(
+		{
+			type: "POST",
+			url: 'https://partner.steamgames.com/newpartner/ajaxstartkycworkflow/',
+			data: {
+				'sessionid': g_sessionID,
+				'kycprovider': eKYCProvider,
+			},
+			success: function ( response ) {
+				if ( response.success == 1 )
+				{
+					top.location.href = response.url;
+				}
+				else
+				{
+					waitingDialog.Dismiss();
+					ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
+				}
+			}
+		}
+	);
+}
+
 function EnterTaxDetails()
 {
 	var waitingDialog = ShowBlockingWaitDialog( 'Please Wait', 'Contacting the third party service...' );

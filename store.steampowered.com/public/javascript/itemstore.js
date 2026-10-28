@@ -52,32 +52,41 @@ function AddMtxItemToCart( appid, assetclassid, quantity )
 
 function StartCheckout( appid )
 {
+	var fnHandleResult = function( json ) {
+		switch ( json && json.success )
+		{
+			case 1:
+			{
+				ContinueCheckout( json );
+			}
+			break;
+			case 39:
+				ShowAlertDialog( 'Error', 'There was an error trying to load your shopping cart.  Please try again later.' );
+				break;
+			case 42:
+				ShowAlertDialog( 'Error', 'You must have items in your cart to checkout.' );
+				break;
+			case 86:
+				ShowAlertDialog( 'Error', 'One or more items in your cart are no longer available. Please remove them and try again.' );
+				break;
+			default:
+				ShowAlertDialog( 'Error', 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.' );
+		}
+	};
+
 	$J.post(
 		'https://store.steampowered.com/itemstore/' + appid + '/ajaxcheckout/',
 		{
 			'sessionid' : g_sessionID
 		}
 	)
-	.done(
-		function( json ) {
-			switch ( json.success )
-			{
-				case 1:
-				{
-					ContinueCheckout( json );
-				}
-				break;
-				case 39:
-					ShowAlertDialog( 'Error', 'There was an error trying to load your shopping cart.  Please try again later.' );
-					break;
-				case 42:
-					ShowAlertDialog( 'Error', 'You must have items in your cart to checkout.' );
-					break;
-				default:
-					ShowAlertDialog( 'Error', 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.' );
-			}
-		}
-	);
+	.done( fnHandleResult )
+	.fail( function( jqXHR ) {
+		// Errors use a 400 response code so they must be handled in .fail()
+		let json = null;
+		try { json = $J.parseJSON( jqXHR.responseText ); } catch ( e ) {}
+		fnHandleResult( json );
+	} );
 }
 
 function ContinueCheckout( checkoutParams )

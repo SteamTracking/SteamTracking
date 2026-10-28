@@ -520,6 +520,18 @@ td {
     max-width: 600px;
 }
 
+.documentation_bbcode .bb_docyoutube {
+	width: 100%;
+	max-width: 800px;
+	aspect-ratio: 16 / 9;
+	margin: 8px 0;
+}
+
+.documentation_bbcode .bb_docyoutube iframe {
+	width: 100%;
+	height: 100%;
+}
+
 h2.editorOnly {
 	color: #ca5029;
 }

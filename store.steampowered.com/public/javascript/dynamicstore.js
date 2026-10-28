@@ -1195,28 +1195,26 @@ GDynamicStore = {
 		{
 			var strFormattedFinalPrice = GStoreItemData.fnFormatCurrency( Bundle.m_nFinalPriceInCentsWithBundleDiscount );
 			$DiscountBlocks.show();
+			// Savings are measured from the pre-bundle price, as OutputDiscountBlockInternal does
 			var price = Bundle.m_nPackageBasePriceInCents;
-
-			// Apply bundle discount if any before showing original price and computing total discount percentage
-			if( Bundle.m_nDiscountPct > 0)
-			{
-				price = Math.round( price * ( 100 - Bundle.m_nDiscountPct ) / 100 );
-			}
 
 			$DiscountBlocks.find('.discount_original_price' ).text( GStoreItemData.fnFormatCurrency( price ) );
 			if ( !Bundle.m_bContainsDiscountedPackage )
 			{
 				$DiscountBlocks.addClass('no_discount');
-				$DiscountBlocks.find('.discount_final_price' ).addClass('your_price' ).empty().append($J('<div/>', {'class': 'your_price_label'} ).text('Your Price:'), $J('<div/>' ).text( strFormattedFinalPrice ) );
+				$DiscountBlocks.find('.bundle_base_discount' ).attr( 'data-tooltip-text', 'This is what you save by buying these items together in the bundle' );
+				$DiscountBlocks.find('.discount_final_price' ).text( strFormattedFinalPrice );
 			}
 			else
 			{
 				$DiscountBlocks.removeClass('no_discount');
+				var strLimitedTooltip = Bundle.m_cUserItemsInBundle == 1 ? 'This item has a discount by being part of a bundle, and one or more items in the bundle have a limited-time discount on top, making the total discount larger' : 'In addition to the bundle discount, one or more items in this bundle has a limited-time discount, making the total discount larger';
+				$DiscountBlocks.find('.bundle_base_discount, .discount_pct' ).attr( 'data-tooltip-text', strLimitedTooltip );
 
 				var nDiscountPct = Math.round( ( price - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) / price * 100 );
 				nDiscountPct = Math.min( nDiscountPct, 99 );
 				$DiscountBlocks.find('.discount_pct' ).text( '-' + nDiscountPct + '%' );
-				$DiscountBlocks.find('.discount_final_price' ).removeClass('your_price').text( strFormattedFinalPrice );
+				$DiscountBlocks.find('.discount_final_price' ).text( strFormattedFinalPrice );
 			}
 
 			if ( Bundle.m_nFinalPriceInCentsWithBundleDiscount == 0 && Bundle.m_cUserItemsInBundle )

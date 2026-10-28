@@ -43,6 +43,36 @@ message CStoreQuery_GetItemsByUserRecommendedTags_Response_Section {
 	optional string tag_name = 3;
 }
 
+message CStoreQuery_GetSaleBrowserItems_Request {
+	optional .StoreBrowseContext context = 1;
+	optional int32 flavor = 2 [(.description) = "enum"];
+	optional .CStorePageFilter store_page_filter = 3;
+	repeated int32 excluded_content_descriptors = 4 [(.description) = "enum"];
+	optional int32 start = 5 [default = 0];
+	optional int32 count = 6 [default = 50];
+	optional bool prioritize_discounts = 7;
+	optional bool allow_demos = 8;
+	optional bool request_facet_counts = 9;
+	optional string search_term = 10;
+}
+
+message CStoreQuery_GetSaleBrowserItems_Response {
+	repeated .StoreItemID ids = 1;
+	optional int32 total_matching = 2;
+	optional bool more_results_remaining = 3;
+	repeated .CStoreQuery_GetSaleBrowserItems_Response_FacetField facet_fields = 4;
+}
+
+message CStoreQuery_GetSaleBrowserItems_Response_FacetField {
+	optional string field = 1;
+	repeated .CStoreQuery_GetSaleBrowserItems_Response_FacetValue values = 2;
+}
+
+message CStoreQuery_GetSaleBrowserItems_Response_FacetValue {
+	optional string value = 1;
+	optional uint32 count = 2;
+}
+
 message CStoreQuery_MoreLikeThis_Request {
 	optional string query_name = 1;
 	optional .StoreBrowseContext context = 2;
@@ -198,6 +228,8 @@ service StoreQuery {
 	rpc GetItemByUserCombinedTagsPriority (.CStoreQuery_GetItemByUserCombinedTagsPriority_Request) returns (.CStoreQuery_GetItemByUserCombinedTagsPriority_Response);
 	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetItemsByUserRecommendedTags (.CStoreQuery_GetItemsByUserRecommendedTags_Request) returns (.CStoreQuery_GetItemsByUserRecommendedTags_Response);
+	// bConstMethod=true, ePrivilege=0, rgBrowserAPISites=ArrayExpression
+	rpc GetSaleBrowserItems (.CStoreQuery_GetSaleBrowserItems_Request) returns (.CStoreQuery_GetSaleBrowserItems_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
 	rpc MoreLikeThis (.CStoreQuery_MoreLikeThis_Request) returns (.CStoreQuery_MoreLikeThis_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression

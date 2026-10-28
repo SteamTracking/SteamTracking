@@ -311,9 +311,9 @@ function ShowcaseGamePicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnCh
 	var GameSelector = new CGameSelectorProfileShowcaseGames( $Input[0], null, null, fnOnSelect, rgFilteredGames );
 }
 
-function ShowcaseFilteredGamePicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnChange, rgGames, fnRowRightHTML )
+function ShowcaseFilteredGamePicker( elSlot, eShowcase, purchaseid, level, iSlot, fnOnSave, rgGames, fnRowRightHTML, fnRenderDetails )
 {
-	var $DialogContent = $J('<div/>');
+	var $DialogContent = $J('<div/>', {'class': 'showcase_game_picker' } );
 	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( 'Select one of your games to display as a Featured Game on your profile.' ) );
 	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: 'Type to filter your games' } );
 	$Input.attr( 'size', '45' );
@@ -321,16 +321,24 @@ function ShowcaseFilteredGamePicker( elSlot, eShowcase, purchaseid, level, iSlot
 	$Input.wrap( $J('<div/>', {'class': 'gray_bevel for_text_input' } ) );
 	var $Count = $J('<div/>', {'class': 'showcase_game_filter_count' } );
 	$DialogContent.append( $Count );
-	var $List = $J('<div/>', {'class': 'showcase_game_filter_list' } );
+	var $List = $J('<div/>', {'class': 'showcase_game_filter_list showcase_game_picker_games' } );
 	$DialogContent.append( $List );
+	// the selected game's options get a fixed space, so the dialog doesn't change size when one is picked
+	var $Details = $J('<div/>', {'class': 'showcase_game_picker_details' } );
+	if ( fnRenderDetails )
+	{
+		$Details.append( $J('<div/>', {'class': 'showcase_game_picker_instructions' } ).text( 'Select a game to preview it here.' ) );
+		$DialogContent.append( $Details );
+	}
 
-	var Modal = ShowDialog( 'Select Featured Game', $DialogContent );
-
-	if ( !fnOnChange )
-		fnOnChange = SetShowcaseGame;
+	var strSlotJSON = elSlot.getAttribute( 'data-slotjson' );
+	var CurrentSlot = strSlotJSON ? V_ParseJSON( strSlotJSON ) : null;
 
 	var rgSorted = ( rgGames || [] ).slice().sort( function( a, b ) { return a.name.localeCompare( b.name ); } );
 	CGameSelectorOwnedGames.NormalizeGameNames( rgSorted );
+
+	var SelectedGame = null;
+	var fnGetSlot = null;
 
 	var $Focus = null;
 	var fnSetFocus = function( $Item )
@@ -349,10 +357,24 @@ function ShowcaseFilteredGamePicker( elSlot, eShowcase, purchaseid, level, iSlot
 		}
 	};
 
+	// set once the dialog is shown
+	var $SaveButton = null;
+
 	var fnSelect = function( game )
 	{
-		fnOnChange( elSlot, eShowcase, purchaseid, level, iSlot, game );
-		Modal.Dismiss();
+		SelectedGame = game;
+		if ( $SaveButton )
+			$SaveButton.removeClass( 'btn_disabled' );
+
+		$List.children( '.showcase_game_filter_item' ).each( function() {
+			$J( this ).toggleClass( 'selected', $J( this ).data( 'game' ) === game );
+		} );
+
+		if ( fnRenderDetails )
+		{
+			$Details.empty();
+			fnGetSlot = fnRenderDetails( game, $Details, CurrentSlot && CurrentSlot.appid == game.appid ? CurrentSlot : null );
+		}
 	};
 
 	var fnRebuild = function()
@@ -382,6 +404,7 @@ function ShowcaseFilteredGamePicker( elSlot, eShowcase, purchaseid, level, iSlot
 			$Item.append( $J('<div/>', {'class': 'showcase_game_filter_item_name' } ).text( game.name ) );
 			if ( fnRowRightHTML )
 				$Item.append( $J( fnRowRightHTML( game ) ) );
+			$Item.toggleClass( 'selected', game === SelectedGame );
 			$Item.click( fnSelect.bind( null, game ) );
 			$Item.mouseenter( fnSetFocus.bind( null, $Item ) );
 			$Item.data( 'game', game );
@@ -421,7 +444,46 @@ function ShowcaseFilteredGamePicker( elSlot, eShowcase, purchaseid, level, iSlot
 		}
 	} );
 
+	// Enter here only selects a game; the dialog would otherwise save on Enter's keyup
+	$Input.on( 'keyup', function( event ) {
+		if ( event.which == 13 )
+			event.preventDefault();
+	} );
+
 	fnRebuild();
+
+	// start on the slot's current game, if it's still in the list
+	if ( CurrentSlot && CurrentSlot.appid )
+	{
+		for ( var iGame = 0; iGame < rgSorted.length; iGame++ )
+		{
+			if ( rgSorted[iGame].appid == CurrentSlot.appid )
+			{
+				fnSelect( rgSorted[iGame] );
+				break;
+			}
+		}
+	}
+
+	// filled in before showing, since the dialog centers on its size when shown
+	var Modal = ShowConfirmDialog( 'Select Featured Game', $DialogContent, 'Save' );
+	Modal.done( function() {
+		if ( SelectedGame )
+			fnOnSave( elSlot, eShowcase, purchaseid, level, iSlot, fnGetSlot ? fnGetSlot() : { appid: SelectedGame.appid } );
+	} );
+
+	// Save is disabled until a game is selected
+	$SaveButton = Modal.GetContent().find( '.btn_green_steamui' ).addClass( 'showcase_game_picker_save' );
+	$SaveButton.toggleClass( 'btn_disabled', !SelectedGame );
+
+	// keep the list's opening height, so filtering it doesn't shrink and move the dialog
+	$List.css( 'min-height', $List.height() + 'px' );
+
+	// scrolling needs the list on the page
+	var $Selected = $List.children( '.selected' );
+	if ( $Selected.length )
+		fnSetFocus( $Selected );
+
 	$Input.focus();
 }
 
@@ -547,15 +609,160 @@ function AchievementsCompletionistGameShowcaseOnGameChange( elSlot, eShowcase, p
 	});
 }
 
-// The slot's bottom bar needs the rare achievement count, which only the server has, so re-render the preview.
-function AchievementGroupsCompletionistShowcaseOnGameChange( elSlot, eShowcase, purchaseid, level, iSlot, game )
+// mirrors GetCompletionistGroupRibbonHTML in the showcase template
+function AchievementsCompletionistGroupRibbonHTML( group )
 {
+	return '<span class="showcase_completion_ribbons"><span class="showcase_completion_ribbon_group ' + ( group.dlc ? 'dlc' : 'base' ) + '"><span class="showcase_completion_ribbon"></span></span></span>';
+}
+
+// server-rendered completionist slot previews by appid and title, so going back to an option doesn't fetch it again
+var g_rgCompletionistSlotPreviews = {};
+
+// Shows a slot in $Preview exactly as the profile will, rendered by the server
+function AchievementsCompletionistShowSlotPreview( $Preview, appid, strTitle )
+{
+	var strKey = appid + '_' + strTitle;
+	$Preview.data( 'previewkey', strKey );
+
+	// a slow response can arrive after the user has moved on to another option
+	var fnShow = function( strHTML )
+	{
+		if ( $Preview.data( 'previewkey' ) == strKey )
+			$Preview.html( '<div class="showcase_achievementscompletionist_game"><a>' + strHTML + '</a></div>' );
+	};
+
+	if ( g_rgCompletionistSlotPreviews[strKey] !== undefined )
+	{
+		fnShow( g_rgCompletionistSlotPreviews[strKey] );
+		return;
+	}
+
+	$Preview.html( '<div class="group_invite_throbber"><img src="https://community.fastly.steamstatic.com/public/images/login/throbber.gif"></div>' );
+	$J.post( g_rgProfileData['url'] + 'ajaxpreviewcompletionistslot', { appid: appid, title: strTitle, sessionid: g_sessionID } )
+	.done( function( strHTML ) {
+		g_rgCompletionistSlotPreviews[strKey] = strHTML;
+		fnShow( strHTML );
+	} ).fail( function() {
+		if ( $Preview.data( 'previewkey' ) == strKey )
+			$Preview.empty();
+	} );
+}
+
+function AchievementGroupsCompletionistShowcaseSaveSlot( elSlot, eShowcase, purchaseid, level, iSlot, rgSlot )
+{
+	// the showcase preview has the slot's icon background and rare count, which only the server has
 	SetShowcaseConfig(
-		eShowcase, purchaseid, iSlot, {appid: game.appid }
+		eShowcase, purchaseid, iSlot, $J.extend( {}, rgSlot )
 	).done( function() {
-		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { appid: game.appid } );
+		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, rgSlot );
 	}).fail( function() {
 		ShowAlertDialog( 'Select Featured Game', 'There was an error saving the featured game configuration.  Please try again later.' );
+	});
+}
+
+// The picker's options for the selected game: feature the full game or one of its completed sets, and a preview of
+// the slot. A game with a single set only gets the preview.
+function AchievementGroupsCompletionistShowcaseRenderDetails( game, $Details, CurrentSlot )
+{
+	var rgGroups = ( game.base_groups + game.dlc_groups > 1 && game.completed_groups ) ? game.completed_groups : [];
+
+	// options on the left, the preview on the right
+	var $Options = $J('<div/>', {'class': 'showcase_completionist_feature_options' } );
+	var $Preview = $J('<div/>', {'class': 'showcase_completionist_feature_preview' } );
+	var SelectedGroup = null;
+	var fnUpdatePreview = function()
+	{
+		// 'group_' matches CAchievementGroupsCompletionistShowcase::k_strGroupTitlePrefix
+		AchievementsCompletionistShowSlotPreview( $Preview, game.appid, SelectedGroup ? 'group_' + SelectedGroup.groupid : '' );
+	};
+
+	if ( rgGroups.length )
+	{
+		var $Select = $J('<select/>', {'class': 'gray_bevel' } );
+		$Select.append( $J('<option/>', { value: 'game' } ).text( 'Full Game' ) );
+		$Select.append( $J('<option/>', { value: 'set' } ).text( 'Featured Set' ) );
+
+		var $Feature = $J('<div/>', {'class': 'showcase_completionist_feature' } );
+		$Feature.append( $J('<span/>' ).text( 'Feature' ) );
+		$Feature.append( $Select );
+		$Options.append( $Feature );
+
+		var $Sets = $J('<div/>', {'class': 'showcase_game_filter_list showcase_completionist_sets' } );
+		$Options.append( $Sets );
+
+		// the set picked last, kept while "Full Game" is selected so switching back restores it
+		var PickedGroup = rgGroups[0];
+		var fnPickGroup = function( group )
+		{
+			PickedGroup = group;
+			SelectedGroup = group;
+			$Sets.children().each( function() {
+				$J( this ).toggleClass( 'selected', $J( this ).data( 'group' ) === group );
+			} );
+			fnUpdatePreview();
+		};
+
+		// 'group_' matches CAchievementGroupsCompletionistShowcase::k_strGroupTitlePrefix
+		var strCurrentTitle = CurrentSlot && CurrentSlot.title ? CurrentSlot.title : '';
+		var bCurrentIsSet = false;
+		for ( var i = 0; i < rgGroups.length; i++ )
+		{
+			var group = rgGroups[i];
+			var $Item = $J('<div/>', {'class': 'showcase_game_filter_item' } );
+			$Item.append( $J('<div/>', {'class': 'showcase_game_filter_item_name' } ).text( group.name ) );
+			$Item.append( $J( AchievementsCompletionistGroupRibbonHTML( group ) ) );
+			$Item.data( 'group', group );
+			$Item.click( fnPickGroup.bind( null, group ) );
+			$Sets.append( $Item );
+
+			if ( strCurrentTitle == 'group_' + group.groupid )
+			{
+				PickedGroup = group;
+				bCurrentIsSet = true;
+			}
+		}
+
+		var fnOnFeatureChange = function()
+		{
+			if ( $Select.val() == 'set' )
+			{
+				$Sets.show();
+				fnPickGroup( PickedGroup );
+			}
+			else
+			{
+				$Sets.hide();
+				SelectedGroup = null;
+				fnUpdatePreview();
+			}
+		};
+
+		$Select.val( bCurrentIsSet ? 'set' : 'game' );
+		$Select.change( fnOnFeatureChange );
+		fnOnFeatureChange();
+	}
+	else
+	{
+		fnUpdatePreview();
+	}
+
+	$Details.append( $Options, $Preview );
+
+	return function()
+	{
+		return { appid: game.appid, title: SelectedGroup ? 'group_' + SelectedGroup.groupid : '' };
+	};
+}
+
+function AchievementGroupsCompletionistShowcaseOnStatChange( elSelect, eShowcase, purchaseid, level, iSlot )
+{
+	const strStat = $J( elSelect ).val();
+	SetShowcaseConfig(
+		eShowcase, purchaseid, iSlot, { title: strStat }
+	).done( function() {
+		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { title: strStat } );
+	}).fail( function() {
+		ShowAlertDialog( 'Choose a Statistic', 'There was a problem saving your statistic. Please try again.' );
 	});
 }
 
