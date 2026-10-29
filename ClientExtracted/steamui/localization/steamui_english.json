@@ -4581,8 +4581,6 @@
     "Settings_Battery_ChargeLimitDevMode": "Allow battery limit full range",
     "Settings_CEC_Header": "CEC",
     "Settings_CEC_Header_Long": "HDMI CEC",
-    "Settings_CEC_Enabled": "Enable HDMI CEC Support",
-    "Settings_CEC_WakeOnResume": "Wake TV when device resumes from sleep",
     "Settings_CEC_Control": "Enable remote control input",
     "Settings_CEC_SuspendTV": "Turn off TV when going to sleep",
     "Settings_CEC_SuspendDevice": "Sleep when turning off the TV",

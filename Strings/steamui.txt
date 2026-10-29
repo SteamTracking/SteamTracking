@@ -319,6 +319,7 @@
 !m_pSignaling
 !m_pThreadedSendSink
 !m_pThreadedSendSink || m_listEncryptedSendChunks.Count() == 0
+!m_pVR2GameOverlayManager
 !m_pVideoEncoder
 !m_pWebSocketConnectionCallback
 !m_pszCipher
@@ -1177,7 +1178,6 @@ ${LANGUAGE}
 %s: command exited unexpectedly: %s\n
 %s: command exited unexpectedly\n
 %s: command failed: %d\n
-%s: computed CEC state: %d
 %s: device: 0x%x
 %s: display was not open yet, good\n
 %s: drive: 0x%x
@@ -1895,8 +1895,6 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE12_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE13_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE14_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE15_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE16_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE1_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE2_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE3_
@@ -1925,13 +1923,11 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux12SetCECWakeTVEbEUlvE_
 *ZN23CSteamOSControllerLinux12SetWifiDebugEbEUlvE_
 *ZN23CSteamOSControllerLinux13SetCECControlEbEUlvE_
-*ZN23CSteamOSControllerLinux13SetCECEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux13SetVRSEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux15SetCECSuspendTVEbEUlvE_
 *ZN23CSteamOSControllerLinux16SetCECWakeDeviceEbEUlvE_
 *ZN23CSteamOSControllerLinux17SetDesktopSessionEPKcEUlvE_
 *ZN23CSteamOSControllerLinux17SetManualGPUClockEiEUlvE_
-*ZN23CSteamOSControllerLinux18SetCECWakeOnResumeEbEUlvE_
 *ZN23CSteamOSControllerLinux19SetCECSuspendDeviceEbEUlvE_
 *ZN23CSteamOSControllerLinux19SetECLoggingEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux19SetScreenReaderRateEfEUlvE_
@@ -2578,6 +2574,7 @@ ${LANGUAGE}
 ../common/vgui/chartpanel.cpp
 ../common/vgui/vgui_console.cpp
 ../common/vgui/vprofpanel.cpp
+../common/vr/vrapi.cpp
 ../common/vr/vrcommon.cpp
 ../common/websocket.cpp
 ../common/websocket.h
@@ -2724,7 +2721,7 @@ ${LANGUAGE}
 ../steamUI/sharedconnectioncontroller.cpp
 ../steamUI/startupmodemanager.cpp
 ../steamUI/steamoscontroller.cpp
-../steamUI/steamosmanager.cpp:340
+../steamUI/steamosmanager.cpp:338
 ../steamUI/steamuiapicallhelpers.h
 ../steamUI/steamuiappcontroller.cpp
 ../steamUI/steamuiappcontroller.cpp:2146
@@ -19240,6 +19237,8 @@ N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
 N4vgui9WrapPanelE
+N5vrapi12CVRAPISharedE
+N5vrapi12IVRAPISharedE
 N5vrapi16COpenVRInterfaceIN2vr10IVROverlayEEE
 N5vrapi16COpenVRInterfaceIN2vr11IVRSettingsEEE
 N5vrapi16COpenVRInterfaceIN2vr13IVRCompositorEEE
@@ -20065,7 +20064,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 26 2026 22:11:32
+Oct 29 2026 00:39:08
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -22226,7 +22225,6 @@ STEAM_SCREEN_SCALE
 STEAM_TOUCH_CLICK_MODE
 STEAM_TROPHY
 STEAM_USE_DYNAMIC_VRS
-STEAM_USE_WPASUPPLICANT
 STOP USING,%s
 STORE lib
 STORE routines
@@ -22658,13 +22656,11 @@ SessionsMax
 Set BPM to fullscreen
 Set BPM to windowed
 Set CEC control: %d
-Set CEC enabled: %d
 Set CEC suspend TV: %d
 Set CEC suspend device: %d
 Set CEC wake TV: %d
 Set CEC wake device not supported
 Set CEC wake device: %d (supported: %d)
-Set CEC wake on resume: %d
 Set Credentials failed
 Set EC logging enabled: %d
 Set OSK active %d and appid %u\n
@@ -22700,11 +22696,9 @@ SetBitmapLocation
 SetBluetoothAudioPreference: %u
 SetBool
 SetCECControl
-SetCECEnabled
 SetCECSuspendDevice
 SetCECSuspendTV
 SetCECWakeDevice
-SetCECWakeOnResume
 SetCECWakeTV
 SetCallerDeadlineMS - caller deadline already set?
 SetClientBeta
@@ -26125,7 +26119,6 @@ YldSaveReportToDesktop
 YldSetAtomUpdateProxyConfig
 YldSetBluetoothEnabledInternal
 YldSetBlurParams
-YldSetCECEnabled
 YldSetDefaultDesktopSession
 YldSetDesktopAsDefaultLoginMode
 YldSetDiscovering
@@ -38192,6 +38185,7 @@ nistp256_pre_comp_new
 nistp521_pre_comp_new
 nl_NL
 no H264 video stages available
+no IVROverlay
 no accept addr or service specified
 no application protocol
 no associated editable control
@@ -40197,6 +40191,7 @@ s_hashMapSteamIDWatches
 s_hashMapTxnIDWatches
 s_instance
 s_mapClientJobNames
+s_nReadDepth > 0
 s_pFileSystemInterface
 s_pInstance == this
 s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
@@ -41424,11 +41419,9 @@ steamos-set-system-proxy
 steamos-systemreport
 steamos-update: using duplicate detection: %d\n
 steamos_cec_control
-steamos_cec_enabled
 steamos_cec_suspend_device
 steamos_cec_suspend_tv
 steamos_cec_wake_device
-steamos_cec_wake_on_resume
 steamos_cec_wake_tv
 steamos_charge_limit
 steamos_charge_limit_enabled
@@ -43356,6 +43349,8 @@ vr_devices_from_usb
 vr_force_steam_input
 vr_last_tracker_devices
 vractive
+vrapi write lock taken while holding the read lock
+vrapi: write lock waited > 5s for a vrclient call to finish
 vrclient Shared Lib Not Found (102)
 vrerror
 vrlink

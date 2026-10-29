@@ -606,6 +606,7 @@ $ORIGIN
 %s/beta
 %s/clientui/fonts/GoNotoKurrent-Bold.ttf
 %s/clientui/fonts/GoNotoKurrent-Regular.ttf
+%s/libSDL3_ttf.so.0
 %s/steamXXXXXX
 %s/steam_msg.sh
 %s/tmp
@@ -1159,6 +1160,7 @@ $ORIGIN
 ../public/tier0/tslist.h
 ../public/tier0/vprof.h
 ../public/tier1/bitstring.h
+../public/tier1/interface.h
 ../public/tier1/netadr.h
 ../public/tier1/refcount.h
 ../public/tier1/smartptr.h
@@ -1374,11 +1376,14 @@ $ORIGIN
 00000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:38:57
+00:39:04
 01/01/00
 0123456789
 0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
+0123456789ABCDEF YT
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 1 Mbps
@@ -1693,6 +1698,41 @@ $ORIGIN
 12CAutoReleaseI20IHTTPRedirectHandlerE
 12CAutoReleaseI21COpenSSLCachedSessionE
 12CAutoReleaseI8CMetricsE
+12CDynamicFuncIPFP10SDL_WindowPKciimEE
+12CDynamicFuncIPFP12SDL_RendererP10SDL_WindowPKcEE
+12CDynamicFuncIPFP14TTF_TextEngineP12SDL_RendererEE
+12CDynamicFuncIPFP8TTF_FontPKcfEE
+12CDynamicFuncIPFP8TTF_TextP14TTF_TextEngineP8TTF_FontPKcmEE
+12CDynamicFuncIPFPKcvEE
+12CDynamicFuncIPFbP10SDL_WindowEE
+12CDynamicFuncIPFbP10SDL_WindowPF17SDL_HitTestResultS1_PK9SDL_PointPvES6_EE
+12CDynamicFuncIPFbP10SDL_WindowPKcEE
+12CDynamicFuncIPFbP10SDL_WindowiiEE
+12CDynamicFuncIPFbP12SDL_RendererEE
+12CDynamicFuncIPFbP12SDL_RendererPK9SDL_FRectEE
+12CDynamicFuncIPFbP12SDL_RendererhhhhEE
+12CDynamicFuncIPFbP12SDL_RendererjEE
+12CDynamicFuncIPFbP8TTF_TextP8TTF_FontEE
+12CDynamicFuncIPFbP8TTF_TextPKcmEE
+12CDynamicFuncIPFbP8TTF_TextPiS2_EE
+12CDynamicFuncIPFbP8TTF_TextffEE
+12CDynamicFuncIPFbP8TTF_TexthhhhEE
+12CDynamicFuncIPFbP8TTF_TextiEE
+12CDynamicFuncIPFbP9SDL_EventEE
+12CDynamicFuncIPFbP9SDL_EventiEE
+12CDynamicFuncIPFbPKcS1_16SDL_HintPriorityEE
+12CDynamicFuncIPFbjEE
+12CDynamicFuncIPFbvEE
+12CDynamicFuncIPFfP10SDL_WindowEE
+12CDynamicFuncIPFfjEE
+12CDynamicFuncIPFjvEE
+12CDynamicFuncIPFvP10SDL_WindowEE
+12CDynamicFuncIPFvP12SDL_RendererEE
+12CDynamicFuncIPFvP14TTF_TextEngineEE
+12CDynamicFuncIPFvP8TTF_Font16TTF_HintingFlagsEE
+12CDynamicFuncIPFvP8TTF_FontEE
+12CDynamicFuncIPFvP8TTF_TextEE
+12CDynamicFuncIPFvvEE
 12CGlxUpdateUI
 12CHTTPHeaders
 12CHTTPRequest
@@ -1701,6 +1741,7 @@ $ORIGIN
 12CLogInstance
 12CMessageList
 12CProtoBufMsgIvE
+12CSdlUpdateUI
 12CStdMemAlloc
 13CHTTPResponse
 13CMsgAppRights
@@ -1789,6 +1830,7 @@ $ORIGIN
 16CMsgKeyValuePair
 16CProtoBufMsgBase
 16CStructNetPacket
+16IDynamicFunction
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
@@ -1890,8 +1932,6 @@ $ORIGIN
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
-22:11:20
-22:11:28
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -3641,6 +3681,19 @@ CSPName
 CScheduledFunctionMgr::BFrameFuncRun
 CScheduler
 CScopedJobLock already holds lock, can't take another one.
+CSdlUpdateUI: %s or %s not present\n
+CSdlUpdateUI: SDL_CreateRenderer failed: %s\n
+CSdlUpdateUI: SDL_CreateWindow failed: %s\n
+CSdlUpdateUI: SDL_Init failed: %s\n
+CSdlUpdateUI: TTF_CreateRendererTextEngine failed: %s\n
+CSdlUpdateUI: TTF_CreateText failed: %s\n
+CSdlUpdateUI: TTF_Init failed: %s\n
+CSdlUpdateUI: TTF_OpenFont failed: %s\n
+CSdlUpdateUI: failed to get executable path\n
+CSdlUpdateUI: failed to load %s\n
+CSdlUpdateUI: fonts not present in %s\n
+CSdlUpdateUI: probe SDL_CreateRenderer failed: %s\n
+CSdlUpdateUI: probe SDL_CreateWindow failed: %s\n
 CStatT<T>::Update: called on class that was not initialized.\n
 CStructNetPacket->GetGCRouting() not valid.
 CStructNetPacket->GetHdrIP() not valid.
@@ -5074,6 +5127,7 @@ Failed to get thread priority: getpriority failed %d\n
 Failed to get update result code
 Failed to init COM
 Failed to initialize update UI - exiting
+Failed to load "%s"
 Failed to load %s
 Failed to load %s - dlerror(): %s\n
 Failed to load cached hosts file (%s), using defaults
@@ -6789,7 +6843,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 26 2026
+Oct 29 2026
 October
 Odia
 Offensive Avatar
@@ -7641,10 +7695,37 @@ SCT_set1_signature
 SCT_set_log_entry_type
 SCT_set_signature_nid
 SCT_set_version
+SDL_APP_ID
+SDL_APP_NAME
+SDL_CreateRenderer
+SDL_CreateWindow
+SDL_DestroyRenderer
+SDL_DestroyWindow
+SDL_GetDisplayContentScale
 SDL_GetError
+SDL_GetPrimaryDisplay
+SDL_GetWindowDisplayScale
+SDL_GetWindowPixelDensity
+SDL_Init
+SDL_PollEvent
+SDL_Quit
+SDL_RaiseWindow
+SDL_RenderClear
+SDL_RenderFillRect
+SDL_RenderPresent
+SDL_RenderRect
 SDL_SetCurrentThreadPriority
+SDL_SetHintWithPriority
+SDL_SetRenderDrawBlendMode
+SDL_SetRenderDrawColor
+SDL_SetWindowHitTest
+SDL_SetWindowPosition
+SDL_SetWindowSize
+SDL_SetWindowTitle
+SDL_ShowWindow
 SDL_VIDEODRIVER
 SDL_VIDEO_DRIVER
+SDL_WaitEventTimeout
 SECG curve over a 112 bit prime field
 SECG curve over a 113 bit binary field
 SECG curve over a 128 bit prime field
@@ -8230,7 +8311,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 26 2026 22:11:28
+Startup - updater built Oct 29 2026 00:39:04
 State
 StaticFileWriterThread()
 Steam
@@ -8596,6 +8677,21 @@ TS_TST_INFO_set_serial
 TS_TST_INFO_set_time
 TS_TST_INFO_set_tsa
 TS_VERIFY_CTX_new
+TTF_CloseFont
+TTF_CreateRendererTextEngine
+TTF_CreateText
+TTF_DestroyRendererTextEngine
+TTF_DestroyText
+TTF_DrawRendererText
+TTF_GetTextSize
+TTF_Init
+TTF_OpenFont
+TTF_Quit
+TTF_SetFontHinting
+TTF_SetTextColor
+TTF_SetTextFont
+TTF_SetTextString
+TTF_SetTextWrapWidth
 TWCC
 TWCCS
 TWCH
@@ -8964,6 +9060,7 @@ UserStatus
 Using the following download hosts for %s, Realm %s
 Using update UI: console
 Using update UI: glx
+Using update UI: sdl
 Using update UI: xwin
 UtlThreadSafeQueue
 Uyghur
@@ -12040,6 +12137,7 @@ flock LOCK_EX %s failed, errno = %d\n
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 floor
 flushing
+fmod
 fnmatch
 fontFile.encrypted_contents().size() <= INT_MAX
 fontFileDecrypted.opentype_font_data().size() <= INT_MAX
@@ -12205,7 +12303,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh%<
+ggen(
 givenName
 glBegin
 glBindTexture
@@ -15924,6 +16022,7 @@ room
 roomNumber
 root
 root ca not trusted
+roundf
 rounds != 0
 row_stride == (int)( nImageWidth * jpegInfo.output_components )
 row_stride_out >= row_stride
@@ -16488,6 +16587,7 @@ snmpv2
 snprintf
 socket
 socketpair
+software
 solrconfig
 sorani
 sotho

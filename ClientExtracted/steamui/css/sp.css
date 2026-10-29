@@ -17011,17 +17011,10 @@ a._3OFDUxRty2ooEGGBg8vLNM:hover {
   ._2XZq-_f6npaQdAgeRzKIkz._3oBG-wxQS7a_pEKk1hBUPx._3xSp_2yTGID-3a2SsunWpF {
   background: none;
 }
-.GamepadMode ._2XZq-_f6npaQdAgeRzKIkz._3oBG-wxQS7a_pEKk1hBUPx {
-  background: linear-gradient(90deg, #59bf40 0px, #24252d 60px, #24252d 100%);
-}
 .GamepadMode
   ._2XZq-_f6npaQdAgeRzKIkz._3oBG-wxQS7a_pEKk1hBUPx._3xSp_2yTGID-3a2SsunWpF
   svg {
   color: #23262e;
-}
-.GamepadMode ._2XZq-_f6npaQdAgeRzKIkz._3oBG-wxQS7a_pEKk1hBUPx.gpfocus,
-.GamepadMode ._2XZq-_f6npaQdAgeRzKIkz._3oBG-wxQS7a_pEKk1hBUPx.gpfocuswithin {
-  background: linear-gradient(90deg, #59bf40 0px, #3d4450 60px, #3d4450 100%);
 }
 ._2XZq-_f6npaQdAgeRzKIkz .c9l09VKqQIXJvsl0gqItO {
   position: absolute;
@@ -17860,6 +17853,12 @@ a._3OFDUxRty2ooEGGBg8vLNM:hover {
 }
 #QuickAccess-Menu .gpfocuswithin .GamepadMode ._3XAsxj1IJyWq6fCoSgyLoY {
   opacity: 1;
+}
+#QuickAccess-Menu
+  .FriendsListAndChatsSteamDeck:has(> .SteamDeckChats.SteamDeckChatsFocusWithin)
+  .GamepadMode
+  ._3XAsxj1IJyWq6fCoSgyLoY {
+  opacity: 0;
 }
 ._1OKNG2o6mWU1qbgO-028X4 {
   position: relative;
@@ -22791,7 +22790,7 @@ div:hover > .BBCodeCollapseControl {
   height: 75%;
   width: 10px;
   position: absolute;
-  left: -29px;
+  left: 5px;
   top: 3px;
   background: #1a9fff;
   border-radius: 6px;
@@ -23079,7 +23078,7 @@ div:hover > .BBCodeCollapseControl {
   box-shadow: none;
 }
 .GamepadMode .chatWindow .chatHeader.InGameHeader {
-  background: linear-gradient(90deg, #59bf40 0px, #24252d 60px, #24252d 100%);
+  background: linear-gradient(90deg, #2d6020 0px, #24252d 60px, #24252d 100%);
   border-left-color: #59bf40;
 }
 .GamepadMode .chatWindow .chatHeader.InGameHeader > .no-drag {
@@ -23200,7 +23199,11 @@ div:hover > .BBCodeCollapseControl {
     rgba(35, 38, 46, 0.2) 100%
   );
 }
-.GamepadMode .multiChatDialog.gpfocuswithin .chatWindow .chatEntry > * {
+.GamepadMode
+  .multiChatDialog.MultiChatDialogFocusWithin
+  .chatWindow
+  .chatEntry
+  > * {
   background-color: #2b333f;
 }
 .GamepadMode .multiChatDialog .speakerTimeStamp {
@@ -23215,7 +23218,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode
   .chatWindow
-  .chatEntry.gpfocuswithin
+  .chatEntry.ChatEntryFocusWithin
   > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
@@ -23396,11 +23399,11 @@ div:hover > .BBCodeCollapseControl {
 .FriendsListAndChatsSteamDeck .multiChatDialog.GamepadMode > * {
   transition: opacity 0.21s ease-in-out;
 }
-.FriendsListAndChatsSteamDeck.gpfocuswithin
-  .GamepadMode.friendlist:not(.gpfocuswithin)
+.FriendsListAndChatsSteamDeck.FriendsAndChatsFocusWithin
+  .GamepadMode.friendlist:not(.FriendListFocusWithin)
   > *,
-.FriendsListAndChatsSteamDeck.gpfocuswithin
-  .SteamDeckChats:not(.gpfocuswithin)
+.FriendsListAndChatsSteamDeck.FriendsAndChatsFocusWithin
+  .SteamDeckChats:not(.SteamDeckChatsFocusWithin)
   .multiChatDialog.GamepadMode
   > * {
   opacity: 0.45;
@@ -93757,6 +93760,7 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   background-color: rgba(14, 20, 27, 0.9);
   display: flex;
   flex: 1 0 0;
+  min-width: 0;
   scroll-snap-align: center;
   transition: background-color 320ms ease-in-out;
 }

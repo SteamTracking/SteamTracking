@@ -18788,7 +18788,8 @@
                   for (let _ in _.dismisstimes) {
                     let _ = parseInt(_),
                       _ = _.dismisstimes[_];
-                    new Date(_ * 1e3) < _ ||
+                    typeof _ != "number" ||
+                      new Date(_ * 1e3) < _ ||
                       this.m_mapDismissedInvites.set(_, _);
                   }
                   let _ = !1;
@@ -18879,7 +18880,7 @@
           }
           WriteToLocalStorage() {
             _._.SettingsStore.StoreObjectInLocalStorage(_, {
-              dismisstimes: this.m_mapDismissedInvites,
+              dismisstimes: Object.fromEntries(this.m_mapDismissedInvites),
             });
           }
         }
@@ -19930,15 +19931,18 @@
                     _.Mentions.mention_all ||
                     _.Mentions.mention_here ||
                     _.Mentions.mention_user;
-                  if (
-                    (_._.BPlayChatRoomNotificationSound() && _
-                      ? this.PlayAtMentionSound()
-                      : _._.BPlayChatRoomNotificationSound() &&
-                        _ < _._ &&
-                        this.PlayChatRoomNotificationSound(),
-                    _._.NotificationManager.BNotificationsPermitted() &&
+                  _._.BPlayChatRoomNotificationSound() && _
+                    ? this.PlayAtMentionSound()
+                    : _._.BPlayChatRoomNotificationSound() &&
                       _ < _._ &&
-                      _._.BShowChatRoomNotification())
+                      this.PlayChatRoomNotificationSound();
+                  const _ = _._.BHandlesNotificationGating()
+                    ? _._.BShowChatRoomNotification()
+                    : !0;
+                  if (
+                    _._.NotificationManager.BNotificationsPermitted() &&
+                    _ < _._ &&
+                    _
                   ) {
                     const _ = _._.FriendStore.GetPlayer(_.unAccountID);
                     _.LoadIfNecessary();
@@ -19964,7 +19968,8 @@
                           (_._.NotificationManager.DisplayNotification(_, (_) =>
                             _._.UIStore.ShowAndOrActivateChat(_, this, !0),
                           ),
-                          this.m_bHasUnreadPriorityChatMessages ||
+                          _._.BShowChatRoomNotification() &&
+                            !this.m_bHasUnreadPriorityChatMessages &&
                             ((this.m_bHasUnreadPriorityChatMessages = !0),
                             _._.FriendStore.UpdateUnreadMessagesGlobal()));
                     };
@@ -25930,14 +25935,11 @@
             this.m_NotificationSettings = _;
           }
           BShowInGameNotification() {
-            return _._.IsGamepadUIActive()
-              ? !0
-              : this.notification_settings.Notifications_ShowInGame ==
-                  _.Bwb._ ||
-                  (_._.SettingsStore.FriendsSettings
-                    .bNotifications_ShowIngame &&
-                    this.notification_settings.Notifications_ShowInGame !=
-                      _.Bwb._);
+            return (
+              this.notification_settings.Notifications_ShowInGame == _.Bwb._ ||
+              (_._.SettingsStore.FriendsSettings.bNotifications_ShowIngame &&
+                this.notification_settings.Notifications_ShowInGame != _.Bwb._)
+            );
           }
           BShowMessageNotification() {
             return _._.IN_MOBILE
@@ -25946,44 +25948,39 @@
                   (_._.BShowDirectChatNotification() &&
                     this.notification_settings.Notifications_SendMobile !==
                       _.Bwb._)
-              : _._.IsGamepadUIActive()
-                ? !0
-                : this.notification_settings.Notifications_ShowMessage ===
-                    _.Bwb._ ||
+              : this.notification_settings.Notifications_ShowMessage ===
+                  _.Bwb._ ||
                   (_._.BShowDirectChatNotification() &&
                     this.notification_settings.Notifications_ShowMessage !==
                       _.Bwb._);
           }
           BShowOnlineNotification() {
-            return _._.IsGamepadUIActive()
-              ? !0
-              : this.notification_settings.Notifications_ShowOnline ==
-                  _.Bwb._ ||
-                  (_._.SettingsStore.FriendsSettings
-                    .bNotifications_ShowOnline &&
-                    this.notification_settings.Notifications_ShowOnline !=
-                      _.Bwb._);
+            return (
+              this.notification_settings.Notifications_ShowOnline == _.Bwb._ ||
+              (_._.SettingsStore.FriendsSettings.bNotifications_ShowOnline &&
+                this.notification_settings.Notifications_ShowOnline != _.Bwb._)
+            );
           }
           BPlayInGameSound() {
-            return _._.IsGamepadUIActive()
-              ? !1
-              : this.notification_settings.Sounds_PlayInGame == _.Bwb._ ||
-                  (_._.SettingsStore.FriendsSettings.bSounds_PlayIngame &&
-                    this.notification_settings.Sounds_PlayInGame != _.Bwb._);
+            return (
+              this.notification_settings.Sounds_PlayInGame == _.Bwb._ ||
+              (_._.SettingsStore.FriendsSettings.bSounds_PlayIngame &&
+                this.notification_settings.Sounds_PlayInGame != _.Bwb._)
+            );
           }
           BPlayMessageSound() {
-            return _._.IsGamepadUIActive()
-              ? !1
-              : this.notification_settings.Sounds_PlayMessage == _.Bwb._ ||
-                  (_._.SettingsStore.FriendsSettings.bSounds_PlayMessage &&
-                    this.notification_settings.Sounds_PlayMessage != _.Bwb._);
+            return (
+              this.notification_settings.Sounds_PlayMessage == _.Bwb._ ||
+              (_._.SettingsStore.FriendsSettings.bSounds_PlayMessage &&
+                this.notification_settings.Sounds_PlayMessage != _.Bwb._)
+            );
           }
           BPlayOnlineSound() {
-            return _._.IsGamepadUIActive()
-              ? !1
-              : this.notification_settings.Sounds_PlayOnline == _.Bwb._ ||
-                  (_._.SettingsStore.FriendsSettings.bSounds_PlayOnline &&
-                    this.notification_settings.Sounds_PlayOnline != _.Bwb._);
+            return (
+              this.notification_settings.Sounds_PlayOnline == _.Bwb._ ||
+              (_._.SettingsStore.FriendsSettings.bSounds_PlayOnline &&
+                this.notification_settings.Sounds_PlayOnline != _.Bwb._)
+            );
           }
           get display_name() {
             if (this.has_nickname) {
@@ -26646,12 +26643,13 @@
                   _.is_friend &&
                   _.accountid != this.m_self.accountid &&
                   (_ != _.m_ePersonaState || _) &&
-                  (_.BPlayInGameSound() && _ && _.persona.is_ingame
-                    ? this.PlayJoinGameSound()
-                    : _.BPlayOnlineSound() &&
-                      _ != _.m_ePersonaState &&
-                      _.m_ePersonaState == _.UXk &&
-                      this.PlayFriendOnlineSound(),
+                  (_._.BHandlesNotificationGating() &&
+                    (_.BPlayInGameSound() && _ && _.persona.is_ingame
+                      ? this.PlayJoinGameSound()
+                      : _.BPlayOnlineSound() &&
+                        _ != _.m_ePersonaState &&
+                        _.m_ePersonaState == _.UXk &&
+                        this.PlayFriendOnlineSound()),
                   _ && !_.persona.is_ingame && _.SetLastSeenPlaying(_),
                   this.OnFriendPersonaStateChanged(
                     _,
@@ -27353,11 +27351,14 @@
               _._.FriendStore.GetUserDoNotDisturb()
             )
               return;
-            const _ = _._.IsGamepadUIActive() || _.BShowInGameNotification();
+            const _ = _._.BHandlesNotificationGating()
+              ? _.BShowInGameNotification()
+              : !0;
             if (_ && _.persona.is_ingame && _) {
               let _ = _.current_game_name;
               !_.persona.is_in_nonsteam_game &&
                 !_ &&
+                _.BShowInGameNotification() &&
                 this.m_FriendInGameNotificationStore.RecordFriendInGameImpression(
                   _.persona.m_unGamePlayedAppID,
                 ),
@@ -27372,7 +27373,10 @@
                   });
               return;
             }
-            if (_ == _.cU3 && _ != _.cU3 && _.BShowOnlineNotification()) {
+            const _ = _._.BHandlesNotificationGating()
+              ? _.BShowOnlineNotification()
+              : !0;
+            if (_ == _.cU3 && _ != _.cU3 && _) {
               _._.NotificationManager.DisplayNotificationFromFriend(_, {
                 title: _.display_name,
                 body: (0, _._)("#Friend_StateChange_Online"),
@@ -28359,9 +28363,12 @@
                 _ < _._ && this.is_blocked_friend)
               )
                 return;
+              const _ = _._.BHandlesNotificationGating()
+                ? this.chat_partner.BShowMessageNotification()
+                : !0;
               if (
                 _._.NotificationManager.BNotificationsPermitted() &&
-                this.chat_partner.BShowMessageNotification() &&
+                _ &&
                 _ < _._ &&
                 !_._.FriendStore.GetUserDoNotDisturb()
               ) {
@@ -28387,12 +28394,14 @@
                       this.chat_partner,
                       _,
                     ),
-                    this.m_bHasUnreadPriorityChatMessages ||
+                    this.chat_partner.BShowMessageNotification() &&
+                      !this.m_bHasUnreadPriorityChatMessages &&
                       ((this.m_bHasUnreadPriorityChatMessages = !0),
                       _._.FriendStore.UpdateUnreadMessagesGlobal()));
               }
               if (
-                (this.chat_partner.BPlayMessageSound() &&
+                (!_._.IsGamepadUIActive() &&
+                  this.chat_partner.BPlayMessageSound() &&
                   _ < _._ &&
                   this.PlayFriendMessageSound(),
                 _ < _._ && !_._.FriendStore.GetUserDoNotDisturb())
@@ -28447,16 +28456,18 @@
               ),
             ),
               !_._.FriendStore.GetUserDoNotDisturb() &&
-                _._.NotificationManager.DisplayNotificationFromFriend(
-                  this.chat_partner,
-                  {
-                    title: "",
-                    body: (0, _._)("#Chat_BroadcastViewRequest_Notification"),
-                    tag: "message_" + this.chat_partner.accountid,
-                    steamid:
-                      this.chat_partner.persona.m_steamid.ConvertTo64BitString(),
-                  },
-                );
+                ((_._.BHandlesNotificationGating() &&
+                  !this.chat_partner.BShowMessageNotification()) ||
+                  _._.NotificationManager.DisplayNotificationFromFriend(
+                    this.chat_partner,
+                    {
+                      title: "",
+                      body: (0, _._)("#Chat_BroadcastViewRequest_Notification"),
+                      tag: "message_" + this.chat_partner.accountid,
+                      steamid:
+                        this.chat_partner.persona.m_steamid.ConvertTo64BitString(),
+                    },
+                  ));
           }
         }
         _([_._], _.prototype, "m_bFriendIsTyping", 2),
@@ -37454,6 +37465,9 @@
               };
             (0, _._)("FriendsUI ReadyToRender", _).then(_, _);
           }
+          BHandlesNotificationGating() {
+            return !this.IsLoadedInClientSharedJSContext();
+          }
           GetChatRoomBBCodeParser() {
             return this.m_ChatRoomBBCodeParser;
           }
@@ -37627,10 +37641,8 @@
           ShowCloseActiveVoiceConfirmation(_, _) {}
           UpdatePersonaState(_) {}
           BShowChatRoomNotification() {
-            return this.IsGamepadUIActive()
-              ? !0
-              : this.SettingsStore.FriendsSettings
-                  .bNotifications_ShowChatRoomNotification;
+            return this.SettingsStore.FriendsSettings
+              .bNotifications_ShowChatRoomNotification;
           }
           BPlayChatRoomNotificationSound() {
             return this.IsGamepadUIActive()
@@ -46251,15 +46263,16 @@
                       this.OnAcceptOneOnOneVoiceChat(_, _),
                       _._
                     );
-                  _._.NotificationManager.DisplayNotificationFromFriend(_, {
-                    title: _.display_name,
-                    body: (0, _._)(
-                      "#Friend_RequestingOneOnOneChat",
-                      _.display_name,
-                    ),
-                    tag: "state_" + _.accountid,
-                    steamid: _.persona.m_steamid.ConvertTo64BitString(),
-                  });
+                  _._.BHandlesNotificationGating() &&
+                    _._.NotificationManager.DisplayNotificationFromFriend(_, {
+                      title: _.display_name,
+                      body: (0, _._)(
+                        "#Friend_RequestingOneOnOneChat",
+                        _.display_name,
+                      ),
+                      tag: "state_" + _.accountid,
+                      steamid: _.persona.m_steamid.ConvertTo64BitString(),
+                    });
                   let _ = _._.ChatStore.GetFriendChat(_.GetAccountID(), !0);
                   return (
                     _ != null &&
@@ -51231,6 +51244,7 @@
             });
             return (0, _.jsx)(_._, {
               className: "multiChatDialog GamepadMode",
+              focusWithinClassName: "MultiChatDialogFocusWithin",
               navEntryPreferPosition: _._.PREFERRED_CHILD,
               onMenuButton: this.OnMenuButton,
               onMenuActionDescription: (0, _._)("#Chat_Tab_ContextMenu"),
@@ -58315,6 +58329,7 @@
             };
             return (0, _.jsxs)(_._, {
               className: "chatEntry" + (_ ? " compactView" : "") + _,
+              focusWithinClassName: "ChatEntryFocusWithin",
               "flow-children": "row",
               ..._,
               navEntryPreferPosition: _._.PREFERRED_CHILD,
@@ -77435,6 +77450,7 @@
               };
             return (0, _.jsxs)(_._, {
               className: _,
+              focusWithinClassName: "FriendListFocusWithin",
               "flow-children": "column",
               onButtonDown: _,
               navRef: this.m_navRef,
@@ -77486,6 +77502,7 @@
             _ = (0, _._)(),
             _ = (0, _._)(_.ownerWindow),
             _ = (_) => {
+              if (_) return;
               const _ = _.detail.button;
               _ == _._.BUMPER_LEFT
                 ? (_._.UIStore.SelectFriendsListSteamDeckSiblingTab(-1),
@@ -77522,6 +77539,7 @@
             (0, _._)(window, "message", _),
             (0, _.jsx)(_._, {
               className: "FriendsListAndChatsSteamDeck",
+              focusWithinClassName: "FriendsAndChatsFocusWithin",
               "flow-children": "row",
               onButtonDown: _,
               onFocusWithin: _,
@@ -77550,6 +77568,7 @@
                       "SteamDeckChats",
                       _ && "SteamDeckChatsHidden",
                     ),
+                    focusWithinClassName: "SteamDeckChatsFocusWithin",
                     children: (0, _.jsx)(_._, {
                       tabs: _,
                       ResponsiveWindowState: null,
@@ -97164,6 +97183,99 @@
         }
         function _(_, _) {
           return _[_] <= _[_];
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _) {
+          const { _: _, _: _, _: _, _: _ } = (0, _._)(_),
+            _ = (0, _._)(),
+            [_, _] = (0, _.useState)(void 0),
+            _ = (0, _.useCallback)(
+              (_) => {
+                _(
+                  (_) =>
+                    _(_, {
+                      _: _,
+                      _: _,
+                      _: _,
+                      _: _,
+                    }) ?? _,
+                );
+              },
+              [_, _, _, _],
+            ),
+            _ = (0, _.useCallback)(
+              (_) => {
+                _(_.contentBoxSize?.[0]?.inlineSize ?? _.contentRect.width);
+              },
+              [_],
+            ),
+            _ = (0, _._)(_),
+            _ = (0, _.useCallback)(
+              (_) => {
+                if (!_) return;
+                const _ = _.ownerDocument.defaultView;
+                if (!_) return;
+                const _ = _.getComputedStyle(_),
+                  _ =
+                    _(_.paddingLeft) +
+                    _(_.paddingRight) +
+                    _(_.borderLeftWidth) +
+                    _(_.borderRightWidth),
+                  _ = Math.max(0, _.getBoundingClientRect().width - _);
+                _(_);
+              },
+              [_],
+            ),
+            _ = (0, _._)(_, _);
+          return [_ ?? _ ?? _, _];
+        }
+        function _(_, _) {
+          if (_ > 0)
+            return _ >= _._
+              ? "lg"
+              : _ >= _._
+                ? "md"
+                : _ >= _._
+                  ? "sm"
+                  : _ >= _._
+                    ? "xs"
+                    : "initial";
+        }
+        function _(_) {
+          const {
+              breakpoints: _,
+              initialFormFactor: _,
+              className: _,
+              style: _,
+              children: _,
+              ref: _,
+            } = _,
+            [_, _] = _(_, _),
+            _ = useMultipleRefs(_, _);
+          return jsx("div", {
+            ref: _,
+            className: _,
+            style: _,
+            children: jsx(FormFactorProvider, {
+              _: _,
+              breakpoints: _,
+              children: _,
+            }),
+          });
+        }
+        function _(_) {
+          const _ = parseFloat(_);
+          return isNaN(_) ? 0 : _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -307994,11 +308106,6 @@ ${_}`;
                       _: _._.readInt32,
                       _: _._.writeInt32,
                     },
-                    is_cec_available: {
-                      _: 10,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
                     is_wifi_debug_supported: {
                       _: 11,
                       _: _._.readBool,
@@ -384881,7 +384988,7 @@ ${_}`;
           m_navRefSlider = _.createRef();
           m_sliderBounds = void 0;
           m_handleBounds = void 0;
-          m_fZoom = 1;
+          m_fZoom = void 0;
           m_eDragMode = 0;
           m_vTouchStartPosition = (0, _._)();
           m_fStartValue;
@@ -385072,7 +385179,7 @@ ${_}`;
           }
           ComputeNormalizedValueForMousePosition(_) {
             if (this.m_sliderBounds == null) return 0;
-            const _ = _ / this.m_fZoom,
+            const _ = _ / this.GetZoom(),
               _ = this.m_sliderBounds.right - this.m_sliderBounds.left,
               _ =
                 this.m_handleBounds == null
@@ -385222,8 +385329,13 @@ ${_}`;
                 this.OnWindowTouchEnd,
               );
           }
-          componentDidMount() {
-            this.m_fZoom = (0, _._)(this.m_refSlider.current);
+          GetZoom() {
+            return (
+              this.m_fZoom === void 0 &&
+                this.m_refSlider.current &&
+                (this.m_fZoom = (0, _._)(this.m_refSlider.current)),
+              this.m_fZoom ?? 1
+            );
           }
           componentWillUnmount() {
             this.RemoveDocumentEventListeners();
@@ -389119,6 +389231,8 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -389211,11 +389325,7 @@ ${_}`;
                   children: ['Error: "', _, '"'],
                 }),
                 "\xA0\xA0\xA0",
-                (0, _.jsx)("span", {
-                  style: {
-                    textDecoration: "underline",
-                    cursor: "pointer",
-                  },
+                (0, _.jsx)(_, {
                   onClick: _,
                   children: "(x) Dismiss",
                 }),
@@ -389238,11 +389348,7 @@ ${_}`;
                 (0, _.jsxs)(_, {
                   children: [
                     "Something went wrong while displaying this content. ",
-                    (0, _.jsx)("span", {
-                      style: {
-                        textDecoration: "underline",
-                        cursor: "pointer",
-                      },
+                    (0, _.jsx)(_, {
                       onClick: _,
                       children: "Refresh",
                     }),
@@ -389255,6 +389361,27 @@ ${_}`;
                   children: _,
                 }),
               ],
+            });
+          },
+          _ = ({ onClick: _, children: _ }) => {
+            const _ = _.useRef(null),
+              _ = (0, _._)();
+            _.useEffect(() => {
+              const _ = _.current;
+              _ && _ && !_.NavTree().GetLastFocusedNode() && _.TakeFocus();
+            }, [_]);
+            const _ = (_) => {
+              _.preventDefault(), _();
+            };
+            return (0, _.jsx)(_._, {
+              navRef: _,
+              style: {
+                color: "inherit",
+                textDecoration: "underline",
+                cursor: "pointer",
+              },
+              onClick: _,
+              children: _,
             });
           },
           _ = ({ children: _ }) =>
@@ -463877,24 +464004,6 @@ Status Code:` +
         function _(_) {
           return (0, _.jsx)(_._, {
             feature: _._,
-            setting: "steamos_cec_enabled",
-            label: (0, _._)("#Settings_CEC_Enabled"),
-          });
-        }
-        function _(_) {
-          const [_] = (0, _._)("steamos_cec_enabled");
-          return (0, _.jsx)(_._, {
-            feature: _._,
-            setting: "steamos_cec_wake_on_resume",
-            label: (0, _._)("#Settings_CEC_WakeOnResume"),
-            disabled: !_,
-            displayOffIfDisabled: !0,
-            bottomSeparator: "none",
-          });
-        }
-        function _(_) {
-          return (0, _.jsx)(_._, {
-            feature: _._,
             setting: "steamos_cec_control",
             label: (0, _._)("#Settings_CEC_Control"),
             displayOffIfDisabled: !0,
@@ -464014,26 +464123,15 @@ Status Code:` +
             : null;
         }
         function _(_) {
-          const _ = (0, _._)(),
-            _ = (0, _._)();
-          return _
+          return (0, _._)()
             ? (0, _.jsxs)(_._, {
                 label: (0, _._)("#Settings_CEC_Header_Long"),
                 children: [
-                  !_ &&
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-                    }),
-                  _ &&
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        (0, _.jsx)(_, {}),
-                        (0, _.jsx)(_, {}),
-                        (0, _.jsx)(_, {}),
-                        (0, _.jsx)(_, {}),
-                        (0, _.jsx)(_, {}),
-                      ],
-                    }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {}),
                 ],
               })
             : null;
@@ -474630,11 +474728,20 @@ Status Code:` +
               }),
             });
           });
-        function _(_, _, _) {
-          SteamClient.Apps.SetThirdPartyControllerConfiguration(
-            _,
-            _ ? _._ : _._,
-          ),
+        async function _(_, _, _) {
+          SteamClient.Apps.SetThirdPartyControllerConfiguration(_, _._);
+          let _;
+          try {
+            _ = !!(await SteamClient.Input.GetConfigForAppAndController(_, _))
+              ?.bConfigurationEnabled;
+          } catch {
+            _ = !0;
+          }
+          _ != _ &&
+            SteamClient.Apps.SetThirdPartyControllerConfiguration(
+              _,
+              _ ? _._ : _._,
+            ),
             _._.SaveEditingConfiguration(_),
             _._.ClearSelectedConfigCache(_),
             _._.EnsureEditingConfiguration(_, _);
@@ -482205,10 +482312,7 @@ Status Code:` +
               switch (_) {
                 case 0:
                   _ = (0, _.jsxs)(_._, {
-                    focusable: !0,
                     autoFocus: !0,
-                    noFocusRing: !0,
-                    onOKButton: _,
                     onCancelButton: _,
                     children: [
                       (0, _.jsx)(_._, {
@@ -482249,9 +482353,7 @@ Status Code:` +
                   break;
                 case 1:
                   _ = (0, _.jsxs)(_._, {
-                    focusable: !0,
                     autoFocus: !0,
-                    noFocusRing: !0,
                     onCancelButton: _,
                     children: [
                       (0, _.jsx)(_._, {
@@ -482277,9 +482379,7 @@ Status Code:` +
                   break;
                 case 2:
                   _ = (0, _.jsxs)(_._, {
-                    focusable: !0,
                     autoFocus: !0,
-                    noFocusRing: !0,
                     onCancelButton: _,
                     children: [
                       (0, _.jsx)(_._, {
@@ -482317,9 +482417,7 @@ Status Code:` +
                   break;
                 case 3:
                   _ = (0, _.jsxs)(_._, {
-                    focusable: !0,
                     autoFocus: !0,
-                    noFocusRing: !0,
                     onCancelButton: _,
                     children: [
                       (0, _.jsx)(_._, {
@@ -482358,9 +482456,7 @@ Status Code:` +
                   break;
                 case 4:
                   _ = (0, _.jsxs)(_._, {
-                    focusable: !0,
                     autoFocus: !0,
-                    noFocusRing: !0,
                     onCancelButton: _,
                     children: [
                       (0, _.jsx)(_._, {
@@ -482385,9 +482481,7 @@ Status Code:` +
                   break;
                 case 5:
                   _ = (0, _.jsxs)(_._, {
-                    focusable: !0,
                     autoFocus: !0,
-                    noFocusRing: !0,
                     onCancelButton: _,
                     children: [
                       (0, _.jsx)(_._, {
@@ -482413,9 +482507,7 @@ Status Code:` +
                   break;
                 default:
                   _ = (0, _.jsx)(_._, {
-                    focusable: !0,
                     autoFocus: !0,
-                    noFocusRing: !0,
                     onCancelButton: _,
                     children: (0, _.jsx)(_._, {
                       onClick: _,
@@ -525106,8 +525198,10 @@ Status Code:` +
           let [_, _] = _.useState(_),
             [_, _] = _.useState(performance.now()),
             [_, _] = _.useState(!1),
-            [_, _] = _.useState(!1),
-            _ = _ || (_ == _._ && (_ || _ != _._.None));
+            [_, _] = _.useState(!1);
+          const _ =
+            _ == _._.Hidden || _ == _._.Notification || _ == _._.VirtualMenu;
+          let _ = _ || (_ == _._ && ((_ && !_) || _ != _._.None));
           _ == _._.Main && (_ = !0), (0, _._)(!_);
           const _ = (0, _._)(),
             _ = (0, _._)();
@@ -525144,12 +525238,7 @@ Status Code:` +
               bVisible: _,
             });
           let _ = _.length > 0;
-          return !_ ||
-            _ == _._.Hidden ||
-            _ == _._.Overlay ||
-            _ ||
-            _ ||
-            _?.mode == _._.Overlay
+          return !_ || _ || _ == _._.Overlay || _ || _ || _?.mode == _._.Overlay
             ? null
             : (0, _.jsx)(_, {
                 enableAbort: _,
@@ -531566,12 +531655,22 @@ Status Code:` +
                           _.GetVROverlayKey(),
                         ))),
                   (0, _._)(() => {
-                    _.BHasMenus() && _.MenuStore.ClearLastRequestedSideMenu(),
-                      _
-                        ? _.Activate()
-                        : console.warn(
-                            "FocusApplicationRoot called before root mounted",
-                          );
+                    if (
+                      (_.BHasMenus() &&
+                        _.MenuStore.ClearLastRequestedSideMenu(),
+                      _)
+                    ) {
+                      const _ = _.FindModalDescendant() ?? _,
+                        _ =
+                          !_.BIsActive() &&
+                          !_.GetLastFocusedNode() &&
+                          !!_._.NavigationManager?.NavigationSourceSupportsFocus
+                            .Value;
+                      _.Activate(_);
+                    } else
+                      console.warn(
+                        "FocusApplicationRoot called before root mounted",
+                      );
                   });
               }, [_, _]);
             _.useEffect(() => _.InitNavigation(_, _), [_, _, _]);
@@ -536911,6 +537010,8 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -537660,10 +537761,12 @@ Status Code:` +
           _(_, _);
           const _ = (0, _._)(),
             _ = (0, _._)(_.appid),
-            _ = !0;
+            _ = !0,
+            [_, _] = (0, _._)();
           return !_ || _.achievements.nTotal == 0
             ? null
             : (0, _.jsx)(_._, {
+                ref: _,
                 className: (0, _._)(
                   _ && _().ActiveContent,
                   _().AppColumnContent,
@@ -537679,15 +537782,18 @@ Status Code:` +
                   children: _
                     ? (0, _.jsx)(_._, {
                         children: (0, _.jsx)(_._, {
+                          _: _,
                           children: (0, _.jsx)(_._, {
-                            ref: _,
-                            asPanel: !0,
-                            headerVariant: "compact",
-                            appid: _.appid,
-                            targetsteamid: _.strSteamID,
-                            useAppName: _._,
-                            useOwnPlaytime: _._,
-                            ..._,
+                            children: (0, _.jsx)(_._, {
+                              ref: _,
+                              asPanel: !0,
+                              headerVariant: "compact",
+                              appid: _.appid,
+                              targetsteamid: _.strSteamID,
+                              useAppName: _._,
+                              useOwnPlaytime: _._,
+                              ..._,
+                            }),
                           }),
                         }),
                       })
@@ -538938,6 +539044,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _, _) {
           const _ = (0, _._)(),
@@ -538961,11 +539068,27 @@ Status Code:` +
               }
             }, [_, _, _]);
           const _ = (0, _._)(_?.GetBrowserView(), _._),
+            _ = (0, _._)(),
             _ = _.useCallback(() => {
-              _?.GetBrowserView().SetFocus(!0), _(), _.ToggleSideMenu(_, !0);
-            }, [_, _, _, _]),
+              _?.GetBrowserView().SetFocus(!0);
+              const _ = _?.GetViewWindow();
+              _ && _?.OnActivate(_), _(), _.ToggleSideMenu(_, !0);
+            }, [_, _, _, _, _]),
             _ = _.useCallback(() => {
               _?.GetBrowserView().SetFocus(!1), _.OnMenuDeactivated(_);
+              const _ = _?.GetViewWindow();
+              if (_) {
+                const _ = () => {
+                  if (_.GetOpenSideMenu() == _) return;
+                  const _ = _.document.activeElement;
+                  _ && _ != _.document.body && _.blur();
+                };
+                _.document.hasFocus()
+                  ? _.addEventListener("blur", _, {
+                      once: !0,
+                    })
+                  : _();
+              }
             }, [_, _, _]);
           return {
             fnOnFocusNavActivated: _,
@@ -539377,7 +539500,7 @@ Status Code:` +
           const [_] = (0, _._)("gamerecording_background_mode"),
             _ = (0, _._)(() => (0, _._)()),
             _ = (0, _._)(),
-            _ = () => _.push(_._.Settings.GameRecording()),
+            _ = () => _.Settings("GameRecording"),
             _ = (0, _._)(),
             _ = (0, _._)(),
             { isError: _, isLoading: _, data: _ } = (0, _._)(),
@@ -557740,7 +557863,6 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -557890,10 +558012,6 @@ Status Code:` +
             : {
                 visible: !1,
               };
-        }
-        function _() {
-          const _ = _((_) => _.is_cec_available ?? !1);
-          return _.isSuccess && _.data;
         }
         function _() {
           const _ = _((_) => _.is_extended_cec_available ?? !1);
@@ -604142,6 +604260,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -604191,15 +604310,16 @@ Status Code:` +
             [_._._]: {
               proto: _._,
               fnTray: _,
+              fnShowInTray: _((_) => _.BShowInGameNotification()),
               showToast: _(
-                "bNotifications_ShowIngame",
+                (_) => _.BShowInGameNotification(),
                 (_) => {
                   const _ = _.data;
-                  return _.steamid + "_" + _.game_name;
+                  return _.steamid() + "_" + _.game_name();
                 },
                 10,
               ),
-              playSound: _("bSounds_PlayIngame"),
+              playSound: _((_) => _.BPlayInGameSound()),
               sound: _._.FriendInGame,
               eFeature: _._,
               nRemoveFromTraySec: _,
@@ -604209,12 +604329,13 @@ Status Code:` +
             [_._._]: {
               proto: _._,
               fnTray: _,
+              fnShowInTray: _((_) => _.BShowOnlineNotification()),
               showToast: _(
-                "bNotifications_ShowOnline",
+                (_) => _.BShowOnlineNotification(),
                 (_) => _.data.steamid(),
                 10,
               ),
-              playSound: _("bSounds_PlayOnline"),
+              playSound: _((_) => _.BPlayOnlineSound()),
               sound: _._.FriendOnline,
               eFeature: _._,
               nRemoveFromTraySec: _,
@@ -604262,8 +604383,11 @@ Status Code:` +
             [_._._]: {
               proto: _._,
               fnTray: _,
-              showToast: _("bNotifications_ShowMessage"),
-              playSound: _("bSounds_PlayMessage"),
+              fnShowInTray: _((_) => _.BShowMessageNotification()),
+              showToast: _((_) => _.BShowMessageNotification()),
+              playSound: (_, _) =>
+                _._.MainInstanceUIMode == _.$l2 &&
+                _((_) => _.BPlayMessageSound())(_, _),
               sound: _._.FriendMessage,
               eFeature: _._,
               bEnableInReducedUI: !0,
@@ -604273,8 +604397,11 @@ Status Code:` +
             [_._._]: {
               proto: _._,
               fnTray: _,
+              fnShowInTray: _("bNotifications_ShowChatRoomNotification"),
               showToast: _("bNotifications_ShowChatRoomNotification"),
-              playSound: _("bSounds_PlayChatRoomNotification"),
+              playSound: (_, _) =>
+                _._.MainInstanceUIMode == _.$l2 &&
+                _("bSounds_PlayChatRoomNotification")(),
               sound: _,
               eFeature: _._,
               strTest: "Group Chat Msg",
@@ -605096,6 +605223,7 @@ Status Code:` +
             }
             const _ = _._.clientSettings;
             _.fnTray &&
+              (_ != _._.New || !_.fnShowInTray || _.fnShowInTray(_)) &&
               (_ == _._.New
                 ? (this.OnNewNotificationReceived(_),
                   _.fnTray(_, this.m_rgNotificationTray),
@@ -606708,10 +606836,29 @@ Status Code:` +
         function _(_) {
           return () => _._.friendSettings[_];
         }
+        function _(_) {
+          return (_) => {
+            const _ = new _._(_.data?.steamid?.()).GetAccountID();
+            if (!_)
+              return (
+                (0, _._)(
+                  !1,
+                  `Per-friend notification setting check on notification type ${_.eType} without a steamid`,
+                ),
+                !0
+              );
+            const _ = (0, _._)()?.GetPlayer(_);
+            return _ ? _(_) : !0;
+          };
+        }
+        function _(_) {
+          const _ = _(_);
+          return (_, _) => _(_);
+        }
         function _(_, _, _) {
           const _ = _(_);
           return (_) => {
-            if (!_()) return !1;
+            if (!_(_)) return !1;
             const _ = _(_);
             return !_.BIsToastRateLimited(_.eType, _, _);
           };
@@ -619024,8 +619171,14 @@ Status Code:` +
                 _ &&
                   _?.BIsActiveFocus() &&
                   (!_ || _ == _.ownerDocument.body) &&
-                  _.focus({
-                    preventScroll: !0,
+                  queueMicrotask(() => {
+                    const _ = _.ownerDocument.activeElement;
+                    _.isConnected &&
+                      _.BIsActiveFocus() &&
+                      (!_ || _ == _.ownerDocument.body) &&
+                      _.focus({
+                        preventScroll: !0,
+                      });
                   });
               }
             });
@@ -619791,9 +619944,9 @@ Status Code:` +
             case _._.FriendMessage:
               return _ ? _ : "";
             case _._.FriendOnline:
-              return _ ? _ : "";
+              return _;
             case _._.FriendInGame:
-              return _ ? _ : "";
+              return _;
             case _._.ChatMessage:
               return _ ? _ : "";
             case _._.ChatMention:
@@ -646448,7 +646601,7 @@ Status Code:` +
         }
         const _ = (0, _._)(function () {
           const [_, _] = _.useState(),
-            _ = (0, _._)(_._) != null,
+            _ = (0, _._)((_) => (0, _._)(_) && !_.bRemoteDevice) != null,
             _ = (0, _._)() != null,
             [_, _] = (0, _._)("controller_show_ibex_tour"),
             _ = (0, _._)(),
@@ -669728,94 +669881,12 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_, _) {
-          const { _: _, _: _, _: _, _: _ } = (0, _._)(_),
-            _ = (0, _._)(),
-            [_, _] = (0, _.useState)(void 0),
-            _ = (0, _.useCallback)(
-              (_) => {
-                _(
-                  (_) =>
-                    _(_, {
-                      _: _,
-                      _: _,
-                      _: _,
-                      _: _,
-                    }) ?? _,
-                );
-              },
-              [_, _, _, _],
-            ),
-            _ = (0, _.useCallback)(
-              (_) => {
-                _(_.contentBoxSize?.[0]?.inlineSize ?? _.contentRect.width);
-              },
-              [_],
-            ),
-            _ = (0, _._)(_),
-            _ = (0, _.useCallback)(
-              (_) => {
-                if (!_) return;
-                const _ = _.ownerDocument.defaultView;
-                if (!_) return;
-                const _ = _.getComputedStyle(_),
-                  _ =
-                    _(_.paddingLeft) +
-                    _(_.paddingRight) +
-                    _(_.borderLeftWidth) +
-                    _(_.borderRightWidth),
-                  _ = Math.max(0, _.getBoundingClientRect().width - _);
-                _(_);
-              },
-              [_],
-            ),
-            _ = (0, _._)(_, _);
-          return [_ ?? _ ?? _, _];
-        }
-        function _(_, _) {
-          if (_ > 0)
-            return _ >= _._
-              ? "lg"
-              : _ >= _._
-                ? "md"
-                : _ >= _._
-                  ? "sm"
-                  : _ >= _._
-                    ? "xs"
-                    : "initial";
-        }
-        function _(_) {
-          const {
-              breakpoints: _,
-              initialFormFactor: _,
-              className: _,
-              style: _,
-              children: _,
-              ref: _,
-            } = _,
-            [_, _] = _(_, _),
-            _ = useMultipleRefs(_, _);
-          return jsx("div", {
-            ref: _,
-            className: _,
-            style: _,
-            children: jsx(FormFactorProvider, {
-              _: _,
-              breakpoints: _,
-              children: _,
-            }),
-          });
-        }
-        function _(_) {
-          const _ = parseFloat(_);
-          return isNaN(_) ? 0 : _;
-        }
-        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -669839,7 +669910,7 @@ Status Code:` +
             _ = (0, _._)(),
             _ = (0, _._)(_);
           (0, _._)(_, 250);
-          const [_, _] = _(),
+          const [_, _] = (0, _._)(),
             _ = (0, _._)(),
             _ = !0;
           return (0, _.jsxs)(_._, {
@@ -703345,7 +703416,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1793050866),
+            _ = parseInt(1793234273),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -743882,7 +743953,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1793050866),
+            _ = parseInt(1793234273),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

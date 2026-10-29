@@ -3121,6 +3121,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../common/udpsocket.cpp
 ../common/urlhelper.cpp
 ../common/urlhelper_webapihost.cpp
+../common/vr/vrapi.cpp
 ../common/vr/vrcommon.cpp
 ../common/websocket.cpp
 ../common/websocket.h
@@ -23224,6 +23225,8 @@ N4buzz8XmlChildE
 N4buzz9XmlParser12ParseContextE
 N4buzz9XmlParserE
 N5CUser18MarketingMessage_tE
+N5vrapi12CVRAPISharedE
+N5vrapi12IVRAPISharedE
 N5vrapi16COpenVRInterfaceIN2vr10IVROverlayEEE
 N5vrapi16COpenVRInterfaceIN2vr11IVRSettingsEEE
 N5vrapi16COpenVRInterfaceIN2vr13IVRCompositorEEE
@@ -30654,6 +30657,7 @@ UpdatesJob: canceled %u HTTP requests
 UpdatesJob: empty buffer for app %u
 UpdatesJob: finished %s, apps updated %u (%u KB), packages updated %u (%u KB)
 UpdatesJob: packages still needs updates, run again\n
+UpdatesJob: requested %d apps, %d packages but got none, backing off
 Updating external display refresh limits: %d - %d external: %d
 Updating workshop item info failed
 Upgrade
@@ -40163,7 +40167,7 @@ low-power-mode1
 low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1641
 low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1805
 low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:2010
-low-pri yield - ../clientdll/appdatacache.cpp:864
+low-pri yield - ../clientdll/appdatacache.cpp:876
 low-pri yield - ../clientdll/autocloud.cpp:591
 low-pri yield - ../clientdll/autocloud.cpp:670
 low-pri yield - ../clientdll/autocloud.cpp:845
@@ -45636,6 +45640,7 @@ s_mapTrustedIPAddressHash
 s_nConfigFetchAttemptsCompleted == 0
 s_nLowLevelSupportRefCount.load(std::memory_order_acquire) == 0 || s_bManualPollMode
 s_nLowLevelSupportRefCount.load(std::memory_order_acquire) > 0
+s_nReadDepth > 0
 s_nSDRNetworkRefCount == 0
 s_nSDRNetworkRefCount > 0
 s_pConfigFetchInProgress
@@ -46635,7 +46640,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 26 2026 22:11:27
+steam Oct 29 2026 00:39:03
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
@@ -48794,6 +48799,9 @@ vport 0x%x only valid when connecting to FakeIP
 vport ?
 vr_type
 vram\n
+vrapi
+vrapi write lock taken while holding the read lock
+vrapi: write lock waited > 5s for a vrclient call to finish
 vrapi::VRInput()
 vrclient Shared Lib Not Found (102)
 vrfilename

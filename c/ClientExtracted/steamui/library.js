@@ -34051,21 +34051,6 @@
             });
           }
           function _() {
-            "serviceWorker" in navigator &&
-              window.setTimeout(() => {
-                navigator.serviceWorker
-                  .register("/steamui_sw.js", {
-                    scope: "/",
-                  })
-                  .catch((_) =>
-                    console.warn(
-                      "SteamUI service worker registration failed",
-                      _,
-                    ),
-                  );
-              }, 1e4);
-          }
-          function _() {
             (window._ = new _._()),
               (_._.IN_STEAMUI = !0),
               _(),
@@ -34075,8 +34060,7 @@
               (0, _.jsx)(_, {
                 _: window._,
               }),
-            ),
-              _();
+            );
           }
           function _(_) {
             const { _: _ } = _;
@@ -34495,7 +34479,7 @@
           3356: "afa2a541f6285d3355cc",
           3366: "3b73a2149467675c48c9",
           3473: "39d4b3c920237e005dd6",
-          3569: "bdd303d2692934e751af",
+          3569: "127eebca4104f6f85ab9",
           3578: "d4cea363e2b77b9e059d",
           3583: "e43edc0ea1d97c2fbc71",
           3585: "d77e5eb8bb0b31b581e0",
@@ -34506,7 +34490,7 @@
           3675: "8ebf24a9c963f051387d",
           3695: "a960106da5dfe25daade",
           3706: "2981a5b26c56041f9fde",
-          3714: "f3d170614eb298b49fa7",
+          3714: "7039b9918d21fc46ca79",
           3744: "c148f9eca0dc29755464",
           3834: "2bb6b1f9d42051f43c24",
           3864: "5b8f25d6a7c8fc3ae2c8",
@@ -34770,7 +34754,7 @@
         {
           1220: "4e1faeee0582ae98c6d5",
           1731: "ef278084703853b3ff1e",
-          3714: "bdec26ffbe207f621be8",
+          3714: "4354f29b8976cb732d25",
           3834: "1a1e1f264819a38c7272",
           7462: "9f5f63bdc3e261addf49",
           7653: "7641e38d08624bb4897f",

@@ -652,6 +652,7 @@ $ORIGIN
 ../common/trusteddomains.cpp
 ../common/uifontfile.cpp
 ../common/urlhelper.cpp
+../common/vr/vrapi.cpp
 ../external/picojson/picojson.h
 ../overlay/common/shmemstream.cpp
 ../public/html/htmlprotobuf.cpp
@@ -837,6 +838,7 @@ $ORIGIN
 0000000000000000000000000000000000000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:39:04
 01/01/00
 0123456789
 0123456789.
@@ -844,6 +846,7 @@ $ORIGIN
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+063d37c9aeb7583e891be14276f2627edbcaa5ee
 0x%llx
 0x%p - %s-\n
 1 Mbps
@@ -1664,7 +1667,6 @@ $ORIGIN
 21CefV8StackFrameCToCpp
 21CefV8StackTraceCToCpp
 21CefWriteHandlerCppToC
-22:11:35
 22CBrowserComposerSystem
 22CFrameEventPerfTracker
 22CMsgAckPIDShuttingDown
@@ -1708,7 +1710,6 @@ $ORIGIN
 23CefResourceSkipCallback
 23CefResponseFilterCppToC
 23CefRunQuickMenuCallback
-23CefSchemeHandlerFactory
 23_cef_browser_settings_t
 24 Mbps
 24CDirWatcherPollingThread
@@ -1846,7 +1847,6 @@ $ORIGIN
 33CefMediaRouteCreateCallbackCppToC
 33CefPermissionPromptCallbackCToCpp
 34CefSelectClientCertificateCallback
-35CLoopbackWorkerSchemeHandlerFactory
 35CMsgControllerActionSetMiscSettings
 35CMsgControllerInputModeShiftBinding
 35CMsgHorizontalScrollBarSizeResponse
@@ -1891,7 +1891,6 @@ $ORIGIN
 54CMsgControllerInputControllerActionTurnToFaceDirection
 55CMsgControllerInputControllerActionGameActionSetBinding
 56 Mbps
-5bb14b1dcc8e1bbadae0c36535a69b1220034351
 6 Mbps
 60CMsgControllerInputControllerActionChangePlayerNumberBinding
 60CMsgControllerInputControllerActionDotsPer360CalibrationSpin
@@ -1939,7 +1938,6 @@ $ORIGIN
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CefClient
-9H(yn
 : Tried to copy from a message with a different type. to:
 : Tried to merge from a message with a different type.  to:
 : failed to parse contents
@@ -6576,7 +6574,6 @@ Looking to Trade
 Lookup
 Loop Detected
 LoopSetup
-Loopback worker request blocked, first party:%s request:%s
 Lost connection to the display %s;\nmost likely the X server was shut down or you killed/destroyed\nthe application.\n
 Low FPS
 Low Violence
@@ -6826,6 +6823,8 @@ N3IPC17SharedObjectEventE
 N3IPC17SharedObjectMutexE
 N3IPC6IEventE
 N3IPC6IMutexE
+N5vrapi12CVRAPISharedE
+N5vrapi12IVRAPISharedE
 N5vrapi16COpenVRInterfaceIN2vr10IVROverlayEEE
 N5vrapi16COpenVRInterfaceIN2vr11IVRSettingsEEE
 N5vrapi16COpenVRInterfaceIN2vr13IVRCompositorEEE
@@ -7332,7 +7331,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 26 2026
+Oct 29 2026
 October
 Odia
 Offensive Avatar
@@ -9187,6 +9186,7 @@ Stop using I64/I32 - use lld or d, respectively
 StopDiscovery
 StopFindInPage
 Stopping
+Storage.clearDataForOrigin
 Store
 Store / Billing country code mismatch
 Store / Business country code mismatch
@@ -12031,6 +12031,8 @@ cef_string_wide_clear
 cef_string_wide_to_utf8
 cef_task_runner_get_for_current_thread
 cef_task_runner_get_for_thread
+cef_time_from_timet
+cef_time_to_basetime
 cef_uridecode
 cef_uriencode
 cef_urlrequest_create
@@ -14153,6 +14155,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
+ggen(
 givenName
 gizmodo.com
 glAccumxOES
@@ -19407,6 +19410,7 @@ organizationalStatus
 organizationalUnitName
 oriType
 oriValue
+origin
 originator
 originatorInfo
 originatorSignatureValue
@@ -20275,6 +20279,7 @@ s_hashMapIPWatches
 s_hashMapServerTypeWatches
 s_hashMapSteamIDWatches
 s_hashMapTxnIDWatches
+s_nReadDepth > 0
 s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
 s_pSymbolTable
 s_treeThreadLocalAddressRanges
@@ -20428,6 +20433,7 @@ service $0 {\n
 service-data
 service-uuids
 serviceLocator
+service_workers,cache_storage
 services-resolved
 session id context uninitialized
 session-management1
@@ -21131,6 +21137,7 @@ steps
 still in init
 stop using I64/I32, use lld or d respectively
 storage1
+storageTypes
 store
 store init error
 strCreateURL
@@ -22087,6 +22094,8 @@ volume
 vparams
 vr/icon_steam_vr.png
 vrOverlayKey
+vrapi write lock taken while holding the read lock
+vrapi: write lock waited > 5s for a vrclient call to finish
 vsnprintf
 vtable for
 vtnr
