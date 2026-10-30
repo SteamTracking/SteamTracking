@@ -3,11 +3,11 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./greenenvelope.js?contenthash=BqSDIoHD",
+      "./greenenvelope.js?contenthash=DscBYrS6",
       "./rolldown-runtime.js?contenthash=Bk3-1wwW",
       "./storenaveventcontext.js?contenthash=txejLlpB",
       "../../../css/applications/help/greenenvelope.css?contenthash=Cl6SERdc",
-      "./src.js?contenthash=DJswXlWZ",
+      "./src.js?contenthash=DqGdPiOW",
       "../../../css/applications/help/src.css?contenthash=BbLhD5Ku",
     ]),
 ) => _.map((_) => _[_]);
@@ -68778,6 +68778,13 @@ var _ = {
         autocloses: !1,
       },
     ],
+    [
+      `button`,
+      {
+        Constructor: _,
+        autocloses: !1,
+      },
+    ],
   ]),
   _ = (_) => {
     let { text: _, bShowErrorInfo: _, version: _, language: _ } = _,
@@ -68861,6 +68868,19 @@ function _(_) {
   return (_ == `global` && _.EREALM == _.k_ESteamRealmGlobal) ||
     (_ == `china` && _())
     ? null
+    : (0, _.jsx)(_.Fragment, {
+        children: _.children,
+      });
+}
+function _(_) {
+  let _ = _(_(_.args));
+  return _
+    ? (0, _.jsx)(_, {
+        href: _,
+        openInNewWindow: !0,
+        "data-faq-button": !0,
+        children: _.children,
+      })
     : (0, _.jsx)(_.Fragment, {
         children: _.children,
       });
@@ -83462,7 +83482,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
     _(
-      () => import(`./greenenvelope.js?contenthash=BqSDIoHD`),
+      () => import(`./greenenvelope.js?contenthash=DscBYrS6`),
       __vite__mapDeps([0, 1, 2, 3]),
       import.meta.url,
     ),
@@ -83472,7 +83492,7 @@ var _ = _.lazy(() =>
       await _(
         async () => {
           let { GlobalFooter: _ } = await import(
-            `./src.js?contenthash=DJswXlWZ`
+            `./src.js?contenthash=DqGdPiOW`
           );
           return {
             GlobalFooter: _,

@@ -5,10 +5,10 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./avatarcrop.js?contenthash=DEwLYoyI",
+      "./avatarcrop.js?contenthash=D1N-POUv",
       "./rolldown-runtime.js?contenthash=DbX3T1YK",
       "./libraries.js?contenthash=eLY4-d-j",
-      "./main.js?contenthash=B3VTzWgT",
+      "./main.js?contenthash=B-dJ6BiK",
       "../../../css/applications/community/main.css?contenthash=UBZkTRH6",
       "../../../css/applications/community/avatarcrop.css?contenthash=DYAWEK4g",
     ]),
@@ -40,22 +40,22 @@ import {
   d as ie,
   i as ae,
   l as oe,
-} from "./steammessages_contentmoderation_pb.js?contenthash=3et6KcnX";
-import { l as se } from "./moderationqueries.js?contenthash=CrXH57vE";
-import { t as ce } from "./throbber.js?contenthash=COAox7wG";
+} from "./steammessages_contentmoderation_pb.js?contenthash=BhPec_bt";
+import { l as se } from "./moderationqueries.js?contenthash=DZtwhlxo";
+import { t as ce } from "./throbber.js?contenthash=Dc72jfJk";
 import {
   _ as le,
   f as ue,
   g as de,
   n as fe,
   t as pe,
-} from "./emoticonbutton.js?contenthash=Du6540NS";
-import { n as me } from "./personautils.js?contenthash=CIwFJgE6";
-import "./steammessages_loyalty_rewards_pb.js?contenthash=B1bOv86Q";
-import { n as he } from "./appinfostore.js?contenthash=DBYLTPeb";
-import { n as _, t as ge } from "./persona.js?contenthash=r9Nju3Jy";
-import { n as _e } from "./storeitemhooks.js?contenthash=CGmS4OXI";
-import { n as ve } from "./awardmodal.js?contenthash=Dy7YSQDd";
+} from "./emoticonbutton.js?contenthash=DGkxjf0I";
+import { n as me } from "./personautils.js?contenthash=aiPwXwfw";
+import "./steammessages_loyalty_rewards_pb.js?contenthash=Blw90By_";
+import { n as he } from "./appinfostore.js?contenthash=C7R39MK7";
+import { n as _, t as ge } from "./persona.js?contenthash=BaIEMfd-";
+import { n as _e } from "./storeitemhooks.js?contenthash=Dzs5nK4j";
+import { n as ve } from "./awardmodal.js?contenthash=D7G2IOtS";
 import {
   $i as ye,
   $o as v,
@@ -122,8 +122,8 @@ import {
   uf as ft,
   um as pt,
   yu as N,
-} from "./main.js?contenthash=B3VTzWgT";
-import { n as mt, t as ht } from "./steamavatar2.js?contenthash=B0X7XpEu";
+} from "./main.js?contenthash=B-dJ6BiK";
+import { n as mt, t as ht } from "./steamavatar2.js?contenthash=CtZYlQ8v";
 var P = e(o()),
   F = te(),
   I = e(n()),
@@ -3059,7 +3059,7 @@ var Xr = i(({ onSelected: e, ProfileItems: t, large: n }) => {
     }),
   Qr = P.lazy(() =>
     ze(
-      () => import(`./avatarcrop.js?contenthash=DEwLYoyI`),
+      () => import(`./avatarcrop.js?contenthash=D1N-POUv`),
       __vite__mapDeps([0, 1, 2, 3, 4, 5]),
       import.meta.url,
     ),
