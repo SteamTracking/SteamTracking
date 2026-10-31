@@ -3,83 +3,83 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./monacoeditor.js?contenthash=BRBek9NE",
+      "./monacoeditor.js?contenthash=1V7UC5PG",
       "./rolldown-runtime.js?contenthash=DbX3T1YK",
       "./libraries.js?contenthash=eLY4-d-j",
-      "./main.js?contenthash=B-dJ6BiK",
+      "./main.js?contenthash=BPPtNZbV",
       "../../../css/applications/community/main.css?contenthash=UBZkTRH6",
       "../../../css/applications/community/monacoeditor.css?contenthash=Dg-V1meg",
-      "./richeventeditor.js?contenthash=A_9B3kbV",
-      "./eventrow.js?contenthash=Bogqte_O",
-      "./playerlinkdetailsdataloader.js?contenthash=Dr5C8hpC",
-      "./salebanner.js?contenthash=BwpuUzle",
-      "./clanstore.js?contenthash=BEIxV9fn",
-      "./throbber.js?contenthash=Dc72jfJk",
+      "./richeventeditor.js?contenthash=X7uc2vn9",
+      "./eventrow.js?contenthash=QK2kW4o2",
+      "./playerlinkdetailsdataloader.js?contenthash=B_-A7yJb",
+      "./salebanner.js?contenthash=ClkhtOVI",
+      "./clanstore.js?contenthash=66n_91Al",
+      "./throbber.js?contenthash=j-9LShQt",
       "../../../css/applications/community/throbber.css?contenthash=B5cG3W4v",
-      "./basebuttons.js?contenthash=CcThISTY",
+      "./basebuttons.js?contenthash=BvqoGy4v",
       "../../../css/applications/community/basebuttons.css?contenthash=BJx2zq6Y",
-      "./emoticonbutton.js?contenthash=DGkxjf0I",
-      "./reactbbcodeparser.js?contenthash=BuXc43Uc",
+      "./emoticonbutton.js?contenthash=DZvpGHto",
+      "./reactbbcodeparser.js?contenthash=BtHCwn7I",
       "./bbcodeparser.js?contenthash=DaEWd5Yh",
       "./bbcodes.module.js?contenthash=CKFIW7M3",
       "../../../css/applications/community/bbcodes.css?contenthash=DxrOPR5M",
-      "./numberformats.js?contenthash=BVwNynbK",
-      "./storeitemhooks.js?contenthash=Dzs5nK4j",
+      "./numberformats.js?contenthash=UXdMm-81",
+      "./storeitemhooks.js?contenthash=Ce46gcY0",
       "../../../css/applications/community/emoticonbutton.css?contenthash=Dj3xnYpu",
-      "./storeassets.js?contenthash=BFlztc_u",
+      "./storeassets.js?contenthash=DLkn_mPt",
       "./ajaxhooks.js?contenthash=DrP4Usdq",
-      "./tabbar.js?contenthash=4CZzUK65",
+      "./tabbar.js?contenthash=Cs8b1dRr",
       "./historyutils.js?contenthash=C2OBI7UD",
       "../../../css/applications/community/tabbar.css?contenthash=DoJ7ygmD",
       "./eventtime.js?contenthash=DlCNIi05",
-      "./rewarditemdisplay.js?contenthash=CvYPR5Aq",
+      "./rewarditemdisplay.js?contenthash=Cc-4aBqE",
       "./partnereventdialog.module.js?contenthash=C6nNSZgO",
       "../../../css/applications/community/partnereventdialog.css?contenthash=CX73M240",
-      "./storeitemlink.js?contenthash=C6Y0Smzh",
+      "./storeitemlink.js?contenthash=B9qqpMrQ",
       "./currencyformat.js?contenthash=BPzpC4_L",
-      "./visibilitytracker.js?contenthash=BgKNEtsC",
-      "./personautils.js?contenthash=aiPwXwfw",
-      "./appinfostore.js?contenthash=C7R39MK7",
+      "./visibilitytracker.js?contenthash=c-FTKqAJ",
+      "./personautils.js?contenthash=DMvry1mT",
+      "./appinfostore.js?contenthash=D7US0Hun",
       "../../../css/applications/community/salebanner.css?contenthash=vDtRq5-_",
-      "./eventinfinitescrollmodal.js?contenthash=DxKQfe9o",
-      "./apppartnereventspage.js?contenthash=C9oz2q_M",
-      "./textlink.js?contenthash=B106VIDC",
+      "./eventinfinitescrollmodal.js?contenthash=Dkmsvaaz",
+      "./apppartnereventspage.js?contenthash=yOi1QROz",
+      "./textlink.js?contenthash=csJ5qWZV",
       "../../../css/applications/community/textlink.css?contenthash=CMU1nJhL",
-      "./carouselarrows.js?contenthash=C4U1_Jy4",
-      "./simplesuccesserror.js?contenthash=vOhnqQf6",
+      "./carouselarrows.js?contenthash=C8pZkg8e",
+      "./simplesuccesserror.js?contenthash=BMFeO-FR",
       "../../../css/applications/community/simplesuccesserror.css?contenthash=C9ahyCu_",
-      "./steammessages_loyalty_rewards_pb.js?contenthash=Blw90By_",
+      "./steammessages_loyalty_rewards_pb.js?contenthash=DPakRt1R",
       "../../../css/applications/community/carouselarrows.css?contenthash=Befh7vrt",
-      "./localdateandtime.js?contenthash=DfFBt03k",
+      "./localdateandtime.js?contenthash=khtRyR5c",
       "../../../css/applications/community/localdateandtime.css?contenthash=Bky2XmNv",
       "../../../css/applications/community/apppartnereventspage.css?contenthash=BIMBsB-P",
-      "./heading.js?contenthash=Ca5C3yvk",
+      "./heading.js?contenthash=CPY5ZCr6",
       "../../../css/applications/community/heading.css?contenthash=BUJSDlhm",
-      "./coercingtextinput.js?contenthash=BXbA-DDj",
+      "./coercingtextinput.js?contenthash=CCk7FjLm",
       "./textentry.js?contenthash=CcAwvsrq",
       "../../../css/applications/community/textentry.css?contenthash=DxafS6Qx",
       "../../../css/applications/community/coercingtextinput.css?contenthash=iPcpBsJv",
-      "./segmentedcontrol.js?contenthash=Dv2bZyRW",
+      "./segmentedcontrol.js?contenthash=BDO4s0fR",
       "../../../css/applications/community/segmentedcontrol.css?contenthash=Bx26b5c8",
-      "./textarea.js?contenthash=DPyh9aPa",
-      "./avatarurl.js?contenthash=7o2M4Gxq",
-      "./pmbbcodeschema.js?contenthash=0Bs49bgf",
-      "./filehandling.js?contenthash=BUjwjw0S",
+      "./textarea.js?contenthash=0oGuSVCa",
+      "./avatarurl.js?contenthash=CmUZXEZn",
+      "./pmbbcodeschema.js?contenthash=D-0ODf0w",
+      "./filehandling.js?contenthash=XVBI6mZB",
       "../../../css/applications/community/pmbbcodeschema.css?contenthash=BFb2yHJK",
-      "./languagepicker.js?contenthash=CZBj_5M8",
-      "./playerstore.js?contenthash=B32s0csw",
-      "./persona.js?contenthash=BaIEMfd-",
+      "./languagepicker.js?contenthash=cNkfyq57",
+      "./playerstore.js?contenthash=DHcp-gsk",
+      "./persona.js?contenthash=BvhC-BOF",
       "../../../css/applications/community/languagepicker.css?contenthash=BpbCCjvh",
-      "./bbcode_lists.js?contenthash=BYlDhWeh",
+      "./bbcode_lists.js?contenthash=C-mPiez8",
       "../../../css/applications/community/bbcode_lists.css?contenthash=jdjaeeTu",
-      "./clanimagepicker.js?contenthash=DDV8Kuwd",
+      "./clanimagepicker.js?contenthash=e8P-qCvT",
       "../../../css/applications/community/clanimagepicker.css?contenthash=B5Noenwt",
       "./with-selector.js?contenthash=BaoKd7j3",
-      "./collapseablesection.js?contenthash=Dn57JChR",
+      "./collapseablesection.js?contenthash=Czh0BrzB",
       "../../../css/applications/community/collapseablesection.css?contenthash=CY5rgv5g",
       "../../../css/applications/community/eventrow.css?contenthash=BuEdybWQ",
       "./expandonappear.js?contenthash=De2pVScQ",
-      "./linkplugin.js?contenthash=B6AsyGFm",
+      "./linkplugin.js?contenthash=B0-4SuQd",
       "../../../css/applications/community/linkplugin.css?contenthash=Cu_k08oi",
       "../../../css/applications/community/richeventeditor.css?contenthash=BaPgF0Dh",
     ]),
@@ -156,7 +156,7 @@ import {
   _,
   _,
   _,
-} from "./partnereventmigrate.js?contenthash=C-dKk-pP";
+} from "./partnereventmigrate.js?contenthash=Ddzb6qoK";
 import {
   _,
   _,
@@ -290,7 +290,7 @@ import {
   _,
   _,
   _,
-} from "./eventrow.js?contenthash=Bogqte_O";
+} from "./eventrow.js?contenthash=QK2kW4o2";
 import {
   _,
   _,
@@ -331,10 +331,10 @@ import {
   _,
   _,
   _,
-} from "./salebanner.js?contenthash=BwpuUzle";
-import { _, _, _, _, _, _, _, _ } from "./clanstore.js?contenthash=BEIxV9fn";
-import { _ } from "./throbber.js?contenthash=Dc72jfJk";
-import { _ } from "./emoticonbutton.js?contenthash=DGkxjf0I";
+} from "./salebanner.js?contenthash=ClkhtOVI";
+import { _, _, _, _, _, _, _, _ } from "./clanstore.js?contenthash=66n_91Al";
+import { _ } from "./throbber.js?contenthash=j-9LShQt";
+import { _ } from "./emoticonbutton.js?contenthash=DZvpGHto";
 import {
   _,
   _,
@@ -345,7 +345,7 @@ import {
   _,
   _,
   _,
-} from "./apppartnereventspage.js?contenthash=C9oz2q_M";
+} from "./apppartnereventspage.js?contenthash=yOi1QROz";
 import {
   _,
   _,
@@ -364,20 +364,20 @@ import {
   _,
   _,
   _,
-} from "./carouselarrows.js?contenthash=C4U1_Jy4";
+} from "./carouselarrows.js?contenthash=C8pZkg8e";
 import { _ } from "./ajaxhooks.js?contenthash=DrP4Usdq";
 import { _ } from "./historyutils.js?contenthash=C2OBI7UD";
-import { _, _ } from "./tabbar.js?contenthash=4CZzUK65";
+import { _, _ } from "./tabbar.js?contenthash=Cs8b1dRr";
 import { _ } from "./eventtime.js?contenthash=DlCNIi05";
-import { _, _, _, _ } from "./localdateandtime.js?contenthash=DfFBt03k";
-import { _, _, _, _, _, _, _ } from "./languagepicker.js?contenthash=CZBj_5M8";
+import { _, _, _, _ } from "./localdateandtime.js?contenthash=khtRyR5c";
+import { _, _, _, _, _, _, _ } from "./languagepicker.js?contenthash=cNkfyq57";
 import { _, _, _ } from "./partnereventdialog.module.js?contenthash=C6nNSZgO";
-import { _, _ } from "./simplesuccesserror.js?contenthash=vOhnqQf6";
-import { _ } from "./visibilitytracker.js?contenthash=BgKNEtsC";
-import { _ } from "./appinfostore.js?contenthash=C7R39MK7";
-import { _ } from "./playerstore.js?contenthash=B32s0csw";
-import { _ } from "./storeitemhooks.js?contenthash=Dzs5nK4j";
-import { _ } from "./linktoeventforusertocopy.js?contenthash=BlfiSkiQ";
+import { _, _ } from "./simplesuccesserror.js?contenthash=BMFeO-FR";
+import { _ } from "./visibilitytracker.js?contenthash=c-FTKqAJ";
+import { _ } from "./appinfostore.js?contenthash=D7US0Hun";
+import { _ } from "./playerstore.js?contenthash=DHcp-gsk";
+import { _ } from "./storeitemhooks.js?contenthash=Ce46gcY0";
+import { _ } from "./linktoeventforusertocopy.js?contenthash=CqbHyvIk";
 import {
   _,
   _,
@@ -409,7 +409,7 @@ import {
   _,
   _,
   _,
-} from "./clanimagepicker.js?contenthash=DDV8Kuwd";
+} from "./clanimagepicker.js?contenthash=e8P-qCvT";
 import {
   _,
   _,
@@ -556,10 +556,10 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=B-dJ6BiK";
-import { _, _ } from "./collapseablesection.js?contenthash=Dn57JChR";
-import { _ } from "./giveawaystore.js?contenthash=xnf3Ijwa";
-import { _ } from "./partnereventsavebutton.module.js?contenthash=LFwKN7Zx";
+} from "./main.js?contenthash=BPPtNZbV";
+import { _, _ } from "./collapseablesection.js?contenthash=Czh0BrzB";
+import { _ } from "./giveawaystore.js?contenthash=C40s6pWi";
+import { _ } from "./partnereventsavebutton.module.js?contenthash=udECSzJ_";
 import {
   _,
   _,
@@ -570,8 +570,8 @@ import {
   _,
   _,
   _,
-} from "./valvecrowdinsyncpanel.js?contenthash=G0ahaT0b";
-import { _ } from "./managefriends.js?contenthash=BGTmirpc";
+} from "./valvecrowdinsyncpanel.js?contenthash=D7nxAHHa";
+import { _ } from "./managefriends.js?contenthash=lUPDJzCk";
 async function _() {
   let _ = await _(`ajaxgetuserdeckcompatcounts`, new URLSearchParams());
   if (!_.counts)
@@ -9524,7 +9524,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./monacoeditor.js?contenthash=BRBek9NE`).then((_) => _._),
+    () => import(`./monacoeditor.js?contenthash=1V7UC5PG`).then((_) => _._),
     __vite__mapDeps([0, 1, 2, 3, 4, 5]),
     import.meta.url,
   ),
@@ -10962,7 +10962,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./richeventeditor.js?contenthash=A_9B3kbV`),
+    () => import(`./richeventeditor.js?contenthash=X7uc2vn9`),
     __vite__mapDeps([
       6, 1, 2, 7, 8, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
       22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
