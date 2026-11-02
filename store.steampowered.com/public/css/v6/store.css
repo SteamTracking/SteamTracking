@@ -1252,7 +1252,8 @@ body:not(.v7) .discount_block:not(.discount_block_inline):not(.no_discount):has(
     padding: 0 6px;
 }
 
-.home_tabs_content .discount_block .discount_prices, .tab_content_ctn .discount_block .discount_prices  {
+.home_tabs_content .discount_block:not(.no_discount) .discount_prices,
+.tab_content_ctn .discount_block:not(.no_discount) .discount_prices {
 	background: transparent;
 }
 .home_tabs_content .tab_item_discount.no_discount {
@@ -2541,6 +2542,10 @@ body:not(.v7) .discount_block:not(.discount_block_inline):not(.no_discount):has(
 
 .tab_item_discount.no_discount .bundle_base_discount {
     display: none;
+}
+
+.tab_item_discount .discount_final_price {
+	font-size: 14px;
 }
 
 .prepurchase_tag {
