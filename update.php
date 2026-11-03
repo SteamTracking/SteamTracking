@@ -334,7 +334,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			}
 			else if( $File === 'SSR' )
 			{
-				if( preg_match( "/window.SSR.clientAssets=(\{.+?\});/", $Data, $Matches ) !== 1 )
+				if( preg_match( '/"clientAssets":(\{.+?\}),"/', $Data, $Matches ) !== 1 )
 				{
 					$this->Log( '{lightred}Failed to find SSR on ' . $URL );
 
