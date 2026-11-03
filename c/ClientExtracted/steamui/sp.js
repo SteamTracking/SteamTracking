@@ -1140,6 +1140,8 @@
           CompactHeader: "_3BfZdHfjYYh4SgetsHLs0M",
           PersonaLabel: "_1T11owJfXn3vqVy9JHCc3A",
           PlaytimeItems: "_3qW-w_839W6G9A6h4vA3p1",
+          SummarySources: "_27SuUEmh08WvZMH5IBxbJz",
+          CompletedSetsTooltip: "nQrWyeimAZ_6S-_R3Njs1",
           scrollAchievementBackground: "_2y0pcnWcW37cB3oBVoks92",
         };
       },
@@ -3898,7 +3900,6 @@
         module.exports = {
           SteamAwardContainer: "_3n6v2rFCMX3yWMfZrlCn6g",
           InLibraryView: "pqLczqVU9TDbWz5pl3Dhl",
-          SVGIcon_DialogCheck: "_3ccByQfkFeqPu_u0ZEuu2b",
           SteamAwardHeader: "_2jgrTr2L4JVpD3vsEejL4u",
           SteamAwardHeaderImage: "_lRFQTx2beRUJL_3ltFfr",
           SteamAwardMainCtn: "_1uGju6QeFG7khpqA7DOs0-",
@@ -5792,7 +5793,6 @@
           BasicPartnerEvent: "_2yuwUNFQ2ww14fydp8mCYB",
           EventPlaceholder: "ww1Z7NedKjcmc4OsbN44d",
           GameIconAndName: "_3R5H5fJ0VeK9S1kRTd3G1Q",
-          ChannelIndicator: "_7kr7kB5ui-hc8_6J6g5v0",
         };
       },
       chunkid: (module) => {
@@ -10865,6 +10865,7 @@
           Text: "_1q1w8VViEHqNuYLDGtBCV8",
           AchievementTabs: "gxNvErGV7FhJ3lnOa5htx",
           Background: "ODpLjkbgMnhnQTcm8ZCMO",
+          BackgroundScroll: "_29m0NwtVyTtM8ImkZ_a_4z",
           Blur: "_3Fjw7Sm_QUgOr8r3khWTSm",
           HeaderImage: "_294HV0se7vdDLPe-RvRZbb",
           List: "_2kMZ9dNT_LVROmPbKzcCHo",
@@ -11654,6 +11655,7 @@
           Favorited: "_2WaHZuAetbqENmqDthu3nl",
           ControllerConfigButton: "_1oYt_BfxCHnA-_6sfUHiNn",
           DotDotDot: "zvLq1GUCH3yLuqv_TXBJ1",
+          InfoIcon: "_2gGgI00oCzQMaVMNSioK4f",
           Downloading: "_2F4PcO4yl7Xl5emuGiF2La",
           DetailsSectionStatus: "_1sKdg4-6_xRyPxMt0eRvaf",
           OfflineMode: "_36lN_lXGPqog6IKc9dkgca",
@@ -12366,6 +12368,8 @@
           MCGreen: "_1KR40mXc7Z4Dss99aBDbyN",
           MCOrange: "_1H3NRDhuiZh5xH5jZsiI38",
           MCRed: "_3lWVD8RYypVvbk60T5Vqcs",
+          ShortSortData: "LTPd1K0p7pbPS9nEgQGLs",
+          FullSortData: "_2EqIgCcLt4h8d4NKik-VAp",
           Short: "yGeS63NTeSwJCWS395eIb",
           SteamReview: "_2pensWpJpr4aPLfsnWG2Mk",
           Small: "_3plHTO4zZYLfPx0Xem8Af4",
@@ -12375,6 +12379,12 @@
           SteamReviewMixed: "_2DHhHuQVbivzEpsIvhaAys",
           SteamReviewNegative: "_2-196-NjaMB6Mbhh7xGpXB",
           CompletedGroups: "_1Z1AifHmEdIUbvNWXmJ1hK",
+          AllAchieved: "_1fddiVOLgn9nNxAEDjyV4k",
+          CompletedGroupsAward: "_1p4OC0BKEjB8LT2BlRyxO-",
+          DLCFrom1: "_4yfj5N2soD6vkHQDBDaOw",
+          DLCFrom2: "-zN46pB8pmZXuCZhPxSMN",
+          DLCFrom3: "ZIGP3oO2DN1MGwxWyf54t",
+          CompletedGroupsTooltip: "_3eoKQn_C-MFVXpzPev6jOm",
           Draggable: "_1pwP4eeP1zQD7PEgmsep0W",
           Soundtrack: "_3Lu_5jVxDAvsdeGpBzaQAt",
           SoundtrackCollection: "cooZdx-qHovBnYBsOuBdr",
@@ -87632,8 +87642,6 @@
               AppArtwork: _,
               fnFetchLocalUserAchievements: _,
               fnOpenFriendAchievements: _,
-              fnOpenFriendsWhoPlay: _,
-              fnOpenCommunityURL: _,
             } = _,
             _ = (0, _.useMemo)(
               () => ({
@@ -87642,10 +87650,8 @@
                 AppArtwork: _,
                 fnFetchLocalUserAchievements: _,
                 fnOpenFriendAchievements: _,
-                fnOpenFriendsWhoPlay: _,
-                fnOpenCommunityURL: _,
               }),
-              [_, _, _, _, _, _, _],
+              [_, _, _, _, _],
             );
           return (0, _.jsx)(_, {
             value: _,
@@ -87925,7 +87931,7 @@
           _ = __webpack_require__("chunkid");
         const _ = 10;
         function _(_) {
-          return _ === void 0 ? !1 : _ <= _;
+          return _ === void 0 ? !1 : _ < _;
         }
         const _ = new WeakMap();
         function _(_, _) {
@@ -87974,9 +87980,14 @@
           }).format(new Date(_ * 1e3));
         }
         function _(_, _) {
+          return _._.Localize(
+            "#Achievements_PercentFormat",
+            _.toLocaleString((0, _._)(), _),
+          );
+        }
+        function _(_, _) {
           const _ = _ > 0 ? _ / _ : 0,
-            _ = _.toLocaleString((0, _._)(), {
-              style: "percent",
+            _ = _(_ * 100, {
               maximumFractionDigits: _ > 100 ? 1 : 0,
             });
           return {
@@ -87987,8 +87998,7 @@
         function _(_) {
           return _ === void 0
             ? ""
-            : (_ / 100).toLocaleString((0, _._)(), {
-                style: "percent",
+            : _(_, {
                 maximumFractionDigits: 1,
                 minimumFractionDigits: 1,
               });
@@ -88337,7 +88347,8 @@
             }),
             _ = (0, _._)(_.map((_) => _.group._));
           if (!_ || !_) return _;
-          const { maxRows: _ = 4 } = _ === !0 ? {} : _;
+          const { maxRows: _ = 4, countContrast: _ = "note" } =
+            _ === !0 ? {} : _;
           return (0, _.jsxs)(_._, {
             direction: "column",
             gap: "1",
@@ -88349,6 +88360,7 @@
                 highlighted: _,
                 setHighlighted: _,
                 maxRows: _,
+                countContrast: _,
               }),
             ],
           });
@@ -88364,6 +88376,7 @@
             highlighted: _,
             setHighlighted: _,
             maxRows: _,
+            countContrast: _,
           } = _;
           return (0, _.jsx)(_._, {
             overflow: "auto",
@@ -88393,7 +88406,7 @@
                         children: _.group.name,
                       }),
                       (0, _.jsxs)(_._, {
-                        contrast: _ == _.group._ ? "subtitle" : "note",
+                        contrast: _ == _.group._ ? "subtitle" : _,
                         size: "2",
                         whiteSpace: "nowrap",
                         children: [
@@ -88940,10 +88953,7 @@
           return _ !== void 0 ? `${_}?dlc=${_}` : _;
         }
         function _(_) {
-          const { appid: _, profileUrl: _ } = _;
-          return _
-            ? `${_}/stats/${_}/achievements/`
-            : `${Config.COMMUNITY_BASE_URL}stats/${_}/achievements/`;
+          return _(_);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -89245,13 +89255,12 @@
             if (!(0, _._)(_, _)) continue;
             const _ = _(_, _, _),
               { isDlc: _, achievements: _ } = _;
-            _(_, _.total, _.rare, _),
-              _(_, _),
+            _(_, _.total, _.rare, _), _(_, _);
+            const _ = !_.archived && _.isAchievable;
+            _(_, _ ? _.total : _.unlocked, _ ? _.rare : _.unlockedRare, _),
+              _(_, _.unlocked, _.unlockedRare, _),
               !(!_.isAchievable && !_.isCompleted) &&
-                (_(_, _.total, _.rare, _),
-                _(_, _.unlocked, _.unlockedRare, _),
-                _(_, _),
-                _.isCompleted && _(_, _));
+                (_(_, _), _.isCompleted && _(_, _));
           }
           return {
             achievements: _,
@@ -89403,6 +89412,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { orientation: _ = "horizontal", size: _ = "1", ..._ } = _;
@@ -89440,14 +89451,2067 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = "blue-8",
+          _ = "plum-10",
+          _ = "amber-10",
+          _ = {
+            initial: "4",
+            _: "5",
+          },
+          _ = {
+            initial: "3",
+            _: "4",
+          };
+        function _(_) {
+          const { achievements: _, sets: _, isDlc: _ = !1 } = _,
+            _ = _ ? _ : _,
+            _ = _
+              ? "#Achievements_Summary_FromDLCAcrossSets"
+              : "#Achievements_Summary_FromBaseGameAcrossSets";
+          return (0, _.jsxs)(_._, {
+            direction: "row",
+            gap: "3",
+            align: "center",
+            children: [
+              (0, _.jsx)(_._, {
+                height: "14px",
+                children: (0, _.jsx)(_, {
+                  orientation: "vertical",
+                  size: "4",
+                  color: "greyneutral-8",
+                }),
+              }),
+              (0, _.jsxs)(_._, {
+                direction: "row",
+                gap: "1",
+                align: "center",
+                children: [
+                  (0, _.jsx)(_._, {
+                    size: _,
+                    contrast: "description",
+                    whiteSpace: "nowrap",
+                    children: (0, _._)(
+                      _._.LocalizePlural(_, (0, _._)(_), (0, _._)(_)),
+                      (0, _.jsx)(_._, {
+                        color: _,
+                      }),
+                      (0, _.jsx)(_._, {
+                        color: _,
+                      }),
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    complete: _,
+                    isDlc: _,
+                    showCount: !1,
+                    size: "20px",
+                  }),
+                ],
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          const { appid: _ } = _,
+            { targetsteamid: _, viewersteamid: _ } = (0, _._)(),
+            { data: _ } = (0, _._)(_, _);
+          if (!_) return null;
+          const _ = _.achievable.total > 0,
+            _ = _ ? _.groups_achievable : _.groups,
+            _ = _ ? _.achievable : _.achievements,
+            { total: _, dlc: _, rare: _ } = _,
+            { base: _, dlc: _ } = _;
+          return (0, _.jsxs)(_._, {
+            direction: "column",
+            gap: "3",
+            children: [
+              (0, _.jsxs)(_._, {
+                direction: "column",
+                gap: "2",
+                className: _.SummaryHeading,
+                padding: {
+                  initial: "3",
+                  _: "5",
+                },
+                flexGrow: "1",
+                children: [
+                  (0, _.jsxs)(_._, {
+                    direction: "row",
+                    wrap: "wrap",
+                    gap: "3",
+                    align: "baseline",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        size: _,
+                        weight: "heavy",
+                        contrast: "title",
+                        whiteSpace: "nowrap",
+                        children: _._.LocalizePlural(
+                          "#Achievements_Summary_AchievementTotal",
+                          (0, _._)(_),
+                        ),
+                      }),
+                      _ > 0 &&
+                        (0, _.jsx)(_._, {
+                          size: _,
+                          color: _,
+                          whiteSpace: "nowrap",
+                          children: _._.LocalizePlural(
+                            "#Achievements_Summary_RareCount",
+                            (0, _._)(_),
+                          ),
+                        }),
+                    ],
+                  }),
+                  _.has_groups &&
+                    (0, _.jsx)(_._, {
+                      overflow: "hidden",
+                      children: (0, _.jsxs)(_._, {
+                        direction: "row",
+                        wrap: "wrap",
+                        gap: "3",
+                        align: "center",
+                        className: _.SummarySources,
+                        children: [
+                          (0, _.jsx)(_, {
+                            achievements: _ - _,
+                            sets: _,
+                          }),
+                          _ > 0 &&
+                            (0, _.jsx)(_, {
+                              achievements: _,
+                              sets: _,
+                              isDlc: !0,
+                            }),
+                        ],
+                      }),
+                    }),
+                ],
+              }),
+              _ == _ &&
+                _ !== void 0 &&
+                !_ &&
+                (0, _.jsxs)(_._, {
+                  direction: "row",
+                  gap: "3",
+                  justify: "start",
+                  align: "center",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      contrast: "description",
+                      children: _._.Localize("#Achievements_Summary_NotOwned"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      display: {
+                        initial: "contents",
+                        _: "none",
+                      },
+                      children: (0, _.jsx)(_, {
+                        appid: _,
+                        textLink: !0,
+                      }),
+                    }),
+                  ],
+                }),
+            ],
+          });
+        }
+        function _(_, _) {
+          const { viewersteamid: _, useOwnPlaytime: _ } = (0, _._)(),
+            _ = (0, _._)(_, !0),
+            _ = _?.(_);
+          if (_ && _ !== void 0 && _ === _) return _;
+          if (_.isLoading || !_.data || _ === void 0) return;
+          let _;
+          if (
+            (_.data.your_info?.steamid == _
+              ? (_ = _.data.your_info)
+              : (_ = [
+                  ...(_.data.in_game ?? []),
+                  ...(_.data.played_recently ?? []),
+                  ...(_.data.played_ever ?? []),
+                  ...(_.data.owns ?? []),
+                ].find((_) => _.steamid == _)),
+            !!_)
+          )
+            return {
+              minutesForever: _.minutes_played_forever ?? 0,
+              minutesRecent: _.minutes_played ?? 0,
+            };
+        }
+        function _(_) {
+          const { appid: _, targetsteamid: _, viewersteamid: _ } = (0, _._)(),
+            _ = _(_, _),
+            { data: _ } = (0, _._)(_, _),
+            _ = _?.minutesRecent ?? 0,
+            _ = _?.minutesForever ?? 0;
+          if (!_) return null;
+          const {
+              achievable: _,
+              unlocked: _,
+              groups_achievable: _,
+              groups_completed: _,
+            } = _,
+            _ = (0, _._)(_),
+            _ = _.dlc > 0,
+            _ = _._.Localize(
+              _
+                ? "#Achievements_Playtime_AchievementsTooltip_WithDLC"
+                : "#Achievements_Playtime_AchievementsTooltip",
+            ),
+            _ = (0, _.jsx)(_, {
+              orientation: "vertical",
+              marginX: "1",
+              color: "text-body-note",
+            });
+          return (0, _.jsx)(_._, {
+            overflow: "hidden",
+            children: (0, _.jsxs)(_._, {
+              direction: "row",
+              wrap: "wrap",
+              ..._,
+              className: _.PlaytimeItems,
+              children: [
+                _ &&
+                  _.has_groups &&
+                  (0, _.jsx)(_._, {
+                    toolTipContent: _._.Localize(
+                      "#Achievements_Playtime_SetsTooltip",
+                    ),
+                    usePointerEvents: !0,
+                    children: (0, _.jsxs)(_._, {
+                      direction: "row",
+                      ..._,
+                      children: [
+                        _,
+                        (0, _.jsx)(_._, {
+                          size: "2",
+                          contrast: "subtitle",
+                          whiteSpace: "nowrap",
+                          children: _._.Localize(
+                            "#Achievements_Playtime_SetsCompletedCount",
+                            (0, _._)(_.total),
+                            (0, _._)(_.total),
+                          ),
+                        }),
+                      ],
+                    }),
+                  }),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    toolTipContent: _,
+                    usePointerEvents: !0,
+                    children: (0, _.jsxs)(_._, {
+                      direction: "row",
+                      ..._,
+                      children: [
+                        _,
+                        (0, _.jsx)(_._, {
+                          size: "2",
+                          contrast: "subtitle",
+                          whiteSpace: "nowrap",
+                          children: _._.Localize(
+                            "#Achievements_Playtime_AchievementsUnlockedCount",
+                            (0, _._)(_.total),
+                            (0, _._)(_.total),
+                          ),
+                        }),
+                      ],
+                    }),
+                  }),
+                _ > 0 &&
+                  (0, _.jsxs)(_._, {
+                    direction: "row",
+                    ..._,
+                    children: [
+                      _,
+                      (0, _.jsxs)(_._, {
+                        direction: "row",
+                        ..._,
+                        wrap: "wrap",
+                        children: [
+                          (0, _.jsxs)(_._, {
+                            size: "2",
+                            contrast: "subtitle",
+                            whiteSpace: "nowrap",
+                            children: [
+                              _._.Localize(
+                                "#Achievements_Playtime_Total",
+                                (0, _._)(_),
+                              ),
+                              " -",
+                            ],
+                          }),
+                          (0, _.jsx)(_._, {
+                            size: "2",
+                            contrast: "subtitle",
+                            whiteSpace: "nowrap",
+                            children: _._.Localize(
+                              "#Achievements_Playtime_Recent",
+                              (0, _._)(_),
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)(_._, {
+            contrast: "description",
+            size: "3",
+            weight: "heavy",
+            truncate: !0,
+            ..._,
+          });
+        }
+        function _(_) {
+          const { size: _ = "normal", ..._ } = _;
+          return (0, _.jsx)(_._, {
+            contrast: "title",
+            size: _ == "normal" ? "5" : "4",
+            weight: "heavy",
+            truncate: !0,
+            lineClamp: 1,
+            ..._,
+          });
+        }
+        function _(_, _) {
+          for (const _ of _.groups)
+            for (const _ of _.achievements) if (_.internal_key === _) return _;
+        }
+        function _(_) {
+          const { hideGroupRibbon: _ = !1 } = _,
+            { appid: _, targetsteamid: _, viewersteamid: _ } = (0, _._)(),
+            { bForce24HourClock: _ } = (0, _._)(),
+            { data: _ } = (0, _._)(_),
+            { data: _ } = (0, _._)(_, _),
+            { data: _ } = (0, _._)(_, _),
+            { data: _ } = (0, _._)(_, _ ?? ""),
+            _ = (0, _._)() == "initial";
+          if (!_ || !_ || !_) return null;
+          const _ = Object.values(_?.achievements ?? [])
+            .filter((_) => _.unlocked)
+            .reduce(
+              (_, _) => (_ === void 0 || _.unlock_time > _.unlock_time ? _ : _),
+              void 0,
+            );
+          if (_ === void 0) return null;
+          const _ = _(_, _.internal_key),
+            _ = _?.groupid ?? _._,
+            _ = _.groups.find((_) => _._ == _),
+            _ = _.groups[_].is_completed,
+            _ = _?.achievements?.[_.internal_key]?.unlocked ?? !1,
+            _ = !!_?.hidden && !_,
+            _ = _.has_groups;
+          return _ && _
+            ? (0, _.jsx)(_._, {
+                direction: "column",
+                gap: "2",
+                flexGrow: "1",
+                minWidth: "0",
+                children: (0, _.jsxs)(_._, {
+                  columns: _ ? "minmax(0, 1fr)" : "max-content minmax(0, 1fr)",
+                  gap: "2",
+                  children: [
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        minWidth: "max-content",
+                        children: (0, _.jsx)(_._, {
+                          theme: "light",
+                          isComplete: !0,
+                          isDlc: !!_?.dlcappid,
+                          size: "48px",
+                          shine: !0,
+                          className: _.RecentRibbon,
+                        }),
+                      }),
+                    (0, _.jsxs)(_._, {
+                      direction: "column",
+                      gap: "0",
+                      justify: "around",
+                      children: [
+                        (0, _.jsx)(_, {
+                          children: _._.Localize(
+                            _
+                              ? "#Achievements_Header_LatestSet"
+                              : "#Achievements_Header_LatestCompletedSet",
+                          ),
+                        }),
+                        (0, _.jsx)(_, {
+                          size: "small",
+                          children: _?.name,
+                        }),
+                        _.groups[_].time_completed !== void 0 &&
+                          (0, _.jsx)(_._, {
+                            contrast: "description",
+                            truncate: !0,
+                            children: _
+                              ? (0, _._)(_.groups[_].time_completed, _)
+                              : _._.Localize(
+                                  "#Achievements_Header_SetCompletedOnDate",
+                                  (0, _._)(_.groups[_].time_completed, _),
+                                ),
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+              })
+            : (0, _.jsx)(_._, {
+                direction: "column",
+                gap: "2",
+                flexGrow: "1",
+                minWidth: "0",
+                children: (0, _.jsxs)(_._, {
+                  columns: "max-content minmax(0, 1fr)",
+                  gap: "2",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      minWidth: "max-content",
+                      children: (0, _.jsx)(
+                        _._,
+                        {
+                          appid: _,
+                          achievement: _,
+                          progress: _,
+                          unlocked: !0,
+                          hidden: _,
+                        },
+                        _.api_name,
+                      ),
+                    }),
+                    (0, _.jsxs)(_._, {
+                      direction: "column",
+                      gap: "0",
+                      justify: "around",
+                      children: [
+                        (0, _.jsx)(_, {
+                          children: _._.Localize(
+                            "#Achievements_Header_LatestAchievement",
+                          ),
+                        }),
+                        (0, _.jsx)(_, {
+                          size: "small",
+                          children: _
+                            ? _._.Localize("#AchievementSpoilerName")
+                            : _?.name,
+                        }),
+                        _
+                          ? (0, _.jsx)(_._, {
+                              contrast: "description",
+                              truncate: !0,
+                              children: _._.LocalizeReact(
+                                "#Achievements_Header_InSet",
+                                (0, _.jsx)(_._, {
+                                  contrast: "subtitle",
+                                  children: _?.name,
+                                }),
+                              ),
+                            })
+                          : (0, _._)(_.unlock_time) &&
+                            (0, _.jsx)(_._, {
+                              contrast: "description",
+                              truncate: !0,
+                              children: _
+                                ? (0, _._)(_.unlock_time, _)
+                                : _._.Localize(
+                                    "#Achievements_Row_UnlockedOnDate",
+                                    (0, _._)(_.unlock_time, _),
+                                  ),
+                            }),
+                      ],
+                    }),
+                  ],
+                }),
+              });
+        }
+        const _ = 3;
+        function _(_) {
+          const { isDlc: _ = !1, children: _ } = _,
+            { appid: _, targetsteamid: _ } = (0, _._)(),
+            { data: _ } = (0, _._)(_),
+            { data: _ } = (0, _._)(_),
+            { data: _ } = (0, _._)(_, _),
+            _ = (_?.groups ?? [])
+              .filter(
+                (_) =>
+                  !!_.dlcappid == _ &&
+                  (0, _._)(_, _) &&
+                  (0, _._)(_, _, _).isCompleted,
+              )
+              .sort(
+                (_, _) =>
+                  (_?.groups[_._]?.time_completed ?? 0) -
+                  (_?.groups[_._]?.time_completed ?? 0),
+              )
+              .map((_) => _.name ?? ""),
+            _ = (0, _.jsxs)(_._, {
+              columns: "auto auto",
+              gapX: "1",
+              gapY: "1",
+              alignItems: "center",
+              radius: "sm",
+              paddingX: "3",
+              paddingY: "2",
+              className: _.CompletedSetsTooltip,
+              children: [
+                (0, _.jsx)(_._, {
+                  gridColumn: "1/-1",
+                  children: (0, _.jsx)(_._, {
+                    color: "dull-1",
+                    weight: "medium",
+                    size: "2",
+                    children: _._.Localize(
+                      "#Achievements_Header_CompletedSetsTitle",
+                    ),
+                  }),
+                }),
+                _.slice(0, _).map((_, _) =>
+                  (0, _.jsxs)(
+                    _.Fragment,
+                    {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          isComplete: !0,
+                          isDlc: _,
+                          size: "1.5em",
+                        }),
+                        (0, _.jsx)(_._, {
+                          color: "dull-1",
+                          size: "2",
+                          whiteSpace: "nowrap",
+                          children: _,
+                        }),
+                      ],
+                    },
+                    _,
+                  ),
+                ),
+                _.length > _ &&
+                  (0, _.jsx)(_._, {
+                    gridColumn: "2",
+                    children: (0, _.jsx)(_._, {
+                      color: "dull-1",
+                      size: "2",
+                      children: _._.Localize(
+                        "#Achievements_Header_CompletedSetsMore",
+                        (0, _._)(_.length - _),
+                      ),
+                    }),
+                  }),
+              ],
+            });
+          return (0, _.jsx)(_._, {
+            toolTipContent: _.length ? _ : null,
+            direction: "top",
+            usePointerEvents: !0,
+            children: _,
+          });
+        }
+        function _(_) {
+          const { children: _ } = _,
+            { appid: _, targetsteamid: _ } = (0, _._)(),
+            { data: _ } = (0, _._)(_, _),
+            _ = (0, _._)();
+          if (!_?.groups_completed.total)
+            return (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
+          const _ = _.groups_completed.total >= _.groups_achievable.total,
+            _ = _ == "initial" || _ == "xs";
+          return (0, _.jsx)(_, {
+            appid: _,
+            steamid: _,
+            className: _ ? _.AllGroupsCompleted : void 0,
+            backgroundClassName: (0, _._)(
+              _.GroupCompleteHeadingBackground,
+              _ && _.DimmedIcons,
+            ),
+            noStars: !_,
+            children: _,
+          });
+        }
+        function _(_) {
+          const { showUnachievable: _ = !1 } = _,
+            { appid: _, targetsteamid: _ } = (0, _._)(),
+            { data: _ } = (0, _._)(_, _),
+            _ = (0, _._)();
+          if (!_) return null;
+          const _ = _ == "initial" || _ == "xs",
+            _ = _ ? "32px" : "40px",
+            { total: _ } = _.achievable,
+            { total: _, rare: _ } = _.unlocked,
+            { percentUnlockedStr: _ } = (0, _._)(_, _),
+            _ = _.unlocked.total > 0,
+            _ = _.groups_completed.total >= _.groups_achievable.total,
+            _ = _ && _.groups.total > 1,
+            _ =
+              _.groups_completed.total > 0 &&
+              (0, _.jsxs)(_._, {
+                direction: "row",
+                gap: "2",
+                position: "relative",
+                children: [
+                  _.groups_completed.base > 0 &&
+                    (0, _.jsx)(_, {
+                      children: (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_._, {
+                          complete: _.groups_completed.base,
+                          showCount: _.has_groups,
+                          size: _,
+                          shine: !0,
+                          sparkles: !0,
+                        }),
+                      }),
+                    }),
+                  _.groups_completed.dlc > 0 &&
+                    (0, _.jsx)(_, {
+                      isDlc: !0,
+                      children: (0, _.jsx)(_._, {
+                        children: (0, _.jsx)(_._, {
+                          complete: _.groups_completed.dlc,
+                          isDlc: !0,
+                          showCount: !0,
+                          size: _,
+                          shine: !0,
+                          sparkles: !0,
+                        }),
+                      }),
+                    }),
+                ],
+              }),
+            _ = _ && _;
+          return (0, _.jsx)(_, {
+            children: (0, _.jsx)(_._, {
+              padding: {
+                initial: "3",
+                _: "4",
+              },
+              flexGrow: "1",
+              className: _.SummaryHeading,
+              children: (0, _.jsxs)(_._, {
+                columns: {
+                  initial: "1fr",
+                  _: "minmax(0, 1fr) minmax(200px, 33%)",
+                },
+                rows: {
+                  initial: "auto",
+                  _: "1fr",
+                },
+                gap: {
+                  initial: "4",
+                  _: "6",
+                },
+                children: [
+                  (0, _.jsxs)(_._, {
+                    direction: "row",
+                    gap: "3",
+                    align: "start",
+                    flexGrow: "3",
+                    flexBasis: "0",
+                    gridColumn: _ ? void 0 : "1/-1",
+                    alignSelf: "center",
+                    children: [
+                      !_ && _,
+                      (0, _.jsxs)(_._, {
+                        direction: "column",
+                        gap: "2",
+                        flexGrow: "1",
+                        flexBasis: "0",
+                        alignSelf: "baseline",
+                        children: [
+                          (0, _.jsxs)(_._, {
+                            direction: "row",
+                            justify: "between",
+                            align: "baseline",
+                            gap: "3",
+                            children: [
+                              (0, _.jsxs)(_._, {
+                                className: _.UnlockedCount,
+                                children: [
+                                  (0, _.jsx)(_._, {
+                                    contrast: "title",
+                                    size: "4",
+                                    children: (0, _._)(
+                                      _._.Localize(
+                                        "#Achievements_Header_UnlockedCount",
+                                        (0, _._)(_),
+                                        (0, _._)(_),
+                                        _,
+                                      ),
+                                      (0, _.jsx)(_._, {
+                                        contrast: "description",
+                                      }),
+                                    ),
+                                  }),
+                                  _.has_groups &&
+                                    (0, _.jsxs)(_._, {
+                                      contrast: "description",
+                                      size: "4",
+                                      children: [
+                                        " ",
+                                        _._.LocalizePlural(
+                                          "#Achievements_Header_AcrossSets",
+                                          (0, _._)(_.groups_achievable.total),
+                                        ),
+                                      ],
+                                    }),
+                                ],
+                              }),
+                              _ > 0 &&
+                                !_ &&
+                                (0, _.jsx)(_._, {
+                                  size: "4",
+                                  color: _,
+                                  whiteSpace: "nowrap",
+                                  children: _._.LocalizePlural(
+                                    "#Achievements_RareCount",
+                                    (0, _._)(_),
+                                  ),
+                                }),
+                            ],
+                          }),
+                          (0, _.jsx)(_._, {
+                            appid: _,
+                            steamid: _,
+                            showUnachievable: _,
+                            legend: {
+                              countContrast: _ ? "body" : void 0,
+                            },
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsxs)(_._, {
+                      direction: "row",
+                      gap: "3",
+                      align: "center",
+                      children: [
+                        _,
+                        _ &&
+                          (0, _.jsx)(_._, {
+                            alignSelf: "stretch",
+                            direction: "column",
+                            justify: "center",
+                            children: (0, _.jsx)(_._, {
+                              height: "90%",
+                              children: (0, _.jsx)(_, {
+                                orientation: "vertical",
+                                size: "4",
+                                color: "greyneutral-8",
+                              }),
+                            }),
+                          }),
+                        (0, _.jsx)(_._, {
+                          flexGrow: "1",
+                          minWidth: "0",
+                          children: (0, _.jsx)(_, {
+                            hideGroupRibbon: !!_,
+                          }),
+                        }),
+                      ],
+                    }),
+                  _ && !_ && (0, _.jsx)(_, {}),
+                ],
+              }),
+            }),
+          });
+        }
+        function _(_) {
+          const { appid: _ } = _,
+            { targetsteamid: _ } = (0, _._)(),
+            _ = _(_, _),
+            { data: _ } = (0, _._)(_, _);
+          return _?.groups_achievable.total == 0 ||
+            (_?.unlocked.total == 0 &&
+              _?.minutesForever == 0 &&
+              _?.minutesRecent == 0)
+            ? (0, _.jsx)(_, {
+                appid: _,
+              })
+            : (0, _.jsx)(_, {});
+        }
+        function _(_) {
+          const { icons: _, rows: _, columns: _, iconSize: _ = 64 } = _,
+            _ = `achievement-icons-${_.useId().replace(/\W/g, "")}`;
+          if (_.length == 0) return null;
+          const _ = _ * _,
+            _ = _ * _,
+            _ = Array.from(
+              {
+                length: _ * _,
+              },
+              (_, _) => _[_ % _.length],
+            );
+          return (0, _.jsx)("div", {
+            className: _.CompletionBackgroundIcons,
+            style: {
+              "--tile-width": `${_}px`,
+            },
+            children: (0, _.jsxs)("svg", {
+              className: _.CompletionBackgroundIconsSurface,
+              "aria-hidden": "true",
+              children: [
+                (0, _.jsx)("defs", {
+                  children: (0, _.jsx)("pattern", {
+                    _: _,
+                    patternUnits: "userSpaceOnUse",
+                    width: _,
+                    height: _,
+                    children: _.map((_, _) =>
+                      (0, _.jsx)(
+                        "image",
+                        {
+                          href: _,
+                          _: (_ % _) * _,
+                          _: Math.floor(_ / _) * _,
+                          width: _,
+                          height: _,
+                        },
+                        _,
+                      ),
+                    ),
+                  }),
+                }),
+                (0, _.jsx)("rect", {
+                  width: "100%",
+                  height: "100%",
+                  fill: `url("#${_}")`,
+                }),
+              ],
+            }),
+          });
+        }
+        function _(_) {
+          const {
+            icons: _,
+            noStars: _ = !1,
+            className: _,
+            background: _,
+            dlcRatio: _,
+          } = _;
+          return (0, _.jsxs)(_._, {
+            className: (0, _._)(_.CompletionBackgroundLayer, _),
+            background: _,
+            children: [
+              (0, _.jsx)(_, {
+                icons: _,
+                rows: 7,
+                columns: 10,
+              }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  dlcRatio: _,
+                }),
+            ],
+          });
+        }
+        function _(_) {
+          const { dlcRatio: _ = 0 } = _,
+            _ = [
+              [0.025, 0.8947],
+              [0.075, 0.7895],
+              [0.125, 0.5789],
+              [0.175, 0.9474],
+              [0.225, 0.3684],
+              [0.275, 0.3158],
+              [0.325, 1],
+              [0.375, 0.1579],
+              [0.425, 0.7368],
+              [0.475, 0.002],
+              [0.525, 0.4737],
+              [0.575, 0.2632],
+              [0.625, 0.8421],
+              [0.675, 0.4211],
+              [0.725, 0.6842],
+              [0.775, 0.1053],
+              [0.825, 0.0526],
+              [0.875, 0.6316],
+              [0.925, 0.2105],
+              [0.975, 0.5263],
+            ];
+          return (0, _.jsx)(_._, {
+            className: _.StarsBackground,
+            children: _.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  delay: _[0],
+                  scale: _[1],
+                  color: _ / _.length < _ ? _ : _,
+                },
+                _,
+              ),
+            ),
+          });
+        }
+        function _(_) {
+          const { delay: _, scale: _, color: _ } = _,
+            _ = {
+              "--delay": `${_}`,
+              "--scale": `${_}`,
+            };
+          return (0, _.jsx)(_.zFc, {
+            style: _,
+            className: _.Star,
+            width: "16",
+            height: "16",
+            fill: `var(--color-${_})`,
+          });
+        }
+        function _(_) {
+          const {
+              appid: _,
+              steamid: _,
+              children: _,
+              groupid: _,
+              className: _,
+              backgroundClassName: _,
+              ..._
+            } = _,
+            { data: _ } = (0, _._)(_),
+            { data: _ } = (0, _._)(_, _),
+            _ = (0, _._)(_.CompletionBackgroundContainer, _);
+          if (!_ || !_)
+            return (0, _.jsx)(_._, {
+              className: _,
+              children: _,
+            });
+          const _ = _.groups
+              .filter((_) => _ === void 0 || _._ == _)
+              .filter((_) => (0, _._)(_, void 0, _).isCompleted)
+              .map((_) => _.groups[_._])
+              .filter((_) => _ !== void 0),
+            _ = new Set(_.map((_) => _.groupid)),
+            _ = _.groups.filter((_) => _.has(_._)),
+            _ = _.flatMap(
+              (_) => _.achievements.map((_) => _.icon_achieved) ?? [],
+            ).filter((_) => _ !== void 0),
+            _ =
+              _.length > 0
+                ? _.filter((_) => !!_.dlcappid).length / _.length
+                : 0;
+          return (0, _.jsxs)(_._, {
+            className: _,
+            children: [
+              _.length > 0 &&
+                (0, _.jsx)(_, {
+                  icons: _,
+                  dlcRatio: _,
+                  className: _,
+                  ..._,
+                }),
+              _,
+            ],
+          });
+        }
+        function _() {
+          const {
+            appid: _,
+            hasGlobalLeaderboards: _,
+            hasUserLeaderboards: _,
+            openGlobalLeaderboards: _,
+            openUserLeaderboards: _,
+            targetsteamid: _,
+            profileUrl: _,
+          } = (0, _._)();
+          if (!_ && !_) return null;
+          if (_ && _) {
+            if (_)
+              return (0, _.jsx)(_._, {
+                onClick: _,
+                children: _._.Localize("#Achievements_Links_Leaderboards"),
+              });
+            {
+              const _ = `${_}/stats/${_}/?tab=leaderboards`;
+              return (0, _.jsx)(_._, {
+                href: _,
+                children: _._.Localize("#Achievements_Links_Leaderboards"),
+              });
+            }
+          }
+          if (_) {
+            if (_)
+              return (0, _.jsx)(_._, {
+                onClick: _,
+                children: _._.Localize("#Achievements_Links_Leaderboards"),
+              });
+            {
+              const _ = `/stats/${_}/leaderboards/`;
+              return (0, _.jsx)(_._, {
+                href: _,
+                children: _._.Localize("#Achievements_Links_Leaderboards"),
+              });
+            }
+          }
+          return null;
+        }
+        const _ = new Set([
+          240, 300, 302, 440, 500, 550, 630, 810, 870, 880, 886, 1520, 7470,
+          17510, 18500, 18900, 23510, 24240, 24500, 32150, 37800, 47540, 56400,
+          91700, 94590, 201830, 214360, 231430,
+        ]);
+        function _(_) {
+          const { appid: _, profileUrl: _ } = (0, _._)();
+          return !_ || !_.has(_)
+            ? null
+            : (0, _.jsx)(_._, {
+                href: `${_}/stats/${_}/?tab=stats`,
+                children: _._.Localize("#Achievements_Links_Stats"),
+              });
+        }
+        function _() {
+          const _ =
+              "https://steamcommunity.com/groups/SteamClientBeta/discussions/",
+            _ = _._.Localize("#Achievements_Links_BetaFeedback");
+          return (0, _.jsx)(_._, {
+            href: _,
+            whiteSpace: "nowrap",
+            children: _,
+          });
+        }
+        function _(_) {
+          const { appid: _, textLink: _ } = _,
+            _ = (0, _._)(),
+            { targetsteamid: _, isPanel: _ } = (0, _._)(),
+            _ = (0, _._)(_, `${_._.STORE_BASE_URL}app/${_}/`),
+            { data: _ } = (0, _._)(_, _);
+          if ((0, _._)(_)) return null;
+          const _ = _._.Localize("#Achievements_Links_StorePage");
+          return _ && !_
+            ? (0, _.jsx)(_._, {
+                href: _,
+                whiteSpace: "nowrap",
+                children: _,
+              })
+            : (0, _.jsx)(_._, {
+                href: _,
+                children: _,
+              });
+        }
+        function _(_) {
+          const {
+              appid: _,
+              targetsteamid: _,
+              viewersteamid: _,
+              headerContent: _,
+              headerProps: _,
+              headerVariant: _,
+              isPanel: _,
+              useAppName: _,
+            } = (0, _._)(),
+            { bShowStoreLinks: _ = !0 } = (0, _._)(),
+            { data: _ } = (0, _._)(_),
+            _ = (0, _._)({
+              appid: _,
+            }),
+            { strStoreURL: _ } = (0, _._)(_?.data),
+            _ = (0, _._)(),
+            _ = _?.(_) ?? _.data?.name,
+            { data: _ } = (0, _._)(_, _),
+            _ =
+              _ !== void 0 &&
+              _.achievable.total > 0 &&
+              _.unlocked.total == _.achievable.total &&
+              _.groups_completed.total > 0;
+          if (!_) return null;
+          const { groups: _ } = _;
+          let _ = {
+            aspectRatio: "1/1",
+            maxHeight: "30px",
+            minHeight: "16px",
+          };
+          _ ||
+            (_ = {
+              aspectRatio: "2/3",
+              maxHeight: "120px",
+              minHeight: "120px",
+            });
+          const _ = {
+              aspectRatio: {
+                initial: _.aspectRatio,
+                _: "1/1",
+                _: "2/3",
+              },
+              maxHeight: {
+                initial: _.maxHeight,
+                _: "30px",
+                _: "300px",
+              },
+              minHeight: {
+                initial: _.minHeight,
+                _: "16px",
+                _: "219px",
+              },
+            },
+            _ = _ == "compact";
+          let _ = "capsule";
+          (_ || _ == "sm" || (_ && (_ == "initial" || _ == "xs"))) &&
+            (_ = "icon");
+          const _ = (0, _.jsx)(_._, {
+              appid: _,
+              variant: _,
+            }),
+            _ =
+              _ && _
+                ? (0, _.jsx)("a", {
+                    className: _.ArtworkLink,
+                    href: _,
+                    children: _,
+                  })
+                : (0, _.jsx)("div", {
+                    className: _.ArtworkLink,
+                    children: _,
+                  }),
+            _ =
+              _ && _
+                ? (0, _.jsx)(_._, {
+                    href: _,
+                    children: _,
+                  })
+                : _,
+            _ = _ !== void 0 && _ !== _,
+            _ = _ && _,
+            _ = (0, _.jsxs)(_._, {
+              gridArea: "title",
+              gap: {
+                initial: "1",
+                _: "4",
+              },
+              alignSelf: _ ? "center" : "end",
+              align: "start",
+              flexGrow: "1",
+              direction: {
+                initial: "column",
+                _: "row",
+              },
+              children: [
+                (0, _.jsxs)(_._, {
+                  flexGrow: "1",
+                  direction: "column",
+                  gap: "1",
+                  children: [
+                    _ &&
+                      (0, _.jsxs)(_._, {
+                        direction: "row",
+                        gap: "1",
+                        align: "center",
+                        className: _.FriendToolbarLabel,
+                        overflow: "hidden",
+                        children: [
+                          (0, _.jsx)(_._, {
+                            steamid: _,
+                            size: "X-Small",
+                          }),
+                          (0, _.jsx)(_._, {
+                            className: _.PersonaLabel,
+                            size: "3",
+                            children: _._.LocalizeReact(
+                              "#Achievements_Header_FriendsAchievements",
+                              (0, _.jsx)(_._, {
+                                steamid: _,
+                                showStatus: !1,
+                              }),
+                            ),
+                          }),
+                        ],
+                      }),
+                    (0, _.jsx)(_._, {
+                      size: {
+                        initial: "5",
+                        _: "7",
+                      },
+                      weight: "heavy",
+                      contrast: "title",
+                      children: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      gap: "1",
+                      align: "start",
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)(_._, {
+                  gap: "4",
+                  direction: "row",
+                  align: "center",
+                  children: [
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_._, {
+                      display: {
+                        initial: "none",
+                        _: "contents",
+                      },
+                      children: (0, _.jsx)(_, {
+                        appid: _,
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            });
+          return _ && _
+            ? (0, _.jsxs)(_._, {
+                direction: "column",
+                gap: "2",
+                position: "relative",
+                style: {
+                  isolation: "isolate",
+                },
+                children: [
+                  _,
+                  (0, _.jsx)(_._, {
+                    gap: "4",
+                    columns: "1fr",
+                    areas: '"title"',
+                    padding: "4",
+                    ..._,
+                    className: (0, _._)(_.CompactHeader, _?.className),
+                    children: _,
+                  }),
+                ],
+              })
+            : _
+              ? (0, _.jsxs)(_._, {
+                  direction: "column",
+                  gap: "2",
+                  position: "relative",
+                  style: {
+                    isolation: "isolate",
+                  },
+                  children: [
+                    _,
+                    (0, _.jsxs)(_._, {
+                      gap: "4",
+                      columns: "max-content 1fr",
+                      areas: '"capsule title"',
+                      padding: "4",
+                      ..._,
+                      className: (0, _._)(_.CompactHeader, _?.className),
+                      children: [
+                        (0, _.jsx)(_._, {
+                          gridArea: "capsule",
+                          height: "32px",
+                          aspectRatio: "1/1",
+                          alignSelf: "center",
+                          children: _,
+                        }),
+                        _,
+                      ],
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)(_._, {
+                  direction: "column",
+                  gap: "2",
+                  position: "relative",
+                  ..._,
+                  style: {
+                    isolation: "isolate",
+                  },
+                  children: [
+                    _,
+                    (0, _.jsxs)(_._, {
+                      gap: "4",
+                      columns: "max-content 1fr",
+                      position: "relative",
+                      areas: {
+                        initial: '"capsule title" "header header"',
+                        _: '"capsule title" "header header"',
+                        _: '"capsule title" "capsule header"',
+                      },
+                      children: [
+                        (0, _.jsx)(_._, {
+                          gridArea: "capsule",
+                          height: "100%",
+                          ..._,
+                          marginLeft: {
+                            initial: "2",
+                            _: "2",
+                            _: "0",
+                          },
+                          children: _,
+                        }),
+                        _,
+                        (0, _.jsx)(_._, {
+                          gridArea: "header",
+                          children: (0, _.jsx)(_, {
+                            appid: _,
+                            groups: _,
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
+                });
+        }
+        const _ = "greyneutral-11";
+        function _(_) {
+          const {
+              appid: _,
+              steamid: _,
+              groupid: _,
+              className: _,
+              children: _,
+            } = _,
+            { data: _ } = (0, _._)(_, _),
+            _ = (0, _._)();
+          if (!_?.groups[_]?.is_completed)
+            return (0, _.jsx)(_._, {
+              className: _,
+              children: _,
+            });
+          const _ = _ == "initial" || _ == "xs";
+          return (0, _.jsx)(_, {
+            appid: _,
+            steamid: _,
+            groupid: _,
+            className: _,
+            backgroundClassName: (0, _._)(
+              _.GroupHeaderCompletionBackground,
+              _ && _.WideMask,
+            ),
+            noStars: !0,
+            children: _,
+          });
+        }
+        function _(_) {
+          const { groupid: _, className: _, children: _ } = _,
+            { appid: _, targetsteamid: _ } = (0, _._)();
+          return _ === void 0
+            ? (0, _.jsx)(_._, {
+                className: _,
+                children: _,
+              })
+            : (0, _.jsx)(_, {
+                appid: _,
+                steamid: _,
+                groupid: _,
+                className: _,
+                children: _,
+              });
+        }
+        function _(_) {
+          const {
+              group: _,
+              groupSummary: _,
+              collapsed: _,
+              setCollapsed: _,
+            } = _,
+            {
+              _: _,
+              name: _,
+              dlcappid: _,
+              ispublic: _,
+              developeronly: _,
+              archived: _,
+            } = _,
+            { appid: _, targetsteamid: _, viewersteamid: _ } = (0, _._)(),
+            _ = (0, _._)(),
+            _ = _.achievements.unlocked,
+            _ = _.achievements.total,
+            { percentUnlocked: _, percentUnlockedStr: _ } = (0, _._)(_, _),
+            _ = !!_,
+            _ = _.isCompleted,
+            { data: _ } = (0, _._)(
+              _
+                ? {
+                    appid: _,
+                  }
+                : void 0,
+            ),
+            _ = !_ || (_ && _.success != _._) ? _ : _,
+            _ = _.isAchievable,
+            _ = _ || _.isCompleted,
+            _ = (0, _._)(
+              _.GroupHeader,
+              !_ && !_ && _.BaseGroup,
+              _ && _.DLCGroup,
+              !_ && _.NonPublicGroup,
+              !_ && _.Unowned,
+              _ && _.ArchivedGroup,
+            ),
+            _ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                _ &&
+                  (0, _.jsxs)(_._, {
+                    contrast: "description",
+                    children: [_._.Localize("#Achievements_Set_DLCLabel"), " "],
+                  }),
+                _,
+              ],
+            });
+          return (0, _.jsx)(_, {
+            groupid: _,
+            className: _,
+            children: (0, _.jsxs)(_._, {
+              direction: "row",
+              padding: "2",
+              gap: "2",
+              justify: "between",
+              align: "center",
+              onClick: _ ? () => _(!_) : void 0,
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
+                    isDlc: _,
+                    isComplete: _.isCompleted,
+                    variant: "flat",
+                  }),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    style: {
+                      maxHeight: "215px",
+                      maxWidth: "410px",
+                      height: "62px",
+                      aspectRatio: "92/43",
+                    },
+                    children: (0, _.jsx)(_._, {
+                      appid: _,
+                      parentAppID: _,
+                      variant: "header",
+                    }),
+                  }),
+                (0, _.jsxs)(_._, {
+                  direction: "column",
+                  justify: "between",
+                  gap: "1",
+                  flexGrow: "1",
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      direction: "row",
+                      justify: "between",
+                      flexGrow: "1",
+                      align: "center",
+                      children: [
+                        _
+                          ? (0, _.jsxs)(_._, {
+                              direction: "row",
+                              gap: "1",
+                              align: "center",
+                              children: [
+                                (0, _.jsx)(_._, {
+                                  contrast: "subtitle",
+                                  weight: "medium",
+                                  size: "4",
+                                  children: _,
+                                }),
+                                (0, _.jsx)(_, {}),
+                              ],
+                            })
+                          : (0, _.jsx)(_._, {
+                              contrast: "title",
+                              weight: "medium",
+                              size: "4",
+                              children: _,
+                            }),
+                        !_ &&
+                          (0, _.jsxs)(_._, {
+                            direction: "row",
+                            gap: "1",
+                            align: "center",
+                            style: {
+                              color: "var(--color-amber-11)",
+                            },
+                            children: [
+                              (0, _.jsx)(_._, {
+                                className: _.InlineIcon,
+                                children: (0, _.jsx)(_.FeatureHidden, {
+                                  color: "currentColor",
+                                }),
+                              }),
+                              (0, _.jsx)(_._, {
+                                color: "amber-11",
+                                children: _._.Localize(
+                                  _
+                                    ? "#Achievements_Set_DeveloperOnly"
+                                    : "#Achievements_Set_Unreleased",
+                                ),
+                              }),
+                            ],
+                          }),
+                      ],
+                    }),
+                    _
+                      ? (0, _.jsxs)(_._, {
+                          direction: {
+                            initial: "column",
+                            _: "row",
+                          },
+                          gap: {
+                            initial: "1",
+                            _: "2",
+                          },
+                          justify: _ ? "start" : "end",
+                          align: {
+                            initial: "stretch",
+                            _: "center",
+                          },
+                          flexGrow: "1",
+                          children: [
+                            (0, _.jsxs)(_._, {
+                              direction: "row",
+                              gap: "1",
+                              align: "center",
+                              children: [
+                                _ != _ &&
+                                  _ !== void 0 &&
+                                  (0, _.jsx)(_._, {
+                                    steamid: _,
+                                  }),
+                                (0, _.jsx)(_._, {
+                                  contrast: _ ? "subtitle" : "title",
+                                  whiteSpace: "nowrap",
+                                  children: _._.Localize(
+                                    "#Achievements_Set_UnlockedCount",
+                                    (0, _._)(_),
+                                    (0, _._)(_),
+                                    _,
+                                  ),
+                                }),
+                              ],
+                            }),
+                            !_ &&
+                              (0, _.jsx)(_._, {
+                                className: (0, _._)(
+                                  _.GroupProgressBar,
+                                  _ && _.DLCProgressBar,
+                                ),
+                                percent: _ * 100,
+                              }),
+                          ],
+                        })
+                      : _ &&
+                        (0, _.jsx)(_._, {
+                          children: (0, _.jsx)(_, {
+                            appid: _,
+                            underline: "hover",
+                            contrast: "description",
+                            children: _._.Localize(
+                              "#Achievements_Set_AvailableInStore",
+                            ),
+                          }),
+                        }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  direction: "column",
+                  justify: "around",
+                  padding: "1",
+                  children: (0, _.jsx)(_._, {
+                    className: _.CollapseButton,
+                    onClick: _ ? void 0 : () => _(!_),
+                    children: (0, _.jsx)(_.Chevron, {
+                      direction: _ ? "left" : "down",
+                    }),
+                  }),
+                }),
+              ],
+            }),
+          });
+        }
+        function _(_) {
+          const { fill: _ } = _;
+          return (0, _.jsx)(_._, {
+            direction: "top",
+            toolTipContent: _._.Localize("#Achievements_Archived_Tooltip"),
+            style: {
+              height: "1lh",
+            },
+            children: (0, _.jsxs)(_._, {
+              color: _,
+              weight: "medium",
+              children: [
+                (0, _.jsx)(_._, {
+                  align: "center",
+                  style: {
+                    verticalAlign: "middle",
+                  },
+                  children: (0, _.jsx)(_.Clock, {
+                    display: "inline-flex",
+                    height: "20px",
+                    width: "20px",
+                  }),
+                }),
+                " ",
+                _._.Localize("#Achievements_Archived_Label"),
+              ],
+            }),
+          });
+        }
+        function _(_) {
+          const { appid: _, ..._ } = _,
+            _ = (0, _._)({
+              appid: _,
+            }),
+            { strStoreURL: _ } = (0, _._)(_?.data);
+          return (0, _.jsx)(_._, {
+            href: _,
+            ..._,
+          });
+        }
+        function _(_, _, _) {
+          const { achievements: _ } = _,
+            _ = new Set(
+              _
+                ? Object.values(_.achievements)
+                    .filter((_) => _.unlocked)
+                    .map((_) => _.internal_key)
+                : [],
+            );
+          return _.reduce(
+            (_, _) => (
+              _.has(_.internal_key)
+                ? _.unlocked.push(_)
+                : ((0, _._)(_, _, _) || (0, _._)(_, void 0, _)) &&
+                  (_.hidden ? _.hidden.push(_) : _.locked.push(_)),
+              _
+            ),
+            {
+              unlocked: [],
+              locked: [],
+              hidden: [],
+            },
+          );
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const {
+              groups: _,
+              userAchievements: _,
+              compareAchievements: _,
+              globalPercentages: _,
+              ownsAnything: _,
+              typeFilter: _,
+              filter: _,
+              isCollapsed: _,
+              revealedHiddenGroups: _,
+            } = _,
+            _ = [],
+            _ = _.length > 1 || _[0]?._ !== _._;
+          for (const _ of _) {
+            if (_.groupid !== void 0 && _.groupid != _._) continue;
+            const _ = _._,
+              _ = (0, _._)(_, _, _),
+              _ = _(_, _);
+            if (
+              (_.push({
+                key: `h${_}`,
+                type: "header",
+                group: _,
+                groupSummary: _,
+                collapsed: _,
+                showHeader: _,
+              }),
+              !_)
+            ) {
+              const _ = _(_, _, _),
+                _ = _ && (_.state === void 0 || _.state == "unlocked"),
+                _ = _.state === void 0 || _.state == "locked",
+                _ = _ && _.hidden.length > 0,
+                _ = [];
+              _ &&
+                _.push({
+                  section: "unlocked",
+                  achievements: _.unlocked,
+                  sort: "date",
+                  title: _._.Localize(
+                    "#Achievements_Table_UnlockedTitle",
+                    (0, _._)(_.unlocked.length),
+                  ),
+                  dividerWhenEmpty: _ || _,
+                }),
+                _ &&
+                  _.push({
+                    section: "locked",
+                    achievements: _.locked,
+                    sort: "globalrate",
+                    title: _._.Localize(
+                      _
+                        ? "#Achievements_Table_LockedTitle"
+                        : "#Achievements_Table_AllTitle",
+                      (0, _._)(_.locked.length),
+                    ),
+                    dividerWhenEmpty: _,
+                  }),
+                _ &&
+                  _.push({
+                    section: "hidden",
+                    achievements: _.hidden,
+                    sort: "globalrate",
+                    title: _._.Localize(
+                      "#Achievements_Table_HiddenTitle",
+                      (0, _._)(_.hidden.length),
+                    ),
+                    dividerWhenEmpty: !1,
+                  });
+              let _ = !0;
+              const _ = () => {
+                const _ = {
+                  groupid: _,
+                  first: _,
+                };
+                return (_ = !1), _;
+              };
+              let _ = "none";
+              _.forEach(
+                (
+                  {
+                    section: _,
+                    achievements: _,
+                    sort: _,
+                    title: _,
+                    dividerWhenEmpty: _,
+                  },
+                  _,
+                ) => {
+                  if (_ == "hidden" && !_.has(_)) {
+                    _.push({
+                      key: `s${_}:${_}`,
+                      type: "section",
+                      placement: _(),
+                      title: _._.Localize("#Achievements_Hidden_Heading"),
+                      dividerWhenEmpty: !1,
+                      isEmpty: !1,
+                      gapAbove: _,
+                    }),
+                      _.push({
+                        key: `hs${_}`,
+                        type: "hiddensummary",
+                        placement: _(),
+                        groupid: _,
+                        count: _.length,
+                      }),
+                      (_ = "table");
+                    return;
+                  }
+                  const _ = (0, _._)(_.filter(_), _, _, _),
+                    _ = _.length == 0;
+                  _.push({
+                    key: `s${_}:${_}`,
+                    type: "section",
+                    placement: _(),
+                    title: _,
+                    dividerWhenEmpty: _,
+                    isEmpty: _,
+                    gapAbove: _,
+                  }),
+                    (_ = _ && _ ? "divider" : "table"),
+                    _.forEach((_, _) =>
+                      _.push({
+                        key: `r${_}:${_.internal_key}`,
+                        type: "row",
+                        placement: _(),
+                        achievement: _,
+                        tableindex: _,
+                        isLast: _ == _.length - 1 && _ == _.length - 1,
+                        groupArchived: _.archived,
+                      }),
+                    ),
+                    _.length > _.length &&
+                      _.push({
+                        key: `f${_}:${_}`,
+                        type: "filtered",
+                        placement: _(),
+                        count: _.length - _.length,
+                      });
+                },
+              );
+            }
+            _.push({
+              key: `e${_}`,
+              type: "footer",
+              groupid: _,
+              collapsed: _,
+            });
+          }
+          return _;
+        }
+        function _() {
+          const { isPanel: _, headerVariant: _ } = (0, _._)();
+          if (!(_ && _ != "compact")) return "greyneutral-4";
+        }
+        function _(_) {
+          const { placement: _, children: _, ..._ } = _,
+            _ = _();
+          let _ = {
+            initial: "2",
+            _: "4",
+          };
+          return (
+            _ || (_ = "2"),
+            (0, _.jsx)(_._, {
+              background: _,
+              paddingX: _,
+              paddingTop: _?.first ? "4" : void 0,
+              ..._,
+              children: _,
+            })
+          );
+        }
+        function _(_) {
+          const { children: _ } = _,
+            { isPinned: _ } = (0, _._)(),
+            _ = _();
+          return (0, _.jsx)(_._, {
+            background: _,
+            className: _ ? _.OverlayPinnedGroup : void 0,
+            children: _,
+          });
+        }
+        function _(_) {
+          const { typeFilter: _, compareTo: _ } = _,
+            {
+              appid: _,
+              targetsteamid: _,
+              viewersteamid: _,
+              isPanel: _,
+              filter: _,
+              showGlobalRate: _,
+              expandDlc: _,
+            } = (0, _._)(),
+            _ = (0, _._)(),
+            { data: _ } = (0, _._)(_),
+            { data: _, isPending: _ } = (0, _._)(_, _ ?? ""),
+            { data: _ } = (0, _._)(_, _ ?? ""),
+            { data: _ } = (0, _._)(_),
+            { data: _ } = (0, _._)(_, _),
+            _ = (0, _._)(_, _ ?? []),
+            [_, _] = (0, _.useState)(new Map()),
+            [_, _] = (0, _.useState)(new Set()),
+            _ = (0, _.useCallback)(
+              (_, _) => _((_) => new Map(_).set(_, _)),
+              [],
+            ),
+            _ = (0, _.useCallback)((_) => _((_) => new Set(_).add(_)), []),
+            _ = (0, _.useMemo)(() => {
+              const _ = _.toLocaleLowerCase();
+              return (_) =>
+                (_?.name ?? "").toLocaleLowerCase().includes(_) ||
+                (_?.description ?? "").toLocaleLowerCase().includes(_);
+            }, [_]),
+            _ = (0, _._)(_),
+            _ = (0, _.useMemo)(() => {
+              if (!_) return [];
+              const _ = _.groups.filter((_) => (0, _._)(_, _, _));
+              return _({
+                groups: _,
+                userAchievements: _,
+                compareAchievements: _,
+                globalPercentages: _,
+                ownsAnything: _,
+                typeFilter: _,
+                filter: _,
+                isCollapsed: (_, _) => {
+                  const _ = _.get(_._);
+                  return _ !== void 0
+                    ? _
+                    : _ !== void 0
+                      ? !_.dlcappid || (_ !== "all" && _ !== _.dlcappid)
+                      : _ &&
+                        _.ispublic &&
+                        !_.isAchievable &&
+                        !_.isCompleted &&
+                        _ !== void 0;
+                },
+                revealedHiddenGroups: _,
+              });
+            }, [_, _, _, _, _, _, _, _, _, _, _]),
+            [_, _] = (0, _.useState)(56),
+            _ = (0, _.useRef)(null);
+          (0, _.useEffect)(() => {
+            if (!_.current) return;
+            const _ = parseInt(
+              window
+                .getComputedStyle(_.current)
+                .getPropertyValue("--icon-size"),
+            );
+            isNaN(_) || _(_ + (_ ? _._ : _._));
+          }, [_]);
+          const _ = (0, _.useRef)(null),
+            _ = (0, _.useCallback)(() => {
+              const _ = _.current?.Node();
+              _?.BFocusWithin() && _.ForceMeasureFocusRing();
+            }, []),
+            _ = (0, _._)(_),
+            _ = (0, _._)(_, _),
+            _ = _ == _ && _ !== void 0,
+            _ = (0, _.useCallback)(
+              (_) => {
+                const _ = _[_];
+                switch (_.type) {
+                  case "header":
+                    return (0, _.jsx)(_, {
+                      children:
+                        _.showHeader &&
+                        (0, _.jsx)(_, {
+                          group: _.group,
+                          groupSummary: _.groupSummary,
+                          collapsed: _.collapsed,
+                          setCollapsed: (_) => _(_.group._, _),
+                        }),
+                    });
+                  case "section":
+                    return (0, _.jsx)(_, {
+                      placement: _.placement,
+                      className: (0, _._)(
+                        _.gapAbove == "table" && _.SectionGap,
+                        _.gapAbove == "divider" && _.SectionGapAfterDivider,
+                      ),
+                      children: (0, _.jsx)(_._, {
+                        title: _.title,
+                        dividerWhenEmpty: _.dividerWhenEmpty,
+                        isEmpty: _.isEmpty,
+                      }),
+                    });
+                  case "row":
+                    return (0, _.jsx)(_, {
+                      placement: _.placement,
+                      children: (0, _.jsx)(_._, {
+                        appid: _,
+                        achievement: _.achievement,
+                        progress: _?.achievements[_.achievement.internal_key],
+                        unlockedForSelf:
+                          _?.achievements?.[_.achievement.internal_key]
+                            ?.unlocked ?? !1,
+                        globalUnlockPercentage:
+                          _?.percentages[_.achievement.internal_key] ?? void 0,
+                        showProgress: _,
+                        compareTo: _,
+                        compareProgress: _,
+                        tableindex: _.tableindex,
+                        isLast: _.isLast,
+                        groupArchived: _.groupArchived,
+                      }),
+                    });
+                  case "hiddensummary":
+                    return (0, _.jsx)(_, {
+                      placement: _.placement,
+                      className: _.SectionGap,
+                      children: (0, _.jsx)(_._, {
+                        count: _.count,
+                        onReveal: () => _(_.groupid),
+                      }),
+                    });
+                  case "filtered":
+                    return (0, _.jsx)(_, {
+                      placement: _.placement,
+                      children: (0, _.jsx)(_._, {
+                        count: _.count,
+                      }),
+                    });
+                  case "footer":
+                    return (0, _.jsx)(_._, {
+                      paddingBottom: "5",
+                      children:
+                        !_.collapsed &&
+                        (0, _.jsx)(_, {
+                          paddingBottom: {
+                            initial: "2",
+                            _: "4",
+                          },
+                        }),
+                    });
+                }
+              },
+              [_, _, _, _, _, _, _, _, _, _],
+            ),
+            _ = (0, _.useCallback)((_) => _[_].key, [_]);
+          return !_ || (_ !== void 0 && _) || _.length == 0
+            ? null
+            : (0, _.jsx)(_._, {
+                navKey: "AchievementsList",
+                navRef: _,
+                ref: _,
+                className: (0, _._)(
+                  _.AchievementsTable,
+                  _ && _.ShowGlobalProgress,
+                ),
+                hintVirtualizeType: _ ? "element" : "window",
+                bNativeScrollIntoView: !0,
+                bBrowserScrollAnchoring: !0,
+                nRows: _.length,
+                nItemHeight: _,
+                nRowGap: 0,
+                overscan: 10,
+                renderItem: _,
+                getItemKey: _,
+                bDynamic: !0,
+                measureElement: (_, _) => {
+                  if (_ && _.contentRect.height > 0)
+                    return _.contentRect.height;
+                  const _ = _?.getBoundingClientRect();
+                  return _ && _.height > 0 ? _.height : _;
+                },
+              });
+        }
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          return (0, _.jsxs)(_.Root, {
+            ..._,
+            children: [(0, _.jsx)(_.Track, {}), (0, _.jsx)(_.Handle, {})],
+          });
+        }
+        function _(_) {
+          const { value: _, onChange: _, size: _ = "2", color: _, ref: _ } = _,
+            _ = (_) => {
+              (_.key === " " || _.key === "Enter") &&
+                (_(!_), _.preventDefault(), _.stopPropagation());
+            };
+          return (0, _.jsx)(_._, {
+            ref: _,
+            role: "switch",
+            "aria-checked": !!_,
+            onClick: () => _(!_),
+            onKeyDown: _,
+            tabIndex: 0,
+            "data-accent-color": _,
+            ...(0, _._)(
+              {
+                size: _,
+                className: _.Root,
+              },
+              _,
+            ),
+            children: _.children,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.Track,
+            ..._,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.Handle,
+            ..._,
+          });
+        }
+        const _ = Object.assign(_, {
+            Root: _,
+            Track: _,
+            Handle: _,
+          }),
+          _ = [
+            ..._._,
+            {
+              prop: "size",
+              className: (_) => _[`Size-${_}`],
+              responsive: !0,
+            },
+          ];
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -89547,6 +91611,326 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = 0,
+          _ = 1,
+          _ = 0,
+          _ = 1,
+          _ = 2;
+        function _(_) {
+          const { typeFilter: _, setTypeFilter: _ } = _,
+            _ = (0, _.useCallback)(
+              (_) => {
+                _((_) => ({
+                  ..._,
+                  state: _,
+                }));
+              },
+              [_],
+            ),
+            _ = (0, _._)({
+              onSelectionChange: _,
+              selectedValue: _.state,
+              rgOptions: [void 0, "unlocked", "locked"],
+            }),
+            _ = (0, _.useCallback)(
+              (_) =>
+                _ === void 0
+                  ? _._.Localize("#Achievements_Filter_AllAchievements")
+                  : _ == "unlocked"
+                    ? _._.Localize("#Achievements_Filter_UnlockedAchievements")
+                    : _ == "locked"
+                      ? _._.Localize("#Achievements_Filter_LockedAchievements")
+                      : "",
+              [],
+            );
+          return (0, _.jsxs)(_._.Root, {
+            state: _,
+            clearable: !0,
+            children: [
+              (0, _.jsx)(_._.Trigger, {
+                render: (0, _.jsx)(_._, {
+                  variant: "bare",
+                  hasValue: !0,
+                  borderColor: _.state ? "blue-9" : void 0,
+                  cursor: "pointer",
+                  tabIndex: 0,
+                  afterContent: (0, _.jsx)(_._, {}),
+                }),
+                children: (0, _.jsx)(_._, {
+                  weight: "regular",
+                  truncate: !0,
+                  contrast: "title",
+                  children: _(_.state),
+                }),
+              }),
+              (0, _.jsxs)(_._.Options, {
+                children: [
+                  (0, _.jsx)(
+                    _._.Option,
+                    {
+                      value: void 0,
+                      children: _(void 0),
+                    },
+                    void 0,
+                  ),
+                  (0, _.jsx)(_, {
+                    size: "4",
+                  }),
+                  (0, _.jsx)(
+                    _._.Option,
+                    {
+                      value: "unlocked",
+                      children: _("unlocked"),
+                    },
+                    "unlocked",
+                  ),
+                  (0, _.jsx)(
+                    _._.Option,
+                    {
+                      value: "locked",
+                      children: _("locked"),
+                    },
+                    "locked",
+                  ),
+                ],
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          const { groups: _, typeFilter: _, setTypeFilter: _ } = _,
+            _ = (0, _.useCallback)(
+              (_) => {
+                _((_) => ({
+                  ..._,
+                  groupid: _,
+                }));
+              },
+              [_],
+            ),
+            _ = (0, _.useMemo)(
+              () => _.reduce((_, _) => ((_[_._] = _), _), {}),
+              [_],
+            ),
+            _ = (0, _._)({
+              onSelectionChange: _,
+              selectedValue: _.groupid,
+              rgOptions: [void 0, ..._.map((_) => _._)],
+            }),
+            _ = (0, _.useCallback)(
+              (_) => {
+                if (_ === void 0)
+                  return _._.Localize(
+                    "#Achievements_Filter_AllSets",
+                    (0, _._)(_.length),
+                  );
+                const _ = _[_];
+                return _.dlcappid
+                  ? (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          color: "purple-11",
+                          weight: "heavy",
+                          children: _._.Localize("#Achievements_Filter_DLCTag"),
+                        }),
+                        " ",
+                        _.name ?? "",
+                      ],
+                    })
+                  : (_.name ?? "");
+              },
+              [_, _],
+            );
+          return (0, _.jsxs)(_._.Root, {
+            state: _,
+            clearable: !0,
+            children: [
+              (0, _.jsx)(_._.Trigger, {
+                render: (0, _.jsx)(_._, {
+                  variant: "bare",
+                  hasValue: !0,
+                  borderColor: _.groupid !== void 0 ? "blue-9" : void 0,
+                  cursor: "pointer",
+                  tabIndex: 0,
+                  afterContent: (0, _.jsx)(_._, {}),
+                }),
+                children: (0, _.jsx)(_._, {
+                  weight: "regular",
+                  truncate: !0,
+                  contrast: "title",
+                  children: _(_.groupid),
+                }),
+              }),
+              (0, _.jsxs)(_._.Options, {
+                children: [
+                  (0, _.jsx)(
+                    _._.Option,
+                    {
+                      value: void 0,
+                      children: _(void 0),
+                    },
+                    void 0,
+                  ),
+                  (0, _.jsx)(_, {
+                    size: "4",
+                  }),
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _._.Option,
+                      {
+                        value: _._,
+                        children: _(_._),
+                      },
+                      _._,
+                    ),
+                  ),
+                ],
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          const { typeFilter: _, setTypeFilter: _, ..._ } = _,
+            {
+              appid: _,
+              filter: _,
+              setFilter: _,
+              showGlobalRate: _,
+              setShowGlobalRate: _,
+              targetsteamid: _,
+            } = (0, _._)(),
+            { data: _ } = (0, _._)(_),
+            { data: _ } = (0, _._)(_, _),
+            { data: _ } = (0, _._)(_, _ ?? ""),
+            _ = (0, _._)();
+          if (!_) return null;
+          const _ = (0, _._)(_),
+            _ = _.groups.filter((_) => (0, _._)(_, _)),
+            _ = _?.has_groups == !0;
+          return (0, _.jsxs)(_._, {
+            direction: "row",
+            wrap: {
+              initial: "wrap",
+              _: "nowrap",
+            },
+            gap: "4",
+            justify: "between",
+            align: "center",
+            children: [
+              (0, _.jsxs)(_._, {
+                direction: "row",
+                gap: "4",
+                align: "center",
+                wrap: "nowrap",
+                minWidth: "max-content",
+                flexGrow: "1",
+                flexBasis: {
+                  initial: "100%",
+                  _: "auto",
+                },
+                paddingLeft: {
+                  initial: "2",
+                  _: "0",
+                },
+                children: [
+                  (0, _.jsxs)(_._, {
+                    direction: "row",
+                    gap: "2",
+                    align: "center",
+                    wrap: "nowrap",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        contrast: "title",
+                        children: _._.Localize(
+                          "#Achievements_Toolbar_ShowGlobalStats",
+                        ),
+                      }),
+                      (0, _.jsx)(_, {
+                        value: _,
+                        onChange: (_) => _(_),
+                      }),
+                    ],
+                  }),
+                  _.available &&
+                    (0, _.jsxs)(_._, {
+                      direction: "row",
+                      gap: "2",
+                      align: "center",
+                      wrap: "nowrap",
+                      children: [
+                        (0, _.jsx)(_._, {
+                          contrast: "title",
+                          children: _._.Localize(
+                            "#Achievements_Toolbar_PinAchievements",
+                          ),
+                        }),
+                        (0, _.jsx)(_, {
+                          value: _.showPinning,
+                          onChange: (_) => _.setShowPinning(_),
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+              (0, _.jsxs)(_._, {
+                direction: "row",
+                gap: "4",
+                align: "end",
+                children: [
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      minWidth: "15%",
+                      children: (0, _.jsx)(_, {
+                        typeFilter: _,
+                        setTypeFilter: _,
+                      }),
+                    }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      minWidth: "15%",
+                      children: (0, _.jsx)(_, {
+                        groups: _,
+                        typeFilter: _,
+                        setTypeFilter: _,
+                      }),
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                minWidth: {
+                  initial: "100px",
+                  _: "15%",
+                },
+                flexGrow: {
+                  initial: "1",
+                  _: "0",
+                },
+                children: (0, _.jsx)(_, {
+                  variant: "inset",
+                  placeholder: _._.Localize(
+                    "#Achievements_Toolbar_SearchPlaceholder",
+                  ),
+                  afterContent: (0, _.jsx)(_, {}),
+                  value: _,
+                  onTextChange: _,
+                  clearable: !0,
+                }),
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)(_.Search, {
+            ...(0, _._)(_),
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -89644,12 +92028,12 @@
               onIndexSelected: _,
               refScrollElement: _,
             } = _("<Combobox.Options>"),
-            _ = (_) => {
+            _ = (0, _.useCallback)((_) => {
               _ &&
                 _.focus({
                   preventScroll: !0,
                 });
-            },
+            }, []),
             _ = (_) => {
               _.key === "Enter" &&
                 _ !== null &&
@@ -90668,7 +93052,6 @@
             _ = (0, _._)(_),
             _ = (0, _._)(),
             _ = _(_, `friendsthatplay/${_}`),
-            { fnOpenFriendsWhoPlay: _ } = (0, _._)(),
             _ = (0, _._)(
               _._.LocalizePlural(
                 "#Achievements_Friends_FriendsWhoPlayCount",
@@ -90679,23 +93062,14 @@
                 contrast: "title",
               }),
             );
-          return _
-            ? (0, _.jsx)(_._, {
-                onClick: () => _(_),
-                align: "center",
-                underline: "hover",
-                whiteSpace: "nowrap",
-                contrast: "subtitle",
-                children: _,
-              })
-            : (0, _.jsx)(_._, {
-                href: _,
-                align: "center",
-                underline: "hover",
-                whiteSpace: "nowrap",
-                contrast: "subtitle",
-                children: _,
-              });
+          return (0, _.jsx)(_._, {
+            href: _,
+            align: "center",
+            underline: "hover",
+            whiteSpace: "nowrap",
+            contrast: "subtitle",
+            children: _,
+          });
         }
         function _(_) {
           const { appid: _, selectedValue: _ } = _,
@@ -90770,2369 +93144,6 @@
                 selectedValue: _ ?? void 0,
               }),
             ],
-          });
-        }
-        var _ = __webpack_require__("chunkid");
-        const _ = "blue-8",
-          _ = "plum-10",
-          _ = "amber-10",
-          _ = {
-            initial: "4",
-            _: "5",
-          };
-        function _(_) {
-          const { base: _ } = _;
-          return _ <= 0
-            ? null
-            : (0, _.jsxs)(_._, {
-                direction: "row",
-                gap: "1",
-                align: "center",
-                gridRow: "1/-1",
-                children: [
-                  (0, _.jsx)(_._, {
-                    height: "24px",
-                    aspectRatio: "1/1",
-                    children: (0, _.jsx)(_.Vdc, {
-                      color: "var(--color-blue-8)",
-                      height: "100%",
-                      width: "100%",
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    direction: "row",
-                    gap: "2",
-                    children: (0, _._)(
-                      _._.LocalizePlural(
-                        "#Achievements_Summary_SetCount",
-                        (0, _._)(_),
-                      ),
-                      (0, _.jsx)(_._, {
-                        size: _,
-                        weight: "heavy",
-                        color: _,
-                        whiteSpace: "nowrap",
-                      }),
-                      (0, _.jsx)(_._, {
-                        size: _,
-                        weight: "heavy",
-                        contrast: "description",
-                        whiteSpace: "nowrap",
-                      }),
-                    ),
-                  }),
-                ],
-              });
-        }
-        function _(_) {
-          const { dlc: _ } = _;
-          return _ <= 0
-            ? null
-            : (0, _.jsxs)(_._, {
-                direction: "row",
-                gap: "1",
-                align: "center",
-                gridRow: "1/-1",
-                children: [
-                  (0, _.jsx)(_._, {
-                    height: "24px",
-                    aspectRatio: "1/1",
-                    children: (0, _.jsx)(_.Vdc, {
-                      color: "var(--color-plum-10)",
-                      height: "100%",
-                      width: "100%",
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    direction: "row",
-                    gap: "2",
-                    children: (0, _._)(
-                      _._.LocalizePlural(
-                        "#Achievements_Summary_SetCount",
-                        (0, _._)(_),
-                      ),
-                      (0, _.jsx)(_._, {
-                        size: _,
-                        weight: "heavy",
-                        color: _,
-                        whiteSpace: "nowrap",
-                      }),
-                      (0, _.jsx)(_._, {
-                        size: _,
-                        weight: "heavy",
-                        contrast: "description",
-                        whiteSpace: "nowrap",
-                      }),
-                    ),
-                  }),
-                ],
-              });
-        }
-        function _(_) {
-          const { appid: _ } = _,
-            { targetsteamid: _, viewersteamid: _ } = (0, _._)(),
-            { data: _ } = (0, _._)(_, _);
-          if (!_) return null;
-          const _ = _.achievable.total > 0,
-            _ = _ ? _.groups_achievable : _.groups,
-            _ = _ ? _.achievable : _.achievements,
-            { total: _, dlc: _, rare: _ } = _,
-            { base: _, dlc: _ } = _;
-          return (0, _.jsxs)(_._, {
-            direction: "column",
-            gap: "3",
-            children: [
-              (0, _.jsxs)(_._, {
-                direction: "row",
-                wrap: "wrap",
-                className: _.SummaryHeading,
-                padding: {
-                  initial: "3",
-                  _: "5",
-                },
-                gap: "1",
-                flexGrow: "1",
-                justify: "start",
-                align: "center",
-                children: [
-                  (0, _.jsx)(_._, {
-                    size: _,
-                    weight: "heavy",
-                    contrast: "title",
-                    whiteSpace: "nowrap",
-                    children: _._.LocalizePlural(
-                      "#Achievements_Summary_AchievementCount",
-                      (0, _._)(_),
-                    ),
-                  }),
-                  _ > 0 &&
-                    (0, _.jsx)(_.Fragment, {
-                      children: (0, _.jsx)(_._, {
-                        size: _,
-                        weight: "heavy",
-                        color: "amber-10",
-                        whiteSpace: "nowrap",
-                        children: _._.LocalizePlural(
-                          "#Achievements_Summary_RareCount",
-                          (0, _._)(_),
-                        ),
-                      }),
-                    }),
-                  _.has_groups &&
-                    (0, _.jsxs)(_._, {
-                      direction: "row",
-                      gap: "2",
-                      align: "center",
-                      wrap: "wrap",
-                      children: [
-                        (0, _.jsx)(_._, {
-                          height: "20px",
-                          children: (0, _.jsx)(_, {
-                            orientation: "vertical",
-                            size: "4",
-                            color: "greyneutral-8",
-                          }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          direction: "row",
-                          gap: "2",
-                          align: "center",
-                          wrap: "nowrap",
-                          children: (0, _._)(
-                            _._.Localize(
-                              "#Achievements_Summary_FromBaseGameCount",
-                              (0, _._)(_ - _),
-                            ),
-                            (0, _.jsx)(_._, {
-                              size: _,
-                              weight: "heavy",
-                              contrast: "description",
-                              whiteSpace: "nowrap",
-                            }),
-                            (0, _.jsx)(_._, {
-                              size: _,
-                              weight: "heavy",
-                              contrast: "description",
-                              whiteSpace: "nowrap",
-                            }),
-                          ),
-                        }),
-                        (0, _.jsx)(_._, {
-                          height: "20px",
-                          children: (0, _.jsx)(_, {
-                            orientation: "vertical",
-                            size: "4",
-                            color: "greyneutral-8",
-                          }),
-                        }),
-                        (0, _.jsx)(_, {
-                          base: _,
-                        }),
-                      ],
-                    }),
-                  _ > 0 &&
-                    (0, _.jsxs)(_._, {
-                      direction: "row",
-                      gap: "2",
-                      align: "center",
-                      wrap: "wrap",
-                      children: [
-                        (0, _.jsx)(_._, {
-                          height: "20px",
-                          children: (0, _.jsx)(_, {
-                            orientation: "vertical",
-                            size: "4",
-                            color: "greyneutral-8",
-                          }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          direction: "row",
-                          gap: "2",
-                          align: "center",
-                          wrap: "nowrap",
-                          children: (0, _._)(
-                            _._.Localize(
-                              "#Achievements_Summary_FromDLCCount",
-                              (0, _._)(_),
-                            ),
-                            (0, _.jsx)(_._, {
-                              size: _,
-                              weight: "heavy",
-                              contrast: "description",
-                              whiteSpace: "nowrap",
-                            }),
-                            (0, _.jsx)(_._, {
-                              size: _,
-                              weight: "heavy",
-                              contrast: "description",
-                              whiteSpace: "nowrap",
-                            }),
-                          ),
-                        }),
-                        (0, _.jsx)(_._, {
-                          height: "20px",
-                          children: (0, _.jsx)(_, {
-                            orientation: "vertical",
-                            size: "4",
-                            color: "greyneutral-8",
-                          }),
-                        }),
-                        (0, _.jsx)(_, {
-                          dlc: _,
-                        }),
-                      ],
-                    }),
-                ],
-              }),
-              _ == _ &&
-                _ !== void 0 &&
-                (0, _.jsxs)(_._, {
-                  direction: "row",
-                  gap: "3",
-                  justify: "start",
-                  align: "center",
-                  children: [
-                    !_ &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsx)(_._, {
-                            contrast: "description",
-                            children: _._.Localize(
-                              "#Achievements_Summary_NotOwned",
-                            ),
-                          }),
-                          (0, _.jsx)(_._, {
-                            display: {
-                              initial: "contents",
-                              _: "none",
-                            },
-                            children: (0, _.jsx)(_, {
-                              appid: _,
-                            }),
-                          }),
-                          (0, _.jsx)(_._, {
-                            height: "13px",
-                            children: (0, _.jsx)(_, {
-                              orientation: "vertical",
-                              size: "4",
-                              color: "greyneutral-8",
-                            }),
-                          }),
-                        ],
-                      }),
-                    (0, _.jsx)(_, {
-                      appid: _,
-                    }),
-                  ],
-                }),
-            ],
-          });
-        }
-        function _(_, _) {
-          const { viewersteamid: _, useOwnPlaytime: _ } = (0, _._)(),
-            _ = (0, _._)(_, !0),
-            _ = _?.(_);
-          if (_ && _ !== void 0 && _ === _) return _;
-          if (_.isLoading || !_.data || _ === void 0) return;
-          let _;
-          if (
-            (_.data.your_info?.steamid == _
-              ? (_ = _.data.your_info)
-              : (_ = [
-                  ...(_.data.in_game ?? []),
-                  ...(_.data.played_recently ?? []),
-                  ...(_.data.played_ever ?? []),
-                  ...(_.data.owns ?? []),
-                ].find((_) => _.steamid == _)),
-            !!_)
-          )
-            return {
-              minutesForever: _.minutes_played_forever ?? 0,
-              minutesRecent: _.minutes_played ?? 0,
-            };
-        }
-        function _(_) {
-          const { appid: _, targetsteamid: _, viewersteamid: _ } = (0, _._)(),
-            _ = _(_, _),
-            { data: _ } = (0, _._)(_, _),
-            _ = _?.minutesRecent ?? 0,
-            _ = _?.minutesForever ?? 0;
-          if (!_) return null;
-          const {
-              achievable: _,
-              unlocked: _,
-              groups_achievable: _,
-              groups_completed: _,
-            } = _,
-            _ = _.dlc > 0,
-            _ = _._.Localize(
-              _
-                ? "#Achievements_Playtime_AchievementsTooltip_WithDLC"
-                : "#Achievements_Playtime_AchievementsTooltip",
-            ),
-            _ = (0, _.jsx)(_, {
-              orientation: "vertical",
-              marginX: "1",
-              color: "text-body-note",
-            });
-          return (0, _.jsx)(_._, {
-            overflow: "hidden",
-            children: (0, _.jsxs)(_._, {
-              direction: "row",
-              wrap: "wrap",
-              ..._,
-              className: _.PlaytimeItems,
-              children: [
-                _.has_groups &&
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _._.Localize(
-                      "#Achievements_Playtime_SetsTooltip",
-                    ),
-                    usePointerEvents: !0,
-                    children: (0, _.jsxs)(_._, {
-                      direction: "row",
-                      ..._,
-                      children: [
-                        _,
-                        (0, _.jsx)(_._, {
-                          size: "2",
-                          contrast: "subtitle",
-                          whiteSpace: "nowrap",
-                          children: _._.Localize(
-                            "#Achievements_Playtime_SetsCompletedCount",
-                            (0, _._)(_.total),
-                            (0, _._)(_.total),
-                          ),
-                        }),
-                      ],
-                    }),
-                  }),
-                (0, _.jsx)(_._, {
-                  toolTipContent: _,
-                  usePointerEvents: !0,
-                  children: (0, _.jsxs)(_._, {
-                    direction: "row",
-                    ..._,
-                    children: [
-                      _,
-                      (0, _.jsx)(_._, {
-                        size: "2",
-                        contrast: "subtitle",
-                        whiteSpace: "nowrap",
-                        children: _._.Localize(
-                          "#Achievements_Playtime_AchievementsUnlockedCount",
-                          (0, _._)(_.total),
-                          (0, _._)(_.total),
-                        ),
-                      }),
-                    ],
-                  }),
-                }),
-                _ > 0 &&
-                  (0, _.jsxs)(_._, {
-                    direction: "row",
-                    ..._,
-                    wrap: "wrap",
-                    children: [
-                      _,
-                      (0, _.jsxs)(_._, {
-                        size: "2",
-                        contrast: "subtitle",
-                        whiteSpace: "nowrap",
-                        children: [
-                          _._.Localize(
-                            "#Achievements_Playtime_Total",
-                            (0, _._)(_),
-                          ),
-                          " -",
-                        ],
-                      }),
-                      (0, _.jsx)(_._, {
-                        size: "2",
-                        contrast: "subtitle",
-                        whiteSpace: "nowrap",
-                        children: _._.Localize(
-                          "#Achievements_Playtime_Recent",
-                          (0, _._)(_),
-                        ),
-                      }),
-                    ],
-                  }),
-              ],
-            }),
-          });
-        }
-        function _(_) {
-          return (0, _.jsx)(_._, {
-            contrast: "description",
-            size: "3",
-            weight: "heavy",
-            truncate: !0,
-            ..._,
-          });
-        }
-        function _(_) {
-          const { size: _ = "normal", ..._ } = _;
-          return (0, _.jsx)(_._, {
-            contrast: "title",
-            size: _ == "normal" ? "5" : "4",
-            weight: "heavy",
-            truncate: !0,
-            lineClamp: 1,
-            ..._,
-          });
-        }
-        function _(_, _) {
-          for (const _ of _.groups)
-            for (const _ of _.achievements) if (_.internal_key === _) return _;
-        }
-        function _(_) {
-          const { hideGroupRibbon: _ = !1 } = _,
-            { appid: _, targetsteamid: _, viewersteamid: _ } = (0, _._)(),
-            { bForce24HourClock: _ } = (0, _._)(),
-            { data: _ } = (0, _._)(_),
-            { data: _ } = (0, _._)(_, _),
-            { data: _ } = (0, _._)(_, _),
-            { data: _ } = (0, _._)(_, _ ?? ""),
-            _ = (0, _._)() == "initial";
-          if (!_ || !_ || !_) return null;
-          const _ = Object.values(_?.achievements ?? [])
-            .filter((_) => _.unlocked)
-            .reduce(
-              (_, _) => (_ === void 0 || _.unlock_time > _.unlock_time ? _ : _),
-              void 0,
-            );
-          if (_ === void 0) return null;
-          const _ = _(_, _.internal_key),
-            _ = _?.groupid ?? _._,
-            _ = _.groups.find((_) => _._ == _),
-            _ = _.groups[_].is_completed,
-            _ = _?.achievements?.[_.internal_key]?.unlocked ?? !1,
-            _ = !!_?.hidden && !_,
-            _ = _.has_groups;
-          return _ && _
-            ? (0, _.jsx)(_._, {
-                direction: "column",
-                gap: "2",
-                flexGrow: "1",
-                minWidth: "0",
-                children: (0, _.jsxs)(_._, {
-                  columns: _ ? "minmax(0, 1fr)" : "max-content minmax(0, 1fr)",
-                  gap: "2",
-                  children: [
-                    !_ &&
-                      (0, _.jsx)(_._, {
-                        minWidth: "max-content",
-                        children: (0, _.jsx)(_._, {
-                          theme: "light",
-                          isComplete: !0,
-                          isDlc: !!_?.dlcappid,
-                          size: "48px",
-                          shine: !0,
-                          className: _.RecentRibbon,
-                        }),
-                      }),
-                    (0, _.jsxs)(_._, {
-                      direction: "column",
-                      gap: "0",
-                      justify: "around",
-                      children: [
-                        (0, _.jsx)(_, {
-                          children: _._.Localize(
-                            _
-                              ? "#Achievements_Header_LatestSet"
-                              : "#Achievements_Header_LatestCompletedSet",
-                          ),
-                        }),
-                        (0, _.jsx)(_, {
-                          size: "small",
-                          children: _?.name,
-                        }),
-                        _.groups[_].time_completed !== void 0 &&
-                          (0, _.jsx)(_._, {
-                            contrast: "description",
-                            truncate: !0,
-                            children: _
-                              ? (0, _._)(_.groups[_].time_completed, _)
-                              : _._.Localize(
-                                  "#Achievements_Header_SetCompletedOnDate",
-                                  (0, _._)(_.groups[_].time_completed, _),
-                                ),
-                          }),
-                      ],
-                    }),
-                  ],
-                }),
-              })
-            : (0, _.jsx)(_._, {
-                direction: "column",
-                gap: "2",
-                flexGrow: "1",
-                minWidth: "0",
-                children: (0, _.jsxs)(_._, {
-                  columns: "max-content minmax(0, 1fr)",
-                  gap: "2",
-                  children: [
-                    (0, _.jsx)(_._, {
-                      minWidth: "max-content",
-                      children: (0, _.jsx)(
-                        _._,
-                        {
-                          appid: _,
-                          achievement: _,
-                          progress: _,
-                          unlocked: !0,
-                          hidden: _,
-                        },
-                        _.api_name,
-                      ),
-                    }),
-                    (0, _.jsxs)(_._, {
-                      direction: "column",
-                      gap: "0",
-                      justify: "around",
-                      children: [
-                        (0, _.jsx)(_, {
-                          children: _._.Localize(
-                            "#Achievements_Header_LatestAchievement",
-                          ),
-                        }),
-                        (0, _.jsx)(_, {
-                          size: "small",
-                          children: _
-                            ? _._.Localize("#AchievementSpoilerName")
-                            : _?.name,
-                        }),
-                        _
-                          ? (0, _.jsx)(_._, {
-                              contrast: "description",
-                              truncate: !0,
-                              children: _._.LocalizeReact(
-                                "#Achievements_Header_InSet",
-                                (0, _.jsx)(_._, {
-                                  contrast: "subtitle",
-                                  children: _?.name,
-                                }),
-                              ),
-                            })
-                          : (0, _._)(_.unlock_time) &&
-                            (0, _.jsx)(_._, {
-                              contrast: "description",
-                              truncate: !0,
-                              children: _
-                                ? (0, _._)(_.unlock_time, _)
-                                : _._.Localize(
-                                    "#Achievements_Row_UnlockedOnDate",
-                                    (0, _._)(_.unlock_time, _),
-                                  ),
-                            }),
-                      ],
-                    }),
-                  ],
-                }),
-              });
-        }
-        function _(_) {
-          const { children: _ } = _,
-            { appid: _, targetsteamid: _ } = (0, _._)(),
-            { data: _ } = (0, _._)(_, _),
-            _ = (0, _._)();
-          if (!_?.groups_completed.total)
-            return (0, _.jsx)(_.Fragment, {
-              children: _,
-            });
-          const _ = _.groups_completed.total >= _.groups_achievable.total,
-            _ = _ == "initial" || _ == "xs";
-          return (0, _.jsx)(_, {
-            appid: _,
-            steamid: _,
-            className: _ ? _.AllGroupsCompleted : void 0,
-            backgroundClassName: (0, _._)(
-              _.GroupCompleteHeadingBackground,
-              _ && _.DimmedIcons,
-            ),
-            noStars: !_,
-            children: _,
-          });
-        }
-        function _(_) {
-          const { showUnachievable: _ = !1 } = _,
-            { appid: _, targetsteamid: _ } = (0, _._)(),
-            { data: _ } = (0, _._)(_, _),
-            _ = (0, _._)();
-          if (!_) return null;
-          const _ = _ == "initial" || _ == "xs",
-            _ = _ ? "32px" : "40px",
-            { total: _ } = _.achievable,
-            { total: _, rare: _ } = _.unlocked,
-            { percentUnlockedStr: _ } = (0, _._)(_, _),
-            _ = _.unlocked.total > 0 && _.groups.total > 1,
-            _ =
-              _.groups_completed.total > 0 &&
-              (0, _.jsxs)(_._, {
-                direction: "row",
-                gap: "2",
-                position: "relative",
-                children: [
-                  _.groups_completed.base > 0 &&
-                    (0, _.jsx)(_._, {
-                      complete: _.groups_completed.base,
-                      showCount: _.has_groups,
-                      size: _,
-                      shine: !0,
-                      sparkles: !0,
-                    }),
-                  _.groups_completed.dlc > 0 &&
-                    (0, _.jsx)(_._, {
-                      complete: _.groups_completed.dlc,
-                      isDlc: !0,
-                      showCount: !0,
-                      size: _,
-                      shine: !0,
-                      sparkles: !0,
-                    }),
-                ],
-              }),
-            _ = _ && _;
-          return (0, _.jsx)(_, {
-            children: (0, _.jsx)(_._, {
-              padding: {
-                initial: "3",
-                _: "4",
-              },
-              flexGrow: "1",
-              className: _.SummaryHeading,
-              children: (0, _.jsxs)(_._, {
-                columns: {
-                  initial: "1fr",
-                  _: "minmax(0, 1fr) minmax(200px, 33%)",
-                },
-                rows: {
-                  initial: "auto",
-                  _: "1fr",
-                },
-                gap: {
-                  initial: "4",
-                  _: "6",
-                },
-                children: [
-                  (0, _.jsxs)(_._, {
-                    direction: "row",
-                    gap: "3",
-                    align: "start",
-                    flexGrow: "3",
-                    flexBasis: "0",
-                    gridColumn: _ ? void 0 : "1/-1",
-                    alignSelf: "center",
-                    children: [
-                      !_ && _,
-                      (0, _.jsxs)(_._, {
-                        direction: "column",
-                        gap: "2",
-                        flexGrow: "1",
-                        flexBasis: "0",
-                        alignSelf: "baseline",
-                        children: [
-                          (0, _.jsxs)(_._, {
-                            direction: "row",
-                            justify: "between",
-                            align: "baseline",
-                            gap: "3",
-                            children: [
-                              (0, _.jsxs)(_._, {
-                                className: _.UnlockedCount,
-                                children: [
-                                  (0, _.jsx)(_._, {
-                                    contrast: "title",
-                                    size: "4",
-                                    children: (0, _._)(
-                                      _._.Localize(
-                                        "#Achievements_Header_UnlockedCount",
-                                        (0, _._)(_),
-                                        (0, _._)(_),
-                                        _,
-                                      ),
-                                      (0, _.jsx)(_._, {
-                                        contrast: "description",
-                                      }),
-                                    ),
-                                  }),
-                                  _.has_groups &&
-                                    (0, _.jsxs)(_._, {
-                                      contrast: "description",
-                                      size: "4",
-                                      children: [
-                                        " ",
-                                        _._.LocalizePlural(
-                                          "#Achievements_Header_AcrossSets",
-                                          (0, _._)(_.groups_achievable.total),
-                                        ),
-                                      ],
-                                    }),
-                                ],
-                              }),
-                              _ > 0 &&
-                                !_ &&
-                                (0, _.jsx)(_._, {
-                                  size: "4",
-                                  color: _,
-                                  whiteSpace: "nowrap",
-                                  children: _._.LocalizePlural(
-                                    "#Achievements_RareCount",
-                                    (0, _._)(_),
-                                  ),
-                                }),
-                            ],
-                          }),
-                          (0, _.jsx)(_._, {
-                            appid: _,
-                            steamid: _,
-                            showUnachievable: _,
-                            legend: !0,
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsxs)(_._, {
-                      direction: "row",
-                      gap: "3",
-                      align: "center",
-                      children: [
-                        _,
-                        _ &&
-                          (0, _.jsx)(_._, {
-                            alignSelf: "stretch",
-                            direction: "column",
-                            justify: "center",
-                            children: (0, _.jsx)(_._, {
-                              height: "90%",
-                              children: (0, _.jsx)(_, {
-                                orientation: "vertical",
-                                size: "4",
-                                color: "greyneutral-8",
-                              }),
-                            }),
-                          }),
-                        (0, _.jsx)(_._, {
-                          flexGrow: "1",
-                          minWidth: "0",
-                          children: (0, _.jsx)(_, {
-                            hideGroupRibbon: !!_,
-                          }),
-                        }),
-                      ],
-                    }),
-                  _ && !_ && (0, _.jsx)(_, {}),
-                ],
-              }),
-            }),
-          });
-        }
-        function _(_) {
-          const { appid: _ } = _,
-            { targetsteamid: _ } = (0, _._)(),
-            _ = _(_, _),
-            { data: _ } = (0, _._)(_, _);
-          return _?.groups_achievable.total == 0 ||
-            (_?.unlocked.total == 0 &&
-              _?.minutesForever == 0 &&
-              _?.minutesRecent == 0)
-            ? (0, _.jsx)(_, {
-                appid: _,
-              })
-            : (0, _.jsx)(_, {});
-        }
-        function _(_) {
-          const { icons: _, rows: _, columns: _, iconSize: _ = 64 } = _,
-            _ = `achievement-icons-${_.useId().replace(/\W/g, "")}`;
-          if (_.length == 0) return null;
-          const _ = _ * _,
-            _ = _ * _,
-            _ = Array.from(
-              {
-                length: _ * _,
-              },
-              (_, _) => _[_ % _.length],
-            );
-          return (0, _.jsx)("div", {
-            className: _.CompletionBackgroundIcons,
-            style: {
-              "--tile-width": `${_}px`,
-            },
-            children: (0, _.jsxs)("svg", {
-              className: _.CompletionBackgroundIconsSurface,
-              "aria-hidden": "true",
-              children: [
-                (0, _.jsx)("defs", {
-                  children: (0, _.jsx)("pattern", {
-                    _: _,
-                    patternUnits: "userSpaceOnUse",
-                    width: _,
-                    height: _,
-                    children: _.map((_, _) =>
-                      (0, _.jsx)(
-                        "image",
-                        {
-                          href: _,
-                          _: (_ % _) * _,
-                          _: Math.floor(_ / _) * _,
-                          width: _,
-                          height: _,
-                        },
-                        _,
-                      ),
-                    ),
-                  }),
-                }),
-                (0, _.jsx)("rect", {
-                  width: "100%",
-                  height: "100%",
-                  fill: `url("#${_}")`,
-                }),
-              ],
-            }),
-          });
-        }
-        function _(_) {
-          const {
-            icons: _,
-            noStars: _ = !1,
-            className: _,
-            background: _,
-            dlcRatio: _,
-          } = _;
-          return (0, _.jsxs)(_._, {
-            className: (0, _._)(_.CompletionBackgroundLayer, _),
-            background: _,
-            children: [
-              (0, _.jsx)(_, {
-                icons: _,
-                rows: 7,
-                columns: 10,
-              }),
-              !_ &&
-                (0, _.jsx)(_, {
-                  dlcRatio: _,
-                }),
-            ],
-          });
-        }
-        function _(_) {
-          const { dlcRatio: _ = 0 } = _,
-            _ = [
-              [0.025, 0.8947],
-              [0.075, 0.7895],
-              [0.125, 0.5789],
-              [0.175, 0.9474],
-              [0.225, 0.3684],
-              [0.275, 0.3158],
-              [0.325, 1],
-              [0.375, 0.1579],
-              [0.425, 0.7368],
-              [0.475, 0.002],
-              [0.525, 0.4737],
-              [0.575, 0.2632],
-              [0.625, 0.8421],
-              [0.675, 0.4211],
-              [0.725, 0.6842],
-              [0.775, 0.1053],
-              [0.825, 0.0526],
-              [0.875, 0.6316],
-              [0.925, 0.2105],
-              [0.975, 0.5263],
-            ];
-          return (0, _.jsx)(_._, {
-            className: _.StarsBackground,
-            children: _.map((_, _) =>
-              (0, _.jsx)(
-                _,
-                {
-                  delay: _[0],
-                  scale: _[1],
-                  color: _ / _.length < _ ? _ : _,
-                },
-                _,
-              ),
-            ),
-          });
-        }
-        function _(_) {
-          const { delay: _, scale: _, color: _ } = _,
-            _ = {
-              "--delay": `${_}`,
-              "--scale": `${_}`,
-            };
-          return (0, _.jsx)(_.zFc, {
-            style: _,
-            className: _.Star,
-            width: "16",
-            height: "16",
-            fill: `var(--color-${_})`,
-          });
-        }
-        function _(_) {
-          const {
-              appid: _,
-              steamid: _,
-              children: _,
-              groupid: _,
-              className: _,
-              backgroundClassName: _,
-              ..._
-            } = _,
-            { data: _ } = (0, _._)(_),
-            { data: _ } = (0, _._)(_, _),
-            _ = (0, _._)(_.CompletionBackgroundContainer, _);
-          if (!_ || !_)
-            return (0, _.jsx)(_._, {
-              className: _,
-              children: _,
-            });
-          const _ = _.groups
-              .filter((_) => _ === void 0 || _._ == _)
-              .filter((_) => (0, _._)(_, void 0, _).isCompleted)
-              .map((_) => _.groups[_._])
-              .filter((_) => _ !== void 0),
-            _ = new Set(_.map((_) => _.groupid)),
-            _ = _.groups.filter((_) => _.has(_._)),
-            _ = _.flatMap(
-              (_) => _.achievements.map((_) => _.icon_achieved) ?? [],
-            ).filter((_) => _ !== void 0),
-            _ =
-              _.length > 0
-                ? _.filter((_) => !!_.dlcappid).length / _.length
-                : 0;
-          return (0, _.jsxs)(_._, {
-            className: _,
-            children: [
-              _.length > 0 &&
-                (0, _.jsx)(_, {
-                  icons: _,
-                  dlcRatio: _,
-                  className: _,
-                  ..._,
-                }),
-              _,
-            ],
-          });
-        }
-        function _() {
-          const {
-            appid: _,
-            hasGlobalLeaderboards: _,
-            hasUserLeaderboards: _,
-            openGlobalLeaderboards: _,
-            openUserLeaderboards: _,
-            targetsteamid: _,
-            profileUrl: _,
-          } = (0, _._)();
-          if (!_ && !_) return null;
-          if (_ && _) {
-            if (_)
-              return (0, _.jsx)(_._, {
-                onClick: _,
-                children: _._.Localize("#Achievements_Links_Leaderboards"),
-              });
-            {
-              const _ = `${_}/stats/${_}/?tab=leaderboards`;
-              return (0, _.jsx)(_._, {
-                href: _,
-                children: _._.Localize("#Achievements_Links_Leaderboards"),
-              });
-            }
-          }
-          if (_) {
-            if (_)
-              return (0, _.jsx)(_._, {
-                onClick: _,
-                children: _._.Localize("#Achievements_Links_Leaderboards"),
-              });
-            {
-              const _ = `/stats/${_}/leaderboards/`;
-              return (0, _.jsx)(_._, {
-                href: _,
-                children: _._.Localize("#Achievements_Links_Leaderboards"),
-              });
-            }
-          }
-          return null;
-        }
-        const _ = new Set([
-          240, 300, 302, 440, 500, 550, 630, 810, 870, 880, 886, 1520, 7470,
-          17510, 18500, 18900, 23510, 24240, 24500, 32150, 37800, 47540, 56400,
-          91700, 94590, 201830, 214360, 231430,
-        ]);
-        function _(_) {
-          const { appid: _, profileUrl: _ } = (0, _._)();
-          return !_ || !_.has(_)
-            ? null
-            : (0, _.jsx)(_._, {
-                href: `${_}/stats/${_}/?tab=stats`,
-                children: _._.Localize("#Achievements_Links_Stats"),
-              });
-        }
-        function _() {
-          const { fnOpenCommunityURL: _ } = (0, _._)(),
-            _ =
-              "https://steamcommunity.com/groups/SteamClientBeta/discussions/",
-            _ = _._.Localize("#Achievements_Links_BetaFeedback");
-          return _
-            ? (0, _.jsx)(_._, {
-                onClick: () => _(_),
-                whiteSpace: "nowrap",
-                children: _,
-              })
-            : (0, _.jsx)(_._, {
-                href: _,
-                whiteSpace: "nowrap",
-                children: _,
-              });
-        }
-        function _(_) {
-          const { appid: _ } = _,
-            _ = (0, _._)(),
-            { targetsteamid: _ } = (0, _._)(),
-            _ = (0, _._)(_, `${_._.STORE_BASE_URL}app/${_}/`),
-            { data: _ } = (0, _._)(_, _);
-          return (0, _._)(_)
-            ? null
-            : (0, _.jsx)(_._, {
-                href: _,
-                children: _._.Localize("#Achievements_Links_StorePage"),
-              });
-        }
-        function _(_) {
-          const {
-              appid: _,
-              targetsteamid: _,
-              viewersteamid: _,
-              headerContent: _,
-              headerProps: _,
-              headerVariant: _,
-              isPanel: _,
-              useAppName: _,
-            } = (0, _._)(),
-            { bShowStoreLinks: _ = !0 } = (0, _._)(),
-            { data: _ } = (0, _._)(_),
-            _ = (0, _._)({
-              appid: _,
-            }),
-            { strStoreURL: _ } = (0, _._)(_?.data),
-            _ = (0, _._)(),
-            _ = _?.(_) ?? _.data?.name,
-            { data: _ } = (0, _._)(_, _),
-            _ =
-              _ !== void 0 &&
-              _.achievable.total > 0 &&
-              _.unlocked.total == _.achievable.total;
-          if (!_) return null;
-          const { groups: _ } = _,
-            _ = {
-              aspectRatio: {
-                initial: "1/1",
-                _: "2/3",
-              },
-              maxHeight: {
-                initial: "30px",
-                _: "300px",
-              },
-              minHeight: {
-                initial: "16px",
-                _: "219px",
-              },
-            },
-            _ = _ == "compact",
-            _ = (0, _.jsx)(_._, {
-              appid: _,
-              variant:
-                _ || _ == "initial" || _ == "xs" || _ == "sm"
-                  ? "icon"
-                  : "capsule",
-            }),
-            _ =
-              _ && _
-                ? (0, _.jsx)("a", {
-                    className: _.ArtworkLink,
-                    href: _,
-                    children: _,
-                  })
-                : (0, _.jsx)("div", {
-                    className: _.ArtworkLink,
-                    children: _,
-                  }),
-            _ =
-              _ && _
-                ? (0, _.jsx)(_._, {
-                    href: _,
-                    children: _,
-                  })
-                : _,
-            _ = _ !== void 0 && _ !== _,
-            _ = _ && _,
-            _ = (0, _.jsxs)(_._, {
-              gridArea: "title",
-              gap: {
-                initial: "1",
-                _: "4",
-              },
-              alignSelf: _ ? "center" : "end",
-              align: "start",
-              flexGrow: "1",
-              direction: {
-                initial: "column",
-                _: "row",
-              },
-              children: [
-                (0, _.jsxs)(_._, {
-                  flexGrow: "1",
-                  direction: "column",
-                  gap: "1",
-                  children: [
-                    _ &&
-                      (0, _.jsxs)(_._, {
-                        direction: "row",
-                        gap: "1",
-                        align: "center",
-                        className: _.FriendToolbarLabel,
-                        overflow: "hidden",
-                        children: [
-                          (0, _.jsx)(_._, {
-                            steamid: _,
-                            size: "X-Small",
-                          }),
-                          (0, _.jsx)(_._, {
-                            className: _.PersonaLabel,
-                            size: "3",
-                            children: _._.LocalizeReact(
-                              "#Achievements_Header_FriendsAchievements",
-                              (0, _.jsx)(_._, {
-                                steamid: _,
-                                showStatus: !1,
-                              }),
-                            ),
-                          }),
-                        ],
-                      }),
-                    (0, _.jsx)(_._, {
-                      size: {
-                        initial: "5",
-                        _: "7",
-                      },
-                      weight: "heavy",
-                      contrast: "title",
-                      children: _,
-                    }),
-                    (0, _.jsx)(_, {
-                      gap: "1",
-                      align: "start",
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)(_._, {
-                  gap: "4",
-                  direction: "row",
-                  align: "center",
-                  children: [
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_._, {
-                      display: {
-                        initial: "none",
-                        _: "contents",
-                      },
-                      children: (0, _.jsx)(_, {
-                        appid: _,
-                      }),
-                    }),
-                  ],
-                }),
-              ],
-            });
-          return _ && _
-            ? (0, _.jsxs)(_._, {
-                direction: "column",
-                gap: "2",
-                position: "relative",
-                style: {
-                  isolation: "isolate",
-                },
-                children: [
-                  _,
-                  (0, _.jsx)(_._, {
-                    gap: "4",
-                    columns: "1fr",
-                    areas: '"title"',
-                    padding: "4",
-                    ..._,
-                    className: (0, _._)(_.CompactHeader, _?.className),
-                    children: _,
-                  }),
-                ],
-              })
-            : _
-              ? (0, _.jsxs)(_._, {
-                  direction: "column",
-                  gap: "2",
-                  position: "relative",
-                  style: {
-                    isolation: "isolate",
-                  },
-                  children: [
-                    _,
-                    (0, _.jsxs)(_._, {
-                      gap: "4",
-                      columns: "max-content 1fr",
-                      areas: '"capsule title"',
-                      padding: "4",
-                      ..._,
-                      className: (0, _._)(_.CompactHeader, _?.className),
-                      children: [
-                        (0, _.jsx)(_._, {
-                          gridArea: "capsule",
-                          height: "32px",
-                          aspectRatio: "1/1",
-                          alignSelf: "center",
-                          children: _,
-                        }),
-                        _,
-                      ],
-                    }),
-                  ],
-                })
-              : (0, _.jsxs)(_._, {
-                  direction: "column",
-                  gap: "2",
-                  position: "relative",
-                  ..._,
-                  style: {
-                    isolation: "isolate",
-                  },
-                  children: [
-                    _,
-                    (0, _.jsxs)(_._, {
-                      gap: "4",
-                      columns: "max-content 1fr",
-                      position: "relative",
-                      areas: {
-                        initial: '"capsule title" "header header"',
-                        _: '"capsule title" "header header"',
-                        _: '"capsule title" "capsule header"',
-                      },
-                      children: [
-                        (0, _.jsx)(_._, {
-                          gridArea: "capsule",
-                          height: "100%",
-                          ..._,
-                          marginLeft: {
-                            initial: "2",
-                            _: "2",
-                            _: "0",
-                          },
-                          children: _,
-                        }),
-                        _,
-                        (0, _.jsx)(_._, {
-                          gridArea: "header",
-                          children: (0, _.jsx)(_, {
-                            appid: _,
-                            groups: _,
-                          }),
-                        }),
-                      ],
-                    }),
-                  ],
-                });
-        }
-        const _ = "greyneutral-11";
-        function _(_) {
-          const {
-              appid: _,
-              steamid: _,
-              groupid: _,
-              className: _,
-              children: _,
-            } = _,
-            { data: _ } = (0, _._)(_, _),
-            _ = (0, _._)();
-          if (!_?.groups[_]?.is_completed)
-            return (0, _.jsx)(_._, {
-              className: _,
-              children: _,
-            });
-          const _ = _ == "initial" || _ == "xs";
-          return (0, _.jsx)(_, {
-            appid: _,
-            steamid: _,
-            groupid: _,
-            className: _,
-            backgroundClassName: (0, _._)(
-              _.GroupHeaderCompletionBackground,
-              _ && _.WideMask,
-            ),
-            noStars: !0,
-            children: _,
-          });
-        }
-        function _(_) {
-          const { groupid: _, className: _, children: _ } = _,
-            { appid: _, targetsteamid: _ } = (0, _._)();
-          return _ === void 0
-            ? (0, _.jsx)(_._, {
-                className: _,
-                children: _,
-              })
-            : (0, _.jsx)(_, {
-                appid: _,
-                steamid: _,
-                groupid: _,
-                className: _,
-                children: _,
-              });
-        }
-        function _(_) {
-          const {
-              group: _,
-              groupSummary: _,
-              collapsed: _,
-              setCollapsed: _,
-            } = _,
-            {
-              _: _,
-              name: _,
-              dlcappid: _,
-              ispublic: _,
-              developeronly: _,
-              archived: _,
-            } = _,
-            { appid: _, targetsteamid: _, viewersteamid: _ } = (0, _._)(),
-            _ = (0, _._)(),
-            _ = _.achievements.unlocked,
-            _ = _.achievements.total,
-            { percentUnlocked: _, percentUnlockedStr: _ } = (0, _._)(_, _),
-            _ = !!_,
-            _ = _.isCompleted,
-            { data: _ } = (0, _._)(
-              _
-                ? {
-                    appid: _,
-                  }
-                : void 0,
-            ),
-            _ = !_ || (_ && _.success != _._) ? _ : _,
-            _ = _.isAchievable,
-            _ = _ || _.isCompleted,
-            _ = (0, _._)(
-              _.GroupHeader,
-              !_ && !_ && _.BaseGroup,
-              _ && _.DLCGroup,
-              !_ && _.NonPublicGroup,
-              !_ && _.Unowned,
-              _ && _.ArchivedGroup,
-            ),
-            _ = (0, _.jsxs)(_.Fragment, {
-              children: [
-                _ &&
-                  (0, _.jsxs)(_._, {
-                    contrast: "description",
-                    children: [_._.Localize("#Achievements_Set_DLCLabel"), " "],
-                  }),
-                _,
-              ],
-            });
-          return (0, _.jsx)(_, {
-            groupid: _,
-            className: _,
-            children: (0, _.jsxs)(_._, {
-              direction: "row",
-              padding: "2",
-              gap: "2",
-              justify: "between",
-              align: "center",
-              onClick: _ ? () => _(!_) : void 0,
-              children: [
-                _ &&
-                  (0, _.jsx)(_._, {
-                    isDlc: _,
-                    isComplete: _.isCompleted,
-                    variant: "flat",
-                  }),
-                _ &&
-                  (0, _.jsx)(_._, {
-                    style: {
-                      maxHeight: "215px",
-                      maxWidth: "410px",
-                      height: "62px",
-                      aspectRatio: "92/43",
-                    },
-                    children: (0, _.jsx)(_._, {
-                      appid: _,
-                      parentAppID: _,
-                      variant: "header",
-                    }),
-                  }),
-                (0, _.jsxs)(_._, {
-                  direction: "column",
-                  justify: "between",
-                  gap: "1",
-                  flexGrow: "1",
-                  children: [
-                    (0, _.jsxs)(_._, {
-                      direction: "row",
-                      justify: "between",
-                      flexGrow: "1",
-                      align: "center",
-                      children: [
-                        _
-                          ? (0, _.jsxs)(_._, {
-                              direction: "row",
-                              gap: "1",
-                              align: "center",
-                              children: [
-                                (0, _.jsx)(_._, {
-                                  contrast: "subtitle",
-                                  weight: "medium",
-                                  size: "4",
-                                  children: _,
-                                }),
-                                (0, _.jsx)(_, {}),
-                              ],
-                            })
-                          : (0, _.jsx)(_._, {
-                              contrast: "title",
-                              weight: "medium",
-                              size: "4",
-                              children: _,
-                            }),
-                        !_ &&
-                          (0, _.jsxs)(_._, {
-                            direction: "row",
-                            gap: "1",
-                            align: "center",
-                            style: {
-                              color: "var(--color-amber-11)",
-                            },
-                            children: [
-                              (0, _.jsx)(_._, {
-                                className: _.InlineIcon,
-                                children: (0, _.jsx)(_.FeatureHidden, {
-                                  color: "currentColor",
-                                }),
-                              }),
-                              (0, _.jsx)(_._, {
-                                color: "amber-11",
-                                children: _._.Localize(
-                                  _
-                                    ? "#Achievements_Set_DeveloperOnly"
-                                    : "#Achievements_Set_Unreleased",
-                                ),
-                              }),
-                            ],
-                          }),
-                      ],
-                    }),
-                    _
-                      ? (0, _.jsxs)(_._, {
-                          direction: {
-                            initial: "column",
-                            _: "row",
-                          },
-                          gap: {
-                            initial: "1",
-                            _: "2",
-                          },
-                          justify: _ ? "start" : "end",
-                          align: {
-                            initial: "stretch",
-                            _: "center",
-                          },
-                          flexGrow: "1",
-                          children: [
-                            (0, _.jsxs)(_._, {
-                              direction: "row",
-                              gap: "1",
-                              align: "center",
-                              children: [
-                                _ != _ &&
-                                  _ !== void 0 &&
-                                  (0, _.jsx)(_._, {
-                                    steamid: _,
-                                  }),
-                                (0, _.jsx)(_._, {
-                                  contrast: _ ? "subtitle" : "title",
-                                  whiteSpace: "nowrap",
-                                  children: _._.Localize(
-                                    "#Achievements_Set_UnlockedCount",
-                                    (0, _._)(_),
-                                    (0, _._)(_),
-                                    _,
-                                  ),
-                                }),
-                              ],
-                            }),
-                            !_ &&
-                              (0, _.jsx)(_._, {
-                                className: (0, _._)(
-                                  _.GroupProgressBar,
-                                  _ && _.DLCProgressBar,
-                                ),
-                                percent: _ * 100,
-                              }),
-                          ],
-                        })
-                      : _ &&
-                        (0, _.jsx)(_._, {
-                          children: (0, _.jsx)(_, {
-                            appid: _,
-                            underline: "hover",
-                            contrast: "description",
-                            children: _._.Localize(
-                              "#Achievements_Set_AvailableInStore",
-                            ),
-                          }),
-                        }),
-                  ],
-                }),
-                (0, _.jsx)(_._, {
-                  direction: "column",
-                  justify: "around",
-                  padding: "1",
-                  children: (0, _.jsx)(_._, {
-                    className: _.CollapseButton,
-                    onClick: _ ? void 0 : () => _(!_),
-                    children: (0, _.jsx)(_.Chevron, {
-                      direction: _ ? "left" : "down",
-                    }),
-                  }),
-                }),
-              ],
-            }),
-          });
-        }
-        function _(_) {
-          const { fill: _ } = _;
-          return (0, _.jsx)(_._, {
-            direction: "top",
-            toolTipContent: _._.Localize("#Achievements_Archived_Tooltip"),
-            style: {
-              height: "1lh",
-            },
-            children: (0, _.jsxs)(_._, {
-              color: _,
-              weight: "medium",
-              children: [
-                (0, _.jsx)(_._, {
-                  align: "center",
-                  style: {
-                    verticalAlign: "middle",
-                  },
-                  children: (0, _.jsx)(_.Clock, {
-                    display: "inline-flex",
-                    height: "20px",
-                    width: "20px",
-                  }),
-                }),
-                " ",
-                _._.Localize("#Achievements_Archived_Label"),
-              ],
-            }),
-          });
-        }
-        function _(_) {
-          const { appid: _, ..._ } = _,
-            _ = (0, _._)({
-              appid: _,
-            }),
-            { strStoreURL: _ } = (0, _._)(_?.data);
-          return (0, _.jsx)(_._, {
-            href: _,
-            ..._,
-          });
-        }
-        function _(_, _, _) {
-          const { achievements: _ } = _,
-            _ = new Set(
-              _
-                ? Object.values(_.achievements)
-                    .filter((_) => _.unlocked)
-                    .map((_) => _.internal_key)
-                : [],
-            );
-          return _.reduce(
-            (_, _) => (
-              _.has(_.internal_key)
-                ? _.unlocked.push(_)
-                : ((0, _._)(_, _, _) || (0, _._)(_, void 0, _)) &&
-                  (_.hidden ? _.hidden.push(_) : _.locked.push(_)),
-              _
-            ),
-            {
-              unlocked: [],
-              locked: [],
-              hidden: [],
-            },
-          );
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const {
-              groups: _,
-              userAchievements: _,
-              compareAchievements: _,
-              globalPercentages: _,
-              ownsAnything: _,
-              typeFilter: _,
-              filter: _,
-              isCollapsed: _,
-              revealedHiddenGroups: _,
-            } = _,
-            _ = [],
-            _ = _.length > 1 || _[0]?._ !== _._;
-          for (const _ of _) {
-            if (_.groupid !== void 0 && _.groupid != _._) continue;
-            const _ = _._,
-              _ = (0, _._)(_, _, _),
-              _ = _(_, _);
-            if (
-              (_.push({
-                key: `h${_}`,
-                type: "header",
-                group: _,
-                groupSummary: _,
-                collapsed: _,
-                showHeader: _,
-              }),
-              !_)
-            ) {
-              const _ = _(_, _, _),
-                _ = _ && (_.state === void 0 || _.state == "unlocked"),
-                _ = _.state === void 0 || _.state == "locked",
-                _ = _ && _.hidden.length > 0,
-                _ = [];
-              _ &&
-                _.push({
-                  section: "unlocked",
-                  achievements: _.unlocked,
-                  sort: "date",
-                  title: _._.Localize(
-                    "#Achievements_Table_UnlockedTitle",
-                    (0, _._)(_.unlocked.length),
-                  ),
-                  dividerWhenEmpty: _ || _,
-                }),
-                _ &&
-                  _.push({
-                    section: "locked",
-                    achievements: _.locked,
-                    sort: "globalrate",
-                    title: _._.Localize(
-                      _
-                        ? "#Achievements_Table_LockedTitle"
-                        : "#Achievements_Table_AllTitle",
-                      (0, _._)(_.locked.length),
-                    ),
-                    dividerWhenEmpty: _,
-                  }),
-                _ &&
-                  _.push({
-                    section: "hidden",
-                    achievements: _.hidden,
-                    sort: "globalrate",
-                    title: _._.Localize(
-                      "#Achievements_Table_HiddenTitle",
-                      (0, _._)(_.hidden.length),
-                    ),
-                    dividerWhenEmpty: !1,
-                  });
-              let _ = !0;
-              const _ = () => {
-                const _ = {
-                  groupid: _,
-                  first: _,
-                };
-                return (_ = !1), _;
-              };
-              let _ = "none";
-              _.forEach(
-                ({
-                  section: _,
-                  achievements: _,
-                  sort: _,
-                  title: _,
-                  dividerWhenEmpty: _,
-                }) => {
-                  if (_ == "hidden" && !_.has(_)) {
-                    _.push({
-                      key: `s${_}:${_}`,
-                      type: "section",
-                      placement: _(),
-                      title: _._.Localize("#Achievements_Hidden_Heading"),
-                      dividerWhenEmpty: !1,
-                      isEmpty: !1,
-                      gapAbove: _,
-                    }),
-                      _.push({
-                        key: `hs${_}`,
-                        type: "hiddensummary",
-                        placement: _(),
-                        groupid: _,
-                        count: _.length,
-                      }),
-                      (_ = "table");
-                    return;
-                  }
-                  const _ = (0, _._)(_.filter(_), _, _, _),
-                    _ = _.length == 0;
-                  _.push({
-                    key: `s${_}:${_}`,
-                    type: "section",
-                    placement: _(),
-                    title: _,
-                    dividerWhenEmpty: _,
-                    isEmpty: _,
-                    gapAbove: _,
-                  }),
-                    (_ = _ && _ ? "divider" : "table"),
-                    _.forEach((_, _) =>
-                      _.push({
-                        key: `r${_}:${_.internal_key}`,
-                        type: "row",
-                        placement: _(),
-                        achievement: _,
-                        tableindex: _,
-                        isLast: _ == _.length - 1,
-                        groupArchived: _.archived,
-                      }),
-                    ),
-                    _.length > _.length &&
-                      _.push({
-                        key: `f${_}:${_}`,
-                        type: "filtered",
-                        placement: _(),
-                        count: _.length - _.length,
-                      });
-                },
-              );
-            }
-            _.push({
-              key: `e${_}`,
-              type: "footer",
-              groupid: _,
-              collapsed: _,
-            });
-          }
-          return _;
-        }
-        function _(_) {
-          const { placement: _, children: _, ..._ } = _;
-          return (0, _.jsx)(_._, {
-            background: "greyneutral-4",
-            paddingX: {
-              initial: "2",
-              _: "4",
-            },
-            paddingTop: _?.first ? "4" : void 0,
-            ..._,
-            children: _,
-          });
-        }
-        function _(_) {
-          const { children: _ } = _,
-            { isPinned: _ } = (0, _._)();
-          return (0, _.jsx)(_._, {
-            background: "greyneutral-4",
-            className: _ ? _.OverlayPinnedGroup : void 0,
-            children: _,
-          });
-        }
-        function _(_) {
-          const { typeFilter: _, compareTo: _ } = _,
-            {
-              appid: _,
-              targetsteamid: _,
-              viewersteamid: _,
-              isPanel: _,
-              filter: _,
-              showGlobalRate: _,
-              expandDlc: _,
-            } = (0, _._)(),
-            _ = (0, _._)(),
-            { data: _ } = (0, _._)(_),
-            { data: _, isPending: _ } = (0, _._)(_, _ ?? ""),
-            { data: _ } = (0, _._)(_, _ ?? ""),
-            { data: _ } = (0, _._)(_),
-            { data: _ } = (0, _._)(_, _),
-            _ = (0, _._)(_, _ ?? []),
-            [_, _] = (0, _.useState)(new Map()),
-            [_, _] = (0, _.useState)(new Set()),
-            _ = (0, _.useCallback)(
-              (_, _) => _((_) => new Map(_).set(_, _)),
-              [],
-            ),
-            _ = (0, _.useCallback)((_) => _((_) => new Set(_).add(_)), []),
-            _ = (0, _.useMemo)(() => {
-              const _ = _.toLocaleLowerCase();
-              return (_) =>
-                (_?.name ?? "").toLocaleLowerCase().includes(_) ||
-                (_?.description ?? "").toLocaleLowerCase().includes(_);
-            }, [_]),
-            _ = (0, _._)(_),
-            _ = (0, _.useMemo)(() => {
-              if (!_) return [];
-              const _ = _.groups.filter((_) => (0, _._)(_, _, _));
-              return _({
-                groups: _,
-                userAchievements: _,
-                compareAchievements: _,
-                globalPercentages: _,
-                ownsAnything: _,
-                typeFilter: _,
-                filter: _,
-                isCollapsed: (_, _) => {
-                  const _ = _.get(_._);
-                  return _ !== void 0
-                    ? _
-                    : _ !== void 0
-                      ? !_.dlcappid || (_ !== "all" && _ !== _.dlcappid)
-                      : _ &&
-                        _.ispublic &&
-                        !_.isAchievable &&
-                        !_.isCompleted &&
-                        _ !== void 0;
-                },
-                revealedHiddenGroups: _,
-              });
-            }, [_, _, _, _, _, _, _, _, _, _, _]),
-            [_, _] = (0, _.useState)(56),
-            _ = (0, _.useRef)(null);
-          (0, _.useEffect)(() => {
-            if (!_.current) return;
-            const _ = parseInt(
-              window
-                .getComputedStyle(_.current)
-                .getPropertyValue("--icon-size"),
-            );
-            isNaN(_) || _(_ + (_ ? _._ : _._));
-          }, [_]);
-          const _ = _ == _ && _ !== void 0,
-            _ = (0, _.useCallback)(
-              (_) => {
-                const _ = _[_];
-                switch (_.type) {
-                  case "header":
-                    return (0, _.jsx)(_, {
-                      children:
-                        _.showHeader &&
-                        (0, _.jsx)(_, {
-                          group: _.group,
-                          groupSummary: _.groupSummary,
-                          collapsed: _.collapsed,
-                          setCollapsed: (_) => _(_.group._, _),
-                        }),
-                    });
-                  case "section":
-                    return (0, _.jsx)(_, {
-                      placement: _.placement,
-                      className: (0, _._)(
-                        _.gapAbove == "table" && _.SectionGap,
-                        _.gapAbove == "divider" && _.SectionGapAfterDivider,
-                      ),
-                      children: (0, _.jsx)(_._, {
-                        title: _.title,
-                        dividerWhenEmpty: _.dividerWhenEmpty,
-                        isEmpty: _.isEmpty,
-                      }),
-                    });
-                  case "row":
-                    return (0, _.jsx)(_, {
-                      placement: _.placement,
-                      children: (0, _.jsx)(_._, {
-                        appid: _,
-                        achievement: _.achievement,
-                        progress: _?.achievements[_.achievement.internal_key],
-                        unlockedForSelf:
-                          _?.achievements?.[_.achievement.internal_key]
-                            ?.unlocked ?? !1,
-                        globalUnlockPercentage:
-                          _?.percentages[_.achievement.internal_key] ?? void 0,
-                        showProgress: _,
-                        compareTo: _,
-                        compareProgress: _,
-                        tableindex: _.tableindex,
-                        isLast: _.isLast,
-                        groupArchived: _.groupArchived,
-                      }),
-                    });
-                  case "hiddensummary":
-                    return (0, _.jsx)(_, {
-                      placement: _.placement,
-                      className: _.SectionGap,
-                      children: (0, _.jsx)(_._, {
-                        count: _.count,
-                        onReveal: () => _(_.groupid),
-                      }),
-                    });
-                  case "filtered":
-                    return (0, _.jsx)(_, {
-                      placement: _.placement,
-                      children: (0, _.jsx)(_._, {
-                        count: _.count,
-                      }),
-                    });
-                  case "footer":
-                    return (0, _.jsx)(_._, {
-                      paddingBottom: "5",
-                      children:
-                        !_.collapsed &&
-                        (0, _.jsx)(_, {
-                          paddingBottom: {
-                            initial: "2",
-                            _: "4",
-                          },
-                        }),
-                    });
-                }
-              },
-              [_, _, _, _, _, _, _, _, _, _],
-            ),
-            _ = (0, _.useCallback)((_) => _[_].key, [_]);
-          return !_ || (_ !== void 0 && _) || _.length == 0
-            ? null
-            : (0, _.jsx)(_._, {
-                navKey: "AchievementsList",
-                ref: _,
-                className: (0, _._)(
-                  _.AchievementsTable,
-                  _ && _.ShowGlobalProgress,
-                ),
-                hintVirtualizeType: _ ? "element" : "window",
-                bNativeScrollIntoView: !0,
-                nRows: _.length,
-                nItemHeight: _,
-                nRowGap: 0,
-                overscan: 10,
-                renderItem: _,
-                getItemKey: _,
-                bDynamic: !0,
-                measureElement: (_, _) => {
-                  if (_ && _.contentRect.height > 0)
-                    return _.contentRect.height;
-                  const _ = _?.getBoundingClientRect();
-                  return _ && _.height > 0 ? _.height : _;
-                },
-              });
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          return (0, _.jsxs)(_.Root, {
-            ..._,
-            children: [(0, _.jsx)(_.Track, {}), (0, _.jsx)(_.Handle, {})],
-          });
-        }
-        function _(_) {
-          const { value: _, onChange: _, size: _ = "2", color: _, ref: _ } = _,
-            _ = (_) => {
-              (_.key === " " || _.key === "Enter") &&
-                (_(!_), _.preventDefault(), _.stopPropagation());
-            };
-          return (0, _.jsx)(_._, {
-            ref: _,
-            role: "switch",
-            "aria-checked": !!_,
-            onClick: () => _(!_),
-            onKeyDown: _,
-            tabIndex: 0,
-            "data-accent-color": _,
-            ...(0, _._)(
-              {
-                size: _,
-                className: _.Root,
-              },
-              _,
-            ),
-            children: _.children,
-          });
-        }
-        function _(_) {
-          return (0, _.jsx)("div", {
-            className: _.Track,
-            ..._,
-          });
-        }
-        function _(_) {
-          return (0, _.jsx)("div", {
-            className: _.Handle,
-            ..._,
-          });
-        }
-        const _ = Object.assign(_, {
-            Root: _,
-            Track: _,
-            Handle: _,
-          }),
-          _ = [
-            ..._._,
-            {
-              prop: "size",
-              className: (_) => _[`Size-${_}`],
-              responsive: !0,
-            },
-          ];
-        var _ = __webpack_require__("chunkid");
-        const _ = 0,
-          _ = 1,
-          _ = 0,
-          _ = 1,
-          _ = 2;
-        function _(_) {
-          const { typeFilter: _, setTypeFilter: _ } = _,
-            _ = (0, _.useCallback)(
-              (_) => {
-                _((_) => ({
-                  ..._,
-                  state: _,
-                }));
-              },
-              [_],
-            ),
-            _ = (0, _._)({
-              onSelectionChange: _,
-              selectedValue: _.state,
-              rgOptions: [void 0, "unlocked", "locked"],
-            }),
-            _ = (0, _.useCallback)(
-              (_) =>
-                _ === void 0
-                  ? _._.Localize("#Achievements_Filter_AllAchievements")
-                  : _ == "unlocked"
-                    ? _._.Localize("#Achievements_Filter_UnlockedAchievements")
-                    : _ == "locked"
-                      ? _._.Localize("#Achievements_Filter_LockedAchievements")
-                      : "",
-              [],
-            );
-          return (0, _.jsxs)(_._.Root, {
-            state: _,
-            clearable: !0,
-            children: [
-              (0, _.jsx)(_._.Trigger, {
-                render: (0, _.jsx)(_._, {
-                  variant: "bare",
-                  hasValue: !0,
-                  borderColor: _.state ? "blue-9" : void 0,
-                  cursor: "pointer",
-                  tabIndex: 0,
-                  afterContent: (0, _.jsx)(_._, {}),
-                }),
-                children: (0, _.jsx)(_._, {
-                  weight: "regular",
-                  truncate: !0,
-                  contrast: "title",
-                  children: _(_.state),
-                }),
-              }),
-              (0, _.jsxs)(_._.Options, {
-                children: [
-                  (0, _.jsx)(
-                    _._.Option,
-                    {
-                      value: void 0,
-                      children: _(void 0),
-                    },
-                    void 0,
-                  ),
-                  (0, _.jsx)(_, {
-                    size: "4",
-                  }),
-                  (0, _.jsx)(
-                    _._.Option,
-                    {
-                      value: "unlocked",
-                      children: _("unlocked"),
-                    },
-                    "unlocked",
-                  ),
-                  (0, _.jsx)(
-                    _._.Option,
-                    {
-                      value: "locked",
-                      children: _("locked"),
-                    },
-                    "locked",
-                  ),
-                ],
-              }),
-            ],
-          });
-        }
-        function _(_) {
-          const { groups: _, typeFilter: _, setTypeFilter: _ } = _,
-            _ = (0, _.useCallback)(
-              (_) => {
-                _((_) => ({
-                  ..._,
-                  groupid: _,
-                }));
-              },
-              [_],
-            ),
-            _ = (0, _.useMemo)(
-              () => _.reduce((_, _) => ((_[_._] = _), _), {}),
-              [_],
-            ),
-            _ = (0, _._)({
-              onSelectionChange: _,
-              selectedValue: _.groupid,
-              rgOptions: [void 0, ..._.map((_) => _._)],
-            }),
-            _ = (0, _.useCallback)(
-              (_) => {
-                if (_ === void 0)
-                  return _._.Localize(
-                    "#Achievements_Filter_AllSets",
-                    (0, _._)(_.length),
-                  );
-                const _ = _[_];
-                return _.dlcappid
-                  ? (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        (0, _.jsx)(_._, {
-                          color: "purple-11",
-                          weight: "heavy",
-                          children: _._.Localize("#Achievements_Filter_DLCTag"),
-                        }),
-                        " ",
-                        _.name ?? "",
-                      ],
-                    })
-                  : (_.name ?? "");
-              },
-              [_, _],
-            );
-          return (0, _.jsxs)(_._.Root, {
-            state: _,
-            clearable: !0,
-            children: [
-              (0, _.jsx)(_._.Trigger, {
-                render: (0, _.jsx)(_._, {
-                  variant: "bare",
-                  hasValue: !0,
-                  borderColor: _.groupid !== void 0 ? "blue-9" : void 0,
-                  cursor: "pointer",
-                  tabIndex: 0,
-                  afterContent: (0, _.jsx)(_._, {}),
-                }),
-                children: (0, _.jsx)(_._, {
-                  weight: "regular",
-                  truncate: !0,
-                  contrast: "title",
-                  children: _(_.groupid),
-                }),
-              }),
-              (0, _.jsxs)(_._.Options, {
-                children: [
-                  (0, _.jsx)(
-                    _._.Option,
-                    {
-                      value: void 0,
-                      children: _(void 0),
-                    },
-                    void 0,
-                  ),
-                  (0, _.jsx)(_, {
-                    size: "4",
-                  }),
-                  _.map((_) =>
-                    (0, _.jsx)(
-                      _._.Option,
-                      {
-                        value: _._,
-                        children: _(_._),
-                      },
-                      _._,
-                    ),
-                  ),
-                ],
-              }),
-            ],
-          });
-        }
-        function _(_) {
-          const { typeFilter: _, setTypeFilter: _, ..._ } = _,
-            {
-              appid: _,
-              filter: _,
-              setFilter: _,
-              showGlobalRate: _,
-              setShowGlobalRate: _,
-              targetsteamid: _,
-            } = (0, _._)(),
-            { data: _ } = (0, _._)(_),
-            { data: _ } = (0, _._)(_, _),
-            { data: _ } = (0, _._)(_, _ ?? ""),
-            _ = (0, _._)();
-          if (!_) return null;
-          const _ = (0, _._)(_),
-            _ = _.groups.filter((_) => (0, _._)(_, _)),
-            _ = _?.has_groups == !0;
-          return (0, _.jsxs)(_._, {
-            direction: "row",
-            wrap: {
-              initial: "wrap",
-              _: "nowrap",
-            },
-            gap: "4",
-            justify: "between",
-            align: "center",
-            children: [
-              (0, _.jsxs)(_._, {
-                direction: "row",
-                gap: "4",
-                align: "center",
-                wrap: "nowrap",
-                minWidth: "max-content",
-                flexGrow: "1",
-                flexBasis: {
-                  initial: "100%",
-                  _: "auto",
-                },
-                paddingLeft: {
-                  initial: "2",
-                  _: "0",
-                },
-                children: [
-                  (0, _.jsxs)(_._, {
-                    direction: "row",
-                    gap: "2",
-                    align: "center",
-                    wrap: "nowrap",
-                    children: [
-                      (0, _.jsx)(_._, {
-                        contrast: "title",
-                        children: _._.Localize(
-                          "#Achievements_Toolbar_ShowGlobalStats",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        value: _,
-                        onChange: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  _.available &&
-                    (0, _.jsxs)(_._, {
-                      direction: "row",
-                      gap: "2",
-                      align: "center",
-                      wrap: "nowrap",
-                      children: [
-                        (0, _.jsx)(_._, {
-                          contrast: "title",
-                          children: _._.Localize(
-                            "#Achievements_Toolbar_PinAchievements",
-                          ),
-                        }),
-                        (0, _.jsx)(_, {
-                          value: _.showPinning,
-                          onChange: (_) => _.setShowPinning(_),
-                        }),
-                      ],
-                    }),
-                ],
-              }),
-              (0, _.jsxs)(_._, {
-                direction: "row",
-                gap: "4",
-                align: "end",
-                children: [
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      minWidth: "15%",
-                      children: (0, _.jsx)(_, {
-                        typeFilter: _,
-                        setTypeFilter: _,
-                      }),
-                    }),
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      minWidth: "15%",
-                      children: (0, _.jsx)(_, {
-                        groups: _,
-                        typeFilter: _,
-                        setTypeFilter: _,
-                      }),
-                    }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                minWidth: {
-                  initial: "100px",
-                  _: "15%",
-                },
-                flexGrow: {
-                  initial: "1",
-                  _: "0",
-                },
-                children: (0, _.jsx)(_, {
-                  variant: "inset",
-                  placeholder: _._.Localize(
-                    "#Achievements_Toolbar_SearchPlaceholder",
-                  ),
-                  afterContent: (0, _.jsx)(_, {}),
-                  value: _,
-                  onTextChange: _,
-                  clearable: !0,
-                }),
-              }),
-            ],
-          });
-        }
-        function _(_) {
-          return (0, _.jsx)(_.Search, {
-            ...(0, _._)(_),
           });
         }
         var _ = __webpack_require__("chunkid");
@@ -94053,7 +94064,10 @@
                   }),
                   (0, _.jsx)(_._, {
                     contrast: "subtitle",
-                    children: _._.Localize("#AchievementSpoilerDescription"),
+                    children: _._.LocalizePlural(
+                      "#Achievements_Hidden_Description",
+                      _,
+                    ),
                   }),
                   (0, _.jsx)(_._, {
                     direction: "row",
@@ -239700,6 +239714,7 @@ ${_}`;
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
         var _ = {};
         __webpack_require__._(_),
@@ -241453,6 +241468,7 @@ ${_}`;
           _ = 7,
           _ = 8,
           _ = 9,
+          _ = 10,
           _ = 1,
           _ = 2;
         function _(_) {
@@ -324351,6 +324367,10 @@ ${_}`;
           return _(_, ..._);
         }
         function _(_, ..._) {
+          const { data: _ } = useStoreItemAssetsWithoutOverrides(_);
+          return _(_, ..._);
+        }
+        function _(_, ..._) {
           if (!_?.asset_url_format) return;
           const _ = _.find((_) => {
             const _ = _[_];
@@ -345457,57 +345477,55 @@ ${_}`;
             }
           );
         }
-        function _(_, _ = []) {
-          const [_, _] = useState(void 0),
-            _ = useCancelTokenSource("useLatestPatchNoteForApp");
+        async function _(_, _) {
           return (
-            useEffect(() => {
-              _ &&
-                (!_ || _?.appid != _) &&
-                (g_PartnerEventStore.Init(),
-                g_PartnerEventStore
-                  .LoadAdjacentPartnerEvents(
-                    void 0,
-                    void 0,
-                    _,
-                    0,
-                    1,
-                    {
-                      require_tags: ["patchnotes", ..._],
-                    },
-                    _,
-                  )
-                  .then((_) => {
-                    _?.length && !_.token.reason && _(_[0]);
-                  }));
-            }, [_, _, _, _]),
-            _
-          );
-        }
-        function _(_, _ = []) {
-          const _ = (0, _._)("useLatestPatchNoteForSource"),
-            _ = typeof _ == "number" ? _ : _._,
-            _ = typeof _ == "object" ? _ : void 0,
-            _ = (0, _.useCallback)(async () => {
-              if (!_?.length) return null;
-              _._.Init();
-              const _ = await _._.LoadAdjacentPartnerEvents(
+            _._.Init(),
+            (
+              await _._.LoadAdjacentPartnerEvents(
                 void 0,
-                _,
-                _,
+                _.clanSteamID,
+                _.appid ?? _._,
                 0,
                 1,
                 {
-                  require_tags: ["patchnotes", ..._],
+                  ..._.additionalParams,
                 },
                 _,
-              );
-              return _?.length ? _[0] : null;
-            }, [_, _, _, _]),
-            _ = ["LatestPatchNote2", _, _, _, _];
+              )
+            )?.[0] ?? null
+          );
+        }
+        function _(_) {
+          let _ = null,
+            _ = -1;
+          for (const _ of _) {
+            if (!_) continue;
+            const _ = _.GetPostTimeAndDateUnixSeconds();
+            _ > _ && ((_ = _), (_ = _));
+          }
+          return _;
+        }
+        function _(_) {
+          const _ = _.map((_) => ({
+              queryKey: [
+                "LatestPatchNoteForSource",
+                (0, _._)(_),
+                _.additionalParams,
+              ],
+              queryFn: () => _(_),
+            })),
+            _ = (0, _.useCallback)((_) => {
+              const _ = _.some((_) => _.isPending),
+                _ = _ ? [] : _.map((_) => _.data),
+                _ = _(_);
+              return {
+                isLoading: _,
+                data: _,
+              };
+            }, []);
           return (0, _._)({
-            queryKey: _,
-            queryFn: _,
+            queries: _,
+            combine: _,
           });
         }
         function _(_) {
@@ -363617,6 +363635,8 @@ ${_}`;
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+          _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -363651,6 +363671,17 @@ ${_}`;
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           };
+        function _(_, _) {
+          return _.appid && _.appid
+            ? _.appid == _.appid
+            : (_.clanSteamID?.GetAccountID() ?? 0) ==
+                (_.clanSteamID?.GetAccountID() ?? 0);
+        }
+        function _(_) {
+          return _.appid
+            ? `app_${_.appid}`
+            : `clan_${_.clanSteamID?.GetAccountID() ?? 0}`;
+        }
         const _ = null;
         class _ {
           appid;
@@ -431431,6 +431462,7 @@ ${_}`;
           F2T: () => _,
           FWt: () => _,
           GB9: () => _,
+          GJG: () => _,
           GSe: () => _,
           Gkr: () => _,
           Gq2: () => _,
@@ -431524,7 +431556,6 @@ ${_}`;
           d1w: () => _,
           dI9: () => _,
           eJJ: () => _,
-          eNX: () => _,
           eSy: () => _,
           eTF: () => _,
           emH: () => _,
@@ -431994,6 +432025,18 @@ ${_}`;
             viewBox: "0 0 20 20",
             children: (0, _.jsx)("path", {
               _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
+            }),
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+            children: (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M18 3C26.2843 3 33 9.71573 33 18C33 26.2843 26.2843 33 18 33C9.71573 33 3 26.2843 3 18C3 9.71573 9.71573 3 18 3ZM14.8096 8.99121V19.3096L21.5 26L25.5 22.5L20.209 17.0723V8.99121H14.8096Z",
             }),
           });
         }
@@ -437128,7 +437171,7 @@ ${_}`;
           });
         }
         function _() {
-          return (0, _.jsxs)("svg", {
+          return jsxs("svg", {
             version: "1.1",
             _: "Layer_2",
             xmlns: "http://www.w3.org/2000/svg",
@@ -437139,7 +437182,7 @@ ${_}`;
             height: "256px",
             viewBox: "0 0 256 256",
             children: [
-              (0, _.jsx)("polyline", {
+              jsx("polyline", {
                 fill: "none",
                 stroke: "#000000",
                 strokeWidth: "16",
@@ -437148,7 +437191,7 @@ ${_}`;
                 strokeMiterlimit: "10",
                 points: "85.5,149.167 128,128 128,55.167 ",
               }),
-              (0, _.jsx)("path", {
+              jsx("path", {
                 fill: "none",
                 stroke: "#000000",
                 strokeWidth: "16",
@@ -437157,7 +437200,7 @@ ${_}`;
                 strokeMiterlimit: "10",
                 _: "M128,17.5c61.027,0,110.5,49.473,110.5,110.5S189.027,238.5,128,238.5S17.5,189.027,17.5,128",
               }),
-              (0, _.jsx)("circle", {
+              jsx("circle", {
                 stroke: "#000000",
                 strokeWidth: "7",
                 strokeLinecap: "round",
@@ -437167,7 +437210,7 @@ ${_}`;
                 _: "85.833",
                 _: "5.5",
               }),
-              (0, _.jsx)("circle", {
+              jsx("circle", {
                 stroke: "#000000",
                 strokeWidth: "7",
                 strokeLinecap: "round",
@@ -437177,7 +437220,7 @@ ${_}`;
                 _: "50.5",
                 _: "5.5",
               }),
-              (0, _.jsx)("circle", {
+              jsx("circle", {
                 stroke: "#000000",
                 strokeWidth: "7",
                 strokeLinecap: "round",
@@ -448666,13 +448709,6 @@ Status Code:` +
           (0, _._)()?.FriendAchievements(_, _);
         }
         function _(_) {
-          const _ = _._.ResolveURL("CommunityFriendsThatPlay", _);
-          _ && (0, _._)()?.SteamWeb(_);
-        }
-        function _(_) {
-          (0, _._)()?.SteamWeb(_);
-        }
-        function _(_) {
           const { children: _ } = _,
             [_] = (0, _._)("b24HourClock"),
             _ = (0, _._)(),
@@ -448683,8 +448719,6 @@ Status Code:` +
             AppArtwork: _,
             fnFetchLocalUserAchievements: _,
             fnOpenFriendAchievements: _,
-            fnOpenFriendsWhoPlay: _,
-            fnOpenCommunityURL: _,
             children: _,
           });
         }
@@ -453570,6 +453604,74 @@ Status Code:` +
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _) {
+          const _ = {
+            event_type_filter: [_._._, _._._],
+            rtime_oldestevent: _,
+          };
+          return _
+            ? {
+                clanSteamID: _._.InitFromClanID(_._),
+                additionalParams: _,
+              }
+            : {
+                appid: _._,
+                additionalParams: _,
+              };
+        }
+        function _(_) {
+          return {
+            require_tags: ["patchnotes", _],
+          };
+        }
+        function _() {
+          const _ = (0, _._)(),
+            _ = (0, _._)().eBranch,
+            _ = (0, _._)(_),
+            _ = (0, _._)()?.event_tag,
+            _ = (0, _._)(!0).IS_STEAMOS && _ == _._;
+          return _.useMemo(() => {
+            if (_) return [];
+            if ((0, _._)(!0).ON_FRAME)
+              return _
+                ? [
+                    {
+                      appid: _._,
+                      additionalParams: _(_),
+                    },
+                  ]
+                : [];
+            let _ = [],
+              _;
+            return (
+              (0, _._)(!0).IS_STEAMOS &&
+                _ &&
+                (_.push({
+                  appid: _._,
+                  additionalParams: _(_),
+                }),
+                (_ = 1793761207)),
+              _.push(_(_, _)),
+              _
+            );
+          }, [_, _, _, _]);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -455369,7 +455471,7 @@ Status Code:` +
           const _ = _(_, _, _, _);
           return _(_, _);
         }
-        function _(_, _, _, _) {
+        function _(_, _, _, _, _) {
           return !_ && !_
             ? {}
             : {
@@ -455378,6 +455480,7 @@ Status Code:` +
                   eventid: _,
                   clanSteamID: _,
                   additionalParams: _,
+                  extra_sources: _?.length ? _ : void 0,
                 },
               };
         }
@@ -455999,6 +456102,7 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -456021,6 +456125,14 @@ Status Code:` +
         }
         function _(_) {
           return _ == _._;
+        }
+        const _ = "stablechannel",
+          _ = "betachannel",
+          _ = "previewchannel";
+        function _(_) {
+          if (_(_)) return _;
+          if (_(_)) return _;
+          if (_(_)) return _;
         }
         const _ = [
             "Steam Deck Stable",
@@ -456078,21 +456190,21 @@ Status Code:` +
                 label: "#Settings_UpdateChannel_Stable",
                 description: "#Settings_UpdateChannel_Stable_Description",
                 fnOptIn: _,
-                event_tag: "stablechannel",
+                event_tag: _,
               },
               {
                 eChannel: "beta",
                 label: "#Settings_UpdateChannel_Beta",
                 description: "#Settings_UpdateChannel_Beta_Description",
                 fnOptIn: _,
-                event_tag: "betachannel",
+                event_tag: _,
               },
               {
                 eChannel: "preview",
                 label: "#Settings_UpdateChannel_Preview",
                 description: "#Settings_UpdateChannel_Preview_Description",
                 fnOptIn: _,
-                event_tag: "previewchannel",
+                event_tag: _,
               },
             ],
             [_, _, _],
@@ -467195,20 +467307,10 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        function _(_) {
-          return (0, _._)(!0).ON_FRAME
-            ? 4165890
-            : (0, _._)(!0).ON_STEAMOS_CLIENT_BRANCH
-              ? 1675200
-              : _
-                ? _._.InitFromClanID(4397053)
-                : 593110;
-        }
         function _(_) {
           const {
             onOK: _,
@@ -467473,14 +467575,14 @@ Status Code:` +
           });
         }
         const _ = (_) => {
-          const { event: _ } = _,
+          const { event: _, rgSources: _ } = _,
             _ = (0, _.sfN)(_._.LANGUAGE),
             _ = ["img"],
             _ = (0, _._)(_.GetDescriptionWithFallback(_), _) || "",
             _ = ["h1", "h2", "h3", "h4", "h5", "url"],
             _ = (0, _._)(_, _) || "",
             [_] = (0, _._)("b24HourClock"),
-            _ = _(_);
+            _ = _(_, _);
           return (0, _.jsxs)(_._, {
             className: _.PatchNotes,
             onActivate: _,
@@ -467515,15 +467617,21 @@ Status Code:` +
         };
         function _() {
           const _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = _(_),
-            _ = (0, _._)(_, _);
-          return _.isLoading ? null : _.data;
+            _ = (0, _._)(_);
+          return _.isLoading
+            ? {
+                event: null,
+                rgSources: _,
+              }
+            : {
+                event: _.data,
+                rgSources: _,
+              };
         }
         function _(_) {
           const _ = (0, _._)(),
             [_] = (0, _._)(),
-            _ = _(),
+            { event: _, rgSources: _ } = _(),
             _ = _.m_updateState?.update_check_results;
           if (!_) return null;
           let _ = !1,
@@ -467550,24 +467658,39 @@ Status Code:` +
                 _ &&
                 (0, _.jsx)(_, {
                   event: _,
+                  rgSources: _,
                 }),
               _,
             ],
           });
         }
-        function _(_) {
+        function _(_, _) {
           const _ = (0, _._)(),
             { state: _ } = (0, _._)(),
-            _ = (0, _._)(),
             _ = _?.appid,
             _ = _?.GID,
             _ = _?.clanSteamID,
             _ = _ || _,
+            _ =
+              _ &&
+              _.find((_) =>
+                (0, _._)(_, {
+                  appid: _,
+                  clanSteamID: _,
+                }),
+              ),
+            _ = _?.additionalParams,
             _ = _.useCallback(() => {
+              if (!_) {
+                console.error(
+                  "useShowPatchNotes: no patch notes source matches the event",
+                  _,
+                  _?.ConvertTo64BitString(),
+                );
+                return;
+              }
               if (_) {
-                const _ = (0, _._)(_, _, _, {
-                  require_tags: ["patchnotes", ..._],
-                });
+                const _ = (0, _._)(_, _, _, _, _);
                 _.replace({
                   ..._.location,
                   state: {
@@ -467576,7 +467699,7 @@ Status Code:` +
                   },
                 });
               }
-            }, [_, _, _, _, _, _, _]);
+            }, [_, _, _, _, _, _, _, _, _]);
           if (_) return _;
         }
         function _(_) {
@@ -467591,8 +467714,8 @@ Status Code:` +
         }
         function _(_) {
           const _ = (0, _._)(),
-            _ = _(),
-            _ = _(_),
+            { event: _, rgSources: _ } = _(),
+            _ = _(_, _),
             _ = {};
           (_.onOptionsButton = _),
             (_.onOptionsActionDescription = _
@@ -486639,9 +486762,9 @@ Status Code:` +
                   };
                 let _ = {};
                 (_.Commands = []),
-                  (_.General = [
-                    _
-                      ? (0, _.jsx)(
+                  (_.General = _
+                    ? [
+                        (0, _.jsx)(
                           _,
                           {
                             appid: _,
@@ -486652,9 +486775,9 @@ Status Code:` +
                             eControllerSource: _,
                           },
                           "ModeShiftButtonSelector",
-                        )
-                      : null,
-                  ]),
+                        ),
+                      ]
+                    : []),
                   _?.slice()
                     ?.sort((_, _) => _(_.key) - _(_.key))
                     ?.filter((_) => !_ || !_.hiddenByViz)
@@ -497493,7 +497616,10 @@ Status Code:` +
                   .then((_) => {
                     const _ = _._.deserializeBinary(_).toObject();
                     _.Debug("Loaded controller config for appid", _, _, _),
-                      (0, _._)(() => this.UpdateEditingConfiguration(_, _, _));
+                      (0, _._)(() => {
+                        this.m_EditedControllerInputGroupSettings.clear(),
+                          this.UpdateEditingConfiguration(_, _, _);
+                      });
                   })
                   .catch((_) => {
                     _.Debug(
@@ -497617,9 +497743,10 @@ Status Code:` +
           ConvertConfigToSelectionType(_, _) {
             (this.m_eConfigSelectionType = _),
               _ != _._ &&
+                this.m_unControllerIndex != null &&
                 SteamClient.Input.ClearSelectedConfigForApp(
                   _,
-                  this.m_CurrentEditedConfigSelectedIdx,
+                  this.m_unControllerIndex,
                   _._,
                 ),
               this.m_nEditNumber++,
@@ -497657,8 +497784,7 @@ Status Code:` +
                     this.m_unControllerIndex,
                     this.m_eConfigSelectionType,
                     _ ?? !1,
-                  ),
-                  this.m_EditedControllerInputGroupSettings.clear())
+                  ))
                 : _.Debug(
                     "SaveEditingConfiguration SKIPPING saving for appID",
                     _,
@@ -512046,7 +512172,12 @@ Status Code:` +
                   {
                     title: "GraphEditor",
                     route: _._.GamepadUI.Zoo.GraphEditor(),
-                    content: (0, _.jsx)(_, {}),
+                    content: (0, _.jsx)(_.Suspense, {
+                      fallback: (0, _.jsx)("div", {
+                        children: "Loading...",
+                      }),
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   },
                 ],
               }),
@@ -531035,6 +531166,7 @@ Status Code:` +
                     initialEventID: _?.eventid,
                     clanSteamID: _?.clanSteamID,
                     additionalParams: _?.additionalParams,
+                    extraSources: _?.extra_sources,
                   }),
                 }),
               }),
@@ -541681,21 +541813,20 @@ Status Code:` +
               name: "QuickAccess",
             });
             (0, _._)(_?.GetRenderElement()?.ownerDocument.defaultView);
-            const [_, _] = _.useState(null),
+            const _ = (0, _._)() == _._.Friends,
+              _ = (0, _._)(() => _._.qamFriendsExpanded) && _,
               [_, _] = _.useState(null),
+              [_, _] = _.useState(null),
+              _ = _(_ ?? void 0),
+              _ = _ || _,
               { fnOnFocusNavActivated: _, fnOnFocusNavDeactivated: _ } = (0,
-              _._)(_._.QuickAccess, _, _ ?? _.ModalManager, _ ?? void 0);
+              _._)(_._.QuickAccess, _, _ ?? _.ModalManager, (_ && _) || void 0);
             _.useEffect(() => {
               _ || (_?.ActiveMenu?.OnCancel(), _?.CloseLegacyModals());
             }, [_, _, _]);
             const _ = (0, _._)();
             (0, _._)(_?.GetViewWindow());
             const _ = (0, _._)(),
-              _ = (0, _._)(),
-              _ = _ == _._.Friends,
-              _ = (0, _._)(() => _._.qamFriendsExpanded) && _,
-              _ = _(_ ?? void 0),
-              _ = _ || (_ && _ == _._.VoiceChat),
               _ = (0, _._)(() => _._.BKeyboardIMEVisible);
             if (((0, _._)(_, _), !_)) return null;
             const _ = {
@@ -594413,6 +594544,7 @@ Status Code:` +
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(module_exports, {
+          _: () => _._,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -608310,11 +608442,13 @@ Status Code:` +
             case _._._:
               return (0, _._)("#RemotePlay_PairWifiAPResult_NoDonglePresent");
             case _._._:
-              return (0, _._)("#RemotePlay_PairWifiAPResult_Timeout");
+              return (0, _._)("#RemotePlay_PairWifiAPResult_PairingTimeout");
             case _._._:
               return (0, _._)("#RemotePlay_PairWifiAPResult_Canceled");
             case _._._:
               return (0, _._)("#RemotePlay_PairWifiAPResult_ConnectFailed");
+            case _._._:
+              return (0, _._)("#RemotePlay_PairWifiAPResult_Timeout");
           }
         }
       },
@@ -627998,6 +628132,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         const _ = _.createContext({
@@ -628170,50 +628305,55 @@ Status Code:` +
           return _.createPortal(
             (0, _.jsx)(_._, {
               ownerWindow: _,
-              children: (0, _.jsxs)(_._, {
-                bForceWindowFocused: _,
-                children: [
-                  (0, _.jsxs)(_._, {
-                    popup: _,
-                    bFitToContent: _,
-                    className: _,
-                    children: [
-                      !_ &&
-                        (0, _.jsxs)("div", {
-                          className: (0, _._)(
-                            _().WindowControls,
-                            _ && _().Flipped,
-                          ),
-                          children: [
-                            (0, _.jsx)(_._, {}),
-                            (0, _.jsx)(_._, {
-                              popup: _,
-                              className: _,
-                              bForceWindowFocused: _,
-                              hideMin: !_,
-                              hideMax: !_,
-                              hideClose: !_ || _,
-                              onMinimize: _,
-                              onMaximize: _,
-                              onClose: _,
-                              extraActions: _,
-                              children: _,
-                            }),
-                          ],
-                        }),
-                      (0, _.jsx)(_._, {
-                        bCenterPopupsOnWindow: !0,
-                        browserInfo: _.params.browserInfo,
-                        children: _,
-                      }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      className: (0, _._)(_().ResizeGrip, _ && _().PinnedView),
+              children: (0, _.jsx)(_._, {
+                children: (0, _.jsxs)(_._, {
+                  bForceWindowFocused: _,
+                  children: [
+                    (0, _.jsxs)(_._, {
                       popup: _,
+                      bFitToContent: _,
+                      className: _,
+                      children: [
+                        !_ &&
+                          (0, _.jsxs)("div", {
+                            className: (0, _._)(
+                              _().WindowControls,
+                              _ && _().Flipped,
+                            ),
+                            children: [
+                              (0, _.jsx)(_._, {}),
+                              (0, _.jsx)(_._, {
+                                popup: _,
+                                className: _,
+                                bForceWindowFocused: _,
+                                hideMin: !_,
+                                hideMax: !_,
+                                hideClose: !_ || _,
+                                onMinimize: _,
+                                onMaximize: _,
+                                onClose: _,
+                                extraActions: _,
+                                children: _,
+                              }),
+                            ],
+                          }),
+                        (0, _.jsx)(_._, {
+                          bCenterPopupsOnWindow: !0,
+                          browserInfo: _.params.browserInfo,
+                          children: _,
+                        }),
+                      ],
                     }),
-                ],
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        className: (0, _._)(
+                          _().ResizeGrip,
+                          _ && _().PinnedView,
+                        ),
+                        popup: _,
+                      }),
+                  ],
+                }),
               }),
             }),
             _,
@@ -628229,9 +628369,6 @@ Status Code:` +
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -628390,7 +628527,7 @@ Status Code:` +
             ],
             _ = (0, _._)(),
             _ = _.GetProgressPercent() ?? 0,
-            _ = (0, _._)(_.GetCurrentBytes(), {
+            _ = (0, _._)(_.GetCurrentBytes() ?? 0, {
               nDigitsAfterDecimal: 1,
             }),
             _ = (0, _._)(
@@ -628450,17 +628587,18 @@ Status Code:` +
         function _(_) {
           const { onClick: _, children: _ } = _,
             _ = (0, _._)(),
-            _ = _ ? void 0 : _._,
-            _ = _ ? _._ : void 0,
-            _ = _ ? _._.InitFromClanID(_) : void 0,
-            _ = {
-              event_type_filter: [_._._, _._._],
-            },
+            _ = (0, _._)(_),
             [_, _] = (0, _._)("small_mode"),
             _ = _.useCallback(() => {
               _(!1), _ && _();
             }, [_, _]),
-            _ = (0, _._)(_._.Library.Home(), _, void 0, _, _);
+            _ = (0, _._)(
+              _._.Library.Home(),
+              _.appid,
+              void 0,
+              _.clanSteamID,
+              _.additionalParams,
+            );
           return (0, _.jsx)(_._, {
             className: _.PatchNotesLink,
             _: _,
@@ -630066,6 +630204,7 @@ Status Code:` +
           });
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -636933,12 +637072,12 @@ Status Code:` +
             _ = (0, _._)(_, {
               bNoRedundantNavigation: !0,
             }),
-            _ = _.useCallback(
-              (_) => {
-                _.keyCode == _._ && _();
-              },
-              [_],
-            ),
+            _ = (_) => {
+              _.keyCode == _._ && _();
+            },
+            _ = (_) => {
+              _.target == _.currentTarget && _();
+            },
             _ = {
               enter: _().OverlayAppDetailsTransitionEnter,
               enterActive: _().OverlayAppDetailsTransitionEnterActive,
@@ -636966,9 +637105,6 @@ Status Code:` +
                   onClick: _,
                   children: (0, _.jsxs)("div", {
                     className: _().AchievementsPageContainer,
-                    onClick: (_) => {
-                      _.preventDefault(), _.stopPropagation();
-                    },
                     children: [
                       _ &&
                         (0, _.jsx)(_._, {
@@ -637997,7 +638133,6 @@ Status Code:` +
           });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -641502,9 +641637,12 @@ Status Code:` +
                 eCreationFlags: _._.Composited,
                 bHideResizeGrip: !0,
                 bHideWindowControls: !0,
-                children: (0, _.jsx)(_, {
-                  gameID: _,
-                  timelineWidth: _,
+                children: (0, _.jsx)(_.Suspense, {
+                  fallback: null,
+                  children: (0, _.jsx)(_, {
+                    gameID: _,
+                    timelineWidth: _,
+                  }),
                 }),
               })
             : null;
@@ -641572,21 +641710,19 @@ Status Code:` +
                 ..._,
                 children: _
                   ? (0, _.jsx)(_._, {
+                      direction: "column",
+                      flexGrow: "1",
+                      minHeight: "0",
                       children: (0, _.jsx)(_._, {
-                        direction: "column",
-                        flexGrow: "1",
-                        minHeight: "0",
-                        children: (0, _.jsx)(_._, {
-                          asPanel: !0,
-                          headerVariant: "compact",
-                          headerProps: _,
-                          overlayPinned: _.bShowPinnedView,
-                          appid: _,
-                          targetsteamid: _.strSteamID,
-                          useAppName: _._,
-                          useOwnPlaytime: _._,
-                          ..._,
-                        }),
+                        asPanel: !0,
+                        headerVariant: "compact",
+                        headerProps: _,
+                        overlayPinned: _.bShowPinnedView,
+                        appid: _,
+                        targetsteamid: _.strSteamID,
+                        useAppName: _._,
+                        useOwnPlaytime: _._,
+                        ..._,
                       }),
                     })
                   : (0, _.jsx)(_._, {
@@ -669911,6 +670047,12 @@ Status Code:` +
             _ = (0, _._)(_);
           (0, _._)(_, 250);
           const [_, _] = (0, _._)(),
+            _ = (0, _.useRef)(null),
+            _ = (0, _.useCallback)((_) => {
+              _.target !== _.current ||
+                !_.current ||
+                (_.current.style.transform = `translateY( ${-_.current.scrollTop}px )`);
+            }, []),
             _ = (0, _._)(),
             _ = !0;
           return (0, _.jsxs)(_._, {
@@ -669924,12 +670066,14 @@ Status Code:` +
             children: [
               (0, _.jsx)(_, {
                 appid: _,
+                refScroll: _,
               }),
               (0, _.jsx)(_._, {
                 width: "100%",
                 minHeight: "100%",
                 zIndex: "1",
                 ref: _,
+                onScrollCapture: _,
                 children: (0, _.jsx)(_._, {
                   _: _,
                   children: (0, _.jsxs)(_._, {
@@ -671069,33 +671213,37 @@ Status Code:` +
                 });
         }
         function _(_) {
-          const { appid: _ } = _,
+          const { appid: _, refScroll: _ } = _,
             _ = (0, _._)(_);
           if (!_) return null;
           const { rgHeroImages: _, bHasHeroImage: _ } = _._.GetHeroImages(_);
-          return (0, _.jsxs)("div", {
+          return (0, _.jsx)("div", {
             className: _.Background,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.Blur,
-              }),
-              _ &&
-                (0, _.jsx)(_._, {
-                  className: _.HeaderImage,
-                  eAssetType: _.KoM,
-                  appid: _,
-                  rgSources: _,
-                  neverShowTitle: !0,
+            children: (0, _.jsxs)("div", {
+              ref: _,
+              className: _.BackgroundScroll,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Blur,
                 }),
-              !_ &&
-                (0, _.jsx)(_._, {
-                  className: _.HeaderImage,
-                  eAssetType: _.JoK,
-                  app: _,
-                  bShortDisplay: !0,
-                  neverShowTitle: !0,
-                }),
-            ],
+                _ &&
+                  (0, _.jsx)(_._, {
+                    className: _.HeaderImage,
+                    eAssetType: _.KoM,
+                    appid: _,
+                    rgSources: _,
+                    neverShowTitle: !0,
+                  }),
+                !_ &&
+                  (0, _.jsx)(_._, {
+                    className: _.HeaderImage,
+                    eAssetType: _.JoK,
+                    app: _,
+                    bShortDisplay: !0,
+                    neverShowTitle: !0,
+                  }),
+              ],
+            }),
           });
         }
         function _(_) {
@@ -682668,7 +682816,9 @@ Status Code:` +
                                           ? (0, _.jsx)(_.i3G, {
                                               angle: 0,
                                             })
-                                          : (0, _.jsx)(_.$$j, {}),
+                                          : (0, _.jsx)(_.Information, {
+                                              className: _().InfoIcon,
+                                            }),
                                       }),
                                     }),
                                   (0, _.jsx)(_, {
@@ -682992,6 +683142,7 @@ Status Code:` +
         function _(_) {
           const { details: _, onSeek: _, overview: _ } = _,
             _ = (0, _._)(),
+            _ = (0, _._)(),
             { data: _ } = (0, _._)(_.unAppID, _),
             _ = (0, _._)(_._);
           if (
@@ -683005,9 +683156,7 @@ Status Code:` +
           let _ = _.groups_completed.total / _.groups_achievable.total >= 1;
           return (0, _.jsxs)("div", {
             className: (0, _._)(_().GameStat, _().MiniAchievements),
-            onClick: () => {
-              _("achievements");
-            },
+            onClick: () => _.MyAchievements(_.unAppID),
             children: [
               (0, _.jsx)("div", {
                 className: (0, _._)(_().GameStatIcon, _().AchievementSVG),
@@ -683469,7 +683618,7 @@ Status Code:` +
                   children: [
                     (0, _.jsx)("div", {
                       className: (0, _._)(_().GameStatIcon, _().PlaytimeIcon),
-                      children: (0, _.jsx)(_.eNX, {}),
+                      children: (0, _.jsx)(_.GJG, {}),
                     }),
                     (0, _.jsxs)("div", {
                       className: (0, _._)(_().GameStatRight, _().PlaytimeRight),
@@ -683507,7 +683656,7 @@ Status Code:` +
               children: [
                 (0, _.jsx)("div", {
                   className: (0, _._)(_().GameStatIcon, _().PlaytimeIcon),
-                  children: (0, _.jsx)(_.eNX, {}),
+                  children: (0, _.jsx)(_.GJG, {}),
                 }),
                 (0, _.jsxs)("div", {
                   className: (0, _._)(_().GameStatRight, _().PlaytimeRight),
@@ -685058,8 +685207,11 @@ Status Code:` +
               });
               let _ = null;
               this.ReviewDetails.reactions.length &&
-                (_ = (0, _.jsx)(_, {
-                  reactions: this.ReviewDetails.reactions,
+                (_ = (0, _.jsx)(_.Suspense, {
+                  fallback: null,
+                  children: (0, _.jsx)(_, {
+                    reactions: this.ReviewDetails.reactions,
+                  }),
                 }));
               const _ = !(0, _.IDH)((0, _._)(!0).LAUNCHER_TYPE),
                 _ = new _._({
@@ -693015,6 +693167,8 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -694168,6 +694322,7 @@ Status Code:` +
                   app: _,
                   sortByType: _,
                   context: _,
+                  onClick: _,
                 }),
             ],
           });
@@ -694310,91 +694465,131 @@ Status Code:` +
           _([_._], _.prototype, "OnVerticalCapsuleError", 1),
           _([_._], _.prototype, "BHasVerticalCapsule", 1);
         const _ = (0, _._)(function (_) {
-            const { app: _, sortByType: _, context: _, _: _ } = _;
-            if (_ == _._ || _ != _) return null;
-            let _,
-              _,
-              _ = null;
-            switch (_) {
-              case _._:
-                if (_.minutes_playtime_forever == 0) return null;
-                _ = (0, _._)(_.minutes_playtime_forever);
-                break;
-              case _._:
-                if (!_.GetLastTimePlayed()) return null;
-                _ = (0, _._)(_.GetLastTimePlayed());
-                break;
-              case _._:
-                let _ = _.metacritic_score;
-                if (_ === void 0) return null;
-                (_ = _().MCGreen),
-                  _ < 70 && _ > 49
-                    ? (_ = _().MCOrange)
-                    : _ < 50 && (_ = _().MCRed),
-                  (_ = _);
-                break;
-              case _._:
-                if (_.GetCanonicalReleaseDate() == 0) return null;
-                _ = (0, _._)(_.GetCanonicalReleaseDate());
-                break;
-              case _._:
-                if (_.size_on_disk == null) return null;
-                (_ = (0, _._)(parseFloat(_.size_on_disk), 2)),
-                  _.library_id != null && (_ = _.library_id + " " + _);
-                break;
-              case _._: {
-                if (!_._.BGameHasAchievements(_.appid))
-                  _ = (0, _._)(
-                    "#Library_SortByPctAchievementsNoAchievements_Tag",
-                  );
-                else {
-                  let _ = _._.GetAchievementProgress(_.appid);
-                  (_ = _._.GetCompletedGroups(_.appid)),
-                    (_ = (0, _._)(
-                      "#Library_SortByPctAchievementsComplete_Tag",
-                      Math.floor(_),
-                    ));
-                }
-                break;
+          const { app: _, sortByType: _, context: _, _: _, onClick: _ } = _;
+          if (_ == _._ || _ != _) return null;
+          let _,
+            _,
+            _ = !1,
+            _ = null;
+          switch (_) {
+            case _._:
+              if (_.minutes_playtime_forever == 0) return null;
+              _ = (0, _._)(_.minutes_playtime_forever);
+              break;
+            case _._:
+              if (!_.GetLastTimePlayed()) return null;
+              _ = (0, _._)(_.GetLastTimePlayed());
+              break;
+            case _._:
+              let _ = _.metacritic_score;
+              if (_ === void 0) return null;
+              (_ = _().MCGreen),
+                _ < 70 && _ > 49
+                  ? (_ = _().MCOrange)
+                  : _ < 50 && (_ = _().MCRed),
+                (_ = _);
+              break;
+            case _._:
+              if (_.GetCanonicalReleaseDate() == 0) return null;
+              _ = (0, _._)(_.GetCanonicalReleaseDate());
+              break;
+            case _._:
+              if (_.size_on_disk == null) return null;
+              (_ = (0, _._)(parseFloat(_.size_on_disk), 2)),
+                _.library_id != null && (_ = _.library_id + " " + _);
+              break;
+            case _._: {
+              if (!_._.BGameHasAchievements(_.appid))
+                _ = (0, _._)(
+                  "#Library_SortByPctAchievementsNoAchievements_Tag",
+                );
+              else {
+                let _ = _._.GetAchievementProgress(_.appid);
+                (_ = _._.GetCompletedGroups(_.appid)),
+                  (_ = _ == 100),
+                  (_ = (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _().FullSortData,
+                        children: (0, _._)(
+                          "#Library_SortByPctAchievementsComplete_Tag",
+                          Math.floor(_),
+                        ),
+                      }),
+                      (0, _.jsx)("span", {
+                        className: _().ShortSortData,
+                        children: (0, _._)(
+                          "#Library_SortByPctAchievementsComplete_ShortTag",
+                          Math.floor(_),
+                        ),
+                      }),
+                    ],
+                  }));
               }
-              case _._:
-                if (_.rt_purchased_time > 0) _ = (0, _._)(_.rt_purchased_time);
-                else return null;
-                break;
-              case _._:
-              default:
-                return null;
+              break;
             }
-            const _ = _?.base ?? 0,
-              _ = _?.dlc ?? 0;
-            return (0, _.jsxs)("div", {
+            case _._:
+              if (_.rt_purchased_time > 0) _ = (0, _._)(_.rt_purchased_time);
+              else return null;
+              break;
+            case _._:
+            default:
+              return null;
+          }
+          const _ = _?.base ?? 0,
+            _ = _?.dlc ?? 0,
+            _ = _ + _,
+            _ = Math.min(_, 3),
+            _ = Math.min(_, _ - +(_ > 0)),
+            _ = (0, _.jsxs)("div", {
               _: _,
               className: (0, _._)(
                 _().LibraryItemBoxSubscript,
                 _,
-                (_ > 0 || _ > 0) && _().CompletedGroups,
+                _ > 0 && _().CompletedGroups,
+                _ && _().AllAchieved,
               ),
+              onClick: _,
               children: [
                 _ > 0 &&
                   (0, _.jsx)(_._, {
                     complete: _,
-                    maxComplete: 1,
-                    size: "1.4em",
-                    textSize: "1",
-                  }),
-                _ > 0 &&
-                  (0, _.jsx)(_._, {
-                    complete: _,
-                    maxComplete: 1,
-                    isDlc: !0,
-                    size: "1.4em",
-                    textSize: "1",
+                    showCount: !1,
+                    size: "calc(1.4em - 2px)",
+                    containerClassName: _()[`DLCFrom${_ + 1}`],
+                    className: _().CompletedGroupsAward,
                   }),
                 _,
               ],
             });
-          }),
-          _ = (0, _._)(function (_) {
+          return _ == 0
+            ? _
+            : (0, _.jsx)(_._, {
+                toolTipContent: (0, _.jsx)(_, {
+                  count: _,
+                }),
+                direction: "top",
+                bPortalToBody: !0,
+                usePointerEvents: !0,
+                children: _,
+              });
+        });
+        function _(_) {
+          return (0, _.jsx)(_._, {
+            radius: "sm",
+            paddingX: "3",
+            paddingY: "2",
+            className: _().CompletedGroupsTooltip,
+            children: (0, _.jsx)(_._, {
+              _: "div",
+              color: "dull-1",
+              weight: "medium",
+              size: "2",
+              children: (0, _._)("#Library_CompletedSets", _.count),
+            }),
+          });
+        }
+        const _ = (0, _._)(function (_) {
             const {
                 app: _,
                 context: _,
@@ -701207,7 +701402,16 @@ Status Code:` +
               strTitle: (0, _._)("#ContentManagement_DirectoryPicker_Title"),
               bChooseDirectory: !0,
             });
-            _ && SteamClient.InstallFolder.AddInstallFolder(_);
+            if (_)
+              try {
+                _(await SteamClient.InstallFolder.AddInstallFolder(_));
+              } catch (_) {
+                _.result != _._ &&
+                  (0, _._)(
+                    (0, _._)("#ContentManagement_Error_" + _.message),
+                    _,
+                  );
+              }
           }
         }
         class _ {
@@ -703416,7 +703620,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1793234273),
+            _ = parseInt(1793740528),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -711650,9 +711854,6 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -712018,6 +712219,13 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
+        const _ = {};
+        function _(_) {
+          return _[_];
+        }
+        function _(_) {
+          return !!_[_];
+        }
         const _ = _()("2026-11-23T09:30:00-08:00").unix(),
           _ = _()("2026-11-30T10:00:00-08:00").unix();
         function _() {
@@ -712031,11 +712239,16 @@ Status Code:` +
           _ = "#FFFFFF";
         function _() {
           return {
-            strBackgroundColor: "red",
-            strBackgroundImageURL: _("steamawards2025/header_notrophy.webp"),
-            strTrophyImageURL: _("steamawards2025/trophy_220.png?v=1"),
-            strButtonColor: "blue",
-            strTextColor: "white",
+            strBackgroundColor: "#000000",
+            strBackgroundImageURL: _("steamawards2026/page_tile.svg?v=1"),
+            strTrophyImageURL: _("steamawards2026/trophy_220.png?v=1"),
+            strButtonBGColor: "#ffd979",
+            strButtonTextColor: "#000000",
+            strTextColor: "#ffd979",
+            strCategoryTextColor: "#ffffff",
+            strTitleColor: "#ffd979",
+            rgCategoryBackgrounds: _(_())?.mapCategoryColors ?? {},
+            strFallbackCategoryBGColor: "#000000",
           };
         }
         function _() {
@@ -712049,7 +712262,7 @@ Status Code:` +
             2025: 4147080,
             2026: 5350740,
           },
-          _ = 4147080,
+          _ = 5350740,
           _ = 2215130;
         function _(_) {
           switch (_) {
@@ -712111,6 +712324,7 @@ Status Code:` +
                 strTitle: _.localization.title,
                 strDescription: _.localization.award_description ?? "",
                 bLaborOfLove: _.flag == _._._,
+                internal_name: _.internal_name ?? "",
               });
           }
           return _;
@@ -712238,6 +712452,9 @@ Status Code:` +
                     className: _().SteamAwardMainCtn,
                     children: [
                       (0, _.jsx)("div", {
+                        style: {
+                          color: _.strTitleColor,
+                        },
                         className: _().SteamAwardMainTitle,
                         children: _,
                       }),
@@ -712398,8 +712615,15 @@ Status Code:` +
               Nominate: _,
             } = _(_.eCategoryID, _),
             { elDialogElement: _, BCanTakeAction: _ } = _(!1),
-            { strButtonColor: _ } = _(),
-            [_, _, _] = (0, _._)();
+            {
+              strButtonBGColor: _,
+              strButtonTextColor: _,
+              rgCategoryBackgrounds: _,
+              strFallbackCategoryBGColor: _,
+              strCategoryTextColor: _,
+            } = _(),
+            [_, _, _] = (0, _._)(),
+            _ = _?.[_.internal_name] ?? _;
           if (!_.bNominationsLive) return null;
           if (!_) return (0, _.jsx)(_, {});
           const _ = (0, _._)(_(!0)),
@@ -712461,6 +712685,9 @@ Status Code:` +
             children: [
               !!(_ && (_ || _)) &&
                 (0, _.jsx)("div", {
+                  style: {
+                    background: _,
+                  },
                   className: (0, _._)(
                     _().SteamAwardNominationWidget,
                     _().SteamAwardVoteWidget,
@@ -712471,6 +712698,7 @@ Status Code:` +
                       (0, _.jsx)("div", {
                         style: {
                           background: _,
+                          color: _,
                         },
                         className: (0, _._)(
                           _().SteamAwardNominateButton,
@@ -712485,8 +712713,8 @@ Status Code:` +
                           checked: _,
                           onChange: _,
                           disabled: _,
-                          color: "#FFFFFF",
-                          highlightColor: "white",
+                          color: _,
+                          highlightColor: _,
                           label: (0, _.jsx)("div", {
                             className: _().SteamAwardCategoryTitle,
                             children: _._.Localize(
@@ -712499,6 +712727,9 @@ Status Code:` +
                         }),
                       }),
                       (0, _.jsx)("div", {
+                        style: {
+                          color: _,
+                        },
                         className: _().SteamAwardCategoryDesc,
                         children: _.strDescription,
                       }),
@@ -712575,8 +712806,9 @@ Status Code:` +
             } = _,
             { unVotedAppID: _, bAnswered: _, Vote: _ } = _(_.eCategoryID, _),
             { elDialogElement: _, BCanTakeAction: _ } = _(!0),
-            { strButtonColor: _ } = _(),
+            { strFallbackCategoryBGColor: _, rgCategoryBackgrounds: _ } = _(),
             [_, _, _] = (0, _._)(),
+            _ = _?.[_.internal_name] ?? _,
             _ = _ == _;
           if (!_ && !_) return null;
           const _ = () => {
@@ -712654,7 +712886,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid");
         const _ = 2640290,
           _ = 3334340,
-          _ = null,
+          _ = 4147080,
           _ = 2215130;
         let _;
         function _() {
@@ -713149,6 +713381,7 @@ Status Code:` +
           return _ || (0, _._)();
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -714725,6 +714958,7 @@ Status Code:` +
                   this.m_nAppID,
                   this.k_nMaxPerDirection,
                   0,
+                  this.m_additionalParams,
                 );
             } catch {}
             (0, _._)(() => {
@@ -714749,6 +714983,264 @@ Status Code:` +
           _([_._], _.prototype, "m_eNewerDirection", 2);
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
+            for (
+              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
+              _ >= 0;
+              _--
+            )
+              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
+            return _ && _ && _(_, _, _), _;
+          },
+          _ = ((_) => (
+            (_[(_.Older = 0)] = "Older"), (_[(_.Newer = 1)] = "Newer"), _
+          ))(_ || {});
+        class _ {
+          rgEvents = [];
+          source;
+          eStateNewer = _.Loading;
+          eStateOlder = _.Loading;
+          m_partnerEventStore;
+          constructor(_, _) {
+            (this.m_partnerEventStore = _), (this.source = _);
+          }
+          get newest() {
+            return this.rgEvents[0];
+          }
+          get oldest() {
+            return this.rgEvents[this.rgEvents.length - 1];
+          }
+          GetState(_) {
+            return _ == 0 ? this.eStateOlder : this.eStateNewer;
+          }
+          SetState(_, _) {
+            _ == 0 ? (this.eStateOlder = _) : (this.eStateNewer = _);
+          }
+          SetStateFromLoadCount(_, _, _) {
+            this.SetState(_, _ < _ ? _.EndOfContent : _.Idle);
+          }
+          GetEdge(_) {
+            return _ == 0 ? this.oldest : this.newest;
+          }
+          LoadEvents(_, _, _) {
+            const _ = {
+                ...this.source.additionalParams,
+              },
+              { clanSteamID: _, appid: _ = _._ } = this.source;
+            return _
+              ? this.m_partnerEventStore.LoadAdjacentPartnerEventsByEvent(
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                )
+              : this.m_partnerEventStore.LoadAdjacentPartnerEvents(
+                  void 0,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                );
+          }
+          Add(_, _) {
+            const _ = new Set(this.rgEvents.map((_) => _.GID));
+            let _ = 0;
+            const _ = _ == 0 ? _ : [..._].reverse();
+            for (const _ of _)
+              !_.GID ||
+                _.has(_.GID) ||
+                (_ == 0 ? this.rgEvents.push(_) : this.rgEvents.unshift(_),
+                _.add(_.GID),
+                _++);
+            return _;
+          }
+        }
+        function _(_) {
+          return _.some((_) => _ == _.Loading)
+            ? _.Loading
+            : _.some((_) => _ == _.Idle)
+              ? _.Idle
+              : _.EndOfContent;
+        }
+        function _(_, _) {
+          let _ = 1 / 0,
+            _ = -1 / 0;
+          for (const _ of _)
+            _.rgEvents.length &&
+              (_.eStateNewer != _.EndOfContent &&
+                (_ = Math.min(_, _.newest.GetPostTimeAndDateUnixSeconds())),
+              _.eStateOlder != _.EndOfContent &&
+                (_ = Math.max(_, _.oldest.GetPostTimeAndDateUnixSeconds())));
+          const _ = new Set(),
+            _ = [];
+          for (const _ of _)
+            for (const _ of _.rgEvents) {
+              if (!_.GID || _.has(_.GID)) continue;
+              _.add(_.GID);
+              const _ = _.GetPostTimeAndDateUnixSeconds();
+              (_.GID == _.GID || (_ >= _ && _ <= _)) && _.push(_);
+            }
+          return _.sort(
+            (_, _) =>
+              _.GetPostTimeAndDateUnixSeconds() -
+              _.GetPostTimeAndDateUnixSeconds(),
+          );
+        }
+        class _ {
+          k_nMaxPerDirection = 3;
+          m_partnerEventStore;
+          m_rgExtraSources;
+          m_rgEventPagers = [];
+          m_initialEvent;
+          m_rgEvents = [];
+          m_eOlderDirection = _.Idle;
+          m_eNewerDirection = _.Idle;
+          constructor(_, _) {
+            (0, _._)(this),
+              (this.m_partnerEventStore = _),
+              (this.m_rgExtraSources = _);
+          }
+          GetEvents() {
+            return this.m_rgEvents;
+          }
+          GetOlderState() {
+            return this.m_eOlderDirection;
+          }
+          GetNewerState() {
+            return this.m_eNewerDirection;
+          }
+          async InitAroundEvent(_, _) {
+            const _ = {
+                appid: _.appid,
+                clanSteamID: _.clanSteamID,
+                additionalParams: _,
+              },
+              _ = this.m_rgExtraSources.filter((_) => !(0, _._)(_, _)),
+              _ = new _(this.m_partnerEventStore, _);
+            (this.m_initialEvent = _),
+              (this.m_rgEventPagers = [
+                _,
+                ..._.map((_) => new _(this.m_partnerEventStore, _)),
+              ]),
+              (0, _._)(() => {
+                (this.m_rgEvents = [_]),
+                  (this.m_eOlderDirection = _.Loading),
+                  (this.m_eNewerDirection = _.Loading);
+              }),
+              await Promise.all(
+                this.m_rgEventPagers.map((_) => this.InitPager(_, _)),
+              ),
+              this.RecomputeMergedState();
+          }
+          async InitPager(_, _) {
+            _ == _
+              ? await this.InitAnchorPager(_)
+              : await this.InitExtraPager(_);
+          }
+          async InitAnchorPager(_) {
+            const _ = this.m_initialEvent,
+              _ = this.k_nMaxPerDirection,
+              _ = await _.LoadEvents(_, _, _),
+              _ = _.findIndex((_) => _.GID == _.GID);
+            if (_ < 0) {
+              (_.rgEvents = [_]),
+                (_.eStateNewer = _.EndOfContent),
+                (_.eStateOlder = _.EndOfContent);
+              return;
+            }
+            const _ = _,
+              _ = _.length - _ - 1;
+            _.Add(_, 0),
+              _.SetStateFromLoadCount(1, _, _),
+              _.SetStateFromLoadCount(0, _, _);
+          }
+          async InitExtraPager(_) {
+            (_.eStateNewer = _.EndOfContent), await this.CatchUpToAnchor(_);
+          }
+          BReachedAnchor(_) {
+            return (
+              !_.oldest ||
+              _.oldest.GetPostTimeAndDateUnixSeconds() <=
+                this.m_initialEvent.GetPostTimeAndDateUnixSeconds()
+            );
+          }
+          async CatchUpToAnchor(_) {
+            do {
+              const _ = await _.LoadEvents(_.oldest, 0, 10);
+              if (!_.length) {
+                _.eStateOlder = _.Idle;
+                return;
+              }
+              const _ = _.Add(_, 0);
+              _.SetStateFromLoadCount(0, _, 10);
+            } while (!this.BReachedAnchor(_) && _.eStateOlder == _.Idle);
+          }
+          RecomputeMergedState() {
+            const _ = _(this.m_rgEventPagers, this.m_initialEvent);
+            (0, _._)(() => {
+              (this.m_rgEvents = _),
+                (this.m_eNewerDirection = _(
+                  this.m_rgEventPagers.map((_) => _.eStateNewer),
+                )),
+                (this.m_eOlderDirection = _(
+                  this.m_rgEventPagers.map((_) => _.eStateOlder),
+                ));
+            });
+          }
+          LoadMoreAtEnd() {
+            return this.LoadMoreInDirection(0);
+          }
+          LoadMoreAtBeginning() {
+            return this.LoadMoreInDirection(1);
+          }
+          GetLoaderDirectionState(_) {
+            return _ == 0 ? this.m_eOlderDirection : this.m_eNewerDirection;
+          }
+          SetLoaderDirectionState(_, _) {
+            _ == 0
+              ? (this.m_eOlderDirection = _)
+              : (this.m_eNewerDirection = _);
+          }
+          async LoadMoreInDirection(_) {
+            if (
+              this.GetLoaderDirectionState(_) != _.Idle ||
+              this.m_rgEvents.length == 0
+            )
+              return;
+            this.SetLoaderDirectionState(_, _.Loading);
+            let _ = [];
+            for (const _ of this.m_rgEventPagers)
+              _.GetState(_) == _.Idle && _.push(this.LoadMore(_, _));
+            await Promise.all(_), this.RecomputeMergedState();
+          }
+          async LoadMore(_, _) {
+            if ((_.SetState(_, _.Loading), _ == 0 && !this.BReachedAnchor(_)))
+              return this.CatchUpToAnchor(_);
+            const _ = _ == 1 ? this.k_nMaxPerDirection : 0,
+              _ = _ == 0 ? this.k_nMaxPerDirection : 0,
+              _ = _.GetEdge(_),
+              _ = await _.LoadEvents(_, _, _);
+            if (!_.length && _) {
+              _.SetState(_, _.Idle);
+              return;
+            }
+            const _ = _.Add(_, _);
+            _.SetStateFromLoadCount(_, _, this.k_nMaxPerDirection);
+          }
+        }
+        _([_._.shallow], _.prototype, "m_rgEvents", 2),
+          _([_._], _.prototype, "m_eOlderDirection", 2),
+          _([_._], _.prototype, "m_eNewerDirection", 2),
+          _([_._], _.prototype, "SetLoaderDirectionState", 1);
+        function _(_, _) {
+          return _?.length ? new _(_, _) : new _(_);
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -714765,7 +715257,6 @@ Status Code:` +
                 onItemFocused: _,
                 navRef: _,
               } = _,
-              _ = (0, _._)(),
               _ = _,
               _ = {
                 width: _ || void 0,
@@ -714788,14 +715279,7 @@ Status Code:` +
               _ = _._.GetAppOverviewByAppID(_.appid),
               _ = _?.visible_in_game_list,
               _ = _?.BIsApplicationOrTool(),
-              _ = _?.BIsHardware(),
-              _ =
-                (_.appid == _._ || _.appid == _._) &&
-                _ &&
-                (0, _.jsx)("div", {
-                  className: _().ChannelIndicator,
-                  children: (0, _._)(_.label + "_Channel"),
-                });
+              _ = _?.BIsHardware();
             let _ = _ ? _ : _,
               _ = "";
             return (
@@ -714840,7 +715324,6 @@ Status Code:` +
                           _.fnFilterImageURLsForKnownFailures,
                         fnImageFailureCallback: _.fnImageFailureCallback,
                         bDisableBroadcastPlayer: !_,
-                        additionalTypeAndDateElement: _,
                         headerElement: (0, _.jsx)(_, {
                           overview: _,
                         }),
@@ -714907,7 +715390,11 @@ Status Code:` +
             });
           },
           _ = (0, _._)(function (_) {
-            _("render BasicPartnerEventsPage", _.initialEvent.GID, _.appid);
+            _(
+              "render BasicPartnerEventsPage",
+              _.initialEvent.GID,
+              _.initialEvent.appid,
+            );
             const _ = 1e3,
               [_, _] = _.useState(null),
               [_, _] = _.useState(0),
@@ -714917,7 +715404,7 @@ Status Code:` +
                 _ && (_(_.clientWidth), _(_.clientHeight));
               }, []);
             _.useEffect(() => {
-              const _ = new _(_.partnerEventStore);
+              const _ = _(_.partnerEventStore, _.extraSources);
               _(_),
                 _.bShowOnlyInitialEvent ||
                   _.InitAroundEvent(_.initialEvent, _.additionalParams);
@@ -714926,6 +715413,7 @@ Status Code:` +
               _.partnerEventStore,
               _.initialEvent,
               _.additionalParams,
+              _.extraSources,
             ]);
             const _ = _.bShowOnlyInitialEvent
               ? [_.initialEvent]
@@ -715033,149 +715521,186 @@ Status Code:` +
             });
           });
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = (0, _.createContext)({}),
-          _ = () => useContext(_);
-        var _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          },
-          _ = ((_) => (
-            (_[(_.AppDetails = 1)] = "AppDetails"),
-            (_[(_.LibraryHome = 2)] = "LibraryHome"),
-            _
-          ))(_ || {});
+          _ = () => useContext(_),
+          _ = 500;
+        var _ = ((_) => (
+          (_[(_.AppDetails = 1)] = "AppDetails"),
+          (_[(_.LibraryHome = 2)] = "LibraryHome"),
+          _
+        ))(_ || {});
         function _(_) {
-          const _ = (0, _._)(),
-            _ = (0, _._)();
-          return (0, _.jsx)(_.Provider, {
-            value: {
-              fnSetURL: (_) => _.SteamWeb(_),
-            },
-            children: (0, _.jsx)(_, {
+          const {
+              appid: _,
+              initialEventID: _,
+              additionalParams: _,
+              extraSources: _,
+            } = _,
+            _ = (_ ?? [])
+              .map(
+                (_) => `${(0, _._)(_)}:${JSON.stringify(_.additionalParams)}`,
+              )
+              .join("|"),
+            _ = `${_}_${_}_${JSON.stringify(_)}_${_}`;
+          return (0, _.jsx)(
+            _,
+            {
               ..._,
-              navigator: _,
-              config: _,
-            }),
-          });
+            },
+            _,
+          );
         }
-        class _ extends _.Component {
-          constructor(_) {
-            super(_);
-            const _ = this.LoadOrRequestEvent();
-            this.state = {
-              event: _,
-            };
-          }
-          m_cancelSignal = _().CancelToken.source();
-          LoadOrRequestEvent() {
-            let _;
-            return (
-              this.props.initialEventID &&
-                (_ = _._.GetClanEventModel(this.props.initialEventID)),
-              !_ &&
-                (this.props.initialEventID ||
-                  this.props.appid ||
-                  this.props.clanSteamID) &&
-                this.LoadInitialEvent(),
-              _
-            );
-          }
-          async LoadInitialEvent() {
-            const _ = await _._.LoadAdjacentPartnerEvents(
-              this.props.initialEventID,
-              this.props.clanSteamID,
-              this.props.appid,
-              0,
-              3,
-              this.props.additionalParams,
-              this.m_cancelSignal,
-            );
-            this.setState({
-              event: _[0],
-            });
-          }
-          componentDidUpdate(_) {
-            if (
-              (this.props.initialEventID || this.props.appid) &&
-              (_.initialEventID != this.props.initialEventID ||
-                _.appid != this.props.appid ||
-                !_()(_.additionalParams, this.props.additionalParams))
-            ) {
-              const _ = this.LoadOrRequestEvent();
-              this.setState({
-                event: _,
-              });
-            } else
-              this.state.event &&
-                !this.props.appid &&
-                !this.props.clanSteamID &&
-                this.setState({
-                  event: void 0,
-                });
-          }
-          componentWillUnmount() {
-            this.m_cancelSignal.cancel(
-              "LibraryAppPartnerEventsPage unmounting",
-            );
-          }
-          OnNavigateToApp() {
-            this.props.navigator.App(this.props.appid);
-          }
-          BHasValidEvent() {
-            let _ = this.state.event;
-            return !(
-              !_ ||
-              (this.props.appid && _.appid != this.props.appid) ||
-              (this.props.clanSteamID &&
-                this.props.clanSteamID.ConvertTo64BitString &&
-                _?.clanSteamID?.ConvertTo64BitString() !=
-                  this.props.clanSteamID?.ConvertTo64BitString()) ||
-              (this.props.initialEventID && _.GID != this.props.initialEventID)
-            );
-          }
-          render() {
-            const _ = this.state.event;
-            return this.BHasValidEvent()
-              ? this.props.config?.IN_GAMEPADUI
-                ? (0, _.jsx)(_, {
-                    initialEvent: _,
-                    partnerEventStore: _._,
-                    emoticonStore: _._.EmoticonStore,
-                    closeModal: this.props.onClose,
-                    additionalParams: this.props.additionalParams,
-                    containerRef: this.props.containerRef,
+        function _(_) {
+          const {
+              appid: _,
+              initialEventID: _,
+              clanSteamID: _,
+              showAppIcon: _,
+              additionalParams: _,
+              onClose: _,
+              containerRef: _,
+            } = _,
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            { event: _, bLoadFailed: _ } = _(_, _, _, _),
+            _ = !!_ && !!_.IN_GAMEPADUI,
+            _ = (0, _.useCallback)(() => _.App(_), [_, _]);
+          return !_ && !_ && !_
+            ? null
+            : _
+              ? (0, _.jsx)(_, {
+                  bInGamepadUI: _,
+                  onClose: _,
+                  containerRef: _,
+                })
+              : _
+                ? (0, _.jsxs)(_.Provider, {
+                    value: {
+                      fnSetURL: (_) => _.SteamWeb(_),
+                    },
+                    children: [
+                      _ &&
+                        (0, _.jsx)(_, {
+                          initialEvent: _,
+                          additionalParams: _,
+                          extraSources: _.extraSources,
+                          partnerEventStore: _._,
+                          emoticonStore: _._.EmoticonStore,
+                          closeModal: _,
+                          containerRef: _,
+                        }),
+                      !_ &&
+                        (0, _.jsx)("div", {
+                          style: {
+                            width: "100%",
+                            height: "100%",
+                          },
+                          ref: _,
+                          children: (0, _.jsx)(_, {
+                            initialEvent: _,
+                            additionalParams: _,
+                            partnerEventStore: _._,
+                            emoticonStore: _._.EmoticonStore,
+                            closeModal: _,
+                            onAppIconClick: _ ? _ : void 0,
+                            fnFilterImageURLsForKnownFailures:
+                              _._.FilterImageURLsForKnownFailures,
+                            fnImageFailureCallback: _._.ImageFailureCallback,
+                          }),
+                        }),
+                    ],
+                  })
+                : (0, _.jsx)(_, {
+                    bInGamepadUI: _,
+                    onClose: _,
+                    containerRef: _,
+                  });
+        }
+        function _(_) {
+          const { bInGamepadUI: _, onClose: _, containerRef: _ } = _,
+            [_, _] = (0, _.useState)(!1);
+          return (
+            (0, _.useEffect)(() => {
+              const _ = setTimeout(() => _(!0), _);
+              return () => clearTimeout(_);
+            }, []),
+            _
+              ? _
+                ? (0, _.jsx)(_._, {
+                    size: "large",
+                    position: "center",
                   })
                 : (0, _.jsx)("div", {
                     style: {
                       width: "100%",
                       height: "100%",
                     },
-                    ref: this.props.containerRef,
-                    children: (0, _.jsx)(_, {
-                      initialEvent: _,
-                      additionalParams: this.props.additionalParams,
-                      partnerEventStore: _._,
-                      emoticonStore: _._.EmoticonStore,
-                      closeModal: this.props.onClose,
-                      onAppIconClick:
-                        this.props.showAppIcon && this.OnNavigateToApp,
-                      fnFilterImageURLsForKnownFailures:
-                        _._.FilterImageURLsForKnownFailures,
-                      fnImageFailureCallback: _._.ImageFailureCallback,
+                    ref: _,
+                    children: (0, _.jsx)(_._, {
+                      bProgressDialog: !0,
+                      closeModal: _,
+                      children: (0, _.jsx)(_._, {
+                        string: (0, _._)("#Loading"),
+                        size: "medium",
+                        position: "center",
+                      }),
                     }),
                   })
-              : null;
-          }
+              : null
+          );
         }
-        _([_._], _.prototype, "OnNavigateToApp", 1);
+        function _(_) {
+          const { bInGamepadUI: _, onClose: _, containerRef: _ } = _;
+          return _
+            ? (0, _.jsx)(_, {
+                onClose: _,
+              })
+            : (0, _.jsx)("div", {
+                style: {
+                  width: "100%",
+                  height: "100%",
+                },
+                ref: _,
+                children: (0, _.jsx)(_._, {
+                  strDescription: (0, _._)("#AppActivity_EventLoadFailed"),
+                  closeModal: _,
+                }),
+              });
+        }
+        function _(_) {
+          const { onClose: _ } = _,
+            { ownerWindow: _ } = (0, _._)();
+          return (
+            (0, _.useEffect)(() => {
+              (0, _._)((0, _._)("#AppActivity_EventLoadFailed"), _), _ && _();
+            }, []),
+            null
+          );
+        }
+        function _(_, _, _, _) {
+          const [_, _] = (0, _.useState)(() =>
+              _ ? _._.GetClanEventModel(_) : void 0,
+            ),
+            [_, _] = (0, _.useState)(!1);
+          return (
+            (0, _.useEffect)(() => {
+              if (_ || (!_ && !_ && !_)) return;
+              const _ = _().CancelToken.source();
+              return (
+                _._.LoadAdjacentPartnerEvents(_, _, _, 0, 3, _, _).then((_) => {
+                  _.token.reason || (_[0] ? _(_[0]) : _(!0));
+                }),
+                () => _.cancel("LibraryAppPartnerEventsPage unmounting")
+              );
+            }, []),
+            {
+              event: _,
+              bLoadFailed: _,
+            }
+          );
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -743953,7 +744478,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1793234273),
+            _ = parseInt(1793740528),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

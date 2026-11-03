@@ -181,7 +181,6 @@ $ORIGIN
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG,r\t
 ++CCUNGstd::exception
 ----------------------------------------\n
 -chromeosdiskmanagement

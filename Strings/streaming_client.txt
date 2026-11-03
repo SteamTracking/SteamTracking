@@ -2032,8 +2032,6 @@ ${FILENAME}
 0.06
 0000000000000000000000000000000000000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:38:57
-00:39:01
 0123456789
 0123456789.
 0123456789.:abcdefABCDEF
@@ -2341,6 +2339,8 @@ ${FILENAME}
 2. makr
 2.75
 2048
+20:32:20
+20:32:24
 20CCDDBAppDetailCommon
 20CCaptureFailedDialog
 20CControllerConfigMsg
@@ -8662,6 +8662,7 @@ NotoSansCJKkr-Regular.otf
 NotoSansCJKsc-Regular.otf
 NotoSansCJKtc-Regular.otf
 NotoSansThai-Regular.ttf
+Nov  2 2026
 November
 Nu s-a putut g
 Nu s-a putut porni transmisiunea pe calculatorul de la distan
@@ -8816,7 +8817,6 @@ Obreve
 Obtained EMS handle %u
 Obtained XMS handle %u
 Ocircumflex.smcp\vOtilde.smcp
-Oct 29 2026
 October
 Ocultar teclado virtual
 Oculte os controles por toque no menu de configura
@@ -16542,6 +16542,7 @@ gg i de avancerade streaminginst
 gg i streaminginst
 gga till en f
 gga till och d
+ggenX
 ghi h
 gioco
 givenName
@@ -18181,7 +18182,7 @@ lg inputtilstand for %s
 lg maskinen, der skal forbindes til
 lg maskinen, der skal forbindes til:
 lhatod r
-lib Oct 29 2026 00:39:01
+lib Nov  2 2026 20:32:24
 lib(%lu)
 libEGL.so.1
 libGL.so.1

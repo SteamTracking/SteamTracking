@@ -394,8 +394,7 @@ $ORIGIN
 *pchMsg && *pchMsg == '%'
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG;
-++CCUNG`
+++CCUNG[
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 , but was
@@ -544,7 +543,6 @@ $ORIGIN
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:38:57
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -655,6 +653,7 @@ $ORIGIN
 2 Mbps
 200 Mbps
 200M
+20:32:20
 20CSteamSysInfoLogFile
 20CUniformRandomStream
 20IUniformRandomStream
@@ -1709,13 +1708,13 @@ Non-repeated field "
 Not implemented field number
 Not supported.
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
+Nov  2 2026
 November
 Numbers starting with leading zero must be in octal.
 OSX1010
 OUT OF MEMORY
 OUT_OF_RANGE
 Object
-Oct 29 2026
 October
 Oneof must have at least one field.
 OneofOptions

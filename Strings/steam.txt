@@ -1376,15 +1376,13 @@ $ORIGIN
 00000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:38:57
-00:39:04
 01/01/00
 0123456789
 0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF YT
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEF`YT
 0123456789abcdef
 1 Mbps
 1.2.11
@@ -1903,6 +1901,10 @@ $ORIGIN
 2048
 208.64.200.0/22
 208.78.164.0/22
+20:32:20
+20:32:32
+20:32:33
+20:32:34
 20CCDDBAppDetailCommon
 20CECSigningPrivateKey
 20CNetFilterEncryption
@@ -6723,6 +6725,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
+Nov  2 2026
 November
 NullMetrics()
 NumTickets
@@ -6843,7 +6846,6 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 29 2026
 October
 Odia
 Offensive Avatar
@@ -8311,7 +8313,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 29 2026 00:39:04
+Startup - updater built Nov  2 2026 20:32:33
 State
 StaticFileWriterThread()
 Steam
@@ -12303,7 +12305,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(
+ggenh
 givenName
 glBegin
 glBindTexture

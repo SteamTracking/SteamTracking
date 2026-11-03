@@ -6363,6 +6363,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 17CInternalCallbackI12CClientVideo19AppLifetimeNotice_tE
 17CInternalCallbackI12CClientVideo23SteamServersConnected_tE
 17CInternalCallbackI12CUserAppInfo16AppInfoChanged_tE
+17CInternalCallbackI12CUserAppInfo18AppConfigChanged_tE
 17CInternalCallbackI12CUserFriends21ParentalLockChanged_tE
 17CInternalCallbackI14CCompatManager14AppInstalled_tE
 17CInternalCallbackI14CCompatManager16AppInfoChanged_tE
@@ -12437,6 +12438,7 @@ AppIDs . . :
 AppId_t
 AppInfoCache_WriteToDisk
 AppInfoChangeNumber
+AppInfoChanged_t
 AppItems
 AppLastPlayedTimeChanged_t
 AppLicensesChanged_t
@@ -13162,6 +13164,7 @@ Bad cert: %s
 Bad chat member info received in chat info update
 Bad client_identity_string '%s'\n
 Bad controller index in ControllerHasUniqueConfigForAppID
+Bad controller index in SetSelectedConfigForApp
 Bad data received in chat info update
 Bad data received in chat room info update
 Bad data received in chat room state change
@@ -40179,12 +40182,12 @@ low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1009
 low-pri yield - ../clientdll/clientugc.cpp:7110
 low-pri yield - ../clientdll/compatmanager.cpp:2247
 low-pri yield - ../clientdll/compatmanager.cpp:2505
-low-pri yield - ../clientdll/compatmanager.cpp:2808
-low-pri yield - ../clientdll/compatmanager.cpp:3591
-low-pri yield - ../clientdll/compatmanager.cpp:3631
-low-pri yield - ../clientdll/compatmanager.cpp:3644
-low-pri yield - ../clientdll/compatmanager.cpp:3696
-low-pri yield - ../clientdll/compatmanager.cpp:4328
+low-pri yield - ../clientdll/compatmanager.cpp:2817
+low-pri yield - ../clientdll/compatmanager.cpp:3600
+low-pri yield - ../clientdll/compatmanager.cpp:3640
+low-pri yield - ../clientdll/compatmanager.cpp:3653
+low-pri yield - ../clientdll/compatmanager.cpp:3705
+low-pri yield - ../clientdll/compatmanager.cpp:4337
 low-pri yield - ../clientdll/contentupdatecontext.cpp:1384
 low-pri yield - ../clientdll/contentupdatecontext.cpp:1420
 low-pri yield - ../clientdll/csinterface.cpp:224
@@ -46640,7 +46643,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 29 2026 00:39:03
+steam Nov  2 2026 20:32:26
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &

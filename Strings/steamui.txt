@@ -1101,6 +1101,7 @@ ${LANGUAGE}
 %s/.local/share/applications
 %s/.local/share/icons/hicolor
 %s/.local/share/icons/hicolor/%dx%d/apps
+%s/.local/share/vulkan/implicit_layer.d/%s
 %s/.steam/%s
 %s/.steam/steam
 %s/Steam/registry.vdf
@@ -2871,7 +2872,6 @@ ${LANGUAGE}
 .txt
 .vdf
 .webm
-/.local/share/vulkan/implicit_layer.d/
 /<typename>', got:
 /Steam3PosixRegistryManager
 /SteamApps
@@ -4035,6 +4035,7 @@ ${LANGUAGE}
 12CAutoReleaseI20IHTTPRedirectHandlerE
 12CAutoReleaseI21COpenSSLCachedSessionE
 12CAutoReleaseI8CMetricsE
+12CBluezDevice
 12CDynamicFuncIPF14SDL_PowerStatePiS1_EE
 12CDynamicFuncIPFP10SDL_WindowPKciimEE
 12CDynamicFuncIPFP11SDL_SurfaceP12SDL_IOStreambEE
@@ -4138,6 +4139,7 @@ ${LANGUAGE}
 12SteamTV_Stub
 12SystemReport
 13AppUpdateInfo
+13CBluezAdapter
 13CBoolProperty
 13CCallbackBase
 13CCallbackImplILi1025EE
@@ -8536,6 +8538,7 @@ ${LANGUAGE}
 @bProfileYieldsInTestSuiteJobs
 @bProtobufParseSizeProfile
 @bProtobufParseTimeProfile
+@bSearchSuggestionNameMatchScoring
 @bShowUninstalledDemosInLibrary
 @cMinimumJobTimeoutsToCheckPerFrame
 @cNetEncryptionHandshakeWorkMax_HighPri
@@ -19913,6 +19916,7 @@ NotifyText: %s
 NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
+Nov  2 2026 20:32:32
 November
 NullMetrics()
 Num Lock
@@ -20064,7 +20068,6 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 29 2026 00:39:08
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -23804,6 +23807,7 @@ Store
 Store / Billing country code mismatch
 Store / Business country code mismatch
 Store Promotion
+Store search suggestions use edismax name-match scoring
 Store/Community web auth request failed: %s\n
 StoreAppImages
 StoreCDN
@@ -35991,6 +35995,7 @@ libEGL.so.1
 libGL.so.1
 libSDL3.so.0
 libSDL3_image.so.0
+libVkLayer_steam_fossilize.so
 libX11-xcb.so.1
 libX11.so.6
 libXext.so.6
@@ -41443,11 +41448,14 @@ steamos_wifi_power_management_enabled
 steamos_wifi_reload_wifi_driver_on_sleep
 steamoverlay_i386.json
 steamoverlay_x86_64.json
+steamoverlayvulkanlayer.so
 steampal_
 steamparental
 steampipe
 steampipepeering
 steampowered.com
+steamrt32
+steamrt64
 steamrt64/steamsysinfo
 steamservice.so
 steamtranslation.ru
@@ -42603,10 +42611,6 @@ uacurve6
 uacurve7
 uacurve8
 uacurve9
-ubuntu12_32/libVkLayer_steam_fossilize.so
-ubuntu12_32/steamoverlayvulkanlayer.so
-ubuntu12_64/libVkLayer_steam_fossilize.so
-ubuntu12_64/steamoverlayvulkanlayer.so
 udev-events1
 udisks2_block_proxy_get_property
 udisks2_block_proxy_set_property
@@ -43709,7 +43713,7 @@ zulu
 { pos: %4d,%4d size: %4d,%4d }
 {"name":"%s"}
 {\n"version": %u,\n"gameids" : [\n
-{\n\t"file_format_version" : "1.0.0",\n\t"layer" : {\n\t\t"name": "%s",\n\t\t"type": "GLOBAL",\n\t\t"library_path": "%s/%s",\n\t\t"api_version": "1.3.207",\n\t\t"implementation_version": "1",\n\t\t"description": "%s",\n\t\t"disable_environment": { "DISABLE_%s": "1" },\n\t\t"enable_environment": { "ENABLE_%s": "1" }%s\n\t}\n}\n
+{\n\t"file_format_version" : "1.0.0",\n\t"layer" : {\n\t\t"name": "%s",\n\t\t"type": "GLOBAL",\n\t\t"library_path": "%s/%s/%s",\n\t\t"api_version": "1.3.207",\n\t\t"implementation_version": "1",\n\t\t"description": "%s",\n\t\t"disable_environment": { "DISABLE_%s": "1" },\n\t\t"enable_environment": { "ENABLE_%s": "1" }%s\n\t}\n}\n
 {default arg#
 {lambda
 {parm#
