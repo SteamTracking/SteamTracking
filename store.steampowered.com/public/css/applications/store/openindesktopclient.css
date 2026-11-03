@@ -1,66 +1,67 @@
-._1EQpm6hAsghyCST7W04m-E {
-  width: 100%;
+.DKqTHdVdQ0o- {
   background-color: #2681da;
-  display: flex;
   flex-direction: column;
   align-self: center;
+  width: 100%;
+  display: flex;
   position: relative;
 }
-._13oFTFTjvz0YaOVnWZxyqr {
-  display: flex;
-  justify-content: start;
+._6Y41-C1HzHE- {
   box-sizing: border-box;
-  margin: auto;
-  padding: 10px;
+  color: #c6d4df;
+  justify-content: start;
   width: 100%;
   max-width: 960px;
-  color: #c6d4df;
+  margin: auto;
+  padding: 10px;
+  display: flex;
 }
-.widestore ._13oFTFTjvz0YaOVnWZxyqr {
+.widestore ._6Y41-C1HzHE- {
   max-width: 1200px;
 }
-._3jg5qxP4_hiZYa6-GJDCOp {
+.XMG5ud5pSE4- {
   color: orange;
   padding-top: 5px;
   padding-left: 5px;
   font-size: 15px;
   position: absolute;
 }
-._1HSa8QK0U-qQCGObG6XYFT {
-  display: flex;
+.S9DutBDiU5s- {
+  color: #cee1f3;
   flex-direction: column;
   align-self: center;
   font-size: 15px;
   font-weight: 400;
-  color: #cee1f3;
+  display: flex;
 }
-._1HSa8QK0U-qQCGObG6XYFT ._3Xfc_DOo4BUZBmxkSRmD6y {
+.S9DutBDiU5s- .pD82ByXVY0Q- {
   line-height: 17px;
 }
-._1HSa8QK0U-qQCGObG6XYFT ._3Xfc_DOo4BUZBmxkSRmD6y b {
+.S9DutBDiU5s- .pD82ByXVY0Q- b {
   color: #fff;
 }
-._1lwkSayKFi-9WCDd6pq5bV {
-  display: flex;
+.mRf-NY-PHhA- {
   flex-direction: row;
-  margin-right: 20px;
   gap: 20px;
+  margin-right: 20px;
   font-size: 14px;
   font-weight: 500;
+  display: flex;
 }
-._1lwkSayKFi-9WCDd6pq5bV ._1jso7z80FWGn42k1HP0_cf {
+.mRf-NY-PHhA- .cVu9nCNqKwQ- {
   cursor: pointer;
+  text-shadow: 1px 1px #ffffff80;
+  color: #3d7291;
+  vertical-align: middle;
+  background-color: #fefefed1;
+  border-radius: 2px;
   align-content: center;
   padding: 10px 20px;
-  background-color: rgba(254, 254, 254, 0.8196078431);
-  text-shadow: 1px 1px 0 hsla(0, 0%, 100%, 0.5);
-  color: #3d7291;
   font-weight: 600;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  vertical-align: middle;
-  border-radius: 2px;
+  box-shadow: 2px 2px 4px #0000004d;
 }
-._1lwkSayKFi-9WCDd6pq5bV ._1jso7z80FWGn42k1HP0_cf:hover {
+.mRf-NY-PHhA- .cVu9nCNqKwQ-:hover {
   background-color: #fff;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 6px #000000b3;
 }
+/*$vite$:1*/

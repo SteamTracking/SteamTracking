@@ -1,0 +1,88 @@
+._8iddhlHiRHQ- {
+  background-color: #0003;
+  padding: 15px;
+}
+.AhNg9jT4hrc- {
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 600px;
+  max-width: 100%;
+  font-family:
+    Motiva Sans,
+    Motiva Sans fallback,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  display: flex;
+  position: relative;
+}
+@media screen and (width <= 500px) {
+  html.responsive.responsive .AhNg9jT4hrc- {
+    width: unset;
+  }
+}
+.UDR84ALyLZI- {
+  gap: 20px;
+  margin-top: 20px;
+  display: flex;
+}
+@media screen and (width <= 500px) {
+  html.responsive.responsive .UDR84ALyLZI- {
+    flex-direction: column;
+  }
+}
+.UDR84ALyLZI- > button,
+.UDR84ALyLZI- > a {
+  text-align: center;
+  flex: 1;
+  font-size: 14px;
+}
+.CB81WjWbW98- {
+  margin-top: 20px;
+}
+@media screen and (width <= 500px) {
+  html.responsive.responsive .CB81WjWbW98- {
+    flex-direction: column;
+  }
+}
+.CB81WjWbW98- .hSnGOSK6hJU- a {
+  vertical-align: middle;
+  white-space: nowrap;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  display: inline-flex;
+}
+.CB81WjWbW98- .hSnGOSK6hJU- a:visited {
+  color: inherit;
+}
+.CB81WjWbW98- .Vj4E9TPa-ME- {
+  margin-inline-start: 3px;
+  padding-bottom: 2px;
+}
+.GamepadMode .CB81WjWbW98- .Vj4E9TPa-ME- {
+  margin-inline-start: 5px;
+}
+._6HGtV333bT0- {
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  display: flex;
+}
+.jINK81jTs1g- {
+  color: #fff;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.i7AXnZ6ZNpg- {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+.C2HHd-M8iZA- {
+  color: #3d4450;
+  text-align: right;
+  font-size: 12px;
+}

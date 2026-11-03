@@ -2,51 +2,51 @@
  ****/
 
 import {
-  A as e,
-  Bt as t,
-  E as n,
-  S as r,
-  Wt as i,
+  $t as e,
+  A as t,
+  Ct as n,
+  E as r,
+  S as i,
   Y as a,
-  gt as o,
-  it as s,
+  Z as o,
+  _t as s,
   k as c,
-  q as l,
-  qt as u,
-  ut as d,
+  kt as l,
+  on as u,
+  rn as d,
   x as f,
-} from "./mobx.esm.js?contenthash=CuqnC1HA";
+} from "./mobx.esm.js?contenthash=BRGZcCup";
 import {
   At as p,
-  Bo as m,
-  Er as ee,
-  Ht as te,
-  Qr as ne,
-  Zi as re,
-  rn as ie,
-  sa as h,
-  yn as ae,
-} from "./dialogs.js?contenthash=Ef6x5QZW";
-import { w as g } from "./long.js?contenthash=BCeVig72";
-import { C as oe, E as se } from "./react-router.js?contenthash=BY_BIsGq";
+  Ht as m,
+  Tr as ee,
+  Xi as te,
+  Zr as ne,
+  oa as h,
+  rn as re,
+  yn as ie,
+  zo as ae,
+} from "./dialogs.js?contenthash=D1pxcxuf";
+import { p as g } from "./long.js?contenthash=DWB27pGN";
+import { C as oe, E as se } from "./react-router.js?contenthash=nQj0_J23";
 import {
   n as ce,
   t as le,
-} from "./csstransitionwrapper.js?contenthash=CnrFdwNo";
-import { t as ue } from "./axios.js?contenthash=BJ1Ik0cP";
-import { t as de } from "./throbber.js?contenthash=DT0j8i1L";
-import { t as fe } from "./multisourceimage.js?contenthash=BBHUSgPz";
-import { t as pe } from "./canvas.js?contenthash=Bf7603mp";
+} from "./csstransitionwrapper.js?contenthash=DaU8lpLB";
+import { t as ue } from "./axios.js?contenthash=ftGxbJpA";
+import { t as de } from "./throbber.js?contenthash=1eooMzHf";
+import { t as fe } from "./multisourceimage.js?contenthash=Dx8RP27v";
+import { t as pe } from "./canvas.js?contenthash=DpU2TNRk";
 var me = `UpperLeft`,
   he = `BottomLeft`,
   ge = `UpperCenter`,
   _e = `CenterCenter`,
   ve = `BottomCenter`,
-  _ = u(o()),
+  _ = u(l()),
   ye = u(se()),
   be = u(p()),
   xe = u(ue()),
-  v = i({
+  v = d({
     AddBoxSizer: () => He,
     Background: () => Ee,
     Bottom: () => Be,
@@ -220,7 +220,7 @@ var me = `UpperLeft`,
     enterDone: O,
     enterActive: T,
   },
-  G = ae(Qe),
+  G = ie(Qe),
   K = { pinnedPosition: he, nWidthPct: 50, nHeightPct: 50 },
   q = _.createContext({ bFullscreen: !1 }),
   J = class extends _.Component {
@@ -320,15 +320,15 @@ c([g], J.prototype, `SetDimensions`, null),
 var Y = class extends _.Component {
   m_refBackgroundImage = _.createRef();
   m_refLogoImage = _.createRef();
-  constructor(e) {
-    super(e),
-      t(
-        !e.editMode || e.rgLogoImages.length <= 1,
+  constructor(t) {
+    super(t),
+      e(
+        !t.editMode || t.rgLogoImages.length <= 1,
         `Can't use multiple logo images in edit mode`,
       ),
       (this.state = {
-        bHasHeaderImage: e.rgHeaderImages.length > 0,
-        bHasLogoImage: e.rgLogoImages.length > 0,
+        bHasHeaderImage: t.rgHeaderImages.length > 0,
+        bHasLogoImage: t.rgLogoImages.length > 0,
         bLogoLoaded: !1,
       });
   }
@@ -383,7 +383,7 @@ var Y = class extends _.Component {
   }
   render() {
     let {
-        rgLogoImages: t,
+        rgLogoImages: e,
         editMode: n,
         logoPosition: r,
         className: i,
@@ -393,7 +393,7 @@ var Y = class extends _.Component {
       } = this.props,
       { bHasLogoImage: c } = this.state,
       l = this.props.rgHeaderImages.length == 1,
-      u = e(
+      u = t(
         y,
         i,
         !this.state.bHasHeaderImage && `c8uauX6-os0-`,
@@ -427,24 +427,24 @@ var Y = class extends _.Component {
               (0, U.jsx)(
                 $e,
                 {
-                  strLogoImageURL: t[0],
+                  strLogoImageURL: e[0],
                   editMode: n,
                   logoPosition: r || K,
                   fnOnPositionChanged: n && o,
                   fullscreen: this.props.bFullscreen,
                   children: (0, U.jsx)(fe, {
                     ref: this.m_refLogoImage,
-                    className: e(
+                    className: t(
                       `MDlRNe2WCnA-`,
                       this.state.bLogoLoaded && `MP7DM-J-SM4-`,
                     ),
-                    rgSources: t,
+                    rgSources: e,
                     onLoad: this.OnLogoLoad,
                     onIncrementalError: this.OnIncrementalLogoError,
                     onError: this.OnLogoError,
                   }),
                 },
-                t[0],
+                e[0],
               ),
             this.props.children,
             (0, U.jsx)(`div`, { className: Xe }),
@@ -544,10 +544,10 @@ var X = class extends _.Component {
     return e && e.length > 0;
   }
   render() {
-    let t = this.HasBlurImages()
+    let e = this.HasBlurImages()
         ? this.props.rgBlurImages[this.state.nBlurImageIndex]
         : null,
-      n = this.state.strLoadedBlurImage != t,
+      n = this.state.strLoadedBlurImage != e,
       r = null;
     return (
       (r = (0, U.jsxs)(_.Fragment, {
@@ -557,7 +557,7 @@ var X = class extends _.Component {
             this.props.rgBlurImages[this.state.nBlurImageIndex] &&
             (0, U.jsx)(`img`, {
               src: this.props.rgBlurImages[this.state.nBlurImageIndex],
-              className: e(
+              className: t(
                 `oAbYPcN6xMk-`,
                 `EqH7klwhYE0-`,
                 `ArI6ZTmOyrU-`,
@@ -570,7 +570,7 @@ var X = class extends _.Component {
             this.state.bBackgroundLoaded &&
             !this.props.bLowPerfMode &&
             (0, U.jsx)(pe, {
-              className: e(`oAbYPcN6xMk-`, `EqH7klwhYE0-`, `ArI6ZTmOyrU-`),
+              className: t(`oAbYPcN6xMk-`, `EqH7klwhYE0-`, `ArI6ZTmOyrU-`),
               elementRef: this.m_refCanvasBlurImage,
               updateRate: 0,
               width: 192,
@@ -581,23 +581,23 @@ var X = class extends _.Component {
         ],
       })),
       (0, U.jsx)(q.Consumer, {
-        children: (t) =>
+        children: (e) =>
           (0, U.jsx)(le, {
             timeout: G,
             appear: !0,
-            in: t.bFullscreen,
+            in: e.bFullscreen,
             classNames: W,
-            children: (t) =>
+            children: (e) =>
               (0, U.jsxs)(`div`, {
-                ref: t,
-                className: e(Ae, void 0),
+                ref: e,
+                className: t(Ae, void 0),
                 children: [
                   !this.state.bUseCanvasBlur &&
                     this.state.bBackgroundLoaded &&
                     this.props.rgBlurImages[this.state.nBlurImageIndex] &&
                     (0, U.jsx)(`img`, {
                       src: this.props.rgBlurImages[this.state.nBlurImageIndex],
-                      className: e(
+                      className: t(
                         `oAbYPcN6xMk-`,
                         `EqH7klwhYE0-`,
                         n && `EQ-825XS0V4-`,
@@ -609,7 +609,7 @@ var X = class extends _.Component {
                     this.state.bBackgroundLoaded &&
                     !this.props.bLowPerfMode &&
                     (0, U.jsx)(pe, {
-                      className: e(`oAbYPcN6xMk-`, `EqH7klwhYE0-`),
+                      className: t(`oAbYPcN6xMk-`, `EqH7klwhYE0-`),
                       elementRef: this.m_refCanvasBlurImage,
                       updateRate: 0,
                       width: 192,
@@ -624,7 +624,7 @@ var X = class extends _.Component {
                       (0, U.jsx)(fe, {
                         ref: this.m_refBackgroundImage,
                         rgSources: this.props.rgHeaderImages,
-                        className: e(
+                        className: t(
                           `oAbYPcN6xMk-`,
                           !this.state.bBackgroundLoaded && `EQ-825XS0V4-`,
                         ),
@@ -645,14 +645,14 @@ c([g], X.prototype, `OnIncrementalError`, null),
   c([g], X.prototype, `OnHeaderLoad`, null),
   c([g], X.prototype, `OnBlurImageLoaded`, null),
   c([g], X.prototype, `OnBlurImageFailed`, null);
-function $e(t) {
+function $e(e) {
   let {
       logoPosition: n,
       strLogoImageURL: r,
       children: i,
       fnOnPositionChanged: a,
       fullscreen: o,
-    } = t,
+    } = e,
     {
       nBottomPct: s,
       nTopPct: c,
@@ -666,13 +666,13 @@ function $e(t) {
       width: `${n.nWidthPct}%`,
       height: `${n.nHeightPct}%`,
     },
-    f = e(L, v[n.pinnedPosition]);
+    f = t(L, v[n.pinnedPosition]);
   return (0, U.jsx)(`div`, {
     className: I,
     children: (0, U.jsxs)(`div`, {
       className: C,
       children: [
-        !t.editMode &&
+        !e.editMode &&
           (0, U.jsx)(`div`, {
             className: f,
             style: d,
@@ -689,7 +689,7 @@ function $e(t) {
                 }),
             }),
           }),
-        t.editMode &&
+        e.editMode &&
           (0, U.jsx)(Z, {
             id: r,
             pinType: n.pinnedPosition,
@@ -733,7 +733,7 @@ var Z = class extends _.Component {
   m_nLocalOffsetYPct;
   m_fnMouseUp = null;
   m_fnMouseMove = null;
-  m_listeners = new m();
+  m_listeners = new ae();
   m_pinType;
   constructor(e) {
     super(e), (this.state = {});
@@ -817,12 +817,12 @@ var Z = class extends _.Component {
     if (this.state.EdgeDown === void 0) return;
     e.shiftKey && this.m_fnMouseUp();
     let {
-        curTopPosPct: n,
-        curRightPosPct: r,
-        curBottomPosPct: i,
-        curLeftPosPct: a,
+        curTopPosPct: r,
+        curRightPosPct: i,
+        curBottomPosPct: a,
+        curLeftPosPct: o,
       } = this.state,
-      o = (e) => {
+      s = (e) => {
         let t =
           ((e - this.m_rectLinkRegion.left) /
             (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
@@ -839,11 +839,11 @@ var Z = class extends _.Component {
           this.props.pinType == `UpperCenter`
         ) {
           let e = Math.min(Math.max(t, 0), 45);
-          return (r = e), e;
+          return (i = e), e;
         }
         return t;
       },
-      s = (e) => {
+      c = (e) => {
         let t =
           100 -
           (((e - this.m_rectLinkRegion.left) /
@@ -856,11 +856,11 @@ var Z = class extends _.Component {
           this.props.pinType == `UpperCenter`
         ) {
           let e = Math.min(Math.max(t, 0), 45);
-          return (a = e), e;
+          return (o = e), e;
         }
         return t;
       },
-      c = (e) => {
+      l = (e) => {
         let t =
           ((e - this.m_rectLinkRegion.top) /
             (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
@@ -873,11 +873,11 @@ var Z = class extends _.Component {
           return 0;
         if (this.props.pinType == `CenterCenter`) {
           let e = Math.min(Math.max(t, 0), 45);
-          return (i = e), e;
+          return (a = e), e;
         }
         return t;
       },
-      l = (e) => {
+      u = (e) => {
         let t =
           100 -
           (((e - this.m_rectLinkRegion.top) /
@@ -891,69 +891,69 @@ var Z = class extends _.Component {
           return 0;
         if (this.props.pinType == `CenterCenter`) {
           let e = Math.min(Math.max(t, 0), 45);
-          return (n = e), e;
+          return (r = e), e;
         }
         return t;
       };
-    function u() {
-      i = Math.min(i, 98 - n);
+    function d() {
+      a = Math.min(a, 98 - r);
     }
     function f() {
-      r = Math.min(r, 99 - a);
+      i = Math.min(i, 99 - o);
     }
     function p() {
-      n = Math.min(n, 98 - i);
+      r = Math.min(r, 98 - a);
     }
     function m() {
-      a = Math.min(a, 99 - r);
+      o = Math.min(o, 99 - i);
     }
     switch (t) {
       case `Left`:
-        (a = o(e.clientX)), m();
+        (o = s(e.clientX)), m();
         break;
       case `Right`:
-        (r = s(e.clientX)), f();
+        (i = c(e.clientX)), f();
         break;
       case `Top`:
-        (n = c(e.clientY)), p();
+        (r = l(e.clientY)), p();
         break;
       case `Bottom`:
-        (i = l(e.clientY)), u();
+        (a = u(e.clientY)), d();
         break;
       case `Topleft`:
-        (n = c(e.clientY)), (a = o(e.clientX)), p(), m();
+        (r = l(e.clientY)), (o = s(e.clientX)), p(), m();
         break;
       case `TopRight`:
-        (n = c(e.clientY)), (r = s(e.clientX)), p(), f();
+        (r = l(e.clientY)), (i = c(e.clientX)), p(), f();
         break;
       case `BottomLeft`:
-        (i = l(e.clientY)), (a = o(e.clientX)), u(), m();
+        (a = u(e.clientY)), (o = s(e.clientX)), d(), m();
         break;
       case `BottomRight`:
-        (i = l(e.clientY)), (r = s(e.clientX)), u(), f();
+        (a = u(e.clientY)), (i = c(e.clientX)), d(), f();
         break;
       case `Middle`:
-        (r = s(e.clientX)),
-          (i = l(e.clientY)),
-          this.state.pinType != `CenterCenter` && (n = c(e.clientY)),
+        (i = c(e.clientX)),
+          (a = u(e.clientY)),
+          this.state.pinType != `CenterCenter` && (r = l(e.clientY)),
           this.state.pinType != `CenterCenter` &&
             this.state.pinType != `BottomCenter` &&
             this.state.pinType != `UpperCenter` &&
-            (a = o(e.clientX)),
+            (o = s(e.clientX)),
           p(),
-          u(),
+          d(),
           m(),
           f();
     }
-    (n = d(n, 0, 98)),
-      (i = d(i, 0, 98)),
-      (a = d(a, 0, 99)),
-      (r = d(r, 0, 99)),
+    (r = n(r, 0, 98)),
+      (a = n(a, 0, 98)),
+      (o = n(o, 0, 99)),
+      (i = n(i, 0, 99)),
       this.setState({
-        curTopPosPct: n,
-        curRightPosPct: r,
-        curBottomPosPct: i,
-        curLeftPosPct: a,
+        curTopPosPct: r,
+        curRightPosPct: i,
+        curBottomPosPct: a,
+        curLeftPosPct: o,
       }),
       e.preventDefault(),
       e.stopPropagation();
@@ -979,20 +979,20 @@ var Z = class extends _.Component {
       });
   }
   render() {
-    let t = {
+    let e = {
         left: this.state.curLeftPosPct + `%`,
         top: this.state.curTopPosPct + `%`,
         right: this.state.curRightPosPct + `%`,
         bottom: this.state.curBottomPosPct + `%`,
       },
-      n = e(
+      n = t(
         R,
-        this.state.EdgeDown && e(`PIhA-Ktj63o-`, v[this.state.EdgeDown]),
+        this.state.EdgeDown && t(`PIhA-Ktj63o-`, v[this.state.EdgeDown]),
         v[this.props.pinType],
       );
     return (0, U.jsx)(`div`, {
       className: n,
-      style: t,
+      style: e,
       ref: this.LinkRegionBoxRef,
       draggable: !1,
       children: (0, U.jsxs)(`div`, {
@@ -1075,13 +1075,13 @@ c([g], Z.prototype, `LinkRegionBoxRef`, null),
   c([g], Z.prototype, `OnMouseMove`, null),
   c([g], Z.prototype, `OnMouseUp`, null),
   c([g], Z.prototype, `OnResizeComplete`, null);
-var tt = (t) => {
-  let { title: n, className: r } = t,
+var tt = (e) => {
+  let { title: n, className: r } = e,
     i = 26;
   n.length > 8 && (i = Math.max(i - (n.length - 5) / 2, 5.8));
-  let [a, o] = re();
+  let [a, o] = te();
   return (0, U.jsxs)(`svg`, {
-    className: e(H, r),
+    className: t(H, r),
     viewBox: `0 0 300 14`,
     children: [
       (0, U.jsx)(`defs`, {
@@ -1114,8 +1114,8 @@ var tt = (t) => {
     ],
   });
 };
-function nt(t) {
-  let { title: n, children: r } = t,
+function nt(e) {
+  let { title: n, children: r } = e,
     i = _.useContext(q),
     a = _.useRef(null);
   return (0, U.jsx)(ce, {
@@ -1126,7 +1126,7 @@ function nt(t) {
     classNames: W,
     children: (0, U.jsxs)(`div`, {
       ref: a,
-      className: e(Je, n ? void 0 : ``),
+      className: t(Je, n ? void 0 : ``),
       children: [
         (0, U.jsx)(`div`, {
           className: qe,
@@ -1181,7 +1181,7 @@ var rt = class {
     return this.m_strSaveURL;
   }
 };
-c([r], rt.prototype, `m_logoPosition`, void 0);
+c([i], rt.prototype, `m_logoPosition`, void 0);
 var it = `gZTjQNknWIg-`,
   at = `lnkyboMJU1k-`,
   ot = `pYwhblKojHA-`,
@@ -1232,7 +1232,7 @@ function Yt() {
     children: [
       (0, U.jsx)(`span`, { style: { fontSize: 0 } }),
       (0, U.jsx)(`div`, {
-        className: e(vt),
+        className: t(vt),
         children: (0, U.jsxs)(`div`, {
           className: yt,
           children: [
@@ -1267,7 +1267,7 @@ function Yt() {
   });
 }
 function Xt() {
-  return (0, U.jsx)(`div`, { className: e(xt), children: (0, U.jsx)(Zt, {}) });
+  return (0, U.jsx)(`div`, { className: t(xt), children: (0, U.jsx)(Zt, {}) });
 }
 function Zt() {
   return (0, U.jsxs)(`div`, {
@@ -1335,7 +1335,7 @@ function $t() {
     children: (0, U.jsx)(`div`, {
       className: Gt,
       children: (0, U.jsx)(`div`, {
-        className: e(Kt, qt),
+        className: t(Kt, qt),
         children: (0, U.jsx)(`div`, { className: Jt, children: `PLAY` }),
       }),
     }),
@@ -1422,8 +1422,8 @@ var en = `Szu04ev-WDc-`,
     `Yu-Gi-Oh! Master Duel`,
     `雀魂麻將(MahjongSoul)`,
   ];
-function on(t) {
-  let { highlightedName: n } = t,
+function on(e) {
+  let { highlightedName: n } = e,
     r = _.useCallback((e) => {
       e && e.scrollIntoView({ block: `center` });
     }, []),
@@ -1436,18 +1436,18 @@ function on(t) {
     }, [n]);
   return (0, U.jsx)(`div`, {
     className: en,
-    children: i.map((t) => {
-      let i = n === t;
+    children: i.map((e) => {
+      let i = n === e;
       return (0, U.jsx)(
         `div`,
-        { className: e(tn, i ? nn : rn), ref: i ? r : void 0, children: t },
-        t,
+        { className: t(tn, i ? nn : rn), ref: i ? r : void 0, children: e },
+        e,
       );
     }),
   });
 }
 function sn(e, t) {
-  let n = new rt(a(`editorconfig`, t));
+  let n = new rt(o(`editorconfig`, t));
   be.createRoot(t).render(_.createElement(e ? Q : $, { LogoEditorStore: n }));
 }
 var Q = class extends _.Component {
@@ -1474,7 +1474,7 @@ var Q = class extends _.Component {
         try {
           let n = new FormData();
           n.append(`json`, `1`),
-            n.append(`sessionid`, l()),
+            n.append(`sessionid`, a()),
             n.append(
               `app[assets][library_logo][logo_position][pinned_position]`,
               t.pinnedPosition,
@@ -1497,7 +1497,7 @@ var Q = class extends _.Component {
       } else
         window.opener &&
           window.opener.postMessage(
-            { appid: e.GetAppID(), ...n(e.GetLogoPosition()) },
+            { appid: e.GetAppID(), ...r(e.GetLogoPosition()) },
             `*`,
           ),
           this.OnCancel();
@@ -1514,24 +1514,24 @@ var Q = class extends _.Component {
   render() {
     return (0, U.jsx)(_.Fragment, {
       children: (0, U.jsxs)(`div`, {
-        className: e(ut, this.state.saving && `eL6nV1smj9g-`),
+        className: t(ut, this.state.saving && `eL6nV1smj9g-`),
         children: [
           (0, U.jsxs)(`div`, {
             className: pt,
             children: [
               (0, U.jsx)(`div`, {
-                className: e(mt, this.state.saved && `eSDyAoPnXQU-`),
+                className: t(mt, this.state.saved && `eSDyAoPnXQU-`),
                 children: h(`#StoreAdmin_LibraryPlacementTool_ChangesSaved`),
               }),
               (0, U.jsxs)(`div`, {
                 className: ht,
                 children: [
-                  (0, U.jsx)(ie, {
+                  (0, U.jsx)(re, {
                     onClick: this.OnOK,
                     className: gt,
                     children: h(`#Button_Save`),
                   }),
-                  (0, U.jsx)(te, {
+                  (0, U.jsx)(m, {
                     onClick: this.OnCancel,
                     className: gt,
                     children: this.state.unsavedChanges

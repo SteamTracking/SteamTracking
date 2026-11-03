@@ -1,0 +1,39 @@
+.PC-T-1dYXe4- {
+  --radio-size: calc(var(--spacing-2) + var(--spacing-1));
+  --bg-default: var(--color-dull-8);
+  --bg-focus: var(--color-dull-9);
+  --bg-disabled: rgb(from var(--bg-focus) r g b / 50%);
+  --background-color: var(--bg-default);
+}
+.PC-T-1dYXe4-:hover:not([aria-checked="true"]):not(.uJHS-6Gu0K0-) {
+  --background-color: var(--bg-focus);
+}
+.PC-T-1dYXe4-:disabled,
+.PC-T-1dYXe4-.uJHS-6Gu0K0- {
+  --background-color: var(--bg-disabled);
+}
+.PC-T-1dYXe4-:focus-visible,
+.PC-T-1dYXe4-.gpfocus {
+  outline: none;
+}
+.PC-T-1dYXe4-:focus-visible .HoPMNUPOwr8-,
+.PC-T-1dYXe4-.gpfocus .HoPMNUPOwr8- {
+  outline: 2px solid #fff;
+}
+.PC-T-1dYXe4- .HoPMNUPOwr8- {
+  background-color: var(--background-color);
+  width: var(--radio-size);
+  min-width: var(--radio-size);
+  height: var(--radio-size);
+  min-height: var(--radio-size);
+  border-radius: var(--radio-size);
+  margin-top: 2px;
+  position: relative;
+}
+.PC-T-1dYXe4-[aria-checked="true"] .HoPMNUPOwr8-:after {
+  content: "";
+  background-color: var(--color-accent-8);
+  border-radius: var(--radio-size);
+  position: absolute;
+  inset: 2px;
+}

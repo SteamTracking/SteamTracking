@@ -36,7 +36,11 @@ import {
   _,
   _,
   _,
-} from "./storenaveventcontext.js?contenthash=B0hquxXn";
+  _,
+  _,
+  _,
+  _,
+} from "./storenaveventcontext.js?contenthash=txejLlpB";
 import {
   _,
   _,
@@ -99,11 +103,7 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-} from "./main.js?contenthash=Gj1oORqk";
+} from "./main.js?contenthash=Dv3tB2-X";
 var _ = _(_()),
   _ = _(_(), 1),
   _ = new (class {
@@ -18579,16 +18579,20 @@ function _(_) {
   return _.useMemo(() => (_(_.type) ? _(_) : null), [_]);
 }
 var _ = `xKH6brPrFV4-`,
-  _ = `fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb`;
-function _(_, _) {
+  _ = `fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb`,
+  _ = `https://steamloopback.host/clientassets/avatars/`;
+function _(_, _, _ = `auto`) {
   let _ = `.jpg`;
   (!_ || _ === `0000000000000000000000000000000000000000`) && (_ = _),
     _.length == 44 && ((_ = _.substr(-4)), (_ = _.substr(0, 40)));
-  let _ = _.AVATAR_BASE_URL;
+  let _ = _ == `client` || (_ == `auto` && _.IN_STEAMUI),
+    _ = _.AVATAR_BASE_URL;
   return (
-    _ ||
-      ((_ = _.MEDIA_CDN_COMMUNITY_URL + `images/avatars/`),
-      (_ += _.substr(0, 2) + `/`)),
+    _
+      ? ((_ = _), (_ = _.toLowerCase()))
+      : _ ||
+        ((_ = _.MEDIA_CDN_COMMUNITY_URL + `images/avatars/`),
+        (_ += _.substr(0, 2) + `/`)),
     (_ += _),
     _ && _ != `small` && (_ += `_` + _),
     (_ += _),
@@ -18641,7 +18645,7 @@ var _ = `061818254b2c99ac49e6626adb128ed1282a392f`,
             `/` +
             _ +
             `.jpg`
-        : _(_);
+        : _(_, `small`, `web`);
     }
     DeserializeFromMessage(_) {
       (this.m_bInitialized = !0),
@@ -19631,7 +19635,9 @@ var _ = `vjeKRorxqWY-`,
   _ = `RZ1644uUH-k-`,
   _ = `_5LTIC-a3DVw-`,
   _ = `BXKoUPp7c7k-`,
-  _ = `kg8VJS07NZk-`;
+  _ = `kg8VJS07NZk-`,
+  _ = `_8zZun04K77E-`,
+  _ = `rK6Z0uFfmRo-`;
 function _(_) {
   let {
       onActivate: _,
@@ -19644,48 +19650,65 @@ function _(_) {
       className: _,
       singleLineOnly: _,
       fullWidth: _,
+      bodySuffix: _,
+      bodySuffixToken: _,
     } = _,
     _ = _(_, _);
-  return (0, _.jsxs)(_, {
-    className: _(_, !_ && `_5OrWG-2Mx14-`, _),
-    onActivate: _,
-    onMouseDown: (_) => {
-      _.button == 1 && _ && _();
-    },
-    children: [
-      (0, _.jsx)(`div`, {
-        className: _,
-        children: _,
-      }),
-      _.personaStatus &&
-        (0, _.jsx)(`div`, {
-          className: _(`f0Hsd0awDV4-`, _),
+  return (
+    _ &&
+      _ &&
+      (_ = _(
+        _,
+        (0, _.jsx)(`span`, {
+          className: _,
+          children: _,
         }),
-      (0, _.jsxs)(`div`, {
-        className: _(_, _ && `Dcsg7SLpVF8-`),
-        children: [
-          (0, _.jsxs)(`div`, {
-            className: _,
-            children: [
-              !!_ &&
+        (0, _.jsx)(`span`, {
+          className: _,
+          children: _,
+        }),
+      )),
+    (0, _.jsxs)(_, {
+      className: _(_, !_ && !_ && `_5OrWG-2Mx14-`, _),
+      onActivate: _,
+      onMouseDown: (_) => {
+        _.button == 1 && _ && _();
+      },
+      children: [
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: _,
+        }),
+        _.personaStatus &&
+          (0, _.jsx)(`div`, {
+            className: _(`f0Hsd0awDV4-`, _),
+          }),
+        (0, _.jsxs)(`div`, {
+          className: _(_, _ && `Dcsg7SLpVF8-`),
+          children: [
+            (0, _.jsxs)(`div`, {
+              className: _,
+              children: [
+                !!_ &&
+                  (0, _.jsx)(`div`, {
+                    className: `q9vQBNOskjU-`,
+                    children: _,
+                  }),
                 (0, _.jsx)(`div`, {
-                  className: `q9vQBNOskjU-`,
+                  className: _,
                   children: _,
                 }),
-              (0, _.jsx)(`div`, {
-                className: _,
-                children: _,
-              }),
-            ],
-          }),
-          (0, _.jsx)(`div`, {
-            className: _,
-            children: _,
-          }),
-        ],
-      }),
-    ],
-  });
+              ],
+            }),
+            (0, _.jsx)(`div`, {
+              className: _(_, !!_ && `Mx1dwYBxHfo-`),
+              children: _,
+            }),
+          ],
+        }),
+      ],
+    })
+  );
 }
 var _ = `wtEvuR05t3A-`,
   _ = `JxEGxPRLYiU-`,

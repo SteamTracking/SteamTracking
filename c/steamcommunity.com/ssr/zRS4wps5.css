@@ -1,0 +1,64 @@
+.huRHJiZfYko- blockquote {
+  box-sizing: border-box;
+  word-break: break-word;
+  border: 1px solid #56707f;
+  border-radius: 3px;
+  margin: 8px;
+  padding: 12px;
+  font-size: 92%;
+  display: table;
+}
+.huRHJiZfYko- pre {
+  white-space: pre-wrap;
+  border: 1px solid #535354;
+  border-radius: 3px;
+  margin: 8px;
+  padding: 12px;
+  overflow-x: auto;
+}
+.huRHJiZfYko- code {
+  font-family: Consolas, monospace;
+  font-size: 13px;
+}
+.huRHJiZfYko- ul,
+.huRHJiZfYko- ol {
+  padding-inline-start: 40px;
+}
+.huRHJiZfYko- li {
+  margin-bottom: 5px;
+  list-style-position: outside;
+}
+.huRHJiZfYko- ul > li {
+  list-style-type: disc;
+}
+.IrN0YbAnJsw- h1,
+.IrN0YbAnJsw- h2,
+.IrN0YbAnJsw- h3 {
+  color: #5aa9d6;
+  clear: both;
+}
+.IrN0YbAnJsw- h2,
+.IrN0YbAnJsw- h3 {
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+.IrN0YbAnJsw- h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+}
+.IrN0YbAnJsw- h2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.IrN0YbAnJsw- h3 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+.SPnl2bpY6rA- {
+  max-width: 100%;
+}

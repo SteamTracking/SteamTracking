@@ -2,78 +2,78 @@
  ****/
 
 import {
-  A as e,
-  Bt as t,
+  $t as e,
+  A as t,
   U as n,
-  gt as r,
-  it as i,
-  qt as a,
-} from "./mobx.esm.js?contenthash=CuqnC1HA";
+  _t as r,
+  kt as i,
+  on as a,
+} from "./mobx.esm.js?contenthash=BRGZcCup";
 import {
   Ht as o,
   Jo as s,
-  Yo as c,
-  dn as l,
-  s as u,
-  sa as d,
-  so as f,
-  uo as p,
-} from "./dialogs.js?contenthash=Ef6x5QZW";
-import { n as ee } from "./long.js?contenthash=BCeVig72";
+  dn as c,
+  lo as l,
+  oa as u,
+  oo as d,
+  qo as f,
+  s as p,
+} from "./dialogs.js?contenthash=D1pxcxuf";
+import { n as m } from "./usedataloader.client.js?contenthash=DAd0LgAa";
+import { n as h } from "./long.js?contenthash=DWB27pGN";
 import {
-  D as m,
+  D as ee,
   a as te,
   k as ne,
-  r as h,
-} from "./react-router.js?contenthash=BY_BIsGq";
-import { t as g } from "./currencyformat.js?contenthash=lqE5xB1s";
+  r as g,
+} from "./react-router.js?contenthash=nQj0_J23";
 import {
   i as _,
   n as v,
   r as re,
   t as y,
-} from "./pricingguidelineobject.js?contenthash=zLI3iiBM";
-import { r as b } from "./modals.js?contenthash=BkJN1F7L";
-import { n as x, r as S } from "./render.js?contenthash=DtkfYyDz";
-import { n as C } from "./text.js?contenthash=Cyl0Hm-O";
-import { n as ie, t as ae } from "./button.js?contenthash=DOIwfHfd";
-import { t as w } from "./heading.js?contenthash=BTG9Wh20";
-import { t as T } from "./textlink.js?contenthash=6V1PXkY-";
+} from "./pricingguidelineobject.js?contenthash=BkbRq0Li";
+import { r as b } from "./modals.js?contenthash=Bi1vin1f";
+import { n as x, t as S } from "./flex.js?contenthash=BqvwdiAv";
+import { n as ie, t as ae } from "./button.js?contenthash=CU33iYfg";
+import { n as C } from "./text.js?contenthash=eLRF4CUL";
+import { t as w } from "./heading.js?contenthash=JlFqtEbo";
+import { t as T } from "./textlink.js?contenthash=DqM5ftUk";
 import {
   B as E,
-  K as oe,
-  O as se,
+  O as oe,
   R as D,
-  V as ce,
-  _ as le,
+  V as se,
+  _ as ce,
   a as O,
   d as k,
   g as A,
-  m as ue,
+  m as le,
   p as j,
+  q as ue,
   v as M,
   w as de,
   y as N,
-} from "./tabulatorutils.js?contenthash=DjJCijIL";
-import { t as P } from "./throbber.js?contenthash=DT0j8i1L";
+} from "./tabulatorutils.js?contenthash=BiwL1JH9";
+import { t as P } from "./throbber.js?contenthash=1eooMzHf";
 import {
   c as F,
   i as I,
   o as L,
   r as R,
   s as z,
-} from "./currencyutils.js?contenthash=DLilGjyJ";
+} from "./currencyutils.js?contenthash=BLJDeGzO";
 import {
   d as B,
   f as V,
   l as H,
   r as fe,
-} from "./pricinggridcell.js?contenthash=DiY9Ygmu";
-import { t as pe } from "./phpintegration.js?contenthash=CHDQW7hW";
-import { t as me } from "./unknownroute.js?contenthash=BBdYiwN1";
-import { n as he, t as U } from "./fancytable.js?contenthash=BrwA4o0C";
-import { a as ge, f as _e } from "./profilestore.js?contenthash=_1Ae-7Wi";
-import { t as W } from "./localization2.js?contenthash=DWWvuCzj";
+} from "./pricinggridcell.js?contenthash=LyzAlx0S";
+import { t as pe } from "./phpintegration.js?contenthash=CCsRwFZl";
+import { t as me } from "./unknownroute.js?contenthash=C2vrZ8Y1";
+import { n as he, t as U } from "./fancytable.js?contenthash=BiBqH93f";
+import { a as ge, f as _e } from "./profilestore.js?contenthash=3wVpz-0i";
+import { t as W } from "./localization3.js?contenthash=B4lvHMmE";
 import {
   a as ve,
   c as ye,
@@ -87,197 +87,197 @@ import {
   s as De,
   u as Oe,
   y as ke,
-} from "./saveprices.js?contenthash=Dv7n3JSX";
-import { n as G, t as Ae } from "./localization3.js?contenthash=B0mVjA4G";
+} from "./saveprices.js?contenthash=B2VMWVQE";
+import { n as G, t as Ae } from "./localization4.js?contenthash=73n-ZBjU";
 var K = {};
 (K.arabic = () =>
-  c(
+  s(
     () => import(`./currency_arabic.js?contenthash=gFBHoyni`),
     [],
     import.meta.url,
   )),
   (K.brazilian = () =>
-    c(
+    s(
       () => import(`./currency_brazilian.js?contenthash=KjHxyFBf`),
       [],
       import.meta.url,
     )),
   (K.bulgarian = () =>
-    c(
+    s(
       () => import(`./currency_bulgarian.js?contenthash=CmZniUHH`),
       [],
       import.meta.url,
     )),
   (K.czech = () =>
-    c(
+    s(
       () => import(`./currency_czech.js?contenthash=Brld-NkF`),
       [],
       import.meta.url,
     )),
   (K.danish = () =>
-    c(
+    s(
       () => import(`./currency_danish.js?contenthash=Dyd8FMZa`),
       [],
       import.meta.url,
     )),
   (K.dutch = () =>
-    c(
+    s(
       () => import(`./currency_dutch.js?contenthash=jt7JKRbR`),
       [],
       import.meta.url,
     )),
   (K.english = () =>
-    c(
+    s(
       () => import(`./currency_english.js?contenthash=DcNS618d`),
       [],
       import.meta.url,
     )),
   (K.finnish = () =>
-    c(
+    s(
       () => import(`./currency_finnish.js?contenthash=BOsgMjY5`),
       [],
       import.meta.url,
     )),
   (K.french = () =>
-    c(
+    s(
       () => import(`./currency_french.js?contenthash=CWYifI2w`),
       [],
       import.meta.url,
     )),
   (K.german = () =>
-    c(
+    s(
       () => import(`./currency_german.js?contenthash=D8O0Qd5l`),
       [],
       import.meta.url,
     )),
   (K.greek = () =>
-    c(
+    s(
       () => import(`./currency_greek.js?contenthash=C_30d4Wv`),
       [],
       import.meta.url,
     )),
   (K.hungarian = () =>
-    c(
+    s(
       () => import(`./currency_hungarian.js?contenthash=KrE9bPHA`),
       [],
       import.meta.url,
     )),
   (K.indonesian = () =>
-    c(
+    s(
       () => import(`./currency_indonesian.js?contenthash=GLv7lpUi`),
       [],
       import.meta.url,
     )),
   (K.italian = () =>
-    c(
+    s(
       () => import(`./currency_italian.js?contenthash=2ZJWmGPn`),
       [],
       import.meta.url,
     )),
   (K.japanese = () =>
-    c(
+    s(
       () => import(`./currency_japanese.js?contenthash=DVpUjcez`),
       [],
       import.meta.url,
     )),
   (K.koreana = () =>
-    c(
+    s(
       () => import(`./currency_koreana.js?contenthash=CWk_iEjY`),
       [],
       import.meta.url,
     )),
   (K.latam = () =>
-    c(
+    s(
       () => import(`./currency_latam.js?contenthash=Q9Q8vP40`),
       [],
       import.meta.url,
     )),
   (K.malay = () =>
-    c(
+    s(
       () => import(`./currency_malay.js?contenthash=fhaBO-Xv`),
       [],
       import.meta.url,
     )),
   (K.norwegian = () =>
-    c(
+    s(
       () => import(`./currency_norwegian.js?contenthash=Bc0SPDDJ`),
       [],
       import.meta.url,
     )),
   (K.polish = () =>
-    c(
+    s(
       () => import(`./currency_polish.js?contenthash=BOF_IGdx`),
       [],
       import.meta.url,
     )),
   (K.portuguese = () =>
-    c(
+    s(
       () => import(`./currency_portuguese.js?contenthash=DEBVwj_9`),
       [],
       import.meta.url,
     )),
   (K.romanian = () =>
-    c(
+    s(
       () => import(`./currency_romanian.js?contenthash=1c0yX7xS`),
       [],
       import.meta.url,
     )),
   (K.russian = () =>
-    c(
+    s(
       () => import(`./currency_russian.js?contenthash=DcouFg8i`),
       [],
       import.meta.url,
     )),
   (K.sc_schinese = () =>
-    c(
+    s(
       () => import(`./currency_sc_schinese.js?contenthash=-HVyXZH3`),
       [],
       import.meta.url,
     )),
   (K.schinese = () =>
-    c(
+    s(
       () => import(`./currency_schinese.js?contenthash=B6q7gqNk`),
       [],
       import.meta.url,
     )),
   (K.spanish = () =>
-    c(
+    s(
       () => import(`./currency_spanish.js?contenthash=Dg5T0oJY`),
       [],
       import.meta.url,
     )),
   (K.swedish = () =>
-    c(
+    s(
       () => import(`./currency_swedish.js?contenthash=D9qGtxR2`),
       [],
       import.meta.url,
     )),
   (K.tchinese = () =>
-    c(
+    s(
       () => import(`./currency_tchinese.js?contenthash=CqKmq7sE`),
       [],
       import.meta.url,
     )),
   (K.thai = () =>
-    c(
+    s(
       () => import(`./currency_thai.js?contenthash=3CA5Hupg`),
       [],
       import.meta.url,
     )),
   (K.turkish = () =>
-    c(
+    s(
       () => import(`./currency_turkish.js?contenthash=BsgHcKs7`),
       [],
       import.meta.url,
     )),
   (K.ukrainian = () =>
-    c(
+    s(
       () => import(`./currency_ukrainian.js?contenthash=C7AI--qO`),
       [],
       import.meta.url,
     )),
   (K.vietnamese = () =>
-    c(
+    s(
       () => import(`./currency_vietnamese.js?contenthash=CKVM5eDv`),
       [],
       import.meta.url,
@@ -285,12 +285,12 @@ var K = {};
 async function je(e) {
   if (K[e]) return await K[e]();
 }
-var q = m(je);
+var q = ee(je);
 function Me(e) {
   return q.Localize(`#CurrencyCodeDescription_${I(e)}`);
 }
-var J = a(r(), 1),
-  Y = i();
+var J = a(i(), 1),
+  Y = r();
 function X(e) {
   return Me(e.getValue());
 }
@@ -299,32 +299,32 @@ function Ne(e) {
     n = z(t),
     r = q.Localize(`#Region_Pricing_Tooltip_${n}`);
   return (0, Y.jsxs)(`span`, {
-    children: [n, ` `, (0, Y.jsx)(l, { tooltip: r })],
+    children: [n, ` `, (0, Y.jsx)(c, { tooltip: r })],
   });
 }
 var Pe = { PriceEdit: (e) => `/packages/pricing/${e}` },
-  Z = a(s());
-function Fe(e, n, r) {
+  Z = a(f());
+function Fe(t, n, r) {
   let i = _(),
     a = V();
   return (0, J.useMemo)(() => {
     let o = [],
       s = [],
       c = [];
-    if (e) {
+    if (t) {
       let l = L(1).toUpperCase(),
         u = j(n, l) || A(n, l) || M(n, l);
-      for (let t = 1; t < 48; ++t) {
-        if (!e.BIsSupportCurrencyAndOrRegion(t)) continue;
-        let s = L(t).toUpperCase(),
+      for (let e = 1; e < 48; ++e) {
+        if (!t.BIsSupportCurrencyAndOrRegion(e)) continue;
+        let s = L(e).toUpperCase(),
           c = M(n, s),
           l = A(n, s),
           d = j(n, s),
-          f = e.GetScaledRecommendedPrice(u, t, void 0, i).price;
+          f = t.GetScaledRecommendedPrice(u, e, void 0, i).price;
         o.push({
           packageID: n,
           strPriceKey: s,
-          eCurrencyCode: t,
+          eCurrencyCode: e,
           eRegionCode: void 0,
           strCountryOverride: void 0,
           nPublishedPrice: c,
@@ -335,18 +335,18 @@ function Fe(e, n, r) {
           appids: r,
         });
       }
-      for (let t = 1; t < 5; ++t) {
-        if (!e.BIsSupportCurrencyAndOrRegion(1, t)) continue;
-        let a = L(1, t).toUpperCase(),
+      for (let e = 1; e < 5; ++e) {
+        if (!t.BIsSupportCurrencyAndOrRegion(1, e)) continue;
+        let a = L(1, e).toUpperCase(),
           o = M(n, a),
           c = A(n, a),
           l = j(n, a),
-          d = e.GetScaledRecommendedPrice(u, 1, t, i).price;
+          d = t.GetScaledRecommendedPrice(u, 1, e, i).price;
         s.push({
           packageID: n,
           strPriceKey: a,
           eCurrencyCode: 1,
-          eRegionCode: t,
+          eRegionCode: e,
           strCountryOverride: void 0,
           nPublishedPrice: o,
           nProposedPrice: c,
@@ -356,25 +356,25 @@ function Fe(e, n, r) {
           appids: r,
         });
       }
-      let d = le(n);
+      let d = ce(n);
       d.length > 0 &&
-        d.forEach((e) => {
-          let { eCurrencyCode: i, strCountryCode: a } = F(e),
+        d.forEach((t) => {
+          let { eCurrencyCode: i, strCountryCode: a } = F(t),
             o = R(a);
-          t(
+          e(
             i == o,
             `Unexpected currency ${i} for country ${a} when expecting ${o} `,
           );
-          let s = A(n, e);
+          let s = A(n, t);
           c.push({
             packageID: n,
-            strPriceKey: e,
+            strPriceKey: t,
             eCurrencyCode: i,
             eRegionCode: void 0,
             strCountryOverride: a,
-            nPublishedPrice: N(n, e),
+            nPublishedPrice: N(n, t),
             nProposedPrice: s,
-            nLocalPrice: j(n, e),
+            nLocalPrice: j(n, t),
             nSuggestedPrice: void 0,
             bCanSetToFree: !1,
             appids: r,
@@ -382,13 +382,13 @@ function Fe(e, n, r) {
         });
     }
     return { rgCurrencyRows: o, rgRegionRows: s, rgCountryOverrideRows: c };
-  }, [e, n, a, i, r]);
+  }, [t, n, a, i, r]);
 }
 function Ie(e) {
   let t = `${n.PARTNER_BASE_URL}doc/finance/taxfaq`;
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsxs)(S, {
+      (0, Y.jsxs)(x, {
         paddingBottom: `4`,
         children: [
           (0, Y.jsx)(C, {
@@ -422,7 +422,7 @@ function Ie(e) {
           }),
         ],
       }),
-      (0, Y.jsx)(S, {
+      (0, Y.jsx)(x, {
         paddingBottom: `4`,
         children: (0, Y.jsx)(C, {
           children: W.LocalizeReact(
@@ -434,7 +434,7 @@ function Ie(e) {
           ),
         }),
       }),
-      (0, Y.jsx)(S, {
+      (0, Y.jsx)(x, {
         children: (0, Y.jsx)(C, {
           children: W.Localize(`#SinglePricingPackage_Desc_3`),
         }),
@@ -451,47 +451,47 @@ var Le = `wo2GzPtQoTA-`,
 function Q(e) {
   return e.getValue() == -1 || !e.getValue()
     ? `--`
-    : g(e.getValue(), e.row.original.eCurrencyCode);
+    : m(e.getValue(), e.row.original.eCurrencyCode);
 }
-function Ue(t) {
-  let n = t.row.original;
+function Ue(e) {
+  let n = e.row.original;
   if (n.nProposedPrice == -1 || !n.nProposedPrice) return `--`;
   let r = !n.nPublishedPrice;
   return (0, Y.jsx)(`span`, {
-    className: e({
+    className: t({
       [Le]: r,
       [Re]: !r && n.nProposedPrice > n.nPublishedPrice,
       [ze]: !r && n.nProposedPrice < n.nPublishedPrice,
     }),
-    children: g(n.nProposedPrice, n.eCurrencyCode),
+    children: m(n.nProposedPrice, n.eCurrencyCode),
   });
 }
 function We(e) {
   return Ae(e.row.original.strCountryOverride);
 }
-function Ge(t) {
+function Ge(e) {
   let {
       packageID: n,
       strPriceKey: r,
       eRegionCode: i,
       eCurrencyCode: a,
-    } = t.row.original,
+    } = e.row.original,
     { nPriceInCents: o, nProposedPriceInCents: s } = E(n, r),
     c = _(),
     l = v(),
     u = L(1).toUpperCase(),
     d = j(n, u) || A(n, u) || M(n, u),
-    { nGuidelinesLevel: f } = ce(l, c, d, a, i),
-    p = ue(r, o ?? s, f, !0);
+    { nGuidelinesLevel: f } = se(l, c, d, a, i),
+    p = le(r, o ?? s, f, !0);
   return p == -1 || !p
     ? `--`
-    : (0, Y.jsxs)(`span`, { className: e({}), children: [p, ` %`] });
+    : (0, Y.jsxs)(`span`, { className: t({}), children: [p, ` %`] });
 }
 function Ke(e) {
   let { nPackageID: t } = e;
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsxs)(x, {
+      (0, Y.jsxs)(S, {
         direction: `column`,
         align: `start`,
         paddingBottom: `4`,
@@ -505,7 +505,7 @@ function Ke(e) {
           }),
         ],
       }),
-      (0, Y.jsxs)(x, {
+      (0, Y.jsxs)(S, {
         direction: `column`,
         paddingBottom: `4`,
         children: [
@@ -522,14 +522,14 @@ function Ke(e) {
           }),
         ],
       }),
-      (0, Y.jsxs)(x, {
+      (0, Y.jsxs)(S, {
         direction: `column`,
         children: [
           (0, Y.jsx)(w, {
             size: `7`,
             children: W.Localize(`#SinglePackagePricing_Right_FAQ`),
           }),
-          (0, Y.jsxs)(S, {
+          (0, Y.jsxs)(x, {
             children: [
               (0, Y.jsx)(C, {
                 size: `4`,
@@ -557,15 +557,15 @@ function Ke(e) {
     ],
   });
 }
-function qe(t) {
-  let { nPackageID: n } = t,
+function qe(e) {
+  let { nPackageID: n } = e,
     r = D(n),
-    [i, a, s] = p(),
+    [i, a, s] = l(),
     c = de(n),
-    [l, f] = (0, J.useState)(!1);
+    [d, f] = (0, J.useState)(!1);
   return r
     ? (0, Y.jsxs)(`div`, {
-        className: e(Oe, be),
+        className: t(Oe, be),
         children: [
           (0, Y.jsx)(`div`, {
             className: Se,
@@ -577,21 +577,21 @@ function qe(t) {
               (0, Y.jsx)(xe, { packageID: n, bShowCancel: !1 }),
               (0, Y.jsx)(o, {
                 onClick: a,
-                className: e(De),
-                children: d(`#PricingDashboard_CancelPriceProposal`),
+                className: t(De),
+                children: u(`#PricingDashboard_CancelPriceProposal`),
               }),
               (0, Y.jsx)(b, {
                 active: i,
-                children: (0, Y.jsx)(u, {
-                  strTitle: d(`#PricingDashboard_CancelPriceProposal`),
-                  strDescription: d(`#Dialog_AreYouSure`),
+                children: (0, Y.jsx)(p, {
+                  strTitle: u(`#PricingDashboard_CancelPriceProposal`),
+                  strDescription: u(`#Dialog_AreYouSure`),
                   closeModal: s,
                   onOK: async () => {
                     f(!0), await c(), f(!1), window.location.reload();
                   },
                   children:
-                    l &&
-                    (0, Y.jsx)(P, { string: d(`#ImageUpload_Processing`) }),
+                    d &&
+                    (0, Y.jsx)(P, { string: u(`#ImageUpload_Processing`) }),
                 }),
               }),
             ],
@@ -603,13 +603,13 @@ function qe(t) {
 var $ = he();
 function Je(e) {
   let { nPackageID: t, appids: n } = e,
-    r = se();
+    r = oe();
   _e(r);
   let i = Ee(),
     a = Number.parseInt(t);
   return (
     v(),
-    (0, Y.jsx)(ee, {
+    (0, Y.jsx)(h, {
       children: (0, Y.jsxs)(ge, {
         fnBLocalChangesExist: r,
         fnWarnUser: i,
@@ -654,33 +654,33 @@ function Ye(e) {
       rgCountryOverrideRows: o,
     } = Fe(r, t, n),
     s = D(t),
-    c = !!s,
-    u = s?.eState == 4,
+    l = !!s,
+    d = s?.eState == 4,
     { fnApplyGuidelines: f } = y(O());
   (0, J.useEffect)(() => {
-    oe([t]);
+    ue([t]);
   }, [t]);
   let p = [
     $.accessor(`nPublishedPrice`, {
-      header: d(`#PackagePricing_Col_CurPrice`),
+      header: u(`#PackagePricing_Col_CurPrice`),
       meta: { cellClassname: (0, Z.default)(Be) },
       size: 120,
       cell: Q,
     }),
-    $.accessor(c ? `nProposedPrice` : `strPriceKey`, {
-      header: d(
-        u ? `#PackagePricing_Col_Approved` : `#PackagePricing_Col_Proposal`,
+    $.accessor(l ? `nProposedPrice` : `strPriceKey`, {
+      header: u(
+        d ? `#PackagePricing_Col_Approved` : `#PackagePricing_Col_Proposal`,
       ),
       meta: { cellClassname: (0, Z.default)(Ve) },
       size: 280,
-      cell: c ? Ue : fe,
+      cell: l ? Ue : fe,
     }),
-    $.accessor(c ? `nProposedPrice` : `strPriceKey`, {
+    $.accessor(l ? `nProposedPrice` : `strPriceKey`, {
       id: `nMaxDiscount`,
-      header: d(`#PackagePricing_Col_MaxDiscount`),
+      header: u(`#PackagePricing_Col_MaxDiscount`),
       meta: {
         cellClassname: (0, Z.default)(He),
-        strHeaderTooltip: d(`#PackagePricing_Col_MaxDiscount_ttip`),
+        strHeaderTooltip: u(`#PackagePricing_Col_MaxDiscount_ttip`),
       },
       size: 150,
       cell: Ge,
@@ -690,7 +690,7 @@ function Ye(e) {
     ? null
     : (0, Y.jsxs)(Y.Fragment, {
         children: [
-          c
+          l
             ? (0, Y.jsx)(Y.Fragment, {
                 children: (0, Y.jsx)(`div`, {
                   className: `colSection`,
@@ -700,7 +700,7 @@ function Ye(e) {
             : (0, Y.jsx)(Y.Fragment, {
                 children: (0, Y.jsx)(`div`, {
                   className: `colSection`,
-                  children: (0, Y.jsxs)(x, {
+                  children: (0, Y.jsxs)(S, {
                     direction: `row`,
                     gap: `5`,
                     children: [
@@ -709,7 +709,7 @@ function Ye(e) {
                           f(t, k(t, `USD`), e);
                         },
                       }),
-                      (0, Y.jsxs)(x, {
+                      (0, Y.jsxs)(S, {
                         direction: `column`,
                         children: [
                           (0, Y.jsx)(C, {
@@ -721,18 +721,18 @@ function Ye(e) {
                           (0, Y.jsx)(Xe, { usdRow: i[1] }),
                         ],
                       }),
-                      (0, Y.jsxs)(x, {
+                      (0, Y.jsxs)(S, {
                         direction: `column`,
                         align: `start`,
                         children: [
                           (0, Y.jsxs)(C, {
                             size: `3`,
                             children: [
-                              d(
+                              u(
                                 `#PricingDashboard_ApplyGuidelinesDialog_Context_Short`,
                               ),
-                              (0, Y.jsx)(l, {
-                                tooltip: d(
+                              (0, Y.jsx)(c, {
+                                tooltip: u(
                                   `#PricingDashboard_ApplyGuidelinesDialog_Context`,
                                 ),
                               }),
@@ -760,7 +760,7 @@ function Ye(e) {
                 ),
                 columns: [
                   $.accessor(`eCurrencyCode`, {
-                    header: d(`#PackagePricing_Col_Currency`),
+                    header: u(`#PackagePricing_Col_Currency`),
                     size: 200,
                     cell: X,
                   }),
@@ -779,12 +779,12 @@ function Ye(e) {
                 ),
                 columns: [
                   $.accessor(`eRegionCode`, {
-                    header: d(`#PackagePricing_Col_Region`),
+                    header: u(`#PackagePricing_Col_Region`),
                     size: 200,
                     cell: Ne,
                   }),
                   $.accessor(`eCurrencyCode`, {
-                    header: d(`#PackagePricing_Col_Currency`),
+                    header: u(`#PackagePricing_Col_Currency`),
                     size: 100,
                     cell: X,
                   }),
@@ -804,12 +804,12 @@ function Ye(e) {
                   ),
                   columns: [
                     $.accessor(`strCountryOverride`, {
-                      header: d(`#PackagePricing_Col_Country`),
+                      header: u(`#PackagePricing_Col_Country`),
                       size: 200,
                       cell: We,
                     }),
                     $.accessor(`eCurrencyCode`, {
-                      header: d(`#PackagePricing_Col_Currency`),
+                      header: u(`#PackagePricing_Col_Currency`),
                       size: 100,
                       cell: X,
                     }),
@@ -844,13 +844,13 @@ function Xe(e) {
 }
 function Ze(e) {
   let { nPackageID: t, oPricingGuideline: n } = e,
-    [r, i, a] = p(),
-    o = f();
+    [r, i, a] = l(),
+    o = d();
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
       (0, Y.jsx)(ae, {
         onClick: i,
-        children: d(`#PricingDashboard_ApplyGuidelinesDialog_Button`),
+        children: u(`#PricingDashboard_ApplyGuidelinesDialog_Button`),
       }),
       (0, Y.jsx)(b, {
         active: r,
@@ -869,7 +869,7 @@ function Qe(e) {
     (0, Y.jsx)(te, {
       children: (0, Y.jsxs)(re, {
         children: [
-          (0, Y.jsx)(h, {
+          (0, Y.jsx)(g, {
             path: Pe.PriceEdit(`:packageid`),
             children: (0, Y.jsx)(pe, {
               config: {
@@ -877,7 +877,7 @@ function Qe(e) {
               },
             }),
           }),
-          (0, Y.jsx)(h, { component: me }),
+          (0, Y.jsx)(g, { component: me }),
         ],
       }),
     })

@@ -1,0 +1,9 @@
+.l42o7CLwn7I- {
+  scrollbar-gutter: stable;
+  overflow: hidden !important;
+}
+@media screen and (width <= 730px) {
+  .l42o7CLwn7I- {
+    scrollbar-gutter: initial;
+  }
+}
