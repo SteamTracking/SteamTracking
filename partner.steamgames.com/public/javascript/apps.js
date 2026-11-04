@@ -2413,72 +2413,147 @@ function RevertApp( appid, section )
 //
 // chunked uploads to cross-domain server once we have acquired an upload token
 //
+// a few chunks go up at once and each one is retried with backoff. the server writes each
+// chunk at its Content-Range offset, so resending one is harmless. onFinish is called once,
+// with status.failed != 0 if a chunk ran out of retries.
+//
+var k_cbUploadChunk = 2 * 1024 * 1024;			// 2MB chunks
+var k_cUploadChunksInFlight = 4;
+var k_cUploadChunkAttempts = 6;					// waits 1s, 2s, 4s, 8s, 16s between tries
+var k_msUploadChunkStallTimeout = 300 * 1000;	// abort a chunk with no upload progress for this long, progress is just when OS says TCP send is done, so we still need a decent period here
+
 function startChunkUploads( inputItem, progressItem, onFinish )
 {
     return function ( initResults )
     {
-        // check and fire up the actual upload
         var blob = inputItem.files[0];
-        // lol, const.
-        var BYTES_PER_CHUNK = 2 * 1024 * 1024; // 2MB chunk sizes.
         var SIZE = blob.size;
-        var start = 0;
-        var end = start + BYTES_PER_CHUNK;
+        var cChunks = Math.ceil( SIZE / k_cbUploadChunk );
+        var iNextChunk = 0;
+        var cInFlight = 0;
+        var bFinished = false;
         var status = {
-            'pending': Math.ceil( SIZE / BYTES_PER_CHUNK ),
+            'pending': cChunks,
             'succeeded': 0,
             'failed': 0,
             totalUploaded: 0
         };
 
         // reset upload bar
-        jQuery( progressItem ).addClass( 'display').val( 0 ).attr( 'max', SIZE );
+        jQuery( progressItem ).addClass( 'display' ).val( 0 ).attr( 'max', SIZE );
 
-        // keep these synchronous for now; the back end server does not take kindly to
-        // multiple outstanding requests
-        while ( start < SIZE ) {
-            end = Math.min( end, SIZE );
-            jQuery.ajax( initResults[ 'location' ], {
+        // call onFinish once everything sent has settled, or once a failed chunk's
+        // in flight neighbors have settled
+        function finishIfDone()
+        {
+            if ( bFinished || cInFlight != 0 )
+                return;
+
+            if ( status.failed == 0 && iNextChunk < cChunks )
+                return;
+
+            bFinished = true;
+            jQuery( progressItem ).removeClass( 'display' );
+            onFinish( initResults, status );
+        }
+
+        function chunkDone( bSucceeded, cbChunk )
+        {
+            cInFlight--;
+            status.pending--;
+            if ( bSucceeded )
+            {
+                status.succeeded++;
+                status.totalUploaded += cbChunk;
+                jQuery( progressItem ).val( status.totalUploaded );
+            }
+            else
+            {
+                status.failed++;
+            }
+
+            startMoreChunks();
+            finishIfDone();
+        }
+
+        function sendChunk( iChunk, cAttempts )
+        {
+            var start = iChunk * k_cbUploadChunk;
+            var end = Math.min( start + k_cbUploadChunk, SIZE );
+
+            // another chunk already gave up, don't bother
+            if ( status.failed != 0 )
+            {
+                chunkDone( false, 0 );
+                return;
+            }
+
+            // no fixed timeout since slow links can take a long time on 2MB. instead abort
+            // if the upload stops making progress, or the response never comes back.
+            var msLastProgress = Date.now();
+            var hStallTimer = null;
+
+            var jqXHR = jQuery.ajax( initResults[ 'location' ], {
                 async: true,
-                accepts: 'application/json',
                 type: 'POST',
-                error: function( jqXHR, textStatus, errorThrown ) {
-                    // handle bogus chrome errors
-                    if ( jqXHR.readyState == 0 ) {
-                        return;
+                dataType: 'text',
+                xhr: function() {
+                    var xhr = jQuery.ajaxSettings.xhr();
+                    if ( xhr.upload )
+                    {
+                        xhr.upload.addEventListener( 'progress', function() { msLastProgress = Date.now(); } );
                     }
-                    jqXHR.bChunkFailed = true;
+                    return xhr;
                 },
-                complete: function( jqXHR, textStatus ) {
-                    var cCurrent = --status.pending;
-                    // because of some bogus chrome errors, we cannot rely on success being called.
-                    if ( jqXHR.bChunkFailed )
-                    {
-                        status.failed++;
-                    }
-                    else
-                    {
-                        status.succeeded++;
-                        status.totalUploaded += ( end - start );
-                        jQuery( progressItem ).val( status.totalUploaded );
-                    }
-                     // see if we need to fire the "all done" callback
-                    if ( cCurrent == 0 )
-                    {
-                        onFinish( initResults, status );
-                        jQuery( progressItem ).removeClass( 'display' );
-                    }
+                complete: function() {
+                    clearInterval( hStallTimer );
                 },
                 headers: {
                     'Content-Type': 'application/octet-stream',
                     'Content-Range': 'bytes ' + start + '-' + ( end - 1 ) + '/' + SIZE
                 },
                 data: blob.slice( start, end ),
-                processData: false
+                processData: false,
+                success: function() {
+                    chunkDone( true, end - start );
+                },
+                error: function( jqXHR, textStatus ) {
+                    // readyState 0 is a dropped connection or timeout, retry those too
+                    cAttempts++;
+                    if ( cAttempts < k_cUploadChunkAttempts && status.failed == 0 )
+                    {
+                        var msDelay = 1000 * Math.pow( 2, cAttempts - 1 );
+                        console.log( 'Upload chunk ' + iChunk + ' failed (' + textStatus + ', HTTP ' + jqXHR.status + '), retry ' + cAttempts + ' in ' + msDelay + 'ms' );
+                        setTimeout( function() { sendChunk( iChunk, cAttempts ); }, msDelay );
+                        return;
+                    }
+
+                    console.log( 'Upload chunk ' + iChunk + ' failed (' + textStatus + ', HTTP ' + jqXHR.status + '), giving up' );
+                    chunkDone( false, 0 );
+                }
             } );
-            start = end;
-            end = start + BYTES_PER_CHUNK;
+
+            hStallTimer = setInterval( function() {
+                if ( Date.now() - msLastProgress > k_msUploadChunkStallTimeout )
+                {
+                    clearInterval( hStallTimer );
+                    jqXHR.abort( 'stalled' );
+                }
+            }, 5000 );
         }
+
+        function startMoreChunks()
+        {
+            while ( cInFlight < k_cUploadChunksInFlight && iNextChunk < cChunks && status.failed == 0 )
+            {
+                cInFlight++;
+                sendChunk( iNextChunk, 0 );
+                iNextChunk++;
+            }
+        }
+
+        startMoreChunks();
+        finishIfDone();
     }
 }
 

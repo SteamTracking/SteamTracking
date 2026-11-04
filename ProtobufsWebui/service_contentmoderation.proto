@@ -206,6 +206,9 @@ message CContentModeration_GetSubjectOverview_Response_Bucket {
 	optional uint32 oldest_unresolved_for_supervisor = 12;
 	optional uint32 oldest_unresolved_for_valve = 13;
 	optional .ReportedContentCoordinates coordinates = 14;
+	optional uint32 claimable_for_any_moderator = 15;
+	optional uint32 claimable_for_supervisor = 16;
+	optional uint32 claimable_for_valve = 17;
 }
 
 message CContentModeration_OwnerDisputeModeration_Request {

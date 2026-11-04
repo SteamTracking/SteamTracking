@@ -6157,6 +6157,24 @@ function _() {
     (_ ^= _.charCodeAt(_)), (_ = Math.imul(_, 16777619) >>> 0);
   return _ % 100 < _;
 }
+function _(_) {
+  if (typeof navigator > `u` || !navigator.sendBeacon) return;
+  let _ = Math.min(_.strListTerm.trim().length, 100);
+  if (!_) return;
+  let _ = new URLSearchParams({
+    appid: String(_.appid),
+    depth: String(_.depth),
+    scoring: _.bNameMatchScoring ? `edismax_beta` : `default`,
+    term_length: String(_),
+    typed_length: String(Math.min(_.strTypedTerm.trim().length, 100)),
+    edits: String(_.cEdits),
+    elapsed_ms: String(Math.max(0, Math.round(_.msElapsed))),
+    input: _.eInput,
+  });
+  try {
+    navigator.sendBeacon(`${_.STORE_BASE_URL}search/suggestmetrics`, _);
+  } catch {}
+}
 var _ = {
     include_assets: !0,
     apply_user_filters: !0,
@@ -6166,7 +6184,13 @@ var _ = {
     include_creators: !0,
   };
 function _(_) {
-  let { list: _, iActiveIndex: _, activeSection: _, getMouseHandlers: _ } = _,
+  let {
+      list: _,
+      iActiveIndex: _,
+      activeSection: _,
+      getMouseHandlers: _,
+      onSuggestionClick: _,
+    } = _,
     _,
     _,
     _;
@@ -6181,6 +6205,7 @@ function _(_) {
               index: _,
               active: _ == `apps` && _ == _,
               getMouseHandlers: _,
+              onSuggestionClick: _,
             },
             _(_),
           ),
@@ -6295,6 +6320,7 @@ function _(_, _, _, _ = !0) {
     ),
     _ = _(_, 5, _),
     _ = _(_, _ === void 0 ? `` : _),
+    _ = _(_, !!_.use_name_match_scoring),
     _ = _ && _ == ``,
     { data: _ } = _(_),
     { data: _ } = _(_),
@@ -6307,6 +6333,7 @@ function _(_, _, _, _ = !0) {
           let [_, _, _] = _(_.data.rgItemIDs);
           return {
             eListType: `suggestions`,
+            strTerm: _.data.strTerm,
             strMainTitle: _(`#Menu_SearchBar_SearchResults`),
             rgMainItems: _.slice(0, _).map((_) => ({
               item_id: _,
@@ -6339,6 +6366,42 @@ function _(_, _, _, _ = !0) {
           };
         }
       }, [_, _, _, _, _, _]),
+      _,
+    )
+  );
+}
+function _(_, _) {
+  let _ = _.useRef({
+    strTerm: ``,
+    msStart: 0,
+    cEdits: 0,
+  });
+  return (
+    _.useEffect(() => {
+      let _ = _.current;
+      _ != _.strTerm &&
+        (_.strTerm || ((_.msStart = performance.now()), (_.cEdits = 0)),
+        (_.strTerm = _),
+        _.cEdits++);
+    }, [_]),
+    _.useCallback(
+      (_, _, _) => {
+        let _ = _.rgMainItems[_]?.item_id;
+        if (_.eListType != `suggestions` || !_.strTerm || !_ || !(`appid` in _))
+          return;
+        let _ = _.current;
+        _({
+          appid: _.appid,
+          depth: _ + 1,
+          bNameMatchScoring: _,
+          strListTerm: _.strTerm,
+          strTypedTerm: _.strTerm,
+          cEdits: _.cEdits,
+          msElapsed: performance.now() - _.msStart,
+          eInput: _,
+        });
+      },
+      [_],
     )
   );
 }
@@ -6368,7 +6431,7 @@ var _ = {
   strMainTitle: ``,
   rgMainItems: [],
 };
-function _(_) {
+function _(_, _) {
   let [_, _] = _.useState(_ || _),
     [_, _] = _.useState({
       activeSection: `apps`,
@@ -6516,6 +6579,7 @@ function _(_) {
                       feature: _,
                     };
             return (
+              _ == `apps` && _(_, _, `keyboard`),
               _(_[_].item_id, {
                 ..._,
                 ..._,
@@ -6529,7 +6593,10 @@ function _(_) {
     }
     return !1;
   };
-  let _ = _.useCallback((_) => _.current(_), []);
+  let _ = _.useCallback((_) => _.current(_), []),
+    _ = _.useRef(_);
+  _.current = _;
+  let _ = _.useCallback((_) => _(_.current, _, `click`), [_]);
   return {
     list: _,
     activeSection: _.activeSection,
@@ -6538,6 +6605,7 @@ function _(_) {
         ? void 0
         : Math.max(0, Math.min(_.length - 1, _.iActiveIndex)),
     getMouseHandlers: _,
+    onSuggestionClick: _,
     onKeyDown: _,
   };
 }
@@ -6598,8 +6666,20 @@ function _(_) {
   });
 }
 var _ = _.memo(function (_) {
-    let { itemid: _, index: _, getMouseHandlers: _, active: _ = !1 } = _,
-      _ = _.useMemo(() => _(`apps`, _), [_, _]);
+    let {
+        itemid: _,
+        index: _,
+        getMouseHandlers: _,
+        onSuggestionClick: _,
+        active: _ = !1,
+      } = _,
+      _ = _.useMemo(
+        () => ({
+          ..._(`apps`, _),
+          onClick: () => _(_),
+        }),
+        [_, _, _],
+      );
     return (0, _.jsx)(_, {
       depth: _ + 1,
       children: (0, _.jsx)(_, {

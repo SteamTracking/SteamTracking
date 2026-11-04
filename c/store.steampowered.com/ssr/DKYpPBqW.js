@@ -75,6 +75,7 @@ async function _(_, _, _, _, _, _ = {}) {
       _.Body().context()?.country_code()?.trim().toUpperCase() || ``,
     ) && (_ = _.filter((_) => _.tagid() !== _)),
     {
+      strTerm: _,
       rgItemIDs: _.map(_),
       metadata: _.Body().metadata().toObject(),
     }

@@ -1690,6 +1690,7 @@ ${STORE_BASE_URL}search/?franchise=${}
 ${STORE_BASE_URL}search/?term=${}
 ${STORE_BASE_URL}search/results/?${}
 ${STORE_BASE_URL}search/suggest
+${STORE_BASE_URL}search/suggestmetrics
 ${STORE_BASE_URL}sitemap
 ${STORE_BASE_URL}sitemap/#genres
 ${STORE_BASE_URL}specials

@@ -1182,6 +1182,21 @@ var _ = _(_(), 1),
               _: 14,
               _: _,
             },
+            claimable_for_any_moderator: {
+              _: 15,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            claimable_for_supervisor: {
+              _: 16,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            claimable_for_valve: {
+              _: 17,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
           },
         }),
         _.sm_m

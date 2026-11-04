@@ -3,10 +3,10 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./avatarcrop.js?contenthash=CLcDVx2L",
+      "./avatarcrop.js?contenthash=CYbyYkjH",
       "./rolldown-runtime.js?contenthash=C8f2gWku",
       "./libraries.js?contenthash=BSMOk6Fq",
-      "./main.js?contenthash=YyCh67xk",
+      "./main.js?contenthash=BMjFHmU0",
       "../../../css/applications/community/main.css?contenthash=C8g0FoMA",
       "../../../css/applications/community/avatarcrop.css?contenthash=BSO5h7oj",
     ]),
@@ -37,16 +37,16 @@ import {
   _,
   _,
   _,
-} from "./steammessages_contentmoderation_pb.js?contenthash=Cd7Ji2YL";
-import { _ } from "./moderationqueries.js?contenthash=DLuczK4i";
-import { _ } from "./throbber.js?contenthash=bI1SP-qN";
-import { _, _, _, _, _ } from "./emoticonbutton.js?contenthash=NM0xeHFP";
-import { _ } from "./personautils.js?contenthash=Br8FDUNR";
-import "./steammessages_loyalty_rewards_pb.js?contenthash=DbY7nrti";
-import { _ } from "./appinfostore.js?contenthash=PSaf9bzJ";
-import { _, _ } from "./persona.js?contenthash=Do982DuR";
-import { _ } from "./storeitemhooks.js?contenthash=Bk7UCXsF";
-import { _ } from "./awardmodal.js?contenthash=CE6TN0ak";
+} from "./steammessages_contentmoderation_pb.js?contenthash=DOHQPNpB";
+import { _ } from "./moderationqueries.js?contenthash=D8LLBi_4";
+import { _ } from "./throbber.js?contenthash=Cd5Ml_20";
+import { _, _, _, _, _ } from "./emoticonbutton.js?contenthash=D7f64lEU";
+import { _ } from "./personautils.js?contenthash=CLXpqNy9";
+import "./steammessages_loyalty_rewards_pb.js?contenthash=YSh5EpCY";
+import { _ } from "./appinfostore.js?contenthash=Ds-s6KRg";
+import { _, _ } from "./persona.js?contenthash=B2syw8vR";
+import { _ } from "./storeitemhooks.js?contenthash=BQ6Er2NU";
+import { _ } from "./awardmodal.js?contenthash=CfVSJB7l";
 import {
   _,
   _,
@@ -113,8 +113,8 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=YyCh67xk";
-import { _, _ } from "./steamavatar2.js?contenthash=Z2UyPRQ2";
+} from "./main.js?contenthash=BMjFHmU0";
+import { _, _ } from "./steamavatar2.js?contenthash=BDQwGMH8";
 var _ = _(_()),
   _ = _(),
   _ = _(_()),
@@ -3257,7 +3257,7 @@ var _ = _(({ onSelected: _, ProfileItems: _, large: _ }) => {
     }),
   _ = _.lazy(() =>
     _(
-      () => import(`./avatarcrop.js?contenthash=CLcDVx2L`),
+      () => import(`./avatarcrop.js?contenthash=CYbyYkjH`),
       __vite__mapDeps([0, 1, 2, 3, 4, 5]),
       import.meta.url,
     ),
