@@ -22,8 +22,8 @@
 	list-style: none;
 	border: 3px solid rgba( 0, 0, 0, 0.5 );
 	border-top: none;
-	border-left: none;
-	border-right: none;
+	border-inline-start: none;
+	border-inline-end: none;
 	text-transform: uppercase;
 }
 
@@ -78,7 +78,7 @@
 	list-style: none;
 	border: 1px solid rgba( 0, 0, 0, 0.5 );
 	border-top: none;
-	border-right: none;
+	border-inline-end: none;
 }
 .rewards_token_history > .th.cell {
 	color: #0a98c4;
@@ -99,7 +99,7 @@
 }
 
 .rewards_token_history--4cols > .cell  { width: 25%; }
-.rewards_token_history--4cols > .cell:nth-child(4n)  { border-right: 1px solid rgba( 0, 0, 0, 0.5 ); }
+.rewards_token_history--4cols > .cell:nth-child(4n)  { border-inline-end: 1px solid rgba( 0, 0, 0, 0.5 ); }
 
 /* audit history */
 
@@ -112,7 +112,7 @@
 	padding-bottom: 10px;
 }
 .history_paging > * {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .audit_history_table {
@@ -123,7 +123,7 @@
 
 .audit_history_table th {
 	background-color: #0197cf;
-	text-align: left;
+	text-align: start;
 	padding: 10px;
 }
 

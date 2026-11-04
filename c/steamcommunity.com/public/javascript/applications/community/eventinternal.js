@@ -1,12 +1,12 @@
-import { _ } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
-import { _, _, _, _, _, _, _, _, _ } from "./libraries.js?contenthash=eLY4-d-j";
-import { _ } from "./partnereventmigrate.js?contenthash=Ddzb6qoK";
-import { _, _, _, _ } from "./eventrow.js?contenthash=QK2kW4o2";
-import { _ } from "./salebanner.js?contenthash=ClkhtOVI";
-import { _, _ } from "./clanstore.js?contenthash=66n_91Al";
-import { _ } from "./throbber.js?contenthash=j-9LShQt";
-import { _ } from "./historyutils.js?contenthash=C2OBI7UD";
-import { _ } from "./eventtime.js?contenthash=DlCNIi05";
+import { _ } from "./rolldown-runtime.js?contenthash=C8f2gWku";
+import { _, _, _, _, _, _, _, _, _ } from "./libraries.js?contenthash=BSMOk6Fq";
+import { _ } from "./partnereventmigrate.js?contenthash=CscQmTKP";
+import { _, _, _, _ } from "./eventrow.js?contenthash=DnRyHNq_";
+import { _ } from "./salebanner.js?contenthash=DCoaSkEe";
+import { _, _ } from "./clanstore.js?contenthash=C2K0HNf4";
+import { _ } from "./throbber.js?contenthash=bI1SP-qN";
+import { _ } from "./historyutils.js?contenthash=j-8hxDg1";
+import { _ } from "./eventtime.js?contenthash=gCu_cY7X";
 import {
   _,
   _,
@@ -28,8 +28,8 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=BPPtNZbV";
-import "./partnereventsavebutton.module.js?contenthash=udECSzJ_";
+} from "./main.js?contenthash=YyCh67xk";
+import "./partnereventsavebutton.module.js?contenthash=DsAjcEYM";
 var _ = _(_()),
   _ = _(_()),
   _ = `_2QW4jBjN1Zk-`,
@@ -263,6 +263,7 @@ var _ = _(_()),
                         `gid/` +
                         _.InitFromClanID(
                           _.clan_account_id,
+                          _.EUNIVERSE,
                         ).ConvertTo64BitString() +
                         `/partnerevents/edit/` +
                         _.gid_clan_event,
@@ -364,7 +365,7 @@ var _ = _(_()),
                   href:
                     _.COMMUNITY_BASE_URL +
                     `gid/` +
-                    _.InitFromClanID(_).ConvertTo64BitString() +
+                    _.InitFromClanID(_, _.EUNIVERSE).ConvertTo64BitString() +
                     `/partnerevents/edit/` +
                     _,
                   target: `_blank`,
@@ -378,7 +379,7 @@ var _ = _(_()),
   },
   _ = (_) => {
     let { creatorHome: _ } = _,
-      _ = _.InitFromClanID(_.GetClanAccountID()),
+      _ = _.InitFromClanID(_.GetClanAccountID(), _.EUNIVERSE),
       _ = _.GetClanAccountID();
     return _
       ? (0, _.jsxs)(`div`, {
@@ -826,7 +827,7 @@ var _ = `vvKfa--ozEA-`,
         _.bAutoMigrate && _ && !_ && _();
       }),
       (0, _.useEffect)(() => {
-        !_ && !_ && !_ && _.fnOnCompletion(_, _.current);
+        _ || _ || _ || _.fnOnCompletion(_, _.current);
       }),
       (0, _.jsxs)(`div`, {
         className: _,

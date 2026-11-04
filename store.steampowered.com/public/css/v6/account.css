@@ -24,30 +24,30 @@
 
 .licenseRowRight {
 	position: absolute;
-	right: 14px;
+	inset-inline-end: 14px;
 }
 
 .transactionRowDate {
 	position: absolute;
-	left: 14px;
+	inset-inline-start: 14px;
 }
 
 .transactionRowEvent {
 	position: absolute;
-	left: 451px;
+	inset-inline-start: 451px;
 }
 
 .transactionRowPrice {
 	position: absolute;
-	right: 14px;
+	inset-inline-end: 14px;
 }
 
 .transactionRowItems {
-	padding-left: 121px;
+	padding-inline-start: 121px;
 }
 
 .transactionRowTitle {
-	padding-right: 162px;
+	padding-inline-end: 162px;
 }
 
 .transactionRowItems .itemSubtext {
@@ -57,7 +57,7 @@
 .transactionRowName {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-left: 14px;
+	padding-inline-start: 14px;
 	width: 45%;
 	border-bottom-width: 1px;
 	border-bottom-color: #000000;
@@ -72,7 +72,7 @@
 .transactionRowDueDate {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-left: 14px;
+	padding-inline-start: 14px;
 	text-align: center;
 	width: 20%;
 	border-bottom-width: 1px;
@@ -83,7 +83,7 @@
 .transactionRowAmountDue {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-left: 14px;
+	padding-inline-start: 14px;
 	text-align: center;
 	width: 20%;
 	border-bottom-width: 1px;
@@ -94,7 +94,7 @@
 .transactionRowUpdateStatus {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-left: 14px;
+	padding-inline-start: 14px;
 	text-align: center;
 	width: 15%;
 	border-bottom-width: 1px;
@@ -119,7 +119,7 @@
 
 .updateSubscriptionOption input
 {
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	margin-top: 5px;
 }
 
@@ -144,7 +144,7 @@
 
 .accountRow .accountData {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 .accountData a {
@@ -167,12 +167,12 @@
 }
 
 .account_row .account_data, .account_row a.item_action {
-	float: right;
+	float: inline-end;
 }
 
 .account_row .account_label
 {
-	float: left;
+	float: inline-start;
 }
 
 .account_row.account_balance {
@@ -201,7 +201,7 @@
 }
 
 .youraccount_tab {
-	float: left;
+	float: inline-start;
 	padding: 0px 16px;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -225,14 +225,14 @@
 }
 
 .transaction_footer div.transaction_footer_element {
-	float: right;
+	float: inline-end;
 	padding: 5px 8px;
 }
 
 .transaction_footer div.transaction_footer_element.show_all_link {
 	color: #898a8c;
 	background-color: rgba(0,0,0,0.2);
-	margin-left: 1px;
+	margin-inline-start: 1px;
 	cursor: pointer;
 }
 
@@ -242,7 +242,7 @@
 	background-color: rgba( 103, 193, 245, 0.2 );
 	padding: 20px;
 	margin-top: 16px;
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	border-radius: 2px;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -276,7 +276,7 @@
 
 .redeem_form_row .dselect_container
 {
-	float: left;
+	float: inline-start;
 	width: 212px;
 	margin-top: 10px;
 	padding: 0px;
@@ -285,7 +285,7 @@
 
 .redeem_form_row .dselect_container button.trigger, .dselect_container button.activetrigger
 {
-	padding-right: 30px;
+	padding-inline-end: 30px;
 }
 
 .upsell_and_graphic {
@@ -357,7 +357,7 @@ body.registerkey .page_content_ctn .page_content {
 
 .redeem_wallet_conversion_text
 {
-	float: left;
+	float: inline-start;
 	color: #ffffff;
 	font-size: 20px;
 	padding-top: 10px;
@@ -405,7 +405,7 @@ body.registerkey .page_content_ctn .page_content {
 
 .registerkey_form #purchase_confirm_ssa
 {
-	float: left;
+	float: inline-start;
 	margin-top: 10px;
 }
 
@@ -421,7 +421,7 @@ body.registerkey .page_content_ctn .page_content {
 
 .registerkey_keyexample
 {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 
 .redeem_wallet_background
@@ -479,7 +479,7 @@ body.registerkey .page_content_ctn .page_content {
 {
 	position: absolute;
 	top: 240px;
-	left: 475px;
+	inset-inline-start: 475px;
 }
 
 .redeem_purchase_store_image
@@ -496,10 +496,10 @@ body.registerkey .page_content_ctn .page_content {
 }
 
 .modal_close {
-	float:right;
+	float:inline-end;
 	width:9px;
 	height:9px;
-	margin-right:9px;
+	margin-inline-end:9px;
 	margin-top:7px;
 }
 
@@ -534,7 +534,7 @@ body.registerkey .page_content_ctn .page_content {
 
 .redeem_modal_header_title
 {
-	padding-left: 20px;
+	padding-inline-start: 20px;
 	padding-top: 5px;
 }
 
@@ -560,7 +560,7 @@ body.registerkey .page_content_ctn .page_content {
 
 .redeem_wallet_upsell_button
 {
-	padding-left: 10px;
+	padding-inline-start: 10px;
 }
 
 .redeem_wallet_link_bar
@@ -597,31 +597,31 @@ div.tx_record_row_activity
 
 div.tx_record_row_blurb
 {
-	padding-left: 5em;
+	padding-inline-start: 5em;
 	padding-top: 1em;
 }
 
 div.tx_record_row_cost
 {
 	width: 75px;
-	float: right;
+	float: inline-end;
 }
 
 div.tx_record_row_event
 {
 	width: 115px;
-	float: right;
+	float: inline-end;
 }
 
 div.tx_record_row_date
 {
 	width: 100px;
-	float: right;
+	float: inline-end;
 }
 
 div.transactions div.tx_record_row_activity
 {
-	padding-left: 1em;
+	padding-inline-start: 1em;
 	font-weight: bold;
 	color: #cdcac1;
 	font-size: 1.2em;
@@ -641,11 +641,11 @@ div.youraccount_history_home
 
 div.youraccount_history_home>div.breadcrumbs_nav
 {
-	float: left;
+	float: inline-start;
 }
 
 div.youraccount_history_home>div.account_wallet {
-	float: right;
+	float: inline-end;
 	width: 400px;
 }
 
@@ -654,7 +654,8 @@ div.youraccount_history_home>div.account_wallet {
 	background-color: #000000;
 	color: #cdcac1;
 	margin: 15px;
-	padding: 11px 15px 11px 19px;
+	padding-block: 11px;
+	padding-inline: 19px 15px;
 }
 
 .cancel_purchase_button {
@@ -686,8 +687,9 @@ div.youraccount_history_home>div.account_wallet {
 }
 
 .email_pref_ctn.individual_pref {
-	padding: 14px 8px 8px 13px;
-	margin-left: 16px;
+	padding-block: 14px 8px;
+	padding-inline: 13px 8px;
+	margin-inline-start: 16px;
 	background: rgba(0,0,0,0.2);
 	margin-top: 4px;
 	border-radius: 3px;
@@ -718,7 +720,7 @@ div.youraccount_history_home>div.account_wallet {
 	font-size: 11px;
 	text-transform: uppercase;
 	font-weight: normal;
-	text-align: left;
+	text-align: start;
 	padding: 4px 14px;
 }
 
@@ -747,11 +749,11 @@ div.youraccount_history_home>div.account_wallet {
 
 .account_table th.license_date_col,
 .account_table td.license_date_col {
-	text-align: right;
+	text-align: end;
 }
 
 .free_license_remove_link {
-	float: right;
+	float: inline-end;
 }
 
 .grey_overlay {
@@ -797,7 +799,7 @@ div.youraccount_history_home>div.account_wallet {
 }
 
 .account_table th {
-	text-align: left;
+	text-align: start;
 	text-transform: uppercase;
 	background-color: #0197cf;
 	color: #fff;
@@ -817,7 +819,7 @@ div.youraccount_history_home>div.account_wallet {
 }
 
 .account_table tr > *:last-child {
-	text-align: right;
+	text-align: end;
 }
 
 .account_table a:hover {
@@ -872,7 +874,7 @@ div.youraccount_history_home>div.account_wallet {
 }
 
 .wallet_alert_table tr > *:last-child {
-	text-align: right;
+	text-align: end;
 }
 
 .wallet_alert_table a:hover {
@@ -910,7 +912,7 @@ div.youraccount_history_home>div.account_wallet {
 	height: 22px;
 
 	padding-top: 4px;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 	line-height: 17px;
 	background: rgba( 103, 193, 245, 0.1 );
 	color: #67c1f5;
@@ -960,7 +962,7 @@ div.youraccount_history_home>div.account_wallet {
 }
 
 td.wht_date {
-	text-align: right;
+	text-align: end;
 	padding: 6px;
 	min-width: 66px;
 	width: 10%;
@@ -969,18 +971,18 @@ td.wht_date {
 }
 
 .wht_items {
-	text-align: left;
+	text-align: start;
 	width: 60%;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 }
 
 .wht_item_refunded {
 }
 
 .wht_type {
-	text-align: left;
+	text-align: start;
 	min-width: 130px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 }
 
 .wht_wallet {
@@ -988,13 +990,13 @@ td.wht_date {
 }
 
 th.wht_wallet_change {
-	text-align: right;
-	padding-right: 8px;
+	text-align: end;
+	padding-inline-end: 8px;
 }
 
 th.wht_wallet_balance {
-	text-align: right;
-	padding-right: 16px;
+	text-align: end;
+	padding-inline-end: 16px;
 }
 
 .wth_item_refunded {
@@ -1004,24 +1006,24 @@ th.wht_wallet_balance {
 
 td.wht_wallet_change {
 	color: #7092A5;
-	text-align: right;
+	text-align: end;
 	width: 5%;
 	white-space: nowrap;
-	border-left: solid 1px #2c405b;
+	border-inline-start: solid 1px #2c405b;
 }
 
 td.wht_wallet_balance {
 	color: #7092A5;
-	text-align: right;
+	text-align: end;
 	width: 5%;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 	white-space: nowrap;
 }
 
 td.wht_wallet_pending {
 	text-align: center;
 	color: #9f9f9f;
-	border-left: solid 1px #2c405b;
+	border-inline-start: solid 1px #2c405b;
 }
 
 .wallet_entry_highlight {
@@ -1051,8 +1053,8 @@ td.wht_wallet_change.wallet_entry_highlight {
 }
 .wht_original_price:before {
 	content: '';
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 	position: absolute;
 	top: 43%;
 	border-bottom: 1.5px solid #8b929a;
@@ -1069,7 +1071,7 @@ td.wht_wallet_change.wallet_entry_highlight {
 	border-radius: 1px;
 	color: #BEEE11;
 	background: #4c6b22;
-	margin-right: 2px;
+	margin-inline-end: 2px;
 }
 td.wht_base_price {
 	width: 5%;
@@ -1080,8 +1082,8 @@ td.wht_base_price {
 }
 td.wht_total {
 	width: 5%;
-	padding-right: 2em;
-	text-align: right;
+	padding-inline-end: 2em;
+	text-align: end;
 	white-space: nowrap;
 }
 
@@ -1104,12 +1106,13 @@ td.wht_total {
 }
 
 .help_purchase_img {
-	float: left;
+	float: inline-start;
 }
 
 .help_purchase_img img {
-	float: left;
-	margin: 0 3px 0 0;
+	float: inline-start;
+	margin-block: 0;
+	margin-inline: 0 3px;
 	width: 10px;
 }
 
@@ -1120,7 +1123,8 @@ td.wht_total {
 
 .account_header_line {
 	background-color: #223D5A;
-	padding: 0 0 0px 4px;
+	padding-block: 0 0px;
+	padding-inline: 4px 0;
     font-size: 14px;
 
     line-height: 31px;
@@ -1130,13 +1134,14 @@ td.wht_total {
 }
 
 .account_header_line.noicon {
-	padding-left: 12px;
+	padding-inline-start: 12px;
 }
 
 .account_header_line img {
 	height: 24px;
 	vertical-align: middle;
-	padding: 0 6px 2px 0;
+	padding-block: 0 2px;
+	padding-inline: 0 6px;
 }
 
 .account_header_title {
@@ -1160,7 +1165,7 @@ td.wht_total {
 .account_setting_sub_block {
 	width: 50%;
 	padding: 1em;
-	float: left;
+	float: inline-start;
 	color: #808891;
 	box-sizing: border-box;
 }
@@ -1174,14 +1179,14 @@ td.wht_total {
 .account_setting_sub_block_1-2 {
 	width: 45%;
 	padding: 1em;
-	float: left;
+	float: inline-start;
 	color: #808891;
 }
 
 .account_setting_sub_block_2-3 {
 	width: 60%;
 	padding: 1em;
-	float: left;
+	float: inline-start;
 	color: #808891;
 }
 
@@ -1194,7 +1199,7 @@ td.wht_total {
 .account_setting_parenthetical {
 	color: #97a0ab;
 	display: block;
-	margin-left: 21px;
+	margin-inline-start: 21px;
 	margin-top: 6px;
 	margin-bottom: 10px;
 	font-size: 12px;
@@ -1225,7 +1230,8 @@ td.wht_total {
 
 .account_manage_label {
 	line-height: 20px;
-	padding: 0 6px 0 0;
+	padding-block: 0;
+	padding-inline: 0 6px;
 }
 
 .accountData.price a {
@@ -1243,13 +1249,14 @@ td.wht_total {
 }
 
 .account_security_block {
-	margin: 3px 10px 10px 0;
+	margin-block: 3px 10px;
+	margin-inline: 0 10px;
 }
 
 .account_security_block img {
 	height: 100%;
 	vertical-align: middle;
-	float: left;
+	float: inline-start;
 	padding: 0 4px 0 4px;
 }
 
@@ -1300,7 +1307,7 @@ td.wht_total {
 	background: rgba( 0, 0, 0, 0.2 );
 	margin-bottom: 24px;
 	min-height: 324px;
-	float: left;
+	float: inline-start;
 	color: #808891;
 	width: inherit;
 }
@@ -1367,7 +1374,7 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 	html.responsive body.registerkey .page_content_ctn .page_content .registerkey_form {
 		display: flex;
 		flex-direction: column;
-		margin-right: unset;
+		margin-inline-end: unset;
 	}
 
 
@@ -1449,7 +1456,7 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 	}
 
 	html.responsive body.redeemwalletcode .page_content_ctn .page_content .registerkey_form {
-		margin-right: unset;
+		margin-inline-end: unset;
 	}
 
 	html.responsive #product_key {
@@ -1459,7 +1466,7 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 
 	html.responsive body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .redeem_input_box_text#wallet_code {
 		max-width: 100%;
-		margin-right: unset;
+		margin-inline-end: unset;
 	}
 
 	html.responsive body.redeemwalletcode .page_content_ctn .page_content #error_display {
@@ -1507,7 +1514,7 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 
 	html.responsive body.redeemwalletcode .redeem_wallet_upsell_button {
 		justify-self: center;
-		padding-left: unset;
+		padding-inline-start: unset;
 	}
 
 	html.responsive body.redeemwalletcode #redeem_wallet_success_button {
@@ -1522,7 +1529,8 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 
 
 #enter_address .form_row {
-	margin: 8px 8px 18px 0;
+	margin-block: 8px 18px;
+	margin-inline: 0 8px;
 }
 
 #enter_address label {
@@ -1549,12 +1557,12 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 }
 
 #billing_row_one {
-	float: left;
+	float: inline-start;
 }
 
 #billing_row_two {
-	float: left;
-	padding-left: 10px;
+	float: inline-start;
+	padding-inline-start: 10px;
 }
 
 #enter_address #billing_state_select_dselect_container {
@@ -1562,7 +1570,8 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 }
 
 #enter_address #billing_state_select_trigger {
-	padding: 2px 2px 2px 8px;
+	padding-block: 2px;
+	padding-inline: 8px 2px;
 }
 
 #enter_address .btnv6_blue_hoverfade {
@@ -1575,7 +1584,7 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 
 
 .account_preferences input[type=checkbox] {
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 .account_preferences input[type=checkbox], .account_preferences label {
 	line-height: 20px;
@@ -1621,16 +1630,16 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 
 .ignored_app  .ignored_app_reason {
 	min-width: 230px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .ignored_app .remove {
 	font-size: 12px;
 	color: #dedede;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	line-height: 16px;
 	width: 24px;
-	margin-left: auto;
+	margin-inline-start: auto;
 }
 
 .ignored_app .remove img {
@@ -1640,7 +1649,7 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 
 .opt_out_description {
 	font-size: 12px;
-	padding-left: 17px;
+	padding-inline-start: 17px;
 	color: #a2afb9;
 }
 
@@ -1657,11 +1666,11 @@ body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .
 	font-size: 16px;
 }
 .marked_ignore_img {
-	padding-right: 5px;
+	padding-inline-end: 5px;
 	width: 32px;
 	height: 32px;
 	margin-top: 16px;
-	margin-right: 16px;
+	margin-inline-end: 16px;
 }
 span.disown_button {
 	display: inline-block;
@@ -1675,7 +1684,7 @@ span.disown_button {
 	background-origin: content-box;
 }
 .wallet_redeem_error {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 .wallet_redeem_error > li {
 	margin-top: 5px;

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
+  <rect stroke="var(--button-stroke, #444E57)" fill="var(--button-fill, currentColor)" x="0.5" y="0.5" width="13" height="13" rx="1.5"/>
+  <rect fill="var(--button-symbol, #D9D9D9)" x="4" y="7.5" width="1" height="6" transform="rotate(-90 4 7.5)"/>
+</svg>

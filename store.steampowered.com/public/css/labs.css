@@ -102,14 +102,14 @@ color: #fff;
 }
 
 .right-column h1 {
-    padding-left: 20px;
+    padding-inline-start: 20px;
 }
 
 /* Right hand column's list of experiment links. */
 .active-experiments-icon {
-	float: left;
+	float: inline-start;
 	width: 50px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .active-experiments-icon img {
@@ -147,7 +147,7 @@ color: #fff;
 }
 
 .active-experiments-description {
-	float: left;
+	float: inline-start;
 	width: 275px;
 	margin: 5px;
 }
@@ -185,8 +185,8 @@ color: #fff;
     overflow: hidden;
 }
 .capsule-banner img {
-    border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+    border-start-start-radius: 4px;
+	border-start-end-radius: 4px;
     width: 100%;
 	aspect-ratio: 7/3;
     transition: transform 0.4s ease-out;
@@ -219,7 +219,7 @@ body.v6 .capsule h2 {
     border-radius: 3px;
 }
 .experiment-buttons {
-	text-align: left;
+	text-align: start;
     min-height: 43px;
 }
 
@@ -259,14 +259,14 @@ span.experiment-name {
 }
 
 .experiment-number, .experiment-page-title {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
 	font-family: "Motiva Sans", Sans-serif;
 	font-weight: normal;
 	font-size: 15px;
 	text-transform: uppercase;
 	color: #00b8c0;
-	margin-left: -10px;
+	margin-inline-start: -10px;
 	letter-spacing: 2px;
 	font-weight: 500;
 	letter-spacing: 0.03em;
@@ -364,8 +364,8 @@ span.experiment-name {
 	letter-spacing: 0.05em;
 	padding: 5px;
 	margin: 5px;
-	margin-right: 15px;
-	float: left;
+	margin-inline-end: 15px;
+	float: inline-start;
 	display: flex;
 	align-items: center;
 	text-align: center;
@@ -400,20 +400,20 @@ span.experiment-name {
 	opacity: 0.0;
 	margin: 0px;
 	width: 300px;
-	float: left;
+	float: inline-start;
 }
 
 .video-small-banner {
-	float: left;
+	float: inline-start;
 	width: 133px;
 	height: 51px;
 }
 
 .video-right-info {
-	float: left;
+	float: inline-start;
 	width: 167px;
 	height: 51px;
-	text-align: right;
+	text-align: end;
 	overflow: hidden;
 	background-color: #0b1622;
 }
@@ -427,7 +427,7 @@ span.experiment-name {
 	height: 220px;
 	margin: 6px;
 	margin-bottom: 10px;
-	float: left;
+	float: inline-start;
 }
 
 .video_container_single_column {
@@ -446,7 +446,7 @@ span.experiment-name {
 	opacity: 100.0;
 	margin: 0px;
 	width: 100%;
-	float: left;
+	float: inline-start;
 }
 
 .single_o_single_column {
@@ -490,13 +490,13 @@ span.experiment-name {
 }
 
 .ultracast_video {
-	float: left;
-	margin-right: 15px;
+	float: inline-start;
+	margin-inline-end: 15px;
 }
 
 .ultracast_video_right {
 	width: 285px;
-	float: left;
+	float: inline-start;
 	overflow: hidden;
 }
 
@@ -523,10 +523,11 @@ a.ultracast_now_playing_link:hover .ds_options {
 
 }
 .labs_top_menu_item a, .labs_top_menu_item a:visited {
-	float: left;
+	float: inline-start;
 	padding: 5px;
-	margin: 5px 5px 0px 0px;
-	padding-left: 40px;
+	margin-block: 5px 0px;
+	margin-inline: 0px 5px;
+	padding-inline-start: 40px;
 	font-size: 15px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -535,7 +536,7 @@ a.ultracast_now_playing_link:hover .ds_options {
 	font-weight: 400;
 }
 .labs_top_menu_item:first-child a {
-    padding-left: 0px;
+    padding-inline-start: 0px;
 }
 
 .labs_top_menu_item a:hover {
@@ -559,7 +560,7 @@ a.ultracast_now_playing_link:hover .ds_options {
         width: 100%;
     }
     html.responsive .right-column-box {
-        padding-left: 0px;
+        padding-inline-start: 0px;
     }
     html.responsive .left-column {
         width: 100%;
@@ -617,8 +618,8 @@ a.ultracast_now_playing_link:hover .ds_options {
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center#;
-	padding-left: 45px;
-	padding-right: 45px;
+	padding-inline-start: 45px;
+	padding-inline-end: 45px;
 	margin-top: -26px;
 	padding-top: 0px;
 	width: inherit;
@@ -640,8 +641,8 @@ a.ultracast_now_playing_link:hover .ds_options {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center#;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-inline-start: 45px;
+    padding-inline-end: 45px;
     margin-top: -26px;
     padding-top: 0px;
     width: inherit;

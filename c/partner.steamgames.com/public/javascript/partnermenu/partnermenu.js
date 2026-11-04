@@ -20,6 +20,7 @@
             exports: {},
           }).exports,
           _,
+          _.exports,
         ),
         (_ = null)),
       _.exports
@@ -189,7 +190,7 @@
         });
       }
     },
-    require_google_protobuf = __commonJSMin((exports) => {
+    require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       var $jscomp = $jscomp || {};
       ($jscomp.scope = {}),
         ($jscomp.findInternal = function (_, _, _) {
@@ -226,7 +227,7 @@
               ? global
               : _;
         }),
-        ($jscomp.global = $jscomp.getGlobal(exports)),
+        ($jscomp.global = $jscomp.getGlobal(this$1)),
         ($jscomp.polyfill = function (_, _, _, _) {
           if (_) {
             for (
@@ -349,7 +350,7 @@
         );
       var COMPILED = !0,
         goog = goog || {};
-      (goog.global = exports || self),
+      (goog.global = this$1 || self),
         (goog.exportPath_ = function (_, _, _) {
           (_ = _.split(`.`)),
             (_ ||= goog.global),
@@ -7344,7 +7345,7 @@
           return (
             (this.cursor_ += 2),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            (_ << 0) | (_ << 8)
+            _ | 0 | (_ << 8)
           );
         }),
         (jspb.BinaryDecoder.prototype.readUint32 = function () {
@@ -7355,7 +7356,7 @@
           return (
             (this.cursor_ += 4),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            ((_ << 0) | (_ << 8) | (_ << 16) | (_ << 24)) >>> 0
+            (_ | 0 | (_ << 8) | (_ << 16) | (_ << 24)) >>> 0
           );
         }),
         (jspb.BinaryDecoder.prototype.readUint64 = function () {
@@ -7382,7 +7383,7 @@
           return (
             (this.cursor_ += 2),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            (((_ << 0) | (_ << 8)) << 16) >> 16
+            ((_ | 0 | (_ << 8)) << 16) >> 16
           );
         }),
         (jspb.BinaryDecoder.prototype.readInt32 = function () {
@@ -7393,7 +7394,7 @@
           return (
             (this.cursor_ += 4),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            (_ << 0) | (_ << 8) | (_ << 16) | (_ << 24)
+            _ | 0 | (_ << 8) | (_ << 16) | (_ << 24)
           );
         }),
         (jspb.BinaryDecoder.prototype.readInt64 = function () {
@@ -8562,16 +8563,15 @@
         }),
         (jspb.arith.UInt64.prototype.add = function (_) {
           return new jspb.arith.UInt64(
-            (((this._ + _._) & 4294967295) >>> 0) >>> 0,
-            ((((this._ + _._) & 4294967295) >>> 0) +
-              +(4294967296 <= this._ + _._)) >>>
+            (((this._ + _._) | 0) >>> 0) >>> 0,
+            ((((this._ + _._) | 0) >>> 0) + +(4294967296 <= this._ + _._)) >>>
               0,
           );
         }),
         (jspb.arith.UInt64.prototype.sub = function (_) {
           return new jspb.arith.UInt64(
-            (((this._ - _._) & 4294967295) >>> 0) >>> 0,
-            ((((this._ - _._) & 4294967295) >>> 0) - (0 > this._ - _._)) >>> 0,
+            (((this._ - _._) | 0) >>> 0) >>> 0,
+            ((((this._ - _._) | 0) >>> 0) - (0 > this._ - _._)) >>> 0,
           );
         }),
         (jspb.arith.UInt64.mul32x32 = function (_, _) {
@@ -8638,16 +8638,15 @@
         }),
         (jspb.arith.Int64.prototype.add = function (_) {
           return new jspb.arith.Int64(
-            (((this._ + _._) & 4294967295) >>> 0) >>> 0,
-            ((((this._ + _._) & 4294967295) >>> 0) +
-              +(4294967296 <= this._ + _._)) >>>
+            (((this._ + _._) | 0) >>> 0) >>> 0,
+            ((((this._ + _._) | 0) >>> 0) + +(4294967296 <= this._ + _._)) >>>
               0,
           );
         }),
         (jspb.arith.Int64.prototype.sub = function (_) {
           return new jspb.arith.Int64(
-            (((this._ - _._) & 4294967295) >>> 0) >>> 0,
-            ((((this._ - _._) & 4294967295) >>> 0) - (0 > this._ - _._)) >>> 0,
+            (((this._ - _._) | 0) >>> 0) >>> 0,
+            ((((this._ - _._) | 0) >>> 0) - (0 > this._ - _._)) >>> 0,
           );
         }),
         (jspb.arith.Int64.prototype.clone = function () {
@@ -10210,18 +10209,17 @@
         (jspb.Message.initPivotAndExtensionObject_ = function (_, _) {
           var _ = _.array.length,
             _ = -1;
-          if (
-            _ &&
-            ((_ = _ - 1), (_ = _.array[_]), jspb.Message.isExtensionObject_(_))
-          ) {
-            (_.pivot_ = jspb.Message.getFieldNumber_(_, _)),
-              (_.extensionObject_ = _);
-            return;
-          }
-          -1 < _
-            ? ((_.pivot_ = Math.max(_, jspb.Message.getFieldNumber_(_, _ + 1))),
-              (_.extensionObject_ = null))
-            : (_.pivot_ = Number.MAX_VALUE);
+          _ &&
+          ((_ = _ - 1), (_ = _.array[_]), jspb.Message.isExtensionObject_(_))
+            ? ((_.pivot_ = jspb.Message.getFieldNumber_(_, _)),
+              (_.extensionObject_ = _))
+            : -1 < _
+              ? ((_.pivot_ = Math.max(
+                  _,
+                  jspb.Message.getFieldNumber_(_, _ + 1),
+                )),
+                (_.extensionObject_ = null))
+              : (_.pivot_ = Number.MAX_VALUE);
         }),
         (jspb.Message.maybeInitEmptyExtensionObject_ = function (_) {
           var _ = jspb.Message.getIndex_(_, _.pivot_);
@@ -14994,7 +14992,7 @@
         {
           ePrivilege: 2,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -15127,6 +15125,7 @@
         ),
         {
           ePrivilege: 1,
+          rgBrowserAPISites: [`community`],
         },
       );
     }
@@ -15140,6 +15139,7 @@
         ),
         {
           ePrivilege: 1,
+          rgBrowserAPISites: [`community`],
         },
       );
     }
@@ -15851,13 +15851,8 @@
       return !1;
     }
     SendErrorReport(_) {
-      if (!this.BIsBlacklisted(_)) {
-        if (!this.m_transport) {
-          this.m_rgErrorQueue.push(_);
-          return;
-        }
-        this.QueueReport(_);
-      }
+      this.BIsBlacklisted(_) ||
+        (this.m_transport ? this.QueueReport(_) : this.m_rgErrorQueue.push(_));
     }
     QueueReport(_) {
       this.m_rgErrorQueue.push(_),
@@ -15966,7 +15961,7 @@
     let _ = _.map((_) => {
       let _ = _.match(/(.*)\((.*):(\d+):(\d+)\)/);
       if (
-        ((!_ || _.length != 5) && (_ = _.match(/(.*at )(http.*):(\d+):(\d+)/)),
+        ((_ && _.length == 5) || (_ = _.match(/(.*at )(http.*):(\d+):(\d+)/)),
         !_)
       )
         return _;
@@ -16425,17 +16420,15 @@
                 _ === !0 ||
                 (typeof _ == `number` && _ < _) ||
                 (typeof _ == `function` && _(_, _));
-            if (_ || !_) {
-              _(_);
-              return;
-            }
-            _++,
-              _.onFail?.(_, _),
-              sleep(_)
-                .then(() => (_() ? void 0 : _()))
-                .then(() => {
-                  _ ? _(_) : _();
-                });
+            _ || !_
+              ? _(_)
+              : (_++,
+                _.onFail?.(_, _),
+                sleep(_)
+                  .then(() => (_() ? void 0 : _()))
+                  .then(() => {
+                    _ ? _(_) : _();
+                  }));
           });
       };
     return {
@@ -16742,19 +16735,18 @@
             _: _.fetchFn,
             abort: _.abort.bind(_),
             onSuccess: (_) => {
-              if (_ === void 0) {
-                _(Error(`${this.queryHash} data is undefined`));
-                return;
+              if (_ === void 0) _(Error(`${this.queryHash} data is undefined`));
+              else {
+                try {
+                  this.setData(_);
+                } catch (_) {
+                  _(_);
+                  return;
+                }
+                this.#n.config.onSuccess?.(_, this),
+                  this.#n.config.onSettled?.(_, this.state.error, this),
+                  this.scheduleGc();
               }
-              try {
-                this.setData(_);
-              } catch (_) {
-                _(_);
-                return;
-              }
-              this.#n.config.onSuccess?.(_, this),
-                this.#n.config.onSettled?.(_, this.state.error, this),
-                this.scheduleGc();
             },
             onError: _,
             onFail: (_, _) => {
@@ -18160,7 +18152,7 @@
       }
       #l(_, _) {
         return _
-          ? ((!this.#a || this.#t !== this.#s || _ !== this.#o) &&
+          ? ((this.#a && this.#t === this.#s && _ === this.#o) ||
               ((this.#o = _),
               (this.#s = this.#t),
               (this.#a = replaceEqualDeep(this.#a, _(_)))),
@@ -18376,6 +18368,26 @@
       return new URL(_, _).href;
     },
     seen = {},
+    isCssPreloadUrl = function (_) {
+      return _.pathname.endsWith(`.css`);
+    },
+    preloadOnce = function (_, _, _) {
+      if (_ in _) return _[_];
+      let _ = _();
+      if (!_) {
+        _[_] = void 0;
+        return;
+      }
+      let _ = _.then(
+        () => {
+          _[_] = void 0;
+        },
+        (_) => {
+          throw ((_[_] = void 0), _);
+        },
+      );
+      return (_[_] = _), _;
+    },
     __vitePreload = function (_, _, _) {
       let _ = Promise.resolve();
       function _(_) {
@@ -19926,14 +19938,10 @@ Error generating stack: ` +
         }
       }
       function _(_, _, _) {
-        if (
-          _ != null &&
-          ((_ = `` + _(_)), _ !== _.value && (_.value = _), _ == null)
-        ) {
-          _.defaultValue !== _ && (_.defaultValue = _);
-          return;
-        }
-        _.defaultValue = _ == null ? `` : `` + _(_);
+        _ != null &&
+        ((_ = `` + _(_)), _ !== _.value && (_.value = _), _ == null)
+          ? _.defaultValue !== _ && (_.defaultValue = _)
+          : (_.defaultValue = _ == null ? `` : `` + _(_));
       }
       function _(_, _, _, _) {
         if (_ == null) {
@@ -21737,11 +21745,10 @@ Error generating stack: ` +
             callbacks: _.callbacks,
           }),
             (_.updateQueue = _);
-          return;
-        }
-        (_ = _.lastBaseUpdate),
-          _ === null ? (_.firstBaseUpdate = _) : (_.next = _),
-          (_.lastBaseUpdate = _);
+        } else
+          (_ = _.lastBaseUpdate),
+            _ === null ? (_.firstBaseUpdate = _) : (_.next = _),
+            (_.lastBaseUpdate = _);
       }
       var _ = !1;
       function _() {
@@ -22338,16 +22345,11 @@ Error generating stack: ` +
               if (_) {
                 if (_) {
                   _: {
-                    for (var _ = _, _ = _; _.nodeType !== 8; ) {
-                      if (!_) {
+                    for (var _ = _, _ = _; _.nodeType !== 8; )
+                      if (!_ || ((_ = _(_.nextSibling)), _ === null)) {
                         _ = null;
                         break _;
                       }
-                      if (((_ = _(_.nextSibling)), _ === null)) {
-                        _ = null;
-                        break _;
-                      }
-                    }
                     (_ = _.data), (_ = _ === `F!` || _ === `F` ? _ : null);
                   }
                   if (_) {
@@ -24042,16 +24044,11 @@ Error generating stack: ` +
                 _;
               if ((_ = _)) {
                 _: {
-                  for (_ = _, _ = _; _.nodeType !== 8; ) {
-                    if (!_) {
+                  for (_ = _, _ = _; _.nodeType !== 8; )
+                    if (!_ || ((_ = _(_.nextSibling)), _ === null)) {
                       _ = null;
                       break _;
                     }
-                    if (((_ = _(_.nextSibling)), _ === null)) {
-                      _ = null;
-                      break _;
-                    }
-                  }
                   _ = _;
                 }
                 _ === null
@@ -26656,7 +26653,7 @@ Error generating stack: ` +
         ((_ === _ && (_ === 2 || _ === 9)) || _.cancelPendingCommit !== null) &&
           (_(_, 0), _(_, _, _, !1)),
           _(_, _),
-          (!(_ & 2) || _ !== _) &&
+          (_ & 2 && _ === _) ||
             (_ === _ && (!(_ & 2) && (_ |= _), _ === 4 && _(_, _, _, !1)),
             _(_));
       }
@@ -26670,93 +26667,91 @@ Error generating stack: ` +
             _ && !_ && _(_, _, 0, !1);
             break;
           }
-          if (((_ = _.current.alternate), _ && !_(_))) {
+          if (((_ = _.current.alternate), _ && !_(_)))
             (_ = _(_, _, !1)), (_ = !1);
-            continue;
-          }
-          if (_ === 2) {
-            if (((_ = _), _.errorRecoveryDisabledLanes & _)) var _ = 0;
-            else
-              (_ = _.pendingLanes & -536870913),
-                (_ = _ === 0 ? (_ & 536870912 ? 536870912 : 0) : _);
-            if (_ !== 0) {
-              _ = _;
-              _: {
-                var _ = _;
+          else {
+            if (_ === 2) {
+              if (((_ = _), _.errorRecoveryDisabledLanes & _)) var _ = 0;
+              else
+                (_ = _.pendingLanes & -536870913),
+                  (_ = _ === 0 ? (_ & 536870912 ? 536870912 : 0) : _);
+              if (_ !== 0) {
                 _ = _;
-                var _ = _.current.memoizedState.isDehydrated;
-                if ((_ && (_(_, _).flags |= 256), (_ = _(_, _, !1)), _ !== 2)) {
-                  if (_ && !_) {
-                    (_.errorRecoveryDisabledLanes |= _), (_ |= _), (_ = 4);
-                    break _;
-                  }
-                  (_ = _),
+                _: {
+                  var _ = _;
+                  _ = _;
+                  var _ = _.current.memoizedState.isDehydrated;
+                  if (
+                    (_ && (_(_, _).flags |= 256), (_ = _(_, _, !1)), _ !== 2)
+                  ) {
+                    if (_ && !_) {
+                      (_.errorRecoveryDisabledLanes |= _), (_ |= _), (_ = 4);
+                      break _;
+                    }
                     (_ = _),
-                    _ !== null && (_ === null ? (_ = _) : _.push.apply(_, _));
+                      (_ = _),
+                      _ !== null && (_ === null ? (_ = _) : _.push.apply(_, _));
+                  }
+                  _ = _;
                 }
-                _ = _;
+                if (((_ = !1), _ !== 2)) continue;
               }
-              if (((_ = !1), _ !== 2)) continue;
             }
-          }
-          if (_ === 1) {
-            _(_, 0), _(_, _, 0, !0);
+            if (_ === 1) {
+              _(_, 0), _(_, _, 0, !0);
+              break;
+            }
+            _: {
+              switch (((_ = _), (_ = _), _)) {
+                case 0:
+                case 1:
+                  throw Error(_(345));
+                case 4:
+                  if ((_ & 4194048) !== _) break;
+                case 6:
+                  _(_, _, _, !_);
+                  break _;
+                case 2:
+                  _ = null;
+                  break;
+                case 3:
+                case 5:
+                  break;
+                default:
+                  throw Error(_(329));
+              }
+              if ((_ & 62914560) === _ && ((_ = _ + 300 - _()), 10 < _)) {
+                if ((_(_, _, _, !_), _(_, 0, !0) !== 0)) break _;
+                _.timeoutHandle = _(
+                  _.bind(null, _, _, _, _, _, _, _, _, _, _, _, 2, -0, 0),
+                  _,
+                );
+                break _;
+              }
+              _(_, _, _, _, _, _, _, _, _, _, _, 0, -0, 0);
+            }
             break;
           }
-          _: {
-            switch (((_ = _), (_ = _), _)) {
-              case 0:
-              case 1:
-                throw Error(_(345));
-              case 4:
-                if ((_ & 4194048) !== _) break;
-              case 6:
-                _(_, _, _, !_);
-                break _;
-              case 2:
-                _ = null;
-                break;
-              case 3:
-              case 5:
-                break;
-              default:
-                throw Error(_(329));
-            }
-            if ((_ & 62914560) === _ && ((_ = _ + 300 - _()), 10 < _)) {
-              if ((_(_, _, _, !_), _(_, 0, !0) !== 0)) break _;
-              _.timeoutHandle = _(
-                _.bind(null, _, _, _, _, _, _, _, _, _, _, _, 2, -0, 0),
-                _,
-              );
-              break _;
-            }
-            _(_, _, _, _, _, _, _, _, _, _, _, 0, -0, 0);
-          }
-          break;
         } while (1);
         _(_);
       }
       function _(_, _, _, _, _, _, _, _, _, _, _, _, _, _) {
-        if (
-          ((_.timeoutHandle = -1),
+        (_.timeoutHandle = -1),
           (_ = _.subtreeFlags),
           (_ & 8192 || (_ & 16785408) == 16785408) &&
-            ((_ = {
-              stylesheets: null,
-              count: 0,
-              unsuspend: _,
-            }),
-            _(_),
-            (_ = _()),
-            _ !== null))
-        ) {
-          (_.cancelPendingCommit = _(
-            _.bind(null, _, _, _, _, _, _, _, _, _, _, 1, _, _),
-          )),
-            _(_, _, _, !_);
-          return;
-        }
-        _(_, _, _, _, _, _, _, _, _);
+          ((_ = {
+            stylesheets: null,
+            count: 0,
+            unsuspend: _,
+          }),
+          _(_),
+          (_ = _()),
+          _ !== null)
+            ? ((_.cancelPendingCommit = _(
+                _.bind(null, _, _, _, _, _, _, _, _, _, _, 1, _, _),
+              )),
+              _(_, _, _, !_))
+            : _(_, _, _, _, _, _, _, _, _);
       }
       function _(_) {
         for (var _ = _; ; ) {
@@ -28211,11 +28206,8 @@ Error generating stack: ` +
             }
           case `src`:
           case `href`:
-            if (_ === `` && (_ !== `a` || _ !== `href`)) {
-              _.removeAttribute(_);
-              break;
-            }
             if (
+              (_ === `` && (_ !== `a` || _ !== `href`)) ||
               _ == null ||
               typeof _ == `function` ||
               typeof _ == `symbol` ||
@@ -31277,6 +31269,11 @@ Error generating stack: ` +
                 _: 13,
                 _: ReaderProto.readString,
                 _: WriterProto.writeString,
+              },
+              agency_rating: {
+                _: 14,
+                _: ReaderProto.readEnum,
+                _: WriterProto.writeEnum,
               },
               image_url: {
                 _: 20,
@@ -34436,6 +34433,11 @@ Error generating stack: ` +
                 _: StoreItem_ExtraDetails_SalePage,
                 _: !0,
                 _: !0,
+              },
+              item_store_show_featured: {
+                _: 37,
+                _: ReaderProto.readBool,
+                _: WriterProto.writeBool,
               },
             },
           }),
@@ -38351,7 +38353,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 1,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`, `help`],
+          rgBrowserAPISites: [`partner`, `help`, `community`],
         },
       );
     }
@@ -38386,7 +38388,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -38404,7 +38406,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -38438,7 +38440,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -38456,7 +38458,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 2,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -39179,7 +39181,7 @@ Error generating stack: ` +
         {
           bConstMethod: !0,
           ePrivilege: 1,
-          rgBrowserAPISites: [`partner`, `help`],
+          rgBrowserAPISites: [`partner`, `help`, `community`],
         },
       );
     }
@@ -39592,18 +39594,16 @@ Error generating stack: ` +
       this.SetDebugLogEnabled(_, !this.IsDebugLogEnabled(_));
     }
     async SetDebugLogEnabled(_, _) {
-      if (!this.IsLogName(_)) {
-        console.warn(
-          `No log named "${_}", available logs:`,
-          this.GetLogNames(),
-        );
-        return;
-      }
-      _
-        ? this.m_setEnabledDebugLogs.add(_)
-        : this.m_setEnabledDebugLogs.delete(_),
-        this.m_SettingsChangedCallback.Dispatch(),
-        await this.SaveSettings();
+      this.IsLogName(_)
+        ? (_
+            ? this.m_setEnabledDebugLogs.add(_)
+            : this.m_setEnabledDebugLogs.delete(_),
+          this.m_SettingsChangedCallback.Dispatch(),
+          await this.SaveSettings())
+        : console.warn(
+            `No log named "${_}", available logs:`,
+            this.GetLogNames(),
+          );
     }
     async SetDebugLogsEnabled(_, ..._) {
       _.forEach((_) => this.SetDebugLogEnabled(_, _));
@@ -39641,7 +39641,7 @@ Error generating stack: ` +
   function colorForString(_) {
     let _ = 0;
     for (let _ = 0; _ < _.length; _++) _ = _.charCodeAt(_) + ((_ << 5) - _);
-    return [(_ >> 0) & 255, (_ >> 8) & 255, (_ >> 16) & 255];
+    return [(_ | 0) & 255, (_ >> 8) & 255, (_ >> 16) & 255];
   }
   function shouldUseBlack(_) {
     return (_[0] * 299 + _[1] * 587 + _[2] * 114) / 1e3 >= 128;
@@ -42142,17 +42142,14 @@ Error generating stack: ` +
     let _ = useVirtualKeyboardReference(_.current),
       _ = import_react.useCallback(
         (_) => {
-          if (document.hasFocus() || document.activeElement != _.current) {
-            if (_.currentTarget != _.current) {
-              console.warn(
-                `keyboard got blur event, but it's not the active element`,
-              );
-              return;
-            }
-            _.detail.focusedNode?.Element != _.current &&
-              (_.BIsActive() || _.bInVR) &&
-              _.DelayHideVirtualKeyboard();
-          }
+          (document.hasFocus() || document.activeElement != _.current) &&
+            (_.currentTarget == _.current
+              ? _.detail.focusedNode?.Element != _.current &&
+                (_.BIsActive() || _.bInVR) &&
+                _.DelayHideVirtualKeyboard()
+              : console.warn(
+                  `keyboard got blur event, but it's not the active element`,
+                ));
         },
         [_],
       ),
@@ -42410,32 +42407,35 @@ Error generating stack: ` +
   }
   var ActiveFocusNavTreeContext = import_react.createContext({
     bActiveTree: !1,
-    bActiveTreeWithinContext: !1,
+    bActiveTreeWithinWindow: !1,
     bDisableFocusClasses: !1,
     bIsMounted: !1,
   });
   function ActiveTreeContextRoot(_) {
     let { tree: _, disableFocusClasses: _ = !1, children: _ } = _,
       [_, _] = import_react.useState(_?.BIsActive() || !1),
-      [_, _] = import_react.useState(_?.BIsActiveWithinContext() || !1),
+      [_, _] = import_react.useState(_?.BIsActiveWithinWindow() || !1),
       _ = useSubscribableValue(_?.SubscribableIsMounted) ?? !1;
     import_react.useEffect(() => {
       if (!_) {
         _(!1), _(!1);
         return;
       }
-      return (
-        _(_.BIsActive()),
-        _(_.BIsActiveWithinContext()),
-        _.OnActiveStateChangedCallbacks.Register(() => {
-          _(_.BIsActive()), _(_.BIsActiveWithinContext());
-        }).Unregister
-      );
+      _(_.BIsActive()), _(_.BIsActiveWithinWindow());
+      let _ = _.OnActiveStateChangedCallbacks.Register(() => {
+          _(_.BIsActive()), _(_.BIsActiveWithinWindow());
+        }),
+        _ = _.OnActiveWithinWindowChangedCallbacks.Register(() =>
+          _(_.BIsActiveWithinWindow()),
+        );
+      return () => {
+        _.Unregister(), _.Unregister();
+      };
     }, [_]);
     let _ = import_react.useMemo(
       () => ({
         bActiveTree: _,
-        bActiveTreeWithinContext: _,
+        bActiveTreeWithinWindow: _,
         bDisableFocusClasses: _,
         bIsMounted: _,
       }),
@@ -42651,7 +42651,7 @@ Error generating stack: ` +
         _ = useSubscribableValue(_.SubscribableFocusWithin) && _,
         {
           bActiveTree: _,
-          bActiveTreeWithinContext: _,
+          bActiveTreeWithinWindow: _,
           bDisableFocusClasses: _,
           bIsMounted: _,
         } = useActiveFocusNavTreeContext(),
@@ -45334,8 +45334,8 @@ Error generating stack: ` +
     let _ = _.popoverTargetElement;
     if (!(_ instanceof HTMLElement)) return;
     let _ = getPopoverVisibilityState(_);
-    (_.popoverTargetAction !== `show` || _ !== `showing`) &&
-      (_.popoverTargetAction !== `hide` || _ !== `hidden`) &&
+    (_.popoverTargetAction === `show` && _ === `showing`) ||
+      (_.popoverTargetAction === `hide` && _ === `hidden`) ||
       (_ === `showing`
         ? hidePopover(_, !0, !0)
         : checkPopoverValidity(_, !1) &&
@@ -45748,10 +45748,7 @@ Error generating stack: ` +
         let _ = getRootNode(_);
         if (!(_ instanceof ShadowRoot2 || _ instanceof Document)) return;
         let _ = _.closest(`[popovertargetaction],[popovertarget]`);
-        if (_) {
-          popoverTargetAttributeActivationBehavior(_), _.preventDefault();
-          return;
-        }
+        _ && (popoverTargetAttributeActivationBehavior(_), _.preventDefault());
       },
       _ = (_) => {
         let _ = _.key,
@@ -46159,7 +46156,7 @@ Error generating stack: ` +
     let [_, _] = import_react.useState([]),
       _ = import_react.useRef(void 0);
     (0, import_react.useEffect)(() => {
-      (!_.current || !ArrayEquals(_.current, _)) &&
+      (_.current && ArrayEquals(_.current, _)) ||
         ((_.current = _), _((_) => [..._, _(..._)]));
     });
     let [_, _] = useQueries({
@@ -64057,39 +64054,38 @@ Error generating stack: ` +
             open: !0,
             ref: MergeRefs(_, _),
             onKeyDown: (_) => {
-              if (_.key === `Escape`) {
-                _();
-                return;
-              }
-              if (_.key === `ArrowDown`) {
-                let _ = document.activeElement;
-                if (_.dataset.index !== void 0) {
-                  let _ = parseInt(_.dataset.index) + 1,
-                    _ = _.current?.querySelector(`[data-index="${_}"]`);
-                  if (_) {
-                    _.focus(), _.preventDefault();
-                    return;
+              if (_.key === `Escape`) _();
+              else {
+                if (_.key === `ArrowDown`) {
+                  let _ = document.activeElement;
+                  if (_.dataset.index !== void 0) {
+                    let _ = parseInt(_.dataset.index) + 1,
+                      _ = _.current?.querySelector(`[data-index="${_}"]`);
+                    if (_) {
+                      _.focus(), _.preventDefault();
+                      return;
+                    }
                   }
+                  _.current?.querySelector(`[data-index="0"]`)?.focus(),
+                    _.preventDefault();
                 }
-                _.current?.querySelector(`[data-index="0"]`)?.focus(),
-                  _.preventDefault();
-              }
-              if (_.key === `ArrowUp`) {
-                let _ = document.activeElement;
-                if (_.dataset.index !== void 0) {
-                  let _ = parseInt(_.dataset.index) - 1,
-                    _ = _.current?.querySelector(`[data-index="${_}"]`);
-                  if (_) {
-                    _.focus(), _.preventDefault();
-                    return;
+                if (_.key === `ArrowUp`) {
+                  let _ = document.activeElement;
+                  if (_.dataset.index !== void 0) {
+                    let _ = parseInt(_.dataset.index) - 1,
+                      _ = _.current?.querySelector(`[data-index="${_}"]`);
+                    if (_) {
+                      _.focus(), _.preventDefault();
+                      return;
+                    }
                   }
+                  _.current
+                    ?.querySelector(
+                      `[data-index="${(_?.data?.length ?? 0) - 1}"]`,
+                    )
+                    ?.focus(),
+                    _.preventDefault();
                 }
-                _.current
-                  ?.querySelector(
-                    `[data-index="${(_?.data?.length ?? 0) - 1}"]`,
-                  )
-                  ?.focus(),
-                  _.preventDefault();
               }
             },
             onBlur: (_) => {
@@ -64189,11 +64185,10 @@ Error generating stack: ` +
             (_.relatedTarget && _.current?.contains(_.relatedTarget)) || _(!1);
           },
           onKeyDown: (_) => {
-            if (_.key === `Escape`) {
-              _(!1);
-              return;
-            }
-            _.key === `ArrowDown` && (_.current?.focus(), _.preventDefault());
+            _.key === `Escape`
+              ? _(!1)
+              : _.key === `ArrowDown` &&
+                (_.current?.focus(), _.preventDefault());
           },
         }),
         _ &&

@@ -168,7 +168,6 @@ html.touch .wKSQT4ZMQNA- .NQcSXUQ7jyY-,
   color: #0e141b;
   max-height: 34px;
   box-shadow: none;
-  right: unset;
   background: #fff;
   border-radius: 28px;
   justify-content: center;
@@ -176,6 +175,7 @@ html.touch .wKSQT4ZMQNA- .NQcSXUQ7jyY-,
   padding: 3px 12px;
   display: inline-flex;
   position: relative;
+  inset-inline-end: unset;
   overflow: hidden;
 }
 .BasicUI .MYmTqhwexFc- {
@@ -343,7 +343,6 @@ html.responsive.touch .MYmTqhwexFc- .WishlistButtonText {
   box-shadow: 0 0 10px #a1a7b5;
 }
 .DialogContent.auditContents .DialogBodyText {
-  -webkit-user-select: text;
   user-select: text;
 }
 .KQqfjolvxWc- {

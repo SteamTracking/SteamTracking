@@ -8,7 +8,7 @@ body.v6 h2.announcement_top_title{
 	letter-spacing: 2px;
 
 	padding-bottom: 0px;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	padding-top: 0px;
 }
 
@@ -76,18 +76,18 @@ body.v6 h2.announcement_top_title{
 	display: none;
 }
 .creator_announcement_read_all_bottom{
-	float:right;
+	float:inline-end;
 }
 
 .creator_announcement_adjustment.not(.background_header_ctn) {
-	left:-140px;
+	inset-inline-start:-140px;
 	position:relative;
 }
 
 @media screen and (max-width: 1300px) {
 	html .creator_announcement_adjustment.not(.background_header_ctn) {
 		position: static;
-		left:0px;
+		inset-inline-start:0px;
 	}
 
 	html .creator_announcement_list .creator_announcement_link:nth-child(4) {
@@ -95,7 +95,7 @@ body.v6 h2.announcement_top_title{
 	}
 
 	html body.v6 h2.announcement_top_title {
-		margin-left: 0px;
+		margin-inline-start: 0px;
 	}
 
 	html .creator_announcement_read_all_top {

@@ -38,7 +38,7 @@ body.v6.game_bg.grayscale.creatorhome .page_background.curator_recommendations {
 
 .list_header_area .curator_avatar_image img {
 	width: 32px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 .dlc_curator .list_header_area .curator_avatar_image img {
@@ -78,7 +78,8 @@ body.v6.game_bg.grayscale.creatorhome .page_background.curator_recommendations {
 }
 
 .curator_list.ordered .details {
-	padding: 4px 0 0 15px;
+	padding-block: 4px 0;
+	padding-inline: 15px 0;
 	width: 100%;
 }
 .curator_list.ordered .store_capsule .capsule > img {
@@ -140,7 +141,11 @@ body.v6.curator.list .curator_list .discount_prices {
 	padding: 2px 5px;
 	font-size: 15px;
 	line-height: 16px;
-	margin-right: -2px;
+	margin-inline-end: -2px;
+}
+.discount_block_inline .discount_pct:dir(rtl), .discount_block_inline .bundle_base_discount:dir(rtl) {
+	margin-right: 0;
+	margin-left: -2px;
 }
 
 .curator_list .discount_final_price {
@@ -189,7 +194,7 @@ body.v6.curator.list .curator_list .discount_prices {
 	content: '“';
     font-size: 34px;
     position: absolute;
-    left: -11px;
+    inset-inline-start: -11px;
     top: 4px;
     color: rgba(255, 255, 255, 0.4);
 }
@@ -207,7 +212,7 @@ body.v6.curator.list .curator_list .discount_prices {
 
 			letter-spacing: 1px;
 	font-size: 11px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .curator_review_date {
@@ -239,7 +244,7 @@ body.v6.curator.list .curator_list .discount_prices {
 
 			display: inline;
 	font-size: 26px;
-	margin-left: 4px;
+	margin-inline-start: 4px;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
@@ -276,7 +281,7 @@ body.v6.list h3 {
 
 .curator_list_discount_container .dlc_page_purchase_area {
 	position: relative;
-	right: auto;
+	inset-inline-end: auto;
 	bottom: auto;
 }
 
@@ -294,15 +299,15 @@ body.v6.list h3 {
 	min-height: 33px;
 }
 .unordered .curator_list_free_weekend_container > a {
-	float: right;
+	float: inline-end;
 	display: inline-block;
 }
 
 .curator_list_free_weekend_message {
-	padding-right: 12px;
+	padding-inline-end: 12px;
 	padding-top: 5px;
 	font-size: 16px;
-	padding-left: 12px;
+	padding-inline-start: 12px;
 	color: #fff;
 }
 .unordered .curator_list_free_weekend_message {

@@ -46,7 +46,7 @@ body.sale_page_background {
 
 
 .sale_page_purchase_item .ds_flag {
-	left: 15px;
+	inset-inline-start: 15px;
 }
 
 .sale_page_purchase_item.ds_flagged:not(.ds_wishlist) .sale_page_purchase_header img {
@@ -59,8 +59,8 @@ body.sale_page_background {
 }
 
 .sale_page_purchase_header {
-	float: left;
-	margin-right: 15px;
+	float: inline-start;
+	margin-inline-end: 15px;
 	width: 292px;
 	height: 136px;
 }
@@ -85,24 +85,24 @@ body.sale_page_background {
 
 .sale_page_purchase_price {
 	position: absolute;
-	right: 15px;
+	inset-inline-end: 15px;
 	font-size: 14px;
 	color: #ffffff;
 }
 
 .sale_page_purchase_area {
 	position: absolute;
-	right: 15px;
+	inset-inline-end: 15px;
 	bottom: 15px;
-	left: 15px;
-	text-align: right;
+	inset-inline-start: 15px;
+	text-align: end;
 	overflow: hidden;
 	overflow-x: auto;
 }
 
 .sale_page_sticker_area {
 	position: absolute;
-	right: 153px;
+	inset-inline-end: 153px;
 	top: 13px;
 }
 
@@ -113,15 +113,16 @@ body.sale_page_background {
 
 .sale_page_vivepromo_main_block
 {
-	padding: 20px 0px 5px 15px;
+	padding-block: 20px 5px;
+	padding-inline: 15px 0px;
 	background-color: rgba( 31, 85, 114, 0.55 );
 }
 
 .sale_page_block.vivepromo
 {
-	float: left;
+	float: inline-start;
 	margin-bottom: 15px;
-	margin-right: 1px;
+	margin-inline-end: 1px;
 }
 
 .sale_page_vivepromo_releasedate {
@@ -153,14 +154,14 @@ body.sale_page_background {
 
 .sale_page_name_link.vivepromo {
 	max-width: 232px;
-	float: left;
+	float: inline-start;
 	margin-top: 5px;
 }
 
 .sale_page_os_vivepromo {
-	float: right;
+	float: inline-end;
 	margin-top: 7px;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 }
 
 .sale_page_vivepromo_promo_header {
@@ -174,9 +175,9 @@ body.sale_page_background {
 
 .sale_page_vivepromo_promo_header.item_header
 {
-	margin-left: 15px;
+	margin-inline-start: 15px;
 	margin-top: 28px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .sale_page_vivepromo_browse_more_items
@@ -190,8 +191,8 @@ body.sale_page_background {
 {
 	position: relative;
 	top: 130px;
-	float: right;
-	margin-right: 30px;
+	float: inline-end;
+	margin-inline-end: 30px;
 }
 
 .sale_page_vivepromo_button
@@ -291,7 +292,7 @@ body.sale_page_background {
 }
 
 .sale_page_release_date > .platform_img.steamplay {
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .sale_page_package_contents {
@@ -300,7 +301,7 @@ body.sale_page_background {
 
 .sale_page_package_contents .tab_item {
 	margin-bottom: 2px;
-	padding-left: 213px;
+	padding-inline-start: 213px;
 	background: -webkit-linear-gradient( 315deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%);
 	background: linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%);
 }
@@ -311,10 +312,10 @@ body.sale_page_background {
 }
 
 .sale_page_package_contents .tab_item .tab_item_cap {
-	padding-left: 15px;
+	padding-inline-start: 15px;
 }
 .sale_page_package_contents .tab_item.ds_flagged .ds_flag {
-	left: 15px;
+	inset-inline-start: 15px;
 }
 
 .sale_page_package_contents .tab_item_details {
@@ -335,7 +336,7 @@ body.sale_page_background {
 
 #sale_page_purchase_all_area {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	bottom: 0px;
 	height: 71px;
 }
@@ -375,19 +376,21 @@ body.sale_page_background {
 
 .bundle_contents_preview_position
 {
-	margin-left: 6px;
+	margin-inline-start: 6px;
 }
 
 .sale_page_vr_launch_main_block
 {
-	padding: 35px 0px 25px 15px;
+	padding-block: 35px 25px;
+	padding-inline: 15px 0px;
 	background-color: rgba( 56, 91, 138, 0.76 );
 }
 
 .sale_page_vr_launch_second_block
 {
 	margin-top: 25px;
-	padding: 35px 0px 25px 15px;
+	padding-block: 35px 25px;
+	padding-inline: 15px 0px;
 	background-color: #365d7e;
 }
 
@@ -403,14 +406,14 @@ body.sale_page_background {
 
 .sale_page_vr_launch_promo_header.item_header
 {
-	margin-left: 15px;
+	margin-inline-start: 15px;
 	margin-top: 28px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .vr_launch .promo_item_list .item.wide2
 {
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	margin-bottom: 20px;
 	height: 234px;
 }
@@ -423,7 +426,7 @@ body.sale_page_background {
 
 .vr_launch .promo_item_list .item.wide3
 {
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	margin-bottom: 20px;
 	height: 162px;
 }
@@ -436,7 +439,7 @@ body.sale_page_background {
 
 .vr_launch .promo_item_list .item.wide4
 {
-	margin-right: 6px;
+	margin-inline-end: 6px;
 	margin-bottom: 20px;
 }
 
@@ -485,21 +488,24 @@ body.sale_page_background {
 
 .sale_page_three_section_top_block
 {
-	padding: 15px 0px 25px 15px;
+	padding-block: 15px 25px;
+	padding-inline: 15px 0px;
 	background-color: #365d7e;
 }
 
 .sale_page_three_section_middle_block
 {
 	margin-top: 25px;
-	padding: 15px 0px 25px 15px;
+	padding-block: 15px 25px;
+	padding-inline: 15px 0px;
 	background-color: #365d7e;
 }
 
 .sale_page_three_section_bottom_block
 {
 	margin-top: 25px;
-	padding: 15px 0px 25px 15px;
+	padding-block: 15px 25px;
+	padding-inline: 15px 0px;
 	background-color: #365d7e;
 }
 
@@ -577,12 +583,12 @@ body.sale_page_background {
 	border: none;
 	width: 938px;
 	height: 205px;
-	float: right;
+	float: inline-end;
 	border: 1px rgba(255, 255, 255, .1) solid;
 }
 
 .sale_page_three_section .broadcastwrapper .ViewerCount {
-	text-align: left;
+	text-align: start;
 }
 
 .sale_page_three_section .broadcastwrapper .ViewerCount #viewers {
@@ -597,7 +603,7 @@ body.sale_page_background {
 .sale_page_three_section_promo_header_image_top,
 .sale_page_three_section_promo_header_image_middle,
 .sale_page_three_section_promo_header_image_bottom {
-	left: -15px;
+	inset-inline-start: -15px;
 	position: relative;
 }
 
@@ -629,12 +635,12 @@ html.responsive .btnv6_blue_blue_innerfade {
 	}
 
 	html.responsive .sale_page_purchase_item .ds_flag {
-		left: 2%;
+		inset-inline-start: 2%;
 	}
 
 	html.responsive .sale_page_purchase_area {
-		left: 2%;
-		right: 2%;
+		inset-inline-start: 2%;
+		inset-inline-end: 2%;
 	}
 
 	html.responsive .bundle_sale .game_header_image
@@ -660,11 +666,11 @@ html.responsive .btnv6_blue_blue_innerfade {
 	}
 
 	html.responsive .sale_page_vivepromo_promo_header {
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 
 	html.responsive .sale_page_vivepromo_promo_header.item_header {
-		margin-left: 2%;
+		margin-inline-start: 2%;
 	}
 
 	html.responsive .sale_page_vivepromo_main_block {
@@ -697,7 +703,8 @@ html.responsive .btnv6_blue_blue_innerfade {
 	html.responsive .vr_launch .promo_item_list .item.wide3,
 	html.responsive .vr_launch .promo_item_list .item.wide4
 	{
-		margin: 0px 15px 20px 0px;
+		margin-block: 0px 20px;
+		margin-inline: 0px 15px;
 		height: 160px;
 	}
 
@@ -740,17 +747,18 @@ html.responsive .btnv6_blue_blue_innerfade {
 	}
 
 	html.responsive .sale_page_package_contents .tab_item .tab_item_cap {
-		padding-left: 0;
+		padding-inline-start: 0;
 	}
 	html.responsive .sale_page_package_contents .tab_item.ds_flagged .ds_flag {
-		left: 0;
+		inset-inline-start: 0;
 	}
 
 	html.responsive .vr_launch .promo_item_list .item.wide2,
 	html.responsive .vr_launch .promo_item_list .item.wide3,
 	html.responsive .vr_launch .promo_item_list .item.wide4
 	{
-		margin: 0px 10px 20px 0px;
+		margin-block: 0px 20px;
+		margin-inline: 0px 10px;
 		height: 130px;
 	}
 

@@ -5,148 +5,150 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./familymanagement.js?contenthash=BPSEVhAz",
-      "./rolldown-runtime.js?contenthash=DbX3T1YK",
-      "./libraries.js?contenthash=b0JzZ9xY",
-      "./storelink.js?contenthash=D6FH0YtN",
-      "./main.js?contenthash=CoTzkQpL",
-      "../../../css/applications/store/main.css?contenthash=DyWIOX_R",
-      "../../../css/applications/store/storelink.css?contenthash=B4v8KZR3",
-      "./saletags.js?contenthash=BlqhnXqH",
-      "./usedataloader.client.js?contenthash=Dl9lGtP2",
-      "./claninfo.js?contenthash=Dzhdx5L8",
-      "./storeurl.js?contenthash=GqFNY1Yl",
-      "./modals.js?contenthash=Bvz6v6q2",
-      "./ostype.js?contenthash=iNgV2EPd",
+      "./familymanagement.js?contenthash=Do4_NcAv",
+      "./rolldown-runtime.js?contenthash=C8f2gWku",
+      "./libraries.js?contenthash=CNC_iAx3",
+      "./storelink.js?contenthash=CT4OJAn1",
+      "./main.js?contenthash=CFzBcxgL",
+      "../../../css/applications/store/main.css?contenthash=CL06k7su",
+      "../../../css/applications/store/storelink.css?contenthash=DfLuucjw",
+      "./saletags.js?contenthash=BFf2itlN",
+      "./usedataloader.client.js?contenthash=BsFeMYKq",
+      "./claninfo.js?contenthash=BYdUAmnu",
+      "./storeurl.js?contenthash=CO_EWN7g",
+      "./modals.js?contenthash=BVi0TInp",
+      "./ostype.js?contenthash=B9AHVZxs",
       "../../../css/applications/store/ostype.css?contenthash=x1XGuNl0",
-      "./microtrailerdisplay.js?contenthash=T8pB-r0U",
+      "./microtrailerdisplay.js?contenthash=CHEgniJG",
       "../../../css/applications/store/microtrailerdisplay.css?contenthash=Cfa2oe-r",
-      "./ajaxhooks.js?contenthash=CK4aSccU",
-      "./historyutils.js?contenthash=CF-ohd4O",
-      "./throbber.js?contenthash=Dv4UaK6D",
-      "../../../css/applications/store/throbber.css?contenthash=B5cG3W4v",
+      "./ajaxhooks.js?contenthash=DzoC2RB5",
+      "./historyutils.js?contenthash=DxNfPuHi",
+      "./throbber.js?contenthash=BBuWBE8U",
+      "../../../css/applications/store/throbber.css?contenthash=DMWv5jTr",
       "./stringutils.js?contenthash=Dlrxs4RX",
-      "./partnereventshared.module.js?contenthash=BdpFElnJ",
-      "../../../css/applications/store/partnereventshared.css?contenthash=B7LNJQ8W",
-      "./personautils.js?contenthash=B6IsvRMY",
-      "./csstransitionwrapper.js?contenthash=5ARLgNVf",
+      "./linkfilter.js?contenthash=vzeOea3n",
+      "./saletechredirectsignin.js?contenthash=dzCSmv5N",
+      "./partnereventshared.module.js?contenthash=C0PbqCeD",
+      "../../../css/applications/store/partnereventshared.css?contenthash=BGIA11o9",
+      "./personautils.js?contenthash=CBUChcmR",
+      "./csstransitionwrapper.js?contenthash=DRKzoLLx",
       "../../../css/applications/store/csstransitionwrapper.css?contenthash=5k1i5yPG",
-      "./remotedownloadhooks.js?contenthash=Bo2pxPE9",
-      "./steammessages_clan_pb.js?contenthash=Cw7tWIgZ",
-      "../../../css/applications/store/saletags.css?contenthash=BLGiX0-W",
-      "./moment.js?contenthash=DsR_Av1l",
-      "./privateapps.js?contenthash=DIcUbNIn",
-      "./playerstore.js?contenthash=TV0c_iSg",
-      "./persona.js?contenthash=Ke23hNXD",
-      "./appinfostore.js?contenthash=CSyO6twl",
-      "./appinfo.js?contenthash=D3z1BYHo",
-      "./playerlinkdetailsdataloader.js?contenthash=DaS98hZj",
-      "./storeitemhooks.js?contenthash=CktAdHbR",
-      "./friendsstore.js?contenthash=CCWhZqja",
-      "./steammessages_friendslist_pb.js?contenthash=ClhidE07",
-      "./contentdescriptors.js?contenthash=BYGyn26H",
-      "./expanderbutton.js?contenthash=CHnfmsJu",
+      "./remotedownloadhooks.js?contenthash=CvJz__jP",
+      "./steammessages_clan_pb.js?contenthash=BpdBBpFP",
+      "../../../css/applications/store/saletags.css?contenthash=Be_ydV96",
+      "./moment.js?contenthash=Csw2oUrB",
+      "./privateapps.js?contenthash=CuwIoUh7",
+      "./playerstore.js?contenthash=lGcRdLlj",
+      "./persona.js?contenthash=C26wfOwA",
+      "./appinfostore.js?contenthash=LywnHE1d",
+      "./appinfo.js?contenthash=DgDnOi0m",
+      "./playerlinkdetailsdataloader.js?contenthash=CBg3pR3c",
+      "./storeitemhooks.js?contenthash=DKELK37y",
+      "./friendsstore.js?contenthash=BlDS66D4",
+      "./steammessages_friendslist_pb.js?contenthash=CMvIrN9K",
+      "./contentdescriptors.js?contenthash=D_TcbCj1",
+      "./expanderbutton.js?contenthash=UMMUEc9N",
       "../../../css/applications/store/expanderbutton.css?contenthash=7EgfjSu7",
-      "./steammessages_familygroups_pb.js?contenthash=BAQTNR12",
-      "./familymanagementstore.js?contenthash=Bx-2xJHh",
-      "./steamavatar.js?contenthash=DfEGWapa",
-      "./multisourceimage.js?contenthash=BVqKyLkc",
-      "../../../css/applications/store/steamavatar.css?contenthash=BiEJmu6r",
-      "./personanameandstatus.js?contenthash=D7k4wDpR",
+      "./steammessages_familygroups_pb.js?contenthash=Bibdcq4e",
+      "./familymanagementstore.js?contenthash=BZTcHnou",
+      "./steamavatar.js?contenthash=j0XKQuXg",
+      "./multisourceimage.js?contenthash=BKu7brjS",
+      "../../../css/applications/store/steamavatar.css?contenthash=BQtkhJsu",
+      "./personanameandstatus.js?contenthash=CdB2Xqta",
       "./enums_epersonastateflag.js?contenthash=DUdzI8yJ",
-      "./alternate_icons.js?contenthash=DewHAWlE",
-      "../../../css/applications/store/personanameandstatus.css?contenthash=C1vQP5bx",
-      "./useavatarandpersona.js?contenthash=zoioA_2q",
-      "./react-datetime.js?contenthash=DNegIGQC",
-      "../../../css/applications/store/react-datetime.css?contenthash=ByP4wuA0",
-      "./layout.js?contenthash=DC9X9dKa",
+      "./alternate_icons.js?contenthash=D9ehoKlf",
+      "../../../css/applications/store/personanameandstatus.css?contenthash=BMiL-wHD",
+      "./useavatarandpersona.js?contenthash=cOm5647R",
+      "./react-datetime.js?contenthash=CIC02Ql_",
+      "../../../css/applications/store/react-datetime.css?contenthash=BLBSEpof",
+      "./layout.js?contenthash=Gq1Nutfz",
       "../../../css/applications/store/layout.css?contenthash=CjyZtTRZ",
-      "../../../css/applications/store/familymanagement.css?contenthash=XIVDuERb",
+      "../../../css/applications/store/familymanagement.css?contenthash=C14v1NI8",
     ]),
 ) => i.map((i) => d[i]);
 /* Third-party software licenses can be found at licenses.txt */
-import { o as e, t } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
+import { o as e, t } from "./rolldown-runtime.js?contenthash=C8f2gWku";
 import {
   At as n,
   F as r,
   L as i,
-  Rt as a,
-  j as o,
-  jt as s,
-  k as c,
-  nt as l,
-  pt as u,
-} from "./libraries.js?contenthash=b0JzZ9xY";
-import "./steammessages_twofactor_pb.js?contenthash=D-cSUtPt";
-import { n as d } from "./image.js?contenthash=uqYrbtS1";
-import { r as f, t as p } from "./ostype.js?contenthash=iNgV2EPd";
-import { t as m } from "./throbber.js?contenthash=Dv4UaK6D";
-import { i as h } from "./eventdevfeaturestore.js?contenthash=TYqP9dQA";
-import { n as g } from "./playerstore.js?contenthash=TV0c_iSg";
-import { n as _ } from "./storeitemhooks.js?contenthash=CktAdHbR";
+  Lt as a,
+  d as o,
+  ft as s,
+  kt as c,
+  l,
+  tt as u,
+} from "./libraries.js?contenthash=CNC_iAx3";
+import { n as d } from "./image.js?contenthash=DYQsw1Sy";
+import { r as f, t as p } from "./ostype.js?contenthash=B9AHVZxs";
+import { t as m } from "./throbber.js?contenthash=BBuWBE8U";
+import { i as h } from "./eventdevfeaturestore.js?contenthash=ByHYBzVE";
+import { n as g } from "./playerstore.js?contenthash=lGcRdLlj";
+import { n as _ } from "./storeitemhooks.js?contenthash=DKELK37y";
 import {
-  $b as v,
-  $y as y,
-  Ac as b,
-  Bi as x,
-  Cc as S,
-  Ci as ee,
-  Db as C,
-  Gi as te,
-  Hi as ne,
-  Iu as w,
-  Ji as re,
-  Jo as ie,
+  $n as v,
+  Au as y,
+  En as b,
+  Gr as x,
+  Iy as S,
+  Jb as C,
+  Jc as w,
+  Jo as ee,
   Jy as T,
-  Lb as E,
-  Mr as ae,
-  Qb as D,
-  Qi as oe,
-  S as O,
-  Si as se,
-  Sr as ce,
-  St as k,
-  TS as le,
-  Ui as A,
-  Wy as ue,
-  Xi as j,
-  Xr as de,
-  Yc as M,
-  Yr as fe,
-  Yy as N,
-  ai as pe,
-  bu as me,
-  ca as he,
-  cx as P,
-  ea as ge,
-  fi as F,
-  fl as _e,
-  ga as I,
-  ii as ve,
-  il as ye,
-  jr as L,
-  mb as R,
-  my as be,
-  no as xe,
-  oi as Se,
-  qc as z,
-  qi as B,
-  ra as V,
-  sb as Ce,
-  ub as we,
-  wb as Te,
-  wr as Ee,
-  xi as De,
-  yb as Oe,
-} from "./main.js?contenthash=CoTzkQpL";
-import { i as ke } from "./steamavatar.js?contenthash=DfEGWapa";
-import { r as Ae, t as je } from "./playteststore.js?contenthash=BPTGFICm";
-var H = e(a()),
-  Me = e(l()),
-  Ne = class {
+  Kr as te,
+  Mb as E,
+  Mn as ne,
+  Nn as re,
+  Rr as ie,
+  S as D,
+  Sb as ae,
+  Sc as O,
+  Sr as oe,
+  Uy as k,
+  Wy as A,
+  _i as se,
+  ab as ce,
+  ci as le,
+  cy as ue,
+  dr as j,
+  ei as de,
+  gr as M,
+  il as fe,
+  ir as pe,
+  kc as N,
+  lb as me,
+  lr as he,
+  mb as P,
+  nb as ge,
+  ni as _e,
+  nl as F,
+  no as I,
+  nr as ve,
+  or as ye,
+  pl as L,
+  pr as R,
+  qb as z,
+  rx as B,
+  sr as be,
+  ti as V,
+  tr as H,
+  vi as xe,
+  wn as Se,
+  xt as Ce,
+  yS as we,
+  yb as Te,
+  yi as Ee,
+  zy as De,
+} from "./main.js?contenthash=CFzBcxgL";
+import "./steammessages_twofactor_pb.js?contenthash=S88bSi0e";
+import { i as Oe } from "./steamavatar.js?contenthash=j0XKQuXg";
+import { r as ke, t as Ae } from "./playteststore.js?contenthash=Dz_OJboa";
+var U = e(a()),
+  je = e(u()),
+  Me = class {
     m_Preferences = void 0;
     constructor(e) {
-      n(this),
+      c(this),
         (this.m_Preferences = e),
         (!this.m_Preferences.content_customization ||
           Array.isArray(this.m_Preferences.content_customization)) &&
@@ -257,16 +259,16 @@ var H = e(a()),
       (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
     }
     async PostCookieSettings() {
-      let e = P.STORE_BASE_URL + `account/ajaxsetcookiepreferences`,
+      let e = B.STORE_BASE_URL + `account/ajaxsetcookiepreferences`,
         t = new FormData();
-      t.set(`sessionid`, D()),
+      t.set(`sessionid`, z()),
         t.append(`cookiepreferences`, JSON.stringify(this.m_Preferences));
       try {
-        let n = await Me.default.post(e, t, { withCredentials: !0 });
+        let n = await je.default.post(e, t, { withCredentials: !0 });
         if (n.status != 200 || n?.data?.success != 1)
           window.ShowAlertDialog(
-            T(`#CookiePref_Error`),
-            T(`#CookiePref_ErrorNotSaved`),
+            k(`#CookiePref_Error`),
+            k(`#CookiePref_ErrorNotSaved`),
           );
         else if (n?.data?.success == 1) {
           let { transfer_urls: e, transfer_params: t } = n.data;
@@ -274,39 +276,39 @@ var H = e(a()),
         }
       } catch {
         window.ShowAlertDialog(
-          T(`#CookiePref_Error`),
-          T(`#CookiePref_ErrorNotSaved`),
+          k(`#CookiePref_Error`),
+          k(`#CookiePref_ErrorNotSaved`),
         );
       }
     }
     TransferCookiePreferencesToSites(e, t) {
       let n = new FormData();
       n.set(`transfer_params`, t);
-      for (let t of e) Me.default.post(t, n);
+      for (let t of e) je.default.post(t, n);
     }
   };
-E([s], Ne.prototype, `m_Preferences`, void 0);
-var Pe = `VK34WouHuaw-`,
-  Fe = `_5poRwjVM2xA-`,
-  Ie = `f5Yon4sBMms-`,
-  Le = `dAbDU2dWSc8-`,
-  U = `FhWHeCBXNTE-`,
-  W = `_1jidsj59ecM-`,
-  G = `nsVR689da2w-`,
-  K = `KRR6D4MqfmI-`,
-  q = `ianSd3EEgC4-`,
-  J = `GNihUgwOi5E-`,
-  Re = `-vGnfVpkS8E-`,
-  ze = `xexqER2-FTo-`,
-  Be = `YBWuxM9Y7u8-`,
-  Ve = `_4ZnBPObA-Zo-`,
-  He = `i9VafgXk4E0-`,
-  Ue = `wH9bvzYo4Oo-`,
-  We = `TLijdnKtJ-U-`,
-  Ge = class {
+E([n], Me.prototype, `m_Preferences`, void 0);
+var Ne = `VK34WouHuaw-`,
+  Pe = `_5poRwjVM2xA-`,
+  Fe = `f5Yon4sBMms-`,
+  Ie = `dAbDU2dWSc8-`,
+  W = `FhWHeCBXNTE-`,
+  G = `_1jidsj59ecM-`,
+  K = `nsVR689da2w-`,
+  q = `KRR6D4MqfmI-`,
+  J = `ianSd3EEgC4-`,
+  Y = `GNihUgwOi5E-`,
+  Le = `-vGnfVpkS8E-`,
+  Re = `xexqER2-FTo-`,
+  ze = `YBWuxM9Y7u8-`,
+  Be = `_4ZnBPObA-Zo-`,
+  Ve = `i9VafgXk4E0-`,
+  He = `wH9bvzYo4Oo-`,
+  Ue = `TLijdnKtJ-U-`,
+  We = class {
     m_Preferences = void 0;
     constructor(e) {
-      n(this), (this.m_Preferences = e);
+      c(this), (this.m_Preferences = e);
     }
     SetDeckFeedback(e) {
       (this.m_Preferences.provide_deck_feedback = e),
@@ -333,9 +335,9 @@ var Pe = `VK34WouHuaw-`,
         this.PostStorePreferences();
     }
     async PostStorePreferences() {
-      let e = P.STORE_BASE_URL + `account/savepreferences`,
+      let e = B.STORE_BASE_URL + `account/savepreferences`,
         t = new FormData();
-      t.set(`sessionid`, D()),
+      t.set(`sessionid`, z()),
         t.set(
           `provide_deck_feedback`,
           this.m_Preferences.provide_deck_feedback.toString(),
@@ -345,27 +347,27 @@ var Pe = `VK34WouHuaw-`,
           this.m_Preferences.game_frame_rate_reporting.toString(),
         );
       try {
-        let n = await Me.default.post(e, t, { withCredentials: !0 });
+        let n = await je.default.post(e, t, { withCredentials: !0 });
         n.status != 200 || n?.data?.success != 1
           ? window.ShowAlertDialog(
-              T(`#DataCollectionPref_Error`),
-              T(`#DataCollectionPref_ErrorNotSaved`),
+              k(`#DataCollectionPref_Error`),
+              k(`#DataCollectionPref_ErrorNotSaved`),
             )
           : n?.data?.success;
       } catch {
         window.ShowAlertDialog(
-          T(`#DataCollectionPref_Error`),
-          T(`#DataCollectionPref_ErrorNotSaved`),
+          k(`#DataCollectionPref_Error`),
+          k(`#DataCollectionPref_ErrorNotSaved`),
         );
       }
     }
   };
-E([s], Ge.prototype, `m_Preferences`, void 0);
-var Ke = class e {
+E([n], We.prototype, `m_Preferences`, void 0);
+var Ge = class e {
   m_rgSavedHardware = [];
   static s_AccountSavedHardwareStore;
   constructor() {
-    n(this);
+    c(this);
   }
   static Get() {
     return (
@@ -376,36 +378,36 @@ var Ke = class e {
     );
   }
   Init() {
-    this.m_rgSavedHardware = v(`saved_hardware`, `application_config`);
+    this.m_rgSavedHardware = C(`saved_hardware`, `application_config`);
   }
   GetSavedHardware() {
     return this.m_rgSavedHardware;
   }
   async PostRequest(e, t) {
     try {
-      let n = await Me.default.post(e, t, { withCredentials: !0 });
+      let n = await je.default.post(e, t, { withCredentials: !0 });
       return n.status != 200 || n?.data?.success != 1
         ? (window.ShowAlertDialog(
-            T(`#SavedHardware_Error_Title`),
-            T(`#SavedHardware_Error_Desc`),
+            k(`#SavedHardware_Error_Title`),
+            k(`#SavedHardware_Error_Desc`),
           ),
           !1)
         : !0;
     } catch {
       return (
         window.ShowAlertDialog(
-          T(`#SavedHardware_Error_Title`),
-          T(`#SavedHardware_Error_Desc`),
+          k(`#SavedHardware_Error_Title`),
+          k(`#SavedHardware_Error_Desc`),
         ),
         !1
       );
     }
   }
   async RenameHardware(e, t) {
-    let n = P.STORE_BASE_URL + `account/ajaxhardwarerename`,
+    let n = B.STORE_BASE_URL + `account/ajaxhardwarerename`,
       r = new FormData();
     if (
-      (r.set(`sessionid`, D()),
+      (r.set(`sessionid`, z()),
       r.set(`savedHardwareID`, e),
       r.set(`strFriendlyName`, t),
       await this.PostRequest(n, r))
@@ -415,10 +417,10 @@ var Ke = class e {
           (this.m_rgSavedHardware[n].friendly_name = t);
   }
   async DeleteHardware(e) {
-    let t = P.STORE_BASE_URL + `account/ajaxhardwaredelete`,
+    let t = B.STORE_BASE_URL + `account/ajaxhardwaredelete`,
       n = new FormData();
     if (
-      (n.set(`sessionid`, D()),
+      (n.set(`sessionid`, z()),
       n.set(`savedHardwareID`, e),
       await this.PostRequest(t, n))
     ) {
@@ -430,40 +432,40 @@ var Ke = class e {
     }
   }
 };
-E([s], Ke.prototype, `m_rgSavedHardware`, void 0);
-function qe() {
-  return Ke.Get().GetSavedHardware();
+E([n], Ge.prototype, `m_rgSavedHardware`, void 0);
+function Ke() {
+  return Ge.Get().GetSavedHardware();
 }
-var Y = u();
-function Je(e) {
+var X = s();
+function qe(e) {
   let { hw: t, closeModal: n } = e,
-    r = H.useCallback(() => {
-      Ke.Get().DeleteHardware(t.hardware_id), n();
+    r = U.useCallback(() => {
+      Ge.Get().DeleteHardware(t.hardware_id), n();
     }, [n, t.hardware_id]);
-  return (0, Y.jsx)(Ee, {
+  return (0, X.jsx)(b, {
     bDisableBackgroundDismiss: !0,
-    strTitle: T(`#SavedHardware_Delete_Confirm_Title`),
+    strTitle: k(`#SavedHardware_Delete_Confirm_Title`),
     onCancel: n,
     onOK: r,
-    strOKButtonText: T(`#SavedHardware_Delete`),
-    children: T(`#SavedHardware_Delete_Confirm_Desc`, t.friendly_name),
+    strOKButtonText: k(`#SavedHardware_Delete`),
+    children: k(`#SavedHardware_Delete_Confirm_Desc`, t.friendly_name),
   });
 }
-function Ye(e) {
+function Je(e) {
   let { hw: t, closeModal: n } = e,
-    [r, i] = H.useState(t.friendly_name),
-    a = H.useCallback(() => {
-      Ke.Get().RenameHardware(t.hardware_id, r.trim()), n();
+    [r, i] = U.useState(t.friendly_name),
+    a = U.useCallback(() => {
+      Ge.Get().RenameHardware(t.hardware_id, r.trim()), n();
     }, [r, n, t.hardware_id]);
-  return (0, Y.jsx)(Ee, {
+  return (0, X.jsx)(b, {
     bDisableBackgroundDismiss: !0,
-    strTitle: T(`#SavedHardware_Rename_Confirm_Title`),
+    strTitle: k(`#SavedHardware_Rename_Confirm_Title`),
     onCancel: n,
     onOK: a,
     bOKDisabled: r.trim().length == 0,
-    strOKButtonText: T(`#SavedHardware_Rename`),
-    children: (0, Y.jsx)(ce, {
-      label: T(`#SavedHardware_Rename_Confirm_Label`),
+    strOKButtonText: k(`#SavedHardware_Rename`),
+    children: (0, X.jsx)(Se, {
+      label: k(`#SavedHardware_Rename_Confirm_Label`),
       value: r,
       onChange: (e) => {
         i(e.target.value);
@@ -472,282 +474,282 @@ function Ye(e) {
     }),
   });
 }
-var Xe = o((e) => {
+var Ye = o((e) => {
     let { hw: t } = e,
       n;
     switch (t.system_info.gaming_device_type) {
       case 544:
-        n = T(`#HardwareVariant_SteamDeck`);
+        n = k(`#HardwareVariant_SteamDeck`);
         break;
       case 545:
-        n = T(`#HardwareVariant_LegionGoS`);
+        n = k(`#HardwareVariant_LegionGoS`);
         break;
       case 546:
-        n = T(`#HardwareVariant_SteamMachine`);
+        n = k(`#HardwareVariant_SteamMachine`);
     }
-    return (0, Y.jsxs)(`div`, {
-      className: ze,
+    return (0, X.jsxs)(`div`, {
+      className: Re,
       children: [
-        (0, Y.jsxs)(`div`, {
+        (0, X.jsxs)(`div`, {
           children: [
-            (0, Y.jsxs)(`div`, {
-              className: Be,
+            (0, X.jsxs)(`div`, {
+              className: ze,
               children: [t.friendly_name, ` `],
             }),
-            (0, Y.jsxs)(`div`, {
-              className: Ve,
+            (0, X.jsxs)(`div`, {
+              className: Be,
               children: [
-                n && (0, Y.jsx)(`div`, { children: n }),
-                (0, Y.jsx)(`div`, { children: t.system_info.os }),
-                (0, Y.jsxs)(`div`, {
+                n && (0, X.jsx)(`div`, { children: n }),
+                (0, X.jsx)(`div`, { children: t.system_info.os }),
+                (0, X.jsxs)(`div`, {
                   children: [
                     t.system_info.cpu_name,
                     ` - `,
-                    k(parseInt(t.system_info.system_ram) * 1024 * 1024, 0),
+                    Ce(parseInt(t.system_info.system_ram) * 1024 * 1024, 0),
                   ],
                 }),
-                (0, Y.jsxs)(`div`, {
+                (0, X.jsxs)(`div`, {
                   children: [
                     t.system_info.adapter_description,
                     ` - `,
-                    k(t.system_info.vram_size * 1024 * 1024, 0),
+                    Ce(t.system_info.vram_size * 1024 * 1024, 0),
                   ],
                 }),
               ],
             }),
-            (0, Y.jsx)(`div`, {
+            (0, X.jsx)(`div`, {
               className: void 0,
-              children: T(`#SavedHardware_Timestamp`, R(t.timestamp_created)),
+              children: k(`#SavedHardware_Timestamp`, me(t.timestamp_created)),
             }),
           ],
         }),
-        (0, Y.jsxs)(`div`, {
-          className: He,
+        (0, X.jsxs)(`div`, {
+          className: Ve,
           children: [
-            (0, Y.jsx)(A, {
-              className: We,
-              onClick: (e) => L((0, Y.jsx)(Ye, { hw: t }), w(e)),
-              children: T(`#SavedHardware_Rename`),
-            }),
-            (0, Y.jsx)(A, {
+            (0, X.jsx)(ve, {
               className: Ue,
-              onClick: (e) => L((0, Y.jsx)(Je, { hw: t }), w(e)),
-              children: T(`#SavedHardware_Delete`),
+              onClick: (e) => ne((0, X.jsx)(Je, { hw: t }), y(e)),
+              children: k(`#SavedHardware_Rename`),
+            }),
+            (0, X.jsx)(ve, {
+              className: He,
+              onClick: (e) => ne((0, X.jsx)(qe, { hw: t }), y(e)),
+              children: k(`#SavedHardware_Delete`),
             }),
           ],
         }),
       ],
     });
   }),
-  Ze = o(() => {
-    let e = qe(),
+  Xe = o(() => {
+    let e = Ke(),
       t = typeof SteamClient < `u`,
-      n = H.useCallback(() => {
+      n = U.useCallback(() => {
         window.location.reload();
       }, []),
-      r = H.useCallback(() => {
+      r = U.useCallback(() => {
         window.SteamClient.BrowserView.RegisterForMessageFromParent(n),
           SteamClient.BrowserView.PostMessageToParent(
             `ShowSavedHardwareDialog`,
             ``,
           );
       }, [n]);
-    return (0, Y.jsxs)(`div`, {
-      className: U,
+    return (0, X.jsxs)(`div`, {
+      className: W,
       children: [
-        (0, Y.jsxs)(`div`, {
-          className: W,
+        (0, X.jsxs)(`div`, {
+          className: G,
           children: [
-            (0, Y.jsx)(`h2`, { children: T(`#SavedHardware_Title`) }),
-            (0, Y.jsx)(`p`, {
-              className: G,
-              children: T(`#SavedHardware_Desc`),
+            (0, X.jsx)(`h2`, { children: k(`#SavedHardware_Title`) }),
+            (0, X.jsx)(`p`, {
+              className: K,
+              children: k(`#SavedHardware_Desc`),
             }),
           ],
         }),
-        (0, Y.jsx)(`div`, {
-          className: Re,
-          children: e.map((e) => (0, Y.jsx)(Xe, { hw: e }, e.hardware_id)),
+        (0, X.jsx)(`div`, {
+          className: Le,
+          children: e.map((e) => (0, X.jsx)(Ye, { hw: e }, e.hardware_id)),
         }),
-        (0, Y.jsx)(`div`, {
-          className: He,
+        (0, X.jsx)(`div`, {
+          className: Ve,
           children:
             t &&
-            (0, Y.jsxs)(A, {
+            (0, X.jsxs)(ve, {
               className: `_6xNO-D5DinA-`,
               onClick: r,
-              children: [T(`#SavedHardware_AddNew`), ` `],
+              children: [k(`#SavedHardware_AddNew`), ` `],
             }),
         }),
       ],
     });
   }),
-  Qe = null,
-  $e = null;
-function et() {
+  Ze = null,
+  Qe = null;
+function $e() {
   return (
-    (Qe ||= new Ne(v(`cookiepreferences`, `application_config`))),
-    ($e ||= new Ge(v(`storedatapreferences`, `application_config`))),
-    [Qe, $e]
+    (Ze ||= new Me(C(`cookiepreferences`, `application_config`))),
+    (Qe ||= new We(C(`storedatapreferences`, `application_config`))),
+    [Ze, Qe]
   );
 }
-var tt = c(() => {
-    let [e, t] = et(),
-      n = (0, H.useCallback)(() => {
+var et = l(() => {
+    let [e, t] = $e(),
+      n = (0, U.useCallback)(() => {
         e.SetPreferenceState(1);
       }, [e]),
-      r = (0, H.useCallback)(() => {
+      r = (0, U.useCallback)(() => {
         e.SetPreferenceState(2);
       }, [e]),
-      i = be();
-    return (0, Y.jsxs)(`div`, {
+      i = ue();
+    return (0, X.jsxs)(`div`, {
       children: [
-        (0, Y.jsx)(`div`, {
-          className: S(Ie, `account_header_line noicon`),
-          children: (0, Y.jsx)(`div`, {
-            children: T(`#CookiePref_OptionalCookies_Title`),
+        (0, X.jsx)(`div`, {
+          className: O(Fe, `account_header_line noicon`),
+          children: (0, X.jsx)(`div`, {
+            children: k(`#CookiePref_OptionalCookies_Title`),
           }),
         }),
-        (0, Y.jsxs)(`div`, {
+        (0, X.jsxs)(`div`, {
           className: `account_settings_container`,
           children: [
-            (0, Y.jsxs)(b, {
+            (0, X.jsxs)(N, {
               "flow-children": `row`,
-              className: Le,
+              className: Ie,
               children: [
-                (0, Y.jsx)(M, {
-                  className: S(Pe, e.BIsRejectAll() ? Fe : ``),
+                (0, X.jsx)(fe, {
+                  className: O(Ne, e.BIsRejectAll() ? Pe : ``),
                   onClick: r,
-                  children: T(`#CookiePref_RejectAll`),
+                  children: k(`#CookiePref_RejectAll`),
                 }),
-                (0, Y.jsx)(M, {
-                  className: S(Pe, e.BIsAllowAll() ? Fe : ``),
+                (0, X.jsx)(fe, {
+                  className: O(Ne, e.BIsAllowAll() ? Pe : ``),
                   onClick: n,
-                  children: T(`#CookiePref_AcceptAll`),
+                  children: k(`#CookiePref_AcceptAll`),
                 }),
               ],
             }),
-            (0, Y.jsx)(nt, { settings: e }),
-            (0, Y.jsx)(rt, { settings: e }),
-            (0, Y.jsx)(it, { settings: e }),
+            (0, X.jsx)(tt, { settings: e }),
+            (0, X.jsx)(nt, { settings: e }),
+            (0, X.jsx)(rt, { settings: e }),
           ],
         }),
-        (0, Y.jsx)(`div`, {
-          className: S(Ie, `account_header_line noicon`),
-          children: (0, Y.jsx)(`div`, {
-            children: T(`#CookiePref_TechnicallyNeccesary_Title`),
+        (0, X.jsx)(`div`, {
+          className: O(Fe, `account_header_line noicon`),
+          children: (0, X.jsx)(`div`, {
+            children: k(`#CookiePref_TechnicallyNeccesary_Title`),
           }),
         }),
-        (0, Y.jsxs)(`div`, {
+        (0, X.jsxs)(`div`, {
           className: `account_settings_container`,
           children: [
-            (0, Y.jsx)(`p`, {
-              children: T(`#CookiePref_TechnicallyNeccesary_Desc`),
+            (0, X.jsx)(`p`, {
+              children: k(`#CookiePref_TechnicallyNeccesary_Desc`),
             }),
-            (0, Y.jsxs)(`div`, {
-              className: U,
+            (0, X.jsxs)(`div`, {
+              className: W,
               children: [
-                (0, Y.jsxs)(`div`, {
-                  className: K,
+                (0, X.jsxs)(`div`, {
+                  className: q,
                   children: [
-                    (0, Y.jsx)(`span`, {
-                      className: q,
-                      children: T(`#CookiePref_SessionID_Title`),
-                    }),
-                    (0, Y.jsx)(`span`, {
+                    (0, X.jsx)(`span`, {
                       className: J,
-                      children: T(`#CookiePref_SessionID_Desc`),
+                      children: k(`#CookiePref_SessionID_Title`),
+                    }),
+                    (0, X.jsx)(`span`, {
+                      className: Y,
+                      children: k(`#CookiePref_SessionID_Desc`),
                     }),
                   ],
                 }),
-                (0, Y.jsxs)(`div`, {
-                  className: K,
+                (0, X.jsxs)(`div`, {
+                  className: q,
                   children: [
-                    (0, Y.jsx)(`span`, {
-                      className: q,
-                      children: T(`#CookiePref_ShoppingCart_Title`),
-                    }),
-                    (0, Y.jsx)(`span`, {
+                    (0, X.jsx)(`span`, {
                       className: J,
-                      children: T(`#CookiePref_ShoppingCart_Desc`),
+                      children: k(`#CookiePref_ShoppingCart_Title`),
+                    }),
+                    (0, X.jsx)(`span`, {
+                      className: Y,
+                      children: k(`#CookiePref_ShoppingCart_Desc`),
                     }),
                   ],
                 }),
-                (0, Y.jsxs)(`div`, {
-                  className: K,
+                (0, X.jsxs)(`div`, {
+                  className: q,
                   children: [
-                    (0, Y.jsx)(`span`, {
-                      className: q,
-                      children: T(`#CookiePref_SteamCountry_Title`),
-                    }),
-                    (0, Y.jsx)(`span`, {
+                    (0, X.jsx)(`span`, {
                       className: J,
-                      children: T(`#CookiePref_SteamCountry_Desc`),
+                      children: k(`#CookiePref_SteamCountry_Title`),
+                    }),
+                    (0, X.jsx)(`span`, {
+                      className: Y,
+                      children: k(`#CookiePref_SteamCountry_Desc`),
                     }),
                   ],
                 }),
-                (0, Y.jsxs)(`div`, {
-                  className: K,
+                (0, X.jsxs)(`div`, {
+                  className: q,
                   children: [
-                    (0, Y.jsx)(`span`, {
-                      className: q,
-                      children: T(`#CookiePref_Timezone_Title`),
-                    }),
-                    (0, Y.jsx)(`span`, {
+                    (0, X.jsx)(`span`, {
                       className: J,
-                      children: T(`#CookiePref_Timezone_Desc`),
+                      children: k(`#CookiePref_Timezone_Title`),
+                    }),
+                    (0, X.jsx)(`span`, {
+                      className: Y,
+                      children: k(`#CookiePref_Timezone_Desc`),
                     }),
                   ],
                 }),
-                (0, Y.jsxs)(`div`, {
-                  className: K,
+                (0, X.jsxs)(`div`, {
+                  className: q,
                   children: [
-                    (0, Y.jsx)(`span`, {
-                      className: q,
-                      children: T(`#CookiePref_BirthTime_Title`),
-                    }),
-                    (0, Y.jsx)(`span`, {
+                    (0, X.jsx)(`span`, {
                       className: J,
-                      children: T(`#CookiePref_BirthTime_Desc`),
+                      children: k(`#CookiePref_BirthTime_Title`),
+                    }),
+                    (0, X.jsx)(`span`, {
+                      className: Y,
+                      children: k(`#CookiePref_BirthTime_Desc`),
                     }),
                   ],
                 }),
-                (0, Y.jsxs)(`div`, {
-                  className: K,
+                (0, X.jsxs)(`div`, {
+                  className: q,
                   children: [
-                    (0, Y.jsx)(`span`, {
-                      className: q,
-                      children: T(`#CookiePref_Login_Title`),
-                    }),
-                    (0, Y.jsx)(`span`, {
+                    (0, X.jsx)(`span`, {
                       className: J,
-                      children: T(`#CookiePref_Login_Desc`),
+                      children: k(`#CookiePref_Login_Title`),
+                    }),
+                    (0, X.jsx)(`span`, {
+                      className: Y,
+                      children: k(`#CookiePref_Login_Desc`),
                     }),
                   ],
                 }),
-                (0, Y.jsxs)(`div`, {
-                  className: K,
+                (0, X.jsxs)(`div`, {
+                  className: q,
                   children: [
-                    (0, Y.jsx)(`span`, {
-                      className: q,
-                      children: T(`#CookiePref_Language_Title`),
-                    }),
-                    (0, Y.jsx)(`span`, {
+                    (0, X.jsx)(`span`, {
                       className: J,
-                      children: T(`#CookiePref_Language_Desc`),
+                      children: k(`#CookiePref_Language_Title`),
+                    }),
+                    (0, X.jsx)(`span`, {
+                      className: Y,
+                      children: k(`#CookiePref_Language_Desc`),
                     }),
                   ],
                 }),
-                (0, Y.jsxs)(`div`, {
-                  className: K,
+                (0, X.jsxs)(`div`, {
+                  className: q,
                   children: [
-                    (0, Y.jsx)(`span`, {
-                      className: q,
-                      children: T(`#CookiePref_CookieSettings_Title`),
-                    }),
-                    (0, Y.jsx)(`span`, {
+                    (0, X.jsx)(`span`, {
                       className: J,
-                      children: T(`#CookiePref_CookieSettings_Desc`),
+                      children: k(`#CookiePref_CookieSettings_Title`),
+                    }),
+                    (0, X.jsx)(`span`, {
+                      className: Y,
+                      children: k(`#CookiePref_CookieSettings_Desc`),
                     }),
                   ],
                 }),
@@ -755,28 +757,28 @@ var tt = c(() => {
             }),
           ],
         }),
-        (0, Y.jsx)(`div`, {
-          className: S(Ie, `account_header_line noicon`),
-          children: (0, Y.jsx)(`div`, {
-            children: T(`#PrivacySettings_Marketing_Header`),
+        (0, X.jsx)(`div`, {
+          className: O(Fe, `account_header_line noicon`),
+          children: (0, X.jsx)(`div`, {
+            children: k(`#PrivacySettings_Marketing_Header`),
           }),
         }),
-        (0, Y.jsx)(`div`, {
+        (0, X.jsx)(`div`, {
           className: `account_settings_container`,
-          children: (0, Y.jsx)(at, { settings: e }),
+          children: (0, X.jsx)(it, { settings: e }),
         }),
         !!i &&
-          (0, Y.jsxs)(Y.Fragment, {
+          (0, X.jsxs)(X.Fragment, {
             children: [
-              (0, Y.jsx)(`div`, {
-                className: S(`_64aHmRjJ5Ns-`, `account_header_line noicon`),
-                children: (0, Y.jsx)(`div`, {
-                  children: T(`#DataPreferences_Header`),
+              (0, X.jsx)(`div`, {
+                className: O(`_64aHmRjJ5Ns-`, `account_header_line noicon`),
+                children: (0, X.jsx)(`div`, {
+                  children: k(`#DataPreferences_Header`),
                 }),
               }),
-              (0, Y.jsx)(`div`, {
+              (0, X.jsx)(`div`, {
                 className: `account_settings_container`,
-                children: (0, Y.jsx)(ot, { settings: t }),
+                children: (0, X.jsx)(at, { settings: t }),
               }),
             ],
           }),
@@ -784,113 +786,113 @@ var tt = c(() => {
       ],
     });
   }),
-  nt = c((e) => {
+  tt = l((e) => {
     let { settings: t } = e,
-      n = (0, H.useCallback)(() => {
+      n = (0, U.useCallback)(() => {
         t.ToggleRecentApps();
       }, [t]);
-    return (0, Y.jsx)(`div`, {
-      className: U,
-      children: (0, Y.jsxs)(`div`, {
-        className: W,
+    return (0, X.jsx)(`div`, {
+      className: W,
+      children: (0, X.jsxs)(`div`, {
+        className: G,
         children: [
-          (0, Y.jsx)(`h2`, { children: T(`#CookiePref_Content_Title`) }),
-          (0, Y.jsx)(`p`, {
-            className: G,
-            children: T(`#CookiePref_Content_Desc`),
+          (0, X.jsx)(`h2`, { children: k(`#CookiePref_Content_Title`) }),
+          (0, X.jsx)(`p`, {
+            className: K,
+            children: k(`#CookiePref_Content_Desc`),
           }),
-          (0, Y.jsx)(V, {
+          (0, X.jsx)(M, {
             onChange: n,
-            label: T(`#CookiePref_Content_ToggleTitle`),
+            label: k(`#CookiePref_Content_ToggleTitle`),
             checked: t.GetRecentApps(),
-            description: T(`#CookiePref_Content_ToggleDesc`),
+            description: k(`#CookiePref_Content_ToggleDesc`),
           }),
         ],
       }),
     });
   }),
-  rt = c((e) => {
+  nt = l((e) => {
     let { settings: t } = e,
-      n = (0, H.useCallback)(() => {
+      n = (0, U.useCallback)(() => {
         t.ToggleImpressions();
       }, [t]);
-    return (0, Y.jsx)(`div`, {
-      className: U,
-      children: (0, Y.jsxs)(`div`, {
-        className: W,
+    return (0, X.jsx)(`div`, {
+      className: W,
+      children: (0, X.jsxs)(`div`, {
+        className: G,
         children: [
-          (0, Y.jsx)(`h2`, { children: T(`#CookiePref_ValveAnalytics_Title`) }),
-          (0, Y.jsx)(`p`, {
-            className: G,
-            children: T(`#CookiePref_ValveAnalytics_Desc`),
+          (0, X.jsx)(`h2`, { children: k(`#CookiePref_ValveAnalytics_Title`) }),
+          (0, X.jsx)(`p`, {
+            className: K,
+            children: k(`#CookiePref_ValveAnalytics_Desc`),
           }),
-          (0, Y.jsx)(V, {
+          (0, X.jsx)(M, {
             onChange: n,
-            label: T(`#CookiePref_ValveAnalytics_ToggleTitle`),
+            label: k(`#CookiePref_ValveAnalytics_ToggleTitle`),
             checked: t.GetImpressions(),
-            description: T(`#CookiePref_ValveAnalytics_ToggleDesc`),
+            description: k(`#CookiePref_ValveAnalytics_ToggleDesc`),
           }),
         ],
       }),
     });
   }),
-  it = c((e) => {
+  rt = l((e) => {
     let { settings: t } = e,
-      n = (0, H.useCallback)(() => {
+      n = (0, U.useCallback)(() => {
         t.ToggleYouTube();
       }, [t]),
-      r = (0, H.useCallback)(() => {
+      r = (0, U.useCallback)(() => {
         t.ToggleVimeo();
       }, [t]),
-      i = (0, H.useCallback)(() => {
+      i = (0, U.useCallback)(() => {
         t.ToggleSketchfab();
       }, [t]);
-    return (0, Y.jsx)(`div`, {
-      className: U,
-      children: (0, Y.jsxs)(`div`, {
-        className: W,
+    return (0, X.jsx)(`div`, {
+      className: W,
+      children: (0, X.jsxs)(`div`, {
+        className: G,
         children: [
-          (0, Y.jsx)(`h2`, { children: T(`#CookiePref_ThirdParty_Title`) }),
-          (0, Y.jsx)(`p`, {
-            className: G,
-            children: T(`#CookiePref_ThirdParty_Desc`),
+          (0, X.jsx)(`h2`, { children: k(`#CookiePref_ThirdParty_Title`) }),
+          (0, X.jsx)(`p`, {
+            className: K,
+            children: k(`#CookiePref_ThirdParty_Desc`),
           }),
-          (0, Y.jsx)(V, {
+          (0, X.jsx)(M, {
             onChange: n,
-            label: T(`#CookiePref_YouTube_Title`),
+            label: k(`#CookiePref_YouTube_Title`),
             checked: t.GetYouTube(),
-            description: y(
+            description: T(
               `#CookiePref_YouTube_Desc`,
-              (0, Y.jsx)(`a`, {
+              (0, X.jsx)(`a`, {
                 href: `https://policies.google.com/privacy`,
                 target: `_blank`,
-                children: T(`#CookiePref_YouTube_TogglePolicyName`),
+                children: k(`#CookiePref_YouTube_TogglePolicyName`),
               }),
             ),
           }),
-          (0, Y.jsx)(V, {
+          (0, X.jsx)(M, {
             onChange: r,
-            label: T(`#CookiePref_Vimeo_Title`),
+            label: k(`#CookiePref_Vimeo_Title`),
             checked: t.GetVimeo(),
-            description: y(
+            description: T(
               `#CookiePref_Vimeo_Desc`,
-              (0, Y.jsx)(`a`, {
+              (0, X.jsx)(`a`, {
                 href: `https://vimeo.com/privacy`,
                 target: `_blank`,
-                children: T(`#CookiePref_Vimeo_TogglePolicyName`),
+                children: k(`#CookiePref_Vimeo_TogglePolicyName`),
               }),
             ),
           }),
-          (0, Y.jsx)(V, {
+          (0, X.jsx)(M, {
             onChange: i,
-            label: T(`#CookiePref_Sketchfab_Title`),
+            label: k(`#CookiePref_Sketchfab_Title`),
             checked: t.GetSketchfab(),
-            description: y(
+            description: T(
               `#CookiePref_Sketchfab_Desc`,
-              (0, Y.jsx)(`a`, {
+              (0, X.jsx)(`a`, {
                 href: `https://sketchfab.com/privacy`,
                 target: `_blank`,
-                children: T(`#CookiePref_Sketchfab_TogglePolicyName`),
+                children: k(`#CookiePref_Sketchfab_TogglePolicyName`),
               }),
             ),
           }),
@@ -898,104 +900,104 @@ var tt = c(() => {
       }),
     });
   }),
-  at = c((e) => {
+  it = l((e) => {
     let { settings: t } = e,
-      n = (0, H.useCallback)(() => {
+      n = (0, U.useCallback)(() => {
         t.ToggleUTMEnabled();
       }, [t]);
-    return (0, Y.jsx)(`div`, {
-      className: U,
-      children: (0, Y.jsxs)(`div`, {
-        className: W,
+    return (0, X.jsx)(`div`, {
+      className: W,
+      children: (0, X.jsxs)(`div`, {
+        className: G,
         children: [
-          (0, Y.jsx)(`h2`, { children: T(`#PrivacySettings_Marketing_Title`) }),
-          (0, Y.jsx)(`p`, {
-            className: G,
-            children: T(`#PrivacySettings_Marketing_Desc`),
+          (0, X.jsx)(`h2`, { children: k(`#PrivacySettings_Marketing_Title`) }),
+          (0, X.jsx)(`p`, {
+            className: K,
+            children: k(`#PrivacySettings_Marketing_Desc`),
           }),
-          (0, Y.jsx)(V, {
+          (0, X.jsx)(M, {
             onChange: n,
-            label: T(`#PrivacySettings_UTM_ToggleLabel`),
+            label: k(`#PrivacySettings_UTM_ToggleLabel`),
             checked: t.GetUTMEnabled(),
-            description: T(`#PrivacySettings_UTM_ToggleDesc`),
+            description: k(`#PrivacySettings_UTM_ToggleDesc`),
           }),
         ],
       }),
     });
   }),
-  ot = c((e) => {
+  at = l((e) => {
     let { settings: t } = e,
-      n = (0, H.useCallback)(() => {
+      n = (0, U.useCallback)(() => {
         t.ToggleProvideDeckFeeback();
       }, [t]),
-      r = (0, H.useCallback)(() => {
+      r = (0, U.useCallback)(() => {
         t.ToggleGameFrameRateReporting();
       }, [t]);
-    return (0, Y.jsxs)(Y.Fragment, {
+    return (0, X.jsxs)(X.Fragment, {
       children: [
-        (0, Y.jsx)(`div`, {
-          className: U,
-          children: (0, Y.jsxs)(`div`, {
-            className: W,
+        (0, X.jsx)(`div`, {
+          className: W,
+          children: (0, X.jsxs)(`div`, {
+            className: G,
             children: [
-              (0, Y.jsx)(`h2`, {
-                children: T(`#DataPreferences_Provide_SteamOS_Feedback_Title`),
+              (0, X.jsx)(`h2`, {
+                children: k(`#DataPreferences_Provide_SteamOS_Feedback_Title`),
               }),
-              (0, Y.jsx)(`p`, {
-                className: G,
-                children: T(`#DataPreferences_Provide_SteamOS_Feedback_Desc`),
+              (0, X.jsx)(`p`, {
+                className: K,
+                children: k(`#DataPreferences_Provide_SteamOS_Feedback_Desc`),
               }),
-              (0, Y.jsx)(V, {
+              (0, X.jsx)(M, {
                 onChange: n,
                 checked: t.GetProvideDeckFeedbackEnabled(),
-                description: T(
+                description: k(
                   `#DataPreferences_Provide_SteamOS_Feedback_Label`,
                 ),
               }),
             ],
           }),
         }),
-        (0, Y.jsx)(`div`, {
-          className: U,
-          children: (0, Y.jsxs)(`div`, {
-            className: W,
+        (0, X.jsx)(`div`, {
+          className: W,
+          children: (0, X.jsxs)(`div`, {
+            className: G,
             children: [
-              (0, Y.jsx)(`h2`, {
+              (0, X.jsx)(`h2`, {
                 id: `FrameRateReporting`,
-                children: T(`#DataPreferences_FrameRateReporting_Title`),
+                children: k(`#DataPreferences_FrameRateReporting_Title`),
               }),
-              (0, Y.jsx)(`p`, {
-                className: G,
-                children: T(`#DataPreferences_FrameRateReporting_Description`),
+              (0, X.jsx)(`p`, {
+                className: K,
+                children: k(`#DataPreferences_FrameRateReporting_Description`),
               }),
-              (0, Y.jsx)(V, {
+              (0, X.jsx)(M, {
                 onChange: r,
                 checked: t.GetGameFrameRateReportingEnabled(),
-                description: T(`#DataPreferences_FrameRateReporting_Label`),
+                description: k(`#DataPreferences_FrameRateReporting_Label`),
               }),
             ],
           }),
         }),
-        (0, Y.jsx)(Ze, {}),
+        (0, X.jsx)(Xe, {}),
       ],
     });
   }),
-  st = `sML4yrXupis-`,
-  ct = `PN-BLDRmOi8-`,
-  lt = `dbVek-y66VM-`,
-  ut = `G9YiArwIWMc-`,
-  dt = `RLZi3mFotC8-`,
-  ft = `pF1Nwx-LELQ-`,
-  pt = `oWGsep6hjnY-`,
-  mt = `F5865fLuKas-`,
-  ht = `FrKp3u6aEXY-`,
-  gt = `Ygu4WfbzVL8-`,
-  _t = `qpPlg5ibwQY-`,
-  vt = `jR5Et-4d2rw-`,
-  yt = 1422450;
-function bt(e) {
+  ot = `sML4yrXupis-`,
+  st = `PN-BLDRmOi8-`,
+  ct = `dbVek-y66VM-`,
+  lt = `G9YiArwIWMc-`,
+  ut = `RLZi3mFotC8-`,
+  dt = `pF1Nwx-LELQ-`,
+  ft = `oWGsep6hjnY-`,
+  pt = `F5865fLuKas-`,
+  mt = `FrKp3u6aEXY-`,
+  ht = `Ygu4WfbzVL8-`,
+  gt = `qpPlg5ibwQY-`,
+  _t = `jR5Et-4d2rw-`,
+  vt = 1422450;
+function yt(e) {
   let { bShowPlaytestOverview: t } = e,
-    n = je(),
+    n = Ae(),
     r = [];
   return (
     n.isSuccess &&
@@ -1004,34 +1006,34 @@ function bt(e) {
         .map((e) => {
           switch (e.status) {
             case 3:
-              return (0, Y.jsx)(xt, { invite: e }, e.invite_id);
+              return (0, X.jsx)(bt, { invite: e }, e.invite_id);
             default:
-              return (0, Y.jsx)(St, { invite: e }, e.invite_id);
+              return (0, X.jsx)(xt, { invite: e }, e.invite_id);
           }
         })),
-    (0, Y.jsxs)(`div`, {
+    (0, X.jsxs)(`div`, {
       children: [
-        (0, Y.jsx)(`div`, {
+        (0, X.jsx)(`div`, {
           className: `account_header_line noicon`,
-          children: T(`#PlaytestInvites_Title`),
+          children: k(`#PlaytestInvites_Title`),
         }),
-        (0, Y.jsx)(`div`, {
-          className: S(st, `account_settings_container`),
+        (0, X.jsx)(`div`, {
+          className: O(ot, `account_settings_container`),
           children:
-            n.isLoading || r.length > 0 ? r : T(`#PlaytestInvites_NoInvites`),
+            n.isLoading || r.length > 0 ? r : k(`#PlaytestInvites_NoInvites`),
         }),
         t &&
-          (0, Y.jsxs)(`div`, {
+          (0, X.jsxs)(`div`, {
             className: `account_settings_container`,
             children: [
-              (0, Y.jsx)(`h2`, { children: T(`#PlaytestInvites_Desc_Title`) }),
-              (0, Y.jsx)(`p`, {
+              (0, X.jsx)(`h2`, { children: k(`#PlaytestInvites_Desc_Title`) }),
+              (0, X.jsx)(`p`, {
                 className: `SnnYqQRRwLQ-`,
-                children: T(`#PlaytestInvites_Desc1`),
+                children: k(`#PlaytestInvites_Desc1`),
               }),
-              (0, Y.jsx)(`p`, {
+              (0, X.jsx)(`p`, {
                 className: `SnnYqQRRwLQ-`,
-                children: T(`#PlaytestInvites_Desc2`),
+                children: k(`#PlaytestInvites_Desc2`),
               }),
             ],
           }),
@@ -1039,90 +1041,90 @@ function bt(e) {
     })
   );
 }
-function xt(e) {
+function bt(e) {
   let { invite: t } = e,
     n = t.appid,
-    r = Dt(t.appid)?.GetName() ?? t.app_name,
-    i = H.useCallback(
+    r = Et(t.appid)?.GetName() ?? t.app_name,
+    i = U.useCallback(
       (e) => {
-        I(w(e), `steam://open/games/details/${n}`);
+        oe(y(e), `steam://open/games/details/${n}`);
       },
       [n],
     );
-  return (0, Y.jsxs)(`div`, {
-    className: ct,
+  return (0, X.jsxs)(`div`, {
+    className: st,
     children: [
-      (0, Y.jsx)(`div`, {
-        className: lt,
-        children: (0, Y.jsx)(`span`, {
-          children: T(`#PlaytestInvites_Welcome`, r),
+      (0, X.jsx)(`div`, {
+        className: ct,
+        children: (0, X.jsx)(`span`, {
+          children: k(`#PlaytestInvites_Welcome`, r),
         }),
       }),
-      !P.IN_MOBILE_WEBVIEW &&
-        (0, Y.jsx)(`div`, {
+      !B.IN_MOBILE_WEBVIEW &&
+        (0, X.jsx)(`div`, {
           className: `pF1Nwx-LELQ-`,
-          children: (0, Y.jsx)(b, {
+          children: (0, X.jsx)(N, {
             className: `oWGsep6hjnY-`,
-            children: (0, Y.jsx)(oe, {
+            children: (0, X.jsx)(j, {
               className: `Bq8C8lENGmc-`,
               noFocusRing: !1,
               onClick: i,
-              children: T(`#PlaytestInvites_ViewLibrary`),
+              children: k(`#PlaytestInvites_ViewLibrary`),
             }),
           }),
         }),
     ],
   });
 }
-function St(e) {
+function xt(e) {
   let { invite: t } = e,
     n = h(),
-    r = Dt(t.appid),
+    r = Et(t.appid),
     i = r?.GetName() ?? t.app_name,
-    a = Ae(t.invite_id),
-    o = H.useCallback(
+    a = ke(t.invite_id),
+    o = U.useCallback(
       (e) => {
         a.mutate({ bAccept: e });
       },
       [a],
     ),
-    s = new me(t.steamid_inviter);
-  return (0, Y.jsx)(_e, {
-    children: (0, Y.jsxs)(b, {
-      className: ct,
-      navEntryPreferPosition: ye.MAINTAIN_X,
+    s = new S(t.steamid_inviter);
+  return (0, X.jsx)(w, {
+    children: (0, X.jsxs)(N, {
+      className: st,
+      navEntryPreferPosition: L.MAINTAIN_X,
       children: [
-        (0, Y.jsxs)(`div`, {
-          className: lt,
+        (0, X.jsxs)(`div`, {
+          className: ct,
           children: [
-            (0, Y.jsx)(wt, { steamIDInviter: s }),
-            (0, Y.jsx)(Ct, { appStoreItem: r, strAppName: i, nAppID: t.appid }),
-            (0, Y.jsx)(`div`, {
-              className: dt,
-              children: Oe(t.time_created ?? n),
+            (0, X.jsx)(Ct, { steamIDInviter: s }),
+            (0, X.jsx)(St, { appStoreItem: r, strAppName: i, nAppID: t.appid }),
+            (0, X.jsx)(`div`, {
+              className: ut,
+              children: P(t.time_created ?? n),
             }),
           ],
         }),
-        (0, Y.jsx)(`div`, {
-          className: ft,
+        (0, X.jsx)(`div`, {
+          className: dt,
           children: a.isPending
-            ? (0, Y.jsx)(m, {
+            ? (0, X.jsx)(m, {
                 size: `medium`,
                 position: `center`,
                 msDelayAppear: 250,
               })
-            : (0, Y.jsxs)(`div`, {
-                className: pt,
+            : (0, X.jsxs)(`div`, {
+                className: ft,
                 children: [
-                  (0, Y.jsx)(oe, {
+                  (0, X.jsx)(j, {
                     noFocusRing: !1,
                     onClick: () => o(!0),
-                    children: T(`#PlaytestInvites_Accept`),
+                    children: k(`#PlaytestInvites_Accept`),
                   }),
-                  (0, Y.jsx)(A, {
+                  (0, X.jsx)(ve, {
                     noFocusRing: !1,
                     onClick: () => o(!1),
-                    children: T(`#PlaytestInvites_Reject`),
+                    children: k(`#PlaytestInvites_Reject`),
                   }),
                 ],
               }),
@@ -1131,28 +1133,28 @@ function St(e) {
     }),
   });
 }
-function Ct(e) {
+function St(e) {
   let { appStoreItem: t, strAppName: n, nAppID: r } = e,
     i = t?.GetDeveloperNames()?.length ? t.GetDeveloperNames()[0] : null,
     a = t?.GetStorePageURL(),
-    o = (0, Y.jsx)(`img`, {
-      className: _t,
+    o = (0, X.jsx)(`img`, {
+      className: gt,
       src: t?.GetAssets().GetSmallCapsuleURL() ?? f,
     });
   return (
-    r == yt && (i = `Valve`),
-    (0, Y.jsxs)(`div`, {
-      className: mt,
+    r == vt && (i = `Valve`),
+    (0, X.jsxs)(`div`, {
+      className: pt,
       children: [
-        a ? (0, Y.jsxs)(z, { href: a, children: [` `, o, ` `] }) : o,
-        (0, Y.jsxs)(`div`, {
-          className: gt,
+        a ? (0, X.jsxs)(F, { href: a, children: [` `, o, ` `] }) : o,
+        (0, X.jsxs)(`div`, {
+          className: ht,
           children: [
-            (0, Y.jsx)(`div`, { className: ht, children: n }),
+            (0, X.jsx)(`div`, { className: mt, children: n }),
             i &&
-              (0, Y.jsx)(`div`, {
+              (0, X.jsx)(`div`, {
                 className: `_5NumTItJbZc-`,
-                children: T(`#PlaytestInvites_AppDeveloper`, i),
+                children: k(`#PlaytestInvites_AppDeveloper`, i),
               }),
           ],
         }),
@@ -1160,29 +1162,29 @@ function Ct(e) {
     })
   );
 }
-function wt(e) {
+function Ct(e) {
   let { steamIDInviter: t } = e;
   return t.BIsValid()
-    ? (0, Y.jsx)(Tt, { steamIDInviter: t })
-    : (0, Y.jsx)(Et, {});
+    ? (0, X.jsx)(wt, { steamIDInviter: t })
+    : (0, X.jsx)(Tt, {});
 }
-function Tt(e) {
+function wt(e) {
   let { steamIDInviter: t } = e,
     n = g(t.ConvertTo64BitString()),
     r = n?.data;
   return n.isSuccess
-    ? (0, Y.jsxs)(`div`, {
-        className: S(vt, ut),
+    ? (0, X.jsxs)(`div`, {
+        className: O(_t, lt),
         children: [
-          (0, Y.jsx)(ke, {
+          (0, X.jsx)(Oe, {
             persona: r,
             size: `Small`,
             statusPosition: `right`,
           }),
-          (0, Y.jsx)(`div`, {
-            children: y(
+          (0, X.jsx)(`div`, {
+            children: T(
               `#PlaytestInvites_InviteDescription_FromUser2`,
-              (0, Y.jsx)(z, {
+              (0, X.jsx)(F, {
                 href: r.GetCommunityProfileURL(),
                 children: r?.m_strPlayerName,
               }),
@@ -1190,49 +1192,49 @@ function Tt(e) {
           }),
         ],
       })
-    : (0, Y.jsx)(Et, {});
+    : (0, X.jsx)(Tt, {});
 }
-function Et(e) {
-  return (0, Y.jsx)(`div`, {
-    className: ut,
-    children: T(`#PlaytestInvites_InviteDescription_FromApp2`),
+function Tt(e) {
+  return (0, X.jsx)(`div`, {
+    className: lt,
+    children: k(`#PlaytestInvites_InviteDescription_FromApp2`),
   });
 }
-function Dt(e) {
+function Et(e) {
   let [t, n] = _(e, { include_basic_info: !0, include_assets: !0 });
   return t && n == 3 ? t : null;
 }
-var Ot = `bCxa8Ii97Bk-`;
-function kt(e) {
-  return (0, Y.jsxs)(`div`, {
+var Dt = `bCxa8Ii97Bk-`;
+function Ot(e) {
+  return (0, X.jsxs)(`div`, {
     children: [
-      (0, Y.jsx)(bt, { bShowPlaytestOverview: !1 }),
-      (0, Y.jsx)(`div`, {
+      (0, X.jsx)(yt, { bShowPlaytestOverview: !1 }),
+      (0, X.jsx)(`div`, {
         className: `account_header_line noicon`,
-        children: T(`#PlaytestStatus_Title`),
+        children: k(`#PlaytestStatus_Title`),
       }),
-      (0, Y.jsx)(`div`, {
-        className: S(Ot, `account_settings_container`),
-        children: T(`#PlaytestStatus_None`),
+      (0, X.jsx)(`div`, {
+        className: O(Dt, `account_settings_container`),
+        children: k(`#PlaytestStatus_None`),
       }),
-      (0, Y.jsxs)(`div`, {
+      (0, X.jsxs)(`div`, {
         className: `account_settings_container`,
         children: [
-          (0, Y.jsx)(`h2`, { children: T(`#PlaytestInvites_Desc_Title`) }),
-          (0, Y.jsx)(`p`, {
+          (0, X.jsx)(`h2`, { children: k(`#PlaytestInvites_Desc_Title`) }),
+          (0, X.jsx)(`p`, {
             className: void 0,
-            children: T(`#PlaytestInvites_Desc1`),
+            children: k(`#PlaytestInvites_Desc1`),
           }),
-          (0, Y.jsx)(`p`, {
+          (0, X.jsx)(`p`, {
             className: void 0,
-            children: T(`#PlaytestInvites_Desc2`),
+            children: k(`#PlaytestInvites_Desc2`),
           }),
         ],
       }),
     ],
   });
 }
-var X = class e {
+var Z = class e {
   m_rgActiveDevices = [];
   m_rgRevokedDevices = [];
   m_strAccountName;
@@ -1242,7 +1244,7 @@ var X = class e {
   m_strLatestAndroidAppVersion;
   static s_AuthorizedDevicesStore;
   constructor() {
-    n(this);
+    c(this);
   }
   static Get() {
     return (
@@ -1253,16 +1255,16 @@ var X = class e {
     );
   }
   Init() {
-    (this.m_rgActiveDevices = v(`active_devices`, `application_config`)),
-      (this.m_rgRevokedDevices = v(`revoked_devices`, `application_config`)),
-      (this.m_strAccountName = v(`accountName`, `application_config`)),
-      (this.m_strPhoneHint = v(`phone_hint`, `application_config`)),
-      (this.m_strEmail = v(`email`, `application_config`)),
-      (this.m_msgTwoFactorStatus = v(
+    (this.m_rgActiveDevices = C(`active_devices`, `application_config`)),
+      (this.m_rgRevokedDevices = C(`revoked_devices`, `application_config`)),
+      (this.m_strAccountName = C(`accountName`, `application_config`)),
+      (this.m_strPhoneHint = C(`phone_hint`, `application_config`)),
+      (this.m_strEmail = C(`email`, `application_config`)),
+      (this.m_msgTwoFactorStatus = C(
         `two_factor_status`,
         `application_config`,
       )),
-      (this.m_strLatestAndroidAppVersion = v(
+      (this.m_strLatestAndroidAppVersion = C(
         `latest_android_app_version`,
         `application_config`,
       ));
@@ -1289,21 +1291,21 @@ var X = class e {
     return this.m_strLatestAndroidAppVersion;
   }
 };
-E([s], X.prototype, `m_rgActiveDevices`, void 0),
-  E([s], X.prototype, `m_rgRevokedDevices`, void 0);
-var At = new URL(
+E([n], Z.prototype, `m_rgActiveDevices`, void 0),
+  E([n], Z.prototype, `m_rgRevokedDevices`, void 0);
+var kt = new URL(
     `../../../images/applications/store/sg_shield_off.png?v=valveisgoodatcaching`,
     import.meta.url,
   ).href,
-  jt = new URL(
+  At = new URL(
     `../../../images/applications/store/sg_shield_on.png?v=valveisgoodatcaching`,
     import.meta.url,
   ).href,
-  Mt = new URL(
+  jt = new URL(
     `../../../images/applications/store/steam_mobile_qr_code.png?v=valveisgoodatcaching`,
     import.meta.url,
   ).href,
-  Nt = t((e, t) => {
+  Mt = t((e, t, n) => {
     (function (n, r) {
       var i = `1.0.41`,
         a = ``,
@@ -1324,31 +1326,31 @@ var At = new URL(
         b = `smarttv`,
         x = `wearable`,
         S = `embedded`,
-        ee = `Amazon`,
-        C = `Apple`,
-        te = `ASUS`,
-        ne = `BlackBerry`,
-        w = `Browser`,
-        re = `Chrome`,
-        ie = `Edge`,
-        T = `Firefox`,
-        E = `Google`,
-        ae = `Honor`,
-        D = `Huawei`,
-        oe = `Lenovo`,
-        O = `LG`,
-        se = `Microsoft`,
-        ce = `Motorola`,
-        k = `Nvidia`,
-        le = `OnePlus`,
-        A = `Opera`,
+        C = `Amazon`,
+        w = `Apple`,
+        ee = `ASUS`,
+        T = `BlackBerry`,
+        te = `Browser`,
+        E = `Chrome`,
+        ne = `Edge`,
+        re = `Firefox`,
+        ie = `Google`,
+        D = `Honor`,
+        ae = `Huawei`,
+        O = `Lenovo`,
+        oe = `LG`,
+        k = `Microsoft`,
+        A = `Motorola`,
+        se = `Nvidia`,
+        ce = `OnePlus`,
+        le = `Opera`,
         ue = `OPPO`,
         j = `Samsung`,
         de = `Sharp`,
         M = `Sony`,
         fe = `Xiaomi`,
-        N = `Zebra`,
-        pe = `Facebook`,
+        pe = `Zebra`,
+        N = `Facebook`,
         me = `Chromium OS`,
         he = `Mac OS`,
         P = ` Browser`,
@@ -1358,12 +1360,12 @@ var At = new URL(
             n[r] = t[r] && t[r].length % 2 == 0 ? t[r].concat(e[r]) : e[r];
           return n;
         },
-        F = function (e) {
+        _e = function (e) {
           for (var t = {}, n = 0; n < e.length; n++)
             t[e[n].toUpperCase()] = e[n];
           return t;
         },
-        _e = function (e, t) {
+        F = function (e, t) {
           return typeof e == l && I(t).indexOf(I(e)) !== -1;
         },
         I = function (e) {
@@ -1409,11 +1411,11 @@ var At = new URL(
           for (var n in t)
             if (typeof t[n] == c && t[n].length > 0) {
               for (var i = 0; i < t[n].length; i++)
-                if (_e(t[n][i], e)) return n === `?` ? r : n;
-            } else if (_e(t[n], e)) return n === `?` ? r : n;
+                if (F(t[n][i], e)) return n === `?` ? r : n;
+            } else if (F(t[n], e)) return n === `?` ? r : n;
           return t.hasOwnProperty(`*`) ? t[`*`] : e;
         },
-        be = {
+        z = {
           "1.0": `/8`,
           1.2: `/1`,
           1.3: `/3`,
@@ -1423,7 +1425,7 @@ var At = new URL(
           "2.0.4": `/419`,
           "?": `/`,
         },
-        xe = {
+        B = {
           ME: `4.90`,
           "NT 3.11": `NT3.51`,
           "NT 4.0": `NT4.0`,
@@ -1436,7 +1438,7 @@ var At = new URL(
           10: [`NT 6.4`, `NT 10.0`],
           RT: `ARM`,
         },
-        Se = {
+        be = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
             [h, [f, `Chrome`]],
@@ -1449,11 +1451,11 @@ var At = new URL(
             ],
             [f, h],
             [/opios[\/ ]+([\w\.]+)/i],
-            [h, [f, A + ` Mini`]],
+            [h, [f, le + ` Mini`]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [h, [f, A + ` GX`]],
+            [h, [f, le + ` GX`]],
             [/\bopr\/([\w\.]+)/i],
-            [h, [f, A]],
+            [h, [f, le]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
             [h, [f, `Baidu`]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
@@ -1473,7 +1475,7 @@ var At = new URL(
             [/\bddg\/([\w\.]+)/i],
             [h, [f, `DuckDuckGo`]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [h, [f, `UC` + w]],
+            [h, [f, `UC` + te]],
             [
               /microm.+\bqbcore\/([\w\.]+)/i,
               /\bqbcore\/([\w\.]+).+microm/i,
@@ -1487,23 +1489,23 @@ var At = new URL(
             [/ya(?:search)?browser\/([\w\.]+)/i],
             [h, [f, `Yandex`]],
             [/slbrowser\/([\w\.]+)/i],
-            [h, [f, `Smart Lenovo ` + w]],
+            [h, [f, `Smart Lenovo ` + te]],
             [/(avast|avg)\/([\w\.]+)/i],
-            [[f, /(.+)/, `$1 Secure ` + w], h],
+            [[f, /(.+)/, `$1 Secure ` + te], h],
             [/\bfocus\/([\w\.]+)/i],
-            [h, [f, T + ` Focus`]],
+            [h, [f, re + ` Focus`]],
             [/\bopt\/([\w\.]+)/i],
-            [h, [f, A + ` Touch`]],
+            [h, [f, le + ` Touch`]],
             [/coc_coc\w+\/([\w\.]+)/i],
             [h, [f, `Coc Coc`]],
             [/dolfin\/([\w\.]+)/i],
             [h, [f, `Dolphin`]],
             [/coast\/([\w\.]+)/i],
-            [h, [f, A + ` Coast`]],
+            [h, [f, le + ` Coast`]],
             [/miuibrowser\/([\w\.]+)/i],
             [h, [f, `MIUI` + P]],
             [/fxios\/([\w\.-]+)/i],
-            [h, [f, T]],
+            [h, [f, re]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
             [h, [f, `360`]],
             [/\b(qq)\/([\w\.]+)/i],
@@ -1530,7 +1532,7 @@ var At = new URL(
             ],
             [h, f],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
-            [[f, pe], h],
+            [[f, N], h],
             [
               /(Klarna)\/([\w\.]+)/i,
               /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,
@@ -1548,11 +1550,11 @@ var At = new URL(
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
             [h, [f, `TikTok`]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [h, [f, re + ` Headless`]],
+            [h, [f, E + ` Headless`]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
-            [[f, re + ` WebView`], h],
+            [[f, E + ` WebView`], h],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [h, [f, `Android ` + w]],
+            [h, [f, `Android ` + te]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
             [f, h],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
@@ -1560,7 +1562,7 @@ var At = new URL(
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
             [h, f],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [f, [h, R, be]],
+            [f, [h, R, z]],
             [/(webkit|khtml)\/([\w\.]+)/i],
             [f, h],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
@@ -1568,7 +1570,7 @@ var At = new URL(
             [/(wolvic|librewolf)\/([\w\.]+)/i],
             [f, h],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [h, [f, T + ` Reality`]],
+            [h, [f, re + ` Reality`]],
             [
               /ekiohf.+(flow)\/([\w\.]+)/i,
               /(swiftfox)/i,
@@ -1615,32 +1617,32 @@ var At = new URL(
             ],
             [d, [m, j], [p, v]],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [d, [m, C], [p, v]],
+            [d, [m, w], [p, v]],
             [
               /\((ipad);[-\w\),; ]+apple/i,
               /applecoremedia\/[\w\.]+ \((ipad)/i,
               /\b(ipad)\d\d?,\d\d?[;\]].+ios/i,
             ],
-            [d, [m, C], [p, y]],
+            [d, [m, w], [p, y]],
             [/(macintosh);/i],
-            [d, [m, C]],
+            [d, [m, w]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
             [d, [m, de], [p, v]],
             [
               /\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i,
             ],
-            [d, [m, ae], [p, y]],
+            [d, [m, D], [p, y]],
             [/honor([-\w ]+)[;\)]/i],
-            [d, [m, ae], [p, v]],
+            [d, [m, D], [p, v]],
             [
               /\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i,
             ],
-            [d, [m, D], [p, y]],
+            [d, [m, ae], [p, y]],
             [
               /(?:huawei)([-\w ]+)[;\)]/i,
               /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i,
             ],
-            [d, [m, D], [p, v]],
+            [d, [m, ae], [p, v]],
             [
               /oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i,
               /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i,
@@ -1680,22 +1682,22 @@ var At = new URL(
               /\bmot(?:orola)?[- ](\w*)/i,
               /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i,
             ],
-            [d, [m, ce], [p, v]],
+            [d, [m, A], [p, v]],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [d, [m, ce], [p, y]],
+            [d, [m, A], [p, y]],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [d, [m, O], [p, y]],
+            [d, [m, oe], [p, y]],
             [
               /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
               /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i,
               /\blg-?([\d\w]+) bui/i,
             ],
-            [d, [m, O], [p, v]],
+            [d, [m, oe], [p, v]],
             [
               /(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i,
               /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i,
             ],
-            [d, [m, oe], [p, y]],
+            [d, [m, O], [p, y]],
             [/(nokia) (t[12][01])/i],
             [m, d, [p, y]],
             [
@@ -1708,9 +1710,9 @@ var At = new URL(
               [m, `Nokia`],
             ],
             [/(pixel (c|tablet))\b/i],
-            [d, [m, E], [p, y]],
+            [d, [m, ie], [p, y]],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [d, [m, E], [p, v]],
+            [d, [m, ie], [p, v]],
             [
               /droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i,
             ],
@@ -1725,29 +1727,29 @@ var At = new URL(
               / (kb2005|in20[12]5|be20[12][59])\b/i,
               /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i,
             ],
-            [d, [m, le], [p, v]],
+            [d, [m, ce], [p, v]],
             [
               /(alexa)webm/i,
               /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i,
               /(kf[a-z]+)( bui|\)).+silk\//i,
             ],
-            [d, [m, ee], [p, y]],
+            [d, [m, C], [p, y]],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
               [d, /(.+)/g, `Fire Phone $1`],
-              [m, ee],
+              [m, C],
               [p, v],
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
             [d, m, [p, y]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [d, [m, ne], [p, v]],
+            [d, [m, T], [p, v]],
             [
               /(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i,
             ],
-            [d, [m, te], [p, y]],
+            [d, [m, ee], [p, y]],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [d, [m, te], [p, v]],
+            [d, [m, ee], [p, v]],
             [/(nexus 9)/i],
             [d, [m, `HTC`], [p, y]],
             [
@@ -1811,7 +1813,7 @@ var At = new URL(
             ],
             [m, d, [p, y]],
             [/(surface duo)/i],
-            [d, [m, se], [p, y]],
+            [d, [m, k], [p, y]],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
             [d, [m, `Fairphone`], [p, v]],
             [/(u304aa)/i],
@@ -1857,19 +1859,19 @@ var At = new URL(
             [/\btu_(1491) b/i],
             [d, [m, `Rotor`], [p, y]],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [d, [m, k], [p, y]],
+            [d, [m, se], [p, y]],
             [/(sprint) (\w+)/i],
             [m, d, [p, v]],
             [/(kin\.[onetw]{3})/i],
             [
               [d, /\./g, ` `],
-              [m, se],
+              [m, k],
               [p, v],
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [d, [m, N], [p, y]],
+            [d, [m, pe], [p, y]],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [d, [m, N], [p, v]],
+            [d, [m, pe], [p, v]],
             [/smart-tv.+(samsung)/i],
             [m, [p, b]],
             [/hbbtv.+maple;(\d+)/i],
@@ -1880,21 +1882,21 @@ var At = new URL(
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [m, O],
+              [m, oe],
               [p, b],
             ],
             [/(apple) ?tv/i],
-            [m, [d, C + ` TV`], [p, b]],
+            [m, [d, w + ` TV`], [p, b]],
             [/crkey/i],
             [
-              [d, re + `cast`],
-              [m, E],
+              [d, E + `cast`],
+              [m, ie],
               [p, b],
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [d, [m, ee], [p, b]],
+            [d, [m, C], [p, b]],
             [/(shield \w+ tv)/i],
-            [d, [m, k], [p, b]],
+            [d, [m, se], [p, b]],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
             [d, [m, de], [p, b]],
             [/(bravia[\w ]+)( bui|\))/i],
@@ -1919,11 +1921,11 @@ var At = new URL(
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
             [m, d, [p, _]],
             [/droid.+; (shield)( bui|\))/i],
-            [d, [m, k], [p, _]],
+            [d, [m, se], [p, _]],
             [/(playstation \w+)/i],
             [d, [m, M], [p, _]],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [d, [m, se], [p, _]],
+            [d, [m, k], [p, _]],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
             [d, [m, j], [p, x]],
             [
@@ -1934,29 +1936,29 @@ var At = new URL(
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
             [d, [m, ue], [p, x]],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [d, [m, C], [p, x]],
+            [d, [m, w], [p, x]],
             [/(opwwe\d{3})/i],
-            [d, [m, le], [p, x]],
-            [/(moto 360)/i],
             [d, [m, ce], [p, x]],
+            [/(moto 360)/i],
+            [d, [m, A], [p, x]],
             [/(smartwatch 3)/i],
             [d, [m, M], [p, x]],
             [/(g watch r)/i],
-            [d, [m, O], [p, x]],
+            [d, [m, oe], [p, x]],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [d, [m, N], [p, x]],
+            [d, [m, pe], [p, x]],
             [/droid.+; (glass) \d/i],
-            [d, [m, E], [p, x]],
+            [d, [m, ie], [p, x]],
             [/(pico) (4|neo3(?: link|pro)?)/i],
             [m, d, [p, x]],
             [/; (quest( \d| pro)?)/i],
-            [d, [m, pe], [p, x]],
+            [d, [m, N], [p, x]],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
             [m, [p, S]],
             [/(aeobc)\b/i],
-            [d, [m, ee], [p, S]],
-            [/(homepod).+mac os/i],
             [d, [m, C], [p, S]],
+            [/(homepod).+mac os/i],
+            [d, [m, w], [p, S]],
             [/windows iot/i],
             [[p, S]],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
@@ -1972,7 +1974,7 @@ var At = new URL(
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [h, [f, ie + `HTML`]],
+            [h, [f, ne + `HTML`]],
             [/(arkweb)\/([\w\.]+)/i],
             [f, h],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
@@ -1995,14 +1997,14 @@ var At = new URL(
             [/microsoft (windows) (vista|xp)/i],
             [f, h],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [f, [h, R, xe]],
+            [f, [h, R, B]],
             [
               /windows nt 6\.2; (arm)/i,
               /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i,
               /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i,
             ],
             [
-              [h, R, xe],
+              [h, R, B],
               [f, `Windows`],
             ],
             [
@@ -2031,19 +2033,19 @@ var At = new URL(
             ],
             [f, h],
             [/\(bb(10);/i],
-            [h, [f, ne]],
+            [h, [f, T]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
             [h, [f, `Symbian`]],
             [
               /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i,
             ],
-            [h, [f, T + ` OS`]],
+            [h, [f, re + ` OS`]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
             [h, [f, `webOS`]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
             [h, [f, `watchOS`]],
             [/crkey\/([\d\.]+)/i],
-            [h, [f, re + `cast`]],
+            [h, [f, E + `cast`]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [[f, me], h],
             [
@@ -2073,13 +2075,13 @@ var At = new URL(
             [f, h],
           ],
         },
-        z = function (e, t) {
-          if ((typeof e == c && ((t = e), (e = r)), !(this instanceof z)))
-            return new z(e, t).getResult();
+        V = function (e, t) {
+          if ((typeof e == c && ((t = e), (e = r)), !(this instanceof V)))
+            return new V(e, t).getResult();
           var i = typeof n !== s && n.navigator ? n.navigator : r,
             _ = e || (i && i.userAgent ? i.userAgent : a),
             b = i && i.userAgentData ? i.userAgentData : r,
-            x = t ? ge(Se, t) : Se,
+            x = t ? ge(be, t) : be,
             S = i && i.userAgent == _;
           return (
             (this.getBrowser = function () {
@@ -2162,67 +2164,67 @@ var At = new URL(
             this
           );
         };
-      (z.VERSION = i),
-        (z.BROWSER = F([f, h, u])),
-        (z.CPU = F([g])),
-        (z.DEVICE = F([d, m, p, _, v, b, y, x, S])),
-        (z.ENGINE = z.OS = F([f, h])),
+      (V.VERSION = i),
+        (V.BROWSER = _e([f, h, u])),
+        (V.CPU = _e([g])),
+        (V.DEVICE = _e([d, m, p, _, v, b, y, x, S])),
+        (V.ENGINE = V.OS = _e([f, h])),
         typeof e === s
           ? typeof define === o && define.amd
             ? define(function () {
-                return z;
+                return V;
               })
-            : typeof n !== s && (n.UAParser = z)
-          : (typeof t !== s && t.exports && (e = t.exports = z),
-            (e.UAParser = z));
-      var B = typeof n !== s && (n.jQuery || n.Zepto);
-      if (B && !B.ua) {
-        var V = new z();
-        (B.ua = V.getResult()),
-          (B.ua.get = function () {
-            return V.getUA();
+            : typeof n !== s && (n.UAParser = V)
+          : (typeof t !== s && t.exports && (e = t.exports = V),
+            (e.UAParser = V));
+      var H = typeof n !== s && (n.jQuery || n.Zepto);
+      if (H && !H.ua) {
+        var xe = new V();
+        (H.ua = xe.getResult()),
+          (H.ua.get = function () {
+            return xe.getUA();
           }),
-          (B.ua.set = function (e) {
-            V.setUA(e);
-            var t = V.getResult();
-            for (var n in t) B.ua[n] = t[n];
+          (H.ua.set = function (e) {
+            xe.setUA(e);
+            var t = xe.getResult();
+            for (var n in t) H.ua[n] = t[n];
           });
       }
-    })(typeof window == `object` ? window : e);
+    })(typeof window == `object` ? window : n);
   })(),
-  Pt = `viqEyBlMfbY-`,
-  Ft = `shgsJDaY3CY-`,
-  It = `jYhMQWJDOI0-`,
-  Lt = `hjaE7AQsOK0-`,
-  Rt = `xKL55sYr9nU-`,
-  Z = `UhBY1FfjFrU-`,
-  zt = `qyZsB6JuVjY-`,
-  Bt = `saDXcTipZ7A-`,
-  Vt = `VLFX-mKqLNw-`,
-  Ht = `YRwct28ezfU-`,
-  Ut = `epOqB4sJsvo-`,
-  Wt = `VXFw-xEFbdo-`,
-  Gt = `rkTP-9I7urk-`,
-  Kt = `fz9qBoc1vQM-`,
-  qt = `tjO6BKRl12o-`,
-  Jt = `ayE79te7Zzo-`,
-  Yt = `_8EDXdeI-GJU-`,
-  Xt = `L4f9mqbFIEU-`,
-  Zt = `G87uOZgrnCw-`,
-  Qt = `CtCaOVl6dE0-`,
-  $t = `_0tit-21mIgs-`,
-  en = `C7BpVBVjnOM-`,
-  tn = `N-1Yp4EnJ8k-`,
-  nn = `urfarZbyAYI-`,
-  rn = `p-1G-Tb-pSA-`,
-  an = c(() => {
-    let e = X.Get(),
-      t = cn(),
+  Nt = `viqEyBlMfbY-`,
+  Pt = `shgsJDaY3CY-`,
+  Ft = `jYhMQWJDOI0-`,
+  It = `hjaE7AQsOK0-`,
+  Lt = `xKL55sYr9nU-`,
+  Q = `UhBY1FfjFrU-`,
+  Rt = `qyZsB6JuVjY-`,
+  zt = `saDXcTipZ7A-`,
+  Bt = `VLFX-mKqLNw-`,
+  Vt = `YRwct28ezfU-`,
+  Ht = `epOqB4sJsvo-`,
+  Ut = `VXFw-xEFbdo-`,
+  Wt = `rkTP-9I7urk-`,
+  Gt = `fz9qBoc1vQM-`,
+  Kt = `tjO6BKRl12o-`,
+  qt = `ayE79te7Zzo-`,
+  Jt = `_8EDXdeI-GJU-`,
+  Yt = `L4f9mqbFIEU-`,
+  Xt = `G87uOZgrnCw-`,
+  Zt = `CtCaOVl6dE0-`,
+  Qt = `_0tit-21mIgs-`,
+  $t = `C7BpVBVjnOM-`,
+  en = `N-1Yp4EnJ8k-`,
+  tn = `urfarZbyAYI-`,
+  nn = `p-1G-Tb-pSA-`,
+  rn = l(() => {
+    let e = Z.Get(),
+      t = sn(),
       n = (e) => {
-        L((0, Y.jsx)(bn, {}), w(e));
+        ne((0, X.jsx)(yn, {}), y(e));
       },
       r = Date.now() / 1e3,
-      i = sn(e),
+      i = on(e),
       a = e.GetTwoFactorStatus(),
       o = null;
     switch (a.steamguard_scheme) {
@@ -2240,9 +2242,9 @@ var At = new URL(
       c = [];
     for (let n of e.GetActiveDevices()) {
       let e = n.logged_in && n.last_seen?.time > r - 900,
-        o = n.effective_token_state == 5 ? Rt : null,
-        l = (0, Y.jsx)(
-          un,
+        o = n.effective_token_state == 5 ? Lt : null,
+        l = (0, X.jsx)(
+          ln,
           {
             className: o,
             device: n,
@@ -2258,10 +2260,10 @@ var At = new URL(
     let l = e
       .GetRevokedDevices()
       .map((e) =>
-        (0, Y.jsx)(
-          un,
+        (0, X.jsx)(
+          ln,
           {
-            className: zt,
+            className: Rt,
             device: e,
             strActiveCountry: i,
             msgTwoFactorStatus: a,
@@ -2269,51 +2271,51 @@ var At = new URL(
           e.token_id,
         ),
       );
-    return (0, Y.jsxs)(Y.Fragment, {
+    return (0, X.jsxs)(X.Fragment, {
       children: [
-        (0, Y.jsx)(`div`, {
-          className: S(Pt, `account_header_line noicon`),
-          children: (0, Y.jsx)(`div`, {
-            children: T(`#accountpreferences_authorized_devices_header`),
+        (0, X.jsx)(`div`, {
+          className: O(Nt, `account_header_line noicon`),
+          children: (0, X.jsx)(`div`, {
+            children: k(`#accountpreferences_authorized_devices_header`),
           }),
         }),
-        (0, Y.jsxs)(`div`, {
+        (0, X.jsxs)(`div`, {
           className: `account_settings_container`,
           children: [
-            (0, Y.jsx)(`div`, {
-              className: Ft,
-              children: y(
+            (0, X.jsx)(`div`, {
+              className: Pt,
+              children: T(
                 `#accountpreferences_authorized_devices_description`,
-                (0, Y.jsx)(`p`, {}),
+                (0, X.jsx)(`p`, {}),
               ),
             }),
-            (0, Y.jsxs)(`div`, {
-              className: It,
+            (0, X.jsxs)(`div`, {
+              className: Ft,
               children: [
-                (0, Y.jsx)(on, {
-                  elHeader: (0, Y.jsxs)(`div`, {
-                    className: Qt,
+                (0, X.jsx)(an, {
+                  elHeader: (0, X.jsxs)(`div`, {
+                    className: Zt,
                     children: [
-                      (0, Y.jsx)(xe, { className: $t }),
-                      T(`#accountpreferences_authorized_device_active_now`),
+                      (0, X.jsx)(I, { className: Qt }),
+                      k(`#accountpreferences_authorized_device_active_now`),
                     ],
                   }),
                   rgDevices: s,
                 }),
-                (0, Y.jsx)(on, {
-                  elHeader: T(
+                (0, X.jsx)(an, {
+                  elHeader: k(
                     `#accountpreferences_authorized_devices_recentseen_heading`,
                   ),
                   rgDevices: c,
                 }),
-                (0, Y.jsx)(`div`, {
-                  className: Lt,
-                  children: (0, Y.jsx)(`div`, {
-                    className: nn,
-                    children: (0, Y.jsx)(ge, {
-                      className: rn,
+                (0, X.jsx)(`div`, {
+                  className: It,
+                  children: (0, X.jsx)(`div`, {
+                    className: tn,
+                    children: (0, X.jsx)(R, {
+                      className: nn,
                       onClick: n,
-                      children: T(
+                      children: k(
                         `#accountpreferences_authorized_devices_remove_button`,
                       ),
                     }),
@@ -2324,26 +2326,26 @@ var At = new URL(
           ],
         }),
         l?.length > 0 &&
-          (0, Y.jsxs)(Y.Fragment, {
+          (0, X.jsxs)(X.Fragment, {
             children: [
-              (0, Y.jsx)(`div`, {
-                className: S(`viqEyBlMfbY-`, `account_header_line noicon`),
-                children: (0, Y.jsx)(`div`, {
-                  children: T(
+              (0, X.jsx)(`div`, {
+                className: O(`viqEyBlMfbY-`, `account_header_line noicon`),
+                children: (0, X.jsx)(`div`, {
+                  children: k(
                     `#accountpreferences_revoked_devices_revoked_header`,
                   ),
                 }),
               }),
-              (0, Y.jsxs)(`div`, {
+              (0, X.jsxs)(`div`, {
                 className: `account_settings_container`,
                 children: [
-                  (0, Y.jsx)(`div`, {
+                  (0, X.jsx)(`div`, {
                     className: `shgsJDaY3CY-`,
-                    children: y(o, (0, Y.jsx)(`p`, {})),
+                    children: T(o, (0, X.jsx)(`p`, {})),
                   }),
-                  (0, Y.jsx)(`div`, {
+                  (0, X.jsx)(`div`, {
                     className: `jYhMQWJDOI0-`,
-                    children: (0, Y.jsx)(on, { rgDevices: l }),
+                    children: (0, X.jsx)(an, { rgDevices: l }),
                   }),
                 ],
               }),
@@ -2352,29 +2354,29 @@ var At = new URL(
       ],
     });
   });
-function on(e) {
+function an(e) {
   let { rgDevices: t, elHeader: n } = e;
   return t.length == 0
     ? null
-    : (0, Y.jsxs)(`div`, { className: Lt, children: [n && n, t] });
+    : (0, X.jsxs)(`div`, { className: It, children: [n && n, t] });
 }
-function sn(e) {
+function on(e) {
   let t = Date.now() / 1e3;
-  return vn(
+  return _n(
     e
       .GetActiveDevices()
       .find((e) => e.logged_in && e.last_seen?.time > t - 900) ??
       e.GetActiveDevices()[0],
   ).country;
 }
-function cn() {
-  let [e] = H.useState(() => v(`requesting_token_id`, `application_config`));
+function sn() {
+  let [e] = U.useState(() => C(`requesting_token_id`, `application_config`));
   return e;
 }
-function ln(e, t) {
+function cn(e, t) {
   return t?.state > 0 && e.token_id && e.token_id == t?.last_seen_auth_token_id;
 }
-function un(e) {
+function ln(e) {
   let {
       device: t,
       bActiveNow: n,
@@ -2384,82 +2386,82 @@ function un(e) {
       msgTwoFactorStatus: o,
       bShowAuthenticatorActivity: s,
     } = e,
-    [c, l] = (0, H.useState)(!1),
-    u = H.useRef(void 0);
-  H.useEffect(() => {
+    [c, l] = (0, U.useState)(!1),
+    u = U.useRef(void 0);
+  U.useEffect(() => {
     u.current?.BHasFocus() && u.current?.Node().ForceMeasureFocusRing();
   }, [c]);
-  let d = _n(t);
+  let d = gn(t);
   d.length &&
-    (d = ` ${T(`#accountpreferences_authorized_devices_name_separator`)} "${d}"`);
-  let f = vn(t),
+    (d = ` ${k(`#accountpreferences_authorized_devices_name_separator`)} "${d}"`);
+  let f = _n(t),
     p = null;
   p =
     !f.country || !i || i == f.country
-      ? (0, Y.jsx)(`div`, { className: void 0, children: f.location })
-      : (0, Y.jsx)(he, {
+      ? (0, X.jsx)(`div`, { className: void 0, children: f.location })
+      : (0, X.jsx)(ie, {
           className: void 0,
-          toolTipContent: T(
+          toolTipContent: k(
             `#accountpreferences_authorized_devices_suspicous_tooltip`,
           ),
           direction: `top`,
-          children: (0, Y.jsxs)(`div`, {
-            className: Gt,
-            children: [f.location, (0, Y.jsx)(F, {})],
+          children: (0, X.jsxs)(`div`, {
+            className: Wt,
+            children: [f.location, (0, X.jsx)(le, {})],
           }),
         });
-  let m = ln(t, o);
-  return (0, Y.jsxs)(
-    b,
+  let m = cn(t, o);
+  return (0, X.jsxs)(
+    N,
     {
-      className: S(Bt, n && `fXJ1YocT7BI-`, a),
+      className: O(zt, n && `fXJ1YocT7BI-`, a),
       navRef: u,
       onActivate: () => l(!c),
       children: [
-        (0, Y.jsx)(gn, { device: t, bHasAuthenticator: m }),
-        (0, Y.jsxs)(`div`, {
-          className: Vt,
+        (0, X.jsx)(hn, { device: t, bHasAuthenticator: m }),
+        (0, X.jsxs)(`div`, {
+          className: Bt,
           children: [
-            (0, Y.jsxs)(`div`, {
-              className: Ht,
+            (0, X.jsxs)(`div`, {
+              className: Vt,
               children: [
-                (0, Y.jsxs)(`div`, {
-                  className: Ut,
+                (0, X.jsxs)(`div`, {
+                  className: Ht,
                   children: [
-                    (0, Y.jsxs)(`div`, {
-                      className: Wt,
-                      children: [(0, Y.jsx)(yn, { device: t }), d],
+                    (0, X.jsxs)(`div`, {
+                      className: Ut,
+                      children: [(0, X.jsx)(vn, { device: t }), d],
                     }),
                     r &&
-                      (0, Y.jsx)(`div`, {
+                      (0, X.jsx)(`div`, {
                         className: `_9iz0N0Ekqfc-`,
-                        children: T(
+                        children: k(
                           `#accountpreferences_authorized_devices_this_device`,
                         ),
                       }),
                   ],
                 }),
-                (0, Y.jsxs)(`div`, {
-                  className: Yt,
+                (0, X.jsxs)(`div`, {
+                  className: Jt,
                   children: [
                     p,
-                    (0, Y.jsx)(`div`, {
-                      className: Xt,
-                      children: (0, Y.jsx)(ge, {
-                        className: S({ [Xt]: !0, [Zt]: c }),
-                        children: (0, Y.jsx)(Se, { direction: `down` }),
+                    (0, X.jsx)(`div`, {
+                      className: Yt,
+                      children: (0, X.jsx)(R, {
+                        className: O({ [Yt]: !0, [Xt]: c }),
+                        children: (0, X.jsx)(_e, { direction: `down` }),
                       }),
                     }),
                   ],
                 }),
               ],
             }),
-            (0, Y.jsx)(dn, {
+            (0, X.jsx)(un, {
               device: t,
               bActiveNow: n,
               msgTwoFactorStatus: s && o,
             }),
-            c && (0, Y.jsx)(mn, { device: t }),
+            c && (0, X.jsx)(pn, { device: t }),
           ],
         }),
       ],
@@ -2467,135 +2469,135 @@ function un(e) {
     `id_` + t.token_id,
   );
 }
-function dn(e) {
+function un(e) {
   let { device: t, bActiveNow: n, msgTwoFactorStatus: r } = e;
   return r?.state > 0
-    ? (0, Y.jsx)(fn, {
+    ? (0, X.jsx)(dn, {
         msgTwoFactorUsage: r.usages?.length > 0 ? r.usages[0] : null,
       })
     : n
       ? null
-      : (0, Y.jsx)(pn, { device: t });
+      : (0, X.jsx)(fn, { device: t });
 }
-function fn(e) {
+function dn(e) {
   let { msgTwoFactorUsage: t } = e;
   if (!t || !t.time) return null;
-  let n = Oe(t.time),
+  let n = P(t.time),
     r = null;
-  if (t.usage_type == 3) r = T(`#authorized_devices_lasttwofactor_login`, n);
+  if (t.usage_type == 3) r = k(`#authorized_devices_lasttwofactor_login`, n);
   else if (t.usage_type == 2) {
     let e = t.confirmation_action == 1 ? `_allow` : `_cancel`;
     switch (t.confirmation_type) {
       case 2:
-        r = T(`#authorized_devices_lasttwofactor_confirmation_trade${e}`, n);
+        r = k(`#authorized_devices_lasttwofactor_confirmation_trade${e}`, n);
         break;
       case 3:
-        r = T(
+        r = k(
           `#authorized_devices_lasttwofactor_confirmation_marketlisting${e}`,
           n,
         );
         break;
       case 5:
-        r = T(
+        r = k(
           `#authorized_devices_lasttwofactor_confirmation_phonechange${e}`,
           n,
         );
         break;
       case 6:
-        r = T(
+        r = k(
           `#authorized_devices_lasttwofactor_confirmation_accountrecovery${e}`,
           n,
         );
         break;
       case 7:
-        r = T(
+        r = k(
           `#authorized_devices_lasttwofactor_confirmation_buildchange${e}`,
           n,
         );
         break;
       case 8:
-        r = T(`#authorized_devices_lasttwofactor_confirmation_adduser${e}`, n);
+        r = k(`#authorized_devices_lasttwofactor_confirmation_adduser${e}`, n);
         break;
       case 9:
-        r = T(
+        r = k(
           `#authorized_devices_lasttwofactor_confirmation_registerapikey${e}`,
           n,
         );
         break;
       case 10:
-        r = T(
+        r = k(
           `#authorized_devices_lasttwofactor_confirmation_familygroupinvite${e}`,
           n,
         );
         break;
       case 11:
-        r = T(
+        r = k(
           `#authorized_devices_lasttwofactor_confirmation_joinfamilygroup${e}`,
           n,
         );
         break;
       case 12:
-        r = T(
+        r = k(
           `#authorized_devices_lasttwofactor_confirmation_marketpurchase${e}`,
           n,
         );
         break;
       case 13:
-        r = T(`#authorized_devices_lasttwofactor_confirmation_refund${e}`, n);
+        r = k(`#authorized_devices_lasttwofactor_confirmation_refund${e}`, n);
         break;
       default:
-        r = T(`#authorized_devices_lasttwofactor_confirmation_unknown${e}`, n);
+        r = k(`#authorized_devices_lasttwofactor_confirmation_unknown${e}`, n);
     }
   }
   return r
-    ? (0, Y.jsx)(`div`, {
-        className: Kt,
-        children: (0, Y.jsx)(`div`, { children: r }),
+    ? (0, X.jsx)(`div`, {
+        className: Gt,
+        children: (0, X.jsx)(`div`, { children: r }),
       })
     : null;
 }
-function pn(e) {
+function fn(e) {
   let { device: t } = e,
     n =
       t.first_seen?.time &&
       t.first_seen.time + Te.PerWeek * 2 > Date.now() / 1e3,
     r = t.effective_token_state == 5,
-    i = T(`#accountpreferences_authorized_devices_last_seen_max`);
+    i = k(`#accountpreferences_authorized_devices_last_seen_max`);
   return (
     t.last_seen?.time
-      ? (i = Oe(t.last_seen.time))
+      ? (i = P(t.last_seen.time))
       : t.time_updated &&
         t.time_updated > Math.floor(Date.now() / 1e3 - 7776e3) &&
-        (i = Oe(t.time_updated)),
-    (0, Y.jsxs)(`div`, {
-      className: Kt,
+        (i = P(t.time_updated)),
+    (0, X.jsxs)(`div`, {
+      className: Gt,
       children: [
-        (0, Y.jsxs)(`div`, {
+        (0, X.jsxs)(`div`, {
           children: [
-            (0, Y.jsx)(`span`, {
-              className: qt,
-              children: T(
+            (0, X.jsx)(`span`, {
+              className: Kt,
+              children: k(
                 `#accountpreferences_authorized_devices_last_seen_title`,
               ),
             }),
             i,
             r &&
-              (0, Y.jsxs)(`span`, {
+              (0, X.jsxs)(`span`, {
                 className: `tjO6BKRl12o-`,
                 children: [
                   ` - `,
-                  T(`#accountpreferences_authorized_devices_state_signedout`),
+                  k(`#accountpreferences_authorized_devices_state_signedout`),
                 ],
               }),
           ],
         }),
         n &&
-          (0, Y.jsx)(`div`, {
+          (0, X.jsx)(`div`, {
             className: `YTM6P3pGOLY-`,
-            children: N(
+            children: A(
               `#accountpreferences_authorized_devices_new_device`,
-              (0, Y.jsx)(`a`, {
-                href: P.HELP_BASE_URL + `wizard/HelpWithAccountStolen`,
+              (0, X.jsx)(`a`, {
+                href: B.HELP_BASE_URL + `wizard/HelpWithAccountStolen`,
                 onClick: (e) => {
                   e.stopPropagation();
                 },
@@ -2606,14 +2608,14 @@ function pn(e) {
     })
   );
 }
-function mn(e) {
+function pn(e) {
   let { device: t } = e;
-  return (0, Y.jsx)(`div`, {
-    className: Jt,
-    children: T(hn(t), Ce(t.first_seen.time) + ` @ ` + we(t.first_seen.time)),
+  return (0, X.jsx)(`div`, {
+    className: qt,
+    children: k(mn(t), ge(t.first_seen.time) + ` @ ` + ce(t.first_seen.time)),
   });
 }
-function hn(e) {
+function mn(e) {
   let t = e.authentication_type,
     n = e.auth_type;
   if (t == 2) return `#authorized_devices_default_qr`;
@@ -2633,14 +2635,14 @@ function hn(e) {
       return `#authorized_devices_default_password`;
   }
 }
-function gn(e) {
+function hn(e) {
   let { device: t, bHasAuthenticator: n } = e,
     r = t.effective_token_state == 5,
     i = null;
   if (t.platform_type == 2)
     i = r
-      ? (0, Y.jsx)(de, { className: S(Z, Rt) })
-      : (0, Y.jsx)(fe, { className: Z });
+      ? (0, X.jsx)(te, { className: O(Q, Lt) })
+      : (0, X.jsx)(x, { className: Q });
   else if (
     t.platform_type == 1 &&
     (t.gaming_device_type === 544 ||
@@ -2648,53 +2650,53 @@ function gn(e) {
       t.gaming_device_type == 541)
   )
     i = r
-      ? (0, Y.jsx)(se, { className: S(Z, Rt) })
-      : (0, Y.jsx)(De, { className: Z });
+      ? (0, X.jsx)(xe, { className: O(Q, Lt) })
+      : (0, X.jsx)(se, { className: Q });
   else
     switch (t.os_platform) {
       case p.k_EPlatformTypeWin32:
       case p.k_EPlatformTypeWin64:
       case p.k_EPlatformTypeOSX:
         i = r
-          ? (0, Y.jsx)(ve, { className: S(Z, Rt) })
-          : (0, Y.jsx)(pe, { className: Z });
+          ? (0, X.jsx)(de, { className: O(Q, Lt) })
+          : (0, X.jsx)(V, { className: Q });
         break;
       case p.k_EPlatformTypeAndroid32:
       case p.k_EPlatformTypeAndroid64:
       case p.k_EPlatformTypeLinux32:
       case p.k_EPlatformTypeLinux64:
-        i = (0, Y.jsx)(ie, { className: Z });
+        i = (0, X.jsx)(ee, { className: Q });
         break;
       case p.k_EPlatformTypeIOS32:
       case p.k_EPlatformTypeIOS64:
-        i = (0, Y.jsx)(ie, { className: Z });
+        i = (0, X.jsx)(ee, { className: Q });
     }
   return n
-    ? (0, Y.jsxs)(`div`, {
-        className: en,
-        children: [i, (0, Y.jsx)(`img`, { src: jt, className: tn })],
+    ? (0, X.jsxs)(`div`, {
+        className: $t,
+        children: [i, (0, X.jsx)(`img`, { src: At, className: en })],
       })
     : i;
 }
-function _n(e) {
+function gn(e) {
   if (e.platform_type == 2) {
-    let t = new Nt.UAParser(e.token_description).getResult();
+    let t = new Mt.UAParser(e.token_description).getResult();
     return t.browser.name && t.os.name
       ? t.browser.name == `WebKit`
         ? t.os.name
-        : T(
+        : k(
             `#accountpreferences_authorized_devices_browser_on_os`,
             t.browser.name,
             t.os.name,
           )
-      : T(`#accountpreferences_authorized_devices_browser_unmatched`);
+      : k(`#accountpreferences_authorized_devices_browser_unmatched`);
   }
   return e.token_description;
 }
-function vn(e) {
+function _n(e) {
   let t = e.last_seen ?? e.first_seen;
   if (t) {
-    if (!le(P.EREALM))
+    if (!we(B.EREALM))
       return {
         location: `${t.city ? t.city + `, ` : ``}${t.country}`,
         country: t.country,
@@ -2702,60 +2704,60 @@ function vn(e) {
     if (t.city) return { location: t.city, country: t.country };
   }
   return {
-    location: T(`#accountpreferences_authorized_devices_loc_unknown`),
+    location: k(`#accountpreferences_authorized_devices_loc_unknown`),
     country: ``,
   };
 }
-function yn(e) {
+function vn(e) {
   let { device: t } = e;
   switch (t.platform_type) {
     case 3:
-      return T(`#accountpreferences_authorized_devices_type_mobile`);
+      return k(`#accountpreferences_authorized_devices_type_mobile`);
     case 1:
       return t.gaming_device_type === 544
-        ? T(`#accountpreferences_authorized_devices_type_steamdeck`)
+        ? k(`#accountpreferences_authorized_devices_type_steamdeck`)
         : t.gaming_device_type == 545
-          ? T(`#accountpreferences_authorized_devices_type_legiongos`)
+          ? k(`#accountpreferences_authorized_devices_type_legiongos`)
           : t.gaming_device_type == 541
-            ? T(`#accountpreferences_authorized_devices_type_steamos`)
-            : T(`#accountpreferences_authorized_devices_type_desktop`);
+            ? k(`#accountpreferences_authorized_devices_type_steamos`)
+            : k(`#accountpreferences_authorized_devices_type_desktop`);
     case 2:
-      return T(`#accountpreferences_authorized_devices_type_browser`);
+      return k(`#accountpreferences_authorized_devices_type_browser`);
     default:
-      return T(`#accountpreferences_authorized_devices_type_unknown`);
+      return k(`#accountpreferences_authorized_devices_type_unknown`);
   }
 }
-function bn(e) {
+function yn(e) {
   let { closeModal: t } = e;
-  return (0, Y.jsx)(ae, {
+  return (0, X.jsx)(re, {
     onEscKeypress: t,
-    children: (0, Y.jsxs)(te, {
+    children: (0, X.jsxs)(pe, {
       children: [
-        (0, Y.jsx)(re, {
-          children: T(`#authorized_devices_deauthorize_title`),
+        (0, X.jsx)(be, {
+          children: k(`#authorized_devices_deauthorize_title`),
         }),
-        (0, Y.jsxs)(x, {
+        (0, X.jsxs)(v, {
           children: [
-            (0, Y.jsx)(ne, {
-              children: T(`#authorized_devices_deauthorize_msg`),
+            (0, X.jsx)(H, {
+              children: k(`#authorized_devices_deauthorize_msg`),
             }),
-            (0, Y.jsx)(B, {
-              children: (0, Y.jsx)(j, {
-                strOKText: T(`#authorized_devices_deauthorize_proceed`),
+            (0, X.jsx)(ye, {
+              children: (0, X.jsx)(he, {
+                strOKText: k(`#authorized_devices_deauthorize_proceed`),
                 onOK: async () => {
                   let e = new FormData();
                   e.set(`action`, `deauthorize`),
-                    e.set(`sessionid`, D()),
-                    await Me.default.post(
-                      P.STORE_BASE_URL + `twofactor/manage_action`,
+                    e.set(`sessionid`, z()),
+                    await je.default.post(
+                      B.STORE_BASE_URL + `twofactor/manage_action`,
                       e,
                     );
                   let t = document.createElement(`form`);
-                  (t.method = `POST`), (t.action = P.STORE_BASE_URL + `logout`);
+                  (t.method = `POST`), (t.action = B.STORE_BASE_URL + `logout`);
                   let n = document.createElement(`input`);
                   (n.type = `hidden`),
                     (n.name = `sessionid`),
-                    (n.value = D()),
+                    (n.value = z()),
                     t.appendChild(n),
                     document.body.appendChild(t),
                     t.submit();
@@ -2769,74 +2771,74 @@ function bn(e) {
     }),
   });
 }
-var xn = `jUbJDWS4KbM-`,
-  Sn = `_0KS5vxiuuas-`,
-  Cn = `RKNvgkD9-fw-`,
-  wn = `fYndRKZmMkc-`,
-  Tn = `h8-4lFF5M58-`,
-  En = `xGrGbCIFdZU-`,
-  Dn = `_5P46ZCZGTXo-`,
-  On = `-NSP4bX00mY-`,
-  kn = `FDb0NIXOm0A-`,
-  An = `FdmRCehAGYI-`,
-  jn = `TJDzvw9F008-`,
-  Mn = `UdRjmwOXHfE-`,
-  Nn = `M0mNJBjOgYk-`,
-  Pn = `_9fLN420LJa4-`,
-  Fn = `_1v5wNzaTsw8-`,
-  In = `q-crQp6szwI-`,
-  Ln = `n8evf-z8Ij8-`,
-  Rn = `mTLl2oNfUQ4-`,
-  zn = `wiKtgWcwiPk-`,
-  Bn = `_5Uqj-ZJajHU-`,
-  Vn = `kzUM4acS-oo-`,
-  Hn = `Ik-mDI6yuZA-`,
-  Un = `_8k8bd7Cwz7o-`,
-  Wn = `_7-ZGCcZvb7s-`,
-  Gn = `S--CyhEr6Jk-`;
-function Kn(e) {
-  return (0, Y.jsxs)(`div`, {
-    children: [(0, Y.jsx)(qn, {}), (0, Y.jsx)(an, {})],
+var bn = `jUbJDWS4KbM-`,
+  xn = `_0KS5vxiuuas-`,
+  Sn = `RKNvgkD9-fw-`,
+  Cn = `fYndRKZmMkc-`,
+  wn = `h8-4lFF5M58-`,
+  Tn = `xGrGbCIFdZU-`,
+  En = `_5P46ZCZGTXo-`,
+  Dn = `-NSP4bX00mY-`,
+  On = `FDb0NIXOm0A-`,
+  kn = `FdmRCehAGYI-`,
+  An = `TJDzvw9F008-`,
+  jn = `UdRjmwOXHfE-`,
+  Mn = `M0mNJBjOgYk-`,
+  Nn = `_9fLN420LJa4-`,
+  Pn = `_1v5wNzaTsw8-`,
+  Fn = `q-crQp6szwI-`,
+  In = `n8evf-z8Ij8-`,
+  Ln = `mTLl2oNfUQ4-`,
+  Rn = `wiKtgWcwiPk-`,
+  zn = `_5Uqj-ZJajHU-`,
+  Bn = `kzUM4acS-oo-`,
+  Vn = `Ik-mDI6yuZA-`,
+  Hn = `_8k8bd7Cwz7o-`,
+  Un = `_7-ZGCcZvb7s-`,
+  Wn = `S--CyhEr6Jk-`;
+function Gn(e) {
+  return (0, X.jsxs)(`div`, {
+    children: [(0, X.jsx)(Kn, {}), (0, X.jsx)(rn, {})],
   });
 }
-function qn(e) {
-  let t = P.HELP_BASE_URL + `faqs/view/7EFD-3CAE-64D3-1C31`,
-    n = X.Get(),
+function Kn(e) {
+  let t = B.HELP_BASE_URL + `faqs/view/7EFD-3CAE-64D3-1C31`,
+    n = Z.Get(),
     r = n.GetTwoFactorStatus()?.steamguard_scheme == 2;
-  return (0, Y.jsxs)(Y.Fragment, {
+  return (0, X.jsxs)(X.Fragment, {
     children: [
-      (0, Y.jsx)(`div`, {
+      (0, X.jsx)(`div`, {
         className: `account_header_line`,
-        children: (0, Y.jsxs)(`div`, {
+        children: (0, X.jsxs)(`div`, {
           children: [
-            (0, Y.jsx)(ee, { className: xn }),
-            T(`#youraccount_account_security`),
+            (0, X.jsx)(Ee, { className: bn }),
+            k(`#youraccount_account_security`),
           ],
         }),
       }),
-      (0, Y.jsxs)(`div`, {
-        className: S(Sn, `account_settings_container`),
+      (0, X.jsxs)(`div`, {
+        className: O(xn, `account_settings_container`),
         children: [
-          (0, Y.jsx)(`div`, {
-            children: N(
+          (0, X.jsx)(`div`, {
+            children: A(
               `#accountpreferences_account_security_description`,
-              (0, Y.jsx)(z, { target: `_blank`, href: t }),
+              (0, X.jsx)(F, { target: `_blank`, href: t }),
             ),
           }),
           r
-            ? (0, Y.jsx)(Jn, {
+            ? (0, X.jsx)(qn, {
                 msgTwoFactorStatus: n.GetTwoFactorStatus(),
                 strFaqUrl: t,
               })
-            : (0, Y.jsx)(Yn, { strFaqUrl: t }),
-          (0, Y.jsxs)(`div`, {
-            className: Cn,
+            : (0, X.jsx)(Jn, { strFaqUrl: t }),
+          (0, X.jsxs)(`div`, {
+            className: Sn,
             children: [
-              (0, Y.jsx)(Zn, {}),
-              (0, Y.jsx)(`div`, { className: wn }),
-              (0, Y.jsx)($n, {}),
-              (0, Y.jsx)(Qn, { msgTwoFactorStatus: n.GetTwoFactorStatus() }),
-              r && (0, Y.jsx)(er, {}),
+              (0, X.jsx)(Xn, {}),
+              (0, X.jsx)(`div`, { className: Cn }),
+              (0, X.jsx)(Qn, {}),
+              (0, X.jsx)(Zn, { msgTwoFactorStatus: n.GetTwoFactorStatus() }),
+              r && (0, X.jsx)($n, {}),
             ],
           }),
         ],
@@ -2844,71 +2846,71 @@ function qn(e) {
     ],
   });
 }
-function Jn(e) {
+function qn(e) {
   let { msgTwoFactorStatus: t, strFaqUrl: n } = e,
-    r = X.Get(),
-    i = sn(r),
-    a = cn(),
+    r = Z.Get(),
+    i = on(r),
+    a = sn(),
     o = [...(r.GetActiveDevices() ?? []), ...(r.GetActiveDevices() ?? [])],
     s = null;
   return (
     t?.last_seen_auth_token_id &&
       ((s = o.find((e) => e.token_id === t.last_seen_auth_token_id)),
       a?.length > 0 && s?.token_id),
-    (0, Y.jsxs)(`div`, {
+    (0, X.jsxs)(`div`, {
       children: [
-        (0, Y.jsxs)(`div`, {
-          className: kn,
+        (0, X.jsxs)(`div`, {
+          className: On,
           children: [
-            (0, Y.jsx)(`img`, { className: jn, src: jt }),
-            (0, Y.jsx)(`div`, {
-              className: An,
-              children: T(`#accountpreferences_account_security_steamguard`),
+            (0, X.jsx)(`img`, { className: An, src: At }),
+            (0, X.jsx)(`div`, {
+              className: kn,
+              children: k(`#accountpreferences_account_security_steamguard`),
             }),
-            (0, Y.jsx)(`div`, {
-              className: Mn,
-              children: (0, Y.jsx)(z, {
-                href: P.STORE_BASE_URL + `twofactor/remove?step=promptdevice`,
-                children: T(
+            (0, X.jsx)(`div`, {
+              className: jn,
+              children: (0, X.jsx)(F, {
+                href: B.STORE_BASE_URL + `twofactor/remove?step=promptdevice`,
+                children: k(
                   `#accountpreferences_account_security_steamguard_remove`,
                 ),
               }),
             }),
           ],
         }),
-        (0, Y.jsxs)(`div`, {
-          className: Nn,
+        (0, X.jsxs)(`div`, {
+          className: Mn,
           children: [
             !!s &&
-              (0, Y.jsxs)(Y.Fragment, {
+              (0, X.jsxs)(X.Fragment, {
                 children: [
-                  (0, Y.jsx)(un, {
+                  (0, X.jsx)(ln, {
                     className: `-jL8shO-BT4-`,
                     device: s,
                     strActiveCountry: i,
                     msgTwoFactorStatus: t,
                     bShowAuthenticatorActivity: !0,
                   }),
-                  (0, Y.jsx)(`div`, { className: `fYndRKZmMkc-` }),
+                  (0, X.jsx)(`div`, { className: `fYndRKZmMkc-` }),
                 ],
               }),
-            (0, Y.jsxs)(`div`, {
-              className: Pn,
+            (0, X.jsxs)(`div`, {
+              className: Nn,
               children: [
-                (0, Y.jsx)($, {
-                  strLabel: T(`#accountpreferences_account_security_move`),
-                  href: P.HELP_BASE_URL + `faqs/view/29A9-9EEE-09F0-75F9`,
+                (0, X.jsx)($, {
+                  strLabel: k(`#accountpreferences_account_security_move`),
+                  href: B.HELP_BASE_URL + `faqs/view/29A9-9EEE-09F0-75F9`,
                 }),
-                (0, Y.jsx)($, {
-                  strLabel: T(`#accountpreferences_account_security_help_lost`),
-                  href: P.STORE_BASE_URL + `twofactor/remove?step=promptdevice`,
+                (0, X.jsx)($, {
+                  strLabel: k(`#accountpreferences_account_security_help_lost`),
+                  href: B.STORE_BASE_URL + `twofactor/remove?step=promptdevice`,
                 }),
-                (0, Y.jsx)(`div`, {
-                  className: Fn,
-                  children: (0, Y.jsx)(z, {
+                (0, X.jsx)(`div`, {
+                  className: Pn,
+                  children: (0, X.jsx)(F, {
                     href: n,
                     target: `_blank`,
-                    children: T(
+                    children: k(
                       `#accountpreferences_account_security_view_faq`,
                     ),
                   }),
@@ -2921,101 +2923,101 @@ function Jn(e) {
     })
   );
 }
-function Yn(e) {
+function Jn(e) {
   let { strFaqUrl: t } = e,
-    n = X.Get().GetLatestAndroidAppVersion();
-  return (0, Y.jsxs)(`div`, {
-    className: In,
+    n = Z.Get().GetLatestAndroidAppVersion();
+  return (0, X.jsxs)(`div`, {
+    className: Fn,
     children: [
-      (0, Y.jsxs)(`div`, {
-        className: kn,
+      (0, X.jsxs)(`div`, {
+        className: On,
         children: [
-          (0, Y.jsx)(`img`, { className: jn, src: At }),
-          (0, Y.jsx)(`div`, {
-            className: An,
-            children: T(`#accountpreferences_account_security_no_steamguard`),
+          (0, X.jsx)(`img`, { className: An, src: kt }),
+          (0, X.jsx)(`div`, {
+            className: kn,
+            children: k(`#accountpreferences_account_security_no_steamguard`),
           }),
         ],
       }),
-      (0, Y.jsx)(`div`, { className: wn }),
-      (0, Y.jsxs)(`div`, {
-        className: Ln,
+      (0, X.jsx)(`div`, { className: Cn }),
+      (0, X.jsxs)(`div`, {
+        className: In,
         children: [
-          (0, Y.jsxs)(`div`, {
-            className: Bn,
+          (0, X.jsxs)(`div`, {
+            className: zn,
             children: [
-              (0, Y.jsxs)(`div`, {
-                className: Rn,
+              (0, X.jsxs)(`div`, {
+                className: Ln,
                 children: [
-                  (0, Y.jsx)(`div`, {
-                    className: zn,
-                    children: N(
+                  (0, X.jsx)(`div`, {
+                    className: Rn,
+                    children: A(
                       `#accountpreferences_account_security_get_app`,
-                      (0, Y.jsx)(z, {
-                        href: P.STORE_BASE_URL + `mobile#mobile_section`,
+                      (0, X.jsx)(F, {
+                        href: B.STORE_BASE_URL + `mobile#mobile_section`,
                       }),
                     ),
                   }),
-                  (0, Y.jsx)(`div`, {
-                    children: T(`#accountpreferences_account_security_scan_qr`),
+                  (0, X.jsx)(`div`, {
+                    children: k(`#accountpreferences_account_security_scan_qr`),
                   }),
                 ],
               }),
-              (0, Y.jsx)(`img`, { src: Mt, className: Vn }),
+              (0, X.jsx)(`img`, { src: jt, className: Bn }),
             ],
           }),
-          (0, Y.jsxs)(`div`, {
-            className: Hn,
+          (0, X.jsxs)(`div`, {
+            className: Vn,
             children: [
-              (0, Y.jsx)(`div`, {
-                children: T(
+              (0, X.jsx)(`div`, {
+                children: k(
                   `#accountpreferences_account_security_mobile_os_reqs`,
                 ),
               }),
-              (0, Y.jsxs)(`div`, {
-                className: Un,
+              (0, X.jsxs)(`div`, {
+                className: Hn,
                 children: [
-                  (0, Y.jsx)(z, {
+                  (0, X.jsx)(F, {
                     href: `https://itunes.apple.com/us/app/steam-mobile/id495369748`,
                     rel: `noopener`,
                     target: `_blank`,
-                    children: (0, Y.jsx)(d, {
-                      srcs: Xn(
-                        P.IMG_URL +
+                    children: (0, X.jsx)(d, {
+                      srcs: Yn(
+                        B.IMG_URL +
                           `mobile/localizedimages/appleappstore/apple_store_`,
+                        `.png`,
+                      ),
+                      className: Un,
+                    }),
+                  }),
+                  (0, X.jsx)(F, {
+                    href: `https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community`,
+                    rel: `noopener`,
+                    target: `_blank`,
+                    children: (0, X.jsx)(d, {
+                      srcs: Yn(
+                        B.IMG_URL +
+                          `mobile/localizedimages/googleplaystore/google_play_store_`,
                         `.png`,
                       ),
                       className: Wn,
                     }),
                   }),
-                  (0, Y.jsx)(z, {
-                    href: `https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community`,
-                    rel: `noopener`,
-                    target: `_blank`,
-                    children: (0, Y.jsx)(d, {
-                      srcs: Xn(
-                        P.IMG_URL +
-                          `mobile/localizedimages/googleplaystore/google_play_store_`,
-                        `.png`,
-                      ),
-                      className: Gn,
-                    }),
-                  }),
                 ],
               }),
-              (0, Y.jsx)(`div`, {
-                children: N(
+              (0, X.jsx)(`div`, {
+                children: A(
                   `#accountpreferences_account_security_apk_download`,
-                  (0, Y.jsx)(`a`, {
+                  (0, X.jsx)(`a`, {
                     href: `https://media.steampowered.com/apps/steam-android/steam-${n}.apk`,
                   }),
                 ),
               }),
-              (0, Y.jsx)(`div`, {
-                children: (0, Y.jsx)(`a`, {
+              (0, X.jsx)(`div`, {
+                children: (0, X.jsx)(`a`, {
                   href: t,
                   target: `_blank`,
-                  children: T(
+                  children: k(
                     `#accountpreferences_account_security_mobile_faq`,
                   ),
                 }),
@@ -3027,136 +3029,136 @@ function Yn(e) {
     ],
   });
 }
-function Xn(e, t) {
-  let n = ue.GetLanguageFallback(P.LANGUAGE),
-    r = [e + P.LANGUAGE + t];
-  return P.LANGUAGE != n && r.push(e + n + t), r;
+function Yn(e, t) {
+  let n = De.GetLanguageFallback(B.LANGUAGE),
+    r = [e + B.LANGUAGE + t];
+  return B.LANGUAGE != n && r.push(e + n + t), r;
 }
-function Zn(e) {
-  let t = X.Get(),
-    n = P.IN_MOBILE_WEBVIEW;
-  return (0, Y.jsxs)(`div`, {
-    className: Tn,
+function Xn(e) {
+  let t = Z.Get(),
+    n = B.IN_MOBILE_WEBVIEW;
+  return (0, X.jsxs)(`div`, {
+    className: wn,
     children: [
-      (0, Y.jsx)(Q, {
-        strLabel: T(`#accountpreferences_account_security_account_name`),
+      (0, X.jsx)(er, {
+        strLabel: k(`#accountpreferences_account_security_account_name`),
         strText: t.GetAccountName(),
       }),
-      (0, Y.jsx)($, {
-        strLabel: T(`#accountpreferences_account_security_change_pass`),
+      (0, X.jsx)($, {
+        strLabel: k(`#accountpreferences_account_security_change_pass`),
         href:
-          P.HELP_BASE_URL + `wizard/HelpChangePassword?redir=store/account/`,
+          B.HELP_BASE_URL + `wizard/HelpChangePassword?redir=store/account/`,
         target: n ? `_blank` : void 0,
       }),
     ],
   });
 }
-function Qn(e) {
+function Zn(e) {
   let { msgTwoFactorStatus: t } = e,
-    n = X.Get(),
+    n = Z.Get(),
     r = t.email_validated,
     i = t.steamguard_scheme == 1,
-    a = P.IN_MOBILE_WEBVIEW;
-  return (0, Y.jsxs)(`div`, {
-    className: Tn,
+    a = B.IN_MOBILE_WEBVIEW;
+  return (0, X.jsxs)(`div`, {
+    className: wn,
     children: [
-      (0, Y.jsx)(Q, {
-        strLabel: T(`#accountpreferences_account_security_email`),
+      (0, X.jsx)(er, {
+        strLabel: k(`#accountpreferences_account_security_email`),
         strText: n.GetEmailAddress(),
       }),
-      (0, Y.jsx)(Q, {
-        strLabel: T(`#accountpreferences_account_security_email_status`),
-        strText: T(
+      (0, X.jsx)(er, {
+        strLabel: k(`#accountpreferences_account_security_email_status`),
+        strText: k(
           r ? `#youraccount_email_verified` : `#youraccount_email_unverified`,
         ),
       }),
       i &&
-        (0, Y.jsx)(Q, {
-          strLabel: T(`#accountpreferences_account_security_verification`),
-          strText: T(`#accountpreferences_account_security_via_email`),
+        (0, X.jsx)(er, {
+          strLabel: k(`#accountpreferences_account_security_verification`),
+          strText: k(`#accountpreferences_account_security_via_email`),
         }),
-      (0, Y.jsxs)(`div`, {
-        className: En,
+      (0, X.jsxs)(`div`, {
+        className: Tn,
         children: [
-          (0, Y.jsx)($, {
-            strLabel: T(`#accountpreferences_account_security_change_email`),
+          (0, X.jsx)($, {
+            strLabel: k(`#accountpreferences_account_security_change_email`),
             href:
-              P.HELP_BASE_URL + `wizard/HelpChangeEmail?redir=store/account/`,
+              B.HELP_BASE_URL + `wizard/HelpChangeEmail?redir=store/account/`,
             target: a ? `_blank` : void 0,
           }),
           i &&
-            (0, Y.jsx)($, {
-              strLabel: T(
+            (0, X.jsx)($, {
+              strLabel: k(
                 `#accountpreferences_account_security_remove_email_guard`,
               ),
-              href: P.STORE_BASE_URL + `twofactor/manage`,
+              href: B.STORE_BASE_URL + `twofactor/manage`,
             }),
         ],
       }),
     ],
   });
 }
-function $n(e) {
-  let t = X.Get(),
-    n = T(`#accountpreferences_account_security_phone_none`);
+function Qn(e) {
+  let t = Z.Get(),
+    n = k(`#accountpreferences_account_security_phone_none`);
   return (
     t.GetPhoneHint() &&
-      (n = T(
+      (n = k(
         `#accountpreferences_account_security_phone_hint`,
         t.GetPhoneHint(),
       )),
-    (0, Y.jsxs)(`div`, {
-      className: Tn,
+    (0, X.jsxs)(`div`, {
+      className: wn,
       children: [
-        (0, Y.jsx)(Q, {
-          strLabel: T(`#accountpreferences_account_security_phone`),
+        (0, X.jsx)(er, {
+          strLabel: k(`#accountpreferences_account_security_phone`),
           strText: n,
         }),
-        (0, Y.jsx)($, {
-          strLabel: T(`#accountpreferences_account_security_manage_phone`),
-          href: P.STORE_BASE_URL + `phone/manage`,
+        (0, X.jsx)($, {
+          strLabel: k(`#accountpreferences_account_security_manage_phone`),
+          href: B.STORE_BASE_URL + `phone/manage`,
         }),
       ],
     })
   );
 }
-function er(e) {
-  return (0, Y.jsxs)(`div`, {
-    className: Tn,
+function $n(e) {
+  return (0, X.jsxs)(`div`, {
+    className: wn,
     children: [
-      (0, Y.jsx)(Q, {
-        strLabel: T(`#accountpreferences_account_security_backup_codes`),
+      (0, X.jsx)(er, {
+        strLabel: k(`#accountpreferences_account_security_backup_codes`),
       }),
-      (0, Y.jsx)($, {
-        strLabel: T(`#accountpreferences_account_security_get_backup_codes`),
-        href: P.STORE_BASE_URL + `twofactor/emergency_codes`,
+      (0, X.jsx)($, {
+        strLabel: k(`#accountpreferences_account_security_get_backup_codes`),
+        href: B.STORE_BASE_URL + `twofactor/emergency_codes`,
       }),
     ],
   });
 }
-function Q(e) {
+function er(e) {
   let { strLabel: t, strText: n } = e;
-  return (0, Y.jsxs)(`div`, {
+  return (0, X.jsxs)(`div`, {
     children: [
-      (0, Y.jsx)(`span`, { className: Dn, children: t }),
-      !!n && (0, Y.jsx)(`span`, { children: n }),
+      (0, X.jsx)(`span`, { className: En, children: t }),
+      !!n && (0, X.jsx)(`span`, { children: n }),
     ],
   });
 }
 function $(e) {
   let { strLabel: t, href: n, target: r } = e;
-  return (0, Y.jsx)(`div`, {
-    children: (0, Y.jsx)(z, { className: On, href: n, target: r, children: t }),
+  return (0, X.jsx)(`div`, {
+    children: (0, X.jsx)(F, { className: Dn, href: n, target: r, children: t }),
   });
 }
-var tr = H.lazy(() =>
-    C(
-      () => import(`./familymanagement.js?contenthash=BPSEVhAz`),
+var tr = U.lazy(() =>
+    ae(
+      () => import(`./familymanagement.js?contenthash=Do4_NcAv`),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
         38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
-        56,
+        56, 57, 58,
       ]),
       import.meta.url,
     ),
@@ -3171,44 +3173,44 @@ var tr = H.lazy(() =>
   rr = (e) => {
     let t = e.match.url,
       n = nr;
-    return (0, Y.jsxs)(i, {
+    return (0, X.jsxs)(i, {
       children: [
-        (0, Y.jsx)(r, {
+        (0, X.jsx)(r, {
           path: `${t}${n.CookieSettings()}`,
           render: () =>
-            (0, Y.jsx)(O, {
-              config: { "cookie-preferences": () => (0, Y.jsx)(tt, {}) },
+            (0, X.jsx)(D, {
+              config: { "cookie-preferences": () => (0, X.jsx)(et, {}) },
             }),
         }),
-        (0, Y.jsx)(r, {
+        (0, X.jsx)(r, {
           path: `${t}${n.FamilyManagement()}`,
           render: () =>
-            (0, Y.jsx)(O, {
-              config: { "family-management": () => (0, Y.jsx)(tr, {}) },
+            (0, X.jsx)(D, {
+              config: { "family-management": () => (0, X.jsx)(tr, {}) },
             }),
         }),
-        (0, Y.jsx)(r, {
+        (0, X.jsx)(r, {
           path: `${t}${n.SecurityDevices()}`,
           render: () =>
-            (0, Y.jsx)(O, {
-              config: { "security-devices": () => (0, Y.jsx)(Kn, {}) },
+            (0, X.jsx)(D, {
+              config: { "security-devices": () => (0, X.jsx)(Gn, {}) },
             }),
         }),
-        (0, Y.jsx)(r, {
+        (0, X.jsx)(r, {
           path: `${t}${n.PlaytestInvites()}`,
           render: () =>
-            (0, Y.jsx)(O, {
+            (0, X.jsx)(D, {
               config: {
                 "playtest-invites": () =>
-                  (0, Y.jsx)(bt, { bShowPlaytestOverview: !0 }),
+                  (0, X.jsx)(yt, { bShowPlaytestOverview: !0 }),
               },
             }),
         }),
-        (0, Y.jsx)(r, {
+        (0, X.jsx)(r, {
           path: `${t}${n.Playtests()}`,
           render: () =>
-            (0, Y.jsx)(O, {
-              config: { playtests: (e) => (0, Y.jsx)(kt, { ...e }) },
+            (0, X.jsx)(D, {
+              config: { playtests: (e) => (0, X.jsx)(Ot, { ...e }) },
             }),
         }),
       ],

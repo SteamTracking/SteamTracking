@@ -1619,7 +1619,7 @@ HelpWizard = {
 
 		$J( '#recovery_code_resent' ).hide();
 		elError.hide();
-		$J.ajax({
+		return $J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxSendAccountRecoveryCode",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {

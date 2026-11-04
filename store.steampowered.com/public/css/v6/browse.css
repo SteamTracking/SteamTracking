@@ -6,7 +6,7 @@
 }
 
 .browse_floating_link {
-	float: right;
+	float: inline-end;
 	width: 288px;
 }
 
@@ -38,17 +38,17 @@
 }
 .tabarea .tab {
     display: inline-block;
-    margin-right: 0px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    margin-inline-end: 0px;
+    border-start-start-radius: 3px;
+    border-start-end-radius: 3px;
     margin-top: 3px;
     padding: 1px;
 }
 .tabarea .tab .tab_browse_option_label,
 .tabarea .tab .tab_content {
     background: rgba( 0, 0, 0, 0.2 );
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-start-start-radius: 3px;
+    border-start-end-radius: 3px;
     font-size: 13px;
     color: #4f94bc;
     line-height: 25px;
@@ -107,7 +107,7 @@
 	color: #626366;
 	width: 300px;
 	height: 240px;
-	float: left;
+	float: inline-start;
 	margin-bottom: 12px;
 }
 
@@ -122,11 +122,11 @@
 .tab_video_capsule {
 	position: absolute;
 	top: 15px;
-	left: 13px;
+	inset-inline-start: 13px;
 }
 
 .tab_video_desc {
-	padding-left: 213px;
+	padding-inline-start: 213px;
 	padding-top: 47px;
 	color: #626366;
 }
@@ -141,7 +141,8 @@
 
 .block .block_header {
 	background: rgba( 255, 255, 255, 0.1);
-    padding: 4px 4px 4px 6px;
+    padding-block: 4px;
+    padding-inline: 6px 4px;
     color: #c7d5e0;
     font-size: 12px;
 			font-family: "Motiva Sans", Sans-serif;
@@ -157,7 +158,8 @@
 
 .block_content_inner
 {
-    padding: 4px 2px 4px 4px;
+    padding-block: 4px;
+    padding-inline: 4px 2px;
 	overflow: hidden;
 }
 
@@ -169,8 +171,8 @@
 }
 
 a.linkbar {
-    padding-left: 12px;
-    margin-right: 8px;
+    padding-inline-start: 12px;
+    margin-inline-end: 8px;
     display: block;
     color: #9fbbcb;
     font-size: 13px;
@@ -189,7 +191,7 @@ a.linkbar_active, a.linkbar_active:hover, a.linkbar_active:active, a.linkbar_act
     color: #000000;
     background-color: #66c0f4;
     background-image: none;
-    margin-left: 0px;
+    margin-inline-start: 0px;
 }
 
 a.linkbar .rightblock {
@@ -275,7 +277,7 @@ a.linkbar .rightblock {
     width: 16px;
     height: 16px;
     background-position: top center;
-    margin-right: 8px;
+    margin-inline-end: 8px;
     background-image: url('/public/images/v6/store_checkbox_blue.png');
     vertical-align: text-bottom;
     transform: translateY(3px);
@@ -299,7 +301,7 @@ a.linkbar .rightblock {
 }
 
 .tab_filter_control_not {
-	float: right;
+	float: inline-end;
 	margin: 6px;
 	width: 16px;
 	height: 16px;
@@ -314,7 +316,7 @@ a.linkbar .rightblock {
 }
 
 #deck_compatibility_search_filter .tab_filter_control_count {
-	padding-left: 6px;
+	padding-inline-start: 6px;
 }
 
 .discovery_queue_ctn {
@@ -329,12 +331,17 @@ a.linkbar .rightblock {
 	color: #66c0f4;
 	font-size: 10px;
 	text-transform: uppercase;
-	text-align: right;
+	text-align: end;
 	display: block;
 
 	background: url(/public/images/v6/icon_expand.png) right center no-repeat;
-	padding: 0 15px 0 0;
-	margin: 3px 3px 0 0;
+	padding-block: 0;
+	padding-inline: 0 15px;
+	margin-block: 3px 0;
+	margin-inline: 0 3px;
+}
+.see_all_expander:dir(rtl) {
+	background-position: left center;
 }
 
 /* paging controls */
@@ -354,12 +361,12 @@ a.linkbar .rightblock {
 .paged_items_paging_summary
 {
 	color: #3b6e8c;
-	float: left;
+	float: inline-start;
 }
 
 .paged_items_paging_controls
 {
-	float: right;
+	float: inline-end;
 }
 
 .paged_items_paging_controls .pagebtn,
@@ -392,7 +399,7 @@ a.linkbar .rightblock {
 	flex-direction: row;
 }
 .paged_items_paging_size_ctn {
-	padding-left: 5px;
+	padding-inline-start: 5px;
 }
 .paged_items_paging_size_title {
 	color: #3b6e8c;
@@ -438,7 +445,7 @@ a.pagelink:hover {
 		    font-weight: normal;
     font-size: 45px;
     color: #ffffff;
-    padding-left: 16px;
+    padding-inline-start: 16px;
     padding-top: 10px;
 }
 body.v6 .header_early_access h2 {
@@ -448,7 +455,7 @@ body.v6 .header_early_access h2 {
 		    font-weight: normal;
     font-size: 17px;
     color: #C6D4DF;
-    padding-left: 16px;
+    padding-inline-start: 16px;
     margin-top: -2px;
 }
 body.v6 .header_early_access h2 a {

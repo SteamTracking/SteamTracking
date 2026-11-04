@@ -14,8 +14,8 @@
 
 .admin_nav {
 	width: 308px;
-	margin-right: 10px;
-	margin-left: -8px;
+	margin-inline-end: 10px;
+	margin-inline-start: -8px;
 }
 
 .admin_nav a {
@@ -30,7 +30,8 @@
 .admin_nav h4 {
 	color: #8299a1;
 	text-transform: uppercase;
-	padding: 16px 0 0 8px;
+	padding-block: 16px 0;
+	padding-inline: 8px 0;
 	font-weight: normal;
 	font-size: 11px;
 	letter-spacing: 1px;
@@ -52,7 +53,7 @@
 }
 
 .admin_content ul {
-	margin-left: 16px;
+	margin-inline-start: 16px;
 	font-size: 13px;
 	margin-top: 16px;
 	line-height: 18px;
@@ -79,7 +80,7 @@
 }
 
 .admin_content .controls {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 /* Create Review */
@@ -228,7 +229,7 @@
 .admin_content h4 a {
 	text-transform: none;
 	font-size: 12px;
-	float: right;
+	float: inline-end;
 }
 
 .admin_content h5 {
@@ -243,7 +244,7 @@
 .curator_connect ul {
 	margin-top: 2px;
 	margin-bottom: 16px;
-	margin-left: 30px;
+	margin-inline-start: 30px;
 	font-size: 14px;
 }
 
@@ -319,7 +320,7 @@ p {
 	cursor: -webkit-grab;
 	border-radius: 2px;
 	border-top: 1px solid rgba(255,255,255,0.1);
-	border-left: 1px solid rgba(255,255,255,0.1);
+	border-inline-start: 1px solid rgba(255,255,255,0.1);
 }
 #apps_container > div:hover {
 	background-color: rgba(255,255,255,0.2);
@@ -354,7 +355,7 @@ p {
 }
 
 .remove_item_from_list {
-	right: 8px;
+	inset-inline-end: 8px;
 	top: 11px;
 	position: relative;
 	opacity: 0.6;
@@ -380,7 +381,7 @@ p {
 
 .reviews_container .delete_btn {
 	cursor: pointer;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	opacity: 0.6;
 }
 
@@ -451,15 +452,16 @@ body.v6 .reviews_container h3 {
 }
 .app_ctn .app_capsule {
 	padding: 0px;
-	float: left;
+	float: inline-start;
 	height: 108px;
 }
 .app_ctn .app_capsule img {
 	width: 232px;
 }
 .app_ctn .app_name_ctn {
-	float: left;
-	padding: 20px 8px 0px 12px;
+	float: inline-start;
+	padding-block: 20px 0px;
+	padding-inline: 12px 8px;
 	font-size: 12px;
 }
 .app_ctn .app_name {
@@ -491,8 +493,9 @@ body.v6 .reviews_container h3 {
 }
 
 .app_ctn .app_actions {
-	float: right;
-	padding: 14px 12px 0px 0px;
+	float: inline-end;
+	padding-block: 14px 0px;
+	padding-inline: 0px 12px;
 }
 .app_ctn .app_actions a {
 	margin-bottom: 5px;
@@ -508,15 +511,15 @@ body.v6 .reviews_container h3 {
 	width: 100%;
 }
 .app_ctn.app_screenshots .screenshots {
-	padding-right: 0px;
+	padding-inline-end: 0px;
 }
 
 .app_ctn.app_screenshots .screenshot_ctn {
 	height: 128px;
 	width: 218px;
-	margin-right: 12px;
+	margin-inline-end: 12px;
 
-	float: left;
+	float: inline-start;
 	background-size: cover;
 
 }
@@ -525,7 +528,7 @@ body.v6 .reviews_container h3 {
 .app_ctn.app_screenshots .creator_intro {
 	font-size: 12px;
 	color: #c6d4df;
-	padding-left: 14px;
+	padding-inline-start: 14px;
 }
 .app_ctn.app_screenshots .creator_message {
 	color: #c6d4df;
@@ -553,7 +556,7 @@ body.v6 .reviews_container h3 {
 	box-shadow: none;
 	font-size: 11px;
 
-	margin-right: 2px;
+	margin-inline-end: 2px;
 	border-radius: 2px;
 
 	cursor: pointer;
@@ -599,12 +602,12 @@ body.v6 .reviews_container h3 {
 
 .linked_account_td {
 	padding-bottom: .5em;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 
 }
 
 .linked_account_remove {
-	padding-left: 0 !important;
+	padding-inline-start: 0 !important;
 	display: block;
 	margin: 0 auto;
 }
@@ -616,7 +619,10 @@ body.v6 .reviews_container h3 {
 .admin_nav a.icon_item {
 	background-repeat: no-repeat;
 	background-position: 8px 10px;
-	padding-left: 35px;
+	padding-inline-start: 35px;
+}
+.admin_nav a.icon_item:dir(rtl) {
+	background-position: right 8px top 10px;
 }
 
 .controls_container > div {
@@ -627,11 +633,11 @@ body.v6 .reviews_container h3 {
 	color: #DEDEDE;
 }
 .action_ctn {
-	text-align: right;
+	text-align: end;
 }
 
 .delete_list_icon {
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	opacity: 0.6;
 }
 .delete_list_icon:hover {
@@ -639,7 +645,7 @@ body.v6 .reviews_container h3 {
 }
 
 .view_list_icon {
-	margin-right: 12px;
+	margin-inline-end: 12px;
 	opacity: 0.6;
 }
 .view_list_icon:hover {
@@ -720,11 +726,11 @@ body.v6 .reviews_container h3 {
 	height: 86px;
 	width: 201px;
 	background-color: rgba( 255, 255, 255, 0.15 );
-	float: left;
+	float: inline-start;
 }
 .stats_header_section:nth-of-type(2) {
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-inline-start: 5px;
+	margin-inline-end: 5px;
 }
 .stats_header_section .title {
 	text-transform: uppercase;
@@ -746,7 +752,7 @@ body.v6 .reviews_container h3 {
 	font-weight: 400;
 	letter-spacing: 1px;
 	vertical-align: text-top;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	padding-top: 6px;
 	display: inline-block;
 }
@@ -774,7 +780,8 @@ body.v6 .reviews_container h3 {
 .expiration_warning .new {
 	background-color: #A4D007;
 	color: #000;
-	padding: 2px 6px 2px 4px;
+	padding-block: 2px;
+	padding-inline: 4px 6px;
 	font-weight: 500;
 	border-radius: 2px;
 }
@@ -817,7 +824,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	border-spacing: 0px 2px;
 }
 .stats_referral_list th {
-	text-align: left;
+	text-align: start;
 	text-transform: uppercase;
 	font-size: 11px;
 	color: #8299a1;
@@ -826,7 +833,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 }
 
 .stats_referral_list td {
-	text-align: left;
+	text-align: start;
 	color: #aebcc5;
 	padding: 5px;
 	background-color: rgba( 255, 255, 255, 0.15 );
@@ -856,13 +863,13 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 .ReferralListPaging_paging_summary
 {
 	color: #8299a1;
-	float: left;
+	float: inline-start;
 	font-size: 11px;
 }
 
 .ReferralListPaging_paging_controls
 {
-	float: right;
+	float: inline-end;
 }
 
 .ReferralListPaging_paging_controls .pagebtn {
@@ -938,10 +945,10 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	display: inline-block;
 }
 .tags_add {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 .tags_default_desc {
-	margin-left: 120px;
+	margin-inline-start: 120px;
 }
 
 .tag_list {
@@ -954,7 +961,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	color: #67c1f5;
 	background-color: #283b47;
 
-	margin-right: 2px;
+	margin-inline-end: 2px;
 	border-radius: 3px;
 
 	box-shadow: 1px 1px 0 0 #000000;
@@ -973,11 +980,12 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	cursor: pointer;
 	width: 12px;
 	height: 12px;
-	margin: 3px 0 4px 5px;
+	margin-block: 3px 4px;
+	margin-inline: 5px 0;
 	vertical-align: top;
 	background-repeat: no-repeat;
 	background-image: url( '/public/images//x.gif' );
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 /* overview */
@@ -987,7 +995,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	margin-bottom: 10px;
 	background-color: rgba( 226, 244, 255, 0.6 );
 	border-top: 1px solid rgba( 226, 244, 255, 0.3 );
-	border-left: 1px solid rgba( 226, 244, 255, 0.3 );
+	border-inline-start: 1px solid rgba( 226, 244, 255, 0.3 );
 	border-radius: 2px;
 	box-shadow: 1px 1px 5px #000;
 }
@@ -1002,11 +1010,11 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	display: block;
 }
 .info_callout img {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 .info_content {
-	float: left;
+	float: inline-start;
 	max-width: 351px;
 }
 
@@ -1033,9 +1041,9 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	font-weight: bold;
 }
 .total_reviews_bar_graph .num_reviews {
-	text-align: right;
+	text-align: end;
 	width: 100px;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 }
 .total_reviews_bar_graph .bar {
 	width: 65%;
@@ -1083,7 +1091,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 }
 
 .popup_block_new.with_capsules img {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	height: 35px;
 	vertical-align: top;
 }
@@ -1097,7 +1105,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 
 blockquote#managemygame_default_text {
 	 background: #292929;
-	 border-left: 10px solid #ccc;
+	 border-inline-start: 10px solid #ccc;
 	 margin: 1.5em 10px;
 	 padding: 0.5em 10px;
 	 quotes: "\201C""\201D""\2018""\2019";
@@ -1107,7 +1115,7 @@ blockquote#managemygame_default_text:before {
 	content: open-quote;
 	font-size: 4em;
 	line-height: 0.1em;
-	margin-right: 0.25em;
+	margin-inline-end: 0.25em;
 	vertical-align: -0.4em;
 }
 blockquote#managemygame_default_text p {

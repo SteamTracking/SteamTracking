@@ -3,15 +3,15 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./avatarcrop.js?contenthash=va6cKvN6",
-      "./rolldown-runtime.js?contenthash=DbX3T1YK",
-      "./libraries.js?contenthash=eLY4-d-j",
-      "./main.js?contenthash=BPPtNZbV",
-      "../../../css/applications/community/main.css?contenthash=UBZkTRH6",
-      "../../../css/applications/community/avatarcrop.css?contenthash=DYAWEK4g",
+      "./avatarcrop.js?contenthash=CLcDVx2L",
+      "./rolldown-runtime.js?contenthash=C8f2gWku",
+      "./libraries.js?contenthash=BSMOk6Fq",
+      "./main.js?contenthash=YyCh67xk",
+      "../../../css/applications/community/main.css?contenthash=C8g0FoMA",
+      "../../../css/applications/community/avatarcrop.css?contenthash=BSO5h7oj",
     ]),
 ) => _.map((_) => _[_]);
-import { _, _ } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
+import { _, _ } from "./rolldown-runtime.js?contenthash=C8f2gWku";
 import {
   _,
   _,
@@ -32,21 +32,21 @@ import {
   _,
   _,
   _,
-} from "./libraries.js?contenthash=eLY4-d-j";
+} from "./libraries.js?contenthash=BSMOk6Fq";
 import {
   _,
   _,
   _,
-} from "./steammessages_contentmoderation_pb.js?contenthash=CYUS-1O6";
-import { _ } from "./moderationqueries.js?contenthash=D6YlLju-";
-import { _ } from "./throbber.js?contenthash=j-9LShQt";
-import { _, _, _, _, _ } from "./emoticonbutton.js?contenthash=DZvpGHto";
-import { _ } from "./personautils.js?contenthash=DMvry1mT";
-import "./steammessages_loyalty_rewards_pb.js?contenthash=DPakRt1R";
-import { _ } from "./appinfostore.js?contenthash=D7US0Hun";
-import { _, _ } from "./persona.js?contenthash=BvhC-BOF";
-import { _ } from "./storeitemhooks.js?contenthash=Ce46gcY0";
-import { _ } from "./awardmodal.js?contenthash=Bi2OuXZY";
+} from "./steammessages_contentmoderation_pb.js?contenthash=Cd7Ji2YL";
+import { _ } from "./moderationqueries.js?contenthash=DLuczK4i";
+import { _ } from "./throbber.js?contenthash=bI1SP-qN";
+import { _, _, _, _, _ } from "./emoticonbutton.js?contenthash=NM0xeHFP";
+import { _ } from "./personautils.js?contenthash=Br8FDUNR";
+import "./steammessages_loyalty_rewards_pb.js?contenthash=DbY7nrti";
+import { _ } from "./appinfostore.js?contenthash=PSaf9bzJ";
+import { _, _ } from "./persona.js?contenthash=Do982DuR";
+import { _ } from "./storeitemhooks.js?contenthash=Bk7UCXsF";
+import { _ } from "./awardmodal.js?contenthash=CE6TN0ak";
 import {
   _,
   _,
@@ -113,8 +113,8 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=BPPtNZbV";
-import { _, _ } from "./steamavatar2.js?contenthash=BNtA3hcr";
+} from "./main.js?contenthash=YyCh67xk";
+import { _, _ } from "./steamavatar2.js?contenthash=Z2UyPRQ2";
 var _ = _(_()),
   _ = _(),
   _ = _(_()),
@@ -1786,9 +1786,8 @@ var _ = class {
   async GetCountryList() {
     return this.m_rgCountryList
       ? this.m_rgCountryList
-      : this.m_promiseLoadCountries
-        ? this.m_promiseLoadCountries
-        : ((this.m_promiseLoadCountries = _.default
+      : (this.m_promiseLoadCountries ||
+          ((this.m_promiseLoadCountries = _.default
             .get(_.COMMUNITY_BASE_URL + `/actions/QueryLocations/`)
             .then((_) => _.data)),
           this.m_promiseLoadCountries.then(
@@ -1800,8 +1799,8 @@ var _ = class {
             () => {
               this.m_promiseLoadCountries = null;
             },
-          ),
-          this.m_promiseLoadCountries);
+          )),
+        this.m_promiseLoadCountries);
   }
   FindAndSetActiveCountry() {
     (this.m_CountryCur =
@@ -1816,9 +1815,8 @@ var _ = class {
     return !_ || !_.hasstates
       ? []
       : _.states === void 0
-        ? _.stateloader
-          ? _.stateloader
-          : ((_.stateloader = _.default
+        ? (_.stateloader ||
+            ((_.stateloader = _.default
               .get(
                 _.COMMUNITY_BASE_URL +
                   `/actions/QueryLocations/${_.countrycode}/`,
@@ -1833,8 +1831,8 @@ var _ = class {
               () => {
                 delete _.stateloader;
               },
-            ),
-            _.stateloader)
+            )),
+          _.stateloader)
         : _.states;
   }
   FindAndSetActiveState() {
@@ -1849,9 +1847,8 @@ var _ = class {
     let _ = this.m_StateCur;
     return _
       ? _.cities === void 0
-        ? _.cityloader
-          ? _.cityloader
-          : ((_.cityloader = _.default
+        ? (_.cityloader ||
+            ((_.cityloader = _.default
               .get(
                 _.COMMUNITY_BASE_URL +
                   `/actions/QueryLocations/${_.countrycode}/${_.statecode}`,
@@ -1864,8 +1861,8 @@ var _ = class {
               () => {
                 delete _.cityloader;
               },
-            ),
-            _.cityloader)
+            )),
+          _.cityloader)
         : _.cities
       : [];
   }
@@ -3260,7 +3257,7 @@ var _ = _(({ onSelected: _, ProfileItems: _, large: _ }) => {
     }),
   _ = _.lazy(() =>
     _(
-      () => import(`./avatarcrop.js?contenthash=va6cKvN6`),
+      () => import(`./avatarcrop.js?contenthash=CLcDVx2L`),
       __vite__mapDeps([0, 1, 2, 3, 4, 5]),
       import.meta.url,
     ),
@@ -3369,22 +3366,20 @@ var _ = _,
     async SaveUpload() {
       let { Profile: _, ProfileItems: _, AvatarHistory: _ } = this.props,
         _ = await _.UploadAvatar(await this.cropRef.current?.getBlob());
-      if (!_.bSuccess) {
-        this.setState({
-          strUploadError: _.strError,
-        });
-        return;
-      }
-      this.setState({
-        uploadImage: null,
-        strUploadError: ``,
-      }),
-        (this.cropRef = _.createRef()),
-        _.SetEquippedAvatar(null, !0),
-        _.RefreshAvatarHistory(),
-        this.setState({
-          bHTMLError: (await _.CommitAvatarChanges()) !== 1,
-        });
+      _.bSuccess
+        ? (this.setState({
+            uploadImage: null,
+            strUploadError: ``,
+          }),
+          (this.cropRef = _.createRef()),
+          _.SetEquippedAvatar(null, !0),
+          _.RefreshAvatarHistory(),
+          this.setState({
+            bHTMLError: (await _.CommitAvatarChanges()) !== 1,
+          }))
+        : this.setState({
+            strUploadError: _.strError,
+          });
     }
     async CommitChanges() {
       let {
@@ -4003,22 +3998,20 @@ var _ = ({ Profile: _, children: _ }) =>
         strHTMLError: ``,
       });
       let _ = await _(`profileSave`, new FormData(_));
-      if (_.strRedirectURL) {
-        window.location.href = `${_.strRedirectURL}/info`;
-        return;
-      }
-      this.props.Profile.SetBasicInfoChangesComitted(),
-        _.strHTMLError
-          ? this.setState({
-              strHTMLError: _.strHTMLError,
-            })
-          : this.setState({
-              strHTMLError: ``,
-            }),
-        this.setState({
-          bSaving: !1,
-        }),
-        this.props.Profile.NotifyRNMobileAppStateChanged();
+      _.strRedirectURL
+        ? (window.location.href = `${_.strRedirectURL}/info`)
+        : (this.props.Profile.SetBasicInfoChangesComitted(),
+          _.strHTMLError
+            ? this.setState({
+                strHTMLError: _.strHTMLError,
+              })
+            : this.setState({
+                strHTMLError: ``,
+              }),
+          this.setState({
+            bSaving: !1,
+          }),
+          this.props.Profile.NotifyRNMobileAppStateChanged());
     }
     RevertChanges() {
       let { Profile: _ } = this.props;
@@ -5902,10 +5895,10 @@ function _(_) {
       } catch (_) {
         throw (_.preventDefault(), _);
       }
-      !_.defaultPrevented &&
-        _.button === 0 &&
-        (!_ || _ === `_self`) &&
-        !_(_) &&
+      _.defaultPrevented ||
+        _.button !== 0 ||
+        (_ && _ !== `_self`) ||
+        _(_) ||
         (_.preventDefault(), _());
     };
   return (0, _.jsx)(_, {

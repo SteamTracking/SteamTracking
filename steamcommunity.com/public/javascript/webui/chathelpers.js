@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { i as e } from "./rolldown-runtime.js?contenthash=Bhk3NnG1";
+import { i as e } from "./rolldown-runtime.js?contenthash=CUKKI9VL";
 import { t } from "./_rolldown_dynamic_import_helper.js?contenthash=B8fe511f";
 import {
   G as n,
@@ -19,7 +19,7 @@ import {
   o as m,
   w as h,
   yr as g,
-} from "./localization.js?contenthash=BbczadiP";
+} from "./localization.js?contenthash=i2l6BsG1";
 import {
   c as _,
   i as v,
@@ -27,7 +27,7 @@ import {
   n as b,
   r as x,
   t as S,
-} from "./webpackinit.js?contenthash=7c4B_KgN";
+} from "./webpackinit.js?contenthash=CdMSun5r";
 var C = e(g()),
   w = e(S());
 function T(e) {
@@ -308,7 +308,7 @@ async function I(e) {
             ),
           "../localization/friendsui_finnish.json": () =>
             o(
-              () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
+              () => import(`./friendsui_finnish.js?contenthash=CPK_Sgic`),
               [],
               import.meta.url,
             ),
@@ -368,7 +368,7 @@ async function I(e) {
             ),
           "../localization/friendsui_malay.json": () =>
             o(
-              () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
+              () => import(`./friendsui_malay.js?contenthash=DNpDh1Mu`),
               [],
               import.meta.url,
             ),
@@ -392,7 +392,7 @@ async function I(e) {
             ),
           "../localization/friendsui_romanian.json": () =>
             o(
-              () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
+              () => import(`./friendsui_romanian.js?contenthash=CnjkK6ev`),
               [],
               import.meta.url,
             ),
@@ -416,7 +416,7 @@ async function I(e) {
             ),
           "../localization/friendsui_spanish.json": () =>
             o(
-              () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
+              () => import(`./friendsui_spanish.js?contenthash=DFcUR0FN`),
               [],
               import.meta.url,
             ),
@@ -508,7 +508,7 @@ async function I(e) {
                 ),
               "../localization/friendsui_finnish.json": () =>
                 o(
-                  () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
+                  () => import(`./friendsui_finnish.js?contenthash=CPK_Sgic`),
                   [],
                   import.meta.url,
                 ),
@@ -569,7 +569,7 @@ async function I(e) {
                 ),
               "../localization/friendsui_malay.json": () =>
                 o(
-                  () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
+                  () => import(`./friendsui_malay.js?contenthash=DNpDh1Mu`),
                   [],
                   import.meta.url,
                 ),
@@ -594,7 +594,7 @@ async function I(e) {
                 ),
               "../localization/friendsui_romanian.json": () =>
                 o(
-                  () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
+                  () => import(`./friendsui_romanian.js?contenthash=CnjkK6ev`),
                   [],
                   import.meta.url,
                 ),
@@ -619,7 +619,7 @@ async function I(e) {
                 ),
               "../localization/friendsui_spanish.json": () =>
                 o(
-                  () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
+                  () => import(`./friendsui_spanish.js?contenthash=DFcUR0FN`),
                   [],
                   import.meta.url,
                 ),

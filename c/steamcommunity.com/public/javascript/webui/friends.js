@@ -3,23 +3,23 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./broadcastapp.js?contenthash=B6cq007Z",
-      "./rolldown-runtime.js?contenthash=Bhk3NnG1",
-      "./localization.js?contenthash=BbczadiP",
-      "./shared_dialog.js?contenthash=Bjg1l0y4",
-      "./webpackinit.js?contenthash=7c4B_KgN",
-      "../../css/webui/shared_dialog2.css?contenthash=NjhQ-d4N",
-      "./friendsui_desktopapp.js?contenthash=Z0qtwhtB",
-      "./defaultappheader.js?contenthash=ClYGx_wk",
-      "./broadcastwatchstore.js?contenthash=8PXRLCEh",
+      "./broadcastapp.js?contenthash=DsUNYhUY",
+      "./rolldown-runtime.js?contenthash=CUKKI9VL",
+      "./localization.js?contenthash=i2l6BsG1",
+      "./shared_dialog.js?contenthash=CwcwPTb_",
+      "./webpackinit.js?contenthash=CdMSun5r",
+      "../../css/webui/shared_dialog2.css?contenthash=gnfBEtEu",
+      "./friendsui_desktopapp.js?contenthash=DGwpyMxS",
+      "./defaultappheader.js?contenthash=SzEpKCWz",
+      "./broadcastwatchstore.js?contenthash=CNv8Mpvs",
       "../../css/webui/defaultappheader.css?contenthash=DwpeiF5o",
-      "../../css/webui/friendsui_desktopapp.css?contenthash=as1wmsd6",
-      "./broadcastplayer.js?contenthash=Z53i0P2A",
-      "../../css/webui/broadcastplayer.css?contenthash=DvWbSQLN",
+      "../../css/webui/friendsui_desktopapp.css?contenthash=MEg-RmCM",
+      "./broadcastplayer.js?contenthash=CV-vsdDk",
+      "../../css/webui/broadcastplayer.css?contenthash=CGtEQuO9",
       "../../css/webui/broadcastapp.css?contenthash=DLwrs7u4",
     ]),
 ) => _.map((_) => _[_]);
-import { _, _ } from "./rolldown-runtime.js?contenthash=Bhk3NnG1";
+import { _, _ } from "./rolldown-runtime.js?contenthash=CUKKI9VL";
 import { _ } from "./_rolldown_dynamic_import_helper.js?contenthash=B8fe511f";
 import {
   _,
@@ -45,8 +45,8 @@ import {
   _,
   _,
   _,
-} from "./localization.js?contenthash=BbczadiP";
-import { _ } from "./shared_dialog.js?contenthash=Bjg1l0y4";
+} from "./localization.js?contenthash=i2l6BsG1";
+import { _ } from "./shared_dialog.js?contenthash=CwcwPTb_";
 import {
   _,
   _,
@@ -64,10 +64,10 @@ import {
   _,
   _,
   _,
-} from "./friendsui_desktopapp.js?contenthash=Z0qtwhtB";
-import { _ } from "./defaultappheader.js?contenthash=ClYGx_wk";
-import { _, _ } from "./webpackinit.js?contenthash=7c4B_KgN";
-import { _, _ } from "./broadcastwatchstore.js?contenthash=8PXRLCEh";
+} from "./friendsui_desktopapp.js?contenthash=DGwpyMxS";
+import { _ } from "./defaultappheader.js?contenthash=SzEpKCWz";
+import { _, _ } from "./webpackinit.js?contenthash=CdMSun5r";
+import { _, _ } from "./broadcastwatchstore.js?contenthash=CNv8Mpvs";
 function _(_) {
   return `unknown EMsg ( ` + _ + ` )`;
 }
@@ -603,11 +603,8 @@ var _ = _((_) => {
       });
     var _ = {
         arraySet: function (_, _, _, _, _) {
-          if (_.subarray && _.subarray) {
-            _.set(_.subarray(_, _ + _), _);
-            return;
-          }
-          for (var _ = 0; _ < _; _++) _[_ + _] = _[_ + _];
+          if (_.subarray && _.subarray) _.set(_.subarray(_, _ + _), _);
+          else for (var _ = 0; _ < _; _++) _[_ + _] = _[_ + _];
         },
         flattenChunks: function (_) {
           var _,
@@ -1065,16 +1062,13 @@ var _ = _((_) => {
   }),
   _ = _((_, _) => {
     function _(_, _, _, _) {
-      for (
-        var _ = (_ & 65535) | 0, _ = ((_ >>> 16) & 65535) | 0, _ = 0;
-        _ !== 0;
-      ) {
+      for (var _ = _ & 65535, _ = (_ >>> 16) & 65535, _ = 0; _ !== 0; ) {
         (_ = _ > 2e3 ? 2e3 : _), (_ -= _);
         do (_ = (_ + _[_++]) | 0), (_ = (_ + _) | 0);
         while (--_);
         (_ %= 65521), (_ %= 65521);
       }
-      return _ | (_ << 16) | 0;
+      return _ | (_ << 16);
     }
     _.exports = _;
   }),
@@ -2103,27 +2097,20 @@ var _ = _((_) => {
           _,
           _ = _ || _.length,
           _ = Array(_ * 2);
-        for (_ = 0, _ = 0; _ < _; ) {
-          if (((_ = _[_++]), _ < 128)) {
-            _[_++] = _;
-            continue;
+        for (_ = 0, _ = 0; _ < _; )
+          if (((_ = _[_++]), _ < 128)) _[_++] = _;
+          else if (((_ = _[_]), _ > 4)) (_[_++] = 65533), (_ += _ - 1);
+          else {
+            for (_ &= _ === 2 ? 31 : _ === 3 ? 15 : 7; _ > 1 && _ < _; )
+              (_ = (_ << 6) | (_[_++] & 63)), _--;
+            _ > 1
+              ? (_[_++] = 65533)
+              : _ < 65536
+                ? (_[_++] = _)
+                : ((_ -= 65536),
+                  (_[_++] = 55296 | ((_ >> 10) & 1023)),
+                  (_[_++] = 56320 | (_ & 1023)));
           }
-          if (((_ = _[_]), _ > 4)) {
-            (_[_++] = 65533), (_ += _ - 1);
-            continue;
-          }
-          for (_ &= _ === 2 ? 31 : _ === 3 ? 15 : 7; _ > 1 && _ < _; )
-            (_ = (_ << 6) | (_[_++] & 63)), _--;
-          if (_ > 1) {
-            _[_++] = 65533;
-            continue;
-          }
-          _ < 65536
-            ? (_[_++] = _)
-            : ((_ -= 65536),
-              (_[_++] = 55296 | ((_ >> 10) & 1023)),
-              (_[_++] = 56320 | (_ & 1023)));
-        }
         return _(_, _);
       }),
       (_.utf8border = function (_, _) {
@@ -2249,7 +2236,7 @@ var _ = _((_) => {
           this.onEnd(_),
           (this.ended = !0),
           _ === _)
-        : _ !== _ || (this.onEnd(_), (_.avail_out = 0), !0);
+        : (_ === _ && (this.onEnd(_), (_.avail_out = 0)), !0);
     }),
       (_.prototype.onData = function (_) {
         this.chunks.push(_);
@@ -2535,7 +2522,7 @@ var _ = _((_) => {
           (_ = 1 << (_ - _)),
           (_ = 1 << _),
           (_ = _);
-        do (_ -= _), (_[_ + (_ >> _) + _] = (_ << 24) | (_ << 16) | _ | 0);
+        do (_ -= _), (_[_ + (_ >> _) + _] = (_ << 24) | (_ << 16) | _);
         while (_ !== 0);
         for (_ = 1 << (_ - 1); _ & _; ) _ >>= 1;
         if ((_ === 0 ? (_ = 0) : ((_ &= _ - 1), (_ += _)), _++, --_[_] === 0)) {
@@ -2550,7 +2537,7 @@ var _ = _((_) => {
             _++, (_ <<= 1);
           if (((_ += 1 << _), (_ === _ && _ > _) || (_ === _ && _ > _)))
             return 1;
-          (_ = _ & _), (_[_] = (_ << 24) | (_ << 16) | (_ - _) | 0);
+          (_ = _ & _), (_[_] = (_ << 24) | (_ << 16) | (_ - _));
         }
       }
       return _ !== 0 && (_[_ + _] = ((_ - _) << 24) | 4194304), (_.bits = _), 0;
@@ -3372,7 +3359,7 @@ var _ = _((_) => {
                 if (_ === 0) break inf_leave;
                 _--, (_ += _[_++] << _), (_ += 8);
               }
-              if (_ !== (_.total & 4294967295)) {
+              if (_ !== (_.total | 0)) {
                 (_.msg = `incorrect length check`), (_.mode = _);
                 break;
               }
@@ -3610,7 +3597,8 @@ var _ = _((_) => {
             this.onEnd(_),
             (this.ended = !0),
             _ === _.Z_OK)
-          : _ !== _.Z_SYNC_FLUSH || (this.onEnd(_.Z_OK), (_.avail_out = 0), !0)
+          : (_ === _.Z_SYNC_FLUSH && (this.onEnd(_.Z_OK), (_.avail_out = 0)),
+            !0)
       );
     }),
       (_.prototype.onData = function (_) {
@@ -4186,7 +4174,7 @@ async function _() {
   let { CBroadcastApp: _ } = await _(
     async () => {
       let { CBroadcastApp: _ } = await import(
-        `./broadcastapp.js?contenthash=B6cq007Z`
+        `./broadcastapp.js?contenthash=DsUNYhUY`
       );
       return {
         CBroadcastApp: _,
@@ -4259,7 +4247,7 @@ async function _(_) {
             ),
           "../localization/friendsui_finnish.json": () =>
             _(
-              () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
+              () => import(`./friendsui_finnish.js?contenthash=CPK_Sgic`),
               [],
               import.meta.url,
             ),
@@ -4319,7 +4307,7 @@ async function _(_) {
             ),
           "../localization/friendsui_malay.json": () =>
             _(
-              () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
+              () => import(`./friendsui_malay.js?contenthash=DNpDh1Mu`),
               [],
               import.meta.url,
             ),
@@ -4343,7 +4331,7 @@ async function _(_) {
             ),
           "../localization/friendsui_romanian.json": () =>
             _(
-              () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
+              () => import(`./friendsui_romanian.js?contenthash=CnjkK6ev`),
               [],
               import.meta.url,
             ),
@@ -4367,7 +4355,7 @@ async function _(_) {
             ),
           "../localization/friendsui_spanish.json": () =>
             _(
-              () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
+              () => import(`./friendsui_spanish.js?contenthash=DFcUR0FN`),
               [],
               import.meta.url,
             ),
@@ -4459,7 +4447,7 @@ async function _(_) {
                 ),
               "../localization/friendsui_finnish.json": () =>
                 _(
-                  () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
+                  () => import(`./friendsui_finnish.js?contenthash=CPK_Sgic`),
                   [],
                   import.meta.url,
                 ),
@@ -4520,7 +4508,7 @@ async function _(_) {
                 ),
               "../localization/friendsui_malay.json": () =>
                 _(
-                  () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
+                  () => import(`./friendsui_malay.js?contenthash=DNpDh1Mu`),
                   [],
                   import.meta.url,
                 ),
@@ -4545,7 +4533,7 @@ async function _(_) {
                 ),
               "../localization/friendsui_romanian.json": () =>
                 _(
-                  () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
+                  () => import(`./friendsui_romanian.js?contenthash=CnjkK6ev`),
                   [],
                   import.meta.url,
                 ),
@@ -4570,7 +4558,7 @@ async function _(_) {
                 ),
               "../localization/friendsui_spanish.json": () =>
                 _(
-                  () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
+                  () => import(`./friendsui_spanish.js?contenthash=DFcUR0FN`),
                   [],
                   import.meta.url,
                 ),

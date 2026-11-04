@@ -398,7 +398,7 @@ body.joinsteam .section_title {
 }
 
 .join_form_notes {
-	margin-left: 21px;
+	margin-inline-start: 21px;
 }
 
 .joinsteam .flex_row_align_end {
@@ -569,7 +569,7 @@ body h2.newaccount_email_header_text.newaccount_email_header_text {
 
     html.responsive	.form_notes, html.responsive .joinsteam .form_area, html.responsive .join_form select#country  {
         width: 100%;
-        margin-left: 0;
+        margin-inline-start: 0;
     }
 
     html.responsive .ssa_box {
@@ -603,7 +603,8 @@ body h2.newaccount_email_header_text.newaccount_email_header_text {
 
     html.responsive #create_account input, #create_account select {
         max-width: 100%;
-        padding: 8px 0 8px 6px;
+        padding-block: 8px;
+        padding-inline: 6px 0;
     }
 
     html.responsive .joinsteam .password_tag {

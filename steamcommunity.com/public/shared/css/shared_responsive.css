@@ -6,9 +6,9 @@
 body.movescrolltocontent .responsive_page_frame {
 	position: fixed;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	overflow: auto;
 }
 
@@ -31,9 +31,9 @@ html.responsive body {
 html.responsive body.movescrolltocontent {
 	position: fixed;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .responsive_page_content {
@@ -57,7 +57,7 @@ html.responsive body.movescrolltocontent {
 }
 
 .responsive_page_frame:not(.in_menu_drag) .responsive_page_menu_ctn {
-	transition: left 0.5s, right 0.5s;
+	transition: inset-inline-start 0.5s, inset-inline-end 0.5s;
 }
 
 .responsive_page_menu_ctn.mainmenu {
@@ -88,9 +88,9 @@ html.responsive body.movescrolltocontent {
 	background: rgba( 0, 0, 0, 0.4);
 	position: fixed;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	z-index: 25;	/* on top of page and header */
 
 	transition: visibility 0.5s, opacity 0.5s;
@@ -106,9 +106,9 @@ html.responsive body.movescrolltocontent {
 .responsive_page_menu {
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	bottom: 0;
-	right: 0;
+	inset-inline-end: 0;
 	overflow: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
@@ -307,8 +307,8 @@ html.responsive body.movescrolltocontent {
 
 .mainmenu_footer {
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	font-size: 10px;
 	white-space: normal;
@@ -345,10 +345,10 @@ html.responsive body.movescrolltocontent {
 	display: block;
 	background-color: rgba( 104, 157, 221, 0.6 );
 	position: fixed;
-	right: 0;
+	inset-inline-end: 0;
 	top: 6px;
-	border-top-left-radius: 80px;
-	border-bottom-left-radius: 80px;
+	border-start-start-radius: 80px;
+	border-end-start-radius: 80px;
 	width: 30px;
 	height: 50px;
 	z-index: 12; /* behind overlay, on top of page content */
@@ -384,8 +384,8 @@ html.responsive body.movescrolltocontent {
 
 	position: fixed;
 	top: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	text-align: center;
 	z-index: 20;
 	box-shadow: 0 0 7px 0 rgba( 0, 0, 0, 0.75 );
@@ -470,7 +470,7 @@ html.responsive body.movescrolltocontent {
 }
 
 .mainmenu_social_box {
-	margin-right: 25px;
+	margin-inline-end: 25px;
 	display: flex;
 	align-items: center;
 }
@@ -521,7 +521,7 @@ html.responsive body.movescrolltocontent {
 .mainmenu_china_pw_logo {
 	width: 68px;
 	height: 23px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .mainmenu_china_valve_logo {
@@ -547,7 +547,8 @@ html.responsive body.movescrolltocontent {
 }
 
 .responsive_menu_user_area {
-	padding: 20px 20px 12px 14px;
+	padding-block: 20px 12px;
+	padding-inline: 14px 20px;
 	z-index: 1;
     position: relative;
 
@@ -576,7 +577,7 @@ html.responsive body.movescrolltocontent {
 .responsive_menu_user_persona .playerAvatar {
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 2px;
+	margin-inline-end: 2px;
 	height: 64px;
 	width: 64px;
 	padding: 0px;
@@ -915,7 +916,7 @@ html.force_desktop body #footer_responsive_optin_spacer {
 	height: 6px;
 	background: #8A97A0;
 	border-radius: 3px;
-	margin-right: 3px;
+	margin-inline-end: 3px;
 }
 
 @media screen and (max-width: 910px)

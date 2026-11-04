@@ -375,7 +375,7 @@ Cluster.BuildClusterElements = function ( $ClusterCtn, rgMainCaps, strFeatureOve
 		$ClusterCtn.append( $FirstCap.clone( true ) );
 
 
-	$ClusterCtn.append( $J('<div/>', {'style': 'clear: left;'} ) );
+	$ClusterCtn.append( $J('<div/>', {'style': 'clear: inline-start;'} ) );
 	$ClusterCtn.InstrumentLinks();
 	GDynamicStore.DecorateDynamicItems( $ClusterCtn );
 

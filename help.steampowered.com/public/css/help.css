@@ -46,7 +46,7 @@ textarea {
 
 textarea.reportOutcomeCustom {
 	field-sizing: content;
-} 
+}
 
 html {
 	height: 100%;
@@ -2296,6 +2296,7 @@ a.guide_row {
 .account_recovery_submit .throbber {
 	padding-left: 14px;
 	margin-top: 0px;
+	display: none;
 }
 
 .account_recovery_submit input[type=submit],

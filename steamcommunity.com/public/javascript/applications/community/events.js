@@ -1,53 +1,54 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { o as e } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
+import { o as e } from "./rolldown-runtime.js?contenthash=C8f2gWku";
 import {
   C as t,
-  Ft as n,
+  Pt as n,
   St as r,
   V as i,
   ot as a,
   xt as o,
-} from "./libraries.js?contenthash=eLY4-d-j";
-import { r as s } from "./partnereventmigrate.js?contenthash=Ddzb6qoK";
-import { X as c, c as l, ha as u } from "./eventrow.js?contenthash=QK2kW4o2";
-import { h as d, u as f } from "./salebanner.js?contenthash=ClkhtOVI";
-import { t as p } from "./eventinfinitescrollmodal.js?contenthash=Dkmsvaaz";
-import { i as m } from "./clanstore.js?contenthash=66n_91Al";
-import { t as h } from "./throbber.js?contenthash=j-9LShQt";
+} from "./libraries.js?contenthash=BSMOk6Fq";
+import { r as s } from "./partnereventmigrate.js?contenthash=CscQmTKP";
+import { X as c, c as l, pa as u } from "./eventrow.js?contenthash=DnRyHNq_";
+import { h as d, u as f } from "./salebanner.js?contenthash=DCoaSkEe";
+import { t as p } from "./eventinfinitescrollmodal.js?contenthash=Ba62Q39J";
+import { i as m } from "./clanstore.js?contenthash=C2K0HNf4";
+import { t as h } from "./throbber.js?contenthash=bI1SP-qN";
 import {
   X as g,
   Y as _,
   Z as v,
   at as y,
-} from "./carouselarrows.js?contenthash=C8pZkg8e";
-import { t as b } from "./appinfostore.js?contenthash=D7US0Hun";
-import { H as x } from "./clanimagepicker.js?contenthash=e8P-qCvT";
+} from "./carouselarrows.js?contenthash=DvC3aKzv";
+import { t as b } from "./appinfostore.js?contenthash=PSaf9bzJ";
+import { U as x } from "./clanimagepicker.js?contenthash=B93RYNa0";
 import {
-  Af as S,
-  Bs as C,
-  Fs as w,
-  Jf as T,
+  Bu as S,
+  Df as C,
+  Fh as w,
+  Fu as T,
   Jr as E,
-  Kd as D,
-  Ql as O,
-  Rf as k,
-  Rh as A,
-  Vi as j,
-  ad as M,
-  bu as N,
-  hm as P,
-  im as ee,
-  jf as F,
-  ku as I,
-  l as L,
-  lf as R,
-  on as z,
-  um as B,
-  wu as V,
-} from "./main.js?contenthash=BPPtNZbV";
-import "./partnereventsavebutton.module.js?contenthash=udECSzJ_";
+  Qd as D,
+  Vi as ee,
+  Wf as O,
+  Ws as k,
+  dd as A,
+  fm as j,
+  hf as M,
+  l as N,
+  mm as te,
+  nu as P,
+  on as F,
+  sm as I,
+  tm as L,
+  vf as R,
+  wu as z,
+  zf as B,
+  zs as V,
+} from "./main.js?contenthash=YyCh67xk";
+import "./partnereventsavebutton.module.js?contenthash=DsAjcEYM";
 var H = e(n(), 1),
   U = a(),
   W = `OdUWUqw0tkM-`,
@@ -66,9 +67,9 @@ function Z(e) {
       bViewAllShowInfiniteScroll: a,
       nSummaryMaxLength: o,
     } = e,
-    s = z(),
-    c = C(),
-    l = T(),
+    s = F(),
+    c = k(),
+    l = O(),
     u = 2,
     d = 501;
   return (
@@ -78,7 +79,7 @@ function Z(e) {
     (u = d <= X ? 1 : 2),
     n && n.length == 0 && !i
       ? null
-      : (0, U.jsxs)(N, {
+      : (0, U.jsxs)(z, {
           className: t,
           "flow-children": `row`,
           children: [
@@ -86,20 +87,20 @@ function Z(e) {
               n.length > 0 &&
               (0, U.jsx)(`div`, {
                 className: `OdUWUqw0tkM-`,
-                children: (0, U.jsxs)(j, {
+                children: (0, U.jsxs)(ee, {
                   children: [
                     (0, U.jsxs)(`h2`, {
                       children: [
-                        F.Localize(`#EventBrowse_RecentEvents`),
+                        R.Localize(`#EventBrowse_RecentEvents`),
                         !l &&
                           !!n &&
                           (0, U.jsx)(U.Fragment, {
                             children:
                               a && r
-                                ? (0, U.jsx)(V, {
+                                ? (0, U.jsx)(T, {
                                     className: `d-5nAi7tljQ-`,
                                     onClick: () => r(n[0]),
-                                    children: F.Localize(
+                                    children: R.Localize(
                                       `#EventBrowse_MoreEventsBtn`,
                                     ),
                                   })
@@ -107,7 +108,7 @@ function Z(e) {
                                     eventModel: n[0],
                                     route: g.k_eViewWebSiteHub,
                                     className: `d-5nAi7tljQ-`,
-                                    children: F.Localize(
+                                    children: R.Localize(
                                       `#EventBrowse_MoreEventsBtn`,
                                     ),
                                   }),
@@ -138,26 +139,26 @@ function Z(e) {
         })
   );
 }
-function Q(e) {
+function ne(e) {
   return (0, U.jsxs)(`div`, {
     className: q,
     children: [
       (0, U.jsx)(`div`, {
         className: J,
-        children: (0, U.jsx)(O, { role: `presentation` }),
+        children: (0, U.jsx)(P, { role: `presentation` }),
       }),
-      (0, U.jsx)(V, {
+      (0, U.jsx)(T, {
         className: Y,
         onClick: e.onClick,
-        children: F.Localize(
+        children: R.Localize(
           `#EventBrowse_LatestUpdateTime_Button`,
-          R(e.nUpdateTime),
+          M(e.nUpdateTime),
         ),
       }),
     ],
   });
 }
-function te(e) {
+function re(e) {
   let { nUpdateTime: t, announcementGID: n, onClick: r } = e,
     i = n ? f.GetClanEventFromAnnouncementGID(n) : null,
     a = x;
@@ -166,8 +167,8 @@ function te(e) {
     children: [
       (0, U.jsxs)(`h2`, {
         children: [
-          D(`#EventBrowse_LastUpdateDate`, R(t)),
-          (0, U.jsx)(V, {
+          D(`#EventBrowse_LastUpdateDate`, M(t)),
+          (0, U.jsx)(T, {
             className: G,
             onClick: (e) => {
               r?.(), e.stopPropagation(), e.preventDefault();
@@ -177,10 +178,10 @@ function te(e) {
         ],
       }),
       !!i &&
-        (0, U.jsx)(N, {
+        (0, U.jsx)(z, {
           className: `YZMD3BYfIGw-`,
           "flow-children": `column`,
-          navEntryPreferPosition: I.PREFERRED_CHILD,
+          navEntryPreferPosition: S.PREFERRED_CHILD,
           children: (0, U.jsx)(a, {
             event: i,
             onClick: (e) => {
@@ -191,7 +192,7 @@ function te(e) {
     ],
   });
 }
-var ne = (e) =>
+var ie = (e) =>
     (0, H.createElement)(s, {
       ...e,
       key: e.match.params.oldAnnouncementGID,
@@ -199,7 +200,7 @@ var ne = (e) =>
       bPreview: !1,
       bPreventRedirect: !0,
     }),
-  $ = class extends H.Component {
+  Q = class extends H.Component {
     state = { bShowModal: !1, bLoadedLandingState: this.props.bPreventDismiss };
     componentDidMount() {
       this.props.bPreventDismiss
@@ -209,10 +210,10 @@ var ne = (e) =>
           });
     }
     async LoadAppAndFirstEvent() {
-      let e = B(`eventinfinitescrolllanding`, `application_config`),
+      let e = I(`eventinfinitescrolllanding`, `application_config`),
         t;
       e && typeof e == `string` && (t = e);
-      let n = window.location.href.startsWith(P.COMMUNITY_BASE_URL + `groups`),
+      let n = window.location.href.startsWith(j.COMMUNITY_BASE_URL + `groups`),
         r = n
           ? await m.LoadOGGClanInfoForGroupVanity(
               this.props.match.params.appid_or_vanity_str,
@@ -265,17 +266,17 @@ var ne = (e) =>
           : (0, U.jsx)(`div`, {});
     }
   };
-k([A], $.prototype, `HideModal`, null), ($ = k([t], $));
-function re(e) {
+C([w], Q.prototype, `HideModal`, null), (Q = C([t], Q));
+function ae(e) {
   let {
       trackingLocation: t,
       strClassName: n,
       bViewAllShowInfiniteScroll: r,
     } = e,
-    [i, a, o] = M(),
+    [i, a, o] = A(),
     [s, c] = (0, H.useState)(null),
     [l, u] = (0, H.useState)(void 0),
-    d = L(),
+    d = N(),
     f = (0, H.useCallback)(() => {
       c(null), o();
     }, [o]),
@@ -292,7 +293,7 @@ function re(e) {
       },
       [t, d, a],
     ),
-    { last_update_event: m, rgEvents: h } = ie({ ...e, fnEventShowModal: p }),
+    { last_update_event: m, rgEvents: h } = oe({ ...e, fnEventShowModal: p }),
     g = (0, H.useCallback)(() => {
       let { event_gid: e, announcement_gid: n, clan_account_id: r } = m;
       t && e && d.MarkEventRead(e, r, t) && d.Flush(), u(n), c(null), a();
@@ -309,7 +310,7 @@ function re(e) {
     ),
     [a],
   );
-  let _ = T(),
+  let _ = O(),
     v = !!m && !!m.rtime,
     y =
       v && m.announcement_gid && (!h || h.length == 0)
@@ -318,7 +319,7 @@ function re(e) {
     b;
   return (
     v && y
-      ? (b = (0, U.jsx)(te, {
+      ? (b = (0, U.jsx)(re, {
           nUpdateTime: m.rtime,
           announcementGID: y,
           onClick: g,
@@ -326,12 +327,12 @@ function re(e) {
       : v &&
         !y &&
         !_ &&
-        (b = (0, U.jsx)(Q, { nUpdateTime: m.rtime, onClick: g })),
+        (b = (0, U.jsx)(ne, { nUpdateTime: m.rtime, onClick: g })),
     (0, U.jsxs)(U.Fragment, {
       children: [
-        (0, U.jsx)(w, {
+        (0, U.jsx)(V, {
           active: i,
-          children: (0, U.jsx)(oe, {
+          children: (0, U.jsx)(se, {
             ...e,
             announcementGID: l || s?.AnnouncementGID,
             eventModel: s,
@@ -349,7 +350,7 @@ function re(e) {
     })
   );
 }
-function ie(e) {
+function oe(e) {
   let {
       appid: t,
       event_customization: n,
@@ -359,14 +360,14 @@ function ie(e) {
     } = e,
     [o, s] = (0, H.useState)(null),
     [c, l] = (0, H.useState)(null),
-    p = L(),
+    p = N(),
     [m] = u(`emgid`, void 0),
     [h] = u(`announce_gid`, void 0);
   return (
     (0, H.useEffect)(() => {
       let e = d(`EventWebRowEmbed`),
         a = !1;
-      if (ae(e)) {
+      if ($(e)) {
         (a = e.bPreLoaded), s(e.last_update_event);
         let t = [];
         e.announcementGIDList.forEach((e) => {
@@ -406,7 +407,7 @@ function ie(e) {
     { last_update_event: o, rgEvents: c }
   );
 }
-function ae(e) {
+function $(e) {
   let t = e;
   return t && typeof t == `object`
     ? t.bPreLoaded !== void 0 &&
@@ -414,7 +415,7 @@ function ae(e) {
         Array.isArray(t.announcementGIDList)
     : !1;
 }
-function oe(e) {
+function se(e) {
   let {
       appid: t,
       partnerEventStore: n,
@@ -423,7 +424,7 @@ function oe(e) {
       eventModel: a,
       closeModal: o,
     } = e,
-    s = T();
+    s = O();
   return (0, U.jsx)(p, {
     className: s ? void 0 : K,
     eventClassName: void 0,
@@ -435,14 +436,14 @@ function oe(e) {
     closeModal: o,
   });
 }
-function se(e) {
+function ce(e) {
   let { appid: t } = e,
-    n = new Date(ee.NOW * 1e3),
+    n = new Date(L.NOW * 1e3),
     r = new Date(n.setUTCHours(0, 0, 0, 0) - 15552e6),
     i = Math.floor(r.getTime() / 1e3);
   return (0, U.jsx)(`div`, {
     className: `detailBox altFooter greenlight_home_box section announcements_row`,
-    children: (0, U.jsx)(re, {
+    children: (0, U.jsx)(ae, {
       appid: t,
       partnerEventStore: l,
       event_customization: { require_tags: [`workshop`], rtime_oldestevent: i },
@@ -452,11 +453,11 @@ function se(e) {
     }),
   });
 }
-function ce(e) {
+function le(e) {
   let [t, n] = H.useState(!0);
   return (
     H.useEffect(() => {
-      b.Init(new S(P.WEBAPI_BASE_URL)), f.Init(), n(!1);
+      b.Init(B(new te(j.WEBAPI_BASE_URL))), f.Init(), n(!1);
     }, []),
     t
       ? null
@@ -470,14 +471,14 @@ function ce(e) {
                   `:appid_or_vanity_str`,
                   `:oldAnnouncementGID(\\d+)`,
                 ),
-                render: (e) => (0, U.jsx)(ne, { ...e }),
+                render: (e) => (0, U.jsx)(ie, { ...e }),
               }),
               (0, U.jsx)(o, {
                 exact: !0,
                 path: c.Listing(`:appid_or_vanity_str`),
                 render: (e) =>
                   (0, U.jsx)(
-                    $,
+                    Q,
                     { ...e, bPreventDismiss: !0, trackingLocation: 6 },
                     `InfScroll_NoDismissApp_` + e.match.params.appid,
                   ),
@@ -486,7 +487,7 @@ function ce(e) {
                 exact: !0,
                 path: c.WorkshopHub(`:appid(\\d+)`),
                 render: (e) =>
-                  (0, H.createElement)(se, {
+                  (0, H.createElement)(ce, {
                     ...e,
                     appid: +e.match.params.appid,
                     key: `Workshop` + e.match.params.appid,
@@ -495,7 +496,7 @@ function ce(e) {
               (0, U.jsx)(o, {
                 path: c.AppHub(`:appid`),
                 render: (e) =>
-                  (0, H.createElement)($, {
+                  (0, H.createElement)(Q, {
                     ...e,
                     key: `InfScroll_App_` + e.match.params.appid,
                     trackingLocation: 6,
@@ -504,7 +505,7 @@ function ce(e) {
               (0, U.jsx)(o, {
                 path: c.GroupHub(`:group_vanity`),
                 render: (e) =>
-                  (0, H.createElement)($, {
+                  (0, H.createElement)(Q, {
                     ...e,
                     key: `InfScroll_App_` + e.match.params.group_vanity,
                     trackingLocation: 6,
@@ -516,4 +517,4 @@ function ce(e) {
         })
   );
 }
-export { ce as default };
+export { le as default };

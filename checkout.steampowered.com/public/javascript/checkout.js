@@ -244,6 +244,11 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 }
 
 var g_winExternal = false;
+
+var g_bcCheckoutReturn = window.BroadcastChannel ? new BroadcastChannel( 'steam_checkout_return' ) : null;
+if ( g_bcCheckoutReturn )
+	g_bcCheckoutReturn.onmessage = function( e ) { OnPayPalSuccess( e.data.transid ); };
+
 function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 {
 		if ( !$('accept_ssa') || !$('accept_ssa').checked )

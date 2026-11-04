@@ -1,6 +1,6 @@
-import { _ } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
-import { _, _, _, _, _ } from "./libraries.js?contenthash=eLY4-d-j";
-import { _ } from "./personautils.js?contenthash=DMvry1mT";
+import { _ } from "./rolldown-runtime.js?contenthash=C8f2gWku";
+import { _, _, _, _, _ } from "./libraries.js?contenthash=BSMOk6Fq";
+import { _ } from "./personautils.js?contenthash=Br8FDUNR";
 import {
   _,
   _,
@@ -17,7 +17,7 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=BPPtNZbV";
+} from "./main.js?contenthash=YyCh67xk";
 var _ = _(_()),
   _ = _(_()),
   _ = `RQiiCbyKjEE-`,
@@ -75,7 +75,7 @@ var _ = _(_()),
     }
     GetProfileByAccountID(_) {
       return this.m_mapProfiles.get(
-        _.InitFromAccountID(_).ConvertTo64BitString(),
+        _.InitFromAccountID(_, _.EUNIVERSE).ConvertTo64BitString(),
       );
     }
     GetProfileBySteamID(_) {
@@ -86,7 +86,7 @@ var _ = _(_()),
     }
     BHasProfileByAccountID(_) {
       return this.m_mapProfiles.has(
-        _.InitFromAccountID(_).ConvertTo64BitString(),
+        _.InitFromAccountID(_, _.EUNIVERSE).ConvertTo64BitString(),
       );
     }
     BHasProfileBySteamID(_) {
@@ -362,7 +362,7 @@ var _ = class extends _.Component {
   }
   async LoadProfile(_) {
     if (_) {
-      let _ = _.InitFromAccountID(Number(_));
+      let _ = _.InitFromAccountID(Number(_), _.EUNIVERSE);
       await _.LoadProfiles([_.ConvertTo64BitString()]);
       let _ = _.GetProfile(_.ConvertTo64BitString());
       _

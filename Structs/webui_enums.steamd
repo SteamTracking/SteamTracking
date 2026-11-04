@@ -858,13 +858,6 @@ enum UnnamedEnum213cfe813b358659
 	k_eReminder_MobilePushMissing = 12;
 }
 
-enum UnnamedEnum21e1ba10d510cf3b
-{
-	None = 0;
-	Horizontal = 1;
-	Vertical = 2;
-}
-
 enum UnnamedEnum27cbc52f3d26b7db
 {
 	Off = 0;

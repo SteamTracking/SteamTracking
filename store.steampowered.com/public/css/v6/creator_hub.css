@@ -24,7 +24,7 @@
 }
 
 .recommended_creators_ctn .store_capsule:not(:last-child) {
-	margin-right: 9px; /* 9 * 2 + 3 * 200 = 618 */
+	margin-inline-end: 9px; /* 9 * 2 + 3 * 200 = 618 */
 }
 
 .recommended_creators_ctn .store_capsule .discount_block {
@@ -52,7 +52,7 @@
 	top: -30px;
 }
 .recommended_creators_ctn .recommended_creators_container .avatars > a {
-	margin-right: 3px;
+	margin-inline-end: 3px;
 	height: 32px;
 	display: inline-block;
 }
@@ -73,10 +73,10 @@
 .recommended_creators_ctn .recommended_creators_container .following_button img {
 	position: relative;
 	top: 1px;
-	left: -1px;
+	inset-inline-start: -1px;
 	opacity: 0.8;
 	width: 11px;
-	margin-right: 2px;
+	margin-inline-end: 2px;
 }
 
 @media screen and (max-width: 910px) {

@@ -39,6 +39,12 @@ function AutoRefresh()
 function Refresh( onRefreshed )
 {
 	
+		function Finish( strToken )
+	{
+		if ( typeof onRefreshed === 'function' )
+			onRefreshed( strToken );
+	}
+
 	$J.ajax( {
 		type: 'POST',
 		url: 'https://login.steampowered.com/jwt/ajaxrefresh',
@@ -49,7 +55,10 @@ function Refresh( onRefreshed )
 	{
 		
 		if ( !response.success )
+		{
+			Finish( '' );
 			return;
+		}
 
 		$J.ajax( {
 			type: 'POST',
@@ -64,10 +73,19 @@ function Refresh( onRefreshed )
 				window.g_wapitExpiry = response.rtExpiry;
 				InitRefresh();
 
-				if ( typeof onRefreshed === 'function' )
-					onRefreshed( response.token );
+				Finish( response.token );
 			}
+			else
+			{
+				Finish( '' );
+			}
+		} ).fail( function()
+		{
+			Finish( '' );
 		} );
+	} ).fail( function()
+	{
+		Finish( '' );
 	} );
 }
 

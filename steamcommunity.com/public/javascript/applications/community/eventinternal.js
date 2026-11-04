@@ -1,56 +1,56 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { o as e } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
+import { o as e } from "./rolldown-runtime.js?contenthash=C8f2gWku";
 import {
   A as t,
   B as n,
   C as r,
-  Ft as i,
-  L as a,
+  L as i,
+  Pt as a,
   R as o,
   St as s,
   ot as c,
   xt as l,
-} from "./libraries.js?contenthash=eLY4-d-j";
-import { t as u } from "./partnereventmigrate.js?contenthash=Ddzb6qoK";
+} from "./libraries.js?contenthash=BSMOk6Fq";
+import { t as u } from "./partnereventmigrate.js?contenthash=CscQmTKP";
 import {
   Y as d,
   c as f,
   ot as p,
   ut as m,
-} from "./eventrow.js?contenthash=QK2kW4o2";
-import { u as h } from "./salebanner.js?contenthash=ClkhtOVI";
-import { g, i as _ } from "./clanstore.js?contenthash=66n_91Al";
-import { t as v } from "./throbber.js?contenthash=j-9LShQt";
-import { o as y } from "./historyutils.js?contenthash=C2OBI7UD";
-import { s as b } from "./eventtime.js?contenthash=DlCNIi05";
+} from "./eventrow.js?contenthash=DnRyHNq_";
+import { u as h } from "./salebanner.js?contenthash=DCoaSkEe";
+import { g, i as _ } from "./clanstore.js?contenthash=C2K0HNf4";
+import { t as v } from "./throbber.js?contenthash=bI1SP-qN";
+import { o as y } from "./historyutils.js?contenthash=j-8hxDg1";
+import { s as b } from "./eventtime.js?contenthash=gCu_cY7X";
 import {
-  Gi as x,
-  Ho as S,
-  Jr as C,
-  Kc as w,
-  Kd as T,
-  Ku as E,
-  Pu as D,
-  Qi as O,
-  Rf as k,
-  Tf as A,
-  Uf as j,
-  Us as ee,
-  Vs as M,
-  Ws as N,
-  el as te,
-  hm as P,
-  lm as F,
-  qo as I,
-  r as ne,
-  t as re,
-} from "./main.js?contenthash=BPPtNZbV";
-import "./partnereventsavebutton.module.js?contenthash=udECSzJ_";
-var L = e(i()),
-  R = e(t()),
-  ie = `_2QW4jBjN1Zk-`,
+  Cm as x,
+  Df as S,
+  Gi as C,
+  Gs as w,
+  Jr as T,
+  Js as E,
+  Ko as D,
+  Lf as O,
+  Qd as k,
+  Qi as ee,
+  Tu as A,
+  Xc as te,
+  Zo as j,
+  fm as M,
+  il as N,
+  nd as P,
+  om as F,
+  qs as ne,
+  r as re,
+  t as ie,
+} from "./main.js?contenthash=YyCh67xk";
+import "./partnereventsavebutton.module.js?contenthash=DsAjcEYM";
+var I = e(a()),
+  L = e(t()),
+  R = `_2QW4jBjN1Zk-`,
   z = `wBp0X6XIyYg-`,
   B = `JGRxCB9gdso-`,
   V = `oLJu698DJfs-`,
@@ -63,11 +63,11 @@ var L = e(i()),
         fnSetCurator: r,
         bLimitToCreatorHome: i,
       } = e,
-      a = (0, L.useRef)(null),
-      o = (0, L.useRef)(null),
-      s = (0, L.useRef)(0),
-      c = (0, L.useRef)(void 0);
-    (0, L.useEffect)(
+      a = (0, I.useRef)(null),
+      o = (0, I.useRef)(null),
+      s = (0, I.useRef)(0),
+      c = (0, I.useRef)(void 0);
+    (0, I.useEffect)(
       () => () => {
         window.clearTimeout(s.current),
           a.current && a.current(`SearchForCurator: unmounting`),
@@ -75,7 +75,7 @@ var L = e(i()),
       },
       [],
     );
-    let l = (0, L.useCallback)(
+    let l = (0, I.useCallback)(
       async (e) => {
         let t = e.target.value;
         t &&
@@ -83,12 +83,12 @@ var L = e(i()),
           (window.clearTimeout(s.current),
           a.current && a.current(`SearchForCurator: new request`),
           (s.current = window.setTimeout(async () => {
-            let e = R.default.CancelToken.source();
+            let e = L.default.CancelToken.source();
             a.current = e.cancel;
             try {
               let n = await g.SearchCreatorHomeStore(t, i, e);
               if (e.token.reason) return;
-              o.current = M(
+              o.current = w(
                 (0, U.jsx)(G, { list: n, fnSetCurator: r }),
                 c.current.element,
                 {
@@ -102,7 +102,7 @@ var L = e(i()),
               );
             } catch (t) {
               if (e.token.reason) return;
-              let n = A(t);
+              let n = O(t);
               console.log(
                 `SearchForCurator.SearchCreatorHomeStore error ` +
                   n.strErrorMsg,
@@ -113,8 +113,8 @@ var L = e(i()),
       },
       [r, i],
     );
-    return (0, U.jsx)(D, {
-      children: (0, U.jsx)(S, {
+    return (0, U.jsx)(A, {
+      children: (0, U.jsx)(D, {
         type: `text`,
         label: t,
         onChange: l,
@@ -126,21 +126,21 @@ var L = e(i()),
   },
   G = (e) => {
     let { list: t, fnSetCurator: n } = e;
-    return (0, U.jsx)(ee, {
+    return (0, U.jsx)(ne, {
       className: H,
       children: t.map((e) =>
         (0, U.jsx)(
-          N,
+          E,
           {
             onSelected: () => n(e),
             children: (0, U.jsxs)(`div`, {
               style: { display: `flex`, alignItems: `center` },
               children: [
                 (0, U.jsx)(`div`, {
-                  className: ne,
+                  className: re,
                   children: (0, U.jsx)(`img`, {
                     src: e.GetAvatarURLFullSize(),
-                    className: re,
+                    className: ie,
                   }),
                 }),
                 b(e.GetName()),
@@ -156,7 +156,7 @@ var L = e(i()),
     let t = se();
     if (!t)
       return (0, U.jsx)(v, {
-        string: T(`#Loading`),
+        string: k(`#Loading`),
         position: `center`,
         size: `medium`,
       });
@@ -192,9 +192,9 @@ var L = e(i()),
   }),
   q = (e) => {
     let { strName: t, records: n, bHideByDefault: r } = e,
-      [i, a] = (0, L.useState)(r);
+      [i, a] = (0, I.useState)(r);
     return (0, U.jsxs)(`div`, {
-      className: ie,
+      className: R,
       children: [
         (0, U.jsxs)(`h2`, {
           className: z,
@@ -205,17 +205,17 @@ var L = e(i()),
             n.length,
             `)`,
             (0, U.jsx)(`span`, { children: `\xA0` }),
-            (0, U.jsx)(I, {
+            (0, U.jsx)(j, {
               onClick: () => a(!i),
-              children: i ? (0, U.jsx)(w, {}) : (0, U.jsx)(te, {}),
+              children: i ? (0, U.jsx)(te, {}) : (0, U.jsx)(N, {}),
             }),
           ],
         }),
         (0, U.jsx)(`hr`, {}),
         i
-          ? (0, U.jsx)(I, {
+          ? (0, U.jsx)(j, {
               onClick: () => a(!1),
-              children: T(`#Sale_ShowContents`),
+              children: k(`#Sale_ShowContents`),
             })
           : (0, U.jsx)(U.Fragment, {
               children: n.map((e) =>
@@ -238,7 +238,7 @@ var L = e(i()),
               children: [
                 (0, U.jsx)(`div`, {
                   children: (0, U.jsx)(`a`, {
-                    href: P.STORE_BASE_URL + `sale/` + t.vanity,
+                    href: M.STORE_BASE_URL + `sale/` + t.vanity,
                     children: (0, U.jsx)(`b`, {
                       children: `${t.display_name} - (${t.vanity})`,
                     }),
@@ -255,10 +255,10 @@ var L = e(i()),
                   (0, U.jsx)(`div`, {
                     children: (0, U.jsx)(`a`, {
                       href:
-                        P.COMMUNITY_BASE_URL +
+                        M.COMMUNITY_BASE_URL +
                         `gid/` +
-                        j
-                          .InitFromClanID(t.clan_account_id)
+                        x
+                          .InitFromClanID(t.clan_account_id, M.EUNIVERSE)
                           .ConvertTo64BitString() +
                         `/partnerevents/edit/` +
                         t.gid_clan_event,
@@ -268,8 +268,8 @@ var L = e(i()),
               ],
             }),
             !!(!t.gid_clan_event || (t.hidden && !t.published)) &&
-              (0, U.jsx)(I, {
-                onClick: (e) => O((0, U.jsx)(ae, { record: t }), E(e)),
+              (0, U.jsx)(j, {
+                onClick: (e) => ee((0, U.jsx)(ae, { record: t }), P(e)),
                 children: `Migrate Sale Page`,
               }),
           ],
@@ -280,13 +280,13 @@ var L = e(i()),
   }),
   ae = (e) => {
     let { record: t, closeModal: n } = e,
-      [r, i] = (0, L.useState)(t.clan_account_id),
-      [a, o] = (0, L.useState)(!1),
-      [s, c] = (0, L.useState)(void 0),
-      [l, u] = (0, L.useState)(!1),
-      [d, f] = (0, L.useState)(t.gid_clan_event),
-      [p, m] = (0, L.useState)(null);
-    return (0, U.jsxs)(x, {
+      [r, i] = (0, I.useState)(t.clan_account_id),
+      [a, o] = (0, I.useState)(!1),
+      [s, c] = (0, I.useState)(void 0),
+      [l, u] = (0, I.useState)(!1),
+      [d, f] = (0, I.useState)(t.gid_clan_event),
+      [p, m] = (0, I.useState)(null);
+    return (0, U.jsxs)(C, {
       strTitle: `Migrate Sale page`,
       strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
       bOKDisabled: !r || a,
@@ -332,7 +332,7 @@ var L = e(i()),
             children: [
               (0, U.jsx)(`div`, {
                 children: (0, U.jsx)(`a`, {
-                  href: P.STORE_BASE_URL + `sale/` + t.vanity,
+                  href: M.STORE_BASE_URL + `sale/` + t.vanity,
                   target: `_blank`,
                   children: `Sale Page`,
                 }),
@@ -340,9 +340,9 @@ var L = e(i()),
               (0, U.jsx)(`div`, {
                 children: (0, U.jsx)(`a`, {
                   href:
-                    P.COMMUNITY_BASE_URL +
+                    M.COMMUNITY_BASE_URL +
                     `gid/` +
-                    j.InitFromClanID(r).ConvertTo64BitString() +
+                    x.InitFromClanID(r, M.EUNIVERSE).ConvertTo64BitString() +
                     `/partnerevents/edit/` +
                     d,
                   target: `_blank`,
@@ -356,7 +356,7 @@ var L = e(i()),
   },
   oe = (e) => {
     let { creatorHome: t } = e,
-      n = j.InitFromClanID(t.GetClanAccountID()),
+      n = x.InitFromClanID(t.GetClanAccountID(), M.EUNIVERSE),
       r = t.GetClanAccountID();
     return t
       ? (0, U.jsxs)(`div`, {
@@ -423,13 +423,13 @@ var L = e(i()),
           void 0,
         ];
       try {
-        let a = P.COMMUNITY_BASE_URL + `migrate/ajaxcreateupdatesalepage`,
+        let a = M.COMMUNITY_BASE_URL + `migrate/ajaxcreateupdatesalepage`,
           o = new URLSearchParams();
         o.append(`sessionid`, F()),
           o.append(`salePageID`, e),
           o.append(`clanAccountID`, `` + t),
           r && o.append(`gidClanEvent`, r);
-        let s = await R.default.post(a, o, { withCredentials: !0 });
+        let s = await L.default.post(a, o, { withCredentials: !0 });
         if (s?.status == 200 && s?.data?.success == 1 && s?.data?.gidClanEvent)
           return (
             n(() => {
@@ -443,7 +443,7 @@ var L = e(i()),
             [s.data.msg || `Success`, !0, s.data.gidClanEvent]
           );
         {
-          let e = A(s);
+          let e = O(s);
           return (
             console.error(
               `CMigrateSaleStore.LoadSalePageMigrationInfo: failed with ` +
@@ -454,7 +454,7 @@ var L = e(i()),
           );
         }
       } catch (e) {
-        let t = A(e);
+        let t = O(e);
         console.error(
           `CMigrateSaleStore.MigrateOrUpdateSalePage: caught error with ` +
             t.strErrorMsg,
@@ -471,9 +471,9 @@ var L = e(i()),
     }
     async InternalLoadSalePageMigrationInfo() {
       try {
-        let e = P.COMMUNITY_BASE_URL + `migrate/ajaxgetsalepagestomigrate`,
+        let e = M.COMMUNITY_BASE_URL + `migrate/ajaxgetsalepagestomigrate`,
           t = { sessionid: F() },
-          r = await R.default.get(e, { params: t, withCredentials: !0 });
+          r = await L.default.get(e, { params: t, withCredentials: !0 });
         if (
           ((this.m_bLoadComplete = !0),
           r?.status == 200 && r?.data?.success == 1 && r?.data?.data)
@@ -494,7 +494,7 @@ var L = e(i()),
             this.m_listSaleState
           );
         {
-          let e = A(r);
+          let e = O(r);
           console.error(
             `CMigrateSaleStore.LoadSalePageMigrationInfo: failed with ` +
               e.strErrorMsg,
@@ -502,7 +502,7 @@ var L = e(i()),
           );
         }
       } catch (e) {
-        let t = A(e);
+        let t = O(e);
         console.error(
           `CMigrateSaleStore.LoadSalePageMigrationInfo: caught error with ` +
             t.strErrorMsg,
@@ -516,15 +516,15 @@ var L = e(i()),
       return (e.s_Singleton ||= new e()), e.s_Singleton;
     }
     constructor() {
-      a(this);
+      i(this);
     }
   };
-k([o], Y.prototype, `m_mapSaleIDToInfo`, void 0),
-  k([o], Y.prototype, `m_listSaleState`, void 0);
+S([o], Y.prototype, `m_mapSaleIDToInfo`, void 0),
+  S([o], Y.prototype, `m_listSaleState`, void 0);
 function se() {
-  let [e, t] = L.useState(!Y.Get().BHasLoadCompleted());
+  let [e, t] = I.useState(!Y.Get().BHasLoadCompleted());
   return (
-    L.useEffect(() => {
+    I.useEffect(() => {
       Y.Get().BHasLoadCompleted() ||
         Y.Get()
           .LoadSalePageMigrationInfo()
@@ -535,7 +535,7 @@ function se() {
 }
 var X = class e {
   constructor() {
-    a(this);
+    i(this);
   }
   m_rgApps = [];
   m_rgClanAccountIDs = [];
@@ -573,10 +573,10 @@ var X = class e {
     ) {
       let t = Math.min(a, 100),
         o = { offset: e, nBatchSize: t, start_appid: r },
-        s = P.COMMUNITY_BASE_URL + `migrate/ajaxgetallapps`,
+        s = M.COMMUNITY_BASE_URL + `migrate/ajaxgetallapps`,
         c = null;
       try {
-        let r = await R.default.get(s, {
+        let r = await L.default.get(s, {
           params: o,
           withCredentials: !0,
           cancelToken: i?.token,
@@ -592,9 +592,9 @@ var X = class e {
             (a -= t);
           continue;
         }
-        c = A(r?.data);
+        c = O(r?.data);
       } catch (e) {
-        c = A(e);
+        c = O(e);
       }
       throw Error(
         `ajax request failed with error ` +
@@ -615,10 +615,10 @@ var X = class e {
   async FetchClans(e, t, n) {
     this.m_nHighestClanOffsetRequested = e + t;
     let r = { offset: e, count: t },
-      i = P.COMMUNITY_BASE_URL + `migrate/ajaxgetallclans`,
+      i = M.COMMUNITY_BASE_URL + `migrate/ajaxgetallclans`,
       a = null;
     try {
-      let e = await R.default.get(i, {
+      let e = await L.default.get(i, {
         params: r,
         withCredentials: !0,
         cancelToken: n?.token,
@@ -629,15 +629,15 @@ var X = class e {
         );
         return;
       }
-      a = A(e?.data);
+      a = O(e?.data);
     } catch (e) {
-      a = A(e);
+      a = O(e);
     }
     console.error(`FetchClans: ajax request failed with error`, a.strErrorMsg);
   }
 };
-k([o.shallow], X.prototype, `m_rgApps`, void 0),
-  k([o.shallow], X.prototype, `m_rgClanAccountIDs`, void 0);
+S([o.shallow], X.prototype, `m_rgApps`, void 0),
+  S([o.shallow], X.prototype, `m_rgClanAccountIDs`, void 0);
 var ce = `vvKfa--ozEA-`,
   le = `oZ8bKUw8W-4-`,
   ue = `EZ-PZVqoIHM-`,
@@ -649,8 +649,8 @@ var ce = `vvKfa--ozEA-`,
   Z = `ej4ZSyhzAzM-`,
   Q = `_4RtyaqASXjk-`,
   ge = r((e) => {
-    let [t, n] = (0, L.useState)(!0);
-    (0, L.useEffect)(() => {
+    let [t, n] = (0, I.useState)(!0);
+    (0, I.useEffect)(() => {
       f.Init(), n(!1);
     }, []);
     let [r, i] = y(`start`, 0),
@@ -659,10 +659,10 @@ var ce = `vvKfa--ozEA-`,
       [l, u] = y(`autoload`, !0),
       [d, p] = y(`batch_size`, 1),
       [m, h] = y(`automigrate`, !1),
-      [g, _] = (0, L.useState)(!1),
+      [g, _] = (0, I.useState)(!1),
       [b, x] = y(`rolling`, 0),
-      [S, C] = (0, L.useState)(new Set()),
-      w = (0, L.useRef)(0),
+      [S, C] = (0, I.useState)(new Set()),
+      w = (0, I.useRef)(0),
       T = () => {
         _(!1), C(new Set()), i(r + s);
       },
@@ -734,12 +734,12 @@ var ce = `vvKfa--ozEA-`,
   $ = 50,
   _e = r((e) => {
     let t = Number(e.app.id),
-      [n, r] = (0, L.useState)(0),
-      [i, a] = (0, L.useState)([]),
-      [o, s] = (0, L.useState)(!1),
-      c = (0, L.useRef)(new Set()),
-      l = (0, L.useRef)(0);
-    (0, L.useEffect)(() => {
+      [n, r] = (0, I.useState)(0),
+      [i, a] = (0, I.useState)([]),
+      [o, s] = (0, I.useState)(!1),
+      c = (0, I.useRef)(new Set()),
+      l = (0, I.useRef)(0);
+    (0, I.useEffect)(() => {
       _.LoadOGGClanInfoForAppID(t).then((e) =>
         console.log(
           `Loaded app`,
@@ -751,7 +751,7 @@ var ce = `vvKfa--ozEA-`,
     }, [t]);
     let u = _.GetOGGClanInfo(t),
       d = u ? u.group_name : e.app.name,
-      p = `${P.COMMUNITY_BASE_URL}games/${u ? u.vanity_url : t}/partnerevents/`,
+      p = `${M.COMMUNITY_BASE_URL}games/${u ? u.vanity_url : t}/partnerevents/`,
       m = i.length,
       h = n == m,
       g = i.filter((e) => e.BIsVisibleEvent()),
@@ -776,7 +776,7 @@ var ce = `vvKfa--ozEA-`,
         let o = await f.LoadPartnerEventsPageable(void 0, t, e, $);
         a(i.concat(o)), s(!1);
       };
-    (0, L.useEffect)(() => {
+    (0, I.useEffect)(() => {
       e.bAutoLoad && h && !o && w();
     });
     let T = (e, t) => {
@@ -786,11 +786,11 @@ var ce = `vvKfa--ozEA-`,
         s(!0), await ve(x, e.nMigrateBatchSize, t, u.clanSteamID, T), s(!1);
       };
     return (
-      (0, L.useEffect)(() => {
+      (0, I.useEffect)(() => {
         e.bAutoMigrate && C && !o && E();
       }),
-      (0, L.useEffect)(() => {
-        !h && !C && !o && e.fnOnCompletion(t, l.current);
+      (0, I.useEffect)(() => {
+        h || C || o || e.fnOnCompletion(t, l.current);
       }),
       (0, U.jsxs)(`div`, {
         className: de,
@@ -847,16 +847,16 @@ async function ve(e, t, n, r, i) {
           i(a.AnnouncementGID, !0);
       }
     } catch (e) {
-      let t = A(e);
+      let t = O(e);
       console.error(`MigrateEvents: ` + t.strErrorMsg.slice(0, 512), t),
         i(a.AnnouncementGID, !1);
     }
   }
 }
 function ye(e) {
-  let [t, n] = L.useState(!0);
+  let [t, n] = I.useState(!0);
   return (
-    L.useEffect(() => {
+    I.useEffect(() => {
       h.Init(), Promise.all([]).then(() => n(!1));
     }, []),
     t
@@ -865,7 +865,7 @@ function ye(e) {
           children: [
             (0, U.jsx)(l, { path: d.MigrateSaleEvents(), component: K }),
             (0, U.jsx)(l, { path: d.MigrateEvents(), component: ge }),
-            (0, U.jsx)(l, { component: C }),
+            (0, U.jsx)(l, { component: T }),
           ],
         })
   );

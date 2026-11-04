@@ -23,8 +23,8 @@ body.v6.library {
 	position: absolute;
 	top: 0;
 	margin: 0 auto;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	z-index: -1;
 	width: 100%;
 	height: 100%;
@@ -128,7 +128,7 @@ body.v6.library {
 
 .library_btn_join span img {
 	vertical-align: top;
-	margin-left: 15px;
+	margin-inline-start: 15px;
 }
 
 .library_joinbtn_desc {
@@ -146,7 +146,8 @@ body.v6.library {
 }
 
 .library_newlook_ctn {
-	margin: 40vh 0 20vh 40%;
+	margin-block: 40vh 20vh;
+	margin-inline: 40% 0;
 }
 
 .library_subheader {
@@ -356,7 +357,7 @@ body.v6.library {
 .game_pages_right {
 	width: 25%;
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	top: 30%;
 	background: linear-gradient( 90deg, transparent 0%, rgba(25, 42, 63, 1) 100% );
 	z-index: 15;
@@ -664,7 +665,7 @@ body.v6.library {
 
 	html.responsive .organize_videos_items_nav {
 		bottom: -35%;
-		left: 0;
+		inset-inline-start: 0;
 	}
 
 	html.responsive .organize_carousel_items {

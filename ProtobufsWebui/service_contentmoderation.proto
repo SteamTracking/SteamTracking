@@ -43,6 +43,7 @@ message CContentModeration_GetAuditLogByID_Response_AuditLogEntry {
 	optional bool automated_action = 3;
 	optional int32 action = 4 [(.description) = "enum"];
 	optional string additional_json_data = 5;
+	optional bool actor_is_support = 6;
 }
 
 message CContentModeration_GetClaimedSubjects_Request {
@@ -135,6 +136,7 @@ message CContentModeration_GetReportedContent_Response {
 
 message CContentModeration_GetReportedContentByID_Request {
 	optional uint64 reported_content_id = 1;
+	optional bool include_reporter_account_status = 2;
 }
 
 message CContentModeration_GetReportedContentByID_Response {
@@ -321,6 +323,7 @@ message ContentReport {
 	repeated .ContentReportSubjectSanction sanctions_applied_on_dispute = 24;
 	optional uint64 reported_content_id = 25;
 	optional .ReportedContentCoordinates coordinates = 26;
+	optional bool reporter_is_support = 27;
 }
 
 message ContentReportSubject {

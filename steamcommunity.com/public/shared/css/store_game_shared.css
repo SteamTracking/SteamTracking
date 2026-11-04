@@ -104,6 +104,12 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 	background: linear-gradient( to right, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);
 }
 
+.sysreq_tabs:dir(rtl),
+.discselect_tabs:dir(rtl)
+{
+	background: linear-gradient( to left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);
+}
+
 
 .sysreq_tab,
 .discselect_tab
@@ -161,8 +167,8 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 .game_page_autocollapse_fade {
 	display: none;
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	height: 73px;
 
@@ -172,7 +178,7 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 
 .game_page_autocollapse_readmore {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	height: 20px;
 	line-height: 20px;
@@ -183,6 +189,9 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 
 	padding-inline-end: 12px;
 	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpiDK5Z5sjAwFAJxAFrmiO/MUBBSO3yDCBlwAQkjgLxdyDeDBTkQpKsAuJuxv///4ME2ICc1UDMA1IIxEVA7Ag08S4j0ApmIEcOiJ9CFRkBsQMQPwZicRYgYQmVcAXiUCAWA+JXULEXTEBjjgAZxUC8G4jVkCRBIBfsBqjDooBULxBfhjo6FKj5F1wBkqIQII4ASYLEAAIMAPrDNy1EYNLFAAAAAElFTkSuQmCC' ) right center no-repeat;
+}
+.game_page_autocollapse_readmore:dir(rtl) {
+	background-position: left center;
 }
 
 .game_page_autocollapse_readmore:hover {
@@ -450,8 +459,8 @@ table.game_language_options {
 .widestore .game_page_autocollapse_fade {
 	display: none;
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	height: 79px;
 	z-index: 1;
@@ -469,7 +478,7 @@ table.game_language_options {
 	color: #67c1f5;
 	font-size: 12px;
 	padding-inline-end: 0px;
-	right: unset; /* remove for final */
+	inset-inline-end: unset; /* remove for final */
 	bottom: unset; /* remove for final */
 	height: unset; /* remove for final */
 }

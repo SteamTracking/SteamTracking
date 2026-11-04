@@ -10,7 +10,6 @@
 .cropper-container {
   -ms-touch-action: none;
   touch-action: none;
-  -webkit-user-select: none;
   user-select: none;
   direction: ltr;
   font-size: 0;

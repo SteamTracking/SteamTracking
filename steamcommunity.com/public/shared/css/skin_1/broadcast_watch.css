@@ -42,7 +42,7 @@ body.iframe .responsive_page_content
 {
 	background-image: none;
 	max-width: auto;
-	margin-left: 20px;
+	margin-inline-start: 20px;
 	height: 100px;
 }
 
@@ -57,7 +57,7 @@ body.iframe .responsive_page_content
 
 .profile_small_header_text
 {
-	left: 65px;
+	inset-inline-start: 65px;
 	top: 30px;
 }
 
@@ -136,8 +136,8 @@ body.iframe .responsive_page_content
 .LoadingThrobber .Bar
 {
 	-webkit-animation: test 2s infinite;
-	float: left;
-	margin-right: 6px;
+	float: inline-start;
+	margin-inline-end: 6px;
 	width: 12px;
 	height: 68px;
 	background-color: #67c1f5;
@@ -194,7 +194,7 @@ body.flat_page #footer
 	position: absolute;
 
 	top: 3px;
-	margin-left: 284px;
+	margin-inline-start: 284px;
 	z-index: -1000;
 }
 
@@ -237,14 +237,14 @@ body.flat_page
 {
 	position: relative;
 	height: 90px;
-	margin-left: 1px;
+	margin-inline-start: 1px;
 }
 
 .PopOutBox
 {
 	position: absolute;
 	top: 30px;
-	right: 20px;
+	inset-inline-end: 20px;
 	width: 130px;
 	height: 30px;
 	border: 1px #1f1f20 stroke;
@@ -252,7 +252,7 @@ body.flat_page
 	margin-bottom: 4px;
 	background-color: rgba(100,100,100,0.25);
 	line-height: 30px;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 }
 
 .PopOutBox:hover
@@ -262,7 +262,7 @@ body.flat_page
 
 .PopOutBox img
 {
-	float: right;
+	float: inline-end;
 	margin: 8px 8px 5px 8px;
 }
 
@@ -282,8 +282,8 @@ body.iframe #PageContents
 {
 	position: absolute;
 	bottom: 0px;
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 	background: -webkit-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
 	background: linear-gradient( to bottom, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
 
@@ -303,8 +303,8 @@ body.iframe #PageContents
 
 body:not(.iframe) .LoadingContentBackground
 {
-	left: 20px;
-	right: 20px;
+	inset-inline-start: 20px;
+	inset-inline-end: 20px;
 	top: 0px;
 	bottom: 100px;
 	background-color: rgba(0,0,0,0.35);
@@ -313,8 +313,8 @@ body:not(.iframe) .LoadingContentBackground
 
 body.iframe .LoadingContentBackground
 {
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	top: 0;
 	bottom: 0;
 }
@@ -322,8 +322,8 @@ body.iframe .LoadingContentBackground
 #LoadingVideoContent
 {
 	position: absolute;
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 	bottom: 0px;
 	background-color: rgba(0,0,0,0.75);
@@ -395,8 +395,8 @@ body.iframe #LoadedContent
 {
 	visibility: hidden;
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	top: 0;
 	bottom: 0;
 	width: 100%;
@@ -413,9 +413,9 @@ body.iframe .ShowPlayer #LoadedContent
 
 #video_content
 {
-	padding-right: 340px;
-	margin-right: 20px;
-	margin-left: 20px;
+	padding-inline-end: 340px;
+	margin-inline-end: 20px;
+	margin-inline-start: 20px;
 	overflow: hidden;
 }
 
@@ -448,8 +448,8 @@ body.iframe #video_content
 
 .BroadcastInfoWrapper
 {
-	padding-right: 20px;
-	padding-left: 20px;
+	padding-inline-end: 20px;
+	padding-inline-start: 20px;
 	overflow: hidden;
 	min-height: 143px;
 }
@@ -464,9 +464,9 @@ body.iframe #video_content
 {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 body.iframe .BroadcastPlayer
@@ -514,18 +514,18 @@ body:not(.iframe) .ChatAndVideoContainer
 {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	width: 340px;
-	margin-right: 20px;
+	margin-inline-end: 20px;
 }
 
 body.iframe #ChatWindow
 {
 	position: absolute;
 	width: auto;
-	margin-right: 0;
-	left: 0;
+	margin-inline-end: 0;
+	inset-inline-start: 0;
 background: -webkit-linear-gradient( 90deg, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);
 	background: linear-gradient( 0deg, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);
 }
@@ -538,9 +538,9 @@ body.iframe #ChatWindow.noVideo {
 {
 	position: absolute;
 	top: 27px;
-	right: 0px;
+	inset-inline-end: 0px;
 	bottom: 0px;
-	left: 0px;
+	inset-inline-start: 0px;
 	background-color: rgba( 30, 30, 30, 0.5 );
 	z-index: 2;
 }
@@ -550,7 +550,7 @@ body.iframe #ChatWindow.noVideo {
 {
 	.MinimizedChat #video_content
 	{
-		padding-right: 22px;
+		padding-inline-end: 22px;
 	}
 
 	.MinimizedChat #ChatWindow
@@ -577,7 +577,7 @@ body.iframe #ChatWindow.noVideo {
 	height: 20px;
 	display: none;
 	position: absolute;
-	right: 2px;
+	inset-inline-end: 2px;
 	top: 2px;
 
 	background-image: url(' https://community.fastly.steamstatic.com/public/shared/images/broadcast/maximize_icon.png' );
@@ -589,7 +589,7 @@ body.iframe #ChatWindow.noVideo {
 
 .ChatBoxViewers
 {
-	text-align: right;
+	text-align: end;
 	padding: 2px;
 	height: 22px;
 	border-bottom: 1px solid rgba(255,255,255,0.10);
@@ -656,11 +656,11 @@ body.iframe .ChatBoxViewers
 .ChatBox
 {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	bottom: 52px;
 	margin-top: 4px;
 	overflow: hidden;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 body:not(.iframe) .ChatBox
@@ -675,7 +675,7 @@ body.iframe .ChatBox
 
 .ChatWarning
 {
-	padding-left: 8px;
+	padding-inline-start: 8px;
 }
 
 .ChatWarning a
@@ -696,9 +696,9 @@ body.iframe .ChatBox
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	cursor: ew-resize;
-	right: 3px;
+	inset-inline-end: 3px;
 	z-index: 1000;
 }
 
@@ -733,21 +733,25 @@ body.iframe #ChatDragHandle
 	overflow: hidden;
 	word-break: break-word;
 	position: relative;
-	margin: 8px 1px 0px 0px;
-	padding: 0px 22px 0px 8px;
+	margin-block: 8px 0px;
+	margin-inline: 0px 1px;
+	padding-block: 0px;
+	padding-inline: 8px 22px;
 }
 
 .ChatMessage
 {
-	padding: 1px 22px 1px 8px;
-	margin: 7px 1px 0px 2px;
+	padding-block: 1px;
+	padding-inline: 8px 22px;
+	margin-block: 7px 0px;
+	margin-inline: 2px 1px;
 }
 
 .ChatMessageMenuBtn
 {
 	display: none;
 	position: absolute;
-	right: 10px;
+	inset-inline-end: 10px;
 	top: 4px;
 
 	width: 12px;
@@ -781,8 +785,8 @@ body.iframe #ChatDragHandle
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	z-index: 901;
 }
 
@@ -813,7 +817,7 @@ body.iframe #ChatDragHandle
 .ChatExpand
 {
 	position: absolute;
-	right: 10px;
+	inset-inline-end: 10px;
 	bottom: 0px;
 	background-color: #2b4a63;
 	color: #57cbde;
@@ -862,9 +866,10 @@ body.iframe #ChatDragHandle
 	height: 42px;
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 6px 6px 4px 4px;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	padding-block: 6px 4px;
+	padding-inline: 4px 6px;
 
 	display:-webkit-flex;
 	display:-ms-flexbox;
@@ -880,7 +885,8 @@ body.iframe #ChatDragHandle
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-	margin: 0 0 0 2px;
+	margin-block: 0;
+	margin-inline: 2px 0;
 	height: 40px;
 	color: white;
 	border: 1px solid #000000;
@@ -903,7 +909,7 @@ body.iframe #ChatDragHandle
 	-webkit-flex: 0 0 58px;
 	-ms-flex: 0 0 58px;
 	flex: 0 0 58px;
-	margin-left: 4px;
+	margin-inline-start: 4px;
 	height: 40px;
 	color: #8492a4;
 	text-align: center;
@@ -922,13 +928,13 @@ body.iframe #ChatDragHandle
     height: 42px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    inset-inline-start: 0;
 
     color: white;
     text-align: center;
     line-height: 40px;
     display: block;
-    float: left;
+    float: inline-start;
     background: -webkit-linear-gradient( top, #696969 5%, #3b3b3b 95%);
 	background: linear-gradient( to bottom, #696969 5%, #3b3b3b 95%);
 }
@@ -939,7 +945,7 @@ body.iframe #ChatDragHandle
 	-ms-flex: 0 0 32px;
 	flex: 0 0 32px;
 	height: 38px;
-	margin-left: 4px;
+	margin-inline-start: 4px;
 	background-color: #2c3036;
 	border: 1px solid #2c3036;
 	vertical-align: top;
@@ -982,8 +988,8 @@ body:not(.iframe) .BroadcastRowShadow
 {
 	position: absolute;
 	top: 0px;
-	left: 20px;
-	right: 20px;
+	inset-inline-start: 20px;
+	inset-inline-end: 20px;
 	bottom: 144px;
 	box-shadow: 1px 1px 1px rgba(255,255,255,0.06);
 	background-color: rgba(0,0,0,0.3);
@@ -1006,7 +1012,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 .BroadcastProfileName
 {
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 #BroadcastGame
@@ -1029,7 +1035,7 @@ body:not(.iframe) .BroadcastRowShadow
 {
 	font-size: 14px;
 	margin: 8px 0px 0px 0px;
-	padding-left: 28px;
+	padding-inline-start: 28px;
 
 	pointer-events: none;
 	background-image: url('https://community.fastly.steamstatic.com/public/shared/images/broadcast/icon_viewers.png' );
@@ -1049,9 +1055,9 @@ body:not(.iframe) .BroadcastRowShadow
 
 .BroadcastInfoButtonColumn
 {
-	float: right;
+	float: inline-end;
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	z-index: 2;
 	position: relative;
 }
@@ -1064,7 +1070,8 @@ body:not(.iframe) .BroadcastRowShadow
 {
 	display: inline-block;
 	padding: 0px 8px 0px 8px;
-	margin: 0 0 10px 15px;
+	margin-block: 0 10px;
+	margin-inline: 15px 0;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	cursor: pointer;
@@ -1099,7 +1106,7 @@ body:not(.iframe) .BroadcastRowShadow
 	background-image: url(' https://community.fastly.steamstatic.com/public/shared/images/broadcast/icon_report.png' );
 	background-position: 6px center;
 	background-repeat: no-repeat;
-	padding-left: 28px;
+	padding-inline-start: 28px;
 }
 
 .ReportBroadcast:hover
@@ -1123,7 +1130,7 @@ body:not(.iframe) .BroadcastRowShadow
 {
 	width: 500px;
 	padding-bottom: 10px;
-	text-align: left;
+	text-align: start;
 }
 
 #ModalBackground
@@ -1131,8 +1138,8 @@ body:not(.iframe) .BroadcastRowShadow
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	z-index: 901;
 }
 
@@ -1151,8 +1158,8 @@ body:not(.iframe) .BroadcastRowShadow
 #LoadingViewerModal
 {
 	position: absolute;
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 	bottom: 0px;
 
@@ -1181,9 +1188,9 @@ body:not(.iframe) .BroadcastRowShadow
 	overflow: hidden;
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	inset-inline-start: 0px;
 	bottom: 0px;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 #ViewerModalError
@@ -1196,7 +1203,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 #ViewerModalViewers
 {
-	padding-left: 28px;
+	padding-inline-start: 28px;
 
 	background-image: url(' https://community.fastly.steamstatic.com/public/shared/images/broadcast/icon_viewers.png' );
 	background-repeat: no-repeat;
@@ -1205,7 +1212,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 #ViewerModalUsers .UserRow
 {
-	padding-left: 28px;
+	padding-inline-start: 28px;
 	margin-top: 2px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -1221,7 +1228,7 @@ body:not(.iframe) .BroadcastRowShadow
 	background-position: center center;
 	position: absolute;
 	top: 0px;
-	left: 2px;
+	inset-inline-start: 2px;
 	bottom: 0px;
 	width: 20px;
 }
@@ -1244,7 +1251,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 #ViewerNotReturned
 {
-	padding-left: 28px;
+	padding-inline-start: 28px;
 	margin-top: 2px;
 }
 
@@ -1283,7 +1290,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 .ps-container>.ps-scrollbar-y-rail {
 	position: absolute; /* please don't change 'position' */
-	right: 3px; /* there must be 'right' for ps-scrollbar-y-rail */
+	inset-inline-end: 3px; /* there must be 'right' for ps-scrollbar-y-rail */
 	width: 5px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -1335,7 +1342,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 .ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
 	position: absolute; /* please don't change 'position' */
-	right: 0; /* there must be 'right' for ps-scrollbar-y */
+	inset-inline-end: 0; /* there must be 'right' for ps-scrollbar-y */
 	width: 5px;
 	background-color: #aaa;
 	-webkit-border-radius: 4px;
@@ -1356,7 +1363,7 @@ body:not(.iframe) .BroadcastRowShadow
 	position: absolute;
 	padding: 10px;
 	top: 10px;
-	left: 10px;
+	inset-inline-start: 10px;
 	background-color: rgba(0,0,0,0.4);
 	display: none;
 }
@@ -1389,7 +1396,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 .BroadcasterAdminFormLeft
 {
-    margin-left: 180px;
+    margin-inline-start: 180px;
     position: absolute;
     width: 92px;
     margin-top: 3px;
@@ -1397,7 +1404,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 .BroadcasterAdminFormRight
 {
-    margin-left: 280px;
+    margin-inline-start: 280px;
     position: absolute;
 }
 
@@ -1440,14 +1447,14 @@ body:not(.iframe) .BroadcastRowShadow
 {
     position: absolute;
     margin-top: 10px;
-    margin-left: 0px;
+    margin-inline-start: 0px;
 }
 
 #BroadcasterAdminStopButton
 {
     position: absolute;
     margin-top: 70px;
-    margin-left: 0px;
+    margin-inline-start: 0px;
     width: 120px;
 }
 
@@ -1455,7 +1462,7 @@ body:not(.iframe) .BroadcastRowShadow
 {
     position: absolute;
     margin-top: 10px;
-    margin-left: 520px;
+    margin-inline-start: 520px;
     width: 120px;
 }
 
@@ -1463,14 +1470,14 @@ body:not(.iframe) .BroadcastRowShadow
 {
     position: absolute;
     margin-top: 40px;
-    margin-left: 520px;
+    margin-inline-start: 520px;
 }
 
 #BroadcastAdminViewerCount
 {
     position: absolute;
     margin-top: 40px;
-    margin-left: 0px;
+    margin-inline-start: 0px;
 }
 
 .store_broadcast_container
@@ -1494,7 +1501,7 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 	position: relative;
 	display: inline-block;
 	top: auto;
-	left: auto;
+	inset-inline-start: auto;
 	line-height: 14px;
 	vertical-align: bottom;
 }
@@ -1546,7 +1553,7 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 }
 
 .store_broadcast_links_container .BroadcastLinkList {
-	float: right;
+	float: inline-end;
 	padding: 5px;
 	color: rgb( 108, 141, 161 );
 }
@@ -1570,7 +1577,7 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 }
 
 #store_broadcast_corner_container {
-	float:right;
+	float:inline-end;
 	display: flex;
 	flex-direction: row;
 }
@@ -1614,7 +1621,7 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 .broadcast_floating {
 	position: fixed;
 	bottom: 20px;
-	right: 50px;
+	inset-inline-end: 50px;
 	height: 213px;
 	width: 325px;
 	z-index: 100;
@@ -1655,8 +1662,8 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	right: 0;
-	left: 0;
+	inset-inline-end: 0;
+	inset-inline-start: 0;
 }
 
 #ChatOnly {
@@ -1675,8 +1682,8 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 	color: #fff;
 	width: auto;
 
-	left: 4px;
-	right: 4px;
+	inset-inline-start: 4px;
+	inset-inline-end: 4px;
 	bottom: 4px;
 
 }
@@ -1724,7 +1731,7 @@ html.responsive body.broadcast_watch_iframe_page .responsive_page_template_conte
 @media screen and (max-width: 720px)
 {
 	html.responsive #BroadcastInfo {
-		clear: right;
+		clear: inline-end;
 		padding-top: 10px;
 	}
 
@@ -1761,7 +1768,7 @@ html.responsive body.broadcast_watch_iframe_page .responsive_page_template_conte
 	}
 
 	html.responsive .broadcast_floating {
-		right: 2px;
+		inset-inline-end: 2px;
 	}
 }
 

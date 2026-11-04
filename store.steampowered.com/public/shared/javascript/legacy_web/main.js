@@ -1,682 +1,521 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "11190067";
-(() => {
-  "use strict";
-  var e,
-    t,
-    n = {
-      703: (e, t, n) => {
-        n.d(t, { UE: () => l, pR: () => r, Vz: () => i, nh: () => p });
-        var a,
-          r,
-          i,
-          o = n(95);
-        class s {
-          m_ActiveInputId;
-          m_ActiveInputTimeout;
-          m_config;
-          constructor(e) {
-            this.m_config = e;
-          }
-          Reset() {
-            (this.m_ActiveInputId = void 0),
-              null != this.m_ActiveInputTimeout &&
-                (clearInterval(this.m_ActiveInputTimeout),
-                (this.m_ActiveInputTimeout = void 0));
-          }
-          HandleInputButtonDown(e, t) {
-            if (this.m_ActiveInputId !== e && null != t) {
-              this.Reset(), (this.m_ActiveInputId = e);
-              const n = () => {
-                this.m_ActiveInputTimeout = window.setInterval(() => {
-                  t();
-                }, this.m_config.repeatInterval_ms);
-              };
-              null == this.m_config.firstRepeatInterval_ms ||
-              this.m_config.firstRepeatInterval_ms ===
-                this.m_config.repeatInterval_ms
-                ? n()
-                : (this.m_ActiveInputTimeout = window.setTimeout(() => {
-                    t(), n();
-                  }, this.m_config.firstRepeatInterval_ms));
-            }
-          }
-        }
-        !(function (e) {
-          (e[(e.None = 0)] = "None"),
-            (e[(e.Horizontal = 1)] = "Horizontal"),
-            (e[(e.Vertical = 2)] = "Vertical");
-        })(a || (a = {}));
-        class c {
-          m_config;
-          m_inputRepeatGenerator;
-          m_repeatOnAxis = a.None;
-          m_fnRepeatAllowed = () => !0;
-          constructor(e) {
-            (this.m_config = e), (this.m_inputRepeatGenerator = new s(e));
-          }
-          Reset() {
-            this.m_inputRepeatGenerator.Reset();
-          }
-          SetRepeatAllowed(e) {
-            e || (e = () => !0), (this.m_fnRepeatAllowed = e);
-          }
-          HandleInputButtonDown(e, t, n) {
-            this.m_fnRepeatAllowed() && this.m_config.inputsThatRepeat.has(e)
-              ? this.m_repeatOnAxis == a.None &&
-                ((e != r.DIR_UP && e != r.DIR_DOWN) ||
-                  (this.m_repeatOnAxis = a.Vertical),
-                (e != r.DIR_LEFT && e != r.DIR_RIGHT) ||
-                  (this.m_repeatOnAxis = a.Horizontal),
-                t(),
-                this.m_inputRepeatGenerator.HandleInputButtonDown(e, n))
-              : (t(), this.m_inputRepeatGenerator.Reset());
-          }
-          HandleInputButtonUp(e) {
-            if (
-              this.m_config.inputsThatRepeat.has(e) &&
-              this.m_repeatOnAxis != a.None
-            ) {
-              const t = e == r.DIR_UP || e == r.DIR_DOWN,
-                n = e == r.DIR_LEFT || e == r.DIR_RIGHT;
-              ((this.m_repeatOnAxis == a.Vertical && t) ||
-                (this.m_repeatOnAxis == a.Horizontal && n)) &&
-                ((this.m_repeatOnAxis = a.None),
-                this.m_inputRepeatGenerator.Reset());
-            } else this.m_inputRepeatGenerator.Reset();
-          }
-        }
-        function l(e) {
-          return e === i.GAMEPAD || e === i.KEYBOARD_SIMULATOR;
-        }
-        !(function (e) {
-          (e[(e.INVALID = 0)] = "INVALID"),
-            (e[(e.OK = 1)] = "OK"),
-            (e[(e.CANCEL = 2)] = "CANCEL"),
-            (e[(e.SECONDARY = 3)] = "SECONDARY"),
-            (e[(e.OPTIONS = 4)] = "OPTIONS"),
-            (e[(e.BUMPER_LEFT = 5)] = "BUMPER_LEFT"),
-            (e[(e.BUMPER_RIGHT = 6)] = "BUMPER_RIGHT"),
-            (e[(e.TRIGGER_LEFT = 7)] = "TRIGGER_LEFT"),
-            (e[(e.TRIGGER_RIGHT = 8)] = "TRIGGER_RIGHT"),
-            (e[(e.DIR_UP = 9)] = "DIR_UP"),
-            (e[(e.DIR_DOWN = 10)] = "DIR_DOWN"),
-            (e[(e.DIR_LEFT = 11)] = "DIR_LEFT"),
-            (e[(e.DIR_RIGHT = 12)] = "DIR_RIGHT"),
-            (e[(e.SELECT = 13)] = "SELECT"),
-            (e[(e.START = 14)] = "START"),
-            (e[(e.LSTICK_CLICK = 15)] = "LSTICK_CLICK"),
-            (e[(e.RSTICK_CLICK = 16)] = "RSTICK_CLICK"),
-            (e[(e.LSTICK_TOUCH = 17)] = "LSTICK_TOUCH"),
-            (e[(e.RSTICK_TOUCH = 18)] = "RSTICK_TOUCH"),
-            (e[(e.LPAD_TOUCH = 19)] = "LPAD_TOUCH"),
-            (e[(e.LPAD_CLICK = 20)] = "LPAD_CLICK"),
-            (e[(e.RPAD_TOUCH = 21)] = "RPAD_TOUCH"),
-            (e[(e.RPAD_CLICK = 22)] = "RPAD_CLICK"),
-            (e[(e.REAR_LEFT_UPPER = 23)] = "REAR_LEFT_UPPER"),
-            (e[(e.REAR_LEFT_LOWER = 24)] = "REAR_LEFT_LOWER"),
-            (e[(e.REAR_RIGHT_UPPER = 25)] = "REAR_RIGHT_UPPER"),
-            (e[(e.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
-            (e[(e.STEAM_GUIDE = 27)] = "STEAM_GUIDE"),
-            (e[(e.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU"),
-            (e[(e.DUMMY_INPUT = 29)] = "DUMMY_INPUT");
-        })(r || (r = {})),
-          (function (e) {
-            (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
-              (e[(e.GAMEPAD = 1)] = "GAMEPAD"),
-              (e[(e.KEYBOARD_SIMULATOR = 2)] = "KEYBOARD_SIMULATOR"),
-              (e[(e.MOUSE = 3)] = "MOUSE"),
-              (e[(e.TOUCH = 4)] = "TOUCH"),
-              (e[(e.LPAD = 5)] = "LPAD"),
-              (e[(e.RPAD = 6)] = "RPAD");
-          })(i || (i = {}));
-        class p {
-          m_OnGamepadDetectedCallbacks = new o.l();
-          m_ButtonDownCallbacks = new o.l();
-          m_ButtonUpCallbacks = new o.l();
-          m_AnalogCallbacks = new o.l();
-          m_NavigationTypeChangeCallbacks = new o.l();
-          m_eNavigationSourceType;
-          m_fLastActiveTime;
-          m_nLastActiveControllerIndex = -1;
-          m_ButtonRepeatHandler = new c({
-            inputsThatRepeat: new Set([
-              r.DIR_UP,
-              r.DIR_DOWN,
-              r.DIR_LEFT,
-              r.DIR_RIGHT,
-            ]),
-            firstRepeatInterval_ms: 400,
-            repeatInterval_ms: 50,
-          });
-          m_bGamepadDetected = !1;
-          Init(e) {
-            return { Unregister: () => {} };
-          }
-          RegisterForGamepadDetected(e) {
-            return this.m_OnGamepadDetectedCallbacks.Register(e);
-          }
-          RegisterForGamepadButtonDown(e) {
-            return this.m_ButtonDownCallbacks.Register(e);
-          }
-          RegisterForGamepadButtonUp(e) {
-            return this.m_ButtonUpCallbacks.Register(e);
-          }
-          RegisterForAnalog(e) {
-            return this.m_AnalogCallbacks.Register(e);
-          }
-          RegisterForNavigationTypeChange(e) {
-            return this.m_NavigationTypeChangeCallbacks.Register(e);
-          }
-          SetSourceType(e) {
-            this.m_eNavigationSourceType = e;
-          }
-          GetSourceType() {
-            return this.m_eNavigationSourceType;
-          }
-          SetControllerActive(e) {
-            (this.m_nLastActiveControllerIndex = e),
-              (this.m_fLastActiveTime = Date.now());
-          }
-          GetActiveControllerIndex() {
-            return this.m_nLastActiveControllerIndex;
-          }
-          GetActiveControllerTime() {
-            return this.m_fLastActiveTime;
-          }
-          SetRepeatAllowed(e) {
-            this.m_ButtonRepeatHandler.SetRepeatAllowed(e);
-          }
-          OnGamepadDetected() {
-            console.log("Gamepad detected"),
-              (this.m_bGamepadDetected = !0),
-              this.m_OnGamepadDetectedCallbacks.Dispatch();
-          }
-          OnButtonDown(e, t, n, a) {
-            void 0 === t && (t = -1),
-              this.SetControllerActive(t),
-              this.m_ButtonRepeatHandler.HandleInputButtonDown(
-                e,
-                () => this.DispatchButtonDown(e, !1, n, a),
-                () => this.DispatchButtonDown(e, !0, n, a),
-              );
-          }
-          OnButtonUp(e, t) {
-            void 0 === t && (t = -1),
-              this.SetControllerActive(t),
-              this.m_ButtonRepeatHandler.HandleInputButtonUp(e),
-              this.m_ButtonUpCallbacks.Dispatch(
-                e,
-                this.m_eNavigationSourceType,
-                this.m_nLastActiveControllerIndex,
-              );
-          }
-          DispatchButtonDown(e, t, n, a) {
-            this.m_ButtonDownCallbacks.Dispatch(
-              e,
-              this.m_eNavigationSourceType,
-              this.m_nLastActiveControllerIndex,
-              t,
-              n,
-              a,
-            );
-          }
-          OnAnalogPad(e, t, n, a) {
-            void 0 === a && (a = -1),
-              this.SetControllerActive(a),
-              this.m_AnalogCallbacks.Dispatch(
-                e,
-                this.m_nLastActiveControllerIndex,
-                t,
-                n,
-              );
-          }
-          OnNavigationTypeChanged(e) {
-            this.m_NavigationTypeChangeCallbacks.Dispatch(e);
-          }
-        }
-      },
-      329: (e, t, n) => {
-        function a(e, t) {
-          return (function (e, t) {
-            const n = e.findIndex(t);
-            return n >= 0 && (e.splice(n, 1), !0);
-          })(e, (e) => t == e);
-        }
-        n.d(t, { x9: () => a });
-      },
-      872: (e, t, n) => {
-        function a(e, t, n) {
-          return {
-            get() {
-              let e = n.value.bind(this);
-              return (
-                Object.prototype.hasOwnProperty.call(this, t) ||
-                  Object.defineProperty(this, t, { value: e }),
-                e
-              );
-            },
-          };
-        }
-        n.d(t, { o: () => a });
-      },
-      95: (e, t, n) => {
-        n.d(t, { l: () => r });
-        var a = n(329);
-        class r {
-          m_vecCallbacks = [];
-          Register(e) {
-            this.m_vecCallbacks.push(e);
-            return {
-              Unregister: () => {
-                a.x9(this.m_vecCallbacks, e);
-              },
-            };
-          }
-          Dispatch(...e) {
-            for (const t of Array.from(this.m_vecCallbacks)) t(...e);
-          }
-          ClearAllCallbacks() {
-            this.m_vecCallbacks = [];
-          }
-          CountRegistered() {
-            return this.m_vecCallbacks.length;
-          }
-          static PromiseFromAny(e) {
-            return new Promise((t) => {
-              let n = [];
-              const a = () => {
-                n.forEach((e) => e.Unregister()), t();
-              };
-              for (const t of e) n.push(t.Register(a));
-            });
-          }
-        }
-      },
-      784: (e, t, n) => {
-        function a(e) {
-          return (function (e, t) {
-            const n = t.lastIndexOf(".");
-            if (-1 == n) return !1;
-            const a = t.substring(0, n),
-              i = t.substring(n + 1),
-              o = r(e, a);
-            return null !== o && "function" == typeof o[i];
-          })(window, e);
-        }
-        function r(e, t) {
-          const n = (e) => e && "object" == typeof e;
-          let a = e?.SteamClient;
-          for (const e of t.split(".")) {
-            if (!n(a) || !(e in a)) return null;
-            a = a[e];
-          }
-          return n(a) ? a : null;
-        }
-        n.d(t, { Dp: () => a });
-      },
-      705: (e, t, n) => {
-        "VALVE_PUBLIC_PATH" in window
-          ? (n.p = window.VALVE_PUBLIC_PATH)
-          : console.error(
-              "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet",
-            ),
-          123 !== Array.from(new Set([123]))[0] &&
-            console.error("Should not include prototypejs.");
-      },
-      669: (e) => {
-        e.exports = jQuery;
-      },
-      629: (e, t, n) => {
-        n.d(t, { Cg: () => a });
-        function a(e, t, n, a) {
-          var r,
-            i = arguments.length,
-            o =
-              i < 3
-                ? t
-                : null === a
-                  ? (a = Object.getOwnPropertyDescriptor(t, n))
-                  : a;
-          if (
-            "object" == typeof Reflect &&
-            "function" == typeof Reflect.decorate
-          )
-            o = Reflect.decorate(e, t, n, a);
-          else
-            for (var s = e.length - 1; s >= 0; s--)
-              (r = e[s]) &&
-                (o = (i < 3 ? r(o) : i > 3 ? r(t, n, o) : r(t, n)) || o);
-          return i > 3 && o && Object.defineProperty(t, n, o), o;
-        }
-        Object.create;
-        Object.create;
-        "function" == typeof SuppressedError && SuppressedError;
-      },
+const __vite__mapDeps = (
+  i,
+  m = __vite__mapDeps,
+  d = m.f ||
+    (m.f = [
+      "./webgamepadnavigation.js?contenthash=C096YUfn",
+      "./clientpostmessage.js?contenthash=KNDFkyqw",
+      "../../css/legacy_web/webgamepadnavigation.css?contenthash=DdLU0sAX",
+      "./desktopbridge.js?contenthash=Cdpq8p9l",
+    ]),
+) => i.map((i) => d[i]);
+
+`VALVE_PUBLIC_PATH` in window
+  ? (globalThis.__webpack_public_path__ = window.VALVE_PUBLIC_PATH)
+  : console.error(
+      `VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet`,
+    ),
+  Array.from(new Set([123]))[0] !== 123 &&
+    console.error(`Should not include prototypejs.`);
+var e = jQuery;
+function t(e, t) {
+  return n(e, (e) => t == e);
+}
+function n(e, t) {
+  let n = e.findIndex(t);
+  return n >= 0 && (e.splice(n, 1), !0);
+}
+function r(e, t, n) {
+  return {
+    get() {
+      let e = n.value.bind(this);
+      return (
+        Object.prototype.hasOwnProperty.call(this, t) ||
+          Object.defineProperty(this, t, { value: e }),
+        e
+      );
     },
-    a = {};
-  function r(e) {
-    var t = a[e];
-    if (void 0 !== t) return t.exports;
-    var i = (a[e] = { exports: {} });
-    return n[e].call(i.exports, i, i.exports, r), i.exports;
-  }
-  (r.m = n),
-    (r.n = (e) => {
-      var t = e && e.__esModule ? () => e.default : () => e;
-      return r.d(t, { a: t }), t;
-    }),
-    (r.d = (e, t) => {
-      for (var n in t)
-        r.o(t, n) &&
-          !r.o(e, n) &&
-          Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
-    }),
-    (r.f = {}),
-    (r.e = (e) =>
-      Promise.all(Object.keys(r.f).reduce((t, n) => (r.f[n](e, t), t), []))),
-    (r.u = (e) =>
-      "javascript/legacy_web/" +
-      ({ 97: "desktop", 616: "gamepad" }[e] || e) +
-      ".js?contenthash=" +
-      {
-        97: "2481dc4e3e8812e5cc37",
-        322: "7f701b122fbddc6331bf",
-        616: "26032cf9d1e51d2c834d",
-      }[e]),
-    (r.miniCssF = (e) =>
-      "css/legacy_web/gamepad.css?contenthash=19ddf4825411373681e0"),
-    (r.g = (function () {
-      if ("object" == typeof globalThis) return globalThis;
-      try {
-        return this || new Function("return this")();
-      } catch (e) {
-        if ("object" == typeof window) return window;
-      }
-    })()),
-    (r.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
-    (e = {}),
-    (t = "legacy_web:"),
-    (r.l = (n, a, i, o) => {
-      if (e[n]) e[n].push(a);
-      else {
-        var s, c;
-        if (void 0 !== i)
-          for (
-            var l = document.getElementsByTagName("script"), p = 0;
-            p < l.length;
-            p++
-          ) {
-            var u = l[p];
-            if (
-              u.getAttribute("src") == n ||
-              u.getAttribute("data-webpack") == t + i
-            ) {
-              s = u;
-              break;
-            }
-          }
-        s ||
-          ((c = !0),
-          ((s = document.createElement("script")).charset = "utf-8"),
-          (s.timeout = 120),
-          r.nc && s.setAttribute("nonce", r.nc),
-          s.setAttribute("data-webpack", t + i),
-          (s.src = n)),
-          (e[n] = [a]);
-        var d = (t, a) => {
-            (s.onerror = s.onload = null), clearTimeout(_);
-            var r = e[n];
-            if (
-              (delete e[n],
-              s.parentNode && s.parentNode.removeChild(s),
-              r && r.forEach((e) => e(a)),
-              t)
-            )
-              return t(a);
+  };
+}
+var i = class {
+    m_vecCallbacks = [];
+    Register(e) {
+      return (
+        this.m_vecCallbacks.push(e),
+        {
+          Unregister: () => {
+            t(this.m_vecCallbacks, e);
           },
-          _ = setTimeout(
-            d.bind(null, void 0, { type: "timeout", target: s }),
-            12e4,
-          );
-        (s.onerror = d.bind(null, s.onerror)),
-          (s.onload = d.bind(null, s.onload)),
-          c && document.head.appendChild(s);
-      }
-    }),
-    (() => {
-      var e;
-      r.g.importScripts && (e = r.g.location + "");
-      var t = r.g.document;
-      if (!e && t && (t.currentScript && (e = t.currentScript.src), !e)) {
-        var n = t.getElementsByTagName("script");
-        if (n.length)
-          for (var a = n.length - 1; a > -1 && (!e || !/^http(s?):/.test(e)); )
-            e = n[a--].src;
-      }
-      if (!e)
-        throw new Error(
-          "Automatic publicPath is not supported in this browser",
-        );
-      (e = e
-        .replace(/#.*$/, "")
-        .replace(/\?.*$/, "")
-        .replace(/\/[^\/]+$/, "/")),
-        (r.p = e + "../../");
-    })(),
-    (() => {
-      if ("undefined" != typeof document) {
-        var e = (e) =>
-            new Promise((t, n) => {
-              var a = r.miniCssF(e),
-                i = r.p + a;
-              if (
-                ((e, t) => {
-                  for (
-                    var n = document.getElementsByTagName("link"), a = 0;
-                    a < n.length;
-                    a++
-                  ) {
-                    var r =
-                      (o = n[a]).getAttribute("data-href") ||
-                      o.getAttribute("href");
-                    if ("stylesheet" === o.rel && (r === e || r === t))
-                      return o;
-                  }
-                  var i = document.getElementsByTagName("style");
-                  for (a = 0; a < i.length; a++) {
-                    var o;
-                    if (
-                      (r = (o = i[a]).getAttribute("data-href")) === e ||
-                      r === t
-                    )
-                      return o;
-                  }
-                })(a, i)
-              )
-                return t();
-              ((e, t, n, a, r) => {
-                var i = document.createElement("link");
-                (i.rel = "stylesheet"),
-                  (i.type = "text/css"),
-                  (i.onerror = i.onload =
-                    (n) => {
-                      if (((i.onerror = i.onload = null), "load" === n.type))
-                        a();
-                      else {
-                        var o = n && n.type,
-                          s = (n && n.target && n.target.href) || t,
-                          c = new Error(
-                            "Loading CSS chunk " +
-                              e +
-                              " failed.\n(" +
-                              o +
-                              ": " +
-                              s +
-                              ")",
-                          );
-                        (c.name = "ChunkLoadError"),
-                          (c.code = "CSS_CHUNK_LOAD_FAILED"),
-                          (c.type = o),
-                          (c.request = s),
-                          i.parentNode && i.parentNode.removeChild(i),
-                          r(c);
-                      }
-                    }),
-                  (i.href = t),
-                  n
-                    ? n.parentNode.insertBefore(i, n.nextSibling)
-                    : document.head.appendChild(i);
-              })(e, i, null, t, n);
-            }),
-          t = { 792: 0 };
-        r.f.miniCss = (n, a) => {
-          t[n]
-            ? a.push(t[n])
-            : 0 !== t[n] &&
-              { 616: 1 }[n] &&
-              a.push(
-                (t[n] = e(n).then(
-                  () => {
-                    t[n] = 0;
-                  },
-                  (e) => {
-                    throw (delete t[n], e);
-                  },
-                )),
-              );
+        }
+      );
+    }
+    Dispatch(...e) {
+      for (let t of Array.from(this.m_vecCallbacks)) t(...e);
+    }
+    ClearAllCallbacks() {
+      this.m_vecCallbacks = [];
+    }
+    CountRegistered() {
+      return this.m_vecCallbacks.length;
+    }
+    static PromiseFromAny(e) {
+      return new Promise((t) => {
+        let n = [],
+          r = () => {
+            n.forEach((e) => e.Unregister()), t();
+          };
+        for (let t of e) n.push(t.Register(r));
+      });
+    }
+  },
+  a = class {
+    m_ActiveInputId;
+    m_ActiveInputTimeout;
+    m_config;
+    constructor(e) {
+      this.m_config = e;
+    }
+    Reset() {
+      (this.m_ActiveInputId = void 0),
+        this.m_ActiveInputTimeout != null &&
+          (clearInterval(this.m_ActiveInputTimeout),
+          (this.m_ActiveInputTimeout = void 0));
+    }
+    HandleInputButtonDown(e, t) {
+      if (this.m_ActiveInputId !== e && t != null) {
+        this.Reset(), (this.m_ActiveInputId = e);
+        let n = () => {
+          this.m_ActiveInputTimeout = window.setInterval(() => {
+            t();
+          }, this.m_config.repeatInterval_ms);
         };
+        this.m_config.firstRepeatInterval_ms == null ||
+        this.m_config.firstRepeatInterval_ms === this.m_config.repeatInterval_ms
+          ? n()
+          : (this.m_ActiveInputTimeout = window.setTimeout(() => {
+              t(), n();
+            }, this.m_config.firstRepeatInterval_ms));
       }
-    })(),
-    (() => {
-      var e = { 792: 0 };
-      r.f.j = (t, n) => {
-        var a = r.o(e, t) ? e[t] : void 0;
-        if (0 !== a)
-          if (a) n.push(a[2]);
-          else {
-            var i = new Promise((n, r) => (a = e[t] = [n, r]));
-            n.push((a[2] = i));
-            var o = r.p + r.u(t),
-              s = new Error();
-            r.l(
-              o,
-              (n) => {
-                if (r.o(e, t) && (0 !== (a = e[t]) && (e[t] = void 0), a)) {
-                  var i = n && ("load" === n.type ? "missing" : n.type),
-                    o = n && n.target && n.target.src;
-                  (s.message =
-                    "Loading chunk " + t + " failed.\n(" + i + ": " + o + ")"),
-                    (s.name = "ChunkLoadError"),
-                    (s.type = i),
-                    (s.request = o),
-                    a[1](s);
-                }
-              },
-              "chunk-" + t,
-              t,
-            );
-          }
-      };
-      var t = (t, n) => {
-          var a,
-            i,
-            [o, s, c] = n,
-            l = 0;
-          if (o.some((t) => 0 !== e[t])) {
-            for (a in s) r.o(s, a) && (r.m[a] = s[a]);
-            if (c) c(r);
-          }
-          for (t && t(n); l < o.length; l++)
-            (i = o[l]), r.o(e, i) && e[i] && e[i][0](), (e[i] = 0);
-        },
-        n = (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []);
-      n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
-    })();
-  r(705);
-  var i = r(669),
-    o = r.n(i),
-    s = r(629),
-    c = r(703),
-    l = r(872);
-  let p = [
-    { index: 0, type: c.pR.OK, category: "action" },
-    { index: 1, type: c.pR.CANCEL, category: "action" },
-    { index: 2, type: c.pR.SECONDARY, category: "action" },
-    { index: 3, type: c.pR.OPTIONS, category: "action" },
-    { index: 4, type: c.pR.BUMPER_LEFT, category: "action" },
-    { index: 5, type: c.pR.BUMPER_RIGHT, category: "action" },
-    { index: 6, type: c.pR.TRIGGER_LEFT, category: "action" },
-    { index: 7, type: c.pR.TRIGGER_RIGHT, category: "action" },
-    { index: 8, type: c.pR.SELECT, category: "action" },
-    { index: 9, type: c.pR.START, category: "action" },
-    { index: 10, type: c.pR.LSTICK_CLICK, category: "action" },
-    { index: 11, type: c.pR.RSTICK_CLICK, category: "action" },
-    { index: 12, type: c.pR.DIR_UP, category: "navigation" },
-    { index: 13, type: c.pR.DIR_DOWN, category: "navigation" },
-    { index: 14, type: c.pR.DIR_LEFT, category: "navigation" },
-    { index: 15, type: c.pR.DIR_RIGHT, category: "navigation" },
-    { index: 16, type: c.pR.STEAM_GUIDE, category: "action" },
-    { index: 17, type: c.pR.SELECT, category: "action" },
-  ];
-  class u extends c.nh {
+    }
+  },
+  o = class {
+    m_config;
+    m_inputRepeatGenerator;
+    m_repeatOnAxis = 0;
+    m_fnRepeatAllowed = () => !0;
+    constructor(e) {
+      (this.m_config = e), (this.m_inputRepeatGenerator = new a(e));
+    }
+    Reset() {
+      this.m_inputRepeatGenerator.Reset();
+    }
+    SetRepeatAllowed(e) {
+      (e ||= () => !0), (this.m_fnRepeatAllowed = e);
+    }
+    HandleInputButtonDown(e, t, n) {
+      this.m_fnRepeatAllowed() && this.m_config.inputsThatRepeat.has(e)
+        ? this.m_repeatOnAxis == 0 &&
+          ((e == s.DIR_UP || e == s.DIR_DOWN) && (this.m_repeatOnAxis = 2),
+          (e == s.DIR_LEFT || e == s.DIR_RIGHT) && (this.m_repeatOnAxis = 1),
+          t(),
+          this.m_inputRepeatGenerator.HandleInputButtonDown(e, n))
+        : (t(), this.m_inputRepeatGenerator.Reset());
+    }
+    HandleInputButtonUp(e) {
+      if (this.m_config.inputsThatRepeat.has(e) && this.m_repeatOnAxis != 0) {
+        let t = e == s.DIR_UP || e == s.DIR_DOWN,
+          n = e == s.DIR_LEFT || e == s.DIR_RIGHT;
+        ((this.m_repeatOnAxis == 2 && t) || (this.m_repeatOnAxis == 1 && n)) &&
+          ((this.m_repeatOnAxis = 0), this.m_inputRepeatGenerator.Reset());
+      } else this.m_inputRepeatGenerator.Reset();
+    }
+  },
+  s = (function (e) {
+    return (
+      (e[(e.INVALID = 0)] = `INVALID`),
+      (e[(e.OK = 1)] = `OK`),
+      (e[(e.CANCEL = 2)] = `CANCEL`),
+      (e[(e.SECONDARY = 3)] = `SECONDARY`),
+      (e[(e.OPTIONS = 4)] = `OPTIONS`),
+      (e[(e.BUMPER_LEFT = 5)] = `BUMPER_LEFT`),
+      (e[(e.BUMPER_RIGHT = 6)] = `BUMPER_RIGHT`),
+      (e[(e.TRIGGER_LEFT = 7)] = `TRIGGER_LEFT`),
+      (e[(e.TRIGGER_RIGHT = 8)] = `TRIGGER_RIGHT`),
+      (e[(e.DIR_UP = 9)] = `DIR_UP`),
+      (e[(e.DIR_DOWN = 10)] = `DIR_DOWN`),
+      (e[(e.DIR_LEFT = 11)] = `DIR_LEFT`),
+      (e[(e.DIR_RIGHT = 12)] = `DIR_RIGHT`),
+      (e[(e.SELECT = 13)] = `SELECT`),
+      (e[(e.START = 14)] = `START`),
+      (e[(e.LSTICK_CLICK = 15)] = `LSTICK_CLICK`),
+      (e[(e.RSTICK_CLICK = 16)] = `RSTICK_CLICK`),
+      (e[(e.LSTICK_TOUCH = 17)] = `LSTICK_TOUCH`),
+      (e[(e.RSTICK_TOUCH = 18)] = `RSTICK_TOUCH`),
+      (e[(e.LPAD_TOUCH = 19)] = `LPAD_TOUCH`),
+      (e[(e.LPAD_CLICK = 20)] = `LPAD_CLICK`),
+      (e[(e.RPAD_TOUCH = 21)] = `RPAD_TOUCH`),
+      (e[(e.RPAD_CLICK = 22)] = `RPAD_CLICK`),
+      (e[(e.REAR_LEFT_UPPER = 23)] = `REAR_LEFT_UPPER`),
+      (e[(e.REAR_LEFT_LOWER = 24)] = `REAR_LEFT_LOWER`),
+      (e[(e.REAR_RIGHT_UPPER = 25)] = `REAR_RIGHT_UPPER`),
+      (e[(e.REAR_RIGHT_LOWER = 26)] = `REAR_RIGHT_LOWER`),
+      (e[(e.STEAM_GUIDE = 27)] = `STEAM_GUIDE`),
+      (e[(e.STEAM_QUICK_MENU = 28)] = `STEAM_QUICK_MENU`),
+      (e[(e.DUMMY_INPUT = 29)] = `DUMMY_INPUT`),
+      e
+    );
+  })({}),
+  c = (function (e) {
+    return (
+      (e[(e.UNKNOWN = 0)] = `UNKNOWN`),
+      (e[(e.GAMEPAD = 1)] = `GAMEPAD`),
+      (e[(e.KEYBOARD_SIMULATOR = 2)] = `KEYBOARD_SIMULATOR`),
+      (e[(e.MOUSE = 3)] = `MOUSE`),
+      (e[(e.TOUCH = 4)] = `TOUCH`),
+      (e[(e.LPAD = 5)] = `LPAD`),
+      (e[(e.RPAD = 6)] = `RPAD`),
+      e
+    );
+  })({});
+function l(e) {
+  return e === 1 || e === 2;
+}
+var u = class {
+  m_OnGamepadDetectedCallbacks = new i();
+  m_ButtonDownCallbacks = new i();
+  m_ButtonUpCallbacks = new i();
+  m_AnalogCallbacks = new i();
+  m_NavigationTypeChangeCallbacks = new i();
+  m_eNavigationSourceType;
+  m_fLastActiveTime;
+  m_nLastActiveControllerIndex = -1;
+  m_ButtonRepeatHandler = new o({
+    inputsThatRepeat: new Set([9, 10, 11, 12]),
+    firstRepeatInterval_ms: 400,
+    repeatInterval_ms: 50,
+  });
+  m_bGamepadDetected = !1;
+  Init(e) {
+    return { Unregister: () => {} };
+  }
+  RegisterForGamepadDetected(e) {
+    return this.m_OnGamepadDetectedCallbacks.Register(e);
+  }
+  RegisterForGamepadButtonDown(e) {
+    return this.m_ButtonDownCallbacks.Register(e);
+  }
+  RegisterForGamepadButtonUp(e) {
+    return this.m_ButtonUpCallbacks.Register(e);
+  }
+  RegisterForAnalog(e) {
+    return this.m_AnalogCallbacks.Register(e);
+  }
+  RegisterForNavigationTypeChange(e) {
+    return this.m_NavigationTypeChangeCallbacks.Register(e);
+  }
+  SetSourceType(e) {
+    this.m_eNavigationSourceType = e;
+  }
+  GetSourceType() {
+    return this.m_eNavigationSourceType;
+  }
+  SetControllerActive(e) {
+    (this.m_nLastActiveControllerIndex = e),
+      (this.m_fLastActiveTime = Date.now());
+  }
+  GetActiveControllerIndex() {
+    return this.m_nLastActiveControllerIndex;
+  }
+  GetActiveControllerTime() {
+    return this.m_fLastActiveTime;
+  }
+  SetRepeatAllowed(e) {
+    this.m_ButtonRepeatHandler.SetRepeatAllowed(e);
+  }
+  OnGamepadDetected() {
+    console.log(`Gamepad detected`),
+      (this.m_bGamepadDetected = !0),
+      this.m_OnGamepadDetectedCallbacks.Dispatch();
+  }
+  OnButtonDown(e, t, n, r) {
+    t === void 0 && (t = -1),
+      this.SetControllerActive(t),
+      this.m_ButtonRepeatHandler.HandleInputButtonDown(
+        e,
+        () => this.DispatchButtonDown(e, !1, n, r),
+        () => this.DispatchButtonDown(e, !0, n, r),
+      );
+  }
+  OnButtonUp(e, t) {
+    t === void 0 && (t = -1),
+      this.SetControllerActive(t),
+      this.m_ButtonRepeatHandler.HandleInputButtonUp(e),
+      this.m_ButtonUpCallbacks.Dispatch(
+        e,
+        this.m_eNavigationSourceType,
+        this.m_nLastActiveControllerIndex,
+      );
+  }
+  DispatchButtonDown(e, t, n, r) {
+    this.m_ButtonDownCallbacks.Dispatch(
+      e,
+      this.m_eNavigationSourceType,
+      this.m_nLastActiveControllerIndex,
+      t,
+      n,
+      r,
+    );
+  }
+  OnAnalogPad(e, t, n, r) {
+    r === void 0 && (r = -1),
+      this.SetControllerActive(r),
+      this.m_AnalogCallbacks.Dispatch(
+        e,
+        this.m_nLastActiveControllerIndex,
+        t,
+        n,
+      );
+  }
+  OnNavigationTypeChanged(e) {
+    this.m_NavigationTypeChangeCallbacks.Dispatch(e);
+  }
+};
+function d(e, t, n, r) {
+  var i = arguments.length,
+    a =
+      i < 3 ? t : r === null ? (r = Object.getOwnPropertyDescriptor(t, n)) : r,
+    o;
+  if (typeof Reflect == `object` && typeof Reflect.decorate == `function`)
+    a = Reflect.decorate(e, t, n, r);
+  else
+    for (var s = e.length - 1; s >= 0; s--)
+      (o = e[s]) && (a = (i < 3 ? o(a) : i > 3 ? o(t, n, a) : o(t, n)) || a);
+  return i > 3 && a && Object.defineProperty(t, n, a), a;
+}
+var f = [
+    { index: 0, type: s.OK, category: `action` },
+    { index: 1, type: s.CANCEL, category: `action` },
+    { index: 2, type: s.SECONDARY, category: `action` },
+    { index: 3, type: s.OPTIONS, category: `action` },
+    { index: 4, type: s.BUMPER_LEFT, category: `action` },
+    { index: 5, type: s.BUMPER_RIGHT, category: `action` },
+    { index: 6, type: s.TRIGGER_LEFT, category: `action` },
+    { index: 7, type: s.TRIGGER_RIGHT, category: `action` },
+    { index: 8, type: s.SELECT, category: `action` },
+    { index: 9, type: s.START, category: `action` },
+    { index: 10, type: s.LSTICK_CLICK, category: `action` },
+    { index: 11, type: s.RSTICK_CLICK, category: `action` },
+    { index: 12, type: s.DIR_UP, category: `navigation` },
+    { index: 13, type: s.DIR_DOWN, category: `navigation` },
+    { index: 14, type: s.DIR_LEFT, category: `navigation` },
+    { index: 15, type: s.DIR_RIGHT, category: `navigation` },
+    { index: 16, type: s.STEAM_GUIDE, category: `action` },
+    { index: 17, type: s.SELECT, category: `action` },
+  ],
+  p = class extends u {
     m_rgGamepadStatus = [];
     constructor() {
       super(),
-        this.SetSourceType(c.Vz.GAMEPAD),
-        window.addEventListener("gamepadconnected", (e) => {
+        this.SetSourceType(c.GAMEPAD),
+        window.addEventListener(`gamepadconnected`, (e) => {
           this.m_bGamepadDetected ||
             (this.OnGamepadDetected(), this.PollGamepads());
         });
     }
     PollGamepads() {
-      let e = navigator.getGamepads(),
-        t = !1;
-      for (let n = 0; n < e.length; n++) {
-        let a = e[n];
-        if (!a) continue;
-        this.m_rgGamepadStatus[n] ||
-          (this.m_rgGamepadStatus[n] = { buttons: [] });
-        let r = this.m_rgGamepadStatus[n];
-        for (let e = 0; e < p.length; e++) {
-          let n = p[e],
-            i = n.index;
-          a.buttons[i] &&
-            (a.buttons[i].pressed
-              ? ((t = !0),
-                r.buttons[i] ||
-                  ((r.buttons[i] = !0), this.OnButtonDown(n.type)))
-              : r.buttons[i] && (this.OnButtonUp(n.type), (r.buttons[i] = !1)));
+      let e = navigator.getGamepads();
+      for (let t = 0; t < e.length; t++) {
+        let n = e[t];
+        if (!n) continue;
+        this.m_rgGamepadStatus[t] ||
+          (this.m_rgGamepadStatus[t] = { buttons: [] });
+        let r = this.m_rgGamepadStatus[t];
+        for (let e = 0; e < f.length; e++) {
+          let t = f[e],
+            i = t.index;
+          n.buttons[i] &&
+            (n.buttons[i].pressed
+              ? r.buttons[i] || ((r.buttons[i] = !0), this.OnButtonDown(t.type))
+              : r.buttons[i] && (this.OnButtonUp(t.type), (r.buttons[i] = !1)));
         }
       }
       requestAnimationFrame(this.PollGamepads);
     }
+  };
+d([r], p.prototype, `PollGamepads`, null);
+function m(e, t) {
+  let n = t.lastIndexOf(`.`);
+  if (n == -1) return !1;
+  let r = t.substring(0, n),
+    i = t.substring(n + 1),
+    a = g(e, r);
+  return a !== null && typeof a[i] == `function`;
+}
+function h(e) {
+  return m(window, e);
+}
+function g(e, t) {
+  let n = (e) => e && typeof e == `object`,
+    r = e?.SteamClient;
+  for (let e of t.split(`.`)) {
+    if (!n(r) || !(e in r)) return null;
+    r = r[e];
   }
-  (0, s.Cg)([l.o], u.prototype, "PollGamepads", null);
-  var d = r(784);
-  async function _(e) {
-    const { InitializeGamepadNavigation: t } = await Promise.all([
-      r.e(322),
-      r.e(616),
-    ]).then(r.bind(r, 425));
-    t(e);
-  }
-  r.p.endsWith("shared/") || (r.p = r.p + "shared/"),
-    o()(function () {
-      !(function () {
-        const e = new u();
-        navigator.userAgent.includes("Valve Steam Gamepad")
-          ? _(e)
-          : (0, d.Dp)("BrowserView.RegisterForMessageFromParent") &&
-              (0, d.Dp)("BrowserView.PostMessageToParent")
-            ? (async function () {
-                const { InitializeForDesktop: e } = await r
-                  .e(97)
-                  .then(r.bind(r, 988));
-                e();
-              })()
-            : e.RegisterForGamepadDetected(() => _(e));
-      })();
+  return n(r) ? r : null;
+}
+var _ = (function () {
+    let e = typeof document < `u` && document.createElement(`link`).relList;
+    return e && e.supports && e.supports(`modulepreload`)
+      ? `modulepreload`
+      : `preload`;
+  })(),
+  v = function (e, t) {
+    return new URL(e, t).href;
+  },
+  y = {},
+  b = function (e) {
+    return e.pathname.endsWith(`.css`);
+  },
+  x = function (e, t, n) {
+    if (t in e) return e[t];
+    let r = n();
+    if (!r) {
+      e[t] = void 0;
+      return;
+    }
+    let i = r.then(
+      () => {
+        e[t] = void 0;
+      },
+      (n) => {
+        throw ((e[t] = void 0), n);
+      },
+    );
+    return (e[t] = i), i;
+  },
+  S = function (e, t, n) {
+    let r = Promise.resolve();
+    if (t && t.length > 0) {
+      let e,
+        i = document.querySelector(`meta[property=csp-nonce]`),
+        a = i?.nonce || i?.getAttribute(`nonce`);
+      function o(e) {
+        return Promise.all(
+          e.map((e) =>
+            Promise.resolve(e).then(
+              (e) => ({ status: `fulfilled`, value: e }),
+              (e) => ({ status: `rejected`, reason: e }),
+            ),
+          ),
+        );
+      }
+      function s(e) {
+        return import.meta.resolve
+          ? new URL(import.meta.resolve(e))
+          : new URL(e, import.meta.url);
+      }
+      r = o(
+        t
+          .map((t) => {
+            t = v(t, n);
+            let r = s(t),
+              i = b(r);
+            return x(y, r.href, () => {
+              if (e === void 0) {
+                e = { all: new Set(), styles: new Set() };
+                let t = document.getElementsByTagName(`link`);
+                for (let n = t.length - 1; n >= 0; n--) {
+                  let r = t[n];
+                  e.all.add(r.href),
+                    r.rel === `stylesheet` && e.styles.add(r.href);
+                }
+              }
+              if ((i ? e.styles : e.all).has(r.href)) return;
+              let t = document.createElement(`link`);
+              if (
+                ((t.rel = i ? `stylesheet` : _),
+                i || (t.as = `script`),
+                (t.crossOrigin = ``),
+                (t.href = r.href),
+                a && t.setAttribute(`nonce`, a),
+                document.head.appendChild(t),
+                i)
+              )
+                return new Promise((e, n) => {
+                  t.addEventListener(`load`, e),
+                    t.addEventListener(`error`, () =>
+                      n(Error(`Unable to preload CSS for ${r}`)),
+                    );
+                });
+            });
+          })
+          .filter((e) => e !== void 0),
+      );
+    }
+    function i(e) {
+      let t = new Event(`vite:preloadError`, { cancelable: !0 });
+      if (((t.payload = e), window.dispatchEvent(t), !t.defaultPrevented))
+        throw e;
+    }
+    return r.then((t) => {
+      for (let e of t || []) e.status === `rejected` && i(e.reason);
+      return e().catch(i);
     });
-})();
+  };
+e(function () {
+  w();
+});
+function C() {
+  return !(
+    !h(`BrowserView.RegisterForMessageFromParent`) ||
+    !h(`BrowserView.PostMessageToParent`)
+  );
+}
+function w() {
+  let e = new p();
+  navigator.userAgent.includes(`Valve Steam Gamepad`)
+    ? T(e)
+    : C()
+      ? E()
+      : e.RegisterForGamepadDetected(() => T(e));
+}
+async function T(e) {
+  let { InitializeGamepadNavigation: t } = await S(
+    async () => {
+      let { InitializeGamepadNavigation: e } = await import(
+        `./webgamepadnavigation.js?contenthash=C096YUfn`
+      );
+      return { InitializeGamepadNavigation: e };
+    },
+    __vite__mapDeps([0, 1, 2]),
+    import.meta.url,
+  );
+  t(e);
+}
+async function E() {
+  let { InitializeForDesktop: e } = await S(
+    async () => {
+      let { InitializeForDesktop: e } = await import(
+        `./desktopbridge.js?contenthash=Cdpq8p9l`
+      );
+      return { InitializeForDesktop: e };
+    },
+    __vite__mapDeps([3, 1]),
+    import.meta.url,
+  );
+  e();
+}
+export {
+  c as a,
+  r as c,
+  s as i,
+  t as l,
+  d as n,
+  u as o,
+  l as r,
+  i as s,
+  h as t,
+  e as u,
+};

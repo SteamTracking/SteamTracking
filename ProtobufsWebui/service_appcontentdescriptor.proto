@@ -18,6 +18,7 @@ message AppRating {
 	optional uint32 required_age = 5;
 	optional bool use_age_gate = 6;
 	optional .AppRatingAuxData aux_data = 7;
+	optional int32 agency_rating = 8 [(.description) = "enum"];
 }
 
 message AppRatingAuxData {

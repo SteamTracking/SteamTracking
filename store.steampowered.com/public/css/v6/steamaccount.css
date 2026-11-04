@@ -21,16 +21,16 @@
 	font-size: 12px;
 	margin-top: -5px;
 	margin-bottom: 11px;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 .game_area_purchase_game .addfunds_purchase_action {
 	bottom: 0;
 	position: relative;
-	right: 0;
+	inset-inline-end: 0;
 }
 .game_area_purchase_game .addfunds_purchase_action.game_purchase_action {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .need_help_block
@@ -169,13 +169,13 @@
 }
 
 .steamaccount_currencyselect {
-	text-align: right;
+	text-align: end;
 }
 
 .steamaccount_currencyselect .dselect_container {
 	display: inline-block;
 	vertical-align: middle;
-	text-align: left;
+	text-align: start;
 }
 
 .currency_change_confirm_dialog {
@@ -245,12 +245,12 @@ p.currency_change_confirm_dialog_footer {
 
 .two_column.left {
 	width: 220px;
-    float: left;
+    float: inline-start;
 }
 
 .two_column.right {
 	vertical-align: top;
-	margin-left: 11px;
+	margin-inline-start: 11px;
 	overflow: hidden;
 }
 
@@ -288,8 +288,8 @@ p.currency_change_confirm_dialog_footer {
 
 		html.responsive.mobile_client .nav_item.active {
 			color: #07bfff;
-			padding-left: 10px;
-			padding-right: 10px;
+			padding-inline-start: 10px;
+			padding-inline-end: 10px;
 			background: linear-gradient(to top, #223D5A, transparent);
 			color: #67c1f5;
 			font-weight: 600;
@@ -306,7 +306,7 @@ p.currency_change_confirm_dialog_footer {
 	html.responsive .two_column.right {
 		width: auto;
 		display: block;
-		margin-left: 0;
+		margin-inline-start: 0;
 		margin-bottom: 8px;
         float: none;
 	}
@@ -334,7 +334,7 @@ p.currency_change_confirm_dialog_footer {
 		background: #1a9fff;
 		width: 2px;
 		height: 100%;
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 	}
 }
@@ -349,7 +349,7 @@ p.currency_change_confirm_dialog_footer {
 		background: #1a9fff;
 		width: 2px;
 		height: 100%;
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 	}
 }
@@ -383,7 +383,7 @@ p.currency_change_confirm_dialog_footer {
 
 	.two_column.right {
 		width: auto;
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 }
 
@@ -399,7 +399,7 @@ p.currency_change_confirm_dialog_footer {
 
 .content_two_column.right {
 	vertical-align: top;
-	margin-left: 20px;
+	margin-inline-start: 20px;
 	width: 300px;
 }
 
@@ -409,7 +409,7 @@ p.currency_change_confirm_dialog_footer {
 	html.responsive .content_two_column.right {
 		width: auto;
 		display: block;
-		margin-left: 0;
+		margin-inline-start: 0;
 		margin-bottom: 8px;
 	}
 
@@ -421,7 +421,7 @@ p.currency_change_confirm_dialog_footer {
 
 	.content_two_column.right {
 		width: auto;
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 }
 
@@ -515,7 +515,8 @@ body.v6 .account_settings_container .h3_content {
 }
 
 .account_settings_container blockquote {
-	margin: 5px 0 5px 25px;
+	margin-block: 5px;
+	margin-inline: 25px 0;
 }
 
 
@@ -543,12 +544,12 @@ body.v6 .account_settings_container .h3_content {
 .app_tag_form_ctn button,
 .text_filter_custom_banned_words_form_ctn button,
 .text_filter_custom_clean_words_form_ctn button {
-	float: right;
-	margin-left: 12px;
+	float: inline-end;
+	margin-inline-start: 12px;
 }
 .account_settings_container .half {
 	display: inline-block;
-	margin-right: 25px;
+	margin-inline-end: 25px;
     min-width: 35%;
 }
 
@@ -556,11 +557,12 @@ body.v6 .account_settings_container .h3_content {
 @media screen and (max-width: 910px)
 {
 	.account_settings_container blockquote {
-		margin: 5px 0 5px 5px;
+		margin-block: 5px;
+		margin-inline: 5px 0;
 	}
 
 	.account_settings_container .half {
-		margin-right: 10px;
+		margin-inline-end: 10px;
 		min-width: 35%;
 	}
 
@@ -638,7 +640,7 @@ body.v6 .account_settings_container .h3_content {
 	color: #67c1f5;
 	background-color: #283b47;
 
-	margin-right: 2px;
+	margin-inline-end: 2px;
 	border-radius: 3px;
 
 	box-shadow: 1px 1px 0 0 #000000;
@@ -660,10 +662,11 @@ body.v6 .account_settings_container .h3_content {
 	cursor: pointer;
 	width: 12px;
 	height: 12px;
-	margin: 3px 0 4px 5px;
+	margin-block: 3px 4px;
+	margin-inline: 5px 0;
 	vertical-align: top;
 	background-image: url( '/public/images/v6/delete_search_term.png' );
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 #text_filter_lab_ctn {
@@ -698,7 +701,8 @@ body.v6 .account_settings_container .h3_content {
 #text_filter_custom_clean_words_ctn .tag_downvoted {
 	display: inline-block;
 	white-space: nowrap;
-	margin: 4px 4px 4px 0;
+	margin-block: 4px;
+	margin-inline: 0 4px;
 }
 
 #text_filter_custom_banned_words_ctn .tag_downvoted > div {
@@ -719,14 +723,15 @@ body.v6 .account_settings_container .h3_content {
 .tag_downvoted > div > span.fixit {
 	width: 16px;
 	height: 16px;
-	margin: 1px 0 2px 3px;
+	margin-block: 1px 2px;
+	margin-inline: 3px 0;
 	background-image: url( '/store/public/images/v6/icon_fixit.png' );
 }
 
 .text_filter_toggle_icon {
 	width: 11px;
 	height: 11px;
-	margin-right: 7px;
+	margin-inline-end: 7px;
 	margin-top: 16px;
 	background: url('/public/images/v6/app/review_graph_expander.png');
 	background-repeat: no-repeat;
@@ -755,8 +760,8 @@ body.v6 .account_settings_container .h3_content {
 	display: inline-block;
 
 	border: 1px solid #163d55;
-	border-left: none;
-	border-right: none;
+	border-inline-start: none;
+	border-inline-end: none;
 	padding: 5px 0;
 	margin: 10px 0;
 }
@@ -773,20 +778,20 @@ body.v6 .account_settings_container .h3_content {
 .not_interested_container .count {
 	color: #cedbe9;
 	font-size: 34px;
-	text-align: right;
+	text-align: end;
 	width: 100px;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 }
 #primary_language {
-	margin-left: 25px;
+	margin-inline-start: 25px;
 }
 
 input[type=date] {
 	color: #ffffff;
 	background-color: #324965;
 	border-top: solid 1px #182636;
-	border-left: solid 1px #182636;
-	border-right: solid 1px #45566a;
+	border-inline-start: solid 1px #182636;
+	border-inline-end: solid 1px #45566a;
 	border-bottom: solid 1px #45566a;
 	padding: 4px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -820,7 +825,7 @@ input[type=date] {
 	background: rgba( 0, 0, 0, 0.2 );
 	margin-bottom: 24px;
 	min-height: 324px;
-	float: left;
+	float: inline-start;
 	color: #c6d4df;
 	width: inherit;
 	font-size: 12px;
@@ -835,7 +840,7 @@ input[type=date] {
 }
 
 .account_vat_setup_example {
-	padding-left: 15px;
+	padding-inline-start: 15px;
 }
 
 .account_vat_form_error {
@@ -852,7 +857,8 @@ input[type=date] {
 	border-radius: 2px;
 	padding: 0 9px;
 	line-height: 24px;
-	margin: 0 4px 4px 0;
+	margin-block: 0 4px;
+	margin-inline: 0 4px;
 	background: -webkit-linear-gradient( top, #8aaf05 5%, #6a8704 95%);background: linear-gradient( to bottom, #8aaf05 5%, #6a8704 95%);	color: #ffffff;
 }
 .app_age_gate_bypassed_remove {
@@ -861,7 +867,7 @@ input[type=date] {
 	background: no-repeat center center url('/public/images/v6/delete_search_term.png');
 	width: 12px;
 	height: 24px;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 .verification_alternative_link {
@@ -968,7 +974,7 @@ body.v6 h2.pageheader.youraccount_pageheader {
 }
 
 .steam_deck_component .steam_deck_component_details > div:nth-child(2) {
-	text-align: right;
+	text-align: end;
 }
 
 /* transaction details view */
@@ -982,16 +988,16 @@ body.v6 h2.pageheader.youraccount_pageheader {
 }
 
 .orderdetails_block {
-	padding-left: 30px;
+	padding-inline-start: 30px;
 }
 
 .orderdetails_block:not( :last-child ) {
-	padding-right: 30px;
-	border-right: 1px solid rgb( 78, 88, 100 );
+	padding-inline-end: 30px;
+	border-inline-end: 1px solid rgb( 78, 88, 100 );
 }
 
 .orderdetails_block:first-child {
-	padding-left: 0px;
+	padding-inline-start: 0px;
 }
 
 .orderdetails_header {
@@ -1034,7 +1040,7 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	font-size: 17px;
 	line-height: 22px;
 	color: #798089;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 }
 
 .orderdetails_shipstep.complete .orderdetails_shiptext {
@@ -1067,7 +1073,7 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	box-sizing: border-box;
 	position: absolute;
 	top: 0%;
-	left: 0%;
+	inset-inline-start: 0%;
 	background-clip: padding-box;
 }
 
@@ -1122,7 +1128,7 @@ body.v6 h2.pageheader.youraccount_pageheader {
 }
 
 .orderdetails_editshipping_dialog #submit_payment_info_btn {
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 
 .orderdetails_shippingdelay {

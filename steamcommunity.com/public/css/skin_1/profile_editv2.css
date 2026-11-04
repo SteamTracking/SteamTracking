@@ -182,6 +182,13 @@ select.gray_bevel {
 	margin-bottom: 4px;
 }
 
+.achievement_showcase_option {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+}
+
 .showcase_slot.openslot {
 	border: 2px dashed #5491CF;
 	border-radius: 5px;

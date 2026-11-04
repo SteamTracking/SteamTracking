@@ -1,8 +1,8 @@
-import { _, _ } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
-import { _, _ } from "./libraries.js?contenthash=eLY4-d-j";
-import { _, _ } from "./main.js?contenthash=BPPtNZbV";
-import { _ } from "./profile.js?contenthash=BNceQLfu";
-var _ = _((_, _) => {
+import { _, _ } from "./rolldown-runtime.js?contenthash=C8f2gWku";
+import { _, _ } from "./libraries.js?contenthash=BSMOk6Fq";
+import { _, _ } from "./main.js?contenthash=YyCh67xk";
+import { _ } from "./profile.js?contenthash=BnQbtE3K";
+var _ = _((_, _, _) => {
     (function (_, _) {
       typeof _ == `object` && _ !== void 0
         ? (_.exports = _())
@@ -328,48 +328,39 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }
       function _(_, _) {
         if (_) {
-          if (_(_.length)) {
+          if (_(_.length))
             _(_, function (_) {
               _(_, _);
             });
-            return;
+          else if (_.classList) _.classList.add(_);
+          else {
+            var _ = _.className.trim();
+            _
+              ? _.indexOf(_) < 0 && (_.className = `${_} ${_}`)
+              : (_.className = _);
           }
-          if (_.classList) {
-            _.classList.add(_);
-            return;
-          }
-          var _ = _.className.trim();
-          _
-            ? _.indexOf(_) < 0 && (_.className = `${_} ${_}`)
-            : (_.className = _);
         }
       }
       function _(_, _) {
-        if (_) {
-          if (_(_.length)) {
-            _(_, function (_) {
-              _(_, _);
-            });
-            return;
-          }
-          if (_.classList) {
-            _.classList.remove(_);
-            return;
-          }
-          _.className.indexOf(_) >= 0 &&
-            (_.className = _.className.replace(_, ``));
-        }
+        _ &&
+          (_(_.length)
+            ? _(_, function (_) {
+                _(_, _);
+              })
+            : _.classList
+              ? _.classList.remove(_)
+              : _.className.indexOf(_) >= 0 &&
+                (_.className = _.className.replace(_, ``)));
       }
       function _(_, _, _) {
-        if (_) {
-          if (_(_.length)) {
-            _(_, function (_) {
-              _(_, _, _);
-            });
-            return;
-          }
-          _ ? _(_, _) : _(_, _);
-        }
+        _ &&
+          (_(_.length)
+            ? _(_, function (_) {
+                _(_, _, _);
+              })
+            : _
+              ? _(_, _)
+              : _(_, _));
       }
       var _ = /([a-z\d])([A-Z])/g;
       function _(_) {
@@ -1736,12 +1727,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           },
           destroy: function () {
             var _ = this.element;
-            return _[_]
-              ? ((_[_] = void 0),
+            return (
+              _[_] &&
+                ((_[_] = void 0),
                 this.isImg && this.replaced && (_.src = this.originalUrl),
-                this.uncreate(),
-                this)
-              : this;
+                this.uncreate()),
+              this
+            );
           },
           move: function (_) {
             var _ =
@@ -2202,40 +2194,38 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           !_.scalable &&
                           (_.checkOrientation = !1),
                         !_.checkOrientation || !window.ArrayBuffer)
-                      ) {
+                      )
                         this.clone();
-                        return;
-                      }
-                      if (_.test(_)) {
+                      else if (_.test(_))
                         _.test(_) ? this.read(_(_)) : this.clone();
-                        return;
+                      else {
+                        var _ = new XMLHttpRequest(),
+                          _ = this.clone.bind(this);
+                        (this.reloading = !0),
+                          (this.xhr = _),
+                          (_.onabort = _),
+                          (_.onerror = _),
+                          (_.ontimeout = _),
+                          (_.onprogress = function () {
+                            _.getResponseHeader(`content-type`) !== _ &&
+                              _.abort();
+                          }),
+                          (_.onload = function () {
+                            _.read(_.response);
+                          }),
+                          (_.onloadend = function () {
+                            (_.reloading = !1), (_.xhr = null);
+                          }),
+                          _.checkCrossOrigin &&
+                            _(_) &&
+                            _.crossOrigin &&
+                            (_ = _(_)),
+                          _.open(`GET`, _, !0),
+                          (_.responseType = `arraybuffer`),
+                          (_.withCredentials =
+                            _.crossOrigin === `use-credentials`),
+                          _.send();
                       }
-                      var _ = new XMLHttpRequest(),
-                        _ = this.clone.bind(this);
-                      (this.reloading = !0),
-                        (this.xhr = _),
-                        (_.onabort = _),
-                        (_.onerror = _),
-                        (_.ontimeout = _),
-                        (_.onprogress = function () {
-                          _.getResponseHeader(`content-type`) !== _ &&
-                            _.abort();
-                        }),
-                        (_.onload = function () {
-                          _.read(_.response);
-                        }),
-                        (_.onloadend = function () {
-                          (_.reloading = !1), (_.xhr = null);
-                        }),
-                        _.checkCrossOrigin &&
-                          _(_) &&
-                          _.crossOrigin &&
-                          (_ = _(_)),
-                        _.open(`GET`, _, !0),
-                        (_.responseType = `arraybuffer`),
-                        (_.withCredentials =
-                          _.crossOrigin === `use-credentials`),
-                        _.send();
                     }
                   },
                 },
@@ -2303,20 +2293,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           (_.sized = !0),
                           _.build();
                       };
-                    if (_.naturalWidth && !_) {
+                    if (_.naturalWidth && !_)
                       _(_.naturalWidth, _.naturalHeight);
-                      return;
+                    else {
+                      var _ = document.createElement(`img`),
+                        _ = document.body || document.documentElement;
+                      (this.sizingImage = _),
+                        (_.onload = function () {
+                          _(_.width, _.height), _ || _.removeChild(_);
+                        }),
+                        (_.src = _.src),
+                        _ ||
+                          ((_.style.cssText = `left:0;max-height:none!important;max-width:none!important;min-height:0!important;min-width:0!important;opacity:0;position:absolute;top:0;z-index:-1;`),
+                          _.appendChild(_));
                     }
-                    var _ = document.createElement(`img`),
-                      _ = document.body || document.documentElement;
-                    (this.sizingImage = _),
-                      (_.onload = function () {
-                        _(_.width, _.height), _ || _.removeChild(_);
-                      }),
-                      (_.src = _.src),
-                      _ ||
-                        ((_.style.cssText = `left:0;max-height:none!important;max-width:none!important;min-height:0!important;min-width:0!important;opacity:0;position:absolute;top:0;z-index:-1;`),
-                        _.appendChild(_));
                   },
                 },
                 {

@@ -5,14 +5,14 @@
 }
 
 .newsrightcol {
-	float: right;
-	margin-left: 30px;
+	float: inline-end;
+	margin-inline-start: 30px;
 	width: 238px;
 	margin-top: 10px;
 }
 
 .newsmaincol {
-	float: left;
+	float: inline-start;
 	width: 670px;
 }
 
@@ -31,7 +31,7 @@
 		}
 
 a.linkbar {
-	padding-left: 12px;
+	padding-inline-start: 12px;
     display: block;
     color: #9fbbcb;
     font-size: 13px;
@@ -61,7 +61,7 @@ a.linkbar_active {
 
 a.linkbar_active:hover, a.linkbar_active:active, a.linkbar_active:visited {
     text-decoration: none;
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 
 .page_title_area
@@ -74,7 +74,7 @@ div#main_content {
 }
 
 #main_header {
-	float: left;
+	float: inline-start;
 	margin-bottom: 12px;
 	margin-top: 6px;
 }
@@ -87,7 +87,7 @@ div#main_content {
 }
 
 #main_header_expanded {
-	float: left;
+	float: inline-start;
 	margin-bottom: 12px;
 }
 
@@ -108,8 +108,8 @@ div#main_content {
 }
 
 #viewmodelinks {
-	float: right;
-	margin-left: 50px;
+	float: inline-end;
+	margin-inline-start: 50px;
 	font-size: 10px;
 	text-transform: uppercase;
 }
@@ -118,8 +118,8 @@ div#main_content {
 .view_inactive {
     background-color: rgba( 103, 193, 245, 0.2 );
     border-radius: 1px;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-inline-start: 5px;
+	padding-inline-end: 5px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 }
@@ -148,8 +148,8 @@ a.view_active:hover {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     color: #ffffff;
     border-radius: 1px;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-inline-start: 5px;
+	padding-inline-end: 5px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 }
@@ -162,7 +162,8 @@ a.view_active:hover {
 
 .block_content_inner
 {
-	padding: 4px 2px 4px 4px;
+	padding-block: 4px;
+	padding-inline: 4px 2px;
 }
 
 .block_sub_region {
@@ -202,8 +203,8 @@ div#news_search {
     border-radius: 3px;
 	color: #000000;
 	height: 23px;
-	padding-left: 4px;
-	margin-right: 8px;
+	padding-inline-start: 4px;
+	margin-inline-end: 8px;
 	z-index: 250;
 }
 
@@ -234,7 +235,7 @@ div#news_search {
 .newshr {
 	height: 1px;
 	width: 100%;
-	clear: left;
+	clear: inline-start;
 
     background-image: url( /public/images/v6/maincol_gradient_rule.png );
     background-repeat: no-repeat;
@@ -246,8 +247,8 @@ div#news_search {
 }
 
 .newsHeadlineBlock .feed {
-	text-align: right;
-	float: right;
+	text-align: end;
+	float: inline-end;
 	color: #666465;
 	width: 140px;
 	overflow: hidden;
@@ -260,9 +261,9 @@ div#news_search {
 }
 
 .newsHeadlineBlock .title {
-	float: left;
-	clear: left;
-	margin-left: 0px;
+	float: inline-start;
+	clear: inline-start;
+	margin-inline-start: 0px;
 	width: 440px;
 	overflow: hidden;
 	margin-bottom: 6px;
@@ -276,15 +277,15 @@ div#news_search {
 }
 
 .newsHeadlineBlock .date {
-	float: left;
-	margin-left: 15px;
+	float: inline-start;
+	margin-inline-start: 15px;
 	color: #666465;
 }
 
 .newsPostBlock {
 	margin-top: 10px;
 
-	clear: left;
+	clear: inline-start;
 	vertical-align: top;
 }
 
@@ -300,15 +301,15 @@ div#news_search {
 }
 
 .newsPostBlock .headline .date {
-	margin-left: 15px;
-	float: right;
-	clear: right;
+	margin-inline-start: 15px;
+	float: inline-end;
+	clear: inline-end;
 	color: #56707f;
 }
 
 .newsPostBlock .capsule {
-	float: left;
-	margin-right: 8px;
+	float: inline-start;
+	margin-inline-end: 8px;
 	width: 120px;
 }
 
@@ -337,7 +338,7 @@ div#news_search {
 	color: #c6d4df;
 	margin-top: 10px;
 	line-height: 19px;
-	clear: left;
+	clear: inline-start;
 	margin-bottom: 10px;
     font-size: 14px;
 			font-family: "Motiva Sans", Sans-serif;
@@ -380,7 +381,7 @@ div#news_search {
 
 .body img {
 	clear: both;
-	margin-right: 12px;
+	margin-inline-end: 12px;
     margin-top: 8px;
 	border-style: none;
 	max-width: 670px;
@@ -390,7 +391,7 @@ div#news_search {
 	float: none;
 	width: auto;
 	max-width: 100%;
-	margin-right: 0px;
+	margin-inline-end: 0px;
 }
 
 .share {
@@ -413,7 +414,7 @@ div#news_search {
 }
 
 .newsPostBlock .body li {
-	margin-left: 18px;
+	margin-inline-start: 18px;
 	margin-top:8px;
 	list-style-type: square;
 	color: #c6d4df;
@@ -435,7 +436,7 @@ div.autocomplete {
     color: #000;
     z-index: 500;
     margin-top: 6px;
-    margin-left: -5px;
+    margin-inline-start: -5px;
     width: 202px;
 }
 
@@ -467,8 +468,8 @@ div.autocomplete ul li.selected {
 	background-color:none;
 	border:1px solid #BBBBBB;
 	margin:12px;
-	margin-left:64px;
-	margin-right:64px;
+	margin-inline-start:64px;
+	margin-inline-end:64px;
 	padding:8px;
 	text-align:center;
 }

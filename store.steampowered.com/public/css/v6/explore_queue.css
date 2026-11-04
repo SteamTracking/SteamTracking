@@ -29,7 +29,8 @@
 	border-radius: 2px;
 	padding: 0 9px;
 	line-height: 24px;
-	margin: 0 4px 4px 0;
+	margin-block: 0 4px;
+	margin-inline: 0 4px;
 	background: #67c1f5; /* Old browsers */
 	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
@@ -46,7 +47,7 @@
 	background: no-repeat center center url('/public/images/v6/delete_search_term.png');
 	width: 12px;
 	height: 24px;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 
@@ -74,7 +75,7 @@
 
 .discovery_queue_app
 {
-	float: left;
+	float: inline-start;
 	margin-bottom: 15px;
 }
 .discover_queue_app_img
@@ -159,12 +160,14 @@ body.v6 .leftcol h2.pageheader {
 
 			color: white;
 	float: inline-start;
-	padding: 0px 10px 0px 0px;
+	padding-block: 0px;
+	padding-inline: 0px 10px;
 }
 
 .explore_rightcol_text {
 	color: #8e979f;
-	padding: 10px 0px 3px 10px;
+	padding-block: 10px 3px;
+	padding-inline: 10px 0px;
 }
 
 .explore_rightcol_explain {

@@ -4064,6 +4064,7 @@ div#webapi_panel a.webapi_key_unsecured {
 }
 
 .emphasis,
+div.emphasis,
 .modal p.emphasis {
 	font-style: italic;
 	color: #dfd1a4;

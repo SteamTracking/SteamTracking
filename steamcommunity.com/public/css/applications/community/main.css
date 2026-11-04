@@ -16,7 +16,6 @@ dialog .vBujnFG7jC4- {
 .JFSzUCtMXFw- {
   opacity: 1;
   z-index: 1600;
-  -webkit-user-select: none;
   user-select: none;
   background: radial-gradient(at 50% 0, #3c4047 0% 50%, #33363d 100%);
   padding: 4px;
@@ -174,28 +173,7 @@ html._75X6HzwBhoc- body {
   height: 14px;
   transform: rotate(-90deg);
 }
-._76JQCA2LSJ0-._14S4-KzfcFY-
-  .SVGIcon_DownArrowContextMenu:is(
-    :lang(ae),
-    :lang(ar),
-    :lang(arc),
-    :lang(bcc),
-    :lang(bqi),
-    :lang(ckb),
-    :lang(dv),
-    :lang(fa),
-    :lang(glk),
-    :lang(he),
-    :lang(ku),
-    :lang(mzn),
-    :lang(nqo),
-    :lang(pnb),
-    :lang(ps),
-    :lang(sd),
-    :lang(ug),
-    :lang(ur),
-    :lang(yi)
-  ) {
+._76JQCA2LSJ0-._14S4-KzfcFY- .SVGIcon_DownArrowContextMenu:dir(rtl) {
   transform: rotate(90deg);
 }
 ._76JQCA2LSJ0-._14S4-KzfcFY- .SVGIcon_DownArrowContextMenu {
@@ -323,27 +301,7 @@ html._75X6HzwBhoc- body {
   max-height: 320px;
   overflow: visible;
 }
-._6Yj8-lV-G6s-:is(
-    :lang(ae),
-    :lang(ar),
-    :lang(arc),
-    :lang(bcc),
-    :lang(bqi),
-    :lang(ckb),
-    :lang(dv),
-    :lang(fa),
-    :lang(glk),
-    :lang(he),
-    :lang(ku),
-    :lang(mzn),
-    :lang(nqo),
-    :lang(pnb),
-    :lang(ps),
-    :lang(sd),
-    :lang(ug),
-    :lang(ur),
-    :lang(yi)
-  ) {
+._6Yj8-lV-G6s-:dir(rtl) {
   scale: -1 1;
 }
 ._3wocDLbcTD8- {
@@ -358,7 +316,6 @@ html._75X6HzwBhoc- body {
   fill: #e41e25;
 }
 .jHu--n-rRVg- {
-  -webkit-backdrop-filter: blur(100px);
   backdrop-filter: blur(100px);
   background-color: #000000b3;
   border-radius: 20px;
@@ -387,99 +344,14 @@ html._75X6HzwBhoc- body {
 .pLa4qNp59Zk- {
   color: #199fff;
 }
-.l1fCDA9qLjs-:is(
-    :lang(ae),
-    :lang(ar),
-    :lang(arc),
-    :lang(bcc),
-    :lang(bqi),
-    :lang(ckb),
-    :lang(dv),
-    :lang(fa),
-    :lang(glk),
-    :lang(he),
-    :lang(ku),
-    :lang(mzn),
-    :lang(nqo),
-    :lang(pnb),
-    :lang(ps),
-    :lang(sd),
-    :lang(ug),
-    :lang(ur),
-    :lang(yi)
-  )
-  .cyGfeX9E1fQ- {
+.l1fCDA9qLjs-:dir(rtl) .cyGfeX9E1fQ- {
   transform: translate(730px);
 }
-:is(
-    .l1fCDA9qLjs-:is(
-        :lang(ae),
-        :lang(ar),
-        :lang(arc),
-        :lang(bcc),
-        :lang(bqi),
-        :lang(ckb),
-        :lang(dv),
-        :lang(fa),
-        :lang(glk),
-        :lang(he),
-        :lang(ku),
-        :lang(mzn),
-        :lang(nqo),
-        :lang(pnb),
-        :lang(ps),
-        :lang(sd),
-        :lang(ug),
-        :lang(ur),
-        :lang(yi)
-      )
-      .YXIMz4wdhrY-,
-    .l1fCDA9qLjs-:is(
-        :lang(ae),
-        :lang(ar),
-        :lang(arc),
-        :lang(bcc),
-        :lang(bqi),
-        :lang(ckb),
-        :lang(dv),
-        :lang(fa),
-        :lang(glk),
-        :lang(he),
-        :lang(ku),
-        :lang(mzn),
-        :lang(nqo),
-        :lang(pnb),
-        :lang(ps),
-        :lang(sd),
-        :lang(ug),
-        :lang(ur),
-        :lang(yi)
-      )
-      .BnTJsk4gKtw-
-  ) {
+.l1fCDA9qLjs-:dir(rtl) .YXIMz4wdhrY-,
+.l1fCDA9qLjs-:dir(rtl) .BnTJsk4gKtw- {
   transform: translate(-300px);
 }
-.bEpnbOp1x2c-:is(
-    :lang(ae),
-    :lang(ar),
-    :lang(arc),
-    :lang(bcc),
-    :lang(bqi),
-    :lang(ckb),
-    :lang(dv),
-    :lang(fa),
-    :lang(glk),
-    :lang(he),
-    :lang(ku),
-    :lang(mzn),
-    :lang(nqo),
-    :lang(pnb),
-    :lang(ps),
-    :lang(sd),
-    :lang(ug),
-    :lang(ur),
-    :lang(yi)
-  ) {
+.bEpnbOp1x2c-:dir(rtl) {
   scale: -1 1;
 }
 body._6c1lFVtFgHw-,
@@ -568,7 +440,6 @@ dialog.djO4HBSaVEk-::backdrop {
 .tWKaLgB0owM- {
   opacity: 1;
   z-index: 1600;
-  -webkit-user-select: none;
   user-select: none;
   background: radial-gradient(at 50% 0, #3c4047 0% 50%, #33363d 100%);
   padding: 4px;
@@ -849,7 +720,6 @@ dialog.djO4HBSaVEk-::backdrop {
   box-sizing: border-box;
   color: #17181c;
   text-shadow: 1px 1px 2px #ffffff4d;
-  -webkit-user-select: none;
   user-select: none;
   text-overflow: ellipsis;
   white-space: normal;
@@ -883,7 +753,6 @@ dialog.djO4HBSaVEk-::backdrop {
 .DfVfulWxy6w- {
   box-sizing: border-box;
   color: #e0e1e6;
-  -webkit-user-select: none;
   user-select: none;
   background-color: #696773;
   border-radius: 2px;
@@ -1157,7 +1026,7 @@ dialog.djO4HBSaVEk-::backdrop {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
-  text-align: left;
+  text-align: start;
   box-sizing: border-box;
   background: 0 0;
   border: none;
@@ -1643,27 +1512,7 @@ dialog.djO4HBSaVEk-::backdrop {
   height: 24px;
   display: flex;
 }
-.ZDbqaflVHdA-:is(
-    :lang(ae),
-    :lang(ar),
-    :lang(arc),
-    :lang(bcc),
-    :lang(bqi),
-    :lang(ckb),
-    :lang(dv),
-    :lang(fa),
-    :lang(glk),
-    :lang(he),
-    :lang(ku),
-    :lang(mzn),
-    :lang(nqo),
-    :lang(pnb),
-    :lang(ps),
-    :lang(sd),
-    :lang(ug),
-    :lang(ur),
-    :lang(yi)
-  ) {
+.ZDbqaflVHdA-:dir(rtl) {
   scale: -1 1;
 }
 .UMyrhr95lTw- {
@@ -1913,7 +1762,6 @@ dialog.djO4HBSaVEk-::backdrop {
 .HDo1-kQMln0- {
   text-transform: uppercase;
   color: #1a9fff;
-  -webkit-user-select: none;
   user-select: none;
   word-wrap: break-word;
   min-width: 0;
@@ -1971,7 +1819,6 @@ dialog.djO4HBSaVEk-::backdrop {
 .rB0bL-tvRQQ- {
   text-transform: none;
   cursor: pointer;
-  -webkit-user-select: none;
   user-select: none;
 }
 .rB0bL-tvRQQ-.DesktopUI,
@@ -2952,27 +2799,7 @@ button.VCubv9Yx4Q0-.DialogButton:enabled:active:hover:before {
   transition: box-shadow 50ms ease-out;
   position: relative;
 }
-.afIqIzaVohw-:is(
-    :lang(ae),
-    :lang(ar),
-    :lang(arc),
-    :lang(bcc),
-    :lang(bqi),
-    :lang(ckb),
-    :lang(dv),
-    :lang(fa),
-    :lang(glk),
-    :lang(he),
-    :lang(ku),
-    :lang(mzn),
-    :lang(nqo),
-    :lang(pnb),
-    :lang(ps),
-    :lang(sd),
-    :lang(ug),
-    :lang(ur),
-    :lang(yi)
-  ) {
+.afIqIzaVohw-:dir(rtl) {
   scale: -1 1;
 }
 .afIqIzaVohw-.gpfocus {
@@ -3446,27 +3273,7 @@ button.Cw4uxrkspko- svg {
     var(--normalized-slider-default-value)
   );
 }
-.HsioiS8tolM-:is(
-    :lang(ae),
-    :lang(ar),
-    :lang(arc),
-    :lang(bcc),
-    :lang(bqi),
-    :lang(ckb),
-    :lang(dv),
-    :lang(fa),
-    :lang(glk),
-    :lang(he),
-    :lang(ku),
-    :lang(mzn),
-    :lang(nqo),
-    :lang(pnb),
-    :lang(ps),
-    :lang(sd),
-    :lang(ug),
-    :lang(ur),
-    :lang(yi)
-  ) {
+.HsioiS8tolM-:dir(rtl) {
   --inverse-normalized-value: calc(-1 * (1 - var(--normalized-slider-value)));
   --inverse-normalized-default-value: calc(
     -1 *
@@ -4725,7 +4532,6 @@ span.BIn0SMiIGQE- {
 }
 ._1KwVY7BX6rU-.R-Oc7EZNA2k-:before {
   content: " ";
-  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   position: absolute;
   inset: 0;
@@ -4739,7 +4545,6 @@ span.BIn0SMiIGQE- {
   height: auto;
   margin: 0 auto;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(#000 80%, #0000 100%);
   mask-image: linear-gradient(#000 80%, #0000 100%);
 }
 .Pb0e9y8A1NQ-._1KwVY7BX6rU- {
@@ -5411,6 +5216,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-text-green-description: #00af00;
   --color-text-green-note: #006b00;
 }
+:root[data-accent-color="greyneutral"],
 :root [data-accent-color="greyneutral"] {
   --color-accent-1: var(--color-greyneutral-1);
   --color-accent-2: var(--color-greyneutral-2);
@@ -5425,20 +5231,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-greyneutral-11);
   --color-accent-12: var(--color-greyneutral-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="greyneutral"]) {
-  --color-accent-1: var(--color-greyneutral-1);
-  --color-accent-2: var(--color-greyneutral-2);
-  --color-accent-3: var(--color-greyneutral-3);
-  --color-accent-4: var(--color-greyneutral-4);
-  --color-accent-5: var(--color-greyneutral-5);
-  --color-accent-6: var(--color-greyneutral-6);
-  --color-accent-7: var(--color-greyneutral-7);
-  --color-accent-8: var(--color-greyneutral-8);
-  --color-accent-9: var(--color-greyneutral-9);
-  --color-accent-10: var(--color-greyneutral-10);
-  --color-accent-11: var(--color-greyneutral-11);
-  --color-accent-12: var(--color-greyneutral-12);
-}
+:root[data-dull-color="greyneutral"],
 :root [data-dull-color="greyneutral"] {
   --color-dull-1: var(--color-greyneutral-1);
   --color-dull-2: var(--color-greyneutral-2);
@@ -5453,20 +5246,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-greyneutral-11);
   --color-dull-12: var(--color-greyneutral-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="greyneutral"]) {
-  --color-dull-1: var(--color-greyneutral-1);
-  --color-dull-2: var(--color-greyneutral-2);
-  --color-dull-3: var(--color-greyneutral-3);
-  --color-dull-4: var(--color-greyneutral-4);
-  --color-dull-5: var(--color-greyneutral-5);
-  --color-dull-6: var(--color-greyneutral-6);
-  --color-dull-7: var(--color-greyneutral-7);
-  --color-dull-8: var(--color-greyneutral-8);
-  --color-dull-9: var(--color-greyneutral-9);
-  --color-dull-10: var(--color-greyneutral-10);
-  --color-dull-11: var(--color-greyneutral-11);
-  --color-dull-12: var(--color-greyneutral-12);
-}
+:root[data-accent-color="mauve"],
 :root [data-accent-color="mauve"] {
   --color-accent-1: var(--color-mauve-1);
   --color-accent-2: var(--color-mauve-2);
@@ -5481,20 +5261,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-mauve-11);
   --color-accent-12: var(--color-mauve-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="mauve"]) {
-  --color-accent-1: var(--color-mauve-1);
-  --color-accent-2: var(--color-mauve-2);
-  --color-accent-3: var(--color-mauve-3);
-  --color-accent-4: var(--color-mauve-4);
-  --color-accent-5: var(--color-mauve-5);
-  --color-accent-6: var(--color-mauve-6);
-  --color-accent-7: var(--color-mauve-7);
-  --color-accent-8: var(--color-mauve-8);
-  --color-accent-9: var(--color-mauve-9);
-  --color-accent-10: var(--color-mauve-10);
-  --color-accent-11: var(--color-mauve-11);
-  --color-accent-12: var(--color-mauve-12);
-}
+:root[data-dull-color="mauve"],
 :root [data-dull-color="mauve"] {
   --color-dull-1: var(--color-mauve-1);
   --color-dull-2: var(--color-mauve-2);
@@ -5509,20 +5276,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-mauve-11);
   --color-dull-12: var(--color-mauve-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="mauve"]) {
-  --color-dull-1: var(--color-mauve-1);
-  --color-dull-2: var(--color-mauve-2);
-  --color-dull-3: var(--color-mauve-3);
-  --color-dull-4: var(--color-mauve-4);
-  --color-dull-5: var(--color-mauve-5);
-  --color-dull-6: var(--color-mauve-6);
-  --color-dull-7: var(--color-mauve-7);
-  --color-dull-8: var(--color-mauve-8);
-  --color-dull-9: var(--color-mauve-9);
-  --color-dull-10: var(--color-mauve-10);
-  --color-dull-11: var(--color-mauve-11);
-  --color-dull-12: var(--color-mauve-12);
-}
+:root[data-accent-color="slate"],
 :root [data-accent-color="slate"] {
   --color-accent-1: var(--color-slate-1);
   --color-accent-2: var(--color-slate-2);
@@ -5537,20 +5291,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-slate-11);
   --color-accent-12: var(--color-slate-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="slate"]) {
-  --color-accent-1: var(--color-slate-1);
-  --color-accent-2: var(--color-slate-2);
-  --color-accent-3: var(--color-slate-3);
-  --color-accent-4: var(--color-slate-4);
-  --color-accent-5: var(--color-slate-5);
-  --color-accent-6: var(--color-slate-6);
-  --color-accent-7: var(--color-slate-7);
-  --color-accent-8: var(--color-slate-8);
-  --color-accent-9: var(--color-slate-9);
-  --color-accent-10: var(--color-slate-10);
-  --color-accent-11: var(--color-slate-11);
-  --color-accent-12: var(--color-slate-12);
-}
+:root[data-dull-color="slate"],
 :root [data-dull-color="slate"] {
   --color-dull-1: var(--color-slate-1);
   --color-dull-2: var(--color-slate-2);
@@ -5565,20 +5306,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-slate-11);
   --color-dull-12: var(--color-slate-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="slate"]) {
-  --color-dull-1: var(--color-slate-1);
-  --color-dull-2: var(--color-slate-2);
-  --color-dull-3: var(--color-slate-3);
-  --color-dull-4: var(--color-slate-4);
-  --color-dull-5: var(--color-slate-5);
-  --color-dull-6: var(--color-slate-6);
-  --color-dull-7: var(--color-slate-7);
-  --color-dull-8: var(--color-slate-8);
-  --color-dull-9: var(--color-slate-9);
-  --color-dull-10: var(--color-slate-10);
-  --color-dull-11: var(--color-slate-11);
-  --color-dull-12: var(--color-slate-12);
-}
+:root[data-accent-color="sage"],
 :root [data-accent-color="sage"] {
   --color-accent-1: var(--color-sage-1);
   --color-accent-2: var(--color-sage-2);
@@ -5593,20 +5321,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-sage-11);
   --color-accent-12: var(--color-sage-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="sage"]) {
-  --color-accent-1: var(--color-sage-1);
-  --color-accent-2: var(--color-sage-2);
-  --color-accent-3: var(--color-sage-3);
-  --color-accent-4: var(--color-sage-4);
-  --color-accent-5: var(--color-sage-5);
-  --color-accent-6: var(--color-sage-6);
-  --color-accent-7: var(--color-sage-7);
-  --color-accent-8: var(--color-sage-8);
-  --color-accent-9: var(--color-sage-9);
-  --color-accent-10: var(--color-sage-10);
-  --color-accent-11: var(--color-sage-11);
-  --color-accent-12: var(--color-sage-12);
-}
+:root[data-dull-color="sage"],
 :root [data-dull-color="sage"] {
   --color-dull-1: var(--color-sage-1);
   --color-dull-2: var(--color-sage-2);
@@ -5621,20 +5336,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-sage-11);
   --color-dull-12: var(--color-sage-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="sage"]) {
-  --color-dull-1: var(--color-sage-1);
-  --color-dull-2: var(--color-sage-2);
-  --color-dull-3: var(--color-sage-3);
-  --color-dull-4: var(--color-sage-4);
-  --color-dull-5: var(--color-sage-5);
-  --color-dull-6: var(--color-sage-6);
-  --color-dull-7: var(--color-sage-7);
-  --color-dull-8: var(--color-sage-8);
-  --color-dull-9: var(--color-sage-9);
-  --color-dull-10: var(--color-sage-10);
-  --color-dull-11: var(--color-sage-11);
-  --color-dull-12: var(--color-sage-12);
-}
+:root[data-accent-color="olive"],
 :root [data-accent-color="olive"] {
   --color-accent-1: var(--color-olive-1);
   --color-accent-2: var(--color-olive-2);
@@ -5649,20 +5351,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-olive-11);
   --color-accent-12: var(--color-olive-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="olive"]) {
-  --color-accent-1: var(--color-olive-1);
-  --color-accent-2: var(--color-olive-2);
-  --color-accent-3: var(--color-olive-3);
-  --color-accent-4: var(--color-olive-4);
-  --color-accent-5: var(--color-olive-5);
-  --color-accent-6: var(--color-olive-6);
-  --color-accent-7: var(--color-olive-7);
-  --color-accent-8: var(--color-olive-8);
-  --color-accent-9: var(--color-olive-9);
-  --color-accent-10: var(--color-olive-10);
-  --color-accent-11: var(--color-olive-11);
-  --color-accent-12: var(--color-olive-12);
-}
+:root[data-dull-color="olive"],
 :root [data-dull-color="olive"] {
   --color-dull-1: var(--color-olive-1);
   --color-dull-2: var(--color-olive-2);
@@ -5677,20 +5366,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-olive-11);
   --color-dull-12: var(--color-olive-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="olive"]) {
-  --color-dull-1: var(--color-olive-1);
-  --color-dull-2: var(--color-olive-2);
-  --color-dull-3: var(--color-olive-3);
-  --color-dull-4: var(--color-olive-4);
-  --color-dull-5: var(--color-olive-5);
-  --color-dull-6: var(--color-olive-6);
-  --color-dull-7: var(--color-olive-7);
-  --color-dull-8: var(--color-olive-8);
-  --color-dull-9: var(--color-olive-9);
-  --color-dull-10: var(--color-olive-10);
-  --color-dull-11: var(--color-olive-11);
-  --color-dull-12: var(--color-olive-12);
-}
+:root[data-accent-color="sand"],
 :root [data-accent-color="sand"] {
   --color-accent-1: var(--color-sand-1);
   --color-accent-2: var(--color-sand-2);
@@ -5705,20 +5381,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-sand-11);
   --color-accent-12: var(--color-sand-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="sand"]) {
-  --color-accent-1: var(--color-sand-1);
-  --color-accent-2: var(--color-sand-2);
-  --color-accent-3: var(--color-sand-3);
-  --color-accent-4: var(--color-sand-4);
-  --color-accent-5: var(--color-sand-5);
-  --color-accent-6: var(--color-sand-6);
-  --color-accent-7: var(--color-sand-7);
-  --color-accent-8: var(--color-sand-8);
-  --color-accent-9: var(--color-sand-9);
-  --color-accent-10: var(--color-sand-10);
-  --color-accent-11: var(--color-sand-11);
-  --color-accent-12: var(--color-sand-12);
-}
+:root[data-dull-color="sand"],
 :root [data-dull-color="sand"] {
   --color-dull-1: var(--color-sand-1);
   --color-dull-2: var(--color-sand-2);
@@ -5733,20 +5396,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-sand-11);
   --color-dull-12: var(--color-sand-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="sand"]) {
-  --color-dull-1: var(--color-sand-1);
-  --color-dull-2: var(--color-sand-2);
-  --color-dull-3: var(--color-sand-3);
-  --color-dull-4: var(--color-sand-4);
-  --color-dull-5: var(--color-sand-5);
-  --color-dull-6: var(--color-sand-6);
-  --color-dull-7: var(--color-sand-7);
-  --color-dull-8: var(--color-sand-8);
-  --color-dull-9: var(--color-sand-9);
-  --color-dull-10: var(--color-sand-10);
-  --color-dull-11: var(--color-sand-11);
-  --color-dull-12: var(--color-sand-12);
-}
+:root[data-accent-color="tomato"],
 :root [data-accent-color="tomato"] {
   --color-accent-1: var(--color-tomato-1);
   --color-accent-2: var(--color-tomato-2);
@@ -5761,20 +5411,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-tomato-11);
   --color-accent-12: var(--color-tomato-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="tomato"]) {
-  --color-accent-1: var(--color-tomato-1);
-  --color-accent-2: var(--color-tomato-2);
-  --color-accent-3: var(--color-tomato-3);
-  --color-accent-4: var(--color-tomato-4);
-  --color-accent-5: var(--color-tomato-5);
-  --color-accent-6: var(--color-tomato-6);
-  --color-accent-7: var(--color-tomato-7);
-  --color-accent-8: var(--color-tomato-8);
-  --color-accent-9: var(--color-tomato-9);
-  --color-accent-10: var(--color-tomato-10);
-  --color-accent-11: var(--color-tomato-11);
-  --color-accent-12: var(--color-tomato-12);
-}
+:root[data-dull-color="tomato"],
 :root [data-dull-color="tomato"] {
   --color-dull-1: var(--color-tomato-1);
   --color-dull-2: var(--color-tomato-2);
@@ -5789,20 +5426,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-tomato-11);
   --color-dull-12: var(--color-tomato-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="tomato"]) {
-  --color-dull-1: var(--color-tomato-1);
-  --color-dull-2: var(--color-tomato-2);
-  --color-dull-3: var(--color-tomato-3);
-  --color-dull-4: var(--color-tomato-4);
-  --color-dull-5: var(--color-tomato-5);
-  --color-dull-6: var(--color-tomato-6);
-  --color-dull-7: var(--color-tomato-7);
-  --color-dull-8: var(--color-tomato-8);
-  --color-dull-9: var(--color-tomato-9);
-  --color-dull-10: var(--color-tomato-10);
-  --color-dull-11: var(--color-tomato-11);
-  --color-dull-12: var(--color-tomato-12);
-}
+:root[data-accent-color="red"],
 :root [data-accent-color="red"] {
   --color-accent-1: var(--color-red-1);
   --color-accent-2: var(--color-red-2);
@@ -5817,20 +5441,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-red-11);
   --color-accent-12: var(--color-red-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="red"]) {
-  --color-accent-1: var(--color-red-1);
-  --color-accent-2: var(--color-red-2);
-  --color-accent-3: var(--color-red-3);
-  --color-accent-4: var(--color-red-4);
-  --color-accent-5: var(--color-red-5);
-  --color-accent-6: var(--color-red-6);
-  --color-accent-7: var(--color-red-7);
-  --color-accent-8: var(--color-red-8);
-  --color-accent-9: var(--color-red-9);
-  --color-accent-10: var(--color-red-10);
-  --color-accent-11: var(--color-red-11);
-  --color-accent-12: var(--color-red-12);
-}
+:root[data-dull-color="red"],
 :root [data-dull-color="red"] {
   --color-dull-1: var(--color-red-1);
   --color-dull-2: var(--color-red-2);
@@ -5845,20 +5456,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-red-11);
   --color-dull-12: var(--color-red-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="red"]) {
-  --color-dull-1: var(--color-red-1);
-  --color-dull-2: var(--color-red-2);
-  --color-dull-3: var(--color-red-3);
-  --color-dull-4: var(--color-red-4);
-  --color-dull-5: var(--color-red-5);
-  --color-dull-6: var(--color-red-6);
-  --color-dull-7: var(--color-red-7);
-  --color-dull-8: var(--color-red-8);
-  --color-dull-9: var(--color-red-9);
-  --color-dull-10: var(--color-red-10);
-  --color-dull-11: var(--color-red-11);
-  --color-dull-12: var(--color-red-12);
-}
+:root[data-accent-color="ruby"],
 :root [data-accent-color="ruby"] {
   --color-accent-1: var(--color-ruby-1);
   --color-accent-2: var(--color-ruby-2);
@@ -5873,20 +5471,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-ruby-11);
   --color-accent-12: var(--color-ruby-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="ruby"]) {
-  --color-accent-1: var(--color-ruby-1);
-  --color-accent-2: var(--color-ruby-2);
-  --color-accent-3: var(--color-ruby-3);
-  --color-accent-4: var(--color-ruby-4);
-  --color-accent-5: var(--color-ruby-5);
-  --color-accent-6: var(--color-ruby-6);
-  --color-accent-7: var(--color-ruby-7);
-  --color-accent-8: var(--color-ruby-8);
-  --color-accent-9: var(--color-ruby-9);
-  --color-accent-10: var(--color-ruby-10);
-  --color-accent-11: var(--color-ruby-11);
-  --color-accent-12: var(--color-ruby-12);
-}
+:root[data-dull-color="ruby"],
 :root [data-dull-color="ruby"] {
   --color-dull-1: var(--color-ruby-1);
   --color-dull-2: var(--color-ruby-2);
@@ -5901,20 +5486,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-ruby-11);
   --color-dull-12: var(--color-ruby-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="ruby"]) {
-  --color-dull-1: var(--color-ruby-1);
-  --color-dull-2: var(--color-ruby-2);
-  --color-dull-3: var(--color-ruby-3);
-  --color-dull-4: var(--color-ruby-4);
-  --color-dull-5: var(--color-ruby-5);
-  --color-dull-6: var(--color-ruby-6);
-  --color-dull-7: var(--color-ruby-7);
-  --color-dull-8: var(--color-ruby-8);
-  --color-dull-9: var(--color-ruby-9);
-  --color-dull-10: var(--color-ruby-10);
-  --color-dull-11: var(--color-ruby-11);
-  --color-dull-12: var(--color-ruby-12);
-}
+:root[data-accent-color="crimson"],
 :root [data-accent-color="crimson"] {
   --color-accent-1: var(--color-crimson-1);
   --color-accent-2: var(--color-crimson-2);
@@ -5929,20 +5501,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-crimson-11);
   --color-accent-12: var(--color-crimson-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="crimson"]) {
-  --color-accent-1: var(--color-crimson-1);
-  --color-accent-2: var(--color-crimson-2);
-  --color-accent-3: var(--color-crimson-3);
-  --color-accent-4: var(--color-crimson-4);
-  --color-accent-5: var(--color-crimson-5);
-  --color-accent-6: var(--color-crimson-6);
-  --color-accent-7: var(--color-crimson-7);
-  --color-accent-8: var(--color-crimson-8);
-  --color-accent-9: var(--color-crimson-9);
-  --color-accent-10: var(--color-crimson-10);
-  --color-accent-11: var(--color-crimson-11);
-  --color-accent-12: var(--color-crimson-12);
-}
+:root[data-dull-color="crimson"],
 :root [data-dull-color="crimson"] {
   --color-dull-1: var(--color-crimson-1);
   --color-dull-2: var(--color-crimson-2);
@@ -5957,20 +5516,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-crimson-11);
   --color-dull-12: var(--color-crimson-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="crimson"]) {
-  --color-dull-1: var(--color-crimson-1);
-  --color-dull-2: var(--color-crimson-2);
-  --color-dull-3: var(--color-crimson-3);
-  --color-dull-4: var(--color-crimson-4);
-  --color-dull-5: var(--color-crimson-5);
-  --color-dull-6: var(--color-crimson-6);
-  --color-dull-7: var(--color-crimson-7);
-  --color-dull-8: var(--color-crimson-8);
-  --color-dull-9: var(--color-crimson-9);
-  --color-dull-10: var(--color-crimson-10);
-  --color-dull-11: var(--color-crimson-11);
-  --color-dull-12: var(--color-crimson-12);
-}
+:root[data-accent-color="pink"],
 :root [data-accent-color="pink"] {
   --color-accent-1: var(--color-pink-1);
   --color-accent-2: var(--color-pink-2);
@@ -5985,20 +5531,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-pink-11);
   --color-accent-12: var(--color-pink-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="pink"]) {
-  --color-accent-1: var(--color-pink-1);
-  --color-accent-2: var(--color-pink-2);
-  --color-accent-3: var(--color-pink-3);
-  --color-accent-4: var(--color-pink-4);
-  --color-accent-5: var(--color-pink-5);
-  --color-accent-6: var(--color-pink-6);
-  --color-accent-7: var(--color-pink-7);
-  --color-accent-8: var(--color-pink-8);
-  --color-accent-9: var(--color-pink-9);
-  --color-accent-10: var(--color-pink-10);
-  --color-accent-11: var(--color-pink-11);
-  --color-accent-12: var(--color-pink-12);
-}
+:root[data-dull-color="pink"],
 :root [data-dull-color="pink"] {
   --color-dull-1: var(--color-pink-1);
   --color-dull-2: var(--color-pink-2);
@@ -6013,20 +5546,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-pink-11);
   --color-dull-12: var(--color-pink-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="pink"]) {
-  --color-dull-1: var(--color-pink-1);
-  --color-dull-2: var(--color-pink-2);
-  --color-dull-3: var(--color-pink-3);
-  --color-dull-4: var(--color-pink-4);
-  --color-dull-5: var(--color-pink-5);
-  --color-dull-6: var(--color-pink-6);
-  --color-dull-7: var(--color-pink-7);
-  --color-dull-8: var(--color-pink-8);
-  --color-dull-9: var(--color-pink-9);
-  --color-dull-10: var(--color-pink-10);
-  --color-dull-11: var(--color-pink-11);
-  --color-dull-12: var(--color-pink-12);
-}
+:root[data-accent-color="plum"],
 :root [data-accent-color="plum"] {
   --color-accent-1: var(--color-plum-1);
   --color-accent-2: var(--color-plum-2);
@@ -6041,20 +5561,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-plum-11);
   --color-accent-12: var(--color-plum-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="plum"]) {
-  --color-accent-1: var(--color-plum-1);
-  --color-accent-2: var(--color-plum-2);
-  --color-accent-3: var(--color-plum-3);
-  --color-accent-4: var(--color-plum-4);
-  --color-accent-5: var(--color-plum-5);
-  --color-accent-6: var(--color-plum-6);
-  --color-accent-7: var(--color-plum-7);
-  --color-accent-8: var(--color-plum-8);
-  --color-accent-9: var(--color-plum-9);
-  --color-accent-10: var(--color-plum-10);
-  --color-accent-11: var(--color-plum-11);
-  --color-accent-12: var(--color-plum-12);
-}
+:root[data-dull-color="plum"],
 :root [data-dull-color="plum"] {
   --color-dull-1: var(--color-plum-1);
   --color-dull-2: var(--color-plum-2);
@@ -6069,20 +5576,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-plum-11);
   --color-dull-12: var(--color-plum-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="plum"]) {
-  --color-dull-1: var(--color-plum-1);
-  --color-dull-2: var(--color-plum-2);
-  --color-dull-3: var(--color-plum-3);
-  --color-dull-4: var(--color-plum-4);
-  --color-dull-5: var(--color-plum-5);
-  --color-dull-6: var(--color-plum-6);
-  --color-dull-7: var(--color-plum-7);
-  --color-dull-8: var(--color-plum-8);
-  --color-dull-9: var(--color-plum-9);
-  --color-dull-10: var(--color-plum-10);
-  --color-dull-11: var(--color-plum-11);
-  --color-dull-12: var(--color-plum-12);
-}
+:root[data-accent-color="purple"],
 :root [data-accent-color="purple"] {
   --color-accent-1: var(--color-purple-1);
   --color-accent-2: var(--color-purple-2);
@@ -6097,20 +5591,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-purple-11);
   --color-accent-12: var(--color-purple-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="purple"]) {
-  --color-accent-1: var(--color-purple-1);
-  --color-accent-2: var(--color-purple-2);
-  --color-accent-3: var(--color-purple-3);
-  --color-accent-4: var(--color-purple-4);
-  --color-accent-5: var(--color-purple-5);
-  --color-accent-6: var(--color-purple-6);
-  --color-accent-7: var(--color-purple-7);
-  --color-accent-8: var(--color-purple-8);
-  --color-accent-9: var(--color-purple-9);
-  --color-accent-10: var(--color-purple-10);
-  --color-accent-11: var(--color-purple-11);
-  --color-accent-12: var(--color-purple-12);
-}
+:root[data-dull-color="purple"],
 :root [data-dull-color="purple"] {
   --color-dull-1: var(--color-purple-1);
   --color-dull-2: var(--color-purple-2);
@@ -6125,20 +5606,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-purple-11);
   --color-dull-12: var(--color-purple-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="purple"]) {
-  --color-dull-1: var(--color-purple-1);
-  --color-dull-2: var(--color-purple-2);
-  --color-dull-3: var(--color-purple-3);
-  --color-dull-4: var(--color-purple-4);
-  --color-dull-5: var(--color-purple-5);
-  --color-dull-6: var(--color-purple-6);
-  --color-dull-7: var(--color-purple-7);
-  --color-dull-8: var(--color-purple-8);
-  --color-dull-9: var(--color-purple-9);
-  --color-dull-10: var(--color-purple-10);
-  --color-dull-11: var(--color-purple-11);
-  --color-dull-12: var(--color-purple-12);
-}
+:root[data-accent-color="violet"],
 :root [data-accent-color="violet"] {
   --color-accent-1: var(--color-violet-1);
   --color-accent-2: var(--color-violet-2);
@@ -6153,20 +5621,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-violet-11);
   --color-accent-12: var(--color-violet-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="violet"]) {
-  --color-accent-1: var(--color-violet-1);
-  --color-accent-2: var(--color-violet-2);
-  --color-accent-3: var(--color-violet-3);
-  --color-accent-4: var(--color-violet-4);
-  --color-accent-5: var(--color-violet-5);
-  --color-accent-6: var(--color-violet-6);
-  --color-accent-7: var(--color-violet-7);
-  --color-accent-8: var(--color-violet-8);
-  --color-accent-9: var(--color-violet-9);
-  --color-accent-10: var(--color-violet-10);
-  --color-accent-11: var(--color-violet-11);
-  --color-accent-12: var(--color-violet-12);
-}
+:root[data-dull-color="violet"],
 :root [data-dull-color="violet"] {
   --color-dull-1: var(--color-violet-1);
   --color-dull-2: var(--color-violet-2);
@@ -6181,20 +5636,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-violet-11);
   --color-dull-12: var(--color-violet-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="violet"]) {
-  --color-dull-1: var(--color-violet-1);
-  --color-dull-2: var(--color-violet-2);
-  --color-dull-3: var(--color-violet-3);
-  --color-dull-4: var(--color-violet-4);
-  --color-dull-5: var(--color-violet-5);
-  --color-dull-6: var(--color-violet-6);
-  --color-dull-7: var(--color-violet-7);
-  --color-dull-8: var(--color-violet-8);
-  --color-dull-9: var(--color-violet-9);
-  --color-dull-10: var(--color-violet-10);
-  --color-dull-11: var(--color-violet-11);
-  --color-dull-12: var(--color-violet-12);
-}
+:root[data-accent-color="iris"],
 :root [data-accent-color="iris"] {
   --color-accent-1: var(--color-iris-1);
   --color-accent-2: var(--color-iris-2);
@@ -6209,20 +5651,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-iris-11);
   --color-accent-12: var(--color-iris-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="iris"]) {
-  --color-accent-1: var(--color-iris-1);
-  --color-accent-2: var(--color-iris-2);
-  --color-accent-3: var(--color-iris-3);
-  --color-accent-4: var(--color-iris-4);
-  --color-accent-5: var(--color-iris-5);
-  --color-accent-6: var(--color-iris-6);
-  --color-accent-7: var(--color-iris-7);
-  --color-accent-8: var(--color-iris-8);
-  --color-accent-9: var(--color-iris-9);
-  --color-accent-10: var(--color-iris-10);
-  --color-accent-11: var(--color-iris-11);
-  --color-accent-12: var(--color-iris-12);
-}
+:root[data-dull-color="iris"],
 :root [data-dull-color="iris"] {
   --color-dull-1: var(--color-iris-1);
   --color-dull-2: var(--color-iris-2);
@@ -6237,20 +5666,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-iris-11);
   --color-dull-12: var(--color-iris-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="iris"]) {
-  --color-dull-1: var(--color-iris-1);
-  --color-dull-2: var(--color-iris-2);
-  --color-dull-3: var(--color-iris-3);
-  --color-dull-4: var(--color-iris-4);
-  --color-dull-5: var(--color-iris-5);
-  --color-dull-6: var(--color-iris-6);
-  --color-dull-7: var(--color-iris-7);
-  --color-dull-8: var(--color-iris-8);
-  --color-dull-9: var(--color-iris-9);
-  --color-dull-10: var(--color-iris-10);
-  --color-dull-11: var(--color-iris-11);
-  --color-dull-12: var(--color-iris-12);
-}
+:root[data-accent-color="indigo"],
 :root [data-accent-color="indigo"] {
   --color-accent-1: var(--color-indigo-1);
   --color-accent-2: var(--color-indigo-2);
@@ -6265,20 +5681,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-indigo-11);
   --color-accent-12: var(--color-indigo-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="indigo"]) {
-  --color-accent-1: var(--color-indigo-1);
-  --color-accent-2: var(--color-indigo-2);
-  --color-accent-3: var(--color-indigo-3);
-  --color-accent-4: var(--color-indigo-4);
-  --color-accent-5: var(--color-indigo-5);
-  --color-accent-6: var(--color-indigo-6);
-  --color-accent-7: var(--color-indigo-7);
-  --color-accent-8: var(--color-indigo-8);
-  --color-accent-9: var(--color-indigo-9);
-  --color-accent-10: var(--color-indigo-10);
-  --color-accent-11: var(--color-indigo-11);
-  --color-accent-12: var(--color-indigo-12);
-}
+:root[data-dull-color="indigo"],
 :root [data-dull-color="indigo"] {
   --color-dull-1: var(--color-indigo-1);
   --color-dull-2: var(--color-indigo-2);
@@ -6293,20 +5696,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-indigo-11);
   --color-dull-12: var(--color-indigo-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="indigo"]) {
-  --color-dull-1: var(--color-indigo-1);
-  --color-dull-2: var(--color-indigo-2);
-  --color-dull-3: var(--color-indigo-3);
-  --color-dull-4: var(--color-indigo-4);
-  --color-dull-5: var(--color-indigo-5);
-  --color-dull-6: var(--color-indigo-6);
-  --color-dull-7: var(--color-indigo-7);
-  --color-dull-8: var(--color-indigo-8);
-  --color-dull-9: var(--color-indigo-9);
-  --color-dull-10: var(--color-indigo-10);
-  --color-dull-11: var(--color-indigo-11);
-  --color-dull-12: var(--color-indigo-12);
-}
+:root[data-accent-color="blue"],
 :root [data-accent-color="blue"] {
   --color-accent-1: var(--color-blue-1);
   --color-accent-2: var(--color-blue-2);
@@ -6321,20 +5711,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-blue-11);
   --color-accent-12: var(--color-blue-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="blue"]) {
-  --color-accent-1: var(--color-blue-1);
-  --color-accent-2: var(--color-blue-2);
-  --color-accent-3: var(--color-blue-3);
-  --color-accent-4: var(--color-blue-4);
-  --color-accent-5: var(--color-blue-5);
-  --color-accent-6: var(--color-blue-6);
-  --color-accent-7: var(--color-blue-7);
-  --color-accent-8: var(--color-blue-8);
-  --color-accent-9: var(--color-blue-9);
-  --color-accent-10: var(--color-blue-10);
-  --color-accent-11: var(--color-blue-11);
-  --color-accent-12: var(--color-blue-12);
-}
+:root[data-dull-color="blue"],
 :root [data-dull-color="blue"] {
   --color-dull-1: var(--color-blue-1);
   --color-dull-2: var(--color-blue-2);
@@ -6349,20 +5726,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-blue-11);
   --color-dull-12: var(--color-blue-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="blue"]) {
-  --color-dull-1: var(--color-blue-1);
-  --color-dull-2: var(--color-blue-2);
-  --color-dull-3: var(--color-blue-3);
-  --color-dull-4: var(--color-blue-4);
-  --color-dull-5: var(--color-blue-5);
-  --color-dull-6: var(--color-blue-6);
-  --color-dull-7: var(--color-blue-7);
-  --color-dull-8: var(--color-blue-8);
-  --color-dull-9: var(--color-blue-9);
-  --color-dull-10: var(--color-blue-10);
-  --color-dull-11: var(--color-blue-11);
-  --color-dull-12: var(--color-blue-12);
-}
+:root[data-accent-color="cyan"],
 :root [data-accent-color="cyan"] {
   --color-accent-1: var(--color-cyan-1);
   --color-accent-2: var(--color-cyan-2);
@@ -6377,20 +5741,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-cyan-11);
   --color-accent-12: var(--color-cyan-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="cyan"]) {
-  --color-accent-1: var(--color-cyan-1);
-  --color-accent-2: var(--color-cyan-2);
-  --color-accent-3: var(--color-cyan-3);
-  --color-accent-4: var(--color-cyan-4);
-  --color-accent-5: var(--color-cyan-5);
-  --color-accent-6: var(--color-cyan-6);
-  --color-accent-7: var(--color-cyan-7);
-  --color-accent-8: var(--color-cyan-8);
-  --color-accent-9: var(--color-cyan-9);
-  --color-accent-10: var(--color-cyan-10);
-  --color-accent-11: var(--color-cyan-11);
-  --color-accent-12: var(--color-cyan-12);
-}
+:root[data-dull-color="cyan"],
 :root [data-dull-color="cyan"] {
   --color-dull-1: var(--color-cyan-1);
   --color-dull-2: var(--color-cyan-2);
@@ -6405,20 +5756,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-cyan-11);
   --color-dull-12: var(--color-cyan-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="cyan"]) {
-  --color-dull-1: var(--color-cyan-1);
-  --color-dull-2: var(--color-cyan-2);
-  --color-dull-3: var(--color-cyan-3);
-  --color-dull-4: var(--color-cyan-4);
-  --color-dull-5: var(--color-cyan-5);
-  --color-dull-6: var(--color-cyan-6);
-  --color-dull-7: var(--color-cyan-7);
-  --color-dull-8: var(--color-cyan-8);
-  --color-dull-9: var(--color-cyan-9);
-  --color-dull-10: var(--color-cyan-10);
-  --color-dull-11: var(--color-cyan-11);
-  --color-dull-12: var(--color-cyan-12);
-}
+:root[data-accent-color="teal"],
 :root [data-accent-color="teal"] {
   --color-accent-1: var(--color-teal-1);
   --color-accent-2: var(--color-teal-2);
@@ -6433,20 +5771,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-teal-11);
   --color-accent-12: var(--color-teal-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="teal"]) {
-  --color-accent-1: var(--color-teal-1);
-  --color-accent-2: var(--color-teal-2);
-  --color-accent-3: var(--color-teal-3);
-  --color-accent-4: var(--color-teal-4);
-  --color-accent-5: var(--color-teal-5);
-  --color-accent-6: var(--color-teal-6);
-  --color-accent-7: var(--color-teal-7);
-  --color-accent-8: var(--color-teal-8);
-  --color-accent-9: var(--color-teal-9);
-  --color-accent-10: var(--color-teal-10);
-  --color-accent-11: var(--color-teal-11);
-  --color-accent-12: var(--color-teal-12);
-}
+:root[data-dull-color="teal"],
 :root [data-dull-color="teal"] {
   --color-dull-1: var(--color-teal-1);
   --color-dull-2: var(--color-teal-2);
@@ -6461,20 +5786,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-teal-11);
   --color-dull-12: var(--color-teal-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="teal"]) {
-  --color-dull-1: var(--color-teal-1);
-  --color-dull-2: var(--color-teal-2);
-  --color-dull-3: var(--color-teal-3);
-  --color-dull-4: var(--color-teal-4);
-  --color-dull-5: var(--color-teal-5);
-  --color-dull-6: var(--color-teal-6);
-  --color-dull-7: var(--color-teal-7);
-  --color-dull-8: var(--color-teal-8);
-  --color-dull-9: var(--color-teal-9);
-  --color-dull-10: var(--color-teal-10);
-  --color-dull-11: var(--color-teal-11);
-  --color-dull-12: var(--color-teal-12);
-}
+:root[data-accent-color="jade"],
 :root [data-accent-color="jade"] {
   --color-accent-1: var(--color-jade-1);
   --color-accent-2: var(--color-jade-2);
@@ -6489,20 +5801,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-jade-11);
   --color-accent-12: var(--color-jade-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="jade"]) {
-  --color-accent-1: var(--color-jade-1);
-  --color-accent-2: var(--color-jade-2);
-  --color-accent-3: var(--color-jade-3);
-  --color-accent-4: var(--color-jade-4);
-  --color-accent-5: var(--color-jade-5);
-  --color-accent-6: var(--color-jade-6);
-  --color-accent-7: var(--color-jade-7);
-  --color-accent-8: var(--color-jade-8);
-  --color-accent-9: var(--color-jade-9);
-  --color-accent-10: var(--color-jade-10);
-  --color-accent-11: var(--color-jade-11);
-  --color-accent-12: var(--color-jade-12);
-}
+:root[data-dull-color="jade"],
 :root [data-dull-color="jade"] {
   --color-dull-1: var(--color-jade-1);
   --color-dull-2: var(--color-jade-2);
@@ -6517,20 +5816,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-jade-11);
   --color-dull-12: var(--color-jade-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="jade"]) {
-  --color-dull-1: var(--color-jade-1);
-  --color-dull-2: var(--color-jade-2);
-  --color-dull-3: var(--color-jade-3);
-  --color-dull-4: var(--color-jade-4);
-  --color-dull-5: var(--color-jade-5);
-  --color-dull-6: var(--color-jade-6);
-  --color-dull-7: var(--color-jade-7);
-  --color-dull-8: var(--color-jade-8);
-  --color-dull-9: var(--color-jade-9);
-  --color-dull-10: var(--color-jade-10);
-  --color-dull-11: var(--color-jade-11);
-  --color-dull-12: var(--color-jade-12);
-}
+:root[data-accent-color="green"],
 :root [data-accent-color="green"] {
   --color-accent-1: var(--color-green-1);
   --color-accent-2: var(--color-green-2);
@@ -6545,20 +5831,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-green-11);
   --color-accent-12: var(--color-green-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="green"]) {
-  --color-accent-1: var(--color-green-1);
-  --color-accent-2: var(--color-green-2);
-  --color-accent-3: var(--color-green-3);
-  --color-accent-4: var(--color-green-4);
-  --color-accent-5: var(--color-green-5);
-  --color-accent-6: var(--color-green-6);
-  --color-accent-7: var(--color-green-7);
-  --color-accent-8: var(--color-green-8);
-  --color-accent-9: var(--color-green-9);
-  --color-accent-10: var(--color-green-10);
-  --color-accent-11: var(--color-green-11);
-  --color-accent-12: var(--color-green-12);
-}
+:root[data-dull-color="green"],
 :root [data-dull-color="green"] {
   --color-dull-1: var(--color-green-1);
   --color-dull-2: var(--color-green-2);
@@ -6573,20 +5846,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-green-11);
   --color-dull-12: var(--color-green-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="green"]) {
-  --color-dull-1: var(--color-green-1);
-  --color-dull-2: var(--color-green-2);
-  --color-dull-3: var(--color-green-3);
-  --color-dull-4: var(--color-green-4);
-  --color-dull-5: var(--color-green-5);
-  --color-dull-6: var(--color-green-6);
-  --color-dull-7: var(--color-green-7);
-  --color-dull-8: var(--color-green-8);
-  --color-dull-9: var(--color-green-9);
-  --color-dull-10: var(--color-green-10);
-  --color-dull-11: var(--color-green-11);
-  --color-dull-12: var(--color-green-12);
-}
+:root[data-accent-color="grass"],
 :root [data-accent-color="grass"] {
   --color-accent-1: var(--color-grass-1);
   --color-accent-2: var(--color-grass-2);
@@ -6601,20 +5861,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-grass-11);
   --color-accent-12: var(--color-grass-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="grass"]) {
-  --color-accent-1: var(--color-grass-1);
-  --color-accent-2: var(--color-grass-2);
-  --color-accent-3: var(--color-grass-3);
-  --color-accent-4: var(--color-grass-4);
-  --color-accent-5: var(--color-grass-5);
-  --color-accent-6: var(--color-grass-6);
-  --color-accent-7: var(--color-grass-7);
-  --color-accent-8: var(--color-grass-8);
-  --color-accent-9: var(--color-grass-9);
-  --color-accent-10: var(--color-grass-10);
-  --color-accent-11: var(--color-grass-11);
-  --color-accent-12: var(--color-grass-12);
-}
+:root[data-dull-color="grass"],
 :root [data-dull-color="grass"] {
   --color-dull-1: var(--color-grass-1);
   --color-dull-2: var(--color-grass-2);
@@ -6629,20 +5876,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-grass-11);
   --color-dull-12: var(--color-grass-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="grass"]) {
-  --color-dull-1: var(--color-grass-1);
-  --color-dull-2: var(--color-grass-2);
-  --color-dull-3: var(--color-grass-3);
-  --color-dull-4: var(--color-grass-4);
-  --color-dull-5: var(--color-grass-5);
-  --color-dull-6: var(--color-grass-6);
-  --color-dull-7: var(--color-grass-7);
-  --color-dull-8: var(--color-grass-8);
-  --color-dull-9: var(--color-grass-9);
-  --color-dull-10: var(--color-grass-10);
-  --color-dull-11: var(--color-grass-11);
-  --color-dull-12: var(--color-grass-12);
-}
+:root[data-accent-color="storegreen"],
 :root [data-accent-color="storegreen"] {
   --color-accent-1: var(--color-storegreen-1);
   --color-accent-2: var(--color-storegreen-2);
@@ -6657,20 +5891,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-storegreen-11);
   --color-accent-12: var(--color-storegreen-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="storegreen"]) {
-  --color-accent-1: var(--color-storegreen-1);
-  --color-accent-2: var(--color-storegreen-2);
-  --color-accent-3: var(--color-storegreen-3);
-  --color-accent-4: var(--color-storegreen-4);
-  --color-accent-5: var(--color-storegreen-5);
-  --color-accent-6: var(--color-storegreen-6);
-  --color-accent-7: var(--color-storegreen-7);
-  --color-accent-8: var(--color-storegreen-8);
-  --color-accent-9: var(--color-storegreen-9);
-  --color-accent-10: var(--color-storegreen-10);
-  --color-accent-11: var(--color-storegreen-11);
-  --color-accent-12: var(--color-storegreen-12);
-}
+:root[data-dull-color="storegreen"],
 :root [data-dull-color="storegreen"] {
   --color-dull-1: var(--color-storegreen-1);
   --color-dull-2: var(--color-storegreen-2);
@@ -6685,20 +5906,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-storegreen-11);
   --color-dull-12: var(--color-storegreen-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="storegreen"]) {
-  --color-dull-1: var(--color-storegreen-1);
-  --color-dull-2: var(--color-storegreen-2);
-  --color-dull-3: var(--color-storegreen-3);
-  --color-dull-4: var(--color-storegreen-4);
-  --color-dull-5: var(--color-storegreen-5);
-  --color-dull-6: var(--color-storegreen-6);
-  --color-dull-7: var(--color-storegreen-7);
-  --color-dull-8: var(--color-storegreen-8);
-  --color-dull-9: var(--color-storegreen-9);
-  --color-dull-10: var(--color-storegreen-10);
-  --color-dull-11: var(--color-storegreen-11);
-  --color-dull-12: var(--color-storegreen-12);
-}
+:root[data-accent-color="brown"],
 :root [data-accent-color="brown"] {
   --color-accent-1: var(--color-brown-1);
   --color-accent-2: var(--color-brown-2);
@@ -6713,20 +5921,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-brown-11);
   --color-accent-12: var(--color-brown-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="brown"]) {
-  --color-accent-1: var(--color-brown-1);
-  --color-accent-2: var(--color-brown-2);
-  --color-accent-3: var(--color-brown-3);
-  --color-accent-4: var(--color-brown-4);
-  --color-accent-5: var(--color-brown-5);
-  --color-accent-6: var(--color-brown-6);
-  --color-accent-7: var(--color-brown-7);
-  --color-accent-8: var(--color-brown-8);
-  --color-accent-9: var(--color-brown-9);
-  --color-accent-10: var(--color-brown-10);
-  --color-accent-11: var(--color-brown-11);
-  --color-accent-12: var(--color-brown-12);
-}
+:root[data-dull-color="brown"],
 :root [data-dull-color="brown"] {
   --color-dull-1: var(--color-brown-1);
   --color-dull-2: var(--color-brown-2);
@@ -6741,20 +5936,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-brown-11);
   --color-dull-12: var(--color-brown-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="brown"]) {
-  --color-dull-1: var(--color-brown-1);
-  --color-dull-2: var(--color-brown-2);
-  --color-dull-3: var(--color-brown-3);
-  --color-dull-4: var(--color-brown-4);
-  --color-dull-5: var(--color-brown-5);
-  --color-dull-6: var(--color-brown-6);
-  --color-dull-7: var(--color-brown-7);
-  --color-dull-8: var(--color-brown-8);
-  --color-dull-9: var(--color-brown-9);
-  --color-dull-10: var(--color-brown-10);
-  --color-dull-11: var(--color-brown-11);
-  --color-dull-12: var(--color-brown-12);
-}
+:root[data-accent-color="bronze"],
 :root [data-accent-color="bronze"] {
   --color-accent-1: var(--color-bronze-1);
   --color-accent-2: var(--color-bronze-2);
@@ -6769,20 +5951,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-bronze-11);
   --color-accent-12: var(--color-bronze-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="bronze"]) {
-  --color-accent-1: var(--color-bronze-1);
-  --color-accent-2: var(--color-bronze-2);
-  --color-accent-3: var(--color-bronze-3);
-  --color-accent-4: var(--color-bronze-4);
-  --color-accent-5: var(--color-bronze-5);
-  --color-accent-6: var(--color-bronze-6);
-  --color-accent-7: var(--color-bronze-7);
-  --color-accent-8: var(--color-bronze-8);
-  --color-accent-9: var(--color-bronze-9);
-  --color-accent-10: var(--color-bronze-10);
-  --color-accent-11: var(--color-bronze-11);
-  --color-accent-12: var(--color-bronze-12);
-}
+:root[data-dull-color="bronze"],
 :root [data-dull-color="bronze"] {
   --color-dull-1: var(--color-bronze-1);
   --color-dull-2: var(--color-bronze-2);
@@ -6797,20 +5966,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-bronze-11);
   --color-dull-12: var(--color-bronze-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="bronze"]) {
-  --color-dull-1: var(--color-bronze-1);
-  --color-dull-2: var(--color-bronze-2);
-  --color-dull-3: var(--color-bronze-3);
-  --color-dull-4: var(--color-bronze-4);
-  --color-dull-5: var(--color-bronze-5);
-  --color-dull-6: var(--color-bronze-6);
-  --color-dull-7: var(--color-bronze-7);
-  --color-dull-8: var(--color-bronze-8);
-  --color-dull-9: var(--color-bronze-9);
-  --color-dull-10: var(--color-bronze-10);
-  --color-dull-11: var(--color-bronze-11);
-  --color-dull-12: var(--color-bronze-12);
-}
+:root[data-accent-color="gold"],
 :root [data-accent-color="gold"] {
   --color-accent-1: var(--color-gold-1);
   --color-accent-2: var(--color-gold-2);
@@ -6825,20 +5981,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-gold-11);
   --color-accent-12: var(--color-gold-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="gold"]) {
-  --color-accent-1: var(--color-gold-1);
-  --color-accent-2: var(--color-gold-2);
-  --color-accent-3: var(--color-gold-3);
-  --color-accent-4: var(--color-gold-4);
-  --color-accent-5: var(--color-gold-5);
-  --color-accent-6: var(--color-gold-6);
-  --color-accent-7: var(--color-gold-7);
-  --color-accent-8: var(--color-gold-8);
-  --color-accent-9: var(--color-gold-9);
-  --color-accent-10: var(--color-gold-10);
-  --color-accent-11: var(--color-gold-11);
-  --color-accent-12: var(--color-gold-12);
-}
+:root[data-dull-color="gold"],
 :root [data-dull-color="gold"] {
   --color-dull-1: var(--color-gold-1);
   --color-dull-2: var(--color-gold-2);
@@ -6853,20 +5996,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-gold-11);
   --color-dull-12: var(--color-gold-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="gold"]) {
-  --color-dull-1: var(--color-gold-1);
-  --color-dull-2: var(--color-gold-2);
-  --color-dull-3: var(--color-gold-3);
-  --color-dull-4: var(--color-gold-4);
-  --color-dull-5: var(--color-gold-5);
-  --color-dull-6: var(--color-gold-6);
-  --color-dull-7: var(--color-gold-7);
-  --color-dull-8: var(--color-gold-8);
-  --color-dull-9: var(--color-gold-9);
-  --color-dull-10: var(--color-gold-10);
-  --color-dull-11: var(--color-gold-11);
-  --color-dull-12: var(--color-gold-12);
-}
+:root[data-accent-color="sky"],
 :root [data-accent-color="sky"] {
   --color-accent-1: var(--color-sky-1);
   --color-accent-2: var(--color-sky-2);
@@ -6881,20 +6011,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-sky-11);
   --color-accent-12: var(--color-sky-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="sky"]) {
-  --color-accent-1: var(--color-sky-1);
-  --color-accent-2: var(--color-sky-2);
-  --color-accent-3: var(--color-sky-3);
-  --color-accent-4: var(--color-sky-4);
-  --color-accent-5: var(--color-sky-5);
-  --color-accent-6: var(--color-sky-6);
-  --color-accent-7: var(--color-sky-7);
-  --color-accent-8: var(--color-sky-8);
-  --color-accent-9: var(--color-sky-9);
-  --color-accent-10: var(--color-sky-10);
-  --color-accent-11: var(--color-sky-11);
-  --color-accent-12: var(--color-sky-12);
-}
+:root[data-dull-color="sky"],
 :root [data-dull-color="sky"] {
   --color-dull-1: var(--color-sky-1);
   --color-dull-2: var(--color-sky-2);
@@ -6909,20 +6026,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-sky-11);
   --color-dull-12: var(--color-sky-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="sky"]) {
-  --color-dull-1: var(--color-sky-1);
-  --color-dull-2: var(--color-sky-2);
-  --color-dull-3: var(--color-sky-3);
-  --color-dull-4: var(--color-sky-4);
-  --color-dull-5: var(--color-sky-5);
-  --color-dull-6: var(--color-sky-6);
-  --color-dull-7: var(--color-sky-7);
-  --color-dull-8: var(--color-sky-8);
-  --color-dull-9: var(--color-sky-9);
-  --color-dull-10: var(--color-sky-10);
-  --color-dull-11: var(--color-sky-11);
-  --color-dull-12: var(--color-sky-12);
-}
+:root[data-accent-color="mint"],
 :root [data-accent-color="mint"] {
   --color-accent-1: var(--color-mint-1);
   --color-accent-2: var(--color-mint-2);
@@ -6937,20 +6041,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-mint-11);
   --color-accent-12: var(--color-mint-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="mint"]) {
-  --color-accent-1: var(--color-mint-1);
-  --color-accent-2: var(--color-mint-2);
-  --color-accent-3: var(--color-mint-3);
-  --color-accent-4: var(--color-mint-4);
-  --color-accent-5: var(--color-mint-5);
-  --color-accent-6: var(--color-mint-6);
-  --color-accent-7: var(--color-mint-7);
-  --color-accent-8: var(--color-mint-8);
-  --color-accent-9: var(--color-mint-9);
-  --color-accent-10: var(--color-mint-10);
-  --color-accent-11: var(--color-mint-11);
-  --color-accent-12: var(--color-mint-12);
-}
+:root[data-dull-color="mint"],
 :root [data-dull-color="mint"] {
   --color-dull-1: var(--color-mint-1);
   --color-dull-2: var(--color-mint-2);
@@ -6965,20 +6056,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-mint-11);
   --color-dull-12: var(--color-mint-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="mint"]) {
-  --color-dull-1: var(--color-mint-1);
-  --color-dull-2: var(--color-mint-2);
-  --color-dull-3: var(--color-mint-3);
-  --color-dull-4: var(--color-mint-4);
-  --color-dull-5: var(--color-mint-5);
-  --color-dull-6: var(--color-mint-6);
-  --color-dull-7: var(--color-mint-7);
-  --color-dull-8: var(--color-mint-8);
-  --color-dull-9: var(--color-mint-9);
-  --color-dull-10: var(--color-mint-10);
-  --color-dull-11: var(--color-mint-11);
-  --color-dull-12: var(--color-mint-12);
-}
+:root[data-accent-color="lime"],
 :root [data-accent-color="lime"] {
   --color-accent-1: var(--color-lime-1);
   --color-accent-2: var(--color-lime-2);
@@ -6993,20 +6071,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-lime-11);
   --color-accent-12: var(--color-lime-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="lime"]) {
-  --color-accent-1: var(--color-lime-1);
-  --color-accent-2: var(--color-lime-2);
-  --color-accent-3: var(--color-lime-3);
-  --color-accent-4: var(--color-lime-4);
-  --color-accent-5: var(--color-lime-5);
-  --color-accent-6: var(--color-lime-6);
-  --color-accent-7: var(--color-lime-7);
-  --color-accent-8: var(--color-lime-8);
-  --color-accent-9: var(--color-lime-9);
-  --color-accent-10: var(--color-lime-10);
-  --color-accent-11: var(--color-lime-11);
-  --color-accent-12: var(--color-lime-12);
-}
+:root[data-dull-color="lime"],
 :root [data-dull-color="lime"] {
   --color-dull-1: var(--color-lime-1);
   --color-dull-2: var(--color-lime-2);
@@ -7021,20 +6086,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-lime-11);
   --color-dull-12: var(--color-lime-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="lime"]) {
-  --color-dull-1: var(--color-lime-1);
-  --color-dull-2: var(--color-lime-2);
-  --color-dull-3: var(--color-lime-3);
-  --color-dull-4: var(--color-lime-4);
-  --color-dull-5: var(--color-lime-5);
-  --color-dull-6: var(--color-lime-6);
-  --color-dull-7: var(--color-lime-7);
-  --color-dull-8: var(--color-lime-8);
-  --color-dull-9: var(--color-lime-9);
-  --color-dull-10: var(--color-lime-10);
-  --color-dull-11: var(--color-lime-11);
-  --color-dull-12: var(--color-lime-12);
-}
+:root[data-accent-color="yellow"],
 :root [data-accent-color="yellow"] {
   --color-accent-1: var(--color-yellow-1);
   --color-accent-2: var(--color-yellow-2);
@@ -7049,20 +6101,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-yellow-11);
   --color-accent-12: var(--color-yellow-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="yellow"]) {
-  --color-accent-1: var(--color-yellow-1);
-  --color-accent-2: var(--color-yellow-2);
-  --color-accent-3: var(--color-yellow-3);
-  --color-accent-4: var(--color-yellow-4);
-  --color-accent-5: var(--color-yellow-5);
-  --color-accent-6: var(--color-yellow-6);
-  --color-accent-7: var(--color-yellow-7);
-  --color-accent-8: var(--color-yellow-8);
-  --color-accent-9: var(--color-yellow-9);
-  --color-accent-10: var(--color-yellow-10);
-  --color-accent-11: var(--color-yellow-11);
-  --color-accent-12: var(--color-yellow-12);
-}
+:root[data-dull-color="yellow"],
 :root [data-dull-color="yellow"] {
   --color-dull-1: var(--color-yellow-1);
   --color-dull-2: var(--color-yellow-2);
@@ -7077,20 +6116,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-yellow-11);
   --color-dull-12: var(--color-yellow-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="yellow"]) {
-  --color-dull-1: var(--color-yellow-1);
-  --color-dull-2: var(--color-yellow-2);
-  --color-dull-3: var(--color-yellow-3);
-  --color-dull-4: var(--color-yellow-4);
-  --color-dull-5: var(--color-yellow-5);
-  --color-dull-6: var(--color-yellow-6);
-  --color-dull-7: var(--color-yellow-7);
-  --color-dull-8: var(--color-yellow-8);
-  --color-dull-9: var(--color-yellow-9);
-  --color-dull-10: var(--color-yellow-10);
-  --color-dull-11: var(--color-yellow-11);
-  --color-dull-12: var(--color-yellow-12);
-}
+:root[data-accent-color="amber"],
 :root [data-accent-color="amber"] {
   --color-accent-1: var(--color-amber-1);
   --color-accent-2: var(--color-amber-2);
@@ -7105,20 +6131,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-amber-11);
   --color-accent-12: var(--color-amber-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="amber"]) {
-  --color-accent-1: var(--color-amber-1);
-  --color-accent-2: var(--color-amber-2);
-  --color-accent-3: var(--color-amber-3);
-  --color-accent-4: var(--color-amber-4);
-  --color-accent-5: var(--color-amber-5);
-  --color-accent-6: var(--color-amber-6);
-  --color-accent-7: var(--color-amber-7);
-  --color-accent-8: var(--color-amber-8);
-  --color-accent-9: var(--color-amber-9);
-  --color-accent-10: var(--color-amber-10);
-  --color-accent-11: var(--color-amber-11);
-  --color-accent-12: var(--color-amber-12);
-}
+:root[data-dull-color="amber"],
 :root [data-dull-color="amber"] {
   --color-dull-1: var(--color-amber-1);
   --color-dull-2: var(--color-amber-2);
@@ -7133,20 +6146,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-amber-11);
   --color-dull-12: var(--color-amber-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="amber"]) {
-  --color-dull-1: var(--color-amber-1);
-  --color-dull-2: var(--color-amber-2);
-  --color-dull-3: var(--color-amber-3);
-  --color-dull-4: var(--color-amber-4);
-  --color-dull-5: var(--color-amber-5);
-  --color-dull-6: var(--color-amber-6);
-  --color-dull-7: var(--color-amber-7);
-  --color-dull-8: var(--color-amber-8);
-  --color-dull-9: var(--color-amber-9);
-  --color-dull-10: var(--color-amber-10);
-  --color-dull-11: var(--color-amber-11);
-  --color-dull-12: var(--color-amber-12);
-}
+:root[data-accent-color="orange"],
 :root [data-accent-color="orange"] {
   --color-accent-1: var(--color-orange-1);
   --color-accent-2: var(--color-orange-2);
@@ -7161,20 +6161,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-orange-11);
   --color-accent-12: var(--color-orange-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="orange"]) {
-  --color-accent-1: var(--color-orange-1);
-  --color-accent-2: var(--color-orange-2);
-  --color-accent-3: var(--color-orange-3);
-  --color-accent-4: var(--color-orange-4);
-  --color-accent-5: var(--color-orange-5);
-  --color-accent-6: var(--color-orange-6);
-  --color-accent-7: var(--color-orange-7);
-  --color-accent-8: var(--color-orange-8);
-  --color-accent-9: var(--color-orange-9);
-  --color-accent-10: var(--color-orange-10);
-  --color-accent-11: var(--color-orange-11);
-  --color-accent-12: var(--color-orange-12);
-}
+:root[data-dull-color="orange"],
 :root [data-dull-color="orange"] {
   --color-dull-1: var(--color-orange-1);
   --color-dull-2: var(--color-orange-2);
@@ -7189,20 +6176,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-orange-11);
   --color-dull-12: var(--color-orange-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-dull-color="orange"]) {
-  --color-dull-1: var(--color-orange-1);
-  --color-dull-2: var(--color-orange-2);
-  --color-dull-3: var(--color-orange-3);
-  --color-dull-4: var(--color-orange-4);
-  --color-dull-5: var(--color-orange-5);
-  --color-dull-6: var(--color-orange-6);
-  --color-dull-7: var(--color-orange-7);
-  --color-dull-8: var(--color-orange-8);
-  --color-dull-9: var(--color-orange-9);
-  --color-dull-10: var(--color-orange-10);
-  --color-dull-11: var(--color-orange-11);
-  --color-dull-12: var(--color-orange-12);
-}
+:root[data-accent-color="valveonly"],
 :root [data-accent-color="valveonly"] {
   --color-accent-1: var(--color-valveonly-1);
   --color-accent-2: var(--color-valveonly-2);
@@ -7217,35 +6191,8 @@ button.Primary.jsVV3SMtv9Q- {
   --color-accent-11: var(--color-valveonly-11);
   --color-accent-12: var(--color-valveonly-12);
 }
-:root:has(.KWtRH19ERaI- > div[data-accent-color="valveonly"]) {
-  --color-accent-1: var(--color-valveonly-1);
-  --color-accent-2: var(--color-valveonly-2);
-  --color-accent-3: var(--color-valveonly-3);
-  --color-accent-4: var(--color-valveonly-4);
-  --color-accent-5: var(--color-valveonly-5);
-  --color-accent-6: var(--color-valveonly-6);
-  --color-accent-7: var(--color-valveonly-7);
-  --color-accent-8: var(--color-valveonly-8);
-  --color-accent-9: var(--color-valveonly-9);
-  --color-accent-10: var(--color-valveonly-10);
-  --color-accent-11: var(--color-valveonly-11);
-  --color-accent-12: var(--color-valveonly-12);
-}
+:root[data-dull-color="valveonly"],
 :root [data-dull-color="valveonly"] {
-  --color-dull-1: var(--color-valveonly-1);
-  --color-dull-2: var(--color-valveonly-2);
-  --color-dull-3: var(--color-valveonly-3);
-  --color-dull-4: var(--color-valveonly-4);
-  --color-dull-5: var(--color-valveonly-5);
-  --color-dull-6: var(--color-valveonly-6);
-  --color-dull-7: var(--color-valveonly-7);
-  --color-dull-8: var(--color-valveonly-8);
-  --color-dull-9: var(--color-valveonly-9);
-  --color-dull-10: var(--color-valveonly-10);
-  --color-dull-11: var(--color-valveonly-11);
-  --color-dull-12: var(--color-valveonly-12);
-}
-:root:has(.KWtRH19ERaI- > div[data-dull-color="valveonly"]) {
   --color-dull-1: var(--color-valveonly-1);
   --color-dull-2: var(--color-valveonly-2);
   --color-dull-3: var(--color-valveonly-3);
@@ -7287,6 +6234,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-dull-11: var(--color-accent-11);
   --color-dull-12: var(--color-accent-12);
 }
+:root[data-body-text-color="text-light"],
 :root [data-body-text-color="text-light"] {
   --color-text-body-title: var(--color-text-light-title);
   --color-text-body-subtitle: var(--color-text-light-subtitle);
@@ -7294,13 +6242,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-text-body-description: var(--color-text-light-description);
   --color-text-body-note: var(--color-text-light-note);
 }
-:root:has(.KWtRH19ERaI- > div[data-body-text-color="text-light"]) {
-  --color-text-body-title: var(--color-text-light-title);
-  --color-text-body-subtitle: var(--color-text-light-subtitle);
-  --color-text-body-body: var(--color-text-light-body);
-  --color-text-body-description: var(--color-text-light-description);
-  --color-text-body-note: var(--color-text-light-note);
-}
+:root[data-body-text-color="text-red"],
 :root [data-body-text-color="text-red"] {
   --color-text-body-title: var(--color-text-red-title);
   --color-text-body-subtitle: var(--color-text-red-subtitle);
@@ -7308,13 +6250,7 @@ button.Primary.jsVV3SMtv9Q- {
   --color-text-body-description: var(--color-text-red-description);
   --color-text-body-note: var(--color-text-red-note);
 }
-:root:has(.KWtRH19ERaI- > div[data-body-text-color="text-red"]) {
-  --color-text-body-title: var(--color-text-red-title);
-  --color-text-body-subtitle: var(--color-text-red-subtitle);
-  --color-text-body-body: var(--color-text-red-body);
-  --color-text-body-description: var(--color-text-red-description);
-  --color-text-body-note: var(--color-text-red-note);
-}
+:root[data-body-text-color="text-yellow"],
 :root [data-body-text-color="text-yellow"] {
   --color-text-body-title: var(--color-text-yellow-title);
   --color-text-body-subtitle: var(--color-text-yellow-subtitle);
@@ -7322,21 +6258,8 @@ button.Primary.jsVV3SMtv9Q- {
   --color-text-body-description: var(--color-text-yellow-description);
   --color-text-body-note: var(--color-text-yellow-note);
 }
-:root:has(.KWtRH19ERaI- > div[data-body-text-color="text-yellow"]) {
-  --color-text-body-title: var(--color-text-yellow-title);
-  --color-text-body-subtitle: var(--color-text-yellow-subtitle);
-  --color-text-body-body: var(--color-text-yellow-body);
-  --color-text-body-description: var(--color-text-yellow-description);
-  --color-text-body-note: var(--color-text-yellow-note);
-}
+:root[data-body-text-color="text-green"],
 :root [data-body-text-color="text-green"] {
-  --color-text-body-title: var(--color-text-green-title);
-  --color-text-body-subtitle: var(--color-text-green-subtitle);
-  --color-text-body-body: var(--color-text-green-body);
-  --color-text-body-description: var(--color-text-green-description);
-  --color-text-body-note: var(--color-text-green-note);
-}
-:root:has(.KWtRH19ERaI- > div[data-body-text-color="text-green"]) {
   --color-text-body-title: var(--color-text-green-title);
   --color-text-body-subtitle: var(--color-text-green-subtitle);
   --color-text-body-body: var(--color-text-green-body);
@@ -8245,7 +7168,6 @@ button.Primary.jsVV3SMtv9Q- {
     all: unset;
     text-align: start;
     width: -webkit-fill-available;
-    width: -moz-available;
     width: stretch;
     text-indent: initial;
     -webkit-tap-highlight-color: transparent;
@@ -8261,7 +7183,6 @@ button.Primary.jsVV3SMtv9Q- {
   :where(.xtBr-L5Owus-)::placeholder {
     color: unset;
     opacity: unset;
-    -webkit-user-select: none;
     user-select: none;
   }
   :where(.xtBr-L5Owus-):where(table) {
@@ -8287,7 +7208,6 @@ button.Primary.jsVV3SMtv9Q- {
     display: block;
   }
   :where(.xtBr-L5Owus-):where(del, s) {
-    -webkit-text-decoration: unset;
     text-decoration: unset;
   }
   :where(.xtBr-L5Owus-):where(fieldset, hr) {
@@ -8310,7 +7230,6 @@ button.Primary.jsVV3SMtv9Q- {
   }
   :where(.xtBr-L5Owus-):where(iframe) {
     width: -webkit-fill-available;
-    width: -moz-available;
     border: none;
     width: stretch;
     display: block;
@@ -8342,15 +7261,12 @@ button.Primary.jsVV3SMtv9Q- {
     font: unset;
     vertical-align: unset;
   }
-  :where(.xtBr-L5Owus-):where(details) ::marker {
-    content: none;
-  }
+  :where(.xtBr-L5Owus-):where(details) ::marker,
   :where(.xtBr-L5Owus-):where(summary)::marker {
     content: none;
   }
   :where(.xtBr-L5Owus-):where(video) {
     width: -webkit-fill-available;
-    width: -moz-available;
     width: stretch;
     display: block;
   }
@@ -8473,7 +7389,6 @@ button.Primary.jsVV3SMtv9Q- {
 .Yyx5Rkc0C04- {
   text-align: center;
   box-sizing: border-box;
-  -webkit-user-select: none;
   user-select: none;
   cursor: pointer;
   font-family: var(--font-family);
@@ -8818,6 +7733,9 @@ button.Primary.jsVV3SMtv9Q- {
   background: var(--color-dull-7);
   color: var(--color-text-body-note);
   cursor: default;
+}
+._1ogKYNGwSuc-[aria-disabled="true"][data-focused="true"] {
+  background: var(--color-dull-9);
 }
 @keyframes l5sgPaiJkkY- {
   0% {
@@ -9407,7 +8325,6 @@ html:has(dialog.egtbEvvs2Oc-[open]) {
 button.DialogButton {
   box-sizing: content-box;
   font: inherit;
-  -webkit-user-select: none;
   user-select: none;
   color: #dfe3e6;
   text-align: center;
@@ -9426,9 +8343,7 @@ button.DialogButton {
   display: block;
   position: relative;
   overflow: visible;
-}
-@media (prefers-contrast: more) {
-  button.DialogButton {
+  @media (prefers-contrast: more) {
     color: #fff;
     background: #000;
     border: 1px solid #fff;
@@ -9646,14 +8561,10 @@ div.ModalPosition_TopBar {
 }
 .DialogContent,
 .DialogContentTransition {
-  -webkit-user-select: none;
   user-select: none;
   background:
     radial-gradient(circle at 0 0, #4a515c66 0%, #4b515c00 60%), #25282e;
-}
-@media (prefers-contrast: more) {
-  .DialogContent,
-  .DialogContentTransition {
+  @media (prefers-contrast: more) {
     background: #000;
   }
 }
@@ -9693,7 +8604,6 @@ div.ModalPosition_TopBar {
   padding: 0;
 }
 .DialogToggle_Label {
-  -webkit-user-select: none;
   user-select: none;
   flex-direction: row;
   display: flex;
@@ -9747,7 +8657,6 @@ div.ModalPosition_TopBar {
 }
 .DialogHeader {
   color: #fff;
-  -webkit-user-select: none;
   user-select: none;
   margin-inline-end: 26px;
   flex-shrink: 0;
@@ -9769,7 +8678,6 @@ div.ModalPosition_TopBar {
   letter-spacing: 2px;
   color: #fff;
   text-transform: uppercase;
-  -webkit-user-select: none;
   user-select: none;
   flex-shrink: 0;
   margin-inline-end: 26px;
@@ -9779,14 +8687,9 @@ div.ModalPosition_TopBar {
 }
 .SettingsDialogSubHeader {
   color: #dcdedf;
-}
-@media (prefers-contrast: more) {
-  .SettingsDialogSubHeader {
+  @media (prefers-contrast: more) {
     color: #fff;
   }
-}
-.SettingsDialogSubHeader {
-  -webkit-user-select: none;
   user-select: none;
   margin-inline-end: 26px;
   font-size: 16px;
@@ -9822,7 +8725,6 @@ div.ModalPosition_TopBar {
 }
 .DialogBodyText {
   color: #acb2b8;
-  -webkit-user-select: none;
   user-select: none;
   margin-bottom: 32px;
   font-size: 16px;
@@ -9830,7 +8732,6 @@ div.ModalPosition_TopBar {
   line-height: 19px;
 }
 .DialogBodyText p {
-  -webkit-user-select: text;
   user-select: text;
 }
 .DialogBodyText p a {
@@ -9850,7 +8751,6 @@ div.ModalPosition_TopBar {
 .DialogLabelStrong {
   color: #acb2b8;
   text-transform: uppercase;
-  -webkit-user-select: none;
   user-select: none;
   letter-spacing: initial;
   margin-bottom: 4px;
@@ -9955,17 +8855,11 @@ div.ModalPosition_TopBar {
 ._DialogInputContainer {
   color: #dfe3e6;
   background: #3b3f4880;
-}
-@media (prefers-contrast: more) {
-  .DialogTextInputBase,
-  ._DialogInputContainer {
+  @media (prefers-contrast: more) {
     color: #fff;
     background: #000;
     border: 1px solid #fff;
   }
-}
-.DialogTextInputBase,
-._DialogInputContainer {
   border: none;
   border-radius: 3px;
   margin: 0;
@@ -10075,7 +8969,6 @@ button.DialogButton.DialogInput_CopyAction {
 }
 button.DialogButton:before {
   pointer-events: none;
-  -webkit-user-select: none;
   user-select: none;
   content: " ";
   opacity: 0;
@@ -10135,11 +9028,7 @@ button.DialogButton:enabled:active.gpfocus {
   background: #393f49;
   transition-duration: 40ms;
   box-shadow: 0 1px 4px #0009;
-}
-@media (prefers-contrast: more) {
-  button.DialogButton:enabled:active,
-  button.DialogButton:enabled:active:hover,
-  button.DialogButton:enabled:active.gpfocus {
+  @media (prefers-contrast: more) {
     color: #000;
     background: #fff;
     transition-property: scale;
@@ -10161,10 +9050,7 @@ button.DialogButton:hover,
 button.DialogButton.gpfocus {
   color: #fff;
   background: #464d58;
-}
-@media (prefers-contrast: more) {
-  button.DialogButton:hover,
-  button.DialogButton.gpfocus {
+  @media (prefers-contrast: more) {
     color: #000;
     background: #fff;
   }
@@ -10229,7 +9115,6 @@ button.TextButton.gpfocus {
   float: inline-end;
   color: #dfe3e680;
   cursor: pointer;
-  -webkit-user-select: none;
   user-select: none;
   background: #3a3f48;
   border-radius: 3px;
@@ -10271,13 +9156,9 @@ button.TextButton.gpfocus {
 }
 .DialogToggle_Description {
   color: #999c9f;
-}
-@media (prefers-contrast: more) {
-  .DialogToggle_Description {
+  @media (prefers-contrast: more) {
     color: #bbbdc0;
   }
-}
-.DialogToggle_Description {
   padding-top: 8px;
   font-family:
     Motiva Sans,
@@ -10343,7 +9224,6 @@ button.TextButton.gpfocus {
   content: " ";
 }
 .DialogDropDown._DialogInputContainer {
-  -webkit-user-select: none;
   user-select: none;
   margin-bottom: 0;
 }
@@ -10402,7 +9282,6 @@ button.TextButton.gpfocus {
 .DialogDraggable {
   cursor: -webkit-grab;
   cursor: grab;
-  -webkit-user-select: none;
   user-select: none;
 }
 .DialogDraggable.DraggedOut {
@@ -10425,7 +9304,6 @@ button.TextButton.gpfocus {
 }
 .DialogSlider_Slider {
   cursor: pointer;
-  -webkit-user-select: none;
   user-select: none;
   background: #202226;
   border: 4px solid #2a2d33;
@@ -10457,7 +9335,6 @@ button.TextButton.gpfocus {
 }
 .DialogProgressBar_ProgressBarContainer {
   cursor: pointer;
-  -webkit-user-select: none;
   user-select: none;
   background: #202226;
   border: 4px solid #2a2d33;
@@ -10475,27 +9352,7 @@ button.TextButton.gpfocus {
   height: 100%;
   transition: width 0.2s linear;
 }
-.DialogProgressBar_Value:is(
-    :lang(ae),
-    :lang(ar),
-    :lang(arc),
-    :lang(bcc),
-    :lang(bqi),
-    :lang(ckb),
-    :lang(dv),
-    :lang(fa),
-    :lang(glk),
-    :lang(he),
-    :lang(ku),
-    :lang(mzn),
-    :lang(nqo),
-    :lang(pnb),
-    :lang(ps),
-    :lang(sd),
-    :lang(ug),
-    :lang(ur),
-    :lang(yi)
-  ) {
+.DialogProgressBar_Value:dir(rtl) {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -10663,7 +9520,6 @@ button.TextButton.gpfocus {
 }
 .DialogRoundCheckboxField_Container.Disabled {
   opacity: 0.5;
-  -webkit-user-select: none;
   user-select: none;
   cursor: unset;
 }
@@ -10714,7 +9570,6 @@ button.TextButton.gpfocus {
   color: #1b98ff;
   z-index: 0;
   pointer-events: none;
-  -webkit-user-select: none;
   user-select: none;
   font-size: 14px;
   transition-property: transform, opacity;
@@ -10778,7 +9633,6 @@ body.in_global_drag .title-area {
 .singleWindowFocusBar {
   opacity: 0;
   pointer-events: none;
-  -webkit-user-select: none;
   user-select: none;
   background: linear-gradient(90deg, #007896, #1f3d96);
   width: 100%;
@@ -10786,7 +9640,6 @@ body.in_global_drag .title-area {
   transition: opacity 0.18s ease-in-out;
   position: absolute;
   top: 0;
-  -webkit-mask: linear-gradient(#000 0 1px, #0006 1px, #0003 8px, #0000 100%);
   mask: linear-gradient(#000 0 1px, #0006 1px, #0003 8px, #0000 100%);
 }
 .focused .singleWindowFocusBar {
@@ -10796,7 +9649,6 @@ body.in_global_drag .title-area {
 .title-area-highlight {
   opacity: 0;
   pointer-events: none;
-  -webkit-user-select: none;
   user-select: none;
   background: linear-gradient(90deg, #007896, #1f3d96);
   height: 24px;
@@ -10805,7 +9657,6 @@ body.in_global_drag .title-area {
   top: 0;
   left: 0;
   right: 0;
-  -webkit-mask: linear-gradient(#000 0 1px, #0006 1px, #0003 8px, #0000 100%);
   mask: linear-gradient(#000 0 1px, #0006 1px, #0003 8px, #0000 100%);
 }
 .focused:not(.singlewindow) .title-area-highlight {
@@ -10859,31 +9710,9 @@ body.in_global_drag .title-area {
   height: 24px;
   position: fixed;
   bottom: 0;
-}
-.window_resize_grip:is(
-    :lang(ae),
-    :lang(ar),
-    :lang(arc),
-    :lang(bcc),
-    :lang(bqi),
-    :lang(ckb),
-    :lang(dv),
-    :lang(fa),
-    :lang(glk),
-    :lang(he),
-    :lang(ku),
-    :lang(mzn),
-    :lang(nqo),
-    :lang(pnb),
-    :lang(ps),
-    :lang(sd),
-    :lang(ug),
-    :lang(ur),
-    :lang(yi)
-  ) {
-  scale: -1 1;
-}
-.window_resize_grip {
+  &:dir(rtl) {
+    scale: -1 1;
+  }
   z-index: 1000;
 }
 .DialogBodyNotificationBar {
@@ -11248,7 +10077,6 @@ body.in_global_drag .title-area {
   width: unset;
   height: unset;
   cursor: pointer;
-  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   background-color: #a8b7c426;
   border-radius: 3px;
@@ -11423,7 +10251,6 @@ img {
 .Tji-YT4na9o- {
   text-transform: uppercase;
   color: #7d6ebc;
-  -webkit-user-select: none;
   user-select: none;
   cursor: pointer;
   background: 0 0;

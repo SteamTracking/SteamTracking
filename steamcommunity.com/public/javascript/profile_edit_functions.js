@@ -754,7 +754,7 @@ function AchievementGroupsCompletionistShowcaseRenderDetails( game, $Details, Cu
 	};
 }
 
-function AchievementGroupsCompletionistShowcaseOnStatChange( elSelect, eShowcase, purchaseid, level, iSlot )
+function AchievementShowcaseOnStatChange( elSelect, eShowcase, purchaseid, level, iSlot )
 {
 	const strStat = $J( elSelect ).val();
 	SetShowcaseConfig(
@@ -763,6 +763,19 @@ function AchievementGroupsCompletionistShowcaseOnStatChange( elSelect, eShowcase
 		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { title: strStat } );
 	}).fail( function() {
 		ShowAlertDialog( 'Choose a Statistic', 'There was a problem saving your statistic. Please try again.' );
+	});
+}
+
+function AchievementShowcaseOnRareGlowChange( elCheckbox, eShowcase, purchaseid, level, iSlot, strHideRareGlow )
+{
+	const strTitle = elCheckbox.checked ? '' : strHideRareGlow;
+	SetShowcaseConfig(
+		eShowcase, purchaseid, iSlot, { title: strTitle }
+	).done( function() {
+		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { title: strTitle } );
+	}).fail( function() {
+		elCheckbox.checked = !elCheckbox.checked;
+		ShowAlertDialog( 'Error', 'There was an error communicating with the network. Please try again later.' );
 	});
 }
 

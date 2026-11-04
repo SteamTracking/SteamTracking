@@ -1,5 +1,5 @@
-import { _, _ } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
-import { _, _, _, _, _, _, _, _ } from "./libraries.js?contenthash=eLY4-d-j";
+import { _, _ } from "./rolldown-runtime.js?contenthash=C8f2gWku";
+import { _, _, _, _, _, _, _, _ } from "./libraries.js?contenthash=BSMOk6Fq";
 import {
   _,
   _,
@@ -13,20 +13,20 @@ import {
   _,
   _,
   _,
-} from "./salebanner.js?contenthash=ClkhtOVI";
-import { _ } from "./eventinfinitescrollmodal.js?contenthash=Dkmsvaaz";
-import { _ } from "./broadcast_embeddable.js?contenthash=BvjUjQL6";
-import { _, _ } from "./clanstore.js?contenthash=66n_91Al";
-import { _ } from "./broadcastplayer.js?contenthash=CN0CHax4";
-import { _ } from "./throbber.js?contenthash=j-9LShQt";
-import { _, _, _, _, _, _ } from "./emoticonbutton.js?contenthash=DZvpGHto";
-import { _, _, _, _, _ } from "./apppartnereventspage.js?contenthash=yOi1QROz";
-import { _, _, _, _, _, _, _ } from "./carouselarrows.js?contenthash=C8pZkg8e";
-import { _ } from "./ajaxhooks.js?contenthash=DrP4Usdq";
-import { _ } from "./historyutils.js?contenthash=C2OBI7UD";
-import { _ } from "./tabbar.js?contenthash=Cs8b1dRr";
-import { _, _, _, _, _, _ } from "./localdateandtime.js?contenthash=khtRyR5c";
-import { _ } from "./numberformats.js?contenthash=UXdMm-81";
+} from "./salebanner.js?contenthash=DCoaSkEe";
+import { _ } from "./eventinfinitescrollmodal.js?contenthash=Ba62Q39J";
+import { _ } from "./broadcast_embeddable.js?contenthash=Ud85tcSi";
+import { _, _ } from "./clanstore.js?contenthash=C2K0HNf4";
+import { _ } from "./broadcastplayer.js?contenthash=UzqUJD5J";
+import { _ } from "./throbber.js?contenthash=bI1SP-qN";
+import { _, _, _, _, _, _ } from "./emoticonbutton.js?contenthash=NM0xeHFP";
+import { _, _, _, _, _ } from "./apppartnereventspage.js?contenthash=JJ0eydND";
+import { _, _, _, _, _, _, _ } from "./carouselarrows.js?contenthash=DvC3aKzv";
+import { _ } from "./ajaxhooks.js?contenthash=fHwhjvXf";
+import { _ } from "./historyutils.js?contenthash=j-8hxDg1";
+import { _ } from "./tabbar.js?contenthash=BY8ffptb";
+import { _, _, _, _, _, _ } from "./localdateandtime.js?contenthash=D_iG02f5";
+import { _ } from "./numberformats.js?contenthash=DCmGpz_W";
 import {
   _,
   _,
@@ -70,11 +70,11 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=BPPtNZbV";
-import { _, _ } from "./broadcast_embeddable.module.js?contenthash=vPueBzPr";
-import { _, _ } from "./broadcast_embeddable2.js?contenthash=B_0gIOLk";
-import { _, _, _ } from "./faqbbcode.js?contenthash=tLRASAXf";
-import { _ } from "./questions.js?contenthash=CZzyK43K";
+} from "./main.js?contenthash=YyCh67xk";
+import { _, _ } from "./broadcast_embeddable.module.js?contenthash=BSPgCf0s";
+import { _, _ } from "./broadcast_embeddable2.js?contenthash=BHPqCnAH";
+import { _, _, _ } from "./faqbbcode.js?contenthash=Dt7H0nur";
+import { _ } from "./questions.js?contenthash=CqfPLv8G";
 import {
   _,
   _,
@@ -84,7 +84,7 @@ import {
   _,
   _,
   _,
-} from "./eventimpressiontracker.js?contenthash=B9OiSrVR";
+} from "./eventimpressiontracker.js?contenthash=DUvgbMsN";
 var _ = _(_()),
   _ = class _ {
     m_mapConferences = _.map();
@@ -1345,7 +1345,7 @@ function _(_) {
     [_, _] = _(_, null);
   return (
     _(_, (_, _) => {
-      _(_), _(_.InitFromClanID(_).ConvertTo64BitString());
+      _(_), _(_.InitFromClanID(_, _.EUNIVERSE).ConvertTo64BitString());
     }),
     _.useEffect(() => {
       if (_ != null && _ != null) {

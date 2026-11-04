@@ -1248,6 +1248,18 @@ background-color: transparent;
 	margin-left: 0;
 }
 
+/* achievement stat labels can be long, so let them wrap instead of clipping */
+.achievement_showcase .showcase_stats_row,
+.showcase_achievementscompletionist_games .showcase_stats_row {
+	display: flex;
+	white-space: normal;
+}
+
+.achievement_showcase .showcase_stats_row .showcase_stat,
+.showcase_achievementscompletionist_games .showcase_stats_row .showcase_stat {
+	min-width: 0;
+}
+
 .showcase_stat .value {
 	font-size: 1em;
 			font-family: "Motiva Sans", Sans-serif;

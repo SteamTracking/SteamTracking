@@ -17,14 +17,15 @@
 	font-size: 12px;
 
 	padding: 8px 10px;
-	margin: 4px 5px 0 0;
+	margin-block: 4px 0;
+	margin-inline: 0 5px;
 	display: inline-block;
 	border-radius: 2px;
 	line-height: 14px;
 }
 
 .searchtag a.btn {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	display: inline-block;
 	width: 12px;
 	height: 12px;
@@ -61,7 +62,7 @@
 		max-width: unset;
 		width: unset;
 		flex-grow: 1;
-		padding-left: 10px;
+		padding-inline-start: 10px;
 	}
 	html.responsive .searchbar_left {
 		display: flex;
@@ -82,7 +83,7 @@
 }
 
 .searchbar .sortbox {
-	float: right;
+	float: inline-end;
 	margin-top: 4px;
 }
 
@@ -94,14 +95,14 @@
 
 .searchbar_left > button {
 	height: 25px;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 .searchbar .label {
 	font-size: 12px;
 	color: #4c6c8c;
 	display: inline-block;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 #term {
@@ -133,7 +134,7 @@
 	cursor: pointer;
 	transition: background-color 300ms;
 	order: 10;
-	margin-left: 2px;
+	margin-inline-start: 2px;
 	position: relative;
 	background-image: url( '/public/images/bigpicture/icon_settings.png' );
 	background-position: center;
@@ -229,8 +230,8 @@
 }
 
 .search_result_row .ds_options {
-	right: auto;
-	left: 35px;
+	inset-inline-end: auto;
+	inset-inline-start: 35px;
 }
 .search_result_row.ds_excluded_by_preferences .ds_options {
 	display: none;
@@ -239,7 +240,7 @@
 .search_result_row .vr_required, .search_result_row .vr_supported {
 	color: #62696e;
 	position: relative;
-	left: 2px;
+	inset-inline-start: 2px;
 	white-space: nowrap;
 }
 
@@ -308,10 +309,10 @@
 
 .search_crouton_icon {
 	display: inline;
-	float: left;
+	float: inline-start;
 	width: 14px;
 	height: 14px;
-	padding-right: 4px;
+	padding-inline-end: 4px;
 }
 
 #search_infiniscroll_reload_container {
@@ -338,7 +339,7 @@
 }
 
 #search_infiniscroll_reload_notice > span {
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	width: 100%;
 	font-size: larger;
 }
@@ -378,7 +379,7 @@
     vertical-align: top;
 	line-height: 21px;
 	position: relative;
-	left: 6px;
+	inset-inline-start: 6px;
 	white-space: nowrap;
 }
 
@@ -536,7 +537,7 @@
 }
 
 .search_discount_and_price .discount_block {
-	padding-right: 8px;
+	padding-inline-end: 8px;
 	box-sizing: border-box;
 	height: 100%;
 	display: flex;
@@ -563,7 +564,7 @@
 		gap: 2px;
 	}
 	html.responsive .search_discount_and_price > .prepurchase_tag {
-		margin-right: 8px;
+		margin-inline-end: 8px;
 	}
 }
 .search_discount_and_price .discount_block .discount_prices {
@@ -571,9 +572,9 @@
 }
 .search_discount_and_price .discount_block.no_discount .discount_prices .discount_final_price {
 	font-size: 14px;
-	text-align: right;
+	text-align: end;
 	color: #c6d4df;
-	padding-right: 0;
+	padding-inline-end: 0;
 	white-space: nowrap;
 }
 .search_discount_and_price .discount_block:not(.no_discount) .discount_prices .discount_original_price {
@@ -667,11 +668,11 @@ div.autocomplete ul li {
 }
 
 .search_pagination_left {
-    float: left;
+    float: inline-start;
 	color: #3b6e8c;
 }
 .search_pagination_right {
-    float: right;
+    float: inline-end;
 }
 .search_pagination_right .pagebtn {
 	color: #67c1f5;
@@ -746,6 +747,6 @@ div.autocomplete ul li {
 
 
 .info_link {
-	float: right;
+	float: inline-end;
 	margin: 2px;
 }

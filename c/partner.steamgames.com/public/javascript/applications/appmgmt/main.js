@@ -3,268 +3,262 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./rootlogin.js?contenthash=DzemQLxh",
-      "./mobx.esm.js?contenthash=BRGZcCup",
-      "./dialogs.js?contenthash=D1pxcxuf",
-      "./long.js?contenthash=DWB27pGN",
-      "./react-router.js?contenthash=nQj0_J23",
-      "../../../css/applications/appmgmt/dialogs.css?contenthash=BSBzYtmn",
-      "./modals.js?contenthash=Bi1vin1f",
-      "./logindialog.js?contenthash=C69DEsgZ",
-      "./cookiedefinitions.js?contenthash=DyujrOaq",
-      "./cookies.client.js?contenthash=COwwz8KA",
-      "./button.js?contenthash=CU33iYfg",
-      "./flex.js?contenthash=BqvwdiAv",
-      "./formfactor.js?contenthash=PvnRLh_o",
-      "./useclienthints.js?contenthash=Dfr17cBR",
-      "./layout.js?contenthash=D-HixbCM",
+      "./rootlogin.js?contenthash=CbUMIKqr",
+      "./mobx.esm.js?contenthash=CQiZDS-T",
+      "./dialogs.js?contenthash=oAnTCbk0",
+      "./src.js?contenthash=CBPcp3zo",
+      "./react-router.js?contenthash=C8paMHEZ",
+      "../../../css/applications/appmgmt/dialogs.css?contenthash=MsVVHrZ1",
+      "./logindialog.js?contenthash=CefNPvh7",
+      "./cookies.client.js?contenthash=jlsD2weH",
+      "./button.js?contenthash=DN4KPe3g",
+      "./flex.js?contenthash=NJTkbjXR",
+      "./formfactor.js?contenthash=BPEgXlGF",
+      "./useclienthints.js?contenthash=D7HGBzTq",
+      "./focuselement.js?contenthash=ClL5Hd1c",
+      "./layout.js?contenthash=JIBVSoaz",
       "../../../css/applications/appmgmt/layout.css?contenthash=DoE9LMAn",
-      "./variantdefaults.js?contenthash=CybMBV5N",
-      "../../../css/applications/appmgmt/variantdefaults.css?contenthash=QnA4YZGU",
+      "./variantdefaults.js?contenthash=twwj7ifz",
+      "../../../css/applications/appmgmt/variantdefaults.css?contenthash=BW2vKi2i",
       "../../../css/applications/appmgmt/flex.css?contenthash=LKqXWYdL",
-      "./linkbase.js?contenthash=BaP4bGE1",
-      "./storenaveventcontext.js?contenthash=BcTEXyXR",
-      "../../../css/applications/appmgmt/button.css?contenthash=B8R8ZmOl",
-      "./axios.js?contenthash=ftGxbJpA",
-      "./throbber.js?contenthash=1eooMzHf",
-      "../../../css/applications/appmgmt/throbber.css?contenthash=B5cG3W4v",
-      "./base64-js.js?contenthash=CvuH4Mv9",
-      "./webapiinterface.js?contenthash=DeyRwKxB",
-      "./browserapi.js?contenthash=DnrLKuKB",
-      "./steamid.js?contenthash=DnyzW3N-",
-      "../../../css/applications/appmgmt/logindialog.css?contenthash=CV-OyCnF",
-      "./steamml_routing.js?contenthash=DbBmdwm8",
-      "./react-router-dom.js?contenthash=CFu_nAlI",
-      "./formatnumber.js?contenthash=DC8qwfxA",
-      "./getpreferredlocales.js?contenthash=DW-T3c2O",
-      "../../../css/applications/appmgmt/steamml_routing.css?contenthash=COhnPqGs",
-      "./steamdeckcompatibilitydetails.js?contenthash=DI0MT26h",
-      "./deckverified.js?contenthash=BjOjd2Vl",
-      "./storebrowsequerycontext.js?contenthash=C5iguZTL",
-      "./servicetransportprovider.js?contenthash=CWMOM-p-",
-      "./utils.js?contenthash=CtvqX2oo",
-      "./useQuery.js?contenthash=Cju4VOwO",
-      "./dataloader.js?contenthash=_BYkk4vd",
-      "./axiosutils.js?contenthash=B2ZC7U2N",
-      "./historyutils.js?contenthash=DmvWR4sr",
+      "./linkbase.js?contenthash=Y_3Gf2Zb",
+      "./storenaveventcontext.js?contenthash=CI-QJyey",
+      "../../../css/applications/appmgmt/button.css?contenthash=B75cQfMy",
+      "./axios.js?contenthash=DJSofgRR",
+      "./throbber.js?contenthash=8IkzFhw7",
+      "../../../css/applications/appmgmt/throbber.css?contenthash=DMWv5jTr",
+      "./base64-js.js?contenthash=DK9GxJy5",
+      "./browserapi.js?contenthash=B4KRK3Fl",
+      "../../../css/applications/appmgmt/logindialog.css?contenthash=Bt4FceDh",
+      "./modals.js?contenthash=CSZ9553x",
+      "./steamml_routing.js?contenthash=D6GgQLSc",
+      "./react-router-dom.js?contenthash=C5N9ARHv",
+      "./formatnumber.js?contenthash=Ccr-Vppf",
+      "./getpreferredlocales.js?contenthash=DHiMU7Q0",
+      "../../../css/applications/appmgmt/steamml_routing.css?contenthash=FpgtU6N4",
+      "./steamdeckcompatibilitydetails.js?contenthash=BdqTA22s",
+      "./deckverified.js?contenthash=DRhtzMQN",
+      "./storebrowsequerycontext.js?contenthash=IltPrRPI",
+      "./servicetransportprovider.js?contenthash=VcFarKSG",
+      "./utils.js?contenthash=C_yXlbsa",
+      "./useQuery.js?contenthash=DNURXK9V",
+      "./dataloader.js?contenthash=DACDuCdd",
+      "./axiosutils.js?contenthash=DGrnkyHA",
+      "./historyutils.js?contenthash=HC4tjo4S",
       "./stringutils.js?contenthash=MvxgDsyH",
-      "../../../css/applications/appmgmt/deckverified.css?contenthash=BTgEGrV2",
-      "./steamdeckcompatibilitydetails_admin.js?contenthash=BQBge5JA",
-      "./pricing_routing.js?contenthash=CawdBXG5",
-      "./pricingguidelineobject.js?contenthash=BkbRq0Li",
-      "./reactqueryroot.js?contenthash=6HNzcxAU",
-      "./mutation.js?contenthash=mVgehZd5",
-      "./currencyutils.js?contenthash=BLJDeGzO",
-      "./tabulatorutils.js?contenthash=BiwL1JH9",
-      "./text.js?contenthash=eLRF4CUL",
+      "../../../css/applications/appmgmt/deckverified.css?contenthash=8gfE5L-q",
+      "./steamdeckcompatibilitydetails_admin.js?contenthash=DAhUNj2L",
+      "./pricing_routing.js?contenthash=Ch3FDg16",
+      "./pricingguidelineobject.js?contenthash=CP-NKVXf",
+      "./reactqueryroot.js?contenthash=BLvKcg6J",
+      "./mutation.js?contenthash=D6buw3Ef",
+      "./currencyutils.js?contenthash=BN9XPice",
+      "./tabulatorutils.js?contenthash=DsoW0avV",
+      "./text.js?contenthash=DyIFXTWv",
       "../../../css/applications/appmgmt/text.css?contenthash=B7RzJx_9",
-      "./render.js?contenthash=CgVeluzX",
+      "./render.js?contenthash=C8U-rBc7",
       "../../../css/applications/appmgmt/tabulatorutils.css?contenthash=DbzYDbls",
-      "./eventdevfeaturestore.js?contenthash=qZXue2n5",
-      "./ajaxhooks.js?contenthash=BZKMmssH",
-      "./eventtime.js?contenthash=glI9glwu",
+      "./eventdevfeaturestore.js?contenthash=D6hR68sL",
+      "./ajaxhooks.js?contenthash=CEg2MQ4D",
+      "./eventtime.js?contenthash=DoCzeHHw",
       "./debugglobal.js?contenthash=Bxli5Vsy",
-      "./playerstore.js?contenthash=B9D7ITtf",
-      "./usedataloader.client.js?contenthash=DAd0LgAa",
-      "./personautils.js?contenthash=BmoGeKuQ",
-      "./steammessages_player_pb.js?contenthash=D5oAAU5l",
-      "./appinfostore.js?contenthash=DjkW-WwW",
-      "./appinfo.js?contenthash=C1DAXfJ9",
-      "./steammessages_community_pb.js?contenthash=Cp_tm3v4",
-      "./pricinggridcell.js?contenthash=LyzAlx0S",
-      "./useMutation.js?contenthash=Dj5NzgSW",
-      "./simplesuccesserror.js?contenthash=DwQ2OuT3",
+      "./playerstore.js?contenthash=BeGwEb4f",
+      "./usedataloader.client.js?contenthash=c41ZJXNa",
+      "./steamid.js?contenthash=C36PBsuf",
+      "./personautils.js?contenthash=BL5p5k2Z",
+      "./steammessages_player_pb.js?contenthash=UPv_T5EM",
+      "./appinfostore.js?contenthash=nRm6135I",
+      "./appinfo.js?contenthash=BLaDYuBQ",
+      "./steammessages_community_pb.js?contenthash=yPbkqLbM",
+      "./pricinggridcell.js?contenthash=DAWExG4h",
+      "./useMutation.js?contenthash=CVVv1aVR",
+      "./simplesuccesserror.js?contenthash=9YSri4P8",
       "./partnereventdialog.module.js?contenthash=Bx2fOKRM",
       "../../../css/applications/appmgmt/partnereventdialog.css?contenthash=CX73M240",
-      "./localization3.js?contenthash=B4lvHMmE",
-      "../../../css/applications/appmgmt/pricinggridcell.css?contenthash=B6dxXnND",
-      "../../../css/applications/appmgmt/shared_dialog.css?contenthash=C9HgcjP9",
-      "./configdatadiag.js?contenthash=BNSwwRC7",
-      "./unknownroute.js?contenthash=C2vrZ8Y1",
-      "./importexport.js?contenthash=caUXw7b8",
-      "./storebrowsesetup.js?contenthash=D3C8ffeq",
-      "./storeitemcache.js?contenthash=BObwenaX",
-      "./storeitem.js?contenthash=CubZ5fnh",
-      "./shared_common.module.js?contenthash=DMZ38Ep5",
-      "../../../css/applications/appmgmt/shared_common.css?contenthash=Ct0mtd7G",
-      "./fancytable.js?contenthash=BiBqH93f",
-      "./esm.js?contenthash=Ui3GdsU6",
-      "../../../css/applications/appmgmt/fancytable.css?contenthash=BK5le-B9",
-      "./profilestore.js?contenthash=3wVpz-0i",
-      "./timeutils.js?contenthash=mEPRYI0f",
-      "./moment-timezone.js?contenthash=VCVkqSKf",
+      "./localization3.js?contenthash=CO-jTCwD",
+      "../../../css/applications/appmgmt/pricinggridcell.css?contenthash=DDtZlMHR",
+      "../../../css/applications/appmgmt/shared_dialog.css?contenthash=BAGai7ql",
+      "./configdatadiag.js?contenthash=Cn2q9-OP",
+      "./unknownroute.js?contenthash=CtgV9GMi",
+      "./importexport.js?contenthash=DLEsuR9F",
+      "./storebrowsesetup.js?contenthash=Duwgbgou",
+      "./storeitemcache.js?contenthash=ByJ7OK8B",
+      "./storeitem.js?contenthash=ChblWmhs",
+      "./shared_common.module.js?contenthash=Cv5S5tkQ",
+      "../../../css/applications/appmgmt/shared_common.css?contenthash=ylUtvFuK",
+      "./fancytable.js?contenthash=Tvm4ZiBz",
+      "./esm.js?contenthash=0V2Quw_K",
+      "../../../css/applications/appmgmt/fancytable.css?contenthash=E9h2xK7G",
+      "./profilestore.js?contenthash=Bx4CVUal",
+      "./timeutils.js?contenthash=D1_SoPwK",
+      "./moment-timezone.js?contenthash=B478HHZe",
       "../../../css/applications/appmgmt/profilestore.css?contenthash=CzpZEyQF",
       "./discountgridheaders.module.js?contenthash=CRZHLaeb",
       "../../../css/applications/appmgmt/discountgridheaders.css?contenthash=B1oqOlNM",
-      "./saveprices.js?contenthash=B2VMWVQE",
+      "./saveprices.js?contenthash=C-sC_gNP",
       "../../../css/applications/appmgmt/saveprices.css?contenthash=CEy2TD8X",
       "../../../css/applications/appmgmt/pricing_routing.css?contenthash=BebE6H5L",
-      "./buildpatchnotes.js?contenthash=B_wSZpcb",
-      "./saletags.js?contenthash=BDV8J3LD",
-      "./steammessages_store_pb.js?contenthash=QykHXvzm",
-      "./steammessages_clan_pb.js?contenthash=cgfcIuVH",
-      "./appidutils.js?contenthash=CdtuXm9X",
-      "./csstransitionwrapper.js?contenthash=DaU8lpLB",
-      "./basebuttons.js?contenthash=B-gcG1sD",
-      "../../../css/applications/appmgmt/basebuttons.css?contenthash=BJx2zq6Y",
-      "./localization2.js?contenthash=CtKg-Xtn",
-      "./partnereventshared.module.js?contenthash=P6Lsyb-l",
-      "../../../css/applications/appmgmt/partnereventshared.css?contenthash=B7LNJQ8W",
-      "./loadingspinner.js?contenthash=BlPb8h20",
+      "./buildpatchnotes.js?contenthash=By7v9xou",
+      "./saletags.js?contenthash=ESSi8BuZ",
+      "./steammessages_store_pb.js?contenthash=-Wyv7mai",
+      "./steammessages_clan_pb.js?contenthash=DA7iuHZE",
+      "./appidutils.js?contenthash=BwQ9uTye",
+      "./csstransitionwrapper.js?contenthash=BcnDODoO",
+      "./localization2.js?contenthash=dDBRwK40",
+      "./partnereventshared.module.js?contenthash=Cm499byC",
+      "../../../css/applications/appmgmt/partnereventshared.css?contenthash=BGIA11o9",
+      "./loadingspinner.js?contenthash=BfamknL4",
       "../../../css/applications/appmgmt/loadingspinner.css?contenthash=5k1i5yPG",
-      "../../../css/applications/appmgmt/saletags.css?contenthash=qfRuF0Dy",
-      "./emoticonstorecontext.js?contenthash=CBYO4eyx",
-      "./lazyrenderchildren.js?contenthash=BAp3cwMp",
-      "./useresizeobserver.js?contenthash=OEPUjHil",
-      "./emoticon_php.js?contenthash=DIKFyekK",
-      "../../../css/applications/appmgmt/emoticonstorecontext.css?contenthash=U_pDgl6-",
-      "./importexportdialog.js?contenthash=DbNroVNp",
-      "./meetsteamregistrationhooks.js?contenthash=CPbf6JRv",
-      "./meetsteamclanid.js?contenthash=CxNAqjE2",
-      "./textlink.js?contenthash=DqM5ftUk",
+      "../../../css/applications/appmgmt/saletags.css?contenthash=w4ya6iNx",
+      "./emoticonstorecontext.js?contenthash=66ZJNa_W",
+      "./lazyrenderchildren.js?contenthash=DlpJC-je",
+      "./useresizeobserver.js?contenthash=B7CLWQqo",
+      "./emoticon_php.js?contenthash=B1reVxDD",
+      "../../../css/applications/appmgmt/emoticonstorecontext.css?contenthash=MMQUAYJ6",
+      "./importexportdialog.js?contenthash=D3RaQXP1",
+      "./meetsteamregistrationhooks.js?contenthash=D1uVDilc",
+      "./meetsteamclanid.js?contenthash=eNmAiasR",
+      "./src2.js?contenthash=DAty2h9Y",
+      "./textlink.js?contenthash=CW74W_x2",
       "../../../css/applications/appmgmt/textlink.css?contenthash=CMU1nJhL",
-      "./emoticonbutton.js?contenthash=k3Ijq928",
-      "./bbcodes.module.js?contenthash=9AAwTmEw",
-      "../../../css/applications/appmgmt/bbcodes.css?contenthash=DxrOPR5M",
-      "./partnereventutils.js?contenthash=CWK2rfLN",
-      "./uploadutils.js?contenthash=DHT_Jf3T",
-      "./numberformats.js?contenthash=orYQHRkm",
-      "./storeitemhooks.js?contenthash=BzHF6TiJ",
-      "../../../css/applications/appmgmt/emoticonbutton.css?contenthash=BDMPn0sz",
-      "./bbcodeeditor.js?contenthash=C1U-JUCy",
-      "./salepreviewwidgets.js?contenthash=FFHzDjl8",
-      "./salestoreitemutils.js?contenthash=Dbsk-BqK",
-      "../../../css/applications/appmgmt/salestoreitemutils.css?contenthash=CleW4EQ0",
+      "./emoticonbutton.js?contenthash=Dr_t5_Nz",
+      "./bbcodes.module.js?contenthash=DbS1TX25",
+      "../../../css/applications/appmgmt/bbcodes.css?contenthash=CxUNTrby",
+      "./partnereventutils.js?contenthash=BdmBYdZ_",
+      "./uploadutils.js?contenthash=Bmfjs2kv",
+      "./numberformats.js?contenthash=C6xxWUIr",
+      "./storeitemhooks.js?contenthash=DIFv3UjD",
+      "../../../css/applications/appmgmt/emoticonbutton.css?contenthash=BI4D_Lkh",
+      "./bbcodeeditor.js?contenthash=CVehi2NZ",
+      "./salepreviewwidgets.js?contenthash=B9A1rlH3",
+      "./salestoreitemutils.js?contenthash=DXyGoPxj",
+      "../../../css/applications/appmgmt/salestoreitemutils.css?contenthash=Dwsr4g6b",
       "../../../css/applications/appmgmt/salepreviewwidgets.css?contenthash=Lzpt6uF4",
-      "./multisourceimage.js?contenthash=Dx8RP27v",
-      "./shared_svg_gamerecordings.js?contenthash=OZ8Tft9-",
+      "./multisourceimage.js?contenthash=B44mwdrc",
+      "./shared_svg_gamerecordings.js?contenthash=DJfSaeDD",
       "../../../css/applications/appmgmt/shared_svg_gamerecordings.css?contenthash=C9ahyCu_",
-      "./dashplayer.js?contenthash=C4ZMh7T5",
-      "./reorderablelist.module.js?contenthash=D-LznI21",
-      "../../../css/applications/appmgmt/reorderablelist.css?contenthash=8xWWn2uG",
-      "./genericimageupload.js?contenthash=w3XAUvxw",
-      "./linkregionbox.js?contenthash=B1xRlJfv",
+      "./dashplayer.js?contenthash=CTUdyuaD",
+      "./reorderablelist.module.js?contenthash=DxulBny0",
+      "../../../css/applications/appmgmt/reorderablelist.css?contenthash=Dt2Mlogs",
+      "./genericimageupload.js?contenthash=DQmFk7pB",
+      "./linkregionbox.js?contenthash=Dac0cCFC",
       "../../../css/applications/appmgmt/linkregionbox.css?contenthash=HkLONVRS",
       "../../../css/applications/appmgmt/genericimageupload.css?contenthash=NERScwG6",
-      "../../../css/applications/appmgmt/bbcodeeditor.css?contenthash=3hagutKz",
-      "./giveawayregistration.js?contenthash=D_8Jo1eW",
-      "./partnereventstore.js?contenthash=CtMrvi9J",
-      "./vodquery.js?contenthash=C1wF90CE",
-      "../../../css/applications/appmgmt/importexportdialog.css?contenthash=Ba2ec_ow",
-      "./creatorhomestore.js?contenthash=B1m-EXl5",
-      "./eventtrackinghook.js?contenthash=rq3nTZ02",
-      "./storegamehover.js?contenthash=_qWaCHEy",
+      "../../../css/applications/appmgmt/bbcodeeditor.css?contenthash=DpsiOKhP",
+      "./giveawayregistration.js?contenthash=DaXEzbjX",
+      "./partnereventstore.js?contenthash=Cs2lYCGZ",
+      "./vodquery.js?contenthash=B7JZ8hBP",
+      "../../../css/applications/appmgmt/importexportdialog.css?contenthash=BHX5tn8J",
+      "./creatorhomestore.js?contenthash=DkXi4hy7",
+      "./eventtrackinghook.js?contenthash=gCT2xl2u",
+      "./storegamehover.js?contenthash=B1Wg1vz1",
       "./discussionwidget.module.js?contenthash=CdiHbfPb",
       "../../../css/applications/appmgmt/discussionwidget.css?contenthash=2bhRMVOg",
-      "./clanstore.js?contenthash=BmJxyVxj",
-      "./salebanner.js?contenthash=D49NetKA",
+      "./clanstore.js?contenthash=zykDSFH6",
+      "./salebanner.js?contenthash=BwNE0C4A",
       "../../../css/applications/appmgmt/salebanner.css?contenthash=4Er4A1Al",
-      "./languagepicker.js?contenthash=CsFIgnIR",
-      "./editorlocalizationstore.js?contenthash=B1C0NS5O",
-      "../../../css/applications/appmgmt/buildpatchnotes.css?contenthash=C45g-Uv0",
-      "./promotion_routing.js?contenthash=HgOhTeDS",
-      "./promotionoperationowner.js?contenthash=CXyNwhPP",
-      "./marketingmessageevent.js?contenthash=LKE2TOi_",
-      "../../../css/applications/appmgmt/marketingmessageevent.css?contenthash=B9jmZ-iU",
-      "./primarypartnercontext.js?contenthash=rhsTdcsW",
+      "./languagepicker.js?contenthash=Bs6ZaXdf",
+      "./editorlocalizationstore.js?contenthash=CAHej8DH",
+      "../../../css/applications/appmgmt/buildpatchnotes.css?contenthash=n5tjT5tP",
+      "./promotion_routing.js?contenthash=7MlOXJo5",
+      "./promotionoperationowner.js?contenthash=3dA_6niG",
+      "./marketingmessageevent.js?contenthash=CWqvy10x",
+      "../../../css/applications/appmgmt/marketingmessageevent.css?contenthash=DbKXx2FI",
+      "./primarypartnercontext.js?contenthash=C34eLrtw",
       "./assertThisInitialized.js?contenthash=UThVrofZ",
-      "./cloudlocalizedartdisplay.js?contenthash=DpbNyXJq",
-      "./modaldialog.js?contenthash=iwZHjmGl",
-      "../../../css/applications/appmgmt/modaldialog.css?contenthash=DIzQc6yp",
-      "./adminshared.module.js?contenthash=DQBfJqXN",
-      "../../../css/applications/appmgmt/adminshared.css?contenthash=Bdafyp0R",
-      "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css?contenthash=BKjBu2__",
-      "./imageuploaderpanel.js?contenthash=Dd42Uh2o",
-      "../../../css/applications/appmgmt/imageuploaderpanel.css?contenthash=Dkju2lA2",
-      "./colorpickerdialog.js?contenthash=Bs9TZkSy",
-      "./localization.js?contenthash=DSaSbP1v",
-      "./popoversurface.js?contenthash=8cl5-r03",
+      "./fast-deep-equal.js?contenthash=tXQKDhTi",
+      "./localization.js?contenthash=-Zwye_Vv",
+      "./popoversurface.js?contenthash=BWeFIEma",
       "../../../css/applications/appmgmt/popoversurface.css?contenthash=CQEcKe8B",
-      "../../../css/applications/appmgmt/localization.css?contenthash=B2mQWwgU",
-      "./dashboardutilities.js?contenthash=bw7pEkaU",
+      "../../../css/applications/appmgmt/localization.css?contenthash=CeNPQ2w4",
+      "./dashboardutilities.js?contenthash=DLCFndhk",
       "../../../css/applications/appmgmt/dashboardutilities.css?contenthash=DxafS6Qx",
-      "./fast-deep-equal.js?contenthash=BA1UP7yr",
-      "../../../css/applications/appmgmt/fast-deep-equal.css?contenthash=iPcpBsJv",
-      "./objectSpread2.js?contenthash=DLG10zro",
-      "./filechangepoll.js?contenthash=fCc3hcU7",
-      "../../../css/applications/appmgmt/filechangepoll.css?contenthash=Br-8R0Ql",
-      "./partnerstats.module.js?contenthash=-g211IIf",
-      "./react-is.js?contenthash=C-_QD00a",
+      "../../../css/applications/appmgmt/fast-deep-equal.css?contenthash=_CH5obot",
+      "./imageuploaderpanel.js?contenthash=MMXBqy8w",
+      "./slider.js?contenthash=D-TCYa7Y",
+      "../../../css/applications/appmgmt/slider.css?contenthash=D9rMOvcL",
+      "../../../css/applications/appmgmt/imageuploaderpanel.css?contenthash=DQY4D1Bk",
+      "./partnerstats.module.js?contenthash=02c20Lsq",
+      "./with-selector.js?contenthash=DgeOOO5N",
       "../../../css/applications/appmgmt/partnerstats.css?contenthash=tAeOf2hA",
-      "./partnereventshareddates.js?contenthash=BlsNEhTx",
+      "./filechangepoll.js?contenthash=BLixuvBz",
+      "../../../css/applications/appmgmt/filechangepoll.css?contenthash=Br-8R0Ql",
+      "./adminshared.module.js?contenthash=B8TEWtL2",
+      "../../../css/applications/appmgmt/adminshared.css?contenthash=OY2FNZOQ",
+      "./partnereventshareddates.js?contenthash=cXm5wWVg",
       "./cross.js?contenthash=BC8w4gvU",
       "../../../css/applications/appmgmt/partnereventshareddates.css?contenthash=CbM88CZ9",
-      "../../../css/applications/appmgmt/react-datetime2.css?contenthash=ByP4wuA0",
-      "./themefestplanning.js?contenthash=BcDI-_rw",
+      "../../../css/applications/appmgmt/react-datetime2.css?contenthash=BLBSEpof",
+      "./themefestplanning.js?contenthash=CFGoyDJN",
       "../../../css/applications/appmgmt/themefestplanning.css?contenthash=NA_CPQH-",
-      "./react-select.cjs.js?contenthash=uGmlgC6g",
-      "./reorderablelist.js?contenthash=BLedTbCJ",
-      "./partnervalvecontactstore.js?contenthash=C5521KxS",
+      "./react-select.cjs.js?contenthash=DdexvlLh",
+      "./reorderablelist.js?contenthash=VFWZEFLH",
+      "./partnervalvecontactstore.js?contenthash=BnkReuCP",
       "../../../css/applications/appmgmt/partnervalvecontactstore.css?contenthash=DTazZ76p",
-      "./adminaccount.js?contenthash=D5XEaJ5A",
-      "./collapseablesection.js?contenthash=DXFFvw-N",
+      "./adminaccount.js?contenthash=BKA24pkT",
+      "./collapseablesection.js?contenthash=iYJ3mCLU",
       "../../../css/applications/appmgmt/collapseablesection.css?contenthash=CY5rgv5g",
-      "./userprofile.js?contenthash=1PVbQ0GS",
+      "./userprofile.js?contenthash=aBOKh071",
       "../../../css/applications/appmgmt/userprofile.css?contenthash=CVciQcNY",
-      "./partnerinfostore.js?contenthash=0waiYeuN",
-      "./localization4.js?contenthash=73n-ZBjU",
+      "./partnerinfostore.js?contenthash=Dj2bfcG0",
+      "./localization4.js?contenthash=BszbXCfV",
       "../../../css/applications/appmgmt/localization2.css?contenthash=DbStjDdD",
-      "./gamerecordinglog.js?contenthash=BbKO-wPT",
-      "../../../css/applications/appmgmt/promotionoperationowner.css?contenthash=oQrtq8co",
-      "./salesrouting.js?contenthash=BLKV-Dht",
-      "./optin_routing.js?contenthash=IPnxO4c9",
-      "./appadminrouter.js?contenthash=r9jz5Q-q",
-      "./phpintegration.js?contenthash=CCsRwFZl",
-      "./releasedateinfo.js?contenthash=DAd1DpKc",
+      "./gamerecordinglog.js?contenthash=DRuHwfo8",
+      "./cloudlocalizedartdisplay.js?contenthash=BiGNyLMC",
+      "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css?contenthash=CJgc3uaF",
+      "../../../css/applications/appmgmt/promotionoperationowner.css?contenthash=ToSdZkUY",
+      "./salesrouting.js?contenthash=Di6qDtTC",
+      "./optin_routing.js?contenthash=ByhbTgOV",
+      "./appadminrouter.js?contenthash=1jlgbh2j",
+      "./phpintegration.js?contenthash=kK0BRedh",
+      "./releasedateinfo.js?contenthash=CSngTwEL",
       "../../../css/applications/appmgmt/releasedateinfo.css?contenthash=Llx8JmM3",
       "../../../css/applications/appmgmt/appadminrouter.css?contenthash=CyDP4Tb6",
-      "./storeadmin.js?contenthash=DslvhO_r",
-      "./select.js?contenthash=CPNVF0ci",
-      "./heading.js?contenthash=JlFqtEbo",
+      "./storeadmin.js?contenthash=MbXXwW0T",
+      "./select.js?contenthash=D2-qF6Uz",
+      "./heading.js?contenthash=BhSHllp_",
       "../../../css/applications/appmgmt/heading.css?contenthash=BUJSDlhm",
-      "./grid.js?contenthash=Co4HwLPJ",
+      "./grid.js?contenthash=CT4EO7tQ",
       "../../../css/applications/appmgmt/grid.css?contenthash=CmLumJCG",
-      "./richgamedescriptioneditor.js?contenthash=DAHb-JkZ",
-      "./simplemodaldialog.js?contenthash=D3ZDxsKb",
-      "../../../css/applications/appmgmt/simplemodaldialog.css?contenthash=U5XJc_k7",
-      "../../../css/applications/appmgmt/richgamedescriptioneditor.css?contenthash=SwmxS47z",
+      "./richgamedescriptioneditor.js?contenthash=DhbdUWgx",
+      "../../../css/applications/appmgmt/richgamedescriptioneditor.css?contenthash=CEmRLwB0",
       "../../../css/applications/appmgmt/storeadmin.css?contenthash=hvuUUzkI",
-      "./packageadmin.js?contenthash=zckG18Al",
+      "./packageadmin.js?contenthash=yFmMkHsv",
       "../../../css/applications/appmgmt/packageadmin.css?contenthash=D1QLSM5y",
-      "./connections.js?contenthash=CtLn45mX",
+      "./connections.js?contenthash=xPfgn6wz",
       "../../../css/applications/appmgmt/connections.css?contenthash=C2Hy6zmN",
-      "./landing.js?contenthash=Dt9ZEeYl",
-      "./recentapps.js?contenthash=C1c7X91C",
+      "./landing.js?contenthash=92FVVCnZ",
+      "./recentapps.js?contenthash=B9b0_vDQ",
       "../../../css/applications/appmgmt/recentapps.css?contenthash=BF2THleY",
-      "./steammessages_partnerdeadline_pb.js?contenthash=Aj08Pemg",
-      "./seasonpasshooks.js?contenthash=Dsrhz5gF",
-      "../../../css/applications/appmgmt/landing.css?contenthash=Cm17kpCU",
-      "./timelinemarkereditorlanding.js?contenthash=C90d_1SH",
+      "./steammessages_partnerdeadline_pb.js?contenthash=DR0aOWrU",
+      "./seasonpasshooks.js?contenthash=Kfa8k0u7",
+      "../../../css/applications/appmgmt/landing.css?contenthash=BpRvFlrk",
+      "./timelinemarkereditorlanding.js?contenthash=DQDkGZeu",
       "./webuitransportdefaults.js?contenthash=B2A3Z7Xe",
-      "./raf-schd.esm.js?contenthash=CYgBqMfr",
-      "./tour.js?contenthash=CvplQJ9h",
+      "./dnd.esm.js?contenthash=I3HJU98C",
+      "./tour.js?contenthash=Bb6cQO_H",
       "../../../css/applications/appmgmt/tour.css?contenthash=a_0H_DmF",
-      "../../../css/applications/appmgmt/timelinemarkereditorlanding.css?contenthash=DdAPOu_W",
-      "./promotionreviewdashboard.js?contenthash=Dfbc1Yb3",
+      "../../../css/applications/appmgmt/timelinemarkereditorlanding.css?contenthash=DkE7l4f1",
+      "./promotionreviewdashboard.js?contenthash=ukkusqxx",
       "../../../css/applications/appmgmt/promotionreviewdashboard.css?contenthash=x1XGuNl0",
-      "./reservationqueuemessagingdashboard.js?contenthash=GJ0ywuS6",
+      "./reservationqueuemessagingdashboard.js?contenthash=CdTx-tQc",
       "../../../css/applications/appmgmt/reservationqueuemessagingdashboard.css?contenthash=DlqQi-f_",
-      "./contenthub_routing.js?contenthash=DScTm1zH",
+      "./contenthub_routing.js?contenthash=BYN6nYX_",
       "../../../css/applications/appmgmt/contenthub_routing.css?contenthash=0kfC_Hr7",
-      "./recap_routing.js?contenthash=DpTIE29V",
-      "./deadlinelanding.js?contenthash=BgCyQjQW",
+      "./recap_routing.js?contenthash=CkvkBmJL",
+      "./deadlinelanding.js?contenthash=D6OMuukg",
       "../../../css/applications/appmgmt/deadlinelanding.css?contenthash=Dqt7byuq",
-      "./taxrequirementlanding.js?contenthash=VePtLgNq",
+      "./taxrequirementlanding.js?contenthash=F7F9NxA0",
       "../../../css/applications/appmgmt/taxrequirementlanding.css?contenthash=DVgGvYeX",
-      "./meetsteamrouting.js?contenthash=BbLc10SA",
-      "../../../css/applications/appmgmt/meetsteamrouting.css?contenthash=CfXSry69",
-      "./achievementseditorlanding.js?contenthash=TVHl86cN",
-      "../../../css/applications/appmgmt/achievementseditorlanding.css?contenthash=BHcdEcUs",
-      "./creatorhomeadmindashboard.js?contenthash=BKoryV5K",
+      "./meetsteamrouting.js?contenthash=XFj4Oa-v",
+      "../../../css/applications/appmgmt/meetsteamrouting.css?contenthash=DVdtIb42",
+      "./achievementseditorlanding.js?contenthash=Do3YZvZt",
+      "../../../css/applications/appmgmt/achievementseditorlanding.css?contenthash=vTrBU8HP",
+      "./creatorhomeadmindashboard.js?contenthash=Bb_uMOJD",
       "../../../css/applications/appmgmt/creatorhomeadmindashboard.css?contenthash=DOp5Ycpn",
-      "./logoedtior.js?contenthash=D1NEy59j",
-      "./canvas.js?contenthash=DpU2TNRk",
-      "../../../css/applications/appmgmt/logoedtior.css?contenthash=eDFvnAjT",
+      "./logoedtior.js?contenthash=JFo41mOy",
+      "./canvas.js?contenthash=CBcuoO99",
+      "../../../css/applications/appmgmt/logoedtior.css?contenthash=gVXoSlLX",
     ]),
 ) => _.map((_) => _[_]);
 import {
@@ -284,7 +278,8 @@ import {
   _,
   _,
   _,
-} from "./mobx.esm.js?contenthash=BRGZcCup";
+} from "./mobx.esm.js?contenthash=CQiZDS-T";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./src.js?contenthash=CBPcp3zo";
 import {
   _,
   _,
@@ -311,40 +306,30 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./dialogs.js?contenthash=D1pxcxuf";
-import { _, _ } from "./long.js?contenthash=DWB27pGN";
-import { _ } from "./storebrowsequerycontext.js?contenthash=C5iguZTL";
-import { _, _, _, _ } from "./react-router.js?contenthash=nQj0_J23";
-import { _ } from "./servicetransportprovider.js?contenthash=CWMOM-p-";
-import { _ } from "./reactqueryroot.js?contenthash=6HNzcxAU";
-import { _ } from "./useMutation.js?contenthash=Dj5NzgSW";
-import { _, _, _ } from "./react-router-dom.js?contenthash=CFu_nAlI";
-import { _ } from "./primarypartnercontext.js?contenthash=rhsTdcsW";
-import { _, _ } from "./emoticonstorecontext.js?contenthash=CBYO4eyx";
-import { _ } from "./modals.js?contenthash=Bi1vin1f";
-import { _, _ } from "./formfactor.js?contenthash=PvnRLh_o";
-import { _ } from "./variantdefaults.js?contenthash=CybMBV5N";
-import { _ } from "./popoversurface.js?contenthash=8cl5-r03";
-import { _ } from "./formatnumber.js?contenthash=DC8qwfxA";
-import { _ } from "./axios.js?contenthash=ftGxbJpA";
-import { _ } from "./historyutils.js?contenthash=DmvWR4sr";
-import { _, _, _ } from "./browserapi.js?contenthash=DnrLKuKB";
-import { _ } from "./eventtrackinghook.js?contenthash=rq3nTZ02";
-import { _, _ } from "./simplesuccesserror.js?contenthash=DwQ2OuT3";
+} from "./dialogs.js?contenthash=oAnTCbk0";
+import { _ } from "./storebrowsequerycontext.js?contenthash=IltPrRPI";
+import { _, _, _, _ } from "./react-router.js?contenthash=C8paMHEZ";
+import { _ } from "./servicetransportprovider.js?contenthash=VcFarKSG";
+import { _ } from "./reactqueryroot.js?contenthash=BLvKcg6J";
+import { _ } from "./useMutation.js?contenthash=CVVv1aVR";
+import { _, _, _ } from "./react-router-dom.js?contenthash=C5N9ARHv";
+import { _ } from "./primarypartnercontext.js?contenthash=C34eLrtw";
+import { _, _ } from "./emoticonstorecontext.js?contenthash=66ZJNa_W";
+import { _, _ } from "./formfactor.js?contenthash=BPEgXlGF";
+import { _ } from "./variantdefaults.js?contenthash=twwj7ifz";
+import { _ } from "./popoversurface.js?contenthash=BWeFIEma";
+import { _ } from "./formatnumber.js?contenthash=Ccr-Vppf";
+import { _ } from "./modals.js?contenthash=CSZ9553x";
+import { _ } from "./axios.js?contenthash=DJSofgRR";
+import { _ } from "./historyutils.js?contenthash=HC4tjo4S";
+import { _, _, _ } from "./browserapi.js?contenthash=B4KRK3Fl";
+import { _ } from "./eventtrackinghook.js?contenthash=gCT2xl2u";
+import { _, _ } from "./simplesuccesserror.js?contenthash=9YSri4P8";
 import { _ } from "./localstorage.js?contenthash=CDvEuPjQ";
-import { _ } from "./configdatadiag.js?contenthash=BNSwwRC7";
-import { _ } from "./phpintegration.js?contenthash=CCsRwFZl";
-import { _ } from "./unknownroute.js?contenthash=C2vrZ8Y1";
-import { _, _ } from "./filechangepoll.js?contenthash=fCc3hcU7";
+import { _ } from "./configdatadiag.js?contenthash=Cn2q9-OP";
+import { _ } from "./phpintegration.js?contenthash=kK0BRedh";
+import { _ } from "./unknownroute.js?contenthash=CtgV9GMi";
+import { _, _ } from "./filechangepoll.js?contenthash=BLixuvBz";
 var _ = (_, _, _) => {
   let _ = _.lastIndexOf(`?`),
     _ = _[_ === -1 || _ < _.lastIndexOf(`/`) ? _ : _.slice(0, _)];
@@ -485,7 +470,9 @@ var _ = _.memo(function (_) {
       children: _,
       zoo: _,
     } = _,
-    _;
+    _ = _.useRef(null);
+  _(_, _, _, _);
+  let _;
   return (
     _ &&
       (_ = {
@@ -498,6 +485,7 @@ var _ = _.memo(function (_) {
         breakpoints: _,
         children: (0, _.jsx)(_, {
           children: (0, _.jsx)(`div`, {
+            ref: _,
             className: (0, _.default)(_, `noOpinionatedGlobalStyles`),
             style: _,
             children: (0, _.jsxs)(_, {
@@ -520,6 +508,26 @@ var _ = _.memo(function (_) {
     })
   );
 });
+function _(_, _, _, _) {
+  _.useLayoutEffect(() => {
+    let _ = _.current?.ownerDocument.documentElement;
+    if (!_) return;
+    let _ = [],
+      _ = (_, _) => {
+        typeof _ == `string` &&
+          (_.push([_, _.getAttribute(_)]), _.setAttribute(_, _));
+      };
+    return (
+      _(`data-accent-color`, _),
+      _(`data-dull-color`, _),
+      _(`data-body-text-color`, _),
+      () => {
+        for (let [_, _] of _)
+          _ === null ? _.removeAttribute(_) : _.setAttribute(_, _);
+      }
+    );
+  }, [_, _, _, _]);
+}
 function _(_) {
   let { children: _ } = _,
     { formFactorOverride: _ } = _();
@@ -1310,26 +1318,26 @@ function _(_) {
 }
 var _ = _.lazy(() =>
     _(
-      () => import(`./rootlogin.js?contenthash=DzemQLxh`),
+      () => import(`./rootlogin.js?contenthash=CbUMIKqr`),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-        20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+        20, 21, 22, 23, 24, 25, 26, 27,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./steamml_routing.js?contenthash=DbBmdwm8`),
-      __vite__mapDeps([30, 1, 4, 31, 32, 33, 22, 34]),
+      () => import(`./steamml_routing.js?contenthash=D6GgQLSc`),
+      __vite__mapDeps([28, 1, 4, 29, 30, 31, 21, 32]),
       import.meta.url,
     ),
   );
 _.lazy(() =>
   _(
-    () => import(`./steamdeckcompatibilitydetails.js?contenthash=DI0MT26h`),
+    () => import(`./steamdeckcompatibilitydetails.js?contenthash=BdqTA22s`),
     __vite__mapDeps([
-      35, 36, 1, 2, 3, 4, 5, 37, 38, 39, 40, 41, 6, 22, 42, 43, 23, 24, 44, 45,
+      33, 34, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 22, 23, 42, 43,
     ]),
     import.meta.url,
   ),
@@ -1337,201 +1345,201 @@ _.lazy(() =>
 var _ = _.lazy(() =>
     _(
       () =>
-        import(`./steamdeckcompatibilitydetails_admin.js?contenthash=BQBge5JA`),
+        import(`./steamdeckcompatibilitydetails_admin.js?contenthash=DAhUNj2L`),
       __vite__mapDeps([
-        46, 1, 36, 2, 3, 4, 5, 37, 38, 39, 40, 41, 6, 22, 42, 43, 23, 24, 44,
-        45,
+        44, 1, 34, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 22, 23, 42,
+        43,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./pricing_routing.js?contenthash=CawdBXG5`),
+      () => import(`./pricing_routing.js?contenthash=Ch3FDg16`),
       __vite__mapDeps([
-        47, 1, 2, 3, 4, 5, 48, 40, 39, 49, 50, 51, 31, 6, 52, 11, 12, 13, 14,
-        15, 16, 17, 18, 53, 54, 55, 22, 42, 44, 56, 43, 23, 24, 57, 58, 59, 60,
-        61, 62, 38, 41, 28, 63, 64, 65, 66, 67, 68, 37, 69, 10, 19, 20, 21, 70,
-        71, 72, 73, 74, 75, 76, 77, 78, 79, 27, 25, 80, 81, 9, 82, 83, 84, 85,
-        86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
+        45, 1, 3, 2, 4, 5, 46, 38, 37, 47, 48, 49, 29, 50, 9, 10, 11, 12, 13,
+        14, 15, 16, 17, 51, 52, 53, 21, 40, 42, 54, 27, 41, 22, 23, 55, 56, 57,
+        58, 59, 60, 36, 39, 61, 62, 63, 64, 65, 66, 67, 35, 68, 8, 18, 19, 20,
+        69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 25, 7, 24, 79, 80, 81, 82, 83,
+        84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./buildpatchnotes.js?contenthash=B_wSZpcb`),
+      () => import(`./buildpatchnotes.js?contenthash=By7v9xou`),
       __vite__mapDeps([
-        96, 1, 2, 3, 4, 5, 62, 39, 40, 37, 38, 41, 97, 20, 49, 50, 69, 98, 8, 9,
-        81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23, 24, 44, 45, 58,
-        51, 104, 105, 106, 28, 63, 107, 108, 109, 110, 111, 112, 113, 114, 115,
-        116, 89, 57, 59, 60, 117, 32, 118, 14, 12, 13, 15, 19, 53, 54, 119, 120,
-        121, 122, 123, 124, 67, 25, 125, 126, 80, 27, 127, 128, 129, 130, 131,
-        132, 133, 134, 135, 136, 26, 64, 61, 65, 66, 137, 138, 139, 140, 141,
-        142, 143, 71, 72, 144, 145, 70, 78, 146, 147, 75, 148, 149, 150, 151,
-        152, 153, 154, 155, 156, 157, 158,
+        95, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
+        80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
+        102, 103, 61, 62, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 88,
+        55, 57, 58, 114, 30, 115, 116, 12, 13, 10, 11, 14, 18, 51, 52, 117, 118,
+        119, 120, 121, 122, 66, 24, 123, 124, 79, 25, 125, 126, 127, 128, 129,
+        130, 131, 132, 133, 134, 63, 59, 64, 65, 135, 136, 137, 138, 139, 140,
+        141, 70, 71, 142, 143, 69, 77, 144, 145, 74, 146, 147, 148, 149, 150,
+        151, 152, 153, 154, 155, 156,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./promotion_routing.js?contenthash=HgOhTeDS`),
+      () => import(`./promotion_routing.js?contenthash=7MlOXJo5`),
       __vite__mapDeps([
-        159, 160, 1, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
-        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
-        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
-        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
-        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
-        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
-        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
-        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
-        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
-        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
-        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
-        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207,
+        157, 158, 1, 3, 60, 37, 38, 122, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
+        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
+        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 128, 129, 55, 57, 58,
+        70, 71, 123, 146, 25, 24, 148, 124, 79, 151, 160, 127, 130, 29, 161,
+        107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 51, 52, 164, 165, 166, 53, 167, 115, 168, 169, 84, 170, 8, 18, 20,
+        6, 26, 30, 50, 46, 54, 171, 172, 173, 155, 137, 138, 139, 140, 81, 82,
+        174, 175, 176, 177, 112, 113, 88, 114, 116, 117, 118, 119, 120, 121,
+        125, 126, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 142, 143, 69,
+        77, 144, 145, 74, 75, 76, 178, 179, 180, 181, 78, 87, 182, 183, 184,
+        185, 83, 85, 154, 186, 187, 188, 189, 190, 191, 192, 86, 89, 193, 194,
+        195, 196, 197, 90, 91, 198, 199, 200, 201, 202, 203,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./salesrouting.js?contenthash=BLKV-Dht`),
+      () => import(`./salesrouting.js?contenthash=Di6qDtTC`),
       __vite__mapDeps([
-        208, 1, 160, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
-        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
-        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
-        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
-        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
-        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
-        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
-        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
-        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
-        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
-        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
-        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207,
+        204, 1, 158, 3, 60, 37, 38, 122, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
+        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
+        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 128, 129, 55, 57, 58,
+        70, 71, 123, 146, 25, 24, 148, 124, 79, 151, 160, 127, 130, 29, 161,
+        107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 51, 52, 164, 165, 166, 53, 167, 115, 168, 169, 84, 170, 8, 18, 20,
+        6, 26, 30, 50, 46, 54, 171, 172, 173, 155, 137, 138, 139, 140, 81, 82,
+        174, 175, 176, 177, 112, 113, 88, 114, 116, 117, 118, 119, 120, 121,
+        125, 126, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 142, 143, 69,
+        77, 144, 145, 74, 75, 76, 178, 179, 180, 181, 78, 87, 182, 183, 184,
+        185, 83, 85, 154, 186, 187, 188, 189, 190, 191, 192, 86, 89, 193, 194,
+        195, 196, 197, 90, 91, 198, 199, 200, 201, 202, 203,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./optin_routing.js?contenthash=IPnxO4c9`),
+      () => import(`./optin_routing.js?contenthash=ByhbTgOV`),
       __vite__mapDeps([
-        209, 160, 1, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
-        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
-        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
-        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
-        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
-        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
-        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
-        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
-        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
-        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
-        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
-        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207,
+        205, 158, 1, 3, 60, 37, 38, 122, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
+        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
+        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 128, 129, 55, 57, 58,
+        70, 71, 123, 146, 25, 24, 148, 124, 79, 151, 160, 127, 130, 29, 161,
+        107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 51, 52, 164, 165, 166, 53, 167, 115, 168, 169, 84, 170, 8, 18, 20,
+        6, 26, 30, 50, 46, 54, 171, 172, 173, 155, 137, 138, 139, 140, 81, 82,
+        174, 175, 176, 177, 112, 113, 88, 114, 116, 117, 118, 119, 120, 121,
+        125, 126, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 142, 143, 69,
+        77, 144, 145, 74, 75, 76, 178, 179, 180, 181, 78, 87, 182, 183, 184,
+        185, 83, 85, 154, 186, 187, 188, 189, 190, 191, 192, 86, 89, 193, 194,
+        195, 196, 197, 90, 91, 198, 199, 200, 201, 202, 203,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./appadminrouter.js?contenthash=r9jz5Q-q`),
+      () => import(`./appadminrouter.js?contenthash=1jlgbh2j`),
       __vite__mapDeps([
-        210, 1, 2, 3, 4, 5, 124, 67, 37, 38, 39, 40, 41, 49, 50, 98, 100, 163,
-        171, 6, 42, 22, 23, 24, 157, 105, 106, 139, 140, 141, 142, 82, 83, 172,
-        32, 33, 126, 80, 81, 9, 60, 27, 28, 25, 211, 212, 69, 173, 88, 89, 57,
-        58, 59, 188, 189, 190, 191, 213, 185, 186, 187, 79, 214,
+        206, 1, 3, 122, 66, 2, 4, 5, 35, 36, 37, 38, 39, 47, 48, 97, 99, 161,
+        30, 31, 171, 172, 13, 10, 11, 14, 53, 173, 27, 40, 21, 22, 23, 155, 102,
+        103, 137, 138, 139, 140, 81, 82, 174, 175, 80, 7, 176, 25, 24, 177, 124,
+        79, 58, 207, 208, 68, 87, 88, 55, 56, 57, 182, 183, 184, 185, 209, 78,
+        210,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./storeadmin.js?contenthash=DslvhO_r`),
+      () => import(`./storeadmin.js?contenthash=MbXXwW0T`),
       __vite__mapDeps([
-        215, 1, 2, 3, 4, 5, 62, 39, 40, 37, 38, 41, 97, 20, 49, 50, 69, 98, 8,
-        9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23, 24, 44, 45,
-        58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131, 57, 59, 60,
-        71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 48, 11, 12, 13, 14,
-        15, 16, 17, 18, 10, 19, 21, 53, 54, 174, 175, 176, 55, 177, 216, 217,
-        218, 178, 179, 219, 220, 52, 56, 157, 70, 68, 61, 64, 65, 66, 67, 73,
-        74, 75, 211, 77, 168, 169, 212, 173, 171, 139, 124, 140, 141, 142, 82,
-        83, 172, 88, 89, 188, 189, 190, 191, 213, 79, 156, 194, 195, 137, 138,
-        198, 199, 200, 201, 202, 203, 221, 112, 165, 166, 167, 170, 222, 223,
-        121, 122, 224, 225,
+        211, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
+        80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
+        102, 103, 61, 62, 104, 105, 106, 159, 128, 129, 55, 57, 58, 70, 71, 123,
+        146, 25, 24, 148, 124, 79, 151, 160, 46, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 8, 18, 20, 51, 52, 164, 165, 166, 53, 167, 212, 115, 213, 214, 168,
+        169, 215, 216, 50, 54, 155, 69, 67, 59, 63, 64, 65, 66, 72, 73, 74, 207,
+        76, 180, 181, 208, 171, 172, 173, 137, 122, 138, 139, 140, 81, 82, 174,
+        87, 88, 182, 183, 184, 185, 209, 78, 154, 188, 189, 135, 136, 192, 193,
+        194, 195, 196, 197, 217, 109, 119, 120, 201, 202, 218, 219,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./packageadmin.js?contenthash=zckG18Al`),
+      () => import(`./packageadmin.js?contenthash=yFmMkHsv`),
       __vite__mapDeps([
-        226, 1, 2, 3, 4, 5, 62, 39, 40, 48, 49, 50, 51, 6, 11, 12, 13, 14, 15,
-        16, 17, 18, 10, 19, 20, 21, 53, 54, 217, 218, 118, 119, 52, 55, 22, 42,
-        44, 56, 23, 24, 68, 37, 38, 41, 69, 70, 71, 72, 61, 28, 63, 64, 65, 66,
-        67, 73, 74, 75, 211, 77, 84, 85, 86, 87, 58, 57, 59, 60, 80, 81, 9, 27,
-        25, 88, 89, 90, 93, 94, 204, 205, 227,
+        220, 1, 3, 60, 37, 38, 2, 4, 5, 46, 47, 48, 49, 9, 10, 11, 12, 13, 14,
+        15, 16, 17, 8, 18, 19, 20, 51, 52, 213, 214, 116, 117, 50, 53, 21, 40,
+        42, 54, 27, 22, 23, 67, 35, 36, 39, 68, 69, 70, 71, 59, 61, 62, 63, 64,
+        65, 66, 72, 73, 74, 207, 76, 83, 84, 85, 86, 56, 55, 57, 58, 79, 80, 7,
+        25, 24, 87, 88, 89, 92, 93, 198, 199, 221,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./connections.js?contenthash=CtLn45mX`),
-      __vite__mapDeps([228, 1, 2, 3, 4, 5, 33, 22, 42, 23, 24, 229]),
+      () => import(`./connections.js?contenthash=xPfgn6wz`),
+      __vite__mapDeps([222, 1, 3, 2, 4, 5, 31, 21, 40, 22, 23, 223]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./landing.js?contenthash=Dt9ZEeYl`),
+      () => import(`./landing.js?contenthash=92FVVCnZ`),
       __vite__mapDeps([
-        230, 1, 2, 3, 4, 5, 160, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
-        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
-        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
-        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
-        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
-        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
-        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
-        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
-        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
-        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
-        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
-        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207, 231, 232, 233,
-        234, 235,
+        224, 1, 3, 158, 60, 37, 38, 122, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
+        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
+        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 128, 129, 55, 57, 58,
+        70, 71, 123, 146, 25, 24, 148, 124, 79, 151, 160, 127, 130, 29, 161,
+        107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 51, 52, 164, 165, 166, 53, 167, 115, 168, 169, 84, 170, 8, 18, 20,
+        6, 26, 30, 50, 46, 54, 171, 172, 173, 155, 137, 138, 139, 140, 81, 82,
+        174, 175, 176, 177, 112, 113, 88, 114, 116, 117, 118, 119, 120, 121,
+        125, 126, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 142, 143, 69,
+        77, 144, 145, 74, 75, 76, 178, 179, 180, 181, 78, 87, 182, 183, 184,
+        185, 83, 85, 154, 186, 187, 188, 189, 190, 191, 192, 86, 89, 193, 194,
+        195, 196, 197, 90, 91, 198, 199, 200, 201, 202, 203, 225, 226, 227, 228,
+        229,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./timelinemarkereditorlanding.js?contenthash=C90d_1SH`),
+      () => import(`./timelinemarkereditorlanding.js?contenthash=DQDkGZeu`),
       __vite__mapDeps([
-        236, 1, 2, 3, 4, 5, 237, 66, 63, 6, 22, 58, 42, 43, 105, 106, 71, 72,
-        134, 135, 136, 28, 125, 33, 27, 25, 70, 23, 24, 65, 67, 168, 169, 238,
-        182, 206, 239, 38, 240, 241,
+        230, 1, 3, 2, 4, 5, 231, 65, 62, 27, 21, 56, 40, 41, 102, 103, 70, 71,
+        132, 133, 134, 61, 123, 31, 25, 7, 24, 69, 22, 23, 64, 66, 180, 181,
+        232, 176, 200, 233, 36, 234, 235,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./promotionreviewdashboard.js?contenthash=Dfbc1Yb3`),
+      () => import(`./promotionreviewdashboard.js?contenthash=ukkusqxx`),
       __vite__mapDeps([
-        242, 1, 160, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
-        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
-        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
-        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
-        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
-        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
-        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
-        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
-        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
-        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
-        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
-        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207, 243,
+        236, 1, 158, 3, 60, 37, 38, 122, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
+        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
+        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 128, 129, 55, 57, 58,
+        70, 71, 123, 146, 25, 24, 148, 124, 79, 151, 160, 127, 130, 29, 161,
+        107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 51, 52, 164, 165, 166, 53, 167, 115, 168, 169, 84, 170, 8, 18, 20,
+        6, 26, 30, 50, 46, 54, 171, 172, 173, 155, 137, 138, 139, 140, 81, 82,
+        174, 175, 176, 177, 112, 113, 88, 114, 116, 117, 118, 119, 120, 121,
+        125, 126, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 142, 143, 69,
+        77, 144, 145, 74, 75, 76, 178, 179, 180, 181, 78, 87, 182, 183, 184,
+        185, 83, 85, 154, 186, 187, 188, 189, 190, 191, 192, 86, 89, 193, 194,
+        195, 196, 197, 90, 91, 198, 199, 200, 201, 202, 203, 237,
       ]),
       import.meta.url,
     ),
@@ -1539,96 +1547,95 @@ var _ = _.lazy(() =>
   _ = _.lazy(() =>
     _(
       () =>
-        import(`./reservationqueuemessagingdashboard.js?contenthash=GJ0ywuS6`),
+        import(`./reservationqueuemessagingdashboard.js?contenthash=CdTx-tQc`),
       __vite__mapDeps([
-        244, 1, 2, 3, 4, 5, 98, 6, 32, 33, 42, 22, 104, 20, 57, 58, 59, 60, 105,
-        106, 27, 28, 25, 70, 23, 24, 71, 72, 168, 169, 188, 89, 189, 190, 191,
-        194, 199, 38, 39, 40, 49, 50, 41, 64, 200, 201, 202, 245,
+        238, 1, 3, 2, 4, 5, 97, 30, 31, 27, 40, 21, 101, 19, 55, 56, 57, 58,
+        102, 103, 25, 7, 24, 69, 22, 23, 70, 71, 180, 181, 182, 88, 183, 184,
+        185, 188, 193, 36, 37, 38, 47, 48, 39, 61, 63, 194, 195, 196, 239,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./contenthub_routing.js?contenthash=DScTm1zH`),
+      () => import(`./contenthub_routing.js?contenthash=BYN6nYX_`),
       __vite__mapDeps([
-        246, 1, 2, 3, 4, 5, 31, 6, 216, 11, 12, 13, 14, 15, 16, 17, 18, 53, 54,
-        174, 175, 176, 55, 177, 22, 43, 23, 24, 77, 168, 169, 78, 192, 37, 38,
-        39, 40, 41, 97, 62, 20, 49, 50, 69, 98, 8, 9, 81, 99, 100, 101, 102,
-        103, 33, 36, 42, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109,
-        111, 112, 125, 193, 194, 195, 137, 138, 189, 82, 83, 247,
+        240, 1, 3, 2, 4, 5, 29, 212, 9, 10, 11, 12, 13, 14, 15, 16, 17, 51, 52,
+        164, 165, 166, 53, 167, 115, 27, 21, 41, 22, 23, 76, 180, 181, 77, 186,
+        35, 36, 37, 38, 39, 96, 60, 19, 47, 48, 68, 97, 7, 80, 98, 99, 100, 31,
+        34, 40, 42, 43, 56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 108, 109,
+        123, 187, 188, 189, 135, 136, 183, 81, 82, 241,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./recap_routing.js?contenthash=DpTIE29V`),
+      () => import(`./recap_routing.js?contenthash=CkvkBmJL`),
       __vite__mapDeps([
-        248, 1, 160, 2, 3, 4, 5, 62, 39, 40, 124, 67, 37, 38, 41, 97, 20, 49,
-        50, 69, 98, 8, 9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23,
-        24, 44, 45, 58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 161, 130, 131,
-        57, 59, 60, 71, 72, 125, 148, 27, 25, 150, 126, 80, 153, 162, 129, 132,
-        31, 163, 110, 111, 112, 113, 114, 66, 164, 165, 166, 167, 157, 139, 140,
-        141, 142, 168, 169, 170, 171, 82, 83, 172, 173, 10, 11, 12, 13, 14, 15,
-        16, 17, 18, 19, 21, 174, 175, 176, 55, 177, 7, 26, 29, 32, 178, 179,
-        180, 53, 54, 85, 181, 52, 48, 56, 115, 116, 89, 117, 118, 119, 120, 121,
-        122, 123, 127, 128, 133, 134, 135, 136, 64, 61, 65, 137, 138, 143, 144,
-        145, 70, 78, 146, 147, 75, 182, 76, 77, 183, 184, 185, 186, 187, 79, 88,
-        188, 189, 190, 191, 84, 86, 156, 192, 193, 194, 195, 196, 197, 198, 87,
-        90, 199, 200, 201, 202, 203, 91, 92, 204, 205, 206, 207,
+        242, 1, 158, 3, 60, 37, 38, 122, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
+        48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
+        56, 49, 101, 102, 103, 61, 62, 104, 105, 106, 159, 128, 129, 55, 57, 58,
+        70, 71, 123, 146, 25, 24, 148, 124, 79, 151, 160, 127, 130, 29, 161,
+        107, 108, 109, 110, 111, 65, 162, 163, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 51, 52, 164, 165, 166, 53, 167, 115, 168, 169, 84, 170, 8, 18, 20,
+        6, 26, 30, 50, 46, 54, 171, 172, 173, 155, 137, 138, 139, 140, 81, 82,
+        174, 175, 176, 177, 112, 113, 88, 114, 116, 117, 118, 119, 120, 121,
+        125, 126, 131, 132, 133, 134, 63, 59, 64, 135, 136, 141, 142, 143, 69,
+        77, 144, 145, 74, 75, 76, 178, 179, 180, 181, 78, 87, 182, 183, 184,
+        185, 83, 85, 154, 186, 187, 188, 189, 190, 191, 192, 86, 89, 193, 194,
+        195, 196, 197, 90, 91, 198, 199, 200, 201, 202, 203,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./deadlinelanding.js?contenthash=BgCyQjQW`),
+      () => import(`./deadlinelanding.js?contenthash=D6OMuukg`),
       __vite__mapDeps([
-        249, 1, 2, 3, 4, 5, 40, 39, 22, 43, 105, 106, 107, 108, 80, 37, 38, 41,
-        81, 9, 42, 60, 27, 28, 25, 126, 233, 203, 234, 250,
+        243, 1, 3, 2, 4, 5, 38, 37, 21, 41, 102, 103, 104, 105, 79, 35, 36, 39,
+        80, 7, 40, 58, 25, 24, 124, 227, 197, 228, 244,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./taxrequirementlanding.js?contenthash=VePtLgNq`),
-      __vite__mapDeps([251, 1, 2, 3, 4, 5, 22, 42, 168, 169, 233, 252]),
+      () => import(`./taxrequirementlanding.js?contenthash=F7F9NxA0`),
+      __vite__mapDeps([245, 1, 3, 2, 4, 5, 21, 40, 180, 181, 227, 246]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./meetsteamrouting.js?contenthash=BbLc10SA`),
+      () => import(`./meetsteamrouting.js?contenthash=XFj4Oa-v`),
       __vite__mapDeps([
-        253, 1, 2, 3, 4, 5, 62, 39, 40, 37, 38, 41, 97, 20, 49, 50, 69, 98, 8,
-        9, 81, 99, 100, 101, 102, 103, 6, 33, 36, 22, 42, 43, 23, 24, 44, 45,
-        58, 51, 104, 105, 106, 28, 63, 107, 108, 109, 31, 116, 89, 57, 59, 60,
-        117, 32, 71, 72, 27, 25, 145, 66, 123, 124, 67, 80, 61, 64, 65, 76, 77,
-        168, 169, 78, 79, 84, 13, 85, 86, 156, 157, 196, 197, 198, 199, 200,
-        203, 254,
+        247, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
+        80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
+        102, 103, 61, 62, 104, 105, 106, 29, 113, 88, 55, 57, 58, 114, 30, 70,
+        71, 25, 24, 143, 65, 121, 122, 66, 79, 59, 63, 64, 75, 76, 180, 181, 77,
+        78, 83, 11, 84, 85, 154, 155, 190, 191, 192, 193, 194, 197, 248,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./achievementseditorlanding.js?contenthash=TVHl86cN`),
+      () => import(`./achievementseditorlanding.js?contenthash=Do3YZvZt`),
       __vite__mapDeps([
-        255, 1, 2, 3, 4, 5, 37, 38, 39, 40, 41, 69, 50, 222, 166, 167, 223, 6,
-        11, 12, 13, 14, 15, 16, 17, 18, 10, 19, 20, 21, 53, 54, 174, 175, 176,
-        55, 177, 33, 216, 118, 119, 178, 179, 180, 85, 181, 219, 220, 22, 42,
-        25, 134, 135, 64, 168, 169, 78, 238, 182, 186, 231, 232, 256,
+        249, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 68, 48, 163, 9, 10, 11, 12, 13,
+        14, 15, 16, 17, 51, 52, 164, 165, 166, 53, 167, 115, 168, 169, 84, 170,
+        8, 18, 19, 20, 31, 212, 116, 117, 215, 216, 172, 173, 27, 21, 40, 24,
+        132, 133, 63, 180, 181, 77, 232, 176, 225, 226, 250,
       ]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./creatorhomeadmindashboard.js?contenthash=BKoryV5K`),
+      () => import(`./creatorhomeadmindashboard.js?contenthash=Bb_uMOJD`),
       __vite__mapDeps([
-        257, 1, 3, 49, 39, 40, 50, 23, 24, 148, 99, 22, 60, 28, 27, 25, 258,
+        251, 1, 3, 47, 37, 38, 48, 22, 23, 146, 98, 21, 58, 61, 25, 7, 24, 252,
       ]),
       import.meta.url,
     ),
@@ -1988,13 +1995,13 @@ function _() {
         _(
           async () => {
             let { Init_LibraryLogoEditor: _ } = await import(
-              `./logoedtior.js?contenthash=D1NEy59j`
+              `./logoedtior.js?contenthash=JFo41mOy`
             );
             return {
               Init_LibraryLogoEditor: _,
             };
           },
-          __vite__mapDeps([259, 1, 2, 3, 4, 5, 101, 22, 23, 24, 133, 260, 261]),
+          __vite__mapDeps([253, 1, 3, 2, 4, 5, 100, 21, 22, 23, 131, 254, 255]),
           import.meta.url,
         ).then(({ Init_LibraryLogoEditor: _ }) =>
           _(_ == `LibraryLogoEditorPopup`, _),
@@ -2076,7 +2083,7 @@ async function _(_) {
             ),
           "../../../shared/localization/marketing/marketing_german.json": () =>
             _(
-              () => import(`./marketing_german.js?contenthash=nbQBut3i`),
+              () => import(`./marketing_german.js?contenthash=C4-Glaif`),
               [],
               import.meta.url,
             ),
@@ -2102,7 +2109,7 @@ async function _(_) {
               ),
           "../../../shared/localization/marketing/marketing_italian.json": () =>
             _(
-              () => import(`./marketing_italian.js?contenthash=DgYo8n72`),
+              () => import(`./marketing_italian.js?contenthash=WRYbZufQ`),
               [],
               import.meta.url,
             ),
@@ -2121,7 +2128,7 @@ async function _(_) {
             ),
           "../../../shared/localization/marketing/marketing_latam.json": () =>
             _(
-              () => import(`./marketing_latam.js?contenthash=aTxYnvQk`),
+              () => import(`./marketing_latam.js?contenthash=mmAmCJSg`),
               [],
               import.meta.url,
             ),
@@ -2154,7 +2161,7 @@ async function _(_) {
           "../../../shared/localization/marketing/marketing_romanian.json":
             () =>
               _(
-                () => import(`./marketing_romanian.js?contenthash=Da5LDPfO`),
+                () => import(`./marketing_romanian.js?contenthash=CKC3RFo3`),
                 [],
                 import.meta.url,
               ),
@@ -2205,7 +2212,7 @@ async function _(_) {
             ),
           "../../../shared/localization/marketing/marketing_turkish.json": () =>
             _(
-              () => import(`./marketing_turkish.js?contenthash=BMVn-Pdt`),
+              () => import(`./marketing_turkish.js?contenthash=B-x03CTa`),
               [],
               import.meta.url,
             ),
@@ -2327,7 +2334,7 @@ async function _(_) {
             ),
           "../../../shared/localization/sales/sales_latam.json": () =>
             _(
-              () => import(`./sales_latam.js?contenthash=BK4uwk3z`),
+              () => import(`./sales_latam.js?contenthash=BILfj3oe`),
               [],
               import.meta.url,
             ),
@@ -2357,7 +2364,7 @@ async function _(_) {
             ),
           "../../../shared/localization/sales/sales_romanian.json": () =>
             _(
-              () => import(`./sales_romanian.js?contenthash=jXm0CiYW`),
+              () => import(`./sales_romanian.js?contenthash=udeyIVLy`),
               [],
               import.meta.url,
             ),
@@ -2405,7 +2412,7 @@ async function _(_) {
             ),
           "../../../shared/localization/sales/sales_turkish.json": () =>
             _(
-              () => import(`./sales_turkish.js?contenthash=DHjZV1xF`),
+              () => import(`./sales_turkish.js?contenthash=DR3tPRul`),
               [],
               import.meta.url,
             ),
@@ -2429,187 +2436,187 @@ async function _(_) {
         Object.assign({
           "../localization/main_arabic.json": () =>
             _(
-              () => import(`./main_arabic.js?contenthash=DugEoX0F`),
+              () => import(`./main_arabic.js?contenthash=CNav5C-d`),
               [],
               import.meta.url,
             ),
           "../localization/main_brazilian.json": () =>
             _(
-              () => import(`./main_brazilian.js?contenthash=1bbNXK48`),
+              () => import(`./main_brazilian.js?contenthash=B4mftQtW`),
               [],
               import.meta.url,
             ),
           "../localization/main_bulgarian.json": () =>
             _(
-              () => import(`./main_bulgarian.js?contenthash=B3Zbvizn`),
+              () => import(`./main_bulgarian.js?contenthash=J_RSrIh6`),
               [],
               import.meta.url,
             ),
           "../localization/main_czech.json": () =>
             _(
-              () => import(`./main_czech.js?contenthash=D75A8-ln`),
+              () => import(`./main_czech.js?contenthash=yMZ74kkZ`),
               [],
               import.meta.url,
             ),
           "../localization/main_danish.json": () =>
             _(
-              () => import(`./main_danish.js?contenthash=B92BSZ4m`),
+              () => import(`./main_danish.js?contenthash=B_F6ZR8N`),
               [],
               import.meta.url,
             ),
           "../localization/main_dutch.json": () =>
             _(
-              () => import(`./main_dutch.js?contenthash=inFD542G`),
+              () => import(`./main_dutch.js?contenthash=zc-j9rQy`),
               [],
               import.meta.url,
             ),
           "../localization/main_english.json": () =>
             _(
-              () => import(`./main_english.js?contenthash=ChFoox1m`),
+              () => import(`./main_english.js?contenthash=C5q_Ijvo`),
               [],
               import.meta.url,
             ),
           "../localization/main_finnish.json": () =>
             _(
-              () => import(`./main_finnish.js?contenthash=q96imtH3`),
+              () => import(`./main_finnish.js?contenthash=DYhvFAWG`),
               [],
               import.meta.url,
             ),
           "../localization/main_french.json": () =>
             _(
-              () => import(`./main_french.js?contenthash=CmidYc_D`),
+              () => import(`./main_french.js?contenthash=Dgp1Yo7m`),
               [],
               import.meta.url,
             ),
           "../localization/main_german.json": () =>
             _(
-              () => import(`./main_german.js?contenthash=BDsZBn39`),
+              () => import(`./main_german.js?contenthash=CId8_EF1`),
               [],
               import.meta.url,
             ),
           "../localization/main_greek.json": () =>
             _(
-              () => import(`./main_greek.js?contenthash=DImW1hpa`),
+              () => import(`./main_greek.js?contenthash=DGxkqOOv`),
               [],
               import.meta.url,
             ),
           "../localization/main_hungarian.json": () =>
             _(
-              () => import(`./main_hungarian.js?contenthash=3CubEZCh`),
+              () => import(`./main_hungarian.js?contenthash=Auy4C77W`),
               [],
               import.meta.url,
             ),
           "../localization/main_indonesian.json": () =>
             _(
-              () => import(`./main_indonesian.js?contenthash=B4YebdNE`),
+              () => import(`./main_indonesian.js?contenthash=C72xZPj8`),
               [],
               import.meta.url,
             ),
           "../localization/main_italian.json": () =>
             _(
-              () => import(`./main_italian.js?contenthash=Dk_W8PbZ`),
+              () => import(`./main_italian.js?contenthash=CzD8Sv9f`),
               [],
               import.meta.url,
             ),
           "../localization/main_japanese.json": () =>
             _(
-              () => import(`./main_japanese.js?contenthash=DzfVly7V`),
+              () => import(`./main_japanese.js?contenthash=BY9BEDwI`),
               [],
               import.meta.url,
             ),
           "../localization/main_koreana.json": () =>
             _(
-              () => import(`./main_koreana.js?contenthash=D2XULwrU`),
+              () => import(`./main_koreana.js?contenthash=CmicwRWO`),
               [],
               import.meta.url,
             ),
           "../localization/main_latam.json": () =>
             _(
-              () => import(`./main_latam.js?contenthash=BJb77zsR`),
+              () => import(`./main_latam.js?contenthash=B7yvIQ9M`),
               [],
               import.meta.url,
             ),
           "../localization/main_malay.json": () =>
             _(
-              () => import(`./main_malay.js?contenthash=B57Y9GCH`),
+              () => import(`./main_malay.js?contenthash=CWYZnm-j`),
               [],
               import.meta.url,
             ),
           "../localization/main_norwegian.json": () =>
             _(
-              () => import(`./main_norwegian.js?contenthash=p6goKBYl`),
+              () => import(`./main_norwegian.js?contenthash=CU54KPJL`),
               [],
               import.meta.url,
             ),
           "../localization/main_polish.json": () =>
             _(
-              () => import(`./main_polish.js?contenthash=Cnf9qq0H`),
+              () => import(`./main_polish.js?contenthash=CZIP_wzD`),
               [],
               import.meta.url,
             ),
           "../localization/main_portuguese.json": () =>
             _(
-              () => import(`./main_portuguese.js?contenthash=EeiJzYvJ`),
+              () => import(`./main_portuguese.js?contenthash=BPKOEqDg`),
               [],
               import.meta.url,
             ),
           "../localization/main_romanian.json": () =>
             _(
-              () => import(`./main_romanian.js?contenthash=CMKz87zD`),
+              () => import(`./main_romanian.js?contenthash=BlQRPYVE`),
               [],
               import.meta.url,
             ),
           "../localization/main_russian.json": () =>
             _(
-              () => import(`./main_russian.js?contenthash=DYXay8Sr`),
+              () => import(`./main_russian.js?contenthash=Ducs4uPM`),
               [],
               import.meta.url,
             ),
           "../localization/main_schinese.json": () =>
             _(
-              () => import(`./main_schinese.js?contenthash=CsgSWPk_`),
+              () => import(`./main_schinese.js?contenthash=CW6agI8H`),
               [],
               import.meta.url,
             ),
           "../localization/main_spanish.json": () =>
             _(
-              () => import(`./main_spanish.js?contenthash=Dej_QNGq`),
+              () => import(`./main_spanish.js?contenthash=BSrOITqp`),
               [],
               import.meta.url,
             ),
           "../localization/main_swedish.json": () =>
             _(
-              () => import(`./main_swedish.js?contenthash=BuIKrKKr`),
+              () => import(`./main_swedish.js?contenthash=1k63OGDY`),
               [],
               import.meta.url,
             ),
           "../localization/main_tchinese.json": () =>
             _(
-              () => import(`./main_tchinese.js?contenthash=BDZAKZnx`),
+              () => import(`./main_tchinese.js?contenthash=tCvF5EPc`),
               [],
               import.meta.url,
             ),
           "../localization/main_thai.json": () =>
             _(
-              () => import(`./main_thai.js?contenthash=BDMJN0Dz`),
+              () => import(`./main_thai.js?contenthash=BIWuRmTP`),
               [],
               import.meta.url,
             ),
           "../localization/main_turkish.json": () =>
             _(
-              () => import(`./main_turkish.js?contenthash=j3uLK3QS`),
+              () => import(`./main_turkish.js?contenthash=DDQfy92W`),
               [],
               import.meta.url,
             ),
           "../localization/main_ukrainian.json": () =>
             _(
-              () => import(`./main_ukrainian.js?contenthash=B0m33Raz`),
+              () => import(`./main_ukrainian.js?contenthash=D3qiwrR6`),
               [],
               import.meta.url,
             ),
           "../localization/main_vietnamese.json": () =>
             _(
-              () => import(`./main_vietnamese.js?contenthash=D-M0iyS7`),
+              () => import(`./main_vietnamese.js?contenthash=PF7wqVqN`),
               [],
               import.meta.url,
             ),
@@ -2691,7 +2698,7 @@ async function _(_) {
             "../../../shared/localization/marketing/marketing_german.json":
               () =>
                 _(
-                  () => import(`./marketing_german.js?contenthash=nbQBut3i`),
+                  () => import(`./marketing_german.js?contenthash=C4-Glaif`),
                   [],
                   import.meta.url,
                 ),
@@ -2719,7 +2726,7 @@ async function _(_) {
             "../../../shared/localization/marketing/marketing_italian.json":
               () =>
                 _(
-                  () => import(`./marketing_italian.js?contenthash=DgYo8n72`),
+                  () => import(`./marketing_italian.js?contenthash=WRYbZufQ`),
                   [],
                   import.meta.url,
                 ),
@@ -2739,7 +2746,7 @@ async function _(_) {
                 ),
             "../../../shared/localization/marketing/marketing_latam.json": () =>
               _(
-                () => import(`./marketing_latam.js?contenthash=aTxYnvQk`),
+                () => import(`./marketing_latam.js?contenthash=mmAmCJSg`),
                 [],
                 import.meta.url,
               ),
@@ -2774,7 +2781,7 @@ async function _(_) {
             "../../../shared/localization/marketing/marketing_romanian.json":
               () =>
                 _(
-                  () => import(`./marketing_romanian.js?contenthash=Da5LDPfO`),
+                  () => import(`./marketing_romanian.js?contenthash=CKC3RFo3`),
                   [],
                   import.meta.url,
                 ),
@@ -2830,7 +2837,7 @@ async function _(_) {
             "../../../shared/localization/marketing/marketing_turkish.json":
               () =>
                 _(
-                  () => import(`./marketing_turkish.js?contenthash=BMVn-Pdt`),
+                  () => import(`./marketing_turkish.js?contenthash=B-x03CTa`),
                   [],
                   import.meta.url,
                 ),
@@ -2953,7 +2960,7 @@ async function _(_) {
               ),
             "../../../shared/localization/sales/sales_latam.json": () =>
               _(
-                () => import(`./sales_latam.js?contenthash=BK4uwk3z`),
+                () => import(`./sales_latam.js?contenthash=BILfj3oe`),
                 [],
                 import.meta.url,
               ),
@@ -2983,7 +2990,7 @@ async function _(_) {
               ),
             "../../../shared/localization/sales/sales_romanian.json": () =>
               _(
-                () => import(`./sales_romanian.js?contenthash=jXm0CiYW`),
+                () => import(`./sales_romanian.js?contenthash=udeyIVLy`),
                 [],
                 import.meta.url,
               ),
@@ -3031,7 +3038,7 @@ async function _(_) {
               ),
             "../../../shared/localization/sales/sales_turkish.json": () =>
               _(
-                () => import(`./sales_turkish.js?contenthash=DHjZV1xF`),
+                () => import(`./sales_turkish.js?contenthash=DR3tPRul`),
                 [],
                 import.meta.url,
               ),
@@ -3055,187 +3062,187 @@ async function _(_) {
           Object.assign({
             "../localization/main_arabic.json": () =>
               _(
-                () => import(`./main_arabic.js?contenthash=DugEoX0F`),
+                () => import(`./main_arabic.js?contenthash=CNav5C-d`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_brazilian.json": () =>
               _(
-                () => import(`./main_brazilian.js?contenthash=1bbNXK48`),
+                () => import(`./main_brazilian.js?contenthash=B4mftQtW`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_bulgarian.json": () =>
               _(
-                () => import(`./main_bulgarian.js?contenthash=B3Zbvizn`),
+                () => import(`./main_bulgarian.js?contenthash=J_RSrIh6`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_czech.json": () =>
               _(
-                () => import(`./main_czech.js?contenthash=D75A8-ln`),
+                () => import(`./main_czech.js?contenthash=yMZ74kkZ`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_danish.json": () =>
               _(
-                () => import(`./main_danish.js?contenthash=B92BSZ4m`),
+                () => import(`./main_danish.js?contenthash=B_F6ZR8N`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_dutch.json": () =>
               _(
-                () => import(`./main_dutch.js?contenthash=inFD542G`),
+                () => import(`./main_dutch.js?contenthash=zc-j9rQy`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_english.json": () =>
               _(
-                () => import(`./main_english.js?contenthash=ChFoox1m`),
+                () => import(`./main_english.js?contenthash=C5q_Ijvo`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_finnish.json": () =>
               _(
-                () => import(`./main_finnish.js?contenthash=q96imtH3`),
+                () => import(`./main_finnish.js?contenthash=DYhvFAWG`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_french.json": () =>
               _(
-                () => import(`./main_french.js?contenthash=CmidYc_D`),
+                () => import(`./main_french.js?contenthash=Dgp1Yo7m`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_german.json": () =>
               _(
-                () => import(`./main_german.js?contenthash=BDsZBn39`),
+                () => import(`./main_german.js?contenthash=CId8_EF1`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_greek.json": () =>
               _(
-                () => import(`./main_greek.js?contenthash=DImW1hpa`),
+                () => import(`./main_greek.js?contenthash=DGxkqOOv`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_hungarian.json": () =>
               _(
-                () => import(`./main_hungarian.js?contenthash=3CubEZCh`),
+                () => import(`./main_hungarian.js?contenthash=Auy4C77W`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_indonesian.json": () =>
               _(
-                () => import(`./main_indonesian.js?contenthash=B4YebdNE`),
+                () => import(`./main_indonesian.js?contenthash=C72xZPj8`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_italian.json": () =>
               _(
-                () => import(`./main_italian.js?contenthash=Dk_W8PbZ`),
+                () => import(`./main_italian.js?contenthash=CzD8Sv9f`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_japanese.json": () =>
               _(
-                () => import(`./main_japanese.js?contenthash=DzfVly7V`),
+                () => import(`./main_japanese.js?contenthash=BY9BEDwI`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_koreana.json": () =>
               _(
-                () => import(`./main_koreana.js?contenthash=D2XULwrU`),
+                () => import(`./main_koreana.js?contenthash=CmicwRWO`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_latam.json": () =>
               _(
-                () => import(`./main_latam.js?contenthash=BJb77zsR`),
+                () => import(`./main_latam.js?contenthash=B7yvIQ9M`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_malay.json": () =>
               _(
-                () => import(`./main_malay.js?contenthash=B57Y9GCH`),
+                () => import(`./main_malay.js?contenthash=CWYZnm-j`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_norwegian.json": () =>
               _(
-                () => import(`./main_norwegian.js?contenthash=p6goKBYl`),
+                () => import(`./main_norwegian.js?contenthash=CU54KPJL`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_polish.json": () =>
               _(
-                () => import(`./main_polish.js?contenthash=Cnf9qq0H`),
+                () => import(`./main_polish.js?contenthash=CZIP_wzD`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_portuguese.json": () =>
               _(
-                () => import(`./main_portuguese.js?contenthash=EeiJzYvJ`),
+                () => import(`./main_portuguese.js?contenthash=BPKOEqDg`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_romanian.json": () =>
               _(
-                () => import(`./main_romanian.js?contenthash=CMKz87zD`),
+                () => import(`./main_romanian.js?contenthash=BlQRPYVE`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_russian.json": () =>
               _(
-                () => import(`./main_russian.js?contenthash=DYXay8Sr`),
+                () => import(`./main_russian.js?contenthash=Ducs4uPM`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_schinese.json": () =>
               _(
-                () => import(`./main_schinese.js?contenthash=CsgSWPk_`),
+                () => import(`./main_schinese.js?contenthash=CW6agI8H`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_spanish.json": () =>
               _(
-                () => import(`./main_spanish.js?contenthash=Dej_QNGq`),
+                () => import(`./main_spanish.js?contenthash=BSrOITqp`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_swedish.json": () =>
               _(
-                () => import(`./main_swedish.js?contenthash=BuIKrKKr`),
+                () => import(`./main_swedish.js?contenthash=1k63OGDY`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_tchinese.json": () =>
               _(
-                () => import(`./main_tchinese.js?contenthash=BDZAKZnx`),
+                () => import(`./main_tchinese.js?contenthash=tCvF5EPc`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_thai.json": () =>
               _(
-                () => import(`./main_thai.js?contenthash=BDMJN0Dz`),
+                () => import(`./main_thai.js?contenthash=BIWuRmTP`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_turkish.json": () =>
               _(
-                () => import(`./main_turkish.js?contenthash=j3uLK3QS`),
+                () => import(`./main_turkish.js?contenthash=DDQfy92W`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_ukrainian.json": () =>
               _(
-                () => import(`./main_ukrainian.js?contenthash=B0m33Raz`),
+                () => import(`./main_ukrainian.js?contenthash=D3qiwrR6`),
                 [],
                 import.meta.url,
               ),
             "../localization/main_vietnamese.json": () =>
               _(
-                () => import(`./main_vietnamese.js?contenthash=D-M0iyS7`),
+                () => import(`./main_vietnamese.js?contenthash=PF7wqVqN`),
                 [],
                 import.meta.url,
               ),

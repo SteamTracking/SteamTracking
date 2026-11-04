@@ -81,25 +81,25 @@ div#secondary_header .content, div#secondary_header_title .content {
 }
 
 #secondary_header_leftfade {
-	left: 0px;
+	inset-inline-start: 0px;
 }
 
 #secondary_header_rightfade {
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 #headerLogoImage {
 	position: absolute;
 	z-index: 0;
 	top: 0px;
-	right: 28px;
+	inset-inline-end: 28px;
 	width: 124px;
 	height: 40px;
 }
 
 #global_actions_avatar {
 	position: absolute;
-	right: 6px;
+	inset-inline-end: 6px;
 	top: 3px;
 	height: 21px;
 	line-height: 21px;
@@ -109,7 +109,7 @@ div#secondary_header .content, div#secondary_header_title .content {
 }
 #global_actions_headerExpandIndicator {
 	position: absolute;
-	right: 42px;
+	inset-inline-end: 42px;
 	top: 15px;
 	height: 10px;
 	width: 10px;
@@ -118,7 +118,7 @@ div#secondary_header .content, div#secondary_header_title .content {
 
 #secondary_actions_scndnav_search_btn {
 	position: absolute;
-	right: 6px;
+	inset-inline-end: 6px;
 	top: 10px;
 	height: 30px;
 	width: 40px;
@@ -126,7 +126,7 @@ div#secondary_header .content, div#secondary_header_title .content {
 }
 #secondary_actions_scndnav_cart_btn {
 	position: absolute;
-	left: 6px;
+	inset-inline-start: 6px;
 	top: 10px;
 	height: 30px;
 	width: 40px;
@@ -134,7 +134,7 @@ div#secondary_header .content, div#secondary_header_title .content {
 }
 #secondary_actions_scndnav_wishlist_btn {
 	position: absolute;
-	left: 49px;
+	inset-inline-start: 49px;
 	top: 10px;
 	height: 30px;
 	width: 40px;
@@ -151,8 +151,8 @@ div#mobile_global_header .menuitemdiv {
 }
 
 div#mobile_global_header .menuitemdiv.menuitemdiv_login {
-	float: right;
-	margin-right: 10px;
+	float: inline-end;
+	margin-inline-end: 10px;
 }
 
 div#mobile_global_header .menuitema {
@@ -163,10 +163,10 @@ div#mobile_global_header .menuitema {
 	color: #A6A6A6;
 
 	position: relative;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 13px;
-	padding-left: 3px;
-	padding-right: 3px;
+	padding-inline-start: 3px;
+	padding-inline-end: 3px;
 	width: 100%;
 	height: 100%;
 }
@@ -179,7 +179,7 @@ div#mobile_global_header #background {
 	width: 100%;
 	height: 40px;
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 	z-index: 0;
 }
@@ -201,7 +201,7 @@ div#secondary_header .menuitemdiv, div#secondary_header_title .menuitemdiv {
 
 div#secondary_header_title .menuitemdiv.pageTitleHeader {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 	width: 100%;
 	height: 100%;
@@ -210,8 +210,8 @@ div#secondary_header_title .menuitemdiv.pageTitleHeader {
 }
 
 div#secondary_header .menuitema, div#secondary_header_title .menuitema {
-	padding-left: 6px;
-	padding-right: 6px;
+	padding-inline-start: 6px;
+	padding-inline-end: 6px;
 	text-decoration: none;
 	font-weight: normal;
 	font-size: 27px;
@@ -219,7 +219,7 @@ div#secondary_header .menuitema, div#secondary_header_title .menuitema {
 	color: #979797;
 
 	position: relative;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 10px;
 	width: 100%;
 	height: 100%;
@@ -233,7 +233,7 @@ div#secondary_header #background, div#secondary_header_title #background {
 	width: 100%;
 	height: 50px;
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 	z-index: 0;
 }
@@ -251,7 +251,7 @@ div#secondary_header #fullstretch, div#secondary_header_title #fullstretch {
 	z-index: 900;
 	overflow: hidden;
 
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 	width: 100%;
 	height: 100%;
@@ -271,8 +271,8 @@ div#global_actions_pageoverlay #roundedboxpadtop {
 div#global_actions_pageoverlay #roundedbox {
 	background-color:rgba(0, 0, 0, 0.0);
 
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
 	position: relative;
 	z-index: 901;
 }
@@ -284,20 +284,20 @@ div#global_actions_pageoverlay #leftcol, div#global_actions_pageoverlay #rightco
 }
 
 div#global_actions_pageoverlay #leftcol {
-	margin-left: 2%;
-	margin-right: 1%;
+	margin-inline-start: 2%;
+	margin-inline-end: 1%;
 	width: 68%;
 }
 
 div#global_actions_pageoverlay #rightcol {
-	margin-left: 1%;
-	margin-right: 2%;
+	margin-inline-start: 1%;
+	margin-inline-end: 2%;
 	width: 24%;
 }
 
 div#global_actions_pageoverlay .globaloverlayactionlink {
 	color: #FFFFFF;
-	float: left;
+	float: inline-start;
 	font-size: 12px;
 	font-weight: normal;
 }
@@ -306,14 +306,14 @@ div#global_actions_pageoverlay .globaloverlayactionhint {
 	color: #AAAAAA;
 	text-transform: uppercase;
 	margin-top: 5px;
-	float: right;
+	float: inline-end;
 	font-size: 9px;
 	font-weight: bold;
 }
 
 div#global_actions_pageoverlay .globaloverlayactionval {
 	color: #FFFFFF;
-	float: left;
+	float: inline-start;
 	font-size: 9px;
 	font-weight: bold;
 }
@@ -414,11 +414,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .smallCapItemBlockIcon {
 	display: block;
-	float: left;
+	float: inline-start;
 	margin-top: 16px;
 	margin-bottom: 5px;
-	margin-right: 7px;
-	margin-left: 12px;
+	margin-inline-end: 7px;
+	margin-inline-start: 12px;
 	width: 106px;
 	height: 40px;
 }
@@ -433,7 +433,7 @@ div.smallCapIcon {
 	width: 104px;
 	height: 36px;
 	top: 2px;
-	left: 2px;
+	inset-inline-start: 2px;
 	position: absolute;
 }
 
@@ -445,11 +445,11 @@ div.smallCapIcon img {
 
 .itemBlockIcon {
 	display: block;
-	float: left;
+	float: inline-start;
 	margin-top: 9px;
 	margin-bottom: 10px;
-	margin-right: 8px;
-	margin-left: 10px;
+	margin-inline-end: 8px;
+	margin-inline-start: 10px;
 	width: 52px;
 	height: 52px;
 }
@@ -517,7 +517,7 @@ div.avatarIcon {
 	width: 48px;
 	height: 48px;
 	top: 2px;
-	left: 2px;
+	inset-inline-start: 2px;
 	position: absolute;
 }
 
@@ -525,7 +525,7 @@ div.mobileHeaderAvatarIcon {
 	width: 30px;
 	height: 30px;
 	top: 1px;
-	left: 1px;
+	inset-inline-start: 1px;
 	position: absolute;
 }
 
@@ -588,7 +588,7 @@ div.avatarIcon img {
 
 	position: absolute;
 	bottom: 5px;
-	left: 12px;
+	inset-inline-start: 12px;
 }
 
 /*
@@ -647,7 +647,7 @@ input.searchBox.default {
 
 .searchBoxCloseButton {
 	position: absolute;
-	right: 2px;
+	inset-inline-end: 2px;
 	top: -2px;
 	width: 36px;
 	height: 36px;

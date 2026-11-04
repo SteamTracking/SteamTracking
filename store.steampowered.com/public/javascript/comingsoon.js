@@ -207,7 +207,7 @@ function InitFollowedCreators( rgAppCreatorRelationships )
 						$Curators.append( $Curator );
 					}
 
-					$Curators.append( $J('<div/>', {'style': 'clear: left'} ) );
+					$Curators.append( $J('<div/>', {'style': 'clear: inline-start'} ) );
 					$ele.append( $Curators );
 				}
 			}

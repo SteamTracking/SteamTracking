@@ -47,7 +47,8 @@
 .giftcard_home_cont {
     border-radius: 10px;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.35);
-    padding: 10px 20px 10px 0;
+    padding-block: 10px;
+    padding-inline: 0 20px;
     width: 85%;
     margin: auto;
     display: flex;
@@ -103,7 +104,7 @@
 }
 
 .giftcard_addfunds_link {
-    margin-left: 20px;
+    margin-inline-start: 20px;
 }
 
 .giftcard_faq {
@@ -133,7 +134,7 @@
 .giftcard_cont .giftcard_text {
     position: absolute;
     top: 12%;
-    right: 1%;
+    inset-inline-end: 1%;
     color: white;
     font-weight: bold;
     z-index: 3;
@@ -263,7 +264,7 @@
     position: absolute;
     z-index: 2;
     top: 0;
-    right: 0;
+    inset-inline-end: 0;
 }
 
 .giftcard_gradient {
@@ -333,27 +334,27 @@
     position: absolute;
     z-index:2;
     transform:rotate(-27deg);
-    left:20px;top:30px;
+    inset-inline-start:20px;top:30px;
 }
 
 .giftcard_inner_leftcol {
-    float:left;
+    float:inline-start;
     width: 28%;
 }
 
 .giftcard_inner_rightcol {
-    float:right;
+    float:inline-end;
     width: 70%;
 }
 
 .giftcard_leftcol {
-    float:left;
+    float:inline-start;
     max-width: 458px;
 }
 
 .giftcard_rightcol {
     overflow: hidden;
-    margin-left: 14px;
+    margin-inline-start: 14px;
     max-width: 466px;
 }
 
@@ -410,7 +411,7 @@
     }
 
     html.responsive .giftcard_addfunds_link {
-        margin-left: unset;
+        margin-inline-start: unset;
     }
 
     html.responsive .giftcard_buttons {
@@ -427,7 +428,7 @@
 
     html.responsive .giftcard_rightcol {
         max-width: none;
-        margin-left: 0;
+        margin-inline-start: 0;
         margin-top: 0px;
         display: none;
     }

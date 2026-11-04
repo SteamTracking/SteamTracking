@@ -7271,6 +7271,7 @@ message StoreGameRating {
 	optional bool use_age_gate = 11;
 	repeated int32 descriptor_images = 12 [(.description) = "enum"];
 	optional string content_survey_notes = 13;
+	optional int32 agency_rating = 14 [(.description) = "enum"];
 	optional string image_url = 20;
 	optional string image_target = 21;
 }
@@ -7449,6 +7450,7 @@ message StoreItem_ExtraDetails {
 	optional .StoreItem_ExtraDetails_EventSpotlight event_spotlight = 34;
 	optional .StoreItem_ExtraDetails_MusicAlbum music_album = 35;
 	repeated .StoreItem_ExtraDetails_SalePage sale_pages = 36;
+	optional bool item_store_show_featured = 37;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit, Wishlist

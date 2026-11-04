@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
+  <path id="shape" fill="#0000" stroke="#ffffff" stroke-width="8" stroke-miterlimit="10" d="M241.334,181.958 c0,33.16-26.881,60.042-60.041,60.042h-20.545v-52.093h39.84l-72.541-86.079l-72.54,86.079h40.028V242H74.708 c-33.16,0-60.042-26.882-60.042-60.042V74.383c0-33.16,26.882-60.042,60.042-60.042h106.585c33.16,0,60.041,26.882,60.041,60.042 V181.958z">
+    <animate id="animUp" begin="shape.mouseenter" attributeName="d" dur="420ms" fill="freeze" keyTimes="0;1" keySplines="0.1 0.8 0.2 1;" calcMode="spline" to="M241.334,181.958 c0,33.16-26.881,60.042-60.041,60.042h-20.545V129.907h39.84l-72.541-86.079l-72.54,86.079h40.028V242H74.708 c-33.16,0-60.042-26.882-60.042-60.042V74.383c0-33.16,26.882-60.042,60.042-60.042h106.585c33.16,0,60.041,26.882,60.041,60.042 V181.958z;"/>
+    <animate id="animDown" attributeName="d" begin="shape.mouseleave" dur="420ms" fill="freeze" keyTimes="0;1" keySplines="0.1 0.8 0.2 1;" calcMode="spline" to="M241.334,181.958 c0,33.16-26.881,60.042-60.041,60.042h-20.545v-52.093h39.84l-72.541-86.079l-72.54,86.079h40.028V242H74.708 c-33.16,0-60.042-26.882-60.042-60.042V74.383c0-33.16,26.882-60.042,60.042-60.042h106.585c33.16,0,60.041,26.882,60.041,60.042 V181.958z;"/>
+    <animate begin="shape.mouseenter" attributeName="fill" dur="240ms" fill="freeze" to="rgba(51, 102, 255, .3)"/>
+    <animate begin="shape.mouseleave" attributeName="fill" dur="240ms" fill="freeze" to="rgba(0, 0, 0, 0)"/>
+    <animate begin="shape.mouseenter" attributeName="stroke" dur="240ms" fill="freeze" to="rgb(5, 193, 255)"/>
+    <animate begin="shape.mouseleave" attributeName="stroke" dur="240ms" fill="freeze" to="rgb(51, 102, 255)"/>
+  </path>
+</svg>

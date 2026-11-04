@@ -2,9 +2,8 @@
   padding-top: 5px;
 }
 .BasicUI .OdUWUqw0tkM- {
+  padding-inline: 4px;
   padding-bottom: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
   position: relative;
   overflow: hidden;
 }
@@ -60,7 +59,7 @@
 .kS9Vogo9VDE- {
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
 .kS9Vogo9VDE- svg {
   fill: #fff;

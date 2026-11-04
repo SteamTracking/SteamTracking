@@ -16,7 +16,7 @@
 		font-weight: 300; /* light */
 
 			margin-bottom: 8px;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 .recommended_bodygradient
@@ -65,7 +65,7 @@
 .recommendation_highlight .header_image {
 	position: absolute;
 	top: 17px;
-	left: 15px;
+	inset-inline-start: 15px;
 	width: 460px;
 	height: 215px;
 	border: 1px solid #000000;
@@ -88,14 +88,14 @@
 .recommendation_highlight .highlight_description {
 	color: #b0aeac;
 	padding-top: 60px;
-	padding-left: 476px;
+	padding-inline-start: 476px;
 	padding-bottom: 32px;
 	position: relative;
 	min-height: 123px;
 }
 
 .recommendation_highlight.small_header .highlight_description {
-	padding-left: 308px;
+	padding-inline-start: 308px;
 	padding-top: 40px;
 	height: 96px;
 }
@@ -125,11 +125,11 @@
 .recommendation_highlight .highlight_description .buttons {
 	position: absolute;
 	bottom: 0px;
-	left: 476px;
+	inset-inline-start: 476px;
 }
 
 .recommendation_highlight.small_header .highlight_description .buttons {
-	left: 308px;
+	inset-inline-start: 308px;
 }
 
 .page_header_ctn.more_like {
@@ -147,8 +147,8 @@
 .recommendation_carousel_view {
 	overflow: hidden;
 	position: relative;
-	margin-left: 12px;
-	margin-right: 12px;
+	margin-inline-start: 12px;
+	margin-inline-end: 12px;
 	width: 808px;
 }
 
@@ -156,7 +156,7 @@
 	line-height: 18px;
 	height: 18px;
 	padding-top: 10px;
-	padding-left: 6px;
+	padding-inline-start: 6px;
 	color: #8f98a0;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
@@ -169,7 +169,7 @@
 }
 
 .recommendation_carousel_item {
-	float: left;
+	float: inline-start;
 	width: 202px;
 	height: 123px;
 	padding: 11px 0px;
@@ -181,7 +181,7 @@
 }
 
 .recommendation_carousel_item h4, .recommendation_carousel_item .buttons {
-	padding-left: 9px;
+	padding-inline-start: 9px;
 }
 
 .recommendation_carousel_item .buttons {
@@ -250,14 +250,14 @@
 
 
 .recommendation_carousel .scroll_btn.left {
-	left: 0px;
-	border-right: 1px solid #1a4058;
+	inset-inline-start: 0px;
+	border-inline-end: 1px solid #1a4058;
 	background-image: url( /public/images/recommended/carousel_scroll_left.png );
 }
 
 .recommendation_carousel .scroll_btn.right {
-	right: 0px;
-	border-left: 1px solid #1a4058;
+	inset-inline-end: 0px;
+	border-inline-start: 1px solid #1a4058;
 	background-image: url( /public/images/recommended/carousel_scroll_right.png );
 }
 
@@ -309,7 +309,7 @@
 .recommendation_area .recommendation_author
 {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 }
 
@@ -326,7 +326,7 @@
 }
 
 .recommendation_area .thumb {
-	margin-right: 12px;
+	margin-inline-end: 12px;
 }
 .recommendation_area .reviewPostedDescription {
 	color: #8f98a0;
@@ -340,7 +340,7 @@
 			font-size: 14px;
 }
 .recommendation_area .commentCount {
-	float:right;
+	float:inline-end;
 
 }
 
@@ -352,13 +352,13 @@
 
 .recommendation_detail .recommendation_area_content
 {
-	padding-left: 116px;
+	padding-inline-start: 116px;
 	width: 484px;
 }
 
 .recommendation_detail .recommendation_date
 {
-	padding-left: 13px;
+	padding-inline-start: 13px;
 	color: #626467;
 	font-size: 11px;
 }
@@ -371,12 +371,13 @@
 
 .game_recommendation .recommendation_area_content
 {
-	padding-left: 56px;
+	padding-inline-start: 56px;
 }
 
 .quote
 {
-	padding: 0px 13px 13px 0px;
+	padding-block: 0px 13px;
+	padding-inline: 0px 13px;
 	color: #acb2b8;
 	font-size: 15px;
 	font-style: normal;
@@ -400,35 +401,35 @@
 
 .recommendation_detail .quote_arrow
 {
-	left: 100px;
+	inset-inline-start: 100px;
 	top: 13px;
 	display: none;
 }
 
 .comment_row_quote .quote_arrow {
-	left: 46px;
+	inset-inline-start: 46px;
 	top: 9px;
 }
 
 .game_recommendation .quote_arrow {
-	left: 40px;
+	inset-inline-start: 40px;
 	top: 9px;
 }
 
 .game_page_recommendation .quote_arrow {
-	left: 40px;
+	inset-inline-start: 40px;
 	top: 12px;
 	background-image: url( /public/images/recommended/quotearrow_gamepage.png );
 }
 
 .recommendation_makeyourown .quote_arrow {
-	left: 100px;
+	inset-inline-start: 100px;
 	top: 13px;
 	background-image: url( /public/images/recommended/quotearrow_white.png );
 }
 
 .recommendation_row .quote_arrow {
-	left: 260px;
+	inset-inline-start: 260px;
 	top: 26px;
 }
 
@@ -439,7 +440,7 @@
 }
 
 .recommendation_makeyourown_your_avatar {
-	float: left;
+	float: inline-start;
 }
 
 .recommendation_makeyourown .quote {
@@ -448,7 +449,7 @@
 	padding-top: 0px;
     width: 786px;
 	padding-bottom: 0px;
-    float: left;
+    float: inline-start;
 }
 
 .recommendation_makeyourown_instructions {
@@ -456,7 +457,7 @@
 }
 
 .recommendation_makeyourown .quote .buttons {
-	float: right;
+	float: inline-end;
 	padding-top: 4px;
 }
 
@@ -465,7 +466,7 @@
 	position: absolute;
 	width: 292px;
 	height: 136px;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 	background: #000000;
 	padding: 1px;
@@ -481,7 +482,7 @@
 {
 	position: absolute;
 	width: 292px;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 148px;
 }
 
@@ -511,7 +512,7 @@
 	height: 92px;
 	background-repeat: no-repeat;
 	padding: 4px;
-	margin-right: 2px;
+	margin-inline-end: 2px;
 }
 
 .friend_status_offline .friend_block_avatar_92 {
@@ -533,14 +534,14 @@
 
 .comment_row_quote {
 	position: relative;
-	padding-left: 62px;
+	padding-inline-start: 62px;
 	min-height: 60px;
 	margin-bottom: 5px;
 }
 
 .comment_row_quote .comment_author {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 	width: 40px;
 	height: 40px;
@@ -554,8 +555,8 @@
 	margin-bottom: 1px;
 	position: relative;
 	min-height: 60px;
-	padding-left: 73px;
-	padding-right: 18px;
+	padding-inline-start: 73px;
+	padding-inline-end: 18px;
 }
 
 .comment_row.even {
@@ -567,7 +568,7 @@
 
 .comment_row .comment_author {
 	position: absolute;
-	left: 15px;
+	inset-inline-start: 15px;
 	top: 10px;
 	width: 40px;
 	height: 40px;
@@ -601,7 +602,7 @@
 .leave_comment_area .comment_your_avatar
 {
 	position: absolute;
-	left: 15px;
+	inset-inline-start: 15px;
 	top: 0px;
 	width: 40px;
 	height: 40px;
@@ -609,7 +610,7 @@
 
 .comment_quote_area
 {
-	padding-left: 73px;
+	padding-inline-start: 73px;
 }
 
 .comment_quote
@@ -629,14 +630,14 @@
 	position: absolute;
 	width: 17px;
 	height: 18px;
-	left: 57px;
+	inset-inline-start: 57px;
 	top: 13px;
 	background-repeat: no-repeat;
 	background-image: url( /public/images/recommended/quotearrow_blackbg.png);
 }
 
 .comment_btn {
-	float: right;
+	float: inline-end;
 }
 
 textarea.comment_input
@@ -682,13 +683,13 @@ textarea.comment_input
     display: block;
     position: absolute;
     top: 0px;
-    left: 44px;
-    margin-left: 4px;
+    inset-inline-start: 44px;
+    margin-inline-start: 4px;
 }
 
 .recommendation_row .recommendation_author {
 	top: 16px;
-	left: 218px;
+	inset-inline-start: 218px;
 	width: 40px;
 	height: 40px;
     display: block;
@@ -696,13 +697,13 @@ textarea.comment_input
 
 
 .recommendation_row .recommendation_content {
-	padding-left: 16px;
+	padding-inline-start: 16px;
 	padding-top: 16px;
 	color: #82807C;
 	font-size: 14px;
-	padding-right: 14px;
+	padding-inline-end: 14px;
 	padding-bottom: 16px;
-    float: left;
+    float: inline-start;
 }
 
 .recommendation_row .quote {
@@ -721,14 +722,14 @@ textarea.comment_input
 
 .recommendation_row .recommendation_app {
 	position: relative;
-    float: left;
+    float: inline-start;
 	width: 184px;
 	height: 69px;
 	background: #000000;
 	padding: 1px;
 	border: 1px solid #000000;
     margin-top: 12px;
-    margin-left: 12px;
+    margin-inline-start: 12px;
 }
 
 .recommendation_row .recommendation_app:hover {
@@ -741,9 +742,9 @@ textarea.comment_input
 }
 
 .recently_viewed_row .recently_viewed_content {
-	padding-left: 212px;
+	padding-inline-start: 212px;
 	padding-top: 32px;
-	padding-right: 306px;
+	padding-inline-end: 306px;
 }
 
 .recently_viewed_row .recently_viewed_content h3 {
@@ -759,7 +760,7 @@ textarea.comment_input
 .recently_viewed_row .recently_viewed_capsule {
 	position: absolute;
 	top: 14px;
-	left: 14px;
+	inset-inline-start: 14px;
 	width: 184px;
 	height: 69px;
 	background: #000000;
@@ -768,7 +769,7 @@ textarea.comment_input
 
 .recently_viewed_row .recently_viewed_date {
 	position: absolute;
-	left: 640px;
+	inset-inline-start: 640px;
 	top: 42px;
 	font-size: 11px;
 	color: #8f98a0;
@@ -780,8 +781,8 @@ textarea.comment_input
 .recently_viewed_row .recently_viewed_price {
 	position: absolute;
 	top: 42px;
-	right: 14px;
-	text-align: right;
+	inset-inline-end: 14px;
+	text-align: end;
 	font-size: 11px;
 	color: #9e9995;
 }
@@ -789,9 +790,9 @@ textarea.comment_input
 
 
 .friendplaytime_game {
-	float: left;
+	float: inline-start;
 	width: 294px;
-	margin-right: 14px;
+	margin-inline-end: 14px;
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 	background-position-y: 50px;
 	box-shadow: 0 0 5px #000;
@@ -804,7 +805,7 @@ textarea.comment_input
 
 .friendplaytime_game .friendplaytime_buttons {
 	visibility: hidden;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	margin-bottom: 4px;
 }
 
@@ -826,7 +827,7 @@ textarea.comment_input
 
 .friendplaytime_game .friend_blocks_row {
 	margin-bottom: 5px;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	margin-top: 8px;
 }
 
@@ -866,7 +867,7 @@ textarea.comment_input
 	line-height: 42px;
 	color: #82807c;
 	font-size: 14px;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 }
 
 .recommend_game textarea.recommendation_entry {
@@ -908,7 +909,7 @@ textarea.comment_input
 }
 
 .game_page_recommendation .recommendation_area {
-	padding-left: 56px;
+	padding-inline-start: 56px;
 }
 
 .game_page_recommendation .recommendation_area .recommendation_author {
@@ -929,7 +930,7 @@ textarea.comment_input
 .game_page_recommendation .quote .quotebox_timestamp {
 	position: absolute;
 	bottom: 0px;
-	right: 8px;
+	inset-inline-end: 8px;
 	color: #4f5051;
 	font-size: 10px;
 	font-style: normal;
@@ -937,13 +938,13 @@ textarea.comment_input
 }
 
 .game_page_recommendation_comments {
-	padding-right: 141px;
+	padding-inline-end: 141px;
 	position: relative;
 	min-height: 22px;
 }
 
 .game_page_recommendation .comment_row_quote {
-	padding-left: 0px;
+	padding-inline-start: 0px;
 }
 
 .game_page_recommendation .game_page_recommendation_comments .quote_serif {
@@ -954,10 +955,10 @@ textarea.comment_input
 
 .game_page_recommendation_comments .view_btns {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 	width: 141px;
-	text-align: right;
+	text-align: end;
 }
 
 .game_page_recommendation .comment_timestamp {
@@ -996,7 +997,7 @@ textarea.comment_input
 	background-color: rgba( 0, 0, 0, 0.2 );
 	height: 38px;
 	line-height: 38px;
-	padding-left: 13px;
+	padding-inline-start: 13px;
 
 	color: #b0aeac;
 	font-size: 12px;
@@ -1006,8 +1007,8 @@ textarea.comment_input
 .view_inactive {
     background-color: rgba( 103, 193, 245, 0.2 );
     border-radius: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
 }
@@ -1036,15 +1037,15 @@ a.view_active:hover {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     color: #ffffff;
     border-radius: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
 }
 
 .friendactivity_togglebtns {
-	float: right;
-	padding-right: 13px;
+	float: inline-end;
+	padding-inline-end: 13px;
     font-size: 10px;
     text-transform: uppercase;
 }
@@ -1068,15 +1069,15 @@ a.view_active:hover {
 	height: 40px;
 
 	margin-bottom: 1px;
-	padding-left: 326px;
-	padding-right: 8px;
+	padding-inline-start: 326px;
+	padding-inline-end: 8px;
 	background-color: rgba( 0, 0, 0, 0.2 );
 }
 
 .friendactivity_tab_row .game_capsule_area {
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	inset-inline-start: 0px;
 	height: 45px;
 	width: 120px;
 	padding: 7px;
@@ -1085,7 +1086,7 @@ a.view_active:hover {
 .friendactivity_tab_row .friend_blocks_row {
 	position: absolute;
 	top: 7px;
-	left: 134px;
+	inset-inline-start: 134px;
 	padding: 0px 6px;
 	width: 180px;
 }
@@ -1102,7 +1103,7 @@ a.view_active:hover {
 
 .friendactivity_tab_row .time_bar_ctn .time_bar {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 	height: 40px;
 	width: 0px;
@@ -1114,7 +1115,7 @@ a.view_active:hover {
 	position: relative;
 	color: #acb2b8;
 	font-size: 12px;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 }
 
 .friendactivity_tab_row .friend_blocks_row .friend_block_holder {
@@ -1122,8 +1123,8 @@ a.view_active:hover {
     height: 40px;
 }
 .friendactivity_tab_row .friend_blocks_row .friend_block_holder, .friend_blocks_row .playerAvatar {
-    float: left;
-    margin-right: 5px;
+    float: inline-start;
+    margin-inline-end: 5px;
 }
 
 a.friendactivity_game_link .ds_flag {
@@ -1149,8 +1150,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommended_login_message {
 	padding-top: 32px;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-inline-start: 16px;
+	padding-inline-end: 16px;
 	height: 108px;
 	background: rgba(0,0,0,0.2);
 	margin-bottom: 30px;
@@ -1174,8 +1175,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .recommened_login_button_ctn {
-	float: right;
-	text-align: right;
+	float: inline-end;
+	text-align: end;
 }
 
 .recommended_login_message_signup, .recommended_login_message_signup a {
@@ -1198,7 +1199,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommended_login_button .leftcap {
 	position: absolute;
-	left: 0px;
+	inset-inline-start: 0px;
 	top: 0px;
 	width: 5px;
 	height: 40px;
@@ -1207,7 +1208,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommended_login_button .rightcap {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 0px;
 	width: 5px;
 	height: 40px;
@@ -1233,14 +1234,15 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .recommendation_area_ctn.genre_highlights_ctn {
-	padding: 14px 0px 15px 14px;
+	padding-block: 14px 15px;
+	padding-inline: 14px 0px;
 }
 
 .recommended_genre_highlight {
-	float: left;
+	float: inline-start;
 	position: relative;
 	width: 294px;
-	margin-right: 14px;
+	margin-inline-end: 14px;
 	margin-bottom: 30px;
 }
 
@@ -1256,7 +1258,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .genre_highlight_buttons .price {
-	float: right;
+	float: inline-end;
 	line-height: 15px;
 }
 
@@ -1280,7 +1282,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	width: 160px;
 	height: 45px;
 	margin-top: 9px;
-	margin-left: 9px;
+	margin-inline-start: 9px;
 	padding: 12px;
 }
 
@@ -1294,11 +1296,11 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .recommendation_pagination {
-	float: right;
+	float: inline-end;
 }
 
 .recommendation_area_ctn.similar_grid_ctn {
-	padding-right: 0px;
+	padding-inline-end: 0px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto;
@@ -1313,7 +1315,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .similar_grid_item {
 	padding: 12px 8px;
     background: rgba( 0, 0, 0, 0.2 );
-    margin-right: 2px;
+    margin-inline-end: 2px;
     margin-bottom: 2px;
 }
 
@@ -1353,7 +1355,7 @@ html.touch .similar_grid_item .buttons {
 
 .similar_grid_rule {
 	border-bottom: 2px solid black;
-	clear: left;
+	clear: inline-start;
 }
 
 .app_page_morelike .similar_grid_item
@@ -1363,8 +1365,8 @@ html.touch .similar_grid_item .buttons {
 
 .app_page_morelike .similar_grid_item > *
 {
-	margin-left: auto;
-	margin-right: auto;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 	width: 200px;
 }
 
@@ -1455,9 +1457,9 @@ html.touch .similar_grid_item .buttons {
 	height: 94px;
 	background-repeat: no-repeat;
 	padding: 1px;
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	border-radius: 0px;
-	float: left;
+	float: inline-start;
 }
 
 #review_create .content {
@@ -1519,12 +1521,12 @@ html.touch .similar_grid_item .buttons {
 @media screen and (max-width: 500px)
 {
 	html.responsive .review_controls_right {
-		clear: left;
+		clear: inline-start;
 	}
 	html.responsive #review_create .avatar {
 		width: 66px;
 		height: 66px;
-		margin-right: 8px;
+		margin-inline-end: 8px;
 	}
 
 	html.responsive #review_create .avatar img {
@@ -1641,9 +1643,9 @@ body.v6 h2.user_reviews_header .header_links a {
 	text-decoration: underline;
 }
 body.v6 h2.user_reviews_header .header_links a:not( :first-child ) {
-	border-left: 1px solid #9fb4c9;
-	padding-left: 8px;
-	margin-left: 8px;
+	border-inline-start: 1px solid #9fb4c9;
+	padding-inline-start: 8px;
+	margin-inline-start: 8px;
 }
 
 body.v6 h2.user_reviews_header .header_links a.partner_help_link {
@@ -1654,7 +1656,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note {
 	position: absolute;
 	text-transform: none;
 	top: -32px;
-	right: 8px;
+	inset-inline-end: 8px;
 	background: rgba(138, 51, 33, 1);
 	background: -webkit-linear-gradient(top, rgba(138, 51, 33, 1) 5%, rgba(92, 37, 23, 1) 95%);
 	background: linear-gradient(to bottom, rgba(138, 51, 33, 1) 5%, rgba(92, 37, 23, 1) 95%);
@@ -1666,7 +1668,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note {
 
 body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	top: 100%;
-	right: 20px;
+	inset-inline-end: 20px;
 	border: solid transparent;
 	content: "";
 	height: 0;
@@ -1676,7 +1678,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	border-color: rgba(136, 183, 213, 0);
 	border-top-color: rgba(92, 37, 23, 1);
 	border-width: 10px;
-	margin-left: -10px;
+	margin-inline-start: -10px;
 }
 
 .user_reviews_sub_header {
@@ -1706,7 +1708,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 }
 .user_reviews_summary_bar .summary_section {
 	display: inline-block;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 	color: #8ba6b6;
 	min-width: 320px;
 }
@@ -1757,10 +1759,13 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	cursor: pointer;
 	color: #66c0f4;
 	font-size: 12px;
-	padding-right: 12px;
+	padding-inline-end: 12px;
 	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpiDK5Z5sjAwFAJxAFrmiO/MUBBSO3yDCBlwAQkjgLxdyDeDBTkQpKsAuJuxv///4ME2ICc1UDMA1IIxEVA7Ag08S4j0ApmIEcOiJ9CFRkBsQMQPwZicRYgYQmVcAXiUCAWA+JXULEXTEBjjgAZxUC8G4jVkCRBIBfsBqjDooBULxBfhjo6FKj5F1wBkqIQII4ASYLEAAIMAPrDNy1EYNLFAAAAAElFTkSuQmCC' ) right center no-repeat;
 	cursor: pointer;
-	float: right;
+	float: inline-end;
+}
+.user_reviews_summary_details_btn:dir(rtl) {
+	background-position: left center;
 }
 
 .summary_details_visible .user_reviews_summary_details_btn {
@@ -1789,7 +1794,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 
 .user_reviews_summary_breakdowns {
 	display: inline-block;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 	border-top: 5px solid rgba( 103, 193, 245, 0.2 );
 }
 .user_reviews_summary_breakdowns_title {
@@ -1808,9 +1813,9 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	margin-top: 2px;
 }
 .user_reviews_summary_breakdown_icon {
-	float: left;
+	float: inline-start;
 	margin-top: 5px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 .user_reviews_summary_breakdown_title {
 	text-transform: uppercase;
@@ -1866,7 +1871,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 .review_box .short_header .persona_name,
 .review_box .short_header .hours {
 	display: block;
-	float: left;
+	float: inline-start;
 }
 .short_header .thumb img {
 	width: 24px;
@@ -1875,7 +1880,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 .review_box .short_header .persona_name,
 .review_box .short_header .hours {
 	margin-top: 5px;
-	margin-left: 6px;
+	margin-inline-start: 6px;
 }
 .review_box .short_header .persona_name {
 	max-width: 120px;
@@ -1884,8 +1889,8 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	text-overflow: ellipsis;
 }
 .review_box .short_header .review_source {
-	float: right;
-	margin-right: 5px;
+	float: inline-end;
+	margin-inline-end: 5px;
 	margin-top: 4px;
 	opacity: 0.5;
 }
@@ -1904,7 +1909,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 }
 
 .review_box.short .shortcol {
-	padding-left: 8px;
+	padding-inline-start: 8px;
 }
 
 
@@ -1919,7 +1924,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	margin-bottom: 0px;
 }
 .user_reviews_header .user_reviews_see_all {
-    float:right;
+    float:inline-end;
     margin-top: -4px;
 }
 .user_reviews_header .user_reviews_see_all a {
@@ -1947,7 +1952,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 .user_reviews_header .user_reviews_updated {
 	color: #ffd43a;
 	font-size: 13px;
-	float: right;
+	float: inline-end;
 	text-transform: none;
 	letter-spacing: 0;
 }
@@ -2028,7 +2033,8 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 */
 
 .review_box .vote_info, .recommendation_row .vote_info {
-	padding: 0px 9px 8px 0px;
+	padding-block: 0px 8px;
+	padding-inline: 0px 9px;
 	font-size: 12px;
 	color: #647580;
 	/* background-color: rgba( 0, 0, 0, 0.2 ); */
@@ -2047,7 +2053,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 }
 
 .review_box .vote_info .commentCount, .recommendation_row .vote_info .commentCount {
-	float:right;
+	float:inline-end;
 }
 
 .review_box .vote_info .commentCount a {
@@ -2056,10 +2062,13 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	background-image: url(/public/shared/images/comment_quoteicon_blue.png);
 	background-position: right;
 	background-repeat: no-repeat;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 	display: inline-block;
 	height: 16px;
 
+}
+.review_box .vote_info .commentCount a:dir(rtl) {
+	background-position: left center;
 }
 .review_box .vote_info .commentCount a:hover {
 	color: #ffffff;
@@ -2086,7 +2095,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 }
 
 .review_box .review_rightcol {
-	float: left;
+	float: inline-start;
 	flex-grow: 1;
 	position: relative;
 }
@@ -2122,15 +2131,15 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 }
 
 .review_box .vote_header .review_source {
-	float: right;
-	margin-right: 5px;
+	float: inline-end;
+	margin-inline-end: 5px;
 	margin-top: 12px;
 	opacity: 0.5;
 }
 
 .review_box .vote_header .majority_deck {
-	float: right;
-	margin-right: 6px;
+	float: inline-end;
+	margin-inline-end: 6px;
 	margin-top: 14px;
 	opacity: 0.5;
 	height: 14px;
@@ -2138,8 +2147,8 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 }
 
 .review_box .short_header .majority_deck {
-	float: right;
-	margin-right: 6px;
+	float: inline-end;
+	margin-inline-end: 6px;
 	margin-top: 6px;
 	opacity: 0.5;
 	height: 13px;
@@ -2157,13 +2166,13 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 }
 
 .review_box .vote_header .thumb {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 
 .review_box .avatar {
-	float: left;
-	padding-right: 8px;
+	float: inline-start;
+	padding-inline-end: 8px;
 	display: block;
 }
 
@@ -2201,7 +2210,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 }
 
 .review_box .content {
-	margin-right: 8px;
+	margin-inline-end: 8px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -2247,8 +2256,8 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 
 .review_box.partial .view_more {
 	display: block;
-	float: right;
-	margin-right: 15px;
+	float: inline-end;
+	margin-inline-end: 15px;
 }
 
 .review_box.partial .view_more a {
@@ -2262,8 +2271,8 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	display: block;
 	position: absolute;
 	bottom: 0px;
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 
 	z-index: 1;
 	height: 30px;
@@ -2332,7 +2341,8 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 .review_box .reviewer_hardware_container
 {
 	padding: 4px;
-	margin: 0px 8px 8px 0px;
+	margin-block: 0px 8px;
+	margin-inline: 0px 8px;
 	color: #AFDEFF;
 	background-color: #486582;
 }
@@ -2348,7 +2358,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 
 .review_box .control_block .text {
 	display: inline-block;
-	margin-right: 9px;
+	margin-inline-end: 9px;
 	color: #8091a2;
 	font-size: 12px;
 	opacity: 0.6;
@@ -2365,8 +2375,8 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	font-size: 14px;
 	color: #898A8C;
 	text-align: center;
-	padding-right: 16px;
-	padding-left: 16px;
+	padding-inline-end: 16px;
+	padding-inline-start: 16px;
 }
 .review_box .noReviewsYetLink {
 	font-size: 14px;
@@ -2375,7 +2385,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 }
 
 .friend_reviews .review_box {
-	border-left: 1px solid rgb(43, 71, 95);
+	border-inline-start: 1px solid rgb(43, 71, 95);
 	border-top: 1px solid rgb(43, 71, 95);
 	background: #274156;
 }
@@ -2428,13 +2438,13 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 }
 
 .friend_reviews .playerAvatar_friendindicator {
-	left: 57px;
+	inset-inline-start: 57px;
 	top: 50px;
 }
 
 .review_controls .controlblock {
 	display: inline-block;
-	margin-right: 30px;
+	margin-inline-end: 30px;
 
 }
 
@@ -2447,8 +2457,8 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 .review_controls .controlblock.formattinghelp
 {
 	padding: 4px;
-	float: right;
-	margin-right: 0px;
+	float: inline-end;
+	margin-inline-end: 0px;
 
 }
 
@@ -2457,7 +2467,7 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 }
 .review_received_comp input, .enable_review_comments input, .attached_pc_hardware input {
 	vertical-align: text-top;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 #Reviewssummary0 .recent_reviews .review_box .review_rightcol {
@@ -2477,7 +2487,7 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 {
 	font-size: 12px;
 	padding-top: 10px;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 	margin-bottom: 2px;
 	background-color: #2a475e;
 }
@@ -2488,9 +2498,9 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 	text-transform: uppercase;
 	color: #4582a5;
 	font-size: 10px;
-	padding-right: 10px;
-	float: left;
-	padding-left: 10px;
+	padding-inline-end: 10px;
+	float: inline-start;
+	padding-inline-start: 10px;
 }
 
 .user_reviews_filter_options
@@ -2512,15 +2522,15 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 
 }
 .user_reviews_filter_section {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 	min-width: 150px;
 }
 .user_reviews_filter_section.right {
 	margin-top: 20px;
-	margin-right: 0px;
-	float: right;
-	text-align: right;
+	margin-inline-end: 0px;
+	float: inline-end;
+	text-align: end;
 }
 .user_reviews_filter_section .title {
 	text-transform: uppercase;
@@ -2532,7 +2542,7 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 	display: inline-block;
 	margin-top: 5px;
 	margin-bottom: 0px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 .user_reviews_filter_section.right select {
 	width: 100px;
@@ -2541,7 +2551,7 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 
 .user_reviews_filter_section input[type="checkbox"] {
 	vertical-align: bottom;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .user_reviews_filter_section input[type="radio"] {
@@ -2551,10 +2561,10 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 }
 
 .user_reviews_filter_section label {
-	margin-right: 37px;
+	margin-inline-end: 37px;
 	color: #7193a6;
-	margin-left: -4px;
-	padding-left: 4px;
+	margin-inline-start: -4px;
+	padding-inline-start: 4px;
 }
 .user_reviews_filter_section label:hover,
 .user_reviews_filter_section input[type="radio"]:hover+label {
@@ -2566,7 +2576,7 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 
 .user_reviews_filter_section img {
 	margin-bottom: -1px;
-	margin-left: 2px;
+	margin-inline-start: 2px;
 }
 
 .user_reviews_customize_language span {
@@ -2598,8 +2608,8 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 	margin-bottom: 0px;
 }
 .user_reviews_filter_score .title {
-	float: left;
-	margin-right: 5px;
+	float: inline-start;
+	margin-inline-end: 5px;
 	font-size: 10px;
 	line-height: 16px;
 	text-transform: uppercase;
@@ -2622,11 +2632,11 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 .user_reviews_tab
 {
 	padding: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-right: 10px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
+	margin-inline-end: 10px;
 	color: #D6D7D8;
-	float: left;
+	float: inline-start;
 }
 .user_reviews_tab a {
     color: #66c0f4;
@@ -2683,7 +2693,7 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 {
 	width: 32px;
 	height: 32px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	vertical-align: middle;
 }
 
@@ -2696,7 +2706,8 @@ html.GamepadMode .friend_reviews .review_box .review_leftcol {
 {
 	margin-top: 4px;
 	border-radius: 4px;
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 	border: 1px solid #ffffff30;
 }
 
@@ -2733,13 +2744,13 @@ body.recommendgame #review_create h2  {
 	color: #c6d4df;
 	padding-bottom: 5px;
 	display: inline-block;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 .user_reviews_active_filters .active_filter {
 	background-color: rgba( 255, 255, 255, 0.2 );
 	padding: 5px;
-	padding-right: 25px;
-	margin-right: 5px;
+	padding-inline-end: 25px;
+	margin-inline-end: 5px;
 	border-radius: 2px;
 	cursor: pointer;
 	background-repeat: no-repeat;
@@ -2747,8 +2758,11 @@ body.recommendgame #review_create h2  {
 	background-position: right 5px center;
 	display: inline-block;
 }
+.user_reviews_active_filters .active_filter:dir(rtl) {
+	background-position: left 5px center;
+}
 .user_reviews_active_filters .active_filter.no_dismiss {
-	padding-right: 5px;
+	padding-inline-end: 5px;
 	background-image: none;
 	cursor: unset;
 }
@@ -2778,11 +2792,11 @@ body.recommendgame #review_create h2  {
 	height: 36px;
 	font-size: 80px;
 	color: #fff;
-	float: left;
+	float: inline-start;
     cursor: default;
 	line-height: 62px;
-	margin-left: 8px;
-	margin-right: 8px;
+	margin-inline-start: 8px;
+	margin-inline-end: 8px;
 }
 
 .review_anomalous_events_dialog .review_anomalous_events_icon
@@ -2795,13 +2809,13 @@ body.recommendgame #review_create h2  {
     		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			margin-left: 10px;
+			margin-inline-start: 10px;
 	flex: 1;
 }
 
 .review_recent_events.csgo .review_anomalous_events_title
 {
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 .review_anomalous_events_dialog .review_anomalous_events_title
 {
@@ -2869,7 +2883,7 @@ body.recommendgame #review_create h2  {
 
 .histogram_title {
 	text-transform: uppercase;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 	padding-bottom: 10px;
 	color: #66c0f4;
 	font-size: 10px;
@@ -2915,8 +2929,8 @@ body.recommendgame #review_create h2  {
 	height: 250px;
 }
 .review_histogram {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
 	padding-bottom: 10px;
 	padding-top: 20px;
 	display: inline-block;
@@ -2966,8 +2980,8 @@ body.recommendgame #review_create h2  {
 }
 
 .graph_expander_btn {
-	margin-left: auto;
-	margin-right: 8px;
+	margin-inline-start: auto;
+	margin-inline-end: 8px;
 }
 
 .review_graph_toggle>span {
@@ -2976,7 +2990,7 @@ body.recommendgame #review_create h2  {
 div.graph_toggle_icon {
 	width: 14px;
 	height: 16px;
-	margin-right: 7px;
+	margin-inline-end: 7px;
 	margin-top: 4px;
 	background: url('/public/images/v6/app/review_graph_expander.png');
 	background-repeat: no-repeat;
@@ -3004,7 +3018,7 @@ div.graph_toggle_icon.down {
 /* review filter flyout menu */
 .user_reviews_filter_menu {
 	position: relative;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 .user_reviews_filter_menu:hover,
 .user_reviews_filter_menu:has(button[aria-expanded=true]) {
@@ -3017,12 +3031,15 @@ div.graph_toggle_icon.down {
 	font-size: 13px;
 	color: #fff;
 	padding: 10px;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 	cursor: pointer;
 	background-image: url(/public/images/v6/btn_arrow_down_padded_white.png);
 	background-repeat: no-repeat;
 	background-position-y: center;
 	background-position-x: right;
+}
+.user_reviews_filter_menu .title:dir(rtl) {
+	background-position-x: left;
 }
 .user_reviews_filter_menu:hover .title,
 .title[aria-expanded=true],
@@ -3036,7 +3053,7 @@ div.graph_toggle_icon.down {
 	color: #000;
 	font-weight: 600;
 	border-radius: 2px;
-	margin-left: 3px;
+	margin-inline-start: 3px;
 }
 .user_reviews_filter_menu.beta .user_reviews_filter_menu_flyout {
 	width: 150px;
@@ -3190,7 +3207,7 @@ html.GamepadMode #review_create .content {
         width: auto;
     }
     .friend_reviews .review_box a.vote_header {
-        margin-left: unset;
+        margin-inline-start: unset;
         width: 100%;
     }
 
@@ -3250,7 +3267,7 @@ body.v6 h2.morelike_section_divider
 .recommendation_highlightv2 .header_image
 {
 	position: relative;
-	left: 0;
+	inset-inline-start: 0;
 	top: 0;
 	min-width: 0;
 	max-width: 60%;
@@ -3273,7 +3290,7 @@ body.v6 h2.morelike_section_divider
 
 .morelikethis_border:after {
 	bottom: 100%;
-	left: 15%;
+	inset-inline-start: 15%;
 	border: solid transparent;
 	content: "";
 	height: 0;
@@ -3283,7 +3300,7 @@ body.v6 h2.morelike_section_divider
 	border-color: rgba(136, 183, 213, 0);
 	border-bottom-color: #66c0f4;
 	border-width: 15px;
-	margin-left: -15px;
+	margin-inline-start: -15px;
 }
 
 .review_summary
@@ -3362,7 +3379,7 @@ body.v6 h2.morelike_section_divider
 
 .review_summary_ctn .summary_icon {
 	position: absolute;
-	left: -8px;
+	inset-inline-start: -8px;
 	top: -8px;
 	width: 28px;
 }
@@ -3437,7 +3454,7 @@ p.outliers_options {
 	text-transform: unset;
 	color: #474C57;
 	background-color: #E4E6E9;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	padding: 0px 6px;
 	border-radius: 3px;
 	font-size: 12px;
@@ -3447,7 +3464,7 @@ p.outliers_options {
 }
 .outlier_languages_themselves .review_language_outliers_your_language_group:after {
 	top: 100%;
-	left: 30px;
+	inset-inline-start: 30px;
 	border: solid transparent;
 	content: "";
 	height: 0;
@@ -3457,7 +3474,7 @@ p.outliers_options {
 	border-color: rgba(136, 183, 213, 0);
 	border-top-color: #E4E6E9;
 	border-width: 10px;
-	margin-left: -10px;
+	margin-inline-start: -10px;
 }
 .review_language_outliers_group_languages > .all_languages_total {
 	display: flex;
@@ -3479,7 +3496,7 @@ p.outliers_options {
 }
 .review_language_outliers_group_languages > .expand_languages_btn {
 	display: flex;
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 .review_language_outliers_group_languages > .expand_languages_btn .btn_small_thin > span {
 	line-height: 23px;
@@ -3502,7 +3519,7 @@ p.outliers_options {
 }
 .review_language_outliers_group_languages > .score {
 	color: #acb2b8;
-	margin-right: 30px;
+	margin-inline-end: 30px;
 }
 
 .review_language_outliers_group_languages > .score .game_review_summary {
@@ -3520,7 +3537,8 @@ p.outliers_options {
 	display: flex;
 	position: relative;
 
-	padding: 6px 16px 6px 6px;
+	padding-block: 6px;
+	padding-inline: 6px 16px;
 	border-radius: 5px;
 	background: #515c685c;
 }
@@ -3544,14 +3562,15 @@ p.outliers_options {
 			font-weight: 300;
 	box-sizing: border-box;
 	position: relative;
-	padding: 6px 16px 6px 6px;
+	padding-block: 6px;
+	padding-inline: 6px 16px;
 	border-radius: 5px;
 	background: #515c685c;
 }
 
 .show_all_disclaimer:after {
 	bottom: 100%;
-	right: 5%;
+	inset-inline-end: 5%;
 	border: solid transparent;
 	content: "";
 	height: 0;
@@ -3561,13 +3580,13 @@ p.outliers_options {
 	border-color: rgba(136, 183, 213, 0);
 	border-bottom-color: #515c685c;
 	border-width: 10px;
-	margin-left: -10px;
+	margin-inline-start: -10px;
 }
 
 .show_all_disclaimer img {
 	width: 20px;
 	height: 20px;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	margin-bottom: -6px;
 }
 
@@ -3643,11 +3662,12 @@ p.outliers_options {
 }
 
 .widestore .review_box a.vote_header {
-	margin: 8px 8px 13px 0;
+	margin-block: 8px 13px;
+	margin-inline: 0 8px;
 }
 
 .widestore .review_controls .controlblock {
-	margin-right: unset;
+	margin-inline-end: unset;
 }
 
 .widestore .review_received_comp {
@@ -3717,7 +3737,7 @@ p.outliers_options {
 	}
 
 	.friend_reviews.widestore .review_box a.vote_header {
-		margin-left: unset;
+		margin-inline-start: unset;
 		width: 100%;
 	}
 

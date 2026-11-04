@@ -4025,7 +4025,7 @@ GSteamCurators = {
 				++numCuratorsAdded;
 			}
 		}
-		$Curators.append( $J('<div/>', {'style': 'clear: left'} ) );
+		$Curators.append( $J('<div/>', {'style': 'clear: inline-start'} ) );
 		$Item.append( $Curators );
 
 		// pricing info
@@ -4181,7 +4181,7 @@ GSteamCurators = {
 		{
 			$Item.append( $J('<div/>', {'class': 'steam_curator_desc' } ).text( curator.curator_description ) );
 		}
-		$Item.append( $J('<div/>', {'style': 'clear: left;' } ) );
+		$Item.append( $J('<div/>', {'style': 'clear: inline-start;' } ) );
 
 		return $Item;
 	},

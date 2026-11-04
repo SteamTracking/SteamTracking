@@ -4,7 +4,7 @@
 {
 	width: 500px;
 	padding-bottom: 10px;
-	text-align: left;
+	text-align: start;
 }
 
 .user_review_report_dialog_text_area
@@ -69,11 +69,11 @@ select {
 }
 
 #leftContents {
-	float: left;
+	float: inline-start;
 	width: 580px;
 	margin: 0;
 	padding: 0;
-	padding-right: 0px;
+	padding-inline-end: 0px;
 }
 
 #comments {
@@ -101,13 +101,13 @@ select {
 }
 
 .ratingSummaryBlock img {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	width:44px;
 	height:44px;
 }
 
 .ratingBar .review_award_ctn {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 .ratingBar .review_award {
 	position: relative;
@@ -149,8 +149,8 @@ select {
 		}
 
 .ratingSummaryHeader .review_source {
-	float: right;
-	margin-right: 5px;
+	float: inline-end;
+	margin-inline-end: 5px;
 	margin-top: 15px;
 	opacity: 0.5;
 	width: auto;
@@ -158,8 +158,8 @@ select {
 }
 
 .ratingSummaryHeader .majority_deck {
-	 float: right;
-	 margin-right: 6px;
+	 float: inline-end;
+	 margin-inline-end: 6px;
 	 margin-top: 17px;
 	 opacity: 0.5;
 	 width: auto;
@@ -222,7 +222,7 @@ select {
 }
 
 #ReviewEdit {
-	margin-right: 6px;
+	margin-inline-end: 6px;
 }
 
 .review_edit_text_area
@@ -248,7 +248,7 @@ select {
 	margin-bottom: 10px;
 }
 .review_edit_received_compensation input[type=checkbox] {
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 
 #ReviewEdit .steam_china_disclaimer {
@@ -305,13 +305,13 @@ select {
 .review_developer_response_container .leftcol
 {
 	width: 184px;
-	float: left;
+	float: inline-start;
 	padding: 8px;
 }
 
 .review_developer_response_container .rightcol
 {
-	float: left;
+	float: inline-start;
 	width: 450px;
 	position: relative;
 }
@@ -324,16 +324,17 @@ select {
 .review_developer_response
 {
 	border-radius: 4px;
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 	border: 1px solid #515152;
 	font-size: 13px;
 }
 
 .review_developer_response_container.multiple_listing .review_developer_response
 {
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-	border-right: 0px;
+	border-start-end-radius: 0px;
+	border-end-end-radius: 0px;
+	border-inline-end: 0px;
 }
 
 .rightcol .review_developer_response_container .leftcol {
@@ -376,7 +377,8 @@ select {
 
 .dev_write_response {
 	border-radius: 4px;
-	padding: 10px 10px 10px 11px;
+	padding-block: 10px;
+	padding-inline: 11px 10px;
 	border: 1px solid #a55b13;
 	font-size: 13px;
 	margin-top: 25px;
@@ -387,25 +389,28 @@ select {
 }
 
 .btn_grey_grey.btn_ico_thumbs_down {
-	padding-left: 20px;
+	padding-inline-start: 20px;
 }
 
 #ReviewReportBtn {
 	height: 21px;
 	padding: 0px;
-	padding-left: 32px;
+	padding-inline-start: 32px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images//buttons/report_ico_tiled.png');
 	background-position: 8px -4px;
 	background-repeat: no-repeat;
 	display: inline-block;
 	line-height: 30px;
-	float: right;
+	float: inline-end;
 
+}
+#ReviewReportBtn:dir(rtl) {
+	background-position: right 8px top -4px;
 }
 
 .notification
 {
-	text-align: left;
+	text-align: start;
 	margin: 0px auto;
 	margin-bottom: 8px;
 	padding: 18px;
@@ -414,7 +419,7 @@ select {
 	font-size: 14px;
 	border-style: solid;
 	border-width: 2px;
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .notification.banned
@@ -433,7 +438,7 @@ select {
 }
 
 .review_box .notification {
-	margin-right: 0px;
+	margin-inline-end: 0px;
 }
 
 /* view reports */
@@ -453,7 +458,7 @@ select {
 }
 .review_report_data
 {
-	float: left;
+	float: inline-start;
 	width: 75px;
 }
 .review_report_data.description
@@ -502,8 +507,8 @@ select {
 
 .responsive_review_gameoptions {
 	overflow: hidden;
-	float: right;
-	padding-left: 8px;
+	float: inline-end;
+	padding-inline-start: 8px;
 }
 
 
@@ -516,7 +521,7 @@ select {
 
 #UpdateCommentStatus {
 	vertical-align: middle;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .setting_ctn {
@@ -557,7 +562,8 @@ select {
 .reviewer_hardware_container
 {
 	padding: 4px;
-	margin: 0px 8px 8px 0px;
+	margin-block: 0px 8px;
+	margin-inline: 0px 8px;
 	color: #AFDEFF;
 	background-color: #486582;
 }

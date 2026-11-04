@@ -43,7 +43,8 @@ body.v6 {
 	border-radius: 2px;
 	padding: 0 9px;
 	line-height: 24px;
-	margin: 0 4px 4px 0;
+	margin-block: 0 4px;
+	margin-inline: 0 4px;
 	background: rgba(255,255,255,0.2);
 	border: 1px solid rgba(255,255,255,0.1);
 	color: #ffffff;
@@ -54,7 +55,7 @@ body.v6 {
 	background: no-repeat center center url('/public/images/v6/delete_search_term.png');
 	width: 12px;
 	height: 24px;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 /* search */
@@ -67,9 +68,9 @@ body.v6 {
 	color: #9099a1;
 	box-shadow: 1px 1px 0px rgba( 103, 121, 147, 0.5 );
 	position: relative;
-	margin-left: auto;
+	margin-inline-start: auto;
 	height: 14px;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 }
 
 .curators_search_keywords
@@ -84,7 +85,7 @@ body.v6 {
 .curators_search_image
 {
 	position: absolute;
-	right: 5px;
+	inset-inline-end: 5px;
 	top: 7px;
 }
 
@@ -100,12 +101,12 @@ body.v6 {
 .Curators_paging_summary
 {
 	color: #3b6e8c;
-	float: left;
+	float: inline-start;
 }
 
 .Curators_paging_controls
 {
-	float: right;
+	float: inline-end;
 }
 
 .Curators_paging_controls .pagebtn {
@@ -204,7 +205,8 @@ body.v6 .page_content.curators.header {
 	text-transform: uppercase;
 	font-size: 13px;
 	color: #fff;
-	margin: 7px 0 7px 15px;
+	margin-block: 7px;
+	margin-inline: 15px 0;
 	letter-spacing: 1px;
 	white-space: nowrap;
 }
@@ -219,11 +221,11 @@ body.v6 .page_content.curators.header {
 }
 
 .navigation_bar > a:first-child {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .navigation_bar > .curators_for_app_filter:first-child {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 .curators_for_app_filter {
 	color: #c6d4df;
@@ -243,12 +245,15 @@ body.v6 .page_content.curators.header {
 .curators_for_app_filter_menu .title {
 	color: #ffffff;
 	padding: 10px;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 	cursor: pointer;
 	background-image: url(/public/images/v6/btn_arrow_down_padded.png);
 	background-repeat: no-repeat;
 	background-position-y: center;
 	background-position-x: right;
+}
+.curators_for_app_filter_menu .title:dir(rtl) {
+	background-position-x: left;
 }
 .curators_for_app_filter_menu:hover .title,
 .curators_for_app_filter_menu_flyout:hover .curators_for_app_filter_menu .title {

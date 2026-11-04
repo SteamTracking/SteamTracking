@@ -32,8 +32,8 @@ body.v6 {
 	content: "";
 	position: absolute;
 	top: 0;
-	right: 0;
-	margin-right: -16px;
+	inset-inline-end: 0;
+	margin-inline-end: -16px;
 	height: 100%;
 	width: 16px;
 	background: #c6d4df;
@@ -60,16 +60,16 @@ body.v6 {
 	background-color: #66c0f4;
 }
 .can_play_container .playtime_text {
-	float: left;
+	float: inline-start;
 	font-size: 14px;
 	line-height: 22px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 .can_play_container .ds_flag {
 	position: relative;
-	margin-left: -14px;
+	margin-inline-start: -14px;
 	top: 2px;
-	float: left;
+	float: inline-start;
 }
 
 .updated_app_announcement_text a {
@@ -124,9 +124,9 @@ div.bb_h3 {
 {
 	font-size: 12px;
 	font-family: arial, tahoma, sans-serif;
-	float: right;
+	float: inline-end;
 	padding-top: 4px;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 	color: #ffffff;
 }
 
@@ -150,7 +150,7 @@ div.bb_h3 {
 		}
 
 .updated_app_announcement_text ul {
-	margin-left: 18px;
+	margin-inline-start: 18px;
 }
 
 .updated_app_announcement_text img {
@@ -159,7 +159,7 @@ div.bb_h3 {
 
 .updated_app_play_now_btn
 {
-	float: right;
+	float: inline-end;
 }
 
 .updated_app_footer
@@ -216,13 +216,13 @@ div.bb_h3 {
 .updated_app_vote_details .rateUpCount
 {
 	color: #000;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .updated_app_vote_details .rateUpCount img
 {
 	vertical-align: middle;
-	padding-right: 0px;
+	padding-inline-end: 0px;
 }
 
 .no_matching_apps

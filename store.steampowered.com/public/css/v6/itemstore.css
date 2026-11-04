@@ -51,7 +51,7 @@ div.rightcol {
 
 .pageHeaderCapsule
 {
-	float: left;
+	float: inline-start;
 	box-shadow: 0 0 5px 0 #000000;
 }
 body.v6 .item .page_content_ctn .page_content
@@ -81,7 +81,7 @@ body.v6 h2.pageheader.itemtitle
 
 #cart_status_data
 {
-	float: right;
+	float: inline-end;
 }
 #cart_status_data .store_header_btn
 {
@@ -99,7 +99,8 @@ body.v6 h2.pageheader.itemtitle
 	max-width: 928px;
 	margin: 0 auto;
 	margin-bottom: 10px;
-	padding: 6px 0px 0px 12px;
+	padding-block: 6px 0px;
+	padding-inline: 12px 0px;
 	min-height: 33px;
 	background-color: rgba(255, 255, 255, 0.13 );
 }
@@ -142,7 +143,7 @@ a#store_search_link img:hover {
 
 .itemstore_tabarea .itemstore_tab {
 	display: inline-block;
-	margin-right: 0px;
+	margin-inline-end: 0px;
 	border-bottom: 2px solid rgba(0,0,0,0);
 }
 .itemstore_tabarea .itemstore_tab .tab_content {
@@ -174,7 +175,7 @@ a#store_search_link img:hover {
 .item_def_discount_prices
 {
 	display: inline-block;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 .item_def_price_original
 {
@@ -190,7 +191,7 @@ a#store_search_link img:hover {
 	color: #a4d007;
 	background: #4c6b22;
 	padding: 0 5px;
-	float: left;
+	float: inline-start;
 	line-height: 36px;
 	font-size: 16px;
 }
@@ -236,8 +237,8 @@ a#store_search_link img:hover {
 	position: relative;
 	display: block;
 	margin-top: 5px;
-	margin-left: 12px;
-	right: 0px;
+	margin-inline-start: 12px;
+	inset-inline-end: 0px;
 	top: 0px;
 }
 .item_def_row_item.small .item_def_discount
@@ -261,12 +262,12 @@ a#store_search_link img:hover {
 .ItemDefs_paging_summary
 {
 	color: #969696;
-	float: left;
+	float: inline-start;
 }
 
 .ItemDefs_paging_controls
 {
-	float: right;
+	float: inline-end;
 }
 
 .ItemDefs_paging_controls .pagebtn {
@@ -304,7 +305,7 @@ a#store_search_link img:hover {
 .loading_item_defs img
 {
 	vertical-align: middle;
-	padding-right: 20px;
+	padding-inline-end: 20px;
 }
 
 .item_def_rows {
@@ -382,7 +383,7 @@ a#store_search_link img:hover {
 {
 	font-size: 24px;
 	line-height: 24px;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	margin-top: 12px;
 }
 .item_def_grid_item .item_def_name
@@ -405,7 +406,7 @@ a#store_search_link img:hover {
 	display: inline-flex;
 }
 .item_def_grid_item .item_def_discount_prices .item_def_price_current {
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 .item_def_row_item .item_def_price
 {
@@ -413,7 +414,7 @@ a#store_search_link img:hover {
 	line-height: 20px;
 	position: absolute;
 	display: inline-block;
-	right: 12px;
+	inset-inline-end: 12px;
 	top: 12px;
 }
 .item_def_row_item .item_def_discount
@@ -429,7 +430,7 @@ a#store_search_link img:hover {
 	max-width: 600px;
 	overflow-y: auto;
 	height: 80px;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 }
 
 .browse_add_to_cart
@@ -440,7 +441,7 @@ a#store_search_link img:hover {
 {
 	position: absolute;
 	top: 40px;
-	right: 5px;
+	inset-inline-end: 5px;
 	display: inline-block;
 }
 .item_def_row_item:hover .browse_add_to_cart.discounted
@@ -519,7 +520,7 @@ a#store_search_link img:hover {
 	color: #7d868c;
 }
 .market_commodity_explanation li {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 .discount_final_price {
     color: white;
@@ -550,8 +551,8 @@ a#store_search_link img:hover {
 .workshop_preview
 {
 	display: inline-block;
-	padding-left: 1px;
-	padding-right: 1px;
+	padding-inline-start: 1px;
+	padding-inline-end: 1px;
 	border: 1px solid rgba(0,0,0,0);
 }
 .workshop_preview:hover
@@ -583,7 +584,8 @@ a#store_search_link img:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 4px 34px 4px 10px;
+    padding-block: 4px;
+    padding-inline: 10px 34px;
     color: white;
     background: rgba(255,255,255,0.4);
 		font-family: "Motiva Sans", Sans-serif;
@@ -593,8 +595,8 @@ a#store_search_link img:hover {
 
 .dropcontainer ul {
     background: #5d6369;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-end-start-radius: 3px;
+    border-end-end-radius: 3px;
 }
 .dropcontainer ul li a {
     background: #5d6369;
@@ -615,7 +617,7 @@ a#store_search_link img:hover {
 }
 .dselect_container .discount_block .discount_prices {
     padding: 0px 4px;
-    margin-right: -4px;
+    margin-inline-end: -4px;
     font-size: 12px;
     line-height: 21px;
     vertical-align: unset;
@@ -625,7 +627,7 @@ a#store_search_link img:hover {
     font-size: 12px;
 }
 .dselect_container .discount_block .discount_final_price {
-    margin-left: 2px;
+    margin-inline-start: 2px;
     color: white;
 }
 
@@ -653,22 +655,22 @@ a#store_search_link img:hover {
 
 	html.responsive .item_def_row_item .item_def_details .item_def_price {
 		position: relative;
-		right: 0px;
+		inset-inline-end: 0px;
 		top: 0px;
 		margin-top: 12px;
-		margin-left: 12px;
+		margin-inline-start: 12px;
 	}
 	html.responsive .item_def_row_item .item_def_details .browse_add_to_cart  {
 		position: relative;
-		right: 0px;
+		inset-inline-end: 0px;
 		top: 0px;
 		margin-top: 12px;
-		margin-left: 12px;
+		margin-inline-start: 12px;
 		display: inline-block;
 	}
 
 	html.responsive #cart_status_data {
-		margin-right: 5px;
+		margin-inline-end: 5px;
 	}
 
 	html.responsive .game.item .columns {

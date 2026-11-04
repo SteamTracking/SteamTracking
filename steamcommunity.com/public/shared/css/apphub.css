@@ -20,7 +20,7 @@ center
 	border: 1px solid #529cde;
 	font-size: 1.125em;
 	color: #ffffff;
-	text-align: left;
+	text-align: start;
 
 }
 
@@ -29,7 +29,7 @@ center
 {
 	position: relative;
 	margin: 0 auto;
-	text-align: left;
+	text-align: start;
 	padding-top: 12px;
 }
 
@@ -59,7 +59,7 @@ center
 {
 	position: relative;
 	margin: 0px auto;
-	text-align: left;
+	text-align: start;
 	padding-top: 7px;
 	min-height: 46px;
 	background-image:url('https://community.fastly.steamstatic.com/public/shared/images/apphubs/bg_header.png');
@@ -104,34 +104,34 @@ center
 {
 	color: #939393;
 	font-size: 18px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 }
 
 .apphub_CommunitySubSection
 {
 	color: #d1cfcd;
 	font-size: 18px;
-	padding-left: 10px;
+	padding-inline-start: 10px;
 }
 
 .apphub_OtherSiteInfo
 {
 	position: relative;
-	float: right;
+	float: inline-end;
 }
 
 .apphub_WorkshopPistonHolder
 {
 	width: 1px;
 	height: 0px;
-	float: left;
+	float: inline-start;
 }
 
 .apphub_WorkshopPiston
 {
 	position: relative;
 	top: -12px;
-	left: -119px;
+	inset-inline-start: -119px;
 	width: 216px;
 	height: 84px;
 	background-image:url('https://community.fastly.steamstatic.com/public/shared/images/apphubs/bg_workshop_piston.png');
@@ -168,23 +168,23 @@ center
 .apphub_SwitchSitesBtn .leftcap
 {
 	background-position: left center;
-	left: 0px;
+	inset-inline-start: 0px;
 }
 
 .apphub_SwitchSitesBtn .rightcap
 {
 	background-position: left top;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 .apphub_SwitchSitesBtn .middle
 {
 	text-decoration: none;
 	min-width: 50px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-left: 3px;
-	margin-right: 3px;
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
+	margin-inline-start: 3px;
+	margin-inline-end: 3px;
 	background-position: left bottom;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images/apphubs/btn_blue.png' );
 	background-repeat: repeat-x;
@@ -218,8 +218,8 @@ center
 .apphub_HeaderBottomBG
 {
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	height: 239px;
 	background: url('https://community.fastly.steamstatic.com/public/shared/images/apphubs/bg_filter_blue.png') no-repeat top center;
 	z-index: -1;
@@ -240,8 +240,8 @@ center
 
 .apphub_HeaderBottomText
 {
-	text-align: left;
-	padding-left: 15px;
+	text-align: start;
+	padding-inline-start: 15px;
 	line-height: 68px;
 	color: #c6d4df;
 }
@@ -264,7 +264,7 @@ center
 	padding: 2px 10px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
-	margin-left: 14px;
+	margin-inline-start: 14px;
 	margin-top: 18px;
 	text-decoration: none;
 }
@@ -287,23 +287,23 @@ center
 .apphub_Stats
 {
 	line-height: 68px;
-	float: right;
+	float: inline-end;
 	font-size: 12px;
 	color: #434344;
-	padding-right: 13px;
+	padding-inline-end: 13px;
 }
 
 .apphub_NumInApp
 {
 	color: #7cc53f;
-	padding-right: 5px;
+	padding-inline-end: 5px;
 }
 
 .apphub_Chat
 {
 	color: white;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-inline-start: 5px;
+	padding-inline-end: 5px;
 }
 
 .apphub_Chat a
@@ -339,7 +339,7 @@ center
 {
 	font-weight: 500;
 	font-size: 14px;
-	margin-right: 12px;
+	margin-inline-end: 12px;
 	color: white;
 	opacity: 0.7;
 	transition: opacity .2s ease;
@@ -376,7 +376,7 @@ center
 .apphub_sectionTab.admin
 {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	top: 20px;
 }
 
@@ -386,7 +386,7 @@ center
 	overflow: hidden;
 	white-space: nowrap;
 	padding-top: 22px;
-	padding-left: 14px;
+	padding-inline-start: 14px;
 }
 
 .apphub_friends_who_played_recently_title
@@ -501,12 +501,12 @@ center
 {
 	display: inline-block;
 	vertical-align: middle;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 }
 
 .apphub_friend_block_row .playerAvatar {
 	display: inline-block;
-	margin-right: 8px;
+	margin-inline-end: 8px;
 	width: 26px;
 	height: 26px;
 }
@@ -518,8 +518,8 @@ center
 
 .apphub_friend_block_container
 {
-	float: left;
-	margin-right: 7px;
+	float: inline-start;
+	margin-inline-end: 7px;
 	height: 26px;
 	min-width: 26px;
 	max-width: 240px;
@@ -570,7 +570,7 @@ a.apphub_more_friends_who_play:hover
 {
 	margin: 0 auto;
 	max-width: 948px;
-	text-align: left;
+	text-align: start;
 }
 
 @media screen and (max-width: 910px)
@@ -586,7 +586,7 @@ a.apphub_more_friends_who_play:hover
 	position: relative;
 	margin: 10px auto 0 auto;
 	max-width: 948px;
-	text-align: left;
+	text-align: start;
 }
 
 .apphub_Content.modal
@@ -599,11 +599,11 @@ a.apphub_more_friends_who_play:hover
 {
 	background-color: #0d131b;
 	border: 1px solid transparent;
-	float: left;
+	float: inline-start;
 	margin: 0 5px 10px;
 	padding: 0;
 	position: relative;
-	text-align: left;
+	text-align: start;
 }
 
 .apphub_Card.interactable
@@ -625,7 +625,7 @@ a.apphub_more_friends_who_play:hover
 {
 	position: absolute;
 	top: 5px;
-	right: 5px;
+	inset-inline-end: 5px;
 	height: 24px;
 	width: 24px;
 	background-image:url('https://community.fastly.steamstatic.com/public/shared/images/apphubs/icons/icon_pin.png');
@@ -668,8 +668,8 @@ a.apphub_more_friends_who_play:hover
 {
 	position: absolute;
 	bottom: 47px;
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 	height: 40px;
 	padding-top: 5px;
 	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
@@ -681,9 +681,9 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardRating
 {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	min-height: 13px;
-	padding-left: 85px;
+	padding-inline-start: 85px;
 	background-repeat: no-repeat;
 	color: #424242;
 }
@@ -691,7 +691,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardRating.rateUp
 {
-	padding-left: 18px;
+	padding-inline-start: 18px;
 	color: #7cc5fb;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images/apphubs/icons/icon_rate.png' );
 }
@@ -714,25 +714,25 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardRating.news
 {
 	min-width: 0px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .apphub_CardRating.userreviews
 {
-	float: right;
+	float: inline-end;
 	min-width: 0px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .apphub_CardRatingButtons
 {
 	height: 22px;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 }
 
 .apphub_CardMetaData .reward_btn_icon {
 	vertical-align: middle;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .apphub_CardMetaData .review_award_aggregated,
@@ -740,10 +740,10 @@ a.apphub_more_friends_who_play:hover
 	display: inline-block;
 	color: #7cc5fb;
 	font-size: 14px;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 }
 .apphub_UserReviewCardContent .review_award_aggregated {
-	padding-left: 10px;
+	padding-inline-start: 10px;
 }
 .apphub_CardMetaData .review_award_aggregated > img,
 .apphub_UserReviewCardContent .review_award_aggregated > img {
@@ -752,7 +752,7 @@ a.apphub_more_friends_who_play:hover
 }
 .apphub_UserReviewCardContent .review_award_aggregated > img {
 	vertical-align: middle;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 .community_tooltip.review_reward_tooltip {
 	background: #141c27;
@@ -789,7 +789,7 @@ a.apphub_more_friends_who_play:hover
 	color: #636363;
 	font-size: 18px;
 	padding-top: 9px;
-	padding-left: 13px;
+	padding-inline-start: 13px;
 }
 
 .apphub_CardContentClickable
@@ -856,9 +856,9 @@ a.apphub_more_friends_who_play:hover
 {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	inset-inline-start: 50%;
 	margin-top: -27px;
-	margin-left: -40px;
+	margin-inline-start: -40px;
 	z-index: 2;
 }
 
@@ -869,8 +869,8 @@ a.apphub_more_friends_who_play:hover
 	/*background-color: #3e3d3d;*/
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
     border-top: 1px solid #272f38;
 }
 
@@ -888,7 +888,7 @@ a.apphub_more_friends_who_play:hover
 {
 	height: 32px;
 	padding-top: 6px;
-	padding-left: 5px;
+	padding-inline-start: 5px;
 }
 
 .apphub_CardContentAuthorBlock .appHubIconHolder
@@ -899,8 +899,8 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardContentAppIcon
 {
 	position: relative;
-	float: left;
-	padding-right: 5px;
+	float: inline-start;
+	padding-inline-end: 5px;
 	height: 32px;
 	width: 32px;
 }
@@ -932,7 +932,7 @@ a.apphub_more_friends_who_play:hover
 {
 	font-size: 13px;
 	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
-	padding-left: 32px;
+	padding-inline-start: 32px;
 	color: #636363;
 }
 
@@ -943,7 +943,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardContentAuthorName.discussion
 {
-	padding-left: 45px;
+	padding-inline-start: 45px;
 }
 
 .apphub_CardContentAuthorName a
@@ -984,21 +984,21 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardContentAuthorName.noIcon
 {
 	padding-top: 6px;
-	padding-left: 2px;
+	padding-inline-start: 2px;
 	max-width: 360px;
 }
 
 .apphub_CardContentAuthorName.newsIcon
 {
 	padding-top: 6px;
-	padding-left: 76px;
+	padding-inline-start: 76px;
 	max-width: 175px;
 }
 
 .apphub_CardContentMoreLink
 {
 	font-size: 10px;
-	padding-left: 32px;
+	padding-inline-start: 32px;
 	color: #555454;
 }
 
@@ -1014,7 +1014,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardRightData {
 	display: flex;
-	margin-left: auto;
+	margin-inline-start: auto;
 }
 
 .apphub_CardCommentCount
@@ -1022,37 +1022,40 @@ a.apphub_more_friends_who_play:hover
 	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images/comment_quoteicon.png' );
 	background-repeat: no-repeat;
 	background-position: left center;
-	padding-left: 20px;
-	padding-right: 5px;
-	margin-left: 5px;
+	padding-inline-start: 20px;
+	padding-inline-end: 5px;
+	margin-inline-start: 5px;
+}
+.apphub_CardCommentCount:dir(rtl) {
+	background-position: right center;
 }
 
 .apphub_CardCommentCount.alignIcon
 {
 	position: absolute;
 	bottom: 15px;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 .apphub_CardCommentCount.alignDiscussion
 {
 	position: relative;
-	float: right;
-	clear: right;
+	float: inline-end;
+	clear: inline-end;
 	margin-top: 28px;
 }
 
 .apphub_CardCommentCount.alignNews
 {
 	position: relative;
-	margin-left: auto;
+	margin-inline-start: auto;
 }
 
 .apphub_CardCommentCount.alignUserReviews
 {
 	position: absolute;
 	bottom: 15px;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 /* workshop */
@@ -1062,7 +1065,7 @@ a.apphub_more_friends_who_play:hover
 	height: 126px;
 	position: absolute;
 	bottom: 42px;
-	right: 0px;
+	inset-inline-end: 0px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images/apphubs/bg_workshopitem.png' );
 	background-repeat: no-repeat;
 }
@@ -1093,8 +1096,8 @@ a.apphub_more_friends_who_play:hover
 	max-width: 450px;
 	padding-top: 20px;
 	padding-bottom: 14px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-inline-start: 15px;
+	padding-inline-end: 15px;
 	word-wrap:break-word;
 }
 
@@ -1114,9 +1117,9 @@ a.apphub_more_friends_who_play:hover
 	height: 32px;
 	padding: 4px;
 	padding-top: 6px;
-	padding-left: 15px;
-	left: 0px;
-	right: 0px;
+	padding-inline-start: 15px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 }
 
 .apphub_CardContentSpeechCorner
@@ -1125,7 +1128,7 @@ a.apphub_more_friends_who_play:hover
 	width: 20px;
 	height: 18px;
 	top: -1px;
-	margin-left: 42px;
+	margin-inline-start: 42px;
 	z-index: 2;
 	background-image:url('https://community.fastly.steamstatic.com/public/shared/images/apphubs/speech_corner.png?v=1');
 	background-repeat: no-repeat;
@@ -1135,7 +1138,7 @@ a.apphub_more_friends_who_play:hover
 {
 	font-size: 13px;
 	color: #5c5b5b;
-	padding-left: 47px;
+	padding-inline-start: 47px;
 }
 
 .apphub_CardContentDiscussionType
@@ -1145,11 +1148,11 @@ a.apphub_more_friends_who_play:hover
 	height: 32px;
 	line-height: 32px;
 	padding-top: 7px;
-	padding-left: 7px;
+	padding-inline-start: 7px;
 	position: absolute;
 	bottom: 0px;
-	left: 0px;
-	right: 0px;
+	inset-inline-start: 0px;
+	inset-inline-end: 0px;
 	font-size: 13px;
 	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	color: #636363;
@@ -1170,7 +1173,7 @@ a.apphub_more_friends_who_play:hover
 	height: 101px;
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	inset-inline-start: 0px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images/apphubs/bg_announcement.png?v=1' );
 	background-repeat: no-repeat;
 }
@@ -1183,8 +1186,8 @@ a.apphub_more_friends_who_play:hover
 	max-width: 450px;
 	padding-top: 20px;
 	padding-bottom: 14px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-inline-start: 15px;
+	padding-inline-end: 15px;
 	word-wrap:break-word;
 }
 
@@ -1192,8 +1195,8 @@ a.apphub_more_friends_who_play:hover
 {
 	color: #737271;
 	font-size: 11px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-inline-start: 15px;
+	padding-inline-end: 15px;
 	padding-bottom: 5px;
 }
 
@@ -1202,28 +1205,28 @@ a.apphub_more_friends_who_play:hover
 	color: #8c8b8a;
 	font-size: 14px;
 	line-height: 22px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-inline-start: 15px;
+	padding-inline-end: 15px;
 }
 
 .apphub_CardContentNewsDesc img
 {
-	float: left;
+	float: inline-start;
 	width: auto;
 	height: auto;
 	max-width: 280px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	/*border: 1px solid #3A3A3A;*/
 	margin-top: 4px;
 	margin-bottom: 5px;
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 
 .apphub_CardContentNewsDesc p
 {
 	margin: 0px;
 	padding-bottom: 10px;
-	clear: left;	/* images are all floated in app hubs for some reason */
+	clear: inline-start;	/* images are all floated in app hubs for some reason */
 }
 
 .apphub_CardContentNewsFade
@@ -1245,16 +1248,16 @@ a.apphub_more_friends_who_play:hover
 	display: flex;
 	position: absolute;
 	bottom: 15px;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 /* guides */
 .apphub_CardContentGuideImage
 {
-	float: left;
+	float: inline-start;
 	width: 64px;
 	height: 64px;
-	padding-right: 10px;
+	padding-inline-end: 10px;
 }
 
 .apphub_CardContentGuideTitle
@@ -1297,14 +1300,14 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_UserReviewCardContent .appSmallLogo
 {
-	float: left;
-	padding-right: 15px;
+	float: inline-start;
+	padding-inline-end: 15px;
 	margin-bottom: 5px;
 }
 
 .apphub_UserReviewCardContent .reviewInfo
 {
-	float: left;
+	float: inline-start;
 	width: 300px;
 }
 
@@ -1317,7 +1320,7 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardContentMain .UserReviewCardContent_Footer {
 	position: absolute;
 	width: 100%;
-	left: 0;
+	inset-inline-start: 0;
 	bottom: 0px;
 }
 
@@ -1378,8 +1381,8 @@ a.apphub_more_friends_who_play:hover
 }
 
 .apphub_UserReviewCardContent .vote_header .thumb {
-	float: left;
-	margin-right: 10px;
+	float: inline-start;
+	margin-inline-end: 10px;
 }
 
 .apphub_UserReviewCardContent .apphub_CardTextContent {
@@ -1391,7 +1394,7 @@ a.apphub_more_friends_who_play:hover
 
 .UserReviewCardContent_Footer .control_block .text {
 	display: inline-block;
-	margin-right: 9px;
+	margin-inline-end: 9px;
 	color: #636363;
 	font-size: 12px;
 }
@@ -1404,7 +1407,7 @@ a.apphub_more_friends_who_play:hover
 }
 
 .btn_ico_thumbs_down.has_text {
-	padding-left: 20px;
+	padding-inline-start: 20px;
 }
 
 /* responsive menu contents */
@@ -1481,7 +1484,7 @@ h3.apphub_responsive_menu_title {
 }
 
 .contentcheck_descriptor_list {
-	text-align: left;
+	text-align: start;
 	font-size: 18px;
 }
 
@@ -1529,7 +1532,7 @@ h3.apphub_responsive_menu_title {
 }
 
 .adultcontent_warningbar_ctn img {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 	max-width: 26px;
 }
 

@@ -295,13 +295,6 @@
   position: absolute;
   top: -60px;
   left: -60px;
-  -webkit-mask: radial-gradient(
-    at 150px 150px,
-    #000 0%,
-    #0009 20%,
-    #0000004d 34%,
-    #0000 64%
-  );
   mask: radial-gradient(
     at 150px 150px,
     #000 0%,

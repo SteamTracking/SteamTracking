@@ -14,7 +14,15 @@ function GetSupportedLanguages()
 {
 	// language names are shown in the user's own language
 	var languages = {"english":"English","german":"German","french":"French","italian":"Italian","koreana":"Korean","spanish":"Spanish - Spain","schinese":"Simplified Chinese","tchinese":"Traditional Chinese","russian":"Russian","thai":"Thai","japanese":"Japanese","portuguese":"Portuguese - Portugal","polish":"Polish","danish":"Danish","dutch":"Dutch","finnish":"Finnish","norwegian":"Norwegian","swedish":"Swedish","hungarian":"Hungarian","czech":"Czech","romanian":"Romanian","turkish":"Turkish","arabic":"Arabic","brazilian":"Portuguese - Brazil","bulgarian":"Bulgarian","greek":"Greek","ukrainian":"Ukrainian","latam":"Spanish - Latin America","vietnamese":"Vietnamese","sc_schinese":"Simplified Chinese - SteamChina","indonesian":"Indonesian","malay":"Malay"};
-	return languages;
+
+	// sort by the localized name using the user's language collation; keys are non-numeric so insertion order is preserved
+	var strLocale = "en" || undefined;
+	var rgSortedKeys = Object.keys( languages ).sort( function( a, b ) { return languages[a].localeCompare( languages[b], strLocale ); } );
+	var sortedLanguages = {};
+	for ( var i = 0; i < rgSortedKeys.length; i++ )
+		sortedLanguages[ rgSortedKeys[i] ] = languages[ rgSortedKeys[i] ];
+
+	return sortedLanguages;
 }
 
 
@@ -297,14 +305,22 @@ function OnScreenshotLoadComplete(target, nParentID, images )
 		// add language select
 		var selectLanguage = $J( '<select class="image_language_select"></select>');
 		var languages = GetSupportedLanguages();
+		var bLanguageInFileName = false;
 		for ( var key in languages )
 		{
 			var option = $J( '<option/>', { value: key } ).text( languages[key] );
 			option.appendTo( selectLanguage );
 
 			if ( BLanguageInFileName( key, filename ) )
+			{
 				option.prop( 'selected', true );
+				bLanguageInFileName = true;
+			}
 		}
+
+		// list is sorted alphabetically, so default to english rather than whatever sorts first
+		if ( !bLanguageInFileName )
+			selectLanguage.val( 'english' );
 		selectLanguage.appendTo( targetDiv );
 
 		const elFilename =  $J( '<div/>', { 'class': 'image_file_name' } ).text(  filename );
@@ -602,14 +618,22 @@ function OnImagesLoadComplete( images )
 		// add language select
 		var selectLanguage = $J( '<select id="image_language_select_form" class="image_language_select"></select>');
 		var languages = GetSupportedLanguages();
+		var bLanguageInFileName = false;
 		for ( var key in languages )
 		{
 			var option = $J( '<option/>', { value: key } ).text( languages[key] );
 			option.appendTo( selectLanguage );
 
 			if ( BLanguageInFileName( key, filename ) )
+			{
 				option.prop( 'selected', true );
+				bLanguageInFileName = true;
+			}
 		}
+
+		// list is sorted alphabetically, so default to english rather than whatever sorts first
+		if ( !bLanguageInFileName )
+			selectLanguage.val( 'english' );
 		selectLanguage.appendTo( targetDiv );
 
 		const elFilename =  $J( '<div/>', { 'class': 'image_file_name' } ).text( filename );

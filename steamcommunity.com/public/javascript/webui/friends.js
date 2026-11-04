@@ -5,24 +5,24 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./broadcastapp.js?contenthash=B6cq007Z",
-      "./rolldown-runtime.js?contenthash=Bhk3NnG1",
-      "./localization.js?contenthash=BbczadiP",
-      "./shared_dialog.js?contenthash=Bjg1l0y4",
-      "./webpackinit.js?contenthash=7c4B_KgN",
-      "../../css/webui/shared_dialog2.css?contenthash=NjhQ-d4N",
-      "./friendsui_desktopapp.js?contenthash=Z0qtwhtB",
-      "./defaultappheader.js?contenthash=ClYGx_wk",
-      "./broadcastwatchstore.js?contenthash=8PXRLCEh",
+      "./broadcastapp.js?contenthash=DsUNYhUY",
+      "./rolldown-runtime.js?contenthash=CUKKI9VL",
+      "./localization.js?contenthash=i2l6BsG1",
+      "./shared_dialog.js?contenthash=CwcwPTb_",
+      "./webpackinit.js?contenthash=CdMSun5r",
+      "../../css/webui/shared_dialog2.css?contenthash=gnfBEtEu",
+      "./friendsui_desktopapp.js?contenthash=DGwpyMxS",
+      "./defaultappheader.js?contenthash=SzEpKCWz",
+      "./broadcastwatchstore.js?contenthash=CNv8Mpvs",
       "../../css/webui/defaultappheader.css?contenthash=DwpeiF5o",
-      "../../css/webui/friendsui_desktopapp.css?contenthash=as1wmsd6",
-      "./broadcastplayer.js?contenthash=Z53i0P2A",
-      "../../css/webui/broadcastplayer.css?contenthash=DvWbSQLN",
+      "../../css/webui/friendsui_desktopapp.css?contenthash=MEg-RmCM",
+      "./broadcastplayer.js?contenthash=CV-vsdDk",
+      "../../css/webui/broadcastplayer.css?contenthash=CGtEQuO9",
       "../../css/webui/broadcastapp.css?contenthash=DLwrs7u4",
     ]),
 ) => i.map((i) => d[i]);
 /* Third-party software licenses can be found at licenses.txt */
-import { i as e, t } from "./rolldown-runtime.js?contenthash=Bhk3NnG1";
+import { i as e, t } from "./rolldown-runtime.js?contenthash=CUKKI9VL";
 import { t as n } from "./_rolldown_dynamic_import_helper.js?contenthash=B8fe511f";
 import {
   At as r,
@@ -48,8 +48,8 @@ import {
   un as C,
   w,
   z as T,
-} from "./localization.js?contenthash=BbczadiP";
-import { ac as E } from "./shared_dialog.js?contenthash=Bjg1l0y4";
+} from "./localization.js?contenthash=i2l6BsG1";
+import { ic as E } from "./shared_dialog.js?contenthash=CwcwPTb_";
 import {
   A as ee,
   C as te,
@@ -67,17 +67,17 @@ import {
   w as se,
   x as ce,
   y as le,
-} from "./friendsui_desktopapp.js?contenthash=Z0qtwhtB";
-import { c as N } from "./defaultappheader.js?contenthash=ClYGx_wk";
-import { l as P, u as ue } from "./webpackinit.js?contenthash=7c4B_KgN";
+} from "./friendsui_desktopapp.js?contenthash=DGwpyMxS";
+import { c as N } from "./defaultappheader.js?contenthash=SzEpKCWz";
+import { l as P, u as ue } from "./webpackinit.js?contenthash=CdMSun5r";
 import {
-  h as de,
-  p as fe,
-} from "./broadcastwatchstore.js?contenthash=8PXRLCEh";
+  _ as de,
+  y as fe,
+} from "./broadcastwatchstore.js?contenthash=CNv8Mpvs";
 function pe(e) {
   return `unknown EMsg ( ` + e + ` )`;
 }
-var F = e(fe()),
+var F = e(de()),
   me = class {
     m_bRunOnce = !1;
     m_ClientConnectionCallbacks = new o();
@@ -609,11 +609,8 @@ var z = t((e) => {
       });
     var r = {
         arraySet: function (e, t, n, r, i) {
-          if (t.subarray && e.subarray) {
-            e.set(t.subarray(n, n + r), i);
-            return;
-          }
-          for (var a = 0; a < r; a++) e[i + a] = t[n + a];
+          if (t.subarray && e.subarray) e.set(t.subarray(n, n + r), i);
+          else for (var a = 0; a < r; a++) e[i + a] = t[n + a];
         },
         flattenChunks: function (e) {
           var t,
@@ -1071,16 +1068,13 @@ var z = t((e) => {
   }),
   B = t((e, t) => {
     function n(e, t, n, r) {
-      for (
-        var i = (e & 65535) | 0, a = ((e >>> 16) & 65535) | 0, o = 0;
-        n !== 0;
-      ) {
+      for (var i = e & 65535, a = (e >>> 16) & 65535, o = 0; n !== 0; ) {
         (o = n > 2e3 ? 2e3 : n), (n -= o);
         do (i = (i + t[r++]) | 0), (a = (a + i) | 0);
         while (--o);
         (i %= 65521), (a %= 65521);
       }
-      return i | (a << 16) | 0;
+      return i | (a << 16);
     }
     t.exports = n;
   }),
@@ -2109,27 +2103,20 @@ var z = t((e) => {
           s,
           c = t || e.length,
           l = Array(c * 2);
-        for (r = 0, n = 0; n < c; ) {
-          if (((a = e[n++]), a < 128)) {
-            l[r++] = a;
-            continue;
+        for (r = 0, n = 0; n < c; )
+          if (((a = e[n++]), a < 128)) l[r++] = a;
+          else if (((s = i[a]), s > 4)) (l[r++] = 65533), (n += s - 1);
+          else {
+            for (a &= s === 2 ? 31 : s === 3 ? 15 : 7; s > 1 && n < c; )
+              (a = (a << 6) | (e[n++] & 63)), s--;
+            s > 1
+              ? (l[r++] = 65533)
+              : a < 65536
+                ? (l[r++] = a)
+                : ((a -= 65536),
+                  (l[r++] = 55296 | ((a >> 10) & 1023)),
+                  (l[r++] = 56320 | (a & 1023)));
           }
-          if (((s = i[a]), s > 4)) {
-            (l[r++] = 65533), (n += s - 1);
-            continue;
-          }
-          for (a &= s === 2 ? 31 : s === 3 ? 15 : 7; s > 1 && n < c; )
-            (a = (a << 6) | (e[n++] & 63)), s--;
-          if (s > 1) {
-            l[r++] = 65533;
-            continue;
-          }
-          a < 65536
-            ? (l[r++] = a)
-            : ((a -= 65536),
-              (l[r++] = 55296 | ((a >> 10) & 1023)),
-              (l[r++] = 56320 | (a & 1023)));
-        }
         return o(l, r);
       }),
       (e.utf8border = function (e, t) {
@@ -2255,7 +2242,7 @@ var z = t((e) => {
           this.onEnd(p),
           (this.ended = !0),
           p === l)
-        : m !== d || (this.onEnd(l), (a.avail_out = 0), !0);
+        : (m === d && (this.onEnd(l), (a.avail_out = 0)), !0);
     }),
       (h.prototype.onData = function (e) {
         this.chunks.push(e);
@@ -2541,7 +2528,7 @@ var z = t((e) => {
           (D = 1 << (b - E)),
           (O = 1 << T),
           (S = O);
-        do (O -= D), (h[j + (ne >> E) + O] = (le << 24) | (N << 16) | P | 0);
+        do (O -= D), (h[j + (ne >> E) + O] = (le << 24) | (N << 16) | P);
         while (O !== 0);
         for (D = 1 << (b - 1); ne & D; ) D >>= 1;
         if (
@@ -2558,7 +2545,7 @@ var z = t((e) => {
             T++, (ee <<= 1);
           if (((te += 1 << T), (e === s && te > i) || (e === c && te > a)))
             return 1;
-          (k = ne & A), (h[k] = (w << 24) | (T << 16) | (j - g) | 0);
+          (k = ne & A), (h[k] = (w << 24) | (T << 16) | (j - g));
         }
       }
       return (
@@ -3367,7 +3354,7 @@ var z = t((e) => {
                 if (V === 0) break inf_leave;
                 V--, (U += R[B++] << W), (W += 8);
               }
-              if (U !== (L.total & 4294967295)) {
+              if (U !== (L.total | 0)) {
                 (e.msg = `incorrect length check`), (L.mode = F);
                 break;
               }
@@ -3601,7 +3588,8 @@ var z = t((e) => {
             this.onEnd(u),
             (this.ended = !0),
             u === i.Z_OK)
-          : d !== i.Z_SYNC_FLUSH || (this.onEnd(i.Z_OK), (o.avail_out = 0), !0)
+          : (d === i.Z_SYNC_FLUSH && (this.onEnd(i.Z_OK), (o.avail_out = 0)),
+            !0)
       );
     }),
       (l.prototype.onData = function (e) {
@@ -4154,7 +4142,7 @@ async function Ve() {
   let { CBroadcastApp: e } = await l(
     async () => {
       let { CBroadcastApp: e } = await import(
-        `./broadcastapp.js?contenthash=B6cq007Z`
+        `./broadcastapp.js?contenthash=DsUNYhUY`
       );
       return { CBroadcastApp: e };
     },
@@ -4168,7 +4156,7 @@ async function Ve() {
 document.addEventListener(`DOMContentLoaded`, async function () {
   u(), k(), await He(v.LANGUAGE);
   let e = !0;
-  r.steamid && de(r.steamid),
+  r.steamid && fe(r.steamid),
     !v.IN_CLIENT &&
       ce.STEAM_TV &&
       (s.logged_in ? M(r.steamid) : ((e = !1), Ve())),
@@ -4225,7 +4213,7 @@ async function He(e) {
             ),
           "../localization/friendsui_finnish.json": () =>
             l(
-              () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
+              () => import(`./friendsui_finnish.js?contenthash=CPK_Sgic`),
               [],
               import.meta.url,
             ),
@@ -4285,7 +4273,7 @@ async function He(e) {
             ),
           "../localization/friendsui_malay.json": () =>
             l(
-              () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
+              () => import(`./friendsui_malay.js?contenthash=DNpDh1Mu`),
               [],
               import.meta.url,
             ),
@@ -4309,7 +4297,7 @@ async function He(e) {
             ),
           "../localization/friendsui_romanian.json": () =>
             l(
-              () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
+              () => import(`./friendsui_romanian.js?contenthash=CnjkK6ev`),
               [],
               import.meta.url,
             ),
@@ -4333,7 +4321,7 @@ async function He(e) {
             ),
           "../localization/friendsui_spanish.json": () =>
             l(
-              () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
+              () => import(`./friendsui_spanish.js?contenthash=DFcUR0FN`),
               [],
               import.meta.url,
             ),
@@ -4425,7 +4413,7 @@ async function He(e) {
                 ),
               "../localization/friendsui_finnish.json": () =>
                 l(
-                  () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
+                  () => import(`./friendsui_finnish.js?contenthash=CPK_Sgic`),
                   [],
                   import.meta.url,
                 ),
@@ -4486,7 +4474,7 @@ async function He(e) {
                 ),
               "../localization/friendsui_malay.json": () =>
                 l(
-                  () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
+                  () => import(`./friendsui_malay.js?contenthash=DNpDh1Mu`),
                   [],
                   import.meta.url,
                 ),
@@ -4511,7 +4499,7 @@ async function He(e) {
                 ),
               "../localization/friendsui_romanian.json": () =>
                 l(
-                  () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
+                  () => import(`./friendsui_romanian.js?contenthash=CnjkK6ev`),
                   [],
                   import.meta.url,
                 ),
@@ -4536,7 +4524,7 @@ async function He(e) {
                 ),
               "../localization/friendsui_spanish.json": () =>
                 l(
-                  () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
+                  () => import(`./friendsui_spanish.js?contenthash=DFcUR0FN`),
                   [],
                   import.meta.url,
                 ),

@@ -271,7 +271,7 @@
 
 .playerAvatar_friendindicator {
 	position: absolute;
-	left: 26px;
+	inset-inline-start: 26px;
 	top: 23px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images/friendindicator_small.png' );
 	width: 20px;
@@ -373,7 +373,7 @@
 	width: 107px;
 	height: 107px;
 	top: 8px;
-	left: 8px;
+	inset-inline-start: 8px;
 	pointer-events: none;
 }
 .miniprofile_playersection .playersection_avatar_frame > img {
@@ -387,7 +387,7 @@
 	flex-direction: column;
 	justify-content: center;
 
-	padding-left: 16px;
+	padding-inline-start: 16px;
 
 	text-shadow: 1px 1px 4px #000;
 }
@@ -420,7 +420,7 @@
 	width: 90px;
 	height: 34px;
 	top: 18px;
-	left: 16px;
+	inset-inline-start: 16px;
 	position: absolute;
 }
 
@@ -428,7 +428,8 @@
 	display: flex;
 	flex-direction: column;
 
-	padding: 8px 8px 8px 122px;
+	padding-block: 8px;
+	padding-inline: 122px 8px;
 	font-size: 14px;
 
 	align-self: center;
@@ -460,7 +461,7 @@
 	flex-direction: row;
 
 	height: 34px;
-	padding-left: 16px;
+	padding-inline-start: 16px;
 	margin-bottom: 8px;
 }
 
@@ -471,7 +472,7 @@
 }
 
 .miniprofile_featuredcontainer .description {
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	margin-top: auto;
 	margin-bottom: auto;
 	font-size: 14px;
@@ -510,7 +511,7 @@
 .miniprofile_playtimesection .gamelogo {
     width: 120px;
     height: 55px;
-    margin-right: 12px;
+    margin-inline-end: 12px;
     box-shadow: 0 0 2px black ;
 }
 
@@ -540,9 +541,9 @@
 .miniprofile_background {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	overflow: hidden;
 	z-index: -3;
 	background: radial-gradient( ellipse farthest-corner at 20% 30%, rgb( 76, 80, 91 ) 0%, rgb( 52, 55, 63 ) 50%, rgb( 40, 44, 50 ) 100% );
@@ -554,7 +555,7 @@
 	height: 380px;
 	filter: blur( 10px ) saturate( 2 );
 	position: absolute;
-	left: -60px;
+	inset-inline-start: -60px;
 	top: -60px;
 	opacity: 0.6;
 	-webkit-mask: radial-gradient( ellipse farthest-corner at 150px 150px, rgba( 0, 0, 0, 1 ) 0%, rgba( 0, 0, 0, 0.6 ) 20%, rgba( 0, 0, 0, 0.3 ) 34%, rgba( 0, 0, 0, 0 ) 64% );
@@ -584,8 +585,8 @@
 .miniprofile_nameplatecontainer {
 	position: absolute;
 	top: 0;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 
 	z-index: -1;
@@ -603,16 +604,19 @@
  */
 
 .pulldown {
-	padding-left: 5px;
-	padding-right: 18px;
+	padding-inline-start: 5px;
+	padding-inline-end: 18px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images/popups/btn_arrow_down_padded.png' );
 	background-position: right center;
 	background-repeat: no-repeat;
 
 	cursor: pointer;
 }
+.pulldown:dir(rtl) {
+	background-position: left center;
+}
 body.v6 .pulldown {
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 span.popup_menu_pulldown_indicator {
 	display: inline-block;
@@ -639,8 +643,9 @@ span.popup_menu_pulldown_indicator {
     background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
 }
 #admin_drop span {
-    padding: 0 22px 0 15px;
-    margin-right: 8px;
+    padding-block: 0;
+    padding-inline: 15px 22px;
+    margin-inline-end: 8px;
     font-size: 15px;
     line-height: 30px;
 }
@@ -757,7 +762,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 
 .popup_menu_hint {
 	float: inline-end;
-	margin-left: 8px;
+	margin-inline-start: 8px;
 }
 
 .popup_menu_subarea {
@@ -994,9 +999,13 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 
 	background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 }
+.newmodal:dir(rtl) {
+	background: radial-gradient(circle at top right, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+}
 dialog.newmodal {
 	margin: 0;
 	padding: 0;
+	right: auto;
 }
 
 .newmodal_background {
@@ -1004,9 +1013,9 @@ dialog.newmodal {
 	z-index: 900;
 	background: #000000;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .newmodal_header .title_text {
@@ -1029,10 +1038,13 @@ dialog.newmodal {
 	height: 1px;
 	background: linear-gradient(to right, #00ccff, #3366ff);
 }
+.modal_top_bar:dir(rtl) {
+	background: linear-gradient(to left, #00ccff, #3366ff);
+}
 
 .newmodal_header {
 	padding: 0px 0px 0px 0px;
-	text-align: left;
+	text-align: start;
 	font-size: 22px;
 	font-weight: 700;
 	color: #ffffff;
@@ -1059,7 +1071,7 @@ dialog.newmodal {
 	cursor: pointer;
 	float: inline-end;
 	margin-top: 9px;
-	margin-right: 9px;
+	margin-inline-end: 9px;
 	height: 16px;
 	width: 16px;
 
@@ -1068,7 +1080,7 @@ dialog.newmodal {
 
 /* for labelling the close button with text, used on market */
 .newmodal_close.with_label {
-	padding-right: 24px;
+	padding-inline-end: 24px;
 	width: auto;
 	color: #ffffff;
 	line-height: 16px;
@@ -1123,16 +1135,17 @@ dialog.newmodal {
 	border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 .detailed_option_toggle .toggle_desc {
-	padding: 8px 8px 8px 32px;
+	padding-block: 8px;
+	padding-inline: 32px 8px;
 	font-size: 14px;
 }
 
 .newmodal_buttons {
-	text-align: right;
+	text-align: end;
 }
 
 .newmodal_buttons .btn_medium {
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	margin-top: 12px;
 }
 
@@ -1240,7 +1253,7 @@ select.blueish {
 	width: 32px;
 	height: 32px;
 	background: url( 'https://community.fastly.steamstatic.com/public/images/login/throbber.gif' ) center center no-repeat;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	float: inline-start;
 }
 
@@ -1320,8 +1333,8 @@ select.blueish {
 /* apply 16px padding to the sides of all the page-wide divs to prevent content
 	from touching the sides on small resolutions */
 div#footer, div#global_header, div#store_header, div#main, div.page_area {
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-inline-start: 16px;
+	padding-inline-end: 16px;
 }
 
 div.page_content {
@@ -1392,9 +1405,9 @@ div#global_actions .global_action_link:hover, div.admin_actions .global_action_l
 
 div.admin_actions {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 4px;
-	text-align: right;
+	text-align: end;
 	color: #b8b6b4;
 	font-size: 11px
 }
@@ -1411,7 +1424,7 @@ div#global_actions #global_action_menu {
 
 div#global_actions .user_avatar {
 	display: inline-block;
-	margin-left: 3px;
+	margin-inline-start: 3px;
 }
 
 div#global_header div.logo {
@@ -1427,8 +1440,8 @@ div#global_header .menuitem {
 	position: relative;
 
 	padding-top: 45px;
-	padding-left: 7px;
-	padding-right: 7px;
+	padding-inline-start: 7px;
+	padding-inline-end: 7px;
 	padding-bottom: 7px;
 	line-height: 16px;
 
@@ -1450,8 +1463,8 @@ div#global_header .menuitem:focus-visible::before {
 	content: "";
 	position: absolute;
 	top: 40px;
-	left: 2px;
-	right: 2px;
+	inset-inline-start: 2px;
+	inset-inline-end: 2px;
 	bottom: 2px;
 }
 
@@ -1474,14 +1487,14 @@ div#global_header .activebg {
 }
 
 #header_wallet_ctn {
-	text-align: right;
-	padding-right: 15px;
+	text-align: end;
+	padding-inline-end: 15px;
 	line-height: normal;
 }
 
 #account_pulldown {
 	display: inline-block;
-	padding-left: 4px;
+	padding-inline-start: 4px;
 	line-height: 25px;
 	border: none;
 	background-color: transparent;
@@ -1528,7 +1541,7 @@ div#global_header .activebg {
 	position: relative;
 	height: 21px;
 	line-height: 24px;
-	margin-right: 3px;
+	margin-inline-end: 3px;
 }
 
 .header_installsteam_btn_green .header_installsteam_btn_leftcap, .header_installsteam_btn_green .header_installsteam_btn_rightcap, .header_installsteam_btn_green .header_installsteam_btn_content {
@@ -1555,8 +1568,8 @@ div#global_header .activebg {
 
 .header_installsteam_btn_content {
 	display: inline-block;
-	padding-left: 35px;
-	padding-right: 9px;
+	padding-inline-start: 35px;
+	padding-inline-end: 9px;
 	background-position: 10px 5px;
 
 	background-image: url( 'https://community.fastly.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1' );
@@ -1564,6 +1577,10 @@ div#global_header .activebg {
 	text-decoration: none;
 	color: #e5e4dc;
 	font-weight: normal;
+}
+
+.header_installsteam_btn_content:dir(rtl) {
+	background-position: right 10px top 5px;
 }
 
 .header_installsteam_btn_content:hover {
@@ -1574,7 +1591,8 @@ div#global_header .activebg {
 .global_header_toggle_button {
 	display: inline-block;
 	line-height: 24px;
-	margin: 0 3px 0 8px;
+	margin-block: 0;
+	margin-inline: 8px 3px;
 	cursor: pointer;
 	/* background-color: #262625; */
 }
@@ -1650,8 +1668,8 @@ div#global_header .submenuitem
 	text-transform: none;
 	font-size: 12px;
 	color: #dcdedf;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-inline-end: 15px;
+	padding-inline-start: 15px;
 }
 
 div#global_header .submenuitem span.new {
@@ -1684,7 +1702,7 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 .community_sub_nav
 {
 	position: absolute;
-	left: 7px;
+	inset-inline-start: 7px;
 	top: 65px;
 	width: 650px;
 	font-size: 14px;
@@ -1777,7 +1795,7 @@ div#global_header .menuitem.supernav_active {
 .workshopBrowsePagingControls,
 .pageLinks {
 	width: fit-content;
-	margin-left: auto;
+	margin-inline-start: auto;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -1800,11 +1818,11 @@ div#global_header .menuitem.supernav_active {
 }
 
 .pagebtn:first-child {
-	margin-right: 4px;
+	margin-inline-end: 4px;
 }
 
 .pagebtn:last-child {
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 .pagebtn:not(.disabled):hover,
@@ -1832,7 +1850,7 @@ a.pagebtn:not(.disabled):hover,
 	-moz-border-radius: 2px;
 	color: #d2ff96;
 	font-size: 14px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 	margin-bottom: 5px;
 }
 
@@ -1845,7 +1863,7 @@ a.pagebtn:not(.disabled):hover,
 
 .searchedForTermImage
 {
-	margin-left: 10px;
+	margin-inline-start: 10px;
 }
 
 
@@ -1860,7 +1878,7 @@ a.pagebtn:not(.disabled):hover,
 }
 
 .header_notification_btn.has_notifications .header_notification_envelope {
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 .header_notification_btn.no_notifications .notification_count {
@@ -1918,7 +1936,7 @@ a.pagebtn:not(.disabled):hover,
 	vertical-align: middle;
 	background-repeat: no-repeat;
 	background-position: center;
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	position: relative;
 	top: -2px;
 
@@ -2026,7 +2044,7 @@ a.dynamiclink_box {
 
 img.dynamiclink_preview {
 	float: inline-start;
-	margin-right: 14px;
+	margin-inline-end: 14px;
 	max-height: 88px;
 	max-width: 75%;
 }
@@ -2038,7 +2056,7 @@ img.dynamiclink_preview {
 	text-shadow: 0 0 16px rgb( 0, 0, 0 );
 	font-size: 13px;
 	line-height: normal;
-	text-align: left;
+	text-align: start;
 	display: flow-root;
 }
 .dynamiclink_name {
@@ -2085,7 +2103,7 @@ img.dynamiclink_preview {
 	}
 	.dynamiclink_author img.app_icon {
 		vertical-align: top;
-		padding-right: 5px;
+		padding-inline-end: 5px;
 		height: 16px;
 	}
 .dynamiclink_url {
@@ -2121,7 +2139,7 @@ img.dynamiclink_preview {
 	}
 	.dynamiclink_app img.app_icon {
 		vertical-align: top;
-		padding-right: 5px;
+		padding-inline-end: 5px;
 		height: 16px;
 	}
 
@@ -2142,7 +2160,7 @@ img.dynamiclink_preview {
 .dynamiclink_youtubeviewvideoembedded iframe {
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	width: 100%;
 	height: 100%;
 }
@@ -2162,15 +2180,15 @@ img.dynamiclink_preview {
 .dynamiclink_sketchfabmodelembedded iframe {
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	width: 100%;
 	height: 100%;
 }
 img.dynamiclink_sketchfab_play_overlay_image
 {
 	position: absolute;
-	left: 83px;
-	margin-left: -25px;
+	inset-inline-start: 83px;
+	margin-inline-start: -25px;
 	top: 50%;
 	margin-top: -25px;
 	width: 50px;
@@ -2237,7 +2255,7 @@ img.dynamiclink_sketchfab_play_overlay_image
 	height: 100%;
 	position: absolute;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	pointer-events: none;
 }
 .ugc.has_adult_content.dynamiclink_box::after
@@ -2255,7 +2273,7 @@ img.dynamiclink_sketchfab_play_overlay_image
 	position: absolute;
 	width: 100%;
 	top: 0;
-	left: 0;
+	inset-inline-start: 0;
 	font-size: 0.75em;
 	vertical-align: top;
 	text-align: center;
@@ -2298,11 +2316,12 @@ img.dynamiclink_sketchfab_play_overlay_image
 	position: absolute;
 
 	top: 0px;
-	right: -5px;
+	inset-inline-end: -5px;
 	cursor: pointer;
 	opacity: 0;
-	padding: 5px 5px 0 0;
-	transition: opacity 0.2s, right 0.2s;
+	padding-block: 5px 0;
+	padding-inline: 0 5px;
+	transition: opacity 0.2s, inset-inline-end 0.2s;
 	z-index: 5;
 }
 
@@ -2326,7 +2345,7 @@ img.dynamiclink_sketchfab_play_overlay_image
 
 *:hover > .ugc_options, .ugc_hover.ugc_options {
 	opacity: 1;
-	right: 0px;
+	inset-inline-end: 0px;
 }
 
 .ugc_options_tooltip {
@@ -2362,7 +2381,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	max-width: 225px;
 	color: #3d3d3f;
 	font-size: 11px;
-	text-align: left;
+	text-align: start;
 }
 
 .Tooltip_mark {
@@ -2380,7 +2399,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	color: #9ac7f3;
 	padding: 1px 4px 0px 4px;
 	margin-bottom: 10px;
-	margin-right: 4px;
+	margin-inline-end: 4px;
 	display: inline-block;
 	cursor: default;
 	line-height: 13px;
@@ -2612,7 +2631,7 @@ body.v6 #footer_nav .popup_menu .hr{
 
 .ds_flag {
 	position: absolute;
-	left: 0;
+	inset-inline-start: 0;
 	top: 14px;
 	font-size: 10px;
 	color: #111111;
@@ -2620,7 +2639,8 @@ body.v6 #footer_nav .popup_menu .hr{
 
 	height: 18px;
 	line-height: 19px;
-	padding: 0 0 0 18px;
+	padding-block: 0;
+	padding-inline: 18px 0;
 	white-space: nowrap;
 	z-index: 5;
 }
@@ -2648,8 +2668,8 @@ body.v6 #footer_nav .popup_menu .hr{
 }
 
 .ds_flag.ds_excluded_by_preferences_flag {
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	background: url("data:image/svg+xml,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 10C4.30833 10 3.65833 9.86875 3.05 9.60625C2.44167 9.34375 1.9125 8.9875 1.4625 8.5375C1.0125 8.0875 0.65625 7.55833 0.39375 6.95C0.13125 6.34167 0 5.69167 0 5C0 4.30833 0.13125 3.65833 0.39375 3.05C0.65625 2.44167 1.0125 1.9125 1.4625 1.4625C1.9125 1.0125 2.44167 0.65625 3.05 0.39375C3.65833 0.13125 4.30833 0 5 0C5.69167 0 6.34167 0.13125 6.95 0.39375C7.55833 0.65625 8.0875 1.0125 8.5375 1.4625C8.9875 1.9125 9.34375 2.44167 9.60625 3.05C9.86875 3.65833 10 4.30833 10 5C10 5.69167 9.86875 6.34167 9.60625 6.95C9.34375 7.55833 8.9875 8.0875 8.5375 8.5375C8.0875 8.9875 7.55833 9.34375 6.95 9.60625C6.34167 9.86875 5.69167 10 5 10ZM5 9C6.11667 9 7.0625 8.6125 7.8375 7.8375C8.6125 7.0625 9 6.11667 9 5C9 3.88333 8.6125 2.9375 7.8375 2.1625C7.0625 1.3875 6.11667 1 5 1C3.88333 1 2.9375 1.3875 2.1625 2.1625C1.3875 2.9375 1 3.88333 1 5C1 6.11667 1.3875 7.0625 2.1625 7.8375C2.9375 8.6125 3.88333 9 5 9Z' fill='%231D1B20'/%3E%3Cpath d='M6.36527 7.42592L2.57407 3.63473L3.63474 2.57407L7.42593 6.36526L6.36527 7.42592Z' fill='%231D1B20'/%3E%3Cpath d='M3.63473 7.42592L7.42593 3.63473L6.36526 2.57407L2.57407 6.36526L3.63473 7.42592Z' fill='%231D1B20'/%3E%3C/svg%3E%0A") no-repeat 4px 4px #bfbfbf;
 }
 
@@ -2661,7 +2681,7 @@ body.v6 #footer_nav .popup_menu .hr{
 }
 
 .ds_collapse_flag.ds_collapse_flag_tiny.ds_flagged .ds_flag {
-	padding-left: 4px;
+	padding-inline-start: 4px;
 }
 
 .ds_collapse_flag.ds_flagged:hover .ds_flag {
@@ -2670,11 +2690,11 @@ body.v6 #footer_nav .popup_menu .hr{
 
 .ds_collapse_flag.ds_flagged:hover .ds_flag.ds_excluded_by_preferences_flag {
 	max-width: none;
-	padding-right: 4px;
+	padding-inline-end: 4px;
 }
 
 .ds_collapse_flag_tiny.ds_flagged:hover .ds_flag {
-	padding-left: 18px;
+	padding-inline-start: 18px;
 }
 
 .ds_flagged.ds_excluded_by_preferences {
@@ -2688,7 +2708,7 @@ body.v6 #footer_nav .popup_menu .hr{
 }
 
 .v_scrollbar_target div.animating {
-	transition: left 0.3s, top 0.3s;
+	transition: inset-inline-start 0.3s, top 0.3s;
 }
 
 .v_scrollbar > .handle {
@@ -2804,7 +2824,7 @@ body.v6 #footer_nav .popup_menu .hr{
 {
 	-webkit-animation: test 2s infinite;
 	float: inline-start;
-	margin-right: 6px;
+	margin-inline-end: 6px;
 	width: 12px;
 	height: 68px;
 	background-color: #67c1f5;
@@ -2846,7 +2866,7 @@ body.v6 #footer_nav .popup_menu .hr{
 }
 
 .content_descriptors_example_app .app_name {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 .shared_game_rating {
@@ -2887,7 +2907,7 @@ body.v6 #footer_nav .popup_menu .hr{
 	margin-bottom: 4px;
 }
 .shared_game_rating .game_rating_icon {
-	margin-right: 10px;
+	margin-inline-end: 10px;
 }
 .shared_game_rating .game_rating_icon a {
 	display: block;
@@ -2967,7 +2987,7 @@ body.v6 #footer_nav .popup_menu .hr{
 /* community awards */
 .community_award_btn_icon {
 	vertical-align: middle;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .community_award_ctn {
@@ -2980,7 +3000,8 @@ body.v6 #footer_nav .popup_menu .hr{
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 3px;
-	padding: 2px 5px 2px 3px;
+	padding-block: 2px;
+	padding-inline: 3px 5px;
 	cursor: pointer;
 	line-height: 22px;
 }
@@ -3101,7 +3122,7 @@ body.v6 #footer_spacer.china_spacer {
 
 .china_footer_navlinks {
     user-select: none;
-    margin-left: 50px;
+    margin-inline-start: 50px;
 	line-height: 24px;
 }
 
@@ -3122,7 +3143,7 @@ body.v6 #footer_spacer.china_spacer {
 }
 
 .china_pw_logo {
-    margin-right: 10px;
+    margin-inline-end: 10px;
 }
 
 .china_steam_logo {
@@ -3142,7 +3163,7 @@ body.v6 #footer_spacer.china_spacer {
 }
 
 .china_footer_social_box:first-of-type {
-    margin-right: 20px;
+    margin-inline-end: 20px;
 }
 
 .china_footer_social_box.tooltip {
@@ -3228,7 +3249,7 @@ html.responsive .ds_steam_deck_compat {
 	position: absolute;
 	pointer-events: none;
 	top: 4px;
-	right: 4px;
+	inset-inline-end: 4px;
 	z-index: 15;
 	width: 44px;
 	height: 24px;
@@ -3398,8 +3419,8 @@ html.responsive .gpfocus .ds_steam_deck_compat {
 .shared_autocollapse_fade {
 	display: none;
 	position: absolute;
-	left: 0;
-	right: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	bottom: 0;
 	height: 79px;
 	z-index: 1;
@@ -3417,8 +3438,8 @@ html.responsive .gpfocus .ds_steam_deck_compat {
 	cursor: pointer;
 	color: #67c1f5;
 	font-size: 12px;
-	padding-right: 0px;
-	right: unset; /* remove for final */
+	padding-inline-end: 0px;
+	inset-inline-end: unset; /* remove for final */
 	bottom: unset; /* remove for final */
 	height: unset; /* remove for final */
 }

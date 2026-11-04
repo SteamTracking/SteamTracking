@@ -1,4 +1,4 @@
-import { _, _, _, _, _ } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
+import { _, _, _, _, _ } from "./rolldown-runtime.js?contenthash=C8f2gWku";
 import {
   _,
   _,
@@ -14,25 +14,25 @@ import {
   _,
   _,
   _,
-} from "./libraries.js?contenthash=b0JzZ9xY";
-import { _, _ } from "./clanimagemodels.js?contenthash=DgO0mg9J";
-import { _ } from "./salesectionfactory.js?contenthash=DLApkoRe";
-import { _ } from "./storelink.js?contenthash=D6FH0YtN";
-import { _ } from "./multisourceimage.js?contenthash=BVqKyLkc";
-import { _, _, _, _, _, _, _ } from "./partnerevent.js?contenthash=CYzeSYHE";
-import { _, _ } from "./basicpartnereventrender.js?contenthash=BHd5WoSf";
-import { _, _ } from "./eventlink.js?contenthash=Cy0kUyK1";
-import { _ } from "./modals.js?contenthash=Bvz6v6q2";
-import { _ } from "./eventinitialization.js?contenthash=DhMKbJAg";
-import { _ } from "./throbber.js?contenthash=Dv4UaK6D";
-import { _ } from "./eventdevfeaturestore.js?contenthash=TYqP9dQA";
-import { _ } from "./moment-timezone.js?contenthash=yrPd--Pl";
-import { _, _ } from "./partnereventshared.module.js?contenthash=BdpFElnJ";
-import { _ } from "./loyaltyrewarddefs.js?contenthash=C3u-pkPJ";
-import { _ } from "./storegamehover.js?contenthash=CUs4KM0c";
-import { _ } from "./playerstore.js?contenthash=TV0c_iSg";
-import { _, _, _, _ } from "./clanimageupload.js?contenthash=CG4glFxD";
-import { _ } from "./partnereventstore.js?contenthash=E6O_dn8f";
+} from "./libraries.js?contenthash=CNC_iAx3";
+import { _, _ } from "./clanimagemodels.js?contenthash=DiIu-oYR";
+import { _ } from "./salesectionfactory.js?contenthash=BABjmWK3";
+import { _ } from "./storelink.js?contenthash=CT4OJAn1";
+import { _ } from "./multisourceimage.js?contenthash=BKu7brjS";
+import { _, _, _, _, _, _, _ } from "./partnerevent.js?contenthash=BC1Zh7lt";
+import { _ } from "./apppartnereventspage.js?contenthash=B3rf8YwV";
+import { _, _ } from "./eventlink.js?contenthash=BcBuiW0N";
+import { _ } from "./modals.js?contenthash=BVi0TInp";
+import { _ } from "./eventinitialization.js?contenthash=5jiGQRwp";
+import { _ } from "./throbber.js?contenthash=BBuWBE8U";
+import { _ } from "./eventdevfeaturestore.js?contenthash=ByHYBzVE";
+import { _ } from "./moment-timezone.js?contenthash=CS-Pe3Jt";
+import { _, _ } from "./partnereventshared.module.js?contenthash=C0PbqCeD";
+import { _ } from "./loyaltyrewarddefs.js?contenthash=iTe7YsGp";
+import { _ } from "./storegamehover.js?contenthash=CfjD8iIQ";
+import { _ } from "./playerstore.js?contenthash=lGcRdLlj";
+import { _, _, _, _ } from "./clanimageupload.js?contenthash=DJH_N_LQ";
+import { _ } from "./partnereventstore.js?contenthash=Bn2UGor2";
 import {
   _,
   _,
@@ -74,10 +74,11 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=CoTzkQpL";
-import { _ } from "./clanstore.js?contenthash=DqAnGZeT";
-import { _ } from "./react-datetime.js?contenthash=DNegIGQC";
-import { _, _ } from "./managerss.js?contenthash=ORco8Uha";
+} from "./main.js?contenthash=CFzBcxgL";
+import { _ } from "./clanstore.js?contenthash=SgX6q-Kn";
+import { _ } from "./basicpartnereventrender.js?contenthash=C4DXtT49";
+import { _ } from "./react-datetime.js?contenthash=CIC02Ql_";
+import { _, _ } from "./managerss.js?contenthash=BG_tlwV2";
 var _ = _(_()),
   _ = class _ {
     static s_Singleton;
@@ -289,7 +290,7 @@ var _ = _(_()),
       _ = _(
         {
           onEnter: async () => {
-            let _ = _.InitFromClanID(_);
+            let _ = _.InitFromClanID(_, _.EUNIVERSE);
             await Promise.all([
               _.LoadClanInfoForClanSteamID(_),
               _.Get().QueueCuratorAdminInfoLoad(_),
@@ -316,7 +317,7 @@ var _ = _(_()),
       _ = _.COMMUNITY_BASE_URL + `group/` + _.clanAccountID,
       _ =
         `https://steamsupport.valvesoftware.com/clan/overview/` +
-        _.InitFromClanID(_.clanAccountID).ConvertTo64BitString(),
+        _.InitFromClanID(_.clanAccountID, _.EUNIVERSE).ConvertTo64BitString(),
       _ = _.Get().GetRSSAdminStats(_.clanAccountID);
     return (0, _.jsxs)(`div`, {
       className: _(_),
@@ -858,83 +859,81 @@ var _ = new _(),
           )
             continue;
           let _ = _.GetClanEventFromAnnouncementGID(_.announcement_gid);
-          if (!_) {
+          if (!_)
             (_.bFailed = !0),
               (_.strMessage = `Failed to load the event: ` + _.unique_id),
               _.CloseProgress(_.unique_id, _);
-            continue;
-          }
-          if (_.bSucceeded || _.bFailed || _.bAlreadyProcessed) {
+          else if (_.bSucceeded || _.bFailed || _.bAlreadyProcessed)
             (_.bAlreadyProcessed = !0), _.CloseProgress(_.unique_id, _);
-            continue;
+          else {
+            if (
+              ((_.bAnalysing = !0),
+              this.setState({
+                strInfo:
+                  `Processing ` +
+                  _.GetBackfillGIDs().length +
+                  ` Appid: ` +
+                  _.appid +
+                  ` Event ` +
+                  _.GID +
+                  ` Title: ` +
+                  _.GetNameWithFallback(0),
+              }),
+              _.jsondata && _.jsondata.localized_capsule_image)
+            ) {
+              let _ = _.jsondata.localized_capsule_image;
+              await this.HandleResizeForImageType(
+                _,
+                _,
+                _,
+                `capsule`,
+                _.capsule_main,
+              ).catch((_) =>
+                this.HandleErrorFatal(
+                  null,
+                  _,
+                  `HandleResizeForImageType capsule`,
+                  _,
+                ),
+              );
+            }
+            if (_.jsondata && _.jsondata.localized_title_image) {
+              let _ = _.jsondata.localized_title_image;
+              await this.HandleResizeForImageType(
+                _,
+                _,
+                _,
+                `background`,
+                _.background_mini,
+              ).catch((_) =>
+                this.HandleErrorFatal(
+                  null,
+                  _,
+                  `HandleResizeForImageType background`,
+                  _,
+                ),
+              );
+            }
+            if (_.jsondata && _.jsondata.localized_spotlight_image) {
+              let _ = _.jsondata.localized_spotlight_image;
+              await this.HandleResizeForImageType(
+                _,
+                _,
+                _,
+                `spotlight`,
+                _.spotlight_main,
+              ).catch((_) =>
+                this.HandleErrorFatal(
+                  null,
+                  _,
+                  `HandleResizeForImageType spotlight`,
+                  _,
+                ),
+              );
+            }
+            if ((_.CloseProgress(_.unique_id, _), !_.BIsBackkFillInProgress()))
+              break;
           }
-          if (
-            ((_.bAnalysing = !0),
-            this.setState({
-              strInfo:
-                `Processing ` +
-                _.GetBackfillGIDs().length +
-                ` Appid: ` +
-                _.appid +
-                ` Event ` +
-                _.GID +
-                ` Title: ` +
-                _.GetNameWithFallback(0),
-            }),
-            _.jsondata && _.jsondata.localized_capsule_image)
-          ) {
-            let _ = _.jsondata.localized_capsule_image;
-            await this.HandleResizeForImageType(
-              _,
-              _,
-              _,
-              `capsule`,
-              _.capsule_main,
-            ).catch((_) =>
-              this.HandleErrorFatal(
-                null,
-                _,
-                `HandleResizeForImageType capsule`,
-                _,
-              ),
-            );
-          }
-          if (_.jsondata && _.jsondata.localized_title_image) {
-            let _ = _.jsondata.localized_title_image;
-            await this.HandleResizeForImageType(
-              _,
-              _,
-              _,
-              `background`,
-              _.background_mini,
-            ).catch((_) =>
-              this.HandleErrorFatal(
-                null,
-                _,
-                `HandleResizeForImageType background`,
-                _,
-              ),
-            );
-          }
-          if (_.jsondata && _.jsondata.localized_spotlight_image) {
-            let _ = _.jsondata.localized_spotlight_image;
-            await this.HandleResizeForImageType(
-              _,
-              _,
-              _,
-              `spotlight`,
-              _.spotlight_main,
-            ).catch((_) =>
-              this.HandleErrorFatal(
-                null,
-                _,
-                `HandleResizeForImageType spotlight`,
-                _,
-              ),
-            );
-          }
-          if ((_.CloseProgress(_.unique_id, _), !_.BIsBackkFillInProgress()))
-            break;
         }
         if (_.m_nFailures > _) {
           console.log(`Hit too many errors, stoppinng the backfill`);
@@ -1123,8 +1122,8 @@ var _ = _((_, _) => {
     var _ = _().default;
     function _(_, _) {
       if (_(_) != `object` || !_) return _;
-      var _ = _[Symbol.toPrimitive];
-      if (_ !== void 0) {
+      var _;
+      if (typeof Symbol < `u` && (_ = _[Symbol.toPrimitive]) !== void 0) {
         var _ = _.call(_, _ || `default`);
         if (_(_) != `object`) return _;
         throw TypeError(`@@toPrimitive must return a primitive value.`);
@@ -1720,7 +1719,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   _ = _((_, _) => {
     _.exports = _();
   }),
-  _ = _((_, _) => {
+  _ = _((_, _, _) => {
     (function (_, _) {
       typeof _ == `object` && _ !== void 0
         ? _(_)
@@ -3689,15 +3688,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             function () {
               var _ = _.current,
                 _ = _[0];
-              if (_[1]) {
-                _[1] = !1;
-                return;
-              }
-              _.next !== void 0 && _.insertStyles(_, _.next, !0),
-                _.tags.length &&
-                  ((_.before = _.tags[_.tags.length - 1].nextElementSibling),
-                  _.flush()),
-                _.insert(``, _, _, !1);
+              _[1]
+                ? (_[1] = !1)
+                : (_.next !== void 0 && _.insertStyles(_, _.next, !0),
+                  _.tags.length &&
+                    ((_.before = _.tags[_.tags.length - 1].nextElementSibling),
+                    _.flush()),
+                  _.insert(``, _, _, !1));
             },
             [_, _.name],
           ),
@@ -3842,7 +3839,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       (_.exports.__esModule = !0),
       (_.exports.default = _.exports);
   }),
-  _ = _((_, _) => {
+  _ = _((_, _, _) => {
     (function (_, _) {
       typeof _ == `object` && _ !== void 0
         ? _(_)
@@ -4185,7 +4182,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 ? void 0
                 : _.getOffsetParent(_)),
               _ = _ ? _[_] : 0;
-            (!_ || !(await (_.isElement == null ? void 0 : _.isElement(_)))) &&
+            (_ && (await (_.isElement == null ? void 0 : _.isElement(_)))) ||
               (_ = _.floating[_] || _.floating[_]);
             let _ = _ / 2 - _ / 2,
               _ = _ / 2 - _[_] / 2 - 1,
@@ -4843,7 +4840,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         });
     });
   }),
-  _ = _((_, _) => {
+  _ = _((_, _, _) => {
     (function (_, _) {
       typeof _ == `object` && _ !== void 0
         ? _(_, _())
@@ -5025,8 +5022,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           _ = (_ ? _(_.width) : _.width) / _,
           _ = (_ ? _(_.height) : _.height) / _;
         return (
-          (!_ || !Number.isFinite(_)) && (_ = 1),
-          (!_ || !Number.isFinite(_)) && (_ = 1),
+          (_ && Number.isFinite(_)) || (_ = 1),
+          (_ && Number.isFinite(_)) || (_ = 1),
           {
             _: _,
             _: _,
@@ -5611,11 +5608,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       return _(_) ? window.pageYOffset : _.scrollTop;
     }
     function _(_, _) {
-      if (_(_)) {
-        window.scrollTo(0, _);
-        return;
-      }
-      _.scrollTop = _;
+      _(_) ? window.scrollTo(0, _) : (_.scrollTop = _);
     }
     function _(_) {
       var _ = getComputedStyle(_),
@@ -8790,23 +8783,18 @@ var _,
             }),
             (_.onInputBlur = function (_) {
               var _ = _.props.inputValue;
-              if (
-                _.menuListRef &&
-                _.menuListRef.contains(document.activeElement)
-              ) {
-                _.inputRef.focus();
-                return;
-              }
-              _.props.onBlur && _.props.onBlur(_),
-                _.onInputChange(``, {
-                  action: `input-blur`,
-                  prevInputValue: _,
-                }),
-                _.onMenuClose(),
-                _.setState({
-                  focusedValue: null,
-                  isFocused: !1,
-                });
+              _.menuListRef && _.menuListRef.contains(document.activeElement)
+                ? _.inputRef.focus()
+                : (_.props.onBlur && _.props.onBlur(_),
+                  _.onInputChange(``, {
+                    action: `input-blur`,
+                    prevInputValue: _,
+                  }),
+                  _.onMenuClose(),
+                  _.setState({
+                    focusedValue: null,
+                    isFocused: !1,
+                  }));
             }),
             (_.onOptionHover = function (_) {
               if (!(_.blockOptionHover || _.state.focusedOption === _)) {
@@ -10376,7 +10364,7 @@ _([_], _.prototype, `m_mapEventGIDToSolrData`, void 0),
 var _ = `iQE696qa-gQ-`;
 function _(_) {
   let { accountID: _, locToken: _ } = _,
-    _ = _.useMemo(() => _.InitFromAccountID(_), [_]),
+    _ = _.useMemo(() => _.InitFromAccountID(_, _.EUNIVERSE), [_]),
     { data: _ } = _(_),
     _ =
       `https://steamsupport.valvesoftware.com/account/overview/` +
@@ -12093,7 +12081,7 @@ var _ = class extends _.Component {
     if (
       (console.log(_, _, typeof _, typeof _), _ && !_.BHasClanEventModel(_))
     ) {
-      let _ = _.InitFromClanID(Number.parseInt(_)),
+      let _ = _.InitFromClanID(Number.parseInt(_), _.EUNIVERSE),
         _ = await _.LoadPartnerEventFromClanEventGIDAndClanSteamID(_, _, 0),
         _ = [],
         _ = [];

@@ -617,7 +617,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			TextSuggest = new CTextInputSuggest( $AppTagInput, GetTagSuggestFunc( rgGlobalPopularTags ), function( suggestion ) { fnOnSubmit(); } );
 
 			// hack to size the input control correctly
-			$AppTagForm.find( '.gray_bevel').css( 'margin-right', ( $AppTagButton.width() + 12 ) + 'px' );
+			$AppTagForm.find( '.gray_bevel').css( 'margin-inline-end', ( $AppTagButton.width() + 12 ) + 'px' );
 		}
 
 		//add "tags" param to the URL

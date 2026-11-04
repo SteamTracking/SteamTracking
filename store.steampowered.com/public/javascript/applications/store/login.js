@@ -1,37 +1,37 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { o as e } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
-import { Rt as t, pt as n } from "./libraries.js?contenthash=b0JzZ9xY";
-import "./steammessages_twofactor_pb.js?contenthash=D-cSUtPt";
+import { o as e } from "./rolldown-runtime.js?contenthash=C8f2gWku";
+import { Lt as t, ft as n } from "./libraries.js?contenthash=CNC_iAx3";
+import { rx as r, ry as i } from "./main.js?contenthash=CFzBcxgL";
+import "./steammessages_twofactor_pb.js?contenthash=S88bSi0e";
 import {
-  i as r,
-  n as i,
-  r as a,
-  t as o,
-} from "./logindialog.js?contenthash=CP2dr5DU";
-import { cx as s, ly as c } from "./main.js?contenthash=CoTzkQpL";
+  i as a,
+  n as o,
+  r as s,
+  t as c,
+} from "./logindialog.js?contenthash=BqrzHBHZ";
 var l = `PvNen1Rhhrk-`,
   u = e(t()),
   d = n();
 function f(e) {
-  let { redirectUrl: t = s.STORE_BASE_URL } = e,
-    n = c(),
+  let { redirectUrl: t = r.STORE_BASE_URL } = e,
+    n = i(),
     [f, p] = (0, u.useState)(!1),
     m = e.guest;
   return (0, d.jsx)(`div`, {
     className: l,
     children: f
-      ? (0, d.jsx)(i, {})
-      : (0, d.jsx)(o, {
+      ? (0, d.jsx)(o, {})
+      : (0, d.jsx)(c, {
           autoFocus: !0,
           transport: n,
           platform: 2,
           onComplete: (e) => {
-            e == r.k_PrimaryDomainFail ? p(!0) : window.location.assign(t);
+            e == a.k_PrimaryDomainFail ? p(!0) : window.location.assign(t);
           },
           redirectUrl: t,
-          children: m && (0, d.jsx)(a, { redirectURL: e.redirectUrl }),
+          children: m && (0, d.jsx)(s, { redirectURL: e.redirectUrl }),
         }),
   });
 }

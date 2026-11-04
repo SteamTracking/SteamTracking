@@ -1,11 +1,11 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 /* Third-party software licenses can be found at licenses.txt */
-import { o as e, t } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
-import { Ft as n, ot as r } from "./libraries.js?contenthash=eLY4-d-j";
-import { Kd as i, Yu as a } from "./main.js?contenthash=BPPtNZbV";
-import { n as o } from "./profile.js?contenthash=BNceQLfu";
-var s = t((e, t) => {
+import { o as e, t } from "./rolldown-runtime.js?contenthash=C8f2gWku";
+import { Pt as n, ot as r } from "./libraries.js?contenthash=BSMOk6Fq";
+import { Qd as i, ad as a } from "./main.js?contenthash=YyCh67xk";
+import { n as o } from "./profile.js?contenthash=BnQbtE3K";
+var s = t((e, t, n) => {
     (function (n, r) {
       typeof e == `object` && t !== void 0
         ? (t.exports = r())
@@ -13,7 +13,7 @@ var s = t((e, t) => {
           ? define(r)
           : ((n = typeof globalThis < `u` ? globalThis : n || self),
             (n.Cropper = r()));
-    })(e, function () {
+    })(n, function () {
       function e(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -329,48 +329,39 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }
       function q(e, t) {
         if (t) {
-          if (z(e.length)) {
+          if (z(e.length))
             U(e, function (e) {
               q(e, t);
             });
-            return;
+          else if (e.classList) e.classList.add(t);
+          else {
+            var n = e.className.trim();
+            n
+              ? n.indexOf(t) < 0 && (e.className = `${n} ${t}`)
+              : (e.className = t);
           }
-          if (e.classList) {
-            e.classList.add(t);
-            return;
-          }
-          var n = e.className.trim();
-          n
-            ? n.indexOf(t) < 0 && (e.className = `${n} ${t}`)
-            : (e.className = t);
         }
       }
       function J(e, t) {
-        if (t) {
-          if (z(e.length)) {
-            U(e, function (e) {
-              J(e, t);
-            });
-            return;
-          }
-          if (e.classList) {
-            e.classList.remove(t);
-            return;
-          }
-          e.className.indexOf(t) >= 0 &&
-            (e.className = e.className.replace(t, ``));
-        }
+        t &&
+          (z(e.length)
+            ? U(e, function (e) {
+                J(e, t);
+              })
+            : e.classList
+              ? e.classList.remove(t)
+              : e.className.indexOf(t) >= 0 &&
+                (e.className = e.className.replace(t, ``)));
       }
       function Y(e, t, n) {
-        if (t) {
-          if (z(e.length)) {
-            U(e, function (e) {
-              Y(e, t, n);
-            });
-            return;
-          }
-          n ? q(e, t) : J(e, t);
-        }
+        t &&
+          (z(e.length)
+            ? U(e, function (e) {
+                Y(e, t, n);
+              })
+            : n
+              ? q(e, t)
+              : J(e, t));
       }
       var Re = /([a-z\d])([A-Z])/g;
       function ze(e) {
@@ -1601,12 +1592,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           },
           destroy: function () {
             var e = this.element;
-            return e[y]
-              ? ((e[y] = void 0),
+            return (
+              e[y] &&
+                ((e[y] = void 0),
                 this.isImg && this.replaced && (e.src = this.originalUrl),
-                this.uncreate(),
-                this)
-              : this;
+                this.uncreate()),
+              this
+            );
           },
           move: function (e) {
             var t =
@@ -2058,40 +2050,38 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           !r.scalable &&
                           (r.checkOrientation = !1),
                         !r.checkOrientation || !window.ArrayBuffer)
-                      ) {
+                      )
                         this.clone();
-                        return;
-                      }
-                      if (Se.test(e)) {
+                      else if (Se.test(e))
                         Ce.test(e) ? this.read(at(e)) : this.clone();
-                        return;
+                      else {
+                        var i = new XMLHttpRequest(),
+                          a = this.clone.bind(this);
+                        (this.reloading = !0),
+                          (this.xhr = i),
+                          (i.onabort = a),
+                          (i.onerror = a),
+                          (i.ontimeout = a),
+                          (i.onprogress = function () {
+                            i.getResponseHeader(`content-type`) !== be &&
+                              i.abort();
+                          }),
+                          (i.onload = function () {
+                            t.read(i.response);
+                          }),
+                          (i.onloadend = function () {
+                            (t.reloading = !1), (t.xhr = null);
+                          }),
+                          r.checkCrossOrigin &&
+                            Je(e) &&
+                            n.crossOrigin &&
+                            (e = Ye(e)),
+                          i.open(`GET`, e, !0),
+                          (i.responseType = `arraybuffer`),
+                          (i.withCredentials =
+                            n.crossOrigin === `use-credentials`),
+                          i.send();
                       }
-                      var i = new XMLHttpRequest(),
-                        a = this.clone.bind(this);
-                      (this.reloading = !0),
-                        (this.xhr = i),
-                        (i.onabort = a),
-                        (i.onerror = a),
-                        (i.ontimeout = a),
-                        (i.onprogress = function () {
-                          i.getResponseHeader(`content-type`) !== be &&
-                            i.abort();
-                        }),
-                        (i.onload = function () {
-                          t.read(i.response);
-                        }),
-                        (i.onloadend = function () {
-                          (t.reloading = !1), (t.xhr = null);
-                        }),
-                        r.checkCrossOrigin &&
-                          Je(e) &&
-                          n.crossOrigin &&
-                          (e = Ye(e)),
-                        i.open(`GET`, e, !0),
-                        (i.responseType = `arraybuffer`),
-                        (i.withCredentials =
-                          n.crossOrigin === `use-credentials`),
-                        i.send();
                     }
                   },
                 },
@@ -2159,20 +2149,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           (e.sized = !0),
                           e.build();
                       };
-                    if (t.naturalWidth && !n) {
+                    if (t.naturalWidth && !n)
                       r(t.naturalWidth, t.naturalHeight);
-                      return;
+                    else {
+                      var i = document.createElement(`img`),
+                        a = document.body || document.documentElement;
+                      (this.sizingImage = i),
+                        (i.onload = function () {
+                          r(i.width, i.height), n || a.removeChild(i);
+                        }),
+                        (i.src = t.src),
+                        n ||
+                          ((i.style.cssText = `left:0;max-height:none!important;max-width:none!important;min-height:0!important;min-width:0!important;opacity:0;position:absolute;top:0;z-index:-1;`),
+                          a.appendChild(i));
                     }
-                    var i = document.createElement(`img`),
-                      a = document.body || document.documentElement;
-                    (this.sizingImage = i),
-                      (i.onload = function () {
-                        r(i.width, i.height), n || a.removeChild(i);
-                      }),
-                      (i.src = t.src),
-                      n ||
-                        ((i.style.cssText = `left:0;max-height:none!important;max-width:none!important;min-height:0!important;min-width:0!important;opacity:0;position:absolute;top:0;z-index:-1;`),
-                        a.appendChild(i));
                   },
                 },
                 {

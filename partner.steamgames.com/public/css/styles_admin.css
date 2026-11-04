@@ -4925,3 +4925,48 @@ select#package_included_app_list > option[disabled] {
 .tax_button {
 	margin-top: 5px;
 }
+
+/* publisher group page: add user / add application dialogs */
+#add_user_selected_count, #add_app_selected_count {
+	margin-bottom: 6px;
+}
+
+#addUserToGroupModal {
+	width: 800px;
+}
+
+.add_user_columns {
+	display: flex;
+	gap: 24px;
+	align-items: flex-start;
+}
+
+.add_user_column {
+	flex: 1 1 0;
+	min-width: 0;
+}
+
+.checkbox_list {
+	max-height: 800px;
+	overflow-y: auto;
+	background: #1b1d21;
+	border: 1px solid #4a515c;
+}
+
+.checkbox_list label {
+	display: block;
+	padding: 3px 6px;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.checkbox_list label:hover {
+	background: #2f333a;
+}
+
+.checkbox_list_empty {
+	padding: 4px 6px;
+	font-style: italic;
+}

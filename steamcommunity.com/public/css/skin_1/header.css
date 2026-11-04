@@ -264,6 +264,11 @@ img {
 
 	cursor: pointer;
 }
+.pulldown:dir(rtl) {
+	padding-left: 18px;
+	padding-right: 5px;
+	background-position: left center;
+}
 
 .popup_block {
 	z-index: 200;

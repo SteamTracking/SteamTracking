@@ -14,7 +14,8 @@
       }
     },
     __commonJSMin = (t, n) => () => (
-      n || (t((n = { exports: {} }).exports, n), (t = null)), n.exports
+      n || (t((n = { exports: {} }).exports, n, n.exports), (t = null)),
+      n.exports
     ),
     __exportAll = (t, n) => {
       let r = {};
@@ -166,7 +167,7 @@
         });
       }
     },
-    require_google_protobuf = __commonJSMin((exports) => {
+    require_google_protobuf = __commonJSMin((exports, module, this$1) => {
       var $jscomp = $jscomp || {};
       ($jscomp.scope = {}),
         ($jscomp.findInternal = function (t, n, r) {
@@ -196,7 +197,7 @@
               ? global
               : t;
         }),
-        ($jscomp.global = $jscomp.getGlobal(exports)),
+        ($jscomp.global = $jscomp.getGlobal(this$1)),
         ($jscomp.polyfill = function (t, n, r, i) {
           if (n) {
             for (
@@ -319,7 +320,7 @@
         );
       var COMPILED = !0,
         goog = goog || {};
-      (goog.global = exports || self),
+      (goog.global = this$1 || self),
         (goog.exportPath_ = function (t, n, r) {
           (t = t.split(`.`)),
             (r ||= goog.global),
@@ -7257,7 +7258,7 @@
           return (
             (this.cursor_ += 2),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            (t << 0) | (n << 8)
+            t | 0 | (n << 8)
           );
         }),
         (jspb.BinaryDecoder.prototype.readUint32 = function () {
@@ -7268,7 +7269,7 @@
           return (
             (this.cursor_ += 4),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            ((t << 0) | (n << 8) | (r << 16) | (i << 24)) >>> 0
+            (t | 0 | (n << 8) | (r << 16) | (i << 24)) >>> 0
           );
         }),
         (jspb.BinaryDecoder.prototype.readUint64 = function () {
@@ -7295,7 +7296,7 @@
           return (
             (this.cursor_ += 2),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            (((t << 0) | (n << 8)) << 16) >> 16
+            ((t | 0 | (n << 8)) << 16) >> 16
           );
         }),
         (jspb.BinaryDecoder.prototype.readInt32 = function () {
@@ -7306,7 +7307,7 @@
           return (
             (this.cursor_ += 4),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            (t << 0) | (n << 8) | (r << 16) | (i << 24)
+            t | 0 | (n << 8) | (r << 16) | (i << 24)
           );
         }),
         (jspb.BinaryDecoder.prototype.readInt64 = function () {
@@ -8475,17 +8476,16 @@
         }),
         (jspb.arith.UInt64.prototype.add = function (t) {
           return new jspb.arith.UInt64(
-            (((this.lo + t.lo) & 4294967295) >>> 0) >>> 0,
-            ((((this.hi + t.hi) & 4294967295) >>> 0) +
+            (((this.lo + t.lo) | 0) >>> 0) >>> 0,
+            ((((this.hi + t.hi) | 0) >>> 0) +
               +(4294967296 <= this.lo + t.lo)) >>>
               0,
           );
         }),
         (jspb.arith.UInt64.prototype.sub = function (t) {
           return new jspb.arith.UInt64(
-            (((this.lo - t.lo) & 4294967295) >>> 0) >>> 0,
-            ((((this.hi - t.hi) & 4294967295) >>> 0) - (0 > this.lo - t.lo)) >>>
-              0,
+            (((this.lo - t.lo) | 0) >>> 0) >>> 0,
+            ((((this.hi - t.hi) | 0) >>> 0) - (0 > this.lo - t.lo)) >>> 0,
           );
         }),
         (jspb.arith.UInt64.mul32x32 = function (t, n) {
@@ -8552,17 +8552,16 @@
         }),
         (jspb.arith.Int64.prototype.add = function (t) {
           return new jspb.arith.Int64(
-            (((this.lo + t.lo) & 4294967295) >>> 0) >>> 0,
-            ((((this.hi + t.hi) & 4294967295) >>> 0) +
+            (((this.lo + t.lo) | 0) >>> 0) >>> 0,
+            ((((this.hi + t.hi) | 0) >>> 0) +
               +(4294967296 <= this.lo + t.lo)) >>>
               0,
           );
         }),
         (jspb.arith.Int64.prototype.sub = function (t) {
           return new jspb.arith.Int64(
-            (((this.lo - t.lo) & 4294967295) >>> 0) >>> 0,
-            ((((this.hi - t.hi) & 4294967295) >>> 0) - (0 > this.lo - t.lo)) >>>
-              0,
+            (((this.lo - t.lo) | 0) >>> 0) >>> 0,
+            ((((this.hi - t.hi) | 0) >>> 0) - (0 > this.lo - t.lo)) >>> 0,
           );
         }),
         (jspb.arith.Int64.prototype.clone = function () {
@@ -10119,18 +10118,17 @@
         (jspb.Message.initPivotAndExtensionObject_ = function (t, n) {
           var r = t.array.length,
             i = -1;
-          if (
-            r &&
-            ((i = r - 1), (r = t.array[i]), jspb.Message.isExtensionObject_(r))
-          ) {
-            (t.pivot_ = jspb.Message.getFieldNumber_(t, i)),
-              (t.extensionObject_ = r);
-            return;
-          }
-          -1 < n
-            ? ((t.pivot_ = Math.max(n, jspb.Message.getFieldNumber_(t, i + 1))),
-              (t.extensionObject_ = null))
-            : (t.pivot_ = Number.MAX_VALUE);
+          r &&
+          ((i = r - 1), (r = t.array[i]), jspb.Message.isExtensionObject_(r))
+            ? ((t.pivot_ = jspb.Message.getFieldNumber_(t, i)),
+              (t.extensionObject_ = r))
+            : -1 < n
+              ? ((t.pivot_ = Math.max(
+                  n,
+                  jspb.Message.getFieldNumber_(t, i + 1),
+                )),
+                (t.extensionObject_ = null))
+              : (t.pivot_ = Number.MAX_VALUE);
         }),
         (jspb.Message.maybeInitEmptyExtensionObject_ = function (t) {
           var n = jspb.Message.getIndex_(t, t.pivot_);
@@ -14877,7 +14875,7 @@
         {
           ePrivilege: 2,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -14988,7 +14986,7 @@
           CClientMetrics_ClipShare_Notification,
           n,
         ),
-        { ePrivilege: 1 },
+        { ePrivilege: 1, rgBrowserAPISites: [`community`] },
       );
     }
     t.ReportClipShare = y;
@@ -14999,7 +14997,7 @@
           CClientMetrics_ClipRange_Notification,
           n,
         ),
-        { ePrivilege: 1 },
+        { ePrivilege: 1, rgBrowserAPISites: [`community`] },
       );
     }
     t.ReportClipRange = x;
@@ -15679,13 +15677,8 @@
       return !1;
     }
     SendErrorReport(t) {
-      if (!this.BIsBlacklisted(t)) {
-        if (!this.m_transport) {
-          this.m_rgErrorQueue.push(t);
-          return;
-        }
-        this.QueueReport(t);
-      }
+      this.BIsBlacklisted(t) ||
+        (this.m_transport ? this.QueueReport(t) : this.m_rgErrorQueue.push(t));
     }
     QueueReport(t) {
       this.m_rgErrorQueue.push(t),
@@ -15792,8 +15785,7 @@
       .map((t) => {
         let n = t.match(/(.*)\((.*):(\d+):(\d+)\)/);
         if (
-          ((!n || n.length != 5) &&
-            (n = t.match(/(.*at )(http.*):(\d+):(\d+)/)),
+          ((n && n.length == 5) || (n = t.match(/(.*at )(http.*):(\d+):(\d+)/)),
           !n)
         )
           return t;
@@ -16249,17 +16241,15 @@
                 s === !0 ||
                 (typeof s == `number` && r < s) ||
                 (typeof s == `function` && s(r, o));
-            if (n || !p) {
-              _(o);
-              return;
-            }
-            r++,
-              t.onFail?.(r, o),
-              sleep(u)
-                .then(() => (m() ? void 0 : v()))
-                .then(() => {
-                  n ? _(o) : y();
-                });
+            n || !p
+              ? _(o)
+              : (r++,
+                t.onFail?.(r, o),
+                sleep(u)
+                  .then(() => (m() ? void 0 : v()))
+                  .then(() => {
+                    n ? _(o) : y();
+                  }));
           });
       };
     return {
@@ -16532,19 +16522,18 @@
             fn: o.fetchFn,
             abort: r.abort.bind(r),
             onSuccess: (t) => {
-              if (t === void 0) {
-                s(Error(`${this.queryHash} data is undefined`));
-                return;
+              if (t === void 0) s(Error(`${this.queryHash} data is undefined`));
+              else {
+                try {
+                  this.setData(t);
+                } catch (t) {
+                  s(t);
+                  return;
+                }
+                this.#n.config.onSuccess?.(t, this),
+                  this.#n.config.onSettled?.(t, this.state.error, this),
+                  this.scheduleGc();
               }
-              try {
-                this.setData(t);
-              } catch (t) {
-                s(t);
-                return;
-              }
-              this.#n.config.onSuccess?.(t, this),
-                this.#n.config.onSettled?.(t, this.state.error, this),
-                this.scheduleGc();
             },
             onError: s,
             onFail: (t, n) => {
@@ -17816,7 +17805,7 @@
       }
       #l(t, n) {
         return n
-          ? ((!this.#a || this.#t !== this.#s || n !== this.#o) &&
+          ? ((this.#a && this.#t === this.#s && n === this.#o) ||
               ((this.#o = n),
               (this.#s = this.#t),
               (this.#a = replaceEqualDeep(this.#a, n(t)))),
@@ -18027,6 +18016,26 @@
       return new URL(t, n).href;
     },
     seen = {},
+    isCssPreloadUrl = function (t) {
+      return t.pathname.endsWith(`.css`);
+    },
+    preloadOnce = function (t, n, r) {
+      if (n in t) return t[n];
+      let i = r();
+      if (!i) {
+        t[n] = void 0;
+        return;
+      }
+      let o = i.then(
+        () => {
+          t[n] = void 0;
+        },
+        (r) => {
+          throw ((t[n] = void 0), r);
+        },
+      );
+      return (t[n] = o), o;
+    },
     __vitePreload = function (t, n, r) {
       let i = Promise.resolve();
       function o(t) {
@@ -19548,14 +19557,10 @@ Error generating stack: ` +
         }
       }
       function Zt(t, n, r) {
-        if (
-          n != null &&
-          ((n = `` + zt(n)), n !== t.value && (t.value = n), r == null)
-        ) {
-          t.defaultValue !== n && (t.defaultValue = n);
-          return;
-        }
-        t.defaultValue = r == null ? `` : `` + zt(r);
+        n != null &&
+        ((n = `` + zt(n)), n !== t.value && (t.value = n), r == null)
+          ? t.defaultValue !== n && (t.defaultValue = n)
+          : (t.defaultValue = r == null ? `` : `` + zt(r));
       }
       function Qt(t, n, r, i) {
         if (n == null) {
@@ -21274,11 +21279,10 @@ Error generating stack: ` +
             callbacks: i.callbacks,
           }),
             (t.updateQueue = r);
-          return;
-        }
-        (t = r.lastBaseUpdate),
-          t === null ? (r.firstBaseUpdate = n) : (t.next = n),
-          (r.lastBaseUpdate = n);
+        } else
+          (t = r.lastBaseUpdate),
+            t === null ? (r.firstBaseUpdate = n) : (t.next = n),
+            (r.lastBaseUpdate = n);
       }
       var Ua = !1;
       function Wa() {
@@ -21869,16 +21873,11 @@ Error generating stack: ` +
               if (P) {
                 if (N) {
                   b: {
-                    for (var o = N, s = Bi; o.nodeType !== 8; ) {
-                      if (!s) {
+                    for (var o = N, s = Bi; o.nodeType !== 8; )
+                      if (!s || ((o = Yd(o.nextSibling)), o === null)) {
                         o = null;
                         break b;
                       }
-                      if (((o = Yd(o.nextSibling)), o === null)) {
-                        o = null;
-                        break b;
-                      }
-                    }
                     (s = o.data), (o = s === `F!` || s === `F` ? o : null);
                   }
                   if (o) {
@@ -23520,16 +23519,11 @@ Error generating stack: ` +
                 m;
               if ((m = p)) {
                 c: {
-                  for (m = p, p = Bi; m.nodeType !== 8; ) {
-                    if (!p) {
+                  for (m = p, p = Bi; m.nodeType !== 8; )
+                    if (!p || ((m = Yd(m.nextSibling)), m === null)) {
                       p = null;
                       break c;
                     }
-                    if (((m = Yd(m.nextSibling)), m === null)) {
-                      p = null;
-                      break c;
-                    }
-                  }
                   p = m;
                 }
                 p === null
@@ -26075,7 +26069,7 @@ Error generating stack: ` +
         ((t === K && (Y === 2 || Y === 9)) || t.cancelPendingCommit !== null) &&
           (hu(t, 0), fu(t, J, Hl, !1)),
           Qe(t, r),
-          (!(G & 2) || t !== K) &&
+          (G & 2 && t === K) ||
             (t === K && (!(G & 2) && (Bl |= r), X === 4 && fu(t, J, Hl, !1)),
             Yu(t));
       }
@@ -26089,92 +26083,104 @@ Error generating stack: ` +
             Il && !i && fu(t, n, 0, !1);
             break;
           }
-          if (((r = t.current.alternate), l && !du(r))) {
+          if (((r = t.current.alternate), l && !du(r)))
             (s = bu(t, n, !1)), (l = !1);
-            continue;
-          }
-          if (s === 2) {
-            if (((l = n), t.errorRecoveryDisabledLanes & l)) var u = 0;
-            else
-              (u = t.pendingLanes & -536870913),
-                (u = u === 0 ? (u & 536870912 ? 536870912 : 0) : u);
-            if (u !== 0) {
-              n = u;
-              a: {
-                var p = t;
-                s = Wl;
-                var m = p.current.memoizedState.isDehydrated;
-                if (
-                  (m && (hu(p, u).flags |= 256), (u = bu(p, u, !1)), u !== 2)
-                ) {
-                  if (Ll && !m) {
-                    (p.errorRecoveryDisabledLanes |= l), (Bl |= l), (s = 4);
-                    break a;
+          else {
+            if (s === 2) {
+              if (((l = n), t.errorRecoveryDisabledLanes & l)) var u = 0;
+              else
+                (u = t.pendingLanes & -536870913),
+                  (u = u === 0 ? (u & 536870912 ? 536870912 : 0) : u);
+              if (u !== 0) {
+                n = u;
+                a: {
+                  var p = t;
+                  s = Wl;
+                  var m = p.current.memoizedState.isDehydrated;
+                  if (
+                    (m && (hu(p, u).flags |= 256), (u = bu(p, u, !1)), u !== 2)
+                  ) {
+                    if (Ll && !m) {
+                      (p.errorRecoveryDisabledLanes |= l), (Bl |= l), (s = 4);
+                      break a;
+                    }
+                    (l = Gl),
+                      (Gl = s),
+                      l !== null &&
+                        (Gl === null ? (Gl = l) : Gl.push.apply(Gl, l));
                   }
-                  (l = Gl),
-                    (Gl = s),
-                    l !== null &&
-                      (Gl === null ? (Gl = l) : Gl.push.apply(Gl, l));
+                  s = u;
                 }
-                s = u;
+                if (((l = !1), s !== 2)) continue;
               }
-              if (((l = !1), s !== 2)) continue;
             }
-          }
-          if (s === 1) {
-            hu(t, 0), fu(t, n, 0, !0);
+            if (s === 1) {
+              hu(t, 0), fu(t, n, 0, !0);
+              break;
+            }
+            a: {
+              switch (((i = t), (l = s), l)) {
+                case 0:
+                case 1:
+                  throw Error(o(345));
+                case 4:
+                  if ((n & 4194048) !== n) break;
+                case 6:
+                  fu(i, n, Hl, !Fl);
+                  break a;
+                case 2:
+                  Gl = null;
+                  break;
+                case 3:
+                case 5:
+                  break;
+                default:
+                  throw Error(o(329));
+              }
+              if ((n & 62914560) === n && ((s = ql + 300 - De()), 10 < s)) {
+                if ((fu(i, n, Hl, !Fl), Ke(i, 0, !0) !== 0)) break a;
+                i.timeoutHandle = Ld(
+                  uu.bind(
+                    null,
+                    i,
+                    r,
+                    Gl,
+                    Yl,
+                    Kl,
+                    n,
+                    Hl,
+                    Bl,
+                    Ul,
+                    Fl,
+                    l,
+                    2,
+                    -0,
+                    0,
+                  ),
+                  s,
+                );
+                break a;
+              }
+              uu(i, r, Gl, Yl, Kl, n, Hl, Bl, Ul, Fl, l, 0, -0, 0);
+            }
             break;
           }
-          a: {
-            switch (((i = t), (l = s), l)) {
-              case 0:
-              case 1:
-                throw Error(o(345));
-              case 4:
-                if ((n & 4194048) !== n) break;
-              case 6:
-                fu(i, n, Hl, !Fl);
-                break a;
-              case 2:
-                Gl = null;
-                break;
-              case 3:
-              case 5:
-                break;
-              default:
-                throw Error(o(329));
-            }
-            if ((n & 62914560) === n && ((s = ql + 300 - De()), 10 < s)) {
-              if ((fu(i, n, Hl, !Fl), Ke(i, 0, !0) !== 0)) break a;
-              i.timeoutHandle = Ld(
-                uu.bind(null, i, r, Gl, Yl, Kl, n, Hl, Bl, Ul, Fl, l, 2, -0, 0),
-                s,
-              );
-              break a;
-            }
-            uu(i, r, Gl, Yl, Kl, n, Hl, Bl, Ul, Fl, l, 0, -0, 0);
-          }
-          break;
         } while (1);
         Yu(t);
       }
       function uu(t, n, r, i, o, s, l, u, p, m, h, g, _, v) {
-        if (
-          ((t.timeoutHandle = -1),
+        (t.timeoutHandle = -1),
           (g = n.subtreeFlags),
           (g & 8192 || (g & 16785408) == 16785408) &&
-            ((Mf = { stylesheets: null, count: 0, unsuspend: Nf }),
-            El(n),
-            (g = Ff()),
-            g !== null))
-        ) {
-          (t.cancelPendingCommit = g(
-            ku.bind(null, t, n, s, r, i, o, l, u, p, h, 1, _, v),
-          )),
-            fu(t, s, l, !m);
-          return;
-        }
-        ku(t, n, s, r, i, o, l, u, p);
+          ((Mf = { stylesheets: null, count: 0, unsuspend: Nf }),
+          El(n),
+          (g = Ff()),
+          g !== null)
+            ? ((t.cancelPendingCommit = g(
+                ku.bind(null, t, n, s, r, i, o, l, u, p, h, 1, _, v),
+              )),
+              fu(t, s, l, !m))
+            : ku(t, n, s, r, i, o, l, u, p);
       }
       function du(t) {
         for (var n = t; ; ) {
@@ -27602,11 +27608,8 @@ Error generating stack: ` +
             }
           case `src`:
           case `href`:
-            if (i === `` && (n !== `a` || r !== `href`)) {
-              t.removeAttribute(r);
-              break;
-            }
             if (
+              (i === `` && (n !== `a` || r !== `href`)) ||
               i == null ||
               typeof i == `function` ||
               typeof i == `symbol` ||
@@ -30548,6 +30551,11 @@ Error generating stack: ` +
                 n: 13,
                 br: ReaderProto.readString,
                 bw: WriterProto.writeString,
+              },
+              agency_rating: {
+                n: 14,
+                br: ReaderProto.readEnum,
+                bw: WriterProto.writeEnum,
               },
               image_url: {
                 n: 20,
@@ -33566,6 +33574,11 @@ Error generating stack: ` +
                 c: StoreItem_ExtraDetails_SalePage,
                 r: !0,
                 q: !0,
+              },
+              item_store_show_featured: {
+                n: 37,
+                br: ReaderProto.readBool,
+                bw: WriterProto.writeBool,
               },
             },
           }),
@@ -37432,7 +37445,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 1,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`, `help`],
+          rgBrowserAPISites: [`partner`, `help`, `community`],
         },
       );
     }
@@ -37463,7 +37476,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -37481,7 +37494,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -37512,7 +37525,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 0,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -37530,7 +37543,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 2,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `community`],
         },
       );
     }
@@ -38231,7 +38244,7 @@ Error generating stack: ` +
         {
           bConstMethod: !0,
           ePrivilege: 1,
-          rgBrowserAPISites: [`partner`, `help`],
+          rgBrowserAPISites: [`partner`, `help`, `community`],
         },
       );
     }
@@ -38628,18 +38641,16 @@ Error generating stack: ` +
       this.SetDebugLogEnabled(t, !this.IsDebugLogEnabled(t));
     }
     async SetDebugLogEnabled(t, n) {
-      if (!this.IsLogName(t)) {
-        console.warn(
-          `No log named "${t}", available logs:`,
-          this.GetLogNames(),
-        );
-        return;
-      }
-      n
-        ? this.m_setEnabledDebugLogs.add(t)
-        : this.m_setEnabledDebugLogs.delete(t),
-        this.m_SettingsChangedCallback.Dispatch(),
-        await this.SaveSettings();
+      this.IsLogName(t)
+        ? (n
+            ? this.m_setEnabledDebugLogs.add(t)
+            : this.m_setEnabledDebugLogs.delete(t),
+          this.m_SettingsChangedCallback.Dispatch(),
+          await this.SaveSettings())
+        : console.warn(
+            `No log named "${t}", available logs:`,
+            this.GetLogNames(),
+          );
     }
     async SetDebugLogsEnabled(t, ...n) {
       n.forEach((n) => this.SetDebugLogEnabled(n, t));
@@ -38677,7 +38688,7 @@ Error generating stack: ` +
   function colorForString(t) {
     let n = 0;
     for (let r = 0; r < t.length; r++) n = t.charCodeAt(r) + ((n << 5) - n);
-    return [(n >> 0) & 255, (n >> 8) & 255, (n >> 16) & 255];
+    return [(n | 0) & 255, (n >> 8) & 255, (n >> 16) & 255];
   }
   function shouldUseBlack(t) {
     return (t[0] * 299 + t[1] * 587 + t[2] * 114) / 1e3 >= 128;
@@ -41039,17 +41050,14 @@ Error generating stack: ` +
     let l = useVirtualKeyboardReference(s.current),
       u = import_react.useCallback(
         (t) => {
-          if (document.hasFocus() || document.activeElement != o.current) {
-            if (t.currentTarget != o.current) {
-              console.warn(
-                `keyboard got blur event, but it's not the active element`,
-              );
-              return;
-            }
-            t.detail.focusedNode?.Element != o.current &&
-              (l.BIsActive() || l.bInVR) &&
-              l.DelayHideVirtualKeyboard();
-          }
+          (document.hasFocus() || document.activeElement != o.current) &&
+            (t.currentTarget == o.current
+              ? t.detail.focusedNode?.Element != o.current &&
+                (l.BIsActive() || l.bInVR) &&
+                l.DelayHideVirtualKeyboard()
+              : console.warn(
+                  `keyboard got blur event, but it's not the active element`,
+                ));
         },
         [l],
       ),
@@ -41295,32 +41303,35 @@ Error generating stack: ` +
   }
   var ActiveFocusNavTreeContext = import_react.createContext({
     bActiveTree: !1,
-    bActiveTreeWithinContext: !1,
+    bActiveTreeWithinWindow: !1,
     bDisableFocusClasses: !1,
     bIsMounted: !1,
   });
   function ActiveTreeContextRoot(t) {
     let { tree: n, disableFocusClasses: r = !1, children: i } = t,
       [o, s] = import_react.useState(n?.BIsActive() || !1),
-      [l, u] = import_react.useState(n?.BIsActiveWithinContext() || !1),
+      [l, u] = import_react.useState(n?.BIsActiveWithinWindow() || !1),
       p = useSubscribableValue(n?.SubscribableIsMounted) ?? !1;
     import_react.useEffect(() => {
       if (!n) {
         s(!1), u(!1);
         return;
       }
-      return (
-        s(n.BIsActive()),
-        u(n.BIsActiveWithinContext()),
-        n.OnActiveStateChangedCallbacks.Register(() => {
-          s(n.BIsActive()), u(n.BIsActiveWithinContext());
-        }).Unregister
-      );
+      s(n.BIsActive()), u(n.BIsActiveWithinWindow());
+      let t = n.OnActiveStateChangedCallbacks.Register(() => {
+          s(n.BIsActive()), u(n.BIsActiveWithinWindow());
+        }),
+        r = n.OnActiveWithinWindowChangedCallbacks.Register(() =>
+          u(n.BIsActiveWithinWindow()),
+        );
+      return () => {
+        t.Unregister(), r.Unregister();
+      };
     }, [n]);
     let m = import_react.useMemo(
       () => ({
         bActiveTree: o,
-        bActiveTreeWithinContext: l,
+        bActiveTreeWithinWindow: l,
         bDisableFocusClasses: r,
         bIsMounted: p,
       }),
@@ -41530,7 +41541,7 @@ Error generating stack: ` +
         v = useSubscribableValue(u.SubscribableFocusWithin) && g,
         {
           bActiveTree: y,
-          bActiveTreeWithinContext: x,
+          bActiveTreeWithinWindow: x,
           bDisableFocusClasses: S,
           bIsMounted: C,
         } = useActiveFocusNavTreeContext(),
@@ -44158,8 +44169,8 @@ Error generating stack: ` +
     let n = t.popoverTargetElement;
     if (!(n instanceof HTMLElement)) return;
     let r = getPopoverVisibilityState(n);
-    (t.popoverTargetAction !== `show` || r !== `showing`) &&
-      (t.popoverTargetAction !== `hide` || r !== `hidden`) &&
+    (t.popoverTargetAction === `show` && r === `showing`) ||
+      (t.popoverTargetAction === `hide` && r === `hidden`) ||
       (r === `showing`
         ? hidePopover(n, !0, !0)
         : checkPopoverValidity(n, !1) &&
@@ -44570,10 +44581,7 @@ Error generating stack: ` +
         let r = getRootNode(n);
         if (!(r instanceof ShadowRoot2 || r instanceof Document)) return;
         let i = n.closest(`[popovertargetaction],[popovertarget]`);
-        if (i) {
-          popoverTargetAttributeActivationBehavior(i), t.preventDefault();
-          return;
-        }
+        i && (popoverTargetAttributeActivationBehavior(i), t.preventDefault());
       },
       l = (t) => {
         let n = t.key,
@@ -44972,7 +44980,7 @@ Error generating stack: ` +
     let [r, i] = import_react.useState([]),
       o = import_react.useRef(void 0);
     (0, import_react.useEffect)(() => {
-      (!o.current || !ArrayEquals(o.current, n)) &&
+      (o.current && ArrayEquals(o.current, n)) ||
         ((o.current = n), i((r) => [...r, t(...n)]));
     });
     let [s, l] = useQueries({
@@ -62870,39 +62878,38 @@ Error generating stack: ` +
             open: !0,
             ref: MergeRefs(h, s),
             onKeyDown: (t) => {
-              if (t.key === `Escape`) {
-                i();
-                return;
-              }
-              if (t.key === `ArrowDown`) {
-                let n = document.activeElement;
-                if (n.dataset.index !== void 0) {
-                  let r = parseInt(n.dataset.index) + 1,
-                    i = h.current?.querySelector(`[data-index="${r}"]`);
-                  if (i) {
-                    i.focus(), t.preventDefault();
-                    return;
+              if (t.key === `Escape`) i();
+              else {
+                if (t.key === `ArrowDown`) {
+                  let n = document.activeElement;
+                  if (n.dataset.index !== void 0) {
+                    let r = parseInt(n.dataset.index) + 1,
+                      i = h.current?.querySelector(`[data-index="${r}"]`);
+                    if (i) {
+                      i.focus(), t.preventDefault();
+                      return;
+                    }
                   }
+                  h.current?.querySelector(`[data-index="0"]`)?.focus(),
+                    t.preventDefault();
                 }
-                h.current?.querySelector(`[data-index="0"]`)?.focus(),
-                  t.preventDefault();
-              }
-              if (t.key === `ArrowUp`) {
-                let n = document.activeElement;
-                if (n.dataset.index !== void 0) {
-                  let r = parseInt(n.dataset.index) - 1,
-                    i = h.current?.querySelector(`[data-index="${r}"]`);
-                  if (i) {
-                    i.focus(), t.preventDefault();
-                    return;
+                if (t.key === `ArrowUp`) {
+                  let n = document.activeElement;
+                  if (n.dataset.index !== void 0) {
+                    let r = parseInt(n.dataset.index) - 1,
+                      i = h.current?.querySelector(`[data-index="${r}"]`);
+                    if (i) {
+                      i.focus(), t.preventDefault();
+                      return;
+                    }
                   }
+                  h.current
+                    ?.querySelector(
+                      `[data-index="${(u?.data?.length ?? 0) - 1}"]`,
+                    )
+                    ?.focus(),
+                    t.preventDefault();
                 }
-                h.current
-                  ?.querySelector(
-                    `[data-index="${(u?.data?.length ?? 0) - 1}"]`,
-                  )
-                  ?.focus(),
-                  t.preventDefault();
               }
             },
             onBlur: (t) => {
@@ -63002,11 +63009,10 @@ Error generating stack: ` +
             (t.relatedTarget && u.current?.contains(t.relatedTarget)) || o(!1);
           },
           onKeyDown: (t) => {
-            if (t.key === `Escape`) {
-              o(!1);
-              return;
-            }
-            t.key === `ArrowDown` && (l.current?.focus(), t.preventDefault());
+            t.key === `Escape`
+              ? o(!1)
+              : t.key === `ArrowDown` &&
+                (l.current?.focus(), t.preventDefault());
           },
         }),
         i &&

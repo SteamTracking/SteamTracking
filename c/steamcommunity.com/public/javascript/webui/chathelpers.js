@@ -1,4 +1,4 @@
-import { _ } from "./rolldown-runtime.js?contenthash=Bhk3NnG1";
+import { _ } from "./rolldown-runtime.js?contenthash=CUKKI9VL";
 import { _ } from "./_rolldown_dynamic_import_helper.js?contenthash=B8fe511f";
 import {
   _,
@@ -16,8 +16,8 @@ import {
   _,
   _,
   _,
-} from "./localization.js?contenthash=BbczadiP";
-import { _, _, _, _, _, _ } from "./webpackinit.js?contenthash=7c4B_KgN";
+} from "./localization.js?contenthash=i2l6BsG1";
+import { _, _, _, _, _, _ } from "./webpackinit.js?contenthash=CdMSun5r";
 var _ = _(_()),
   _ = _(_());
 function _(_) {
@@ -308,7 +308,7 @@ async function _(_) {
             ),
           "../localization/friendsui_finnish.json": () =>
             _(
-              () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
+              () => import(`./friendsui_finnish.js?contenthash=CPK_Sgic`),
               [],
               import.meta.url,
             ),
@@ -368,7 +368,7 @@ async function _(_) {
             ),
           "../localization/friendsui_malay.json": () =>
             _(
-              () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
+              () => import(`./friendsui_malay.js?contenthash=DNpDh1Mu`),
               [],
               import.meta.url,
             ),
@@ -392,7 +392,7 @@ async function _(_) {
             ),
           "../localization/friendsui_romanian.json": () =>
             _(
-              () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
+              () => import(`./friendsui_romanian.js?contenthash=CnjkK6ev`),
               [],
               import.meta.url,
             ),
@@ -416,7 +416,7 @@ async function _(_) {
             ),
           "../localization/friendsui_spanish.json": () =>
             _(
-              () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
+              () => import(`./friendsui_spanish.js?contenthash=DFcUR0FN`),
               [],
               import.meta.url,
             ),
@@ -508,7 +508,7 @@ async function _(_) {
                 ),
               "../localization/friendsui_finnish.json": () =>
                 _(
-                  () => import(`./friendsui_finnish.js?contenthash=DEowrZqi`),
+                  () => import(`./friendsui_finnish.js?contenthash=CPK_Sgic`),
                   [],
                   import.meta.url,
                 ),
@@ -569,7 +569,7 @@ async function _(_) {
                 ),
               "../localization/friendsui_malay.json": () =>
                 _(
-                  () => import(`./friendsui_malay.js?contenthash=BckesiXu`),
+                  () => import(`./friendsui_malay.js?contenthash=DNpDh1Mu`),
                   [],
                   import.meta.url,
                 ),
@@ -594,7 +594,7 @@ async function _(_) {
                 ),
               "../localization/friendsui_romanian.json": () =>
                 _(
-                  () => import(`./friendsui_romanian.js?contenthash=BRgHQaE4`),
+                  () => import(`./friendsui_romanian.js?contenthash=CnjkK6ev`),
                   [],
                   import.meta.url,
                 ),
@@ -619,7 +619,7 @@ async function _(_) {
                 ),
               "../localization/friendsui_spanish.json": () =>
                 _(
-                  () => import(`./friendsui_spanish.js?contenthash=0UVtLyWi`),
+                  () => import(`./friendsui_spanish.js?contenthash=DFcUR0FN`),
                   [],
                   import.meta.url,
                 ),

@@ -1,43 +1,43 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { o as e } from "./rolldown-runtime.js?contenthash=DbX3T1YK";
-import { Rt as t, k as n, pt as r } from "./libraries.js?contenthash=b0JzZ9xY";
-import { Jy as i, Lb as a } from "./main.js?contenthash=CoTzkQpL";
-import { o, t as s } from "./layout.js?contenthash=DC9X9dKa";
+import { o as e } from "./rolldown-runtime.js?contenthash=C8f2gWku";
+import { Lt as t, ft as n, l as r } from "./libraries.js?contenthash=CNC_iAx3";
 import {
+  A as i,
+  M as a,
+  N as o,
+  P as s,
   _ as c,
-  a as l,
-  c as u,
-  d,
+  b as l,
+  d as u,
+  f as d,
   g as f,
-  h as p,
-  i as m,
-  s as h,
-  u as g,
-  v as _,
-} from "./loyalty.js?contenthash=CVKxJ0Yx";
+  y as p,
+} from "./rewardsshop.js?contenthash=D6Pt59Ij";
+import { Mb as m, Uy as h } from "./main.js?contenthash=CFzBcxgL";
+import { o as g, t as _ } from "./layout.js?contenthash=Gq1Nutfz";
 var v = e(t()),
   y = `VlcajOpXVIQ-`,
   b = new URL(
     `../../../images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching`,
     import.meta.url,
   ).href,
-  x = r(),
+  x = n(),
   S = (e) =>
-    (0, x.jsx)(d, {
+    (0, x.jsx)(l, {
       ...e,
       onClick: (t) =>
-        l(t, e.customization_type, e.current_level, e.desired_level),
+        d(t, e.customization_type, e.current_level, e.desired_level),
     }),
   C = (e) =>
-    (0, x.jsx)(g, {
+    (0, x.jsx)(p, {
       ...e,
       onClick: (t) =>
-        m(t, e.customization_type, e.purchased_count, e.current_level),
+        u(t, e.customization_type, e.purchased_count, e.current_level),
     }),
   w = (e) =>
-    (0, x.jsx)(s, {
+    (0, x.jsx)(_, {
       display: `flex`,
       flexDirection: `row`,
       justifyContent: `center`,
@@ -56,7 +56,7 @@ var v = e(t()),
         r.forEach((e) => {
           a.set(e.customization_type, e.level);
         });
-    let s = n.map((e) => {
+    let c = n.map((e) => {
       let n = a.get(e),
         r = n + 1;
       return (0, x.jsx)(
@@ -70,14 +70,14 @@ var v = e(t()),
         e,
       );
     });
-    return (0, x.jsx)(o, {
-      className: c,
-      itemClassName: _,
+    return (0, x.jsx)(g, {
+      className: o,
+      itemClassName: s,
       spacing: `xlarge`,
-      children: (0, x.jsx)(p, {
-        title: i(`#ProfileShowcases_Upgrades_Title`),
-        subtitle: i(`#ProfileShowcases_Upgrades_Subtitle`),
-        children: s,
+      children: (0, x.jsx)(i, {
+        title: h(`#ProfileShowcases_Upgrades_Title`),
+        subtitle: h(`#ProfileShowcases_Upgrades_Subtitle`),
+        children: c,
       }),
     });
   },
@@ -88,14 +88,14 @@ var v = e(t()),
         purchased_showcases: r,
         purchased_upgrades: a,
       } = e,
-      s = new Map(),
+      c = new Map(),
       l = new Map();
     n.forEach((e) => {
-      s.set(e, 0), l.set(e, 1);
+      c.set(e, 0), l.set(e, 1);
     }),
       r &&
         r.forEach((e) => {
-          s.set(e.customization_type, e.count);
+          c.set(e.customization_type, e.count);
         }),
       a &&
         a.forEach((e) => {
@@ -108,39 +108,39 @@ var v = e(t()),
           point_cost: t,
           current_level: l.get(e),
           customization_type: e,
-          purchased_count: s.get(e),
+          purchased_count: c.get(e),
         },
         e,
       ),
     );
-    return (0, x.jsx)(o, {
-      className: c,
-      itemClassName: _,
+    return (0, x.jsx)(g, {
+      className: o,
+      itemClassName: s,
       spacing: `xlarge`,
-      children: (0, x.jsx)(p, {
-        title: i(`#ProfileShowcases_Slots_Title`),
-        subtitle: i(`#ProfileShowcases_Slots_Subtitle`),
+      children: (0, x.jsx)(i, {
+        title: h(`#ProfileShowcases_Slots_Title`),
+        subtitle: h(`#ProfileShowcases_Slots_Subtitle`),
         children: u,
       }),
     });
   },
   D = class extends v.Component {
     render() {
-      let e = f.Get().GetUpgradableProfileShowcaseCost(),
-        t = f.Get().GetUpgradableProfileShowcases(),
-        n = f.Get().GetUpgradedProfileCustomizations(),
-        r = f.Get().GetPurchasableProfileShowcaseSlotCost(),
-        a = f.Get().GetPurchasableProfileShowcaseSlots(),
-        s = f.Get().GetPurchasedProfileCustomizations();
-      return (0, x.jsx)(h, {
-        children: (0, x.jsxs)(o, {
-          className: c,
-          itemClassName: _,
+      let e = a.Get().GetUpgradableProfileShowcaseCost(),
+        t = a.Get().GetUpgradableProfileShowcases(),
+        n = a.Get().GetUpgradedProfileCustomizations(),
+        r = a.Get().GetPurchasableProfileShowcaseSlotCost(),
+        i = a.Get().GetPurchasableProfileShowcaseSlots(),
+        l = a.Get().GetPurchasedProfileCustomizations();
+      return (0, x.jsx)(f, {
+        children: (0, x.jsxs)(g, {
+          className: o,
+          itemClassName: s,
           spacing: `xlarge`,
           children: [
             (0, x.jsx)(`div`, {
-              children: (0, x.jsx)(u, {
-                title: i(`#ShopPageTitle_ProfileShowcases`),
+              children: (0, x.jsx)(c, {
+                title: h(`#ShopPageTitle_ProfileShowcases`),
               }),
             }),
             (0, x.jsx)(w, {}),
@@ -151,8 +151,8 @@ var v = e(t()),
             }),
             (0, x.jsx)(E, {
               point_cost: r,
-              purchasable_showcases: a,
-              purchased_showcases: s,
+              purchasable_showcases: i,
+              purchased_showcases: l,
               purchased_upgrades: n,
             }),
             this.props.children,
@@ -161,6 +161,6 @@ var v = e(t()),
       });
     }
   };
-D = a([n], D);
+D = m([r], D);
 var O = D;
 export { D as ProfileShowcasesPage, O as default };

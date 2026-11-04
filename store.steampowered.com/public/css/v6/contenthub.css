@@ -67,9 +67,9 @@ body.tag_page .content_hub h2.pageheader {
 .contenthub_background_holder {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	background-repeat: no-repeat;
 	background-position: center top;
 	z-index: -1;
@@ -92,9 +92,9 @@ body.tag_page .content_hub h2.pageheader {
 .page_background_holder {
     position: absolute;
     top: 0;
-    right: 0;
+    inset-inline-end: 0;
     bottom: 0;
-    left: 0;
+    inset-inline-start: 0;
     background-repeat: no-repeat;
     background-position: center top;
 }
@@ -109,9 +109,9 @@ body.tag_page .content_hub h2.pageheader {
 .page_background_holder_mobile {
 	position: absolute;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: 0;
-	left: 0;
+	inset-inline-start: 0;
 	background-repeat: no-repeat;
 	background-position: center top;
 	display: none;
@@ -190,7 +190,7 @@ body.tag_page .content_hub h2.pageheader {
 }
 
 .contenthub_page .tab_see_more {
-	text-align: right;
+	text-align: end;
 	background: rgba( 0, 0, 0, 0.2 );
 	padding: 4px;
 }
@@ -255,7 +255,7 @@ body.tag_page .content_hub h2.pageheader {
 	font-family: 'Motiva Sans', sans-serif;
 	font-size: 13px;
 	width: 190px;
-	float: left;
+	float: inline-start;
 	margin: 5px;
 }
 
@@ -275,7 +275,7 @@ body.tag_page .content_hub h2.pageheader {
 .contenthub_specials_grid_cell
 {
 	width: 50%;
-	float: left;
+	float: inline-start;
 }
 
 .contenthub_specials_grid .store_capsule {
@@ -311,8 +311,9 @@ body.tag_page .content_hub h2.pageheader {
 }
 
 .contenthub_specials_see_more {
-	text-align: right;
-	padding: 4px 4px 5px 0;
+	text-align: end;
+	padding-block: 4px 5px;
+	padding-inline: 0 4px;
 }
 
 .contenthub_specials_see_more a {
@@ -340,8 +341,8 @@ body.tag_page .content_hub h2.pageheader {
 }
 
 .spotlight_weeklong_ctn {
-	margin-left: auto;
-	margin-right: auto;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 }
 
 .dailydeal_ctn {
@@ -358,11 +359,11 @@ body.tag_page .content_hub h2.pageheader {
 }
 
 .dailydeal_ctn .daily_deal_discount {
-	margin-left: 6px;
+	margin-inline-start: 6px;
 }
 .dailydeal_ctn .dailydeal_desc {
 	color: #283846;
-	margin-right: 6px;
+	margin-inline-end: 6px;
 }
 .dailydeal_ctn .dailydeal_countdown {
 	color: #c4e4f2;
@@ -398,13 +399,13 @@ div#page_section_container,
 
 	html.responsive .contenthub_featured_item_spotlight .store_capsule {
 		width: 100%;
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 
 	html.responsive .contenthub_specials_grid_cell
 	{
 		width: 50%;
-		float: left;
+		float: inline-start;
 	}
 
 	html.responsive .contenthub_specials_see_more a {
@@ -416,7 +417,7 @@ div#page_section_container,
 	}
 
 	html.responsive .tab_item_cap {
-		margin-right: 2%;
+		margin-inline-end: 2%;
 	}
 
 	html.responsive .carousel_container .carousel_items:not(.no_paging),
@@ -446,8 +447,8 @@ div#page_section_container,
 
 	html.responsive div#spotlight_scroll {
 		width: 306px;
-		margin-left: auto;
-		margin-right: auto;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
 	}
 }
 
@@ -486,7 +487,7 @@ div#page_section_container,
 }
 
 .tag_count_button .tag_count {
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 .content_hub_breadcrumb_arrow {
