@@ -80,22 +80,15 @@ for (const file of await GetFilesToParse()) {
 						calleeName = node.callee.property.name;
 					}
 
-					if (calleeName === "createElement" && node.arguments?.[0]?.value === "svg") {
+					const tagName = getLiteralValue(node.arguments?.[0]);
+
+					if (
+						(calleeName === "createElement" || calleeName === "jsx" || calleeName === "jsxs") &&
+						tagName === "svg"
+					) {
 						const svg = createSvgBody(node).end({ prettyPrint: true });
 						if (svg.length > 0) {
 							const content = Buffer.from(`${svg}\n`, "utf8");
-							OutputToFile("svg", content);
-						}
-
-						this.skip();
-						return;
-					}
-
-					if ((calleeName === "jsx" || calleeName === "jsxs") && node.arguments?.[0]?.value === "svg") {
-						const svg = createSvgBody(node).end({ prettyPrint: true });
-						if (svg.length > 0) {
-							const content = Buffer.from(`${svg}\n`, "utf8");
-
 							OutputToFile("svg", content);
 						}
 
@@ -104,16 +97,16 @@ for (const file of await GetFilesToParse()) {
 					}
 				}
 
-				if (node.type === Syntax.Literal && typeof node.value === "string" && node.value.startsWith("data:image/")) {
-					const dataUri = node.value;
+				const strValue = getLiteralValue(node);
+				if (typeof strValue === "string" && strValue.startsWith("data:image/")) {
 					const marker = ";base64,";
-					const commaIndex = dataUri.indexOf(marker);
+					const commaIndex = strValue.indexOf(marker);
 					if (commaIndex === -1) {
 						return;
 					}
 
-					const header = dataUri.substring(0, commaIndex);
-					const base64Data = dataUri.substring(commaIndex + marker.length);
+					const header = strValue.substring(0, commaIndex);
+					const base64Data = strValue.substring(commaIndex + marker.length);
 
 					let extension;
 					if (header === "data:image/png") {
@@ -157,7 +150,12 @@ function createSvgBody(node, xml = createXml()) {
 	}
 
 	try {
-		const elem = xml.ele(node.arguments[0].value);
+		const tagName = getLiteralValue(node.arguments?.[0]);
+		if (typeof tagName !== "string") {
+			return xml;
+		}
+
+		const elem = xml.ele(tagName);
 
 		let childrenProp = null;
 		if (node.arguments[1]?.properties) {
@@ -171,10 +169,8 @@ function createSvgBody(node, xml = createXml()) {
 					continue;
 				}
 
-				let val = prop.value.value;
-				if (prop.value?.type !== Syntax.Literal) {
-					val = "";
-				}
+				const literalVal = getLiteralValue(prop.value);
+				const val = literalVal !== null ? literalVal : "";
 
 				elem.att(FixSVGKeyName(prop.key), val);
 			}
@@ -193,7 +189,10 @@ function createSvgBody(node, xml = createXml()) {
 
 		if (children) {
 			for (const child of children) {
-				if (child?.type === Syntax.CallExpression && child.arguments?.[0]?.type === Syntax.Literal) {
+				if (
+					child?.type === Syntax.CallExpression &&
+					typeof getLiteralValue(child.arguments?.[0]) === "string"
+				) {
 					createSvgBody(child, elem);
 				}
 			}
@@ -231,4 +230,21 @@ async function OutputToFile(extension, content) {
 	console.log("Writing file:", fileName);
 
 	await writeFile(fileName, content);
+}
+
+// fix for strings using a backquote ` instead of a double quote "
+function getLiteralValue(node) {
+	if (!node) {
+		return null;
+	}
+
+	if (node.type === Syntax.Literal) {
+		return node.value;
+	}
+
+	if (node.type === Syntax.TemplateLiteral && node.expressions.length === 0) {
+		return node.quasis[0]?.value?.cooked ?? node.quasis[0]?.value?.raw ?? null;
+	}
+
+	return null;
 }
