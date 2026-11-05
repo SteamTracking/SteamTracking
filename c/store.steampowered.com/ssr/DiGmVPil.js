@@ -16,6 +16,9 @@ function _(_, _) {
     : _ == _.BACKWARD && _.BFocusLastChild(_.GAMEPAD);
 }
 function _(_) {
+  return _.Element.checkVisibility();
+}
+function _(_) {
   if (_ === void 0) return console.error(`Cannot GetHostname on empty URL`), ``;
   let _ = RegExp(
       `^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)`,
@@ -2024,6 +2027,7 @@ function _(_) {
   return _ && (_ *= 1e3), _;
 }
 export {
+  _,
   _,
   _,
   _,

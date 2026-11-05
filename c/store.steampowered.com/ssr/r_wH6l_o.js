@@ -9641,7 +9641,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./CKPBd9UO.js`),
+    () => import(`./KXooqgW7.js`),
     __vite__mapDeps([
       0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
       21, 22, 23, 24, 25, 26, 27, 28, 29,
@@ -10479,18 +10479,23 @@ function _(_) {
   });
 }
 function _() {
-  return (0, _.jsx)(`div`, {
-    className: _,
-    children: (0, _.jsx)(_.Fragment, {
+  let _ = `${_.STORE_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=wishlist`,
+    _ = `#wishlist_item_add_credit_card`;
+  return (
+    _.country_code === `AU` &&
+      ((_ = `${_.HELP_BASE_URL}faqs/view/338D-F465-0937-FA65`),
+      (_ = `#wishlist_item_age_verification_au`)),
+    (0, _.jsx)(`div`, {
+      className: _,
       children: (0, _.jsx)(`div`, {
         className: _,
         children: (0, _.jsx)(`a`, {
-          href: `${_.STORE_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=wishlist`,
-          children: _.Localize(`#wishlist_item_add_credit_card`),
+          href: _,
+          children: _.Localize(_),
         }),
       }),
-    }),
-  });
+    })
+  );
 }
 function _(_) {
   let { wishlistItem: _, item: _ } = _,

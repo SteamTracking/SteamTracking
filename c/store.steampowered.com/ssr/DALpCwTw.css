@@ -2660,6 +2660,9 @@ button.S-0da5Ll-j0- {
 html.GamepadMode * :focus {
   outline: none;
 }
+html.GamepadMode {
+  scroll-padding: 20vh 0;
+}
 .t-LlQicBZjE- {
   opacity: 0;
   z-index: 100;
