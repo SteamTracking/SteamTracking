@@ -5613,7 +5613,7 @@ function _(_) {
       stylesInsertionPoint: _,
     } = _,
     _ = (0, _.useRef)(null),
-    _ = (_ && _.ownerDocument.defaultView) || window,
+    _ = (_ && _.ownerDocument.defaultView) || globalThis.window,
     _ = (0, _.useRef)(_);
   _.current = _;
   let _ = _(_),

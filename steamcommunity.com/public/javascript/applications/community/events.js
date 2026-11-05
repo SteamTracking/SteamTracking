@@ -10,55 +10,55 @@ import {
   ot as a,
   xt as o,
 } from "./libraries.js?contenthash=BSMOk6Fq";
-import { r as s } from "./partnereventmigrate.js?contenthash=D6iQxd_v";
-import { X as c, c as l, pa as u } from "./eventrow.js?contenthash=BhscLvp2";
-import { h as d, u as f } from "./salebanner.js?contenthash=CGp1YmSU";
-import { t as p } from "./eventinfinitescrollmodal.js?contenthash=CwSO9dJK";
-import { i as m } from "./clanstore.js?contenthash=ipycUSTp";
-import { t as h } from "./throbber.js?contenthash=Cd5Ml_20";
+import { r as s } from "./partnereventmigrate.js?contenthash=C64m1rzW";
+import { X as c, c as l, pa as u } from "./eventrow.js?contenthash=EEDvA4vn";
+import { l as d, m as f } from "./vodquery.js?contenthash=HhWAmKPF";
+import { t as p } from "./eventinfinitescrollmodal.js?contenthash=Tij_WUyC";
+import { i as m } from "./clanstore.js?contenthash=CzD0CJ_-";
+import { t as h } from "./throbber.js?contenthash=Bw9DjjzR";
 import {
-  X as g,
-  Y as _,
-  Z as v,
-  at as y,
-} from "./carouselarrows.js?contenthash=BswsvuFh";
-import { t as b } from "./appinfostore.js?contenthash=Ds-s6KRg";
-import { U as x } from "./clanimagepicker.js?contenthash=Dce3xjCT";
+  $ as g,
+  G as _,
+  U as v,
+  W as y,
+} from "./carouselarrows.js?contenthash=B-wWvUjH";
+import { t as b } from "./appinfostore.js?contenthash=CBIrcRUp";
+import { U as x } from "./clanimagepicker.js?contenthash=CNq-gH6K";
 import {
-  Bu as S,
-  Df as C,
-  Fh as w,
-  Fu as T,
-  Jr as E,
-  Qd as D,
-  Vi as ee,
-  Wf as O,
-  Ws as k,
-  dd as A,
-  fm as j,
-  hf as M,
-  l as N,
-  mm as te,
-  nu as P,
-  on as F,
-  sm as I,
-  tm as L,
-  vf as R,
-  wu as z,
-  zf as B,
-  zs as V,
-} from "./main.js?contenthash=BMjFHmU0";
-import "./partnereventsavebutton.module.js?contenthash=M5HvgJb-";
-var H = e(n(), 1),
-  U = a(),
-  W = `OdUWUqw0tkM-`,
-  G = `d-5nAi7tljQ-`,
-  K = `k8EMgG-4Stg-`,
-  q = `NelD3I3LNkY-`,
-  J = `kS9Vogo9VDE-`,
-  Y = `We7gZuKDOiI-`,
-  X = 500;
-function Z(e) {
+  Cu as S,
+  Ef as C,
+  Hs as w,
+  Kr as T,
+  Ls as ee,
+  Ph as E,
+  Pu as D,
+  Rf as O,
+  Uf as k,
+  Zd as A,
+  _f as j,
+  dm as M,
+  em as N,
+  eu as P,
+  l as F,
+  mf as I,
+  om as L,
+  on as R,
+  pm as z,
+  ud as B,
+  zi as V,
+  zu as H,
+} from "./main.js?contenthash=DniUHuiT";
+import "./partnereventsavebutton.module.js?contenthash=guOICNwP";
+var U = e(n(), 1),
+  W = a(),
+  G = `OdUWUqw0tkM-`,
+  K = `d-5nAi7tljQ-`,
+  q = `k8EMgG-4Stg-`,
+  J = `NelD3I3LNkY-`,
+  Y = `kS9Vogo9VDE-`,
+  X = `We7gZuKDOiI-`,
+  Z = 500;
+function Q(e) {
   let {
       strClassName: t,
       rgEvents: n,
@@ -67,64 +67,64 @@ function Z(e) {
       bViewAllShowInfiniteScroll: a,
       nSummaryMaxLength: o,
     } = e,
-    s = F(),
-    c = k(),
-    l = O(),
+    s = R(),
+    c = w(),
+    l = k(),
     u = 2,
     d = 501;
   return (
     c.ownerWindow.window
       ? (d = c.ownerWindow.window.innerWidth)
       : s.viewportWidth && (d = s.viewportWidth.value),
-    (u = d <= X ? 1 : 2),
+    (u = d <= Z ? 1 : 2),
     n && n.length == 0 && !i
       ? null
-      : (0, U.jsxs)(z, {
+      : (0, W.jsxs)(S, {
           className: t,
           "flow-children": `row`,
           children: [
             !!n &&
               n.length > 0 &&
-              (0, U.jsx)(`div`, {
+              (0, W.jsx)(`div`, {
                 className: `OdUWUqw0tkM-`,
-                children: (0, U.jsxs)(ee, {
+                children: (0, W.jsxs)(V, {
                   children: [
-                    (0, U.jsxs)(`h2`, {
+                    (0, W.jsxs)(`h2`, {
                       children: [
-                        R.Localize(`#EventBrowse_RecentEvents`),
+                        j.Localize(`#EventBrowse_RecentEvents`),
                         !l &&
                           !!n &&
-                          (0, U.jsx)(U.Fragment, {
+                          (0, W.jsx)(W.Fragment, {
                             children:
                               a && r
-                                ? (0, U.jsx)(T, {
+                                ? (0, W.jsx)(D, {
                                     className: `d-5nAi7tljQ-`,
                                     onClick: () => r(n[0]),
-                                    children: R.Localize(
+                                    children: j.Localize(
                                       `#EventBrowse_MoreEventsBtn`,
                                     ),
                                   })
-                                : (0, U.jsx)(v, {
+                                : (0, W.jsx)(_, {
                                     eventModel: n[0],
-                                    route: g.k_eViewWebSiteHub,
+                                    route: y.k_eViewWebSiteHub,
                                     className: `d-5nAi7tljQ-`,
-                                    children: R.Localize(
+                                    children: j.Localize(
                                       `#EventBrowse_MoreEventsBtn`,
                                     ),
                                   }),
                           }),
                       ],
                     }),
-                    (0, U.jsx)(`div`, {
+                    (0, W.jsx)(`div`, {
                       className: `YZMD3BYfIGw-`,
                       children: n.slice(0, u).map((e) => {
                         let t =
-                          r && !_()
+                          r && !v()
                             ? (t) => {
                                 r(e), t.stopPropagation(), t.preventDefault();
                               }
                             : void 0;
-                        return (0, U.jsx)(
+                        return (0, W.jsx)(
                           x,
                           { event: e, onClick: t, nSummaryMaxLength: o },
                           e.GID,
@@ -139,50 +139,50 @@ function Z(e) {
         })
   );
 }
-function ne(e) {
-  return (0, U.jsxs)(`div`, {
-    className: q,
+function te(e) {
+  return (0, W.jsxs)(`div`, {
+    className: J,
     children: [
-      (0, U.jsx)(`div`, {
-        className: J,
-        children: (0, U.jsx)(P, { role: `presentation` }),
-      }),
-      (0, U.jsx)(T, {
+      (0, W.jsx)(`div`, {
         className: Y,
+        children: (0, W.jsx)(P, { role: `presentation` }),
+      }),
+      (0, W.jsx)(D, {
+        className: X,
         onClick: e.onClick,
-        children: R.Localize(
+        children: j.Localize(
           `#EventBrowse_LatestUpdateTime_Button`,
-          M(e.nUpdateTime),
+          I(e.nUpdateTime),
         ),
       }),
     ],
   });
 }
-function re(e) {
+function ne(e) {
   let { nUpdateTime: t, announcementGID: n, onClick: r } = e,
-    i = n ? f.GetClanEventFromAnnouncementGID(n) : null,
+    i = n ? d.GetClanEventFromAnnouncementGID(n) : null,
     a = x;
-  return (0, U.jsxs)(`div`, {
-    className: W,
+  return (0, W.jsxs)(`div`, {
+    className: G,
     children: [
-      (0, U.jsxs)(`h2`, {
+      (0, W.jsxs)(`h2`, {
         children: [
-          D(`#EventBrowse_LastUpdateDate`, M(t)),
-          (0, U.jsx)(T, {
-            className: G,
+          A(`#EventBrowse_LastUpdateDate`, I(t)),
+          (0, W.jsx)(D, {
+            className: K,
             onClick: (e) => {
               r?.(), e.stopPropagation(), e.preventDefault();
             },
-            children: D(`#EventBrowse_MoreEventsBtn`),
+            children: A(`#EventBrowse_MoreEventsBtn`),
           }),
         ],
       }),
       !!i &&
-        (0, U.jsx)(z, {
+        (0, W.jsx)(S, {
           className: `YZMD3BYfIGw-`,
           "flow-children": `column`,
-          navEntryPreferPosition: S.PREFERRED_CHILD,
-          children: (0, U.jsx)(a, {
+          navEntryPreferPosition: H.PREFERRED_CHILD,
+          children: (0, W.jsx)(a, {
             event: i,
             onClick: (e) => {
               r?.(), e.stopPropagation(), e.preventDefault();
@@ -192,15 +192,15 @@ function re(e) {
     ],
   });
 }
-var ie = (e) =>
-    (0, H.createElement)(s, {
+var re = (e) =>
+    (0, U.createElement)(s, {
       ...e,
       key: e.match.params.oldAnnouncementGID,
       bClearDirty: !0,
       bPreview: !1,
       bPreventRedirect: !0,
     }),
-  Q = class extends H.Component {
+  $ = class extends U.Component {
     state = { bShowModal: !1, bLoadedLandingState: this.props.bPreventDismiss };
     componentDidMount() {
       this.props.bPreventDismiss
@@ -210,10 +210,10 @@ var ie = (e) =>
           });
     }
     async LoadAppAndFirstEvent() {
-      let e = I(`eventinfinitescrolllanding`, `application_config`),
+      let e = L(`eventinfinitescrolllanding`, `application_config`),
         t;
       e && typeof e == `string` && (t = e);
-      let n = window.location.href.startsWith(j.COMMUNITY_BASE_URL + `groups`),
+      let n = window.location.href.startsWith(M.COMMUNITY_BASE_URL + `groups`),
         r = n
           ? await m.LoadOGGClanInfoForGroupVanity(
               this.props.match.params.appid_or_vanity_str,
@@ -223,7 +223,7 @@ var ie = (e) =>
             );
       if ((console.log(`output: `, i(r), n), r)) {
         if (r.partner_events_enabled) {
-          let e = await f.LoadAdjacentPartnerEventsByAnnouncement(
+          let e = await d.LoadAdjacentPartnerEventsByAnnouncement(
             t,
             r.clanSteamID,
             r.appid,
@@ -251,36 +251,36 @@ var ie = (e) =>
     render() {
       let { bPreventDismiss: e } = this.props;
       return this.state.bShowModal
-        ? (0, U.jsx)(p, {
+        ? (0, W.jsx)(p, {
             appid: this.state.appid,
             announcementGID: this.state.announcementGID,
             clanSteamID: this.state.clanSteamID,
             closeModal: this.HideModal,
-            partnerEventStore: f,
+            partnerEventStore: d,
             trackingLocation: this.props.trackingLocation,
             showAppHeader: !0,
             bPrimaryPageFeature: e,
           })
         : this.state.bLoadedLandingState
-          ? (0, U.jsx)(h, { string: D(`#Loading`) })
-          : (0, U.jsx)(`div`, {});
+          ? (0, W.jsx)(h, { string: A(`#Loading`) })
+          : (0, W.jsx)(`div`, {});
     }
   };
-C([w], Q.prototype, `HideModal`, null), (Q = C([t], Q));
-function ae(e) {
+C([E], $.prototype, `HideModal`, null), ($ = C([t], $));
+function ie(e) {
   let {
       trackingLocation: t,
       strClassName: n,
       bViewAllShowInfiniteScroll: r,
     } = e,
-    [i, a, o] = A(),
-    [s, c] = (0, H.useState)(null),
-    [l, u] = (0, H.useState)(void 0),
-    d = N(),
-    f = (0, H.useCallback)(() => {
+    [i, a, o] = B(),
+    [s, c] = (0, U.useState)(null),
+    [l, u] = (0, U.useState)(void 0),
+    d = F(),
+    f = (0, U.useCallback)(() => {
       c(null), o();
     }, [o]),
-    p = (0, H.useCallback)(
+    p = (0, U.useCallback)(
       (e) => {
         t &&
           e &&
@@ -293,12 +293,12 @@ function ae(e) {
       },
       [t, d, a],
     ),
-    { last_update_event: m, rgEvents: h } = oe({ ...e, fnEventShowModal: p }),
-    g = (0, H.useCallback)(() => {
+    { last_update_event: m, rgEvents: h } = ae({ ...e, fnEventShowModal: p }),
+    g = (0, U.useCallback)(() => {
       let { event_gid: e, announcement_gid: n, clan_account_id: r } = m;
       t && e && d.MarkEventRead(e, r, t) && d.Flush(), u(n), c(null), a();
     }, [m, a, d, t]);
-  (0, H.useEffect)(
+  (0, U.useEffect)(
     () => (
       (window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
         u(t), c(null), u(t), a();
@@ -310,7 +310,7 @@ function ae(e) {
     ),
     [a],
   );
-  let _ = O(),
+  let _ = k(),
     v = !!m && !!m.rtime,
     y =
       v && m.announcement_gid && (!h || h.length == 0)
@@ -319,7 +319,7 @@ function ae(e) {
     b;
   return (
     v && y
-      ? (b = (0, U.jsx)(re, {
+      ? (b = (0, W.jsx)(ne, {
           nUpdateTime: m.rtime,
           announcementGID: y,
           onClick: g,
@@ -327,19 +327,19 @@ function ae(e) {
       : v &&
         !y &&
         !_ &&
-        (b = (0, U.jsx)(ne, { nUpdateTime: m.rtime, onClick: g })),
-    (0, U.jsxs)(U.Fragment, {
+        (b = (0, W.jsx)(te, { nUpdateTime: m.rtime, onClick: g })),
+    (0, W.jsxs)(W.Fragment, {
       children: [
-        (0, U.jsx)(V, {
+        (0, W.jsx)(ee, {
           active: i,
-          children: (0, U.jsx)(se, {
+          children: (0, W.jsx)(se, {
             ...e,
             announcementGID: l || s?.AnnouncementGID,
             eventModel: s,
             closeModal: f,
           }),
         }),
-        (0, U.jsx)(Z, {
+        (0, W.jsx)(Q, {
           elPostRowElement: b,
           rgEvents: h,
           fnEventShowModal: p,
@@ -350,7 +350,7 @@ function ae(e) {
     })
   );
 }
-function oe(e) {
+function ae(e) {
   let {
       appid: t,
       event_customization: n,
@@ -358,20 +358,20 @@ function oe(e) {
       trackingLocation: i,
       fnEventShowModal: a,
     } = e,
-    [o, s] = (0, H.useState)(null),
-    [c, l] = (0, H.useState)(null),
-    p = N(),
+    [o, s] = (0, U.useState)(null),
+    [c, l] = (0, U.useState)(null),
+    p = F(),
     [m] = u(`emgid`, void 0),
     [h] = u(`announce_gid`, void 0);
   return (
-    (0, H.useEffect)(() => {
-      let e = d(`EventWebRowEmbed`),
+    (0, U.useEffect)(() => {
+      let e = f(`EventWebRowEmbed`),
         a = !1;
-      if ($(e)) {
+      if (oe(e)) {
         (a = e.bPreLoaded), s(e.last_update_event);
         let t = [];
         e.announcementGIDList.forEach((e) => {
-          let n = f.GetClanEventFromAnnouncementGID(e);
+          let n = d.GetClanEventFromAnnouncementGID(e);
           n && t.push(n);
         }),
           l(t);
@@ -391,7 +391,7 @@ function oe(e) {
               p.Flush());
         })();
     }, [t, n, a, r, p, i]),
-    (0, H.useEffect)(() => {
+    (0, U.useEffect)(() => {
       if (c != null && (m || h)) {
         let e = c.find((e) => e.GID === m || e.AnnouncementGID == h);
         e
@@ -407,7 +407,7 @@ function oe(e) {
     { last_update_event: o, rgEvents: c }
   );
 }
-function $(e) {
+function oe(e) {
   let t = e;
   return t && typeof t == `object`
     ? t.bPreLoaded !== void 0 &&
@@ -424,9 +424,9 @@ function se(e) {
       eventModel: a,
       closeModal: o,
     } = e,
-    s = O();
-  return (0, U.jsx)(p, {
-    className: s ? void 0 : K,
+    s = k();
+  return (0, W.jsx)(p, {
+    className: s ? void 0 : q,
     eventClassName: void 0,
     appid: t,
     trackingLocation: r,
@@ -438,80 +438,80 @@ function se(e) {
 }
 function ce(e) {
   let { appid: t } = e,
-    n = new Date(L.NOW * 1e3),
+    n = new Date(N.NOW * 1e3),
     r = new Date(n.setUTCHours(0, 0, 0, 0) - 15552e6),
     i = Math.floor(r.getTime() / 1e3);
-  return (0, U.jsx)(`div`, {
+  return (0, W.jsx)(`div`, {
     className: `detailBox altFooter greenlight_home_box section announcements_row`,
-    children: (0, U.jsx)(ae, {
+    children: (0, W.jsx)(ie, {
       appid: t,
       partnerEventStore: l,
       event_customization: { require_tags: [`workshop`], rtime_oldestevent: i },
-      strClassName: W,
+      strClassName: G,
       trackingLocation: 6,
       bViewAllShowInfiniteScroll: !0,
     }),
   });
 }
 function le(e) {
-  let [t, n] = H.useState(!0);
+  let [t, n] = U.useState(!0);
   return (
-    H.useEffect(() => {
-      b.Init(B(new te(j.WEBAPI_BASE_URL))), f.Init(), n(!1);
+    U.useEffect(() => {
+      b.Init(O(new z(M.WEBAPI_BASE_URL))), d.Init(), n(!1);
     }, []),
     t
       ? null
-      : (0, U.jsx)(y.Provider, {
+      : (0, W.jsx)(g.Provider, {
           value: { bCanUseLink: !0 },
-          children: (0, U.jsxs)(r, {
+          children: (0, W.jsxs)(r, {
             children: [
-              (0, U.jsx)(o, {
+              (0, W.jsx)(o, {
                 exact: !0,
                 path: c.ViewEventDetails(
                   `:appid_or_vanity_str`,
                   `:oldAnnouncementGID(\\d+)`,
                 ),
-                render: (e) => (0, U.jsx)(ie, { ...e }),
+                render: (e) => (0, W.jsx)(re, { ...e }),
               }),
-              (0, U.jsx)(o, {
+              (0, W.jsx)(o, {
                 exact: !0,
                 path: c.Listing(`:appid_or_vanity_str`),
                 render: (e) =>
-                  (0, U.jsx)(
-                    Q,
+                  (0, W.jsx)(
+                    $,
                     { ...e, bPreventDismiss: !0, trackingLocation: 6 },
                     `InfScroll_NoDismissApp_` + e.match.params.appid,
                   ),
               }),
-              (0, U.jsx)(o, {
+              (0, W.jsx)(o, {
                 exact: !0,
                 path: c.WorkshopHub(`:appid(\\d+)`),
                 render: (e) =>
-                  (0, H.createElement)(ce, {
+                  (0, U.createElement)(ce, {
                     ...e,
                     appid: +e.match.params.appid,
                     key: `Workshop` + e.match.params.appid,
                   }),
               }),
-              (0, U.jsx)(o, {
+              (0, W.jsx)(o, {
                 path: c.AppHub(`:appid`),
                 render: (e) =>
-                  (0, H.createElement)(Q, {
+                  (0, U.createElement)($, {
                     ...e,
                     key: `InfScroll_App_` + e.match.params.appid,
                     trackingLocation: 6,
                   }),
               }),
-              (0, U.jsx)(o, {
+              (0, W.jsx)(o, {
                 path: c.GroupHub(`:group_vanity`),
                 render: (e) =>
-                  (0, H.createElement)(Q, {
+                  (0, U.createElement)($, {
                     ...e,
                     key: `InfScroll_App_` + e.match.params.group_vanity,
                     trackingLocation: 6,
                   }),
               }),
-              (0, U.jsx)(o, { component: E }),
+              (0, W.jsx)(o, { component: T }),
             ],
           }),
         })

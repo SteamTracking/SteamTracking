@@ -9,24 +9,24 @@ import {
   R as i,
   ot as a,
 } from "./libraries.js?contenthash=BSMOk6Fq";
-import { n as o } from "./personautils.js?contenthash=CLXpqNy9";
+import { n as o } from "./personautils.js?contenthash=CCIlCBXp";
 import {
-  Cm as s,
-  Df as c,
-  Fh as l,
-  Ko as u,
-  Nu as d,
-  Qd as f,
-  Qu as p,
-  Wf as m,
-  Xh as h,
-  Yc as g,
-  Zo as _,
-  cs as v,
+  Ef as s,
+  Mu as c,
+  Ph as l,
+  Sm as u,
+  Uf as d,
+  Wo as f,
+  Yh as p,
+  Yo as m,
+  Zd as h,
+  Zu as g,
+  am as _,
+  dm as v,
   fm as y,
-  om as b,
-  pm as x,
-} from "./main.js?contenthash=BMjFHmU0";
+  os as b,
+  qc as x,
+} from "./main.js?contenthash=DniUHuiT";
 var S = e(r()),
   C = e(t()),
   w = `RQiiCbyKjEE-`,
@@ -53,12 +53,12 @@ var S = e(r()),
     m_mapProfiles = new Map();
     m_mapProfilesLoading = new Map();
     async LoadProfiles(e, t) {
-      h(e.length <= 500, `Check LoadProfiles, requesting too many steam IDs`);
+      p(e.length <= 500, `Check LoadProfiles, requesting too many steam IDs`);
       let n = e.filter(
         (e) => !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
       );
       if (n.length == 0) return this.m_mapProfilesLoading.get(e[0]);
-      let r = y.COMMUNITY_BASE_URL + `actions/ajaxresolveusers`,
+      let r = v.COMMUNITY_BASE_URL + `actions/ajaxresolveusers`,
         i = C.default.get(r, {
           params: { steamids: n.join(`,`) },
           withCredentials: !0,
@@ -82,7 +82,7 @@ var S = e(r()),
     }
     GetProfileByAccountID(e) {
       return this.m_mapProfiles.get(
-        s.InitFromAccountID(e, y.EUNIVERSE).ConvertTo64BitString(),
+        u.InitFromAccountID(e, v.EUNIVERSE).ConvertTo64BitString(),
       );
     }
     GetProfileBySteamID(e) {
@@ -93,7 +93,7 @@ var S = e(r()),
     }
     BHasProfileByAccountID(e) {
       return this.m_mapProfiles.has(
-        s.InitFromAccountID(e, y.EUNIVERSE).ConvertTo64BitString(),
+        u.InitFromAccountID(e, v.EUNIVERSE).ConvertTo64BitString(),
       );
     }
     BHasProfileBySteamID(e) {
@@ -105,15 +105,15 @@ var S = e(r()),
     GetProfileURLBySteamID(e) {
       let t = this.GetProfileBySteamID(e);
       return t && t.profile_url
-        ? y.COMMUNITY_BASE_URL + `id/` + t.profile_url
-        : y.COMMUNITY_BASE_URL + `profiles/` + e.ConvertTo64BitString();
+        ? v.COMMUNITY_BASE_URL + `id/` + t.profile_url
+        : v.COMMUNITY_BASE_URL + `profiles/` + e.ConvertTo64BitString();
     }
     GetPersonaNameBySteamID(e) {
       let t = this.GetProfileBySteamID(e);
       return t && t.persona_name ? t.persona_name : ``;
     }
   };
-c([i], V.prototype, `m_mapProfiles`, void 0);
+s([i], V.prototype, `m_mapProfiles`, void 0);
 var H = new V(),
   U = a(),
   W = class extends S.Component {
@@ -124,8 +124,8 @@ var H = new V(),
       invite_copied: !1,
     };
     async componentDidMount() {
-      let e = await C.default.get(y.COMMUNITY_BASE_URL + `invites/ajaxgetall`, {
-        params: { sessionid: b() },
+      let e = await C.default.get(v.COMMUNITY_BASE_URL + `invites/ajaxgetall`, {
+        params: { sessionid: _() },
       });
       if (e && e.data && e.data.tokens) {
         let t = e.data.tokens.filter((e) => e.valid);
@@ -136,11 +136,11 @@ var H = new V(),
     }
     async OnCreateInviteLink() {
       let e = new FormData();
-      e.append(`sessionid`, b()),
-        e.append(`steamid_user`, x.steamid),
+      e.append(`sessionid`, _()),
+        e.append(`steamid_user`, y.steamid),
         e.append(`duration`, `2592000`);
       let t = await C.default.post(
-        y.COMMUNITY_BASE_URL + `invites/ajaxcreate`,
+        v.COMMUNITY_BASE_URL + `invites/ajaxcreate`,
         e,
       );
       t &&
@@ -155,16 +155,16 @@ var H = new V(),
         e === `invite` &&
           (this.setState({ invite_copied: !0 }),
           setTimeout(() => this.setState({ invite_copied: !1 }), 1e3)),
-        p(t);
+        g(t);
     }
     async OnAddFriend(e) {
       let t = new FormData();
-      t.append(`sessionID`, b()),
+      t.append(`sessionID`, _()),
         t.append(`steamid`, e),
         t.append(`accept_invite`, `0`);
       try {
         let e = await C.default.post(
-          y.COMMUNITY_BASE_URL + `actions/AddFriendAjax`,
+          v.COMMUNITY_BASE_URL + `actions/AddFriendAjax`,
           t,
         );
         return e && e.data && e.data.success == 1;
@@ -180,49 +180,49 @@ var H = new V(),
     }
     OnSearchSubmit() {
       window.open(
-        y.COMMUNITY_BASE_URL +
+        v.COMMUNITY_BASE_URL +
           `search/users/#text=` +
           encodeURIComponent(this.state.input_search),
         `_self`,
       );
     }
     render() {
-      let e = x.short_url + `/` + this.state.invite_token;
+      let e = y.short_url + `/` + this.state.invite_token;
       return (0, U.jsxs)(`div`, {
         children: [
           (0, U.jsx)(`div`, {
             className: E,
-            children: f(`#ManageFriends_AddAFriend`),
+            children: h(`#ManageFriends_AddAFriend`),
           }),
           (0, U.jsxs)(`div`, {
             className: D,
             children: [
               (0, U.jsx)(`h1`, {
                 className: w,
-                children: f(`#ManageFriends_YourFriendCode`),
+                children: h(`#ManageFriends_YourFriendCode`),
               }),
               (0, U.jsxs)(`div`, {
                 className: A,
                 children: [
-                  (0, U.jsx)(`h1`, { className: j, children: x.accountid }),
-                  (0, U.jsx)(v, {
+                  (0, U.jsx)(`h1`, { className: j, children: y.accountid }),
+                  (0, U.jsx)(b, {
                     autoFocus: !0,
                     className: M,
                     onClick: () =>
-                      this.OnCopy(`friend_code`, String(x.accountid)),
+                      this.OnCopy(`friend_code`, String(y.accountid)),
                     children: this.state.friend_code_copied
-                      ? f(`#ManageFriends_Copied`)
-                      : f(`#ManageFriends_Copy`),
+                      ? h(`#ManageFriends_Copied`)
+                      : h(`#ManageFriends_Copy`),
                   }),
                 ],
               }),
               (0, U.jsx)(`p`, {
                 className: T,
-                children: f(`#ManageFriends_EnterFriendCode`),
+                children: h(`#ManageFriends_EnterFriendCode`),
               }),
               (0, U.jsx)(G, {
                 onButtonClick: this.OnAddFriend,
-                buttonText: f(`#ManageFriends_SendInvite`),
+                buttonText: h(`#ManageFriends_SendInvite`),
                 bDisableForSelf: !0,
                 bDisableForFriends: !0,
                 bShowStatus: !0,
@@ -234,15 +234,15 @@ var H = new V(),
             children: [
               (0, U.jsx)(`h1`, {
                 className: w,
-                children: f(`#ManageFriends_OrSendQuickInvite`),
+                children: h(`#ManageFriends_OrSendQuickInvite`),
               }),
               (0, U.jsx)(`p`, {
                 className: T,
-                children: f(`#ManageFriends_QuickInviteDescription`),
+                children: h(`#ManageFriends_QuickInviteDescription`),
               }),
               (0, U.jsx)(`p`, {
                 className: T,
-                children: f(`#ManageFriends_QuickInviteNote`),
+                children: h(`#ManageFriends_QuickInviteNote`),
               }),
               (0, U.jsxs)(`div`, {
                 className: A,
@@ -252,19 +252,19 @@ var H = new V(),
                       className: `VnenB-U8m50-`,
                       children: e,
                     }),
-                  (0, U.jsx)(v, {
+                  (0, U.jsx)(b, {
                     className: M,
                     onClick: () => this.OnCopy(`invite`, e),
                     children: this.state.invite_copied
-                      ? f(`#ManageFriends_Copied`)
-                      : f(`#ManageFriends_Copy`),
+                      ? h(`#ManageFriends_Copied`)
+                      : h(`#ManageFriends_Copy`),
                   }),
                 ],
               }),
-              (0, U.jsx)(_, {
+              (0, U.jsx)(m, {
                 className: N,
                 onClick: this.OnCreateInviteLink,
-                children: f(`#ManageFriends_CreateInviteLink`),
+                children: h(`#ManageFriends_CreateInviteLink`),
               }),
             ],
           }),
@@ -273,7 +273,7 @@ var H = new V(),
             children: [
               (0, U.jsx)(`h1`, {
                 className: w,
-                children: f(`#ManageFriends_OrSearch`),
+                children: h(`#ManageFriends_OrSearch`),
               }),
               (0, U.jsx)(`br`, {}),
               (0, U.jsxs)(`div`, {
@@ -286,12 +286,12 @@ var H = new V(),
                 children: [
                   (0, U.jsx)(`div`, {
                     style: { width: `100%` },
-                    children: (0, U.jsx)(u, {
+                    children: (0, U.jsx)(f, {
                       className: k,
                       onKeyDown: this.OnSearchKeyDown,
                       value: this.state.input_search,
                       onChange: this.OnSearchChange,
-                      placeholder: f(`#ManageFriends_EnterProfileName`),
+                      placeholder: h(`#ManageFriends_EnterProfileName`),
                     }),
                   }),
                   (0, U.jsx)(`div`, {
@@ -302,7 +302,7 @@ var H = new V(),
                       cursor: `pointer`,
                     },
                     onClick: this.OnSearchSubmit,
-                    children: (0, U.jsx)(g, {}),
+                    children: (0, U.jsx)(x, {}),
                   }),
                 ],
               }),
@@ -312,12 +312,12 @@ var H = new V(),
       });
     }
   };
-c([l], W.prototype, `OnCreateInviteLink`, null),
-  c([l], W.prototype, `OnCopy`, null),
-  c([l], W.prototype, `OnAddFriend`, null),
-  c([l], W.prototype, `OnSearchChange`, null),
-  c([l], W.prototype, `OnSearchKeyDown`, null),
-  c([l], W.prototype, `OnSearchSubmit`, null);
+s([l], W.prototype, `OnCreateInviteLink`, null),
+  s([l], W.prototype, `OnCopy`, null),
+  s([l], W.prototype, `OnAddFriend`, null),
+  s([l], W.prototype, `OnSearchChange`, null),
+  s([l], W.prototype, `OnSearchKeyDown`, null),
+  s([l], W.prototype, `OnSearchSubmit`, null);
 var G = class extends S.Component {
   state = {
     input_friend_code: ``,
@@ -337,23 +337,23 @@ var G = class extends S.Component {
   }
   async LoadProfile(e) {
     if (e) {
-      let t = s.InitFromAccountID(Number(e), y.EUNIVERSE);
+      let t = u.InitFromAccountID(Number(e), v.EUNIVERSE);
       await H.LoadProfiles([t.ConvertTo64BitString()]);
       let n = H.GetProfile(t.ConvertTo64BitString());
       n
         ? this.setState({
             searchResult: n,
             disable_send_invite:
-              x.is_limited ||
+              y.is_limited ||
               (this.props.bDisableForFriends && n.is_friend) ||
-              (this.props.bDisableForSelf && n.steamid === x.steamid),
+              (this.props.bDisableForSelf && n.steamid === y.steamid),
           })
         : this.setState({ searchResult: null });
     } else this.setState({ searchResult: null });
   }
   async OnActionClick(e) {
     let t = new FormData();
-    t.append(`sessionID`, b()),
+    t.append(`sessionID`, _()),
       t.append(`steamid`, e),
       t.append(`accept_invite`, `0`),
       this.setState({ disable_send_invite: !0 }),
@@ -366,17 +366,17 @@ var G = class extends S.Component {
     return (0, U.jsxs)(`div`, {
       className: z,
       children: [
-        (0, U.jsx)(u, {
+        (0, U.jsx)(f, {
           className: k,
           value: this.state.input_friend_code,
           onChange: this.OnFriendCodeChange,
-          placeholder: f(`#ManageFriends_EnterFriendCodePlaceholder`),
+          placeholder: h(`#ManageFriends_EnterFriendCodePlaceholder`),
         }),
         (0, U.jsx)(K, {
           searchResult: this.state.searchResult,
           invite_status: this.state.invite_status,
           bShowStatus: this.props.bShowStatus,
-          children: (0, U.jsx)(v, {
+          children: (0, U.jsx)(b, {
             className: B,
             onClick: () => this.OnActionClick(this.state.searchResult.steamid),
             disabled: this.state.disable_send_invite,
@@ -387,12 +387,12 @@ var G = class extends S.Component {
     });
   }
 };
-c([l], G.prototype, `OnFriendCodeChange`, null),
-  c([l], G.prototype, `LoadProfile`, null),
-  c([l], G.prototype, `OnActionClick`, null);
+s([l], G.prototype, `OnFriendCodeChange`, null),
+  s([l], G.prototype, `LoadProfile`, null),
+  s([l], G.prototype, `OnActionClick`, null);
 var K = (e) => {
   let { searchResult: t, invite_status: n, bShowStatus: r, children: i } = e,
-    a = m();
+    a = d();
   return t
     ? (0, U.jsxs)(`div`, {
         className: P,
@@ -414,10 +414,10 @@ var K = (e) => {
                   (0, U.jsxs)(`div`, {
                     className: R,
                     children: [
-                      (0, U.jsx)(d, {
+                      (0, U.jsx)(c, {
                         target: a ? void 0 : `_blank`,
-                        href: y.COMMUNITY_BASE_URL + `profiles/` + t.steamid,
-                        children: f(`#ManageFriends_ProfileLink`),
+                        href: v.COMMUNITY_BASE_URL + `profiles/` + t.steamid,
+                        children: h(`#ManageFriends_ProfileLink`),
                       }),
                       (0, U.jsx)(`br`, {}),
                       (0, U.jsxs)(`span`, {
@@ -439,23 +439,23 @@ var K = (e) => {
             className: R,
             children: [
               t.is_friend &&
-                (0, U.jsx)(`div`, { children: f(`#ManageFriends_IsFriend`) }),
+                (0, U.jsx)(`div`, { children: h(`#ManageFriends_IsFriend`) }),
               t.friends_in_common != 0 &&
                 (0, U.jsx)(`div`, {
-                  children: (0, U.jsx)(d, {
+                  children: (0, U.jsx)(c, {
                     target: a ? void 0 : `_blank`,
                     href:
-                      y.COMMUNITY_BASE_URL +
+                      v.COMMUNITY_BASE_URL +
                       `profiles/` +
                       t.steamid +
                       `/friendscommon`,
                     children:
                       t.friends_in_common === 1
-                        ? f(
+                        ? h(
                             `#ManageFriends_FriendsInCommonSingular`,
                             t.friends_in_common,
                           )
-                        : f(
+                        : h(
                             `#ManageFriends_FriendsInCommon`,
                             t.friends_in_common,
                           ),
@@ -465,13 +465,13 @@ var K = (e) => {
                 n === `failure` &&
                 (0, U.jsx)(`div`, {
                   className: `AkRlehi2-GI-`,
-                  children: f(`#ManageFriends_InviteFailure`),
+                  children: h(`#ManageFriends_InviteFailure`),
                 }),
               r &&
                 n === `success` &&
                 (0, U.jsx)(`div`, {
                   className: `DqLSNVaGaWM-`,
-                  children: f(`#ManageFriends_InviteSuccess`, t.persona_name),
+                  children: h(`#ManageFriends_InviteSuccess`, t.persona_name),
                 }),
             ],
           }),

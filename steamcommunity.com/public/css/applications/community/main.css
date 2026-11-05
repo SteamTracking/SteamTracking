@@ -4581,43 +4581,6 @@ span.BIn0SMiIGQE- {
   text-shadow: unset;
   font-weight: 500;
 }
-.fUnUYx6wf8w- .Mjv8QNjztj8- {
-  position: relative;
-}
-.fUnUYx6wf8w- .Mjv8QNjztj8- .m35pMS3ny2k- {
-  opacity: 0;
-  text-transform: none;
-  letter-spacing: 0;
-  text-shadow: none;
-  color: #000;
-  background: #fff;
-  border-radius: 3px;
-  padding: 2px 12px;
-  font-size: 12px;
-  transition:
-    opacity 0.2s ease-out,
-    transform 0.2s ease-out;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%) translateY(-20px);
-  box-shadow: 1px 1px 4px #0009;
-}
-.fUnUYx6wf8w- .Mjv8QNjztj8- img {
-  border-radius: 3px;
-  max-width: 100%;
-  transition: box-shadow 0.2s ease-out;
-  box-shadow: 0 0 5px #000000b3;
-}
-.fUnUYx6wf8w- .Mjv8QNjztj8-:hover img {
-  box-shadow:
-    0 0 10px #ffffff80,
-    0 0 5px #000000b3;
-}
-.fUnUYx6wf8w- .Mjv8QNjztj8-:hover .m35pMS3ny2k- {
-  opacity: 1;
-  transform: translate(-50%) translateY(-10px);
-}
 .fUnUYx6wf8w- span {
   color: #ffffff61;
   flex-grow: 1;

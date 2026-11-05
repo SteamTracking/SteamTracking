@@ -3,19 +3,19 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./broadcastapp.js?contenthash=DsUNYhUY",
+      "./broadcastapp.js?contenthash=DMBkv5Zy",
       "./rolldown-runtime.js?contenthash=CUKKI9VL",
       "./localization.js?contenthash=i2l6BsG1",
-      "./shared_dialog.js?contenthash=CwcwPTb_",
+      "./shared_dialog.js?contenthash=CykDOndK",
       "./webpackinit.js?contenthash=CdMSun5r",
       "../../css/webui/shared_dialog2.css?contenthash=gnfBEtEu",
-      "./friendsui_desktopapp.js?contenthash=DGwpyMxS",
-      "./defaultappheader.js?contenthash=SzEpKCWz",
-      "./broadcastwatchstore.js?contenthash=CNv8Mpvs",
+      "./friendsui_desktopapp.js?contenthash=C2OePxsD",
+      "./defaultappheader.js?contenthash=BdmwwXkL",
+      "./broadcastwatchstore.js?contenthash=DLersfTl",
       "../../css/webui/defaultappheader.css?contenthash=DwpeiF5o",
       "../../css/webui/friendsui_desktopapp.css?contenthash=MEg-RmCM",
-      "./broadcastplayer.js?contenthash=CV-vsdDk",
-      "../../css/webui/broadcastplayer.css?contenthash=CGtEQuO9",
+      "./broadcastplayer.js?contenthash=CVnf5_za",
+      "../../css/webui/broadcastplayer.css?contenthash=DhDPH1Mx",
       "../../css/webui/broadcastapp.css?contenthash=DLwrs7u4",
     ]),
 ) => _.map((_) => _[_]);
@@ -46,7 +46,7 @@ import {
   _,
   _,
 } from "./localization.js?contenthash=i2l6BsG1";
-import { _ } from "./shared_dialog.js?contenthash=CwcwPTb_";
+import { _ } from "./shared_dialog.js?contenthash=CykDOndK";
 import {
   _,
   _,
@@ -64,10 +64,10 @@ import {
   _,
   _,
   _,
-} from "./friendsui_desktopapp.js?contenthash=DGwpyMxS";
-import { _ } from "./defaultappheader.js?contenthash=SzEpKCWz";
+} from "./friendsui_desktopapp.js?contenthash=C2OePxsD";
+import { _ } from "./defaultappheader.js?contenthash=BdmwwXkL";
 import { _, _ } from "./webpackinit.js?contenthash=CdMSun5r";
-import { _, _ } from "./broadcastwatchstore.js?contenthash=CNv8Mpvs";
+import { _, _ } from "./broadcastwatchstore.js?contenthash=DLersfTl";
 function _(_) {
   return `unknown EMsg ( ` + _ + ` )`;
 }
@@ -4174,7 +4174,7 @@ async function _() {
   let { CBroadcastApp: _ } = await _(
     async () => {
       let { CBroadcastApp: _ } = await import(
-        `./broadcastapp.js?contenthash=DsUNYhUY`
+        `./broadcastapp.js?contenthash=DMBkv5Zy`
       );
       return {
         CBroadcastApp: _,

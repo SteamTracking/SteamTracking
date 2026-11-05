@@ -5,19 +5,19 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./broadcastapp.js?contenthash=DsUNYhUY",
+      "./broadcastapp.js?contenthash=DMBkv5Zy",
       "./rolldown-runtime.js?contenthash=CUKKI9VL",
       "./localization.js?contenthash=i2l6BsG1",
-      "./shared_dialog.js?contenthash=CwcwPTb_",
+      "./shared_dialog.js?contenthash=CykDOndK",
       "./webpackinit.js?contenthash=CdMSun5r",
       "../../css/webui/shared_dialog2.css?contenthash=gnfBEtEu",
-      "./friendsui_desktopapp.js?contenthash=DGwpyMxS",
-      "./defaultappheader.js?contenthash=SzEpKCWz",
-      "./broadcastwatchstore.js?contenthash=CNv8Mpvs",
+      "./friendsui_desktopapp.js?contenthash=C2OePxsD",
+      "./defaultappheader.js?contenthash=BdmwwXkL",
+      "./broadcastwatchstore.js?contenthash=DLersfTl",
       "../../css/webui/defaultappheader.css?contenthash=DwpeiF5o",
       "../../css/webui/friendsui_desktopapp.css?contenthash=MEg-RmCM",
-      "./broadcastplayer.js?contenthash=CV-vsdDk",
-      "../../css/webui/broadcastplayer.css?contenthash=CGtEQuO9",
+      "./broadcastplayer.js?contenthash=CVnf5_za",
+      "../../css/webui/broadcastplayer.css?contenthash=DhDPH1Mx",
       "../../css/webui/broadcastapp.css?contenthash=DLwrs7u4",
     ]),
 ) => i.map((i) => d[i]);
@@ -49,7 +49,7 @@ import {
   w,
   z as T,
 } from "./localization.js?contenthash=i2l6BsG1";
-import { ic as E } from "./shared_dialog.js?contenthash=CwcwPTb_";
+import { ac as E } from "./shared_dialog.js?contenthash=CykDOndK";
 import {
   A as ee,
   C as te,
@@ -67,13 +67,13 @@ import {
   w as se,
   x as ce,
   y as le,
-} from "./friendsui_desktopapp.js?contenthash=DGwpyMxS";
-import { c as N } from "./defaultappheader.js?contenthash=SzEpKCWz";
+} from "./friendsui_desktopapp.js?contenthash=C2OePxsD";
+import { c as N } from "./defaultappheader.js?contenthash=BdmwwXkL";
 import { l as P, u as ue } from "./webpackinit.js?contenthash=CdMSun5r";
 import {
   _ as de,
   y as fe,
-} from "./broadcastwatchstore.js?contenthash=CNv8Mpvs";
+} from "./broadcastwatchstore.js?contenthash=DLersfTl";
 function pe(e) {
   return `unknown EMsg ( ` + e + ` )`;
 }
@@ -4142,7 +4142,7 @@ async function Ve() {
   let { CBroadcastApp: e } = await l(
     async () => {
       let { CBroadcastApp: e } = await import(
-        `./broadcastapp.js?contenthash=DsUNYhUY`
+        `./broadcastapp.js?contenthash=DMBkv5Zy`
       );
       return { CBroadcastApp: e };
     },

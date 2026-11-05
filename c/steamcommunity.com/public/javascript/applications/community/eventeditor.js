@@ -3,86 +3,86 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./monacoeditor.js?contenthash=BBQiJMOH",
+      "./monacoeditor.js?contenthash=BQLn2zpn",
       "./rolldown-runtime.js?contenthash=C8f2gWku",
       "./libraries.js?contenthash=BSMOk6Fq",
-      "./main.js?contenthash=BMjFHmU0",
-      "../../../css/applications/community/main.css?contenthash=C8g0FoMA",
+      "./main.js?contenthash=DniUHuiT",
+      "../../../css/applications/community/main.css?contenthash=Dkt-4wdG",
       "../../../css/applications/community/monacoeditor.css?contenthash=BqkeuQF4",
-      "./richeventeditor.js?contenthash=DIoEnRH6",
-      "./eventrow.js?contenthash=BhscLvp2",
-      "./playerlinkdetailsdataloader.js?contenthash=Zw2BS_GC",
-      "./salebanner.js?contenthash=CGp1YmSU",
-      "./clanstore.js?contenthash=ipycUSTp",
-      "./throbber.js?contenthash=Cd5Ml_20",
+      "./richeventeditor.js?contenthash=fUwHCGdM",
+      "./eventrow.js?contenthash=EEDvA4vn",
+      "./playerlinkdetailsdataloader.js?contenthash=CP5Ip5YJ",
+      "./vodquery.js?contenthash=HhWAmKPF",
+      "./clanstore.js?contenthash=CzD0CJ_-",
+      "./throbber.js?contenthash=Bw9DjjzR",
       "../../../css/applications/community/throbber.css?contenthash=DMWv5jTr",
-      "./basebuttons.js?contenthash=CHmFu0jZ",
+      "./basebuttons.js?contenthash=C8_9mAcy",
       "../../../css/applications/community/basebuttons.css?contenthash=BJx2zq6Y",
-      "./emoticonbutton.js?contenthash=D7f64lEU",
-      "./reactbbcodeparser.js?contenthash=DbA9YPPY",
+      "./emoticonbutton.js?contenthash=C-ywMWUv",
+      "./reactbbcodeparser.js?contenthash=B_85i0dU",
       "./bbcodeparser.js?contenthash=BdhkGlpZ",
       "./bbcodes.module.js?contenthash=Dm6S-0z7",
       "../../../css/applications/community/bbcodes.css?contenthash=CxUNTrby",
-      "./numberformats.js?contenthash=Blcjv6G9",
-      "./storeitemhooks.js?contenthash=BQ6Er2NU",
+      "./numberformats.js?contenthash=DHvIJJl2",
+      "./storeitemhooks.js?contenthash=5Zs7_In4",
       "../../../css/applications/community/emoticonbutton.css?contenthash=BA0yx0b8",
-      "./storeassets.js?contenthash=s6MfdEqh",
+      "./storeassets.js?contenthash=BS65No15",
       "./ajaxhooks.js?contenthash=fHwhjvXf",
-      "./tabbar.js?contenthash=BwB8L3fw",
+      "./tabbar.js?contenthash=A_xXrRUD",
       "./historyutils.js?contenthash=j-8hxDg1",
       "../../../css/applications/community/tabbar.css?contenthash=Cec19A5S",
       "./expandonappear.js?contenthash=C5V-riVd",
-      "./eventtime.js?contenthash=gCu_cY7X",
-      "./rewarditemdisplay.js?contenthash=Cwc-d8yD",
+      "./eventdevfeaturestore.js?contenthash=CkCkh4cG",
+      "./rewarditemdisplay.js?contenthash=BqPqrpGG",
       "./partnereventdialog.module.js?contenthash=C6nNSZgO",
       "../../../css/applications/community/partnereventdialog.css?contenthash=CX73M240",
-      "./storeitemlink.js?contenthash=Ds6KNsLI",
+      "./storeitemlink.js?contenthash=DLg7vJ8j",
       "./currencyformat.js?contenthash=BPzpC4_L",
-      "./visibilitytracker.js?contenthash=BQuUeP7f",
-      "./personautils.js?contenthash=CLXpqNy9",
-      "./appinfostore.js?contenthash=Ds-s6KRg",
-      "../../../css/applications/community/salebanner.css?contenthash=_XG8wWCC",
-      "./eventinfinitescrollmodal.js?contenthash=CwSO9dJK",
-      "./apppartnereventspage.js?contenthash=BgeoB7uU",
-      "./textlink.js?contenthash=DWNSe8RV",
+      "./visibilitytracker.js?contenthash=DWRSJ6bK",
+      "./personautils.js?contenthash=CCIlCBXp",
+      "./appinfostore.js?contenthash=CBIrcRUp",
+      "../../../css/applications/community/vodquery.css?contenthash=BeWqy8QL",
+      "./eventinfinitescrollmodal.js?contenthash=Tij_WUyC",
+      "./apppartnereventspage.js?contenthash=B-0tKuZf",
+      "./textlink.js?contenthash=DFoZU2dL",
       "../../../css/applications/community/textlink.css?contenthash=CMU1nJhL",
-      "./carouselarrows.js?contenthash=BswsvuFh",
-      "./simplesuccesserror.js?contenthash=UNgaugE8",
+      "./carouselarrows.js?contenthash=B-wWvUjH",
+      "./simplesuccesserror.js?contenthash=kMQCj-WX",
       "../../../css/applications/community/simplesuccesserror.css?contenthash=C9ahyCu_",
-      "./steammessages_loyalty_rewards_pb.js?contenthash=YSh5EpCY",
-      "../../../css/applications/community/carouselarrows.css?contenthash=B9aNccLf",
-      "./localdateandtime.js?contenthash=B8Choir7",
+      "./steammessages_loyalty_rewards_pb.js?contenthash=CiJ-OJos",
+      "../../../css/applications/community/carouselarrows.css?contenthash=sjb9BSed",
+      "./localdateandtime.js?contenthash=C9AX1CIg",
       "../../../css/applications/community/localdateandtime.css?contenthash=Bky2XmNv",
       "../../../css/applications/community/apppartnereventspage.css?contenthash=BRAGOciT",
-      "./heading.js?contenthash=BU9wpvw2",
+      "./heading.js?contenthash=BdBgSwwy",
       "../../../css/applications/community/heading.css?contenthash=BUJSDlhm",
-      "./coercingtextinput.js?contenthash=CT93mnrF",
+      "./coercingtextinput.js?contenthash=CZmxWufE",
       "./textentry.js?contenthash=CcAwvsrq",
       "../../../css/applications/community/textentry.css?contenthash=DxafS6Qx",
       "../../../css/applications/community/coercingtextinput.css?contenthash=iPcpBsJv",
-      "./segmentedcontrol.js?contenthash=Bpco-xw4",
+      "./segmentedcontrol.js?contenthash=805r5BY7",
       "../../../css/applications/community/segmentedcontrol.css?contenthash=BXY6MfVY",
-      "./textarea.js?contenthash=IqNiGXTc",
-      "./avatarurl.js?contenthash=DJKkfZde",
-      "./filehandling.js?contenthash=CnS8am5t",
-      "./slider.js?contenthash=e6DUePKI",
+      "./textarea.js?contenthash=BFWS2Z4-",
+      "./avatarurl.js?contenthash=C7AnAYit",
+      "./filehandling.js?contenthash=CgC1PsDk",
+      "./slider.js?contenthash=CO0Pvre4",
       "../../../css/applications/community/slider.css?contenthash=D9rMOvcL",
       "../../../css/applications/community/filehandling.css?contenthash=D9N6JaNm",
       "./with-selector.js?contenthash=Dze6Z0CG",
-      "./languagepicker.js?contenthash=CellRLr5",
-      "./playerstore.js?contenthash=BQuJfss1",
-      "./persona.js?contenthash=B2syw8vR",
+      "./languagepicker.js?contenthash=ghJAjTZ3",
+      "./playerstore.js?contenthash=QC5JmZrf",
+      "./persona.js?contenthash=Bx7yOXHn",
       "../../../css/applications/community/languagepicker.css?contenthash=CvYJE9Ol",
-      "./bbcode_lists.js?contenthash=7QV5htaz",
+      "./bbcode_lists.js?contenthash=BU28O1Xl",
       "../../../css/applications/community/bbcode_lists.css?contenthash=jdjaeeTu",
-      "./clanimagepicker.js?contenthash=Dce3xjCT",
+      "./clanimagepicker.js?contenthash=CNq-gH6K",
       "../../../css/applications/community/clanimagepicker.css?contenthash=Bt0HWXDS",
-      "./pmbbcodeschema.js?contenthash=CUCLppTZ",
+      "./pmbbcodeschema.js?contenthash=CSrMIV_a",
       "../../../css/applications/community/pmbbcodeschema.css?contenthash=DibKbj8g",
-      "./collapseablesection.js?contenthash=fbfQGhZ7",
+      "./collapseablesection.js?contenthash=DKqlAOnb",
       "../../../css/applications/community/collapseablesection.css?contenthash=CY5rgv5g",
-      "../../../css/applications/community/eventrow.css?contenthash=DTdenTCT",
-      "./linkplugin.js?contenthash=BfRL_epD",
+      "../../../css/applications/community/eventrow.css?contenthash=BOKCRMCv",
+      "./linkplugin.js?contenthash=Dly7xse1",
       "../../../css/applications/community/linkplugin.css?contenthash=Cu_k08oi",
       "../../../css/applications/community/richeventeditor.css?contenthash=BaPgF0Dh",
     ]),
@@ -159,7 +159,7 @@ import {
   _,
   _,
   _,
-} from "./partnereventmigrate.js?contenthash=D6iQxd_v";
+} from "./partnereventmigrate.js?contenthash=C64m1rzW";
 import {
   _,
   _,
@@ -291,7 +291,7 @@ import {
   _,
   _,
   _,
-} from "./eventrow.js?contenthash=BhscLvp2";
+} from "./eventrow.js?contenthash=EEDvA4vn";
 import {
   _,
   _,
@@ -332,11 +332,13 @@ import {
   _,
   _,
   _,
-} from "./salebanner.js?contenthash=CGp1YmSU";
-import { _, _, _, _, _, _, _, _ } from "./clanstore.js?contenthash=ipycUSTp";
-import { _ } from "./throbber.js?contenthash=Cd5Ml_20";
-import { _, _ } from "./filehandling.js?contenthash=CnS8am5t";
-import { _ } from "./emoticonbutton.js?contenthash=D7f64lEU";
+  _,
+  _,
+} from "./vodquery.js?contenthash=HhWAmKPF";
+import { _, _, _, _, _, _, _, _ } from "./clanstore.js?contenthash=CzD0CJ_-";
+import { _ } from "./throbber.js?contenthash=Bw9DjjzR";
+import { _, _ } from "./filehandling.js?contenthash=CgC1PsDk";
+import { _ } from "./emoticonbutton.js?contenthash=C-ywMWUv";
 import {
   _,
   _,
@@ -347,7 +349,7 @@ import {
   _,
   _,
   _,
-} from "./apppartnereventspage.js?contenthash=BgeoB7uU";
+} from "./apppartnereventspage.js?contenthash=B-0tKuZf";
 import {
   _,
   _,
@@ -364,22 +366,20 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-} from "./carouselarrows.js?contenthash=BswsvuFh";
+} from "./carouselarrows.js?contenthash=B-wWvUjH";
 import { _ } from "./ajaxhooks.js?contenthash=fHwhjvXf";
 import { _ } from "./historyutils.js?contenthash=j-8hxDg1";
-import { _, _ } from "./tabbar.js?contenthash=BwB8L3fw";
-import { _ } from "./eventtime.js?contenthash=gCu_cY7X";
-import { _, _, _, _ } from "./localdateandtime.js?contenthash=B8Choir7";
-import { _, _, _, _, _, _, _ } from "./languagepicker.js?contenthash=CellRLr5";
+import { _, _ } from "./tabbar.js?contenthash=A_xXrRUD";
+import { _, _, _ } from "./eventdevfeaturestore.js?contenthash=CkCkh4cG";
+import { _, _ } from "./localdateandtime.js?contenthash=C9AX1CIg";
+import { _, _, _, _, _, _, _ } from "./languagepicker.js?contenthash=ghJAjTZ3";
 import { _, _, _ } from "./partnereventdialog.module.js?contenthash=C6nNSZgO";
-import { _, _ } from "./simplesuccesserror.js?contenthash=UNgaugE8";
-import { _ } from "./visibilitytracker.js?contenthash=BQuUeP7f";
-import { _ } from "./appinfostore.js?contenthash=Ds-s6KRg";
-import { _ } from "./playerstore.js?contenthash=BQuJfss1";
-import { _ } from "./storeitemhooks.js?contenthash=BQ6Er2NU";
-import { _ } from "./linktoeventforusertocopy.js?contenthash=Cul987CQ";
+import { _, _ } from "./simplesuccesserror.js?contenthash=kMQCj-WX";
+import { _ } from "./visibilitytracker.js?contenthash=DWRSJ6bK";
+import { _ } from "./appinfostore.js?contenthash=CBIrcRUp";
+import { _ } from "./playerstore.js?contenthash=QC5JmZrf";
+import { _ } from "./storeitemhooks.js?contenthash=5Zs7_In4";
+import { _ } from "./linktoeventforusertocopy.js?contenthash=BVQc3EJ1";
 import {
   _,
   _,
@@ -412,7 +412,7 @@ import {
   _,
   _,
   _,
-} from "./clanimagepicker.js?contenthash=Dce3xjCT";
+} from "./clanimagepicker.js?contenthash=CNq-gH6K";
 import {
   _,
   _,
@@ -560,10 +560,10 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=BMjFHmU0";
-import { _, _ } from "./collapseablesection.js?contenthash=fbfQGhZ7";
-import { _ } from "./giveawaystore.js?contenthash=CzLibWaM";
-import { _ } from "./partnereventsavebutton.module.js?contenthash=M5HvgJb-";
+} from "./main.js?contenthash=DniUHuiT";
+import { _, _ } from "./collapseablesection.js?contenthash=DKqlAOnb";
+import { _ } from "./giveawaystore.js?contenthash=DZVzAQAe";
+import { _ } from "./partnereventsavebutton.module.js?contenthash=guOICNwP";
 import {
   _,
   _,
@@ -574,8 +574,8 @@ import {
   _,
   _,
   _,
-} from "./valvecrowdinsyncpanel.js?contenthash=XPHXnQlO";
-import { _ } from "./managefriends.js?contenthash=DMksPPif";
+} from "./valvecrowdinsyncpanel.js?contenthash=C3bN2JJy";
+import { _ } from "./managefriends.js?contenthash=aMYoaCxx";
 async function _() {
   let _ = await _(`ajaxgetuserdeckcompatcounts`, new URLSearchParams());
   if (!_.counts)
@@ -5825,22 +5825,10 @@ function _(_) {
 var _ = _((_) => {
     let { editModel: _ } = _,
       [_, _] = _(() => [_.GetAppID(), _.GetEventType()]),
-      _ = !!(
-        _.BHasSomeImage(`product_banner`) &&
-        _.GetEventModel().BHasTag(`hide_store`)
-      ),
-      _ = !!(
-        _.BHasSomeImage(`product_mobile_banner`) &&
-        _.GetEventModel().BHasTag(`hide_store`)
-      ),
       _ = _ == 36,
       _ = _(_.GetClanSteamID(), !0),
       _ = (_, _ = !1) => _(_, _),
       _ = (_, _ = !1) => _(_, _),
-      _ = _.GetEventModel().jsondata.localized_sale_product_banner?.length || 0,
-      _ =
-        _.GetEventModel().jsondata.localized_sale_product_mobile_banner
-          ?.length || 0,
       _ = _.GetEventModel().jsondata.localized_sale_logo?.length || 0,
       _ = _.GetEventModel().jsondata.localized_sale_overlay?.length || 0,
       _ = _(_.GetEventModel().jsondata.sale_logo_url),
@@ -5848,13 +5836,7 @@ var _ = _((_) => {
     return (
       _
         ? _.push(`sale_header`)
-        : (_.push(
-            `sale_header`,
-            `product_banner`,
-            `product_mobile_banner`,
-            `sale_logo`,
-          ),
-          _ && _.push(`sale_overlay`)),
+        : (_.push(`sale_header`, `sale_logo`), _ && _.push(`sale_overlay`)),
       (0, _.jsxs)(_.Fragment, {
         children: [
           (0, _.jsx)(_, {
@@ -5969,67 +5951,6 @@ var _ = _((_) => {
                     ],
                   }),
                 ],
-              }),
-            }),
-          !_ &&
-            (0, _.jsx)(_, {
-              strSectionId: `SalePageEdit_SaleBanner`,
-              children: (0, _.jsx)(_, {
-                _: `SalePageEdit_SaleBanner`,
-                clanSteamID: _.GetClanSteamID(),
-                eventModel: _.GetEventModel(),
-                appid: _,
-                fnLangHasData: (_) => _.BHasImage(`product_banner`, _),
-                fnSetImageURL: _.SetImageURL,
-                fnGetImageHashAndExt: _.GetImageHashAndExt,
-                title: _(`#EventEditor_ArtworkType_sale_product_banner`),
-                artworkType: `product_banner`,
-                bIsMinimized: _(`product_banner`),
-                fnToggleMinimize: () => _(`product_banner`),
-                strWarning: _ ? _(`#Sale_BannerVisibility_Warning`) : void 0,
-                elEventArtworkExample: (0, _.jsx)(_, {
-                  artworkType: `product_banner`,
-                }),
-                partnerEventStore: _,
-                fnRemoveAllArtwork:
-                  _ == 0
-                    ? void 0
-                    : () => {
-                        _(() => {
-                          (_.GetEventModel().jsondata.localized_sale_product_banner =
-                            []),
-                            _.SetDirty(_.jsondata_sales);
-                        });
-                      },
-              }),
-            }),
-          !_ &&
-            (0, _.jsx)(_, {
-              strSectionId: `SalePageEdit_SaleMobileBanner`,
-              children: (0, _.jsx)(_, {
-                _: `SalePageEdit_SaleMobileBanner`,
-                clanSteamID: _.GetClanSteamID(),
-                eventModel: _.GetEventModel(),
-                appid: _,
-                title: _(`#EventEditor_ArtworkType_sale_product_mobile_banner`),
-                artworkType: `product_mobile_banner`,
-                bIsMinimized: _(`product_mobile_banner`),
-                fnToggleMinimize: () => _(`product_mobile_banner`),
-                fnLangHasData: (_) => _.BHasImage(`product_mobile_banner`, _),
-                fnSetImageURL: _.SetImageURL,
-                fnGetImageHashAndExt: _.GetImageHashAndExt,
-                partnerEventStore: _,
-                strWarning: _ ? _(`#Sale_BannerVisibility_Warning`) : void 0,
-                fnRemoveAllArtwork:
-                  _ == 0
-                    ? void 0
-                    : () => {
-                        _(() => {
-                          (_.GetEventModel().jsondata.localized_sale_product_mobile_banner =
-                            []),
-                            _.SetDirty(_.jsondata_sales);
-                        });
-                      },
               }),
             }),
           !_ &&
@@ -9529,7 +9450,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./monacoeditor.js?contenthash=BBQiJMOH`).then((_) => _._),
+    () => import(`./monacoeditor.js?contenthash=BQLn2zpn`).then((_) => _._),
     __vite__mapDeps([0, 1, 2, 3, 4, 5]),
     import.meta.url,
   ),
@@ -10966,7 +10887,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
   _(
-    () => import(`./richeventeditor.js?contenthash=DIoEnRH6`),
+    () => import(`./richeventeditor.js?contenthash=fUwHCGdM`),
     __vite__mapDeps([
       6, 1, 2, 7, 8, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
       22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
@@ -17207,7 +17128,7 @@ var _ = class extends _.Component {
       { permissions: _ } = this.props,
       _ = _.GetClanInfoByClanAccountID(_.GetClanSteamID().GetAccountID());
     if (!_?.can_edit) return (0, _.jsx)(_.Fragment, {});
-    let _ = _.BHasSaleEnabled() || _.is_ogg,
+    let _ = !!_.is_ogg,
       _ =
         (_.BWillShowOnLibraryOverviewDueToSettings() ||
           _.BWillShowOnLibraryDetailDueToSettings()) &&
@@ -17401,58 +17322,6 @@ var _ = class extends _.Component {
                             }),
                           ],
                         }),
-                      ],
-                    }),
-                  _.BHasSaleEnabled() &&
-                    (0, _.jsxs)(`div`, {
-                      className: void 0,
-                      children: [
-                        (0, _.jsxs)(`div`, {
-                          className: `_9lP2K5bPXc8-`,
-                          children: [
-                            (0, _.jsxs)(`span`, {
-                              className: `tWP3XkJX04Y-`,
-                              children: [
-                                (0, _.jsx)(_, {
-                                  bOn: _.BHasSaleProductBanners(),
-                                }),
-                                (0, _.jsx)(`span`, {
-                                  className: `uGTR8ycGstw-`,
-                                  children: _(`#EventReach_SaleBanner`),
-                                }),
-                              ],
-                            }),
-                            (0, _.jsx)(_, {
-                              tooltip: _(`#EventReach_SaleBanner_ttip`),
-                            }),
-                          ],
-                        }),
-                        !!(
-                          _.BHasSaleProductBanners() &&
-                          _.GetEventStartTime() &&
-                          _.GetEventEndTime()
-                        ) &&
-                          (0, _.jsxs)(_.Fragment, {
-                            children: [
-                              (0, _.jsx)(`br`, {}),
-                              (0, _.jsx)(`div`, {
-                                children: _(
-                                  `#EventReact_SaleBannerDuration`,
-                                  (0, _.jsx)(_, {
-                                    dateAndTime: _.GetEventStartTime(),
-                                    bSingleLine: !0,
-                                  }),
-                                  (0, _.jsx)(_, {
-                                    dateAndTime: Math.min(
-                                      _.GetEventEndTime(),
-                                      _.GetEventStartTime() + 1209600,
-                                    ),
-                                    bSingleLine: !0,
-                                  }),
-                                ),
-                              }),
-                            ],
-                          }),
                       ],
                     }),
                 ],

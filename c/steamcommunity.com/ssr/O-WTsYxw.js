@@ -120,6 +120,25 @@ function _(_, _, _) {
       : _.Localize(`#${_}XSeconds`, _)
     : _.Localize(`#${_}LessThanAMinute`);
 }
+function _(_, _, _) {
+  let _;
+  _ =
+    _ === void 0 || _ === !0 || _ === !1
+      ? {
+          weekday: _ ? `long` : `short`,
+          year: _ ? void 0 : `numeric`,
+        }
+      : _;
+  let _ = new Date(_ * 1e3),
+    _ = {
+      weekday: `short`,
+      month: `long`,
+      day: `numeric`,
+      year: `numeric`,
+      ..._,
+    };
+  return _.toLocaleDateString(_(), _);
+}
 function _(_, _) {
   let _ = new Date(_ * 1e3),
     _ = {
@@ -287,4 +306,4 @@ function _(_) {
   }
   return _.Localize(`#Playtime_Minutes`, _.toLocaleString(_()));
 }
-export { _, _, _, _, _, _, _, _, _, _ };
+export { _, _, _, _, _, _, _, _, _, _, _ };

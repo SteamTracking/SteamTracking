@@ -1418,6 +1418,9 @@ function _(_, _) {
     ? _.BFocusFirstChild(_.GAMEPAD)
     : _ == _.BACKWARD && _.BFocusLastChild(_.GAMEPAD);
 }
+function _(_) {
+  return _.Element.checkVisibility();
+}
 function _(_, _) {
   if (_(_, _)) return !0;
   if (typeof _ != `object` || !_ || typeof _ != `object` || !_) return !1;
@@ -11342,6 +11345,7 @@ function _(_) {
   });
 }
 export {
+  _,
   _,
   _,
   _,

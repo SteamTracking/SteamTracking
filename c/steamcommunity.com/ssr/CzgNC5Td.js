@@ -1,3 +1,25 @@
+function _(_, _) {
+  switch (_) {
+    case 1:
+      return _.mtx_tags ?? [];
+    case 0:
+      return _.readytouse_tags ?? [];
+    case 2:
+      return _.collection_tags ?? [];
+    case 4:
+      return _.video_tags ?? [];
+    case 11:
+      return _.merch_tags ?? [];
+    case 3:
+      return _.image_tags ?? [];
+    case 9:
+    case 10:
+      return _.guide_tags ?? [];
+    case 5:
+      return _.screenshot_tags ?? [];
+  }
+  return _.declared_tags ?? [];
+}
 var _ = _(_(), 1),
   _ = [
     `accepted`,
@@ -203,28 +225,6 @@ function _(_) {
     (_.required_apps_preset = _.required_apps_preset),
     _
   );
-}
-function _(_, _) {
-  switch (_) {
-    case 1:
-      return _.mtx_tags ?? [];
-    case 0:
-      return _.readytouse_tags ?? [];
-    case 2:
-      return _.collection_tags ?? [];
-    case 4:
-      return _.video_tags ?? [];
-    case 11:
-      return _.merch_tags ?? [];
-    case 3:
-      return _.image_tags ?? [];
-    case 9:
-    case 10:
-      return _.guide_tags ?? [];
-    case 5:
-      return _.screenshot_tags ?? [];
-  }
-  return _.declared_tags ?? [];
 }
 var _ = _(),
   _ = (0, _.createContext)(void 0),
