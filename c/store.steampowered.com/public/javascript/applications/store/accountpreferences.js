@@ -3,75 +3,86 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./familymanagement.js?contenthash=CIcjaZ5J",
+      "./familymanagement.js?contenthash=D7N__VkG",
       "./rolldown-runtime.js?contenthash=C8f2gWku",
       "./libraries.js?contenthash=CNC_iAx3",
-      "./storelink.js?contenthash=Dhys_WaT",
-      "./main.js?contenthash=BznMolNX",
+      "./storelink.js?contenthash=BMKqMLfg",
+      "./main.js?contenthash=CEU9gv_i",
       "../../../css/applications/store/main.css?contenthash=CL06k7su",
       "../../../css/applications/store/storelink.css?contenthash=DfLuucjw",
-      "./saletags.js?contenthash=DoLX4tdp",
+      "./saletags.js?contenthash=CXV464zr",
       "./usedataloader.client.js?contenthash=BsFeMYKq",
-      "./claninfo.js?contenthash=CtuOw8c0",
-      "./storeurl.js?contenthash=DQcOzpFx",
-      "./modals.js?contenthash=-J0D2LgG",
-      "./ostype.js?contenthash=BAtN0FKn",
+      "./claninfo.js?contenthash=BM4Myj5Q",
+      "./storeurl.js?contenthash=Bmu2Xql6",
+      "./modals.js?contenthash=Cy3XNDdI",
+      "./ostype.js?contenthash=B73NwR34",
       "../../../css/applications/store/ostype.css?contenthash=x1XGuNl0",
-      "./microtrailerdisplay.js?contenthash=ef7ndmmL",
+      "./microtrailerdisplay.js?contenthash=CRjeWLbQ",
       "../../../css/applications/store/microtrailerdisplay.css?contenthash=Cfa2oe-r",
       "./ajaxhooks.js?contenthash=DzoC2RB5",
       "./historyutils.js?contenthash=DxNfPuHi",
-      "./throbber.js?contenthash=Dip9pbhW",
+      "./throbber.js?contenthash=BuHm3XV3",
       "../../../css/applications/store/throbber.css?contenthash=DMWv5jTr",
       "./stringutils.js?contenthash=Dlrxs4RX",
-      "./linkfilter.js?contenthash=BHgKtilh",
-      "./saletechredirectsignin.js?contenthash=BHSzekIy",
+      "./linkfilter.js?contenthash=4s39qjY1",
+      "./saletechredirectsignin.js?contenthash=NMpddBkz",
       "./partnereventshared.module.js?contenthash=C0PbqCeD",
       "../../../css/applications/store/partnereventshared.css?contenthash=BGIA11o9",
-      "./personautils.js?contenthash=doLUvo2u",
-      "./csstransitionwrapper.js?contenthash=0wMjQ3Wh",
+      "./personautils.js?contenthash=uZSmg6WH",
+      "./csstransitionwrapper.js?contenthash=DUyy3f_O",
       "../../../css/applications/store/csstransitionwrapper.css?contenthash=5k1i5yPG",
-      "./remotedownloadhooks.js?contenthash=BDYP-tqi",
-      "./steammessages_clan_pb.js?contenthash=BwMrK2FR",
+      "./remotedownloadhooks.js?contenthash=D_-0KDjj",
+      "./steammessages_clan_pb.js?contenthash=Cb2lziL3",
       "../../../css/applications/store/saletags.css?contenthash=Be_ydV96",
       "./moment.js?contenthash=Csw2oUrB",
-      "./privateapps.js?contenthash=3gs3WoPV",
-      "./playerstore.js?contenthash=CLb-2PJ8",
-      "./persona.js?contenthash=Bj-c3wPl",
-      "./appinfostore.js?contenthash=BLWYWn64",
-      "./appinfo.js?contenthash=COB-FpDo",
-      "./playerlinkdetailsdataloader.js?contenthash=CYwFok5e",
-      "./storeitemhooks.js?contenthash=BXzASljm",
-      "./friendsstore.js?contenthash=BXEyDeer",
-      "./steammessages_friendslist_pb.js?contenthash=BxF9aLDO",
-      "./contentdescriptors.js?contenthash=CVlXGvcS",
-      "./expanderbutton.js?contenthash=BH2ZYZcw",
+      "./privateapps.js?contenthash=D4KQePeO",
+      "./playerstore.js?contenthash=KQnCmYV4",
+      "./persona.js?contenthash=Du3vObsI",
+      "./appinfostore.js?contenthash=Bg3yTUFI",
+      "./appinfo.js?contenthash=Ct_OEpPj",
+      "./playerlinkdetailsdataloader.js?contenthash=BN6ZnT77",
+      "./storeitemhooks.js?contenthash=BtUCknYN",
+      "./friendsstore.js?contenthash=Bkv1zTQO",
+      "./steammessages_friendslist_pb.js?contenthash=C392LNfT",
+      "./contentdescriptors.js?contenthash=HtkzUHAQ",
+      "./expanderbutton.js?contenthash=DlqYotnE",
       "../../../css/applications/store/expanderbutton.css?contenthash=7EgfjSu7",
-      "./steammessages_familygroups_pb.js?contenthash=DfRCqzce",
-      "./familymanagementstore.js?contenthash=D_wSQpTZ",
-      "./steamavatar.js?contenthash=Dy3p6yym",
+      "./steammessages_familygroups_pb.js?contenthash=Cm3Mi7bU",
+      "./familymanagementstore.js?contenthash=CPnNswFK",
+      "./steamavatar.js?contenthash=kJOydHS1",
       "./multisourceimage.js?contenthash=BKu7brjS",
       "../../../css/applications/store/steamavatar.css?contenthash=BQtkhJsu",
-      "./personanameandstatus.js?contenthash=BnxB6awt",
+      "./personanameandstatus.js?contenthash=DXnX0p8d",
       "./enums_epersonastateflag.js?contenthash=DUdzI8yJ",
-      "./alternate_icons.js?contenthash=CkoQASoE",
+      "./alternate_icons.js?contenthash=FGBYzySG",
       "../../../css/applications/store/personanameandstatus.css?contenthash=BMiL-wHD",
-      "./useavatarandpersona.js?contenthash=DCZp8uDX",
+      "./useavatarandpersona.js?contenthash=D9NgMQsE",
       "./react-datetime.js?contenthash=CIC02Ql_",
       "../../../css/applications/store/react-datetime.css?contenthash=BLBSEpof",
-      "./layout.js?contenthash=lKAUroBd",
+      "./layout.js?contenthash=D-LtguNX",
       "../../../css/applications/store/layout.css?contenthash=CjyZtTRZ",
       "../../../css/applications/store/familymanagement.css?contenthash=C14v1NI8",
     ]),
 ) => _.map((_) => _[_]);
 import { _, _ } from "./rolldown-runtime.js?contenthash=C8f2gWku";
-import { _, _, _, _, _, _, _, _, _ } from "./libraries.js?contenthash=CNC_iAx3";
-import { _ } from "./image.js?contenthash=CzbmM4iF";
-import { _, _ } from "./ostype.js?contenthash=BAtN0FKn";
-import { _ } from "./throbber.js?contenthash=Dip9pbhW";
-import { _ } from "./eventdevfeaturestore.js?contenthash=CXIdHFd_";
-import { _ } from "./playerstore.js?contenthash=CLb-2PJ8";
-import { _ } from "./storeitemhooks.js?contenthash=BXzASljm";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./libraries.js?contenthash=CNC_iAx3";
+import { _ } from "./image.js?contenthash=CdimkLbC";
+import { _, _ } from "./ostype.js?contenthash=B73NwR34";
+import { _ } from "./throbber.js?contenthash=BuHm3XV3";
+import { _ } from "./eventdevfeaturestore.js?contenthash=DN9YNF19";
+import { _ } from "./playerstore.js?contenthash=KQnCmYV4";
+import { _ } from "./storeitemhooks.js?contenthash=BtUCknYN";
 import {
   _,
   _,
@@ -126,10 +137,10 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=BznMolNX";
-import "./steammessages_twofactor_pb.js?contenthash=Dgowhqec";
-import { _ } from "./steamavatar.js?contenthash=Dy3p6yym";
-import { _, _ } from "./playteststore.js?contenthash=Z1XQWlYn";
+} from "./main.js?contenthash=CEU9gv_i";
+import "./steammessages_twofactor_pb.js?contenthash=B9cYJ-68";
+import { _ } from "./steamavatar.js?contenthash=kJOydHS1";
+import { _, _ } from "./playteststore.js?contenthash=D94XTCh4";
 var _ = _(_()),
   _ = _(_()),
   _ = class {
@@ -3336,7 +3347,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
     _(
-      () => import(`./familymanagement.js?contenthash=CIcjaZ5J`),
+      () => import(`./familymanagement.js?contenthash=D7N__VkG`),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
@@ -3356,60 +3367,73 @@ var _ = _.lazy(() =>
   _ = (_) => {
     let _ = _.match.url,
       _ = _;
-    return (0, _.jsxs)(_, {
-      children: [
-        (0, _.jsx)(_, {
-          path: `${_}${_.CookieSettings()}`,
-          render: () =>
-            (0, _.jsx)(_, {
-              config: {
-                "cookie-preferences": () => (0, _.jsx)(_, {}),
-              },
-            }),
-        }),
-        (0, _.jsx)(_, {
-          path: `${_}${_.FamilyManagement()}`,
-          render: () =>
-            (0, _.jsx)(_, {
-              config: {
-                "family-management": () => (0, _.jsx)(_, {}),
-              },
-            }),
-        }),
-        (0, _.jsx)(_, {
-          path: `${_}${_.SecurityDevices()}`,
-          render: () =>
-            (0, _.jsx)(_, {
-              config: {
-                "security-devices": () => (0, _.jsx)(_, {}),
-              },
-            }),
-        }),
-        (0, _.jsx)(_, {
-          path: `${_}${_.PlaytestInvites()}`,
-          render: () =>
-            (0, _.jsx)(_, {
-              config: {
-                "playtest-invites": () =>
-                  (0, _.jsx)(_, {
-                    bShowPlaytestOverview: !0,
-                  }),
-              },
-            }),
-        }),
-        (0, _.jsx)(_, {
-          path: `${_}${_.Playtests()}`,
-          render: () =>
-            (0, _.jsx)(_, {
-              config: {
-                playtests: (_) =>
-                  (0, _.jsx)(_, {
-                    ..._,
-                  }),
-              },
-            }),
-        }),
-      ],
-    });
+    return (
+      _(),
+      (0, _.jsxs)(_, {
+        children: [
+          (0, _.jsx)(_, {
+            path: `${_}${_.CookieSettings()}`,
+            render: () =>
+              (0, _.jsx)(_, {
+                config: {
+                  "cookie-preferences": () => (0, _.jsx)(_, {}),
+                },
+              }),
+          }),
+          (0, _.jsx)(_, {
+            path: `${_}${_.FamilyManagement()}`,
+            render: () =>
+              (0, _.jsx)(_, {
+                config: {
+                  "family-management": () => (0, _.jsx)(_, {}),
+                },
+              }),
+          }),
+          (0, _.jsx)(_, {
+            path: `${_}${_.SecurityDevices()}`,
+            render: () =>
+              (0, _.jsx)(_, {
+                config: {
+                  "security-devices": () => (0, _.jsx)(_, {}),
+                },
+              }),
+          }),
+          (0, _.jsx)(_, {
+            path: `${_}${_.PlaytestInvites()}`,
+            render: () =>
+              (0, _.jsx)(_, {
+                config: {
+                  "playtest-invites": () =>
+                    (0, _.jsx)(_, {
+                      bShowPlaytestOverview: !0,
+                    }),
+                },
+              }),
+          }),
+          (0, _.jsx)(_, {
+            path: `${_}${_.Playtests()}`,
+            render: () =>
+              (0, _.jsx)(_, {
+                config: {
+                  playtests: (_) =>
+                    (0, _.jsx)(_, {
+                      ..._,
+                    }),
+                },
+              }),
+          }),
+        ],
+      })
+    );
   };
+function _() {
+  let { hash: _ } = _();
+  (0, _.useEffect)(() => {
+    if (_ && _.length > 1) {
+      let _ = _.replace(`#`, ``),
+        _ = document.getElementById(_);
+      _ && _.scrollIntoView();
+    }
+  }, [_]);
+}
 export { _ as AccountPreferencesRoutes, _ as default };
