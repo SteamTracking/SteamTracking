@@ -568,7 +568,6 @@ $ORIGIN
 *pcubEncryptedData
 *pcubPlaintextData
 ++CCUNG
-++CCUNG$R
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -1604,7 +1603,6 @@ $ORIGIN
 200 Mbps
 200M
 2048
-20:32:26
 20CHTMLBaseProtoBufMsg
 20CIBusCallbackManager
 20CMsgGetCookiesForURL
@@ -1668,6 +1666,7 @@ $ORIGIN
 21CefV8StackFrameCToCpp
 21CefV8StackTraceCToCpp
 21CefWriteHandlerCppToC
+22:09:40
 22CBrowserComposerSystem
 22CFrameEventPerfTracker
 22CMsgAckPIDShuttingDown
@@ -2455,6 +2454,7 @@ BITLIST
 BITSTR
 BITSTRING
 BITWRAP
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
 BIsValidBrowserHandle( htmlCommand.BodyConst().browser_handle(), iClient_ )
 BLAKE2b512
@@ -7214,7 +7214,7 @@ NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
 NotifyUserActivation
-Nov  2 2026
+Nov  5 2026
 November
 Num Lock
 Num Lock Toggle
@@ -9908,6 +9908,7 @@ V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
+V_StripLastDir
 V_URLContainsDomain
 V_URLDecodeRaw
 V_URLParse
@@ -19227,6 +19228,7 @@ numElements >= 0
 num_tickets
 number
 number too large
+nvme
 nytimes.com
 o2i_ECPublicKey
 o2i_SCT

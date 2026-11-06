@@ -655,6 +655,7 @@ $ORIGIN
 %s: sending host environment restart request\n
 %s: set hostname to %s\n
 %s: set timezone to %s\n
+%s: sharing Steam libraries: %s\n
 %s: steam requested a restart, re-launching on host\n
 %s: system does not meet steamrt requirements\n
 %s: waitid failed: '%s'
@@ -919,6 +920,7 @@ $ORIGIN
 *pcubSignature > 0
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG[b~
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +automatic
@@ -1382,7 +1384,6 @@ $ORIGIN
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEF`YT
 0123456789abcdef
 1 Mbps
 1.2.11
@@ -1901,10 +1902,6 @@ $ORIGIN
 2048
 208.64.200.0/22
 208.78.164.0/22
-20:32:20
-20:32:32
-20:32:33
-20:32:34
 20CCDDBAppDetailCommon
 20CECSigningPrivateKey
 20CNetFilterEncryption
@@ -1934,6 +1931,10 @@ $ORIGIN
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:07:03
+22:09:25
+22:09:26
+22:09:41
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2731,6 +2732,7 @@ BITWRAP
 BIsDTLS()
 BIsDirectoryWritable Yielding IO Job
 BIsFixedDisk Yielding IO Job
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
 BIsSameFilesystem Yielding IO Job
 BIsValidDirectory Yielding IO Job
@@ -6057,6 +6059,7 @@ LegionGoS
 Length Required
 Libpng jmp_buf still allocated
 Library
+LibraryFolders
 License Imported From Steam2
 License expired
 LicenseType
@@ -6725,7 +6728,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov  2 2026
+Nov  5 2026
 November
 NullMetrics()
 NumTickets
@@ -7969,6 +7972,7 @@ STEAM_BIGPICTURE
 STEAM_BOOTSTRAP_LOG_VERBOSE
 STEAM_CLIENT_CONFIG_FILE
 STEAM_CLIENT_LOG_FOLDER
+STEAM_COMPAT_MOUNTS
 STEAM_DESKTOP_APP_AFFINITY_LIST
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_GAME
@@ -8110,6 +8114,7 @@ Settings Changed
 Setup Error
 SetupLinuxConfigDir
 Shader
+ShareExistingSteamLibraries
 Shared Only
 Shared library locked
 Shell
@@ -8313,7 +8318,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Nov  2 2026 20:32:33
+Startup - updater built Nov  5 2026 22:09:26
 State
 StaticFileWriterThread()
 Steam
@@ -10816,6 +10821,7 @@ compressionAlgorithm
 compute_key
 computed
 config
+config/libraryfolders.vdf
 configstore
 configuration file routines
 conflicting calls to set alpha mode and background
@@ -12305,7 +12311,6 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
 givenName
 glBegin
 glBindTexture
@@ -15030,6 +15035,7 @@ numElements >= 0
 num_tickets
 number too large
 nv->name->len > 0
+nvme
 o2i_ECPublicKey
 o2i_SCT
 o2i_SCT_LIST
@@ -16822,6 +16828,7 @@ steamIDClan.GetEAccountType() == k_EAccountTypeClan
 steamRealm
 steam_client_
 steam_dev.cfg
+steamapps/libraryfolders.vdf
 steambeta
 steamchina
 steamclient

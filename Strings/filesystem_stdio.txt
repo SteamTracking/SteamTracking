@@ -176,6 +176,7 @@ BFilesystemAllowsExecution: failed to reopen fd: %d\n
 BFilesystemAllowsExecution: failed to write %s: %s\n
 BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
@@ -425,6 +426,7 @@ V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
+V_StripLastDir
 V_UTF8ToUTF32
 V_UnqualifiedFileName
 V_atoi
@@ -787,6 +789,7 @@ non-transaction clone for
 non-virtual thunk to
 num > 0
 numElements >= 0
+nvme
 obj_count
 obj_size
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut

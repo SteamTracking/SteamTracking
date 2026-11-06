@@ -14,9 +14,9 @@
           f = r(50777),
           m = r(7727),
           O = r(64932),
-          d = r(71262),
+          d = r(16528),
           N = r(69871),
-          A = r(20447),
+          A = r(15019),
           E = Object.defineProperty,
           R = Object.getOwnPropertyDescriptor,
           y = (t, e, s, o) => {

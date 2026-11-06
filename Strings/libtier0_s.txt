@@ -114,7 +114,7 @@ $ORIGIN
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-20:32:22
+22:07:13
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -348,7 +348,7 @@ Network
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov  2 2026
+Nov  5 2026
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol

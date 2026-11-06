@@ -45,6 +45,8 @@
     "SearchFriends": "Search Friends",
     "SearchByName": "Filter by Name",
     "SearchError": "An error occurred while searching",
+    "FriendsList_LoadFailed": "Couldn't load your friends list.",
+    "FriendsList_LoadFailed_Retry": "Retry",
     "Broadcast_Watching": "Watching:",
     "Broadcast_NowWatching": "Now watching:",
     "Broadcast_WatchStream": "Watch Stream",

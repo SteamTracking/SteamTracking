@@ -1103,7 +1103,6 @@ $ORIGIN
 2 Mbps
 200 Mbps
 200M
-20:32:28
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -1138,6 +1137,7 @@ $ORIGIN
 21CPurchaseLineItemInfo
 21CUtlCStringConversion
 21CreateDirectoryDialog
+22:07:48
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -1473,6 +1473,7 @@ BFilesystemAllowsExecution: failed to write %s: %s\n
 BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BResizeImageRGBA
@@ -4289,7 +4290,7 @@ Not supported.
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 NotificationClickPanel
-Nov  2 2026
+Nov  5 2026
 November
 Num Lock
 Num Lock Toggle
@@ -7716,6 +7717,7 @@ number after (?C is > 255
 number is too big
 number too big in {} quantifier
 numbers out of order in {} quantifier
+nvme
 nvmlDeviceGetCount_v2
 nvmlDeviceGetHandleByIndex_v2
 nvmlDeviceGetMemoryInfo

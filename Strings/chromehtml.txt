@@ -756,6 +756,7 @@ BFilesystemAllowsExecution: failed to reopen fd: %d\n
 BFilesystemAllowsExecution: failed to write %s: %s\n
 BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
 BOffScreenRendererBrowser( eBrowserType )
 BREAKPAD_DUMP_LOCATION
@@ -2104,6 +2105,7 @@ V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
+V_StripLastDir
 V_UTF8ToUTF32
 V_UnqualifiedFileName
 V_atoi
@@ -2832,6 +2834,7 @@ null
 nullptr output boolean given.
 num > 0
 numElements >= 0
+nvme
 obj_count
 obj_size
 odia

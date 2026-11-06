@@ -384,6 +384,7 @@ BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BHanIdeograph
 BIKE
 BIPFamiliesOverlap - unknown eServerFamilies value %d
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
 BLACK
 BLACKFRIDAY
@@ -1801,6 +1802,7 @@ non-transaction clone for
 non-virtual thunk to
 num > 0
 numElements >= 0
+nvme
 obj_count
 obj_size
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut

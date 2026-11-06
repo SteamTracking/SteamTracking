@@ -160,8 +160,8 @@ const __vite__mapDeps = (
       "./languagepicker.js?contenthash=CIp15g_B",
       "./editorlocalizationstore.js?contenthash=CAHej8DH",
       "../../../css/applications/appmgmt/buildpatchnotes.css?contenthash=n5tjT5tP",
-      "./promotion_routing.js?contenthash=DQsnwhgj",
-      "./promotionoperationowner.js?contenthash=5lhcls29",
+      "./promotion_routing.js?contenthash=DxLK399a",
+      "./promotionoperationowner.js?contenthash=CKngXEcC",
       "./marketingmessageevent.js?contenthash=BR4DzxSO",
       "../../../css/applications/appmgmt/marketingmessageevent.css?contenthash=DbKXx2FI",
       "./primarypartnercontext.js?contenthash=C34eLrtw",
@@ -207,8 +207,8 @@ const __vite__mapDeps = (
       "./cloudlocalizedartdisplay.js?contenthash=CF-st2u9",
       "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css?contenthash=CJgc3uaF",
       "../../../css/applications/appmgmt/promotionoperationowner.css?contenthash=BMr1Aq2o",
-      "./salesrouting.js?contenthash=BV7KVOG4",
-      "./optin_routing.js?contenthash=Bo2m9vsc",
+      "./salesrouting.js?contenthash=D_6uhBKW",
+      "./optin_routing.js?contenthash=DOnEoBLj",
       "./appadminrouter.js?contenthash=rMRwF7_F",
       "./phpintegration.js?contenthash=Ct_VuVs0",
       "./releasedateinfo.js?contenthash=BSt6vE-p",
@@ -227,7 +227,7 @@ const __vite__mapDeps = (
       "../../../css/applications/appmgmt/packageadmin.css?contenthash=D1QLSM5y",
       "./connections.js?contenthash=iB4M5j_3",
       "../../../css/applications/appmgmt/connections.css?contenthash=C2Hy6zmN",
-      "./landing.js?contenthash=yrlmLeRl",
+      "./landing.js?contenthash=CElNhHwx",
       "./recentapps.js?contenthash=HmN-6pHl",
       "../../../css/applications/appmgmt/recentapps.css?contenthash=BF2THleY",
       "./steammessages_partnerdeadline_pb.js?contenthash=DR0aOWrU",
@@ -239,13 +239,13 @@ const __vite__mapDeps = (
       "./tour.js?contenthash=Dokib-CR",
       "../../../css/applications/appmgmt/tour.css?contenthash=a_0H_DmF",
       "../../../css/applications/appmgmt/timelinemarkereditorlanding.css?contenthash=DkE7l4f1",
-      "./promotionreviewdashboard.js?contenthash=B3xcugNN",
+      "./promotionreviewdashboard.js?contenthash=DqCOCsnD",
       "../../../css/applications/appmgmt/promotionreviewdashboard.css?contenthash=x1XGuNl0",
       "./reservationqueuemessagingdashboard.js?contenthash=BwPhr1JQ",
       "../../../css/applications/appmgmt/reservationqueuemessagingdashboard.css?contenthash=DlqQi-f_",
       "./contenthub_routing.js?contenthash=CoiyhuS3",
       "../../../css/applications/appmgmt/contenthub_routing.css?contenthash=0kfC_Hr7",
-      "./recap_routing.js?contenthash=BNfeNNAG",
+      "./recap_routing.js?contenthash=C4-IncDR",
       "./deadlinelanding.js?contenthash=C_qlT2Ho",
       "../../../css/applications/appmgmt/deadlinelanding.css?contenthash=Dqt7byuq",
       "./taxrequirementlanding.js?contenthash=CHpNmmCJ",
@@ -1384,7 +1384,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./promotion_routing.js?contenthash=DQsnwhgj`),
+      () => import(`./promotion_routing.js?contenthash=DxLK399a`),
       __vite__mapDeps([
         157, 158, 1, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1404,7 +1404,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./salesrouting.js?contenthash=BV7KVOG4`),
+      () => import(`./salesrouting.js?contenthash=D_6uhBKW`),
       __vite__mapDeps([
         204, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1424,7 +1424,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./optin_routing.js?contenthash=Bo2m9vsc`),
+      () => import(`./optin_routing.js?contenthash=DOnEoBLj`),
       __vite__mapDeps([
         205, 158, 1, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1494,7 +1494,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./landing.js?contenthash=yrlmLeRl`),
+      () => import(`./landing.js?contenthash=CElNhHwx`),
       __vite__mapDeps([
         224, 1, 3, 158, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1525,7 +1525,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./promotionreviewdashboard.js?contenthash=B3xcugNN`),
+      () => import(`./promotionreviewdashboard.js?contenthash=DqCOCsnD`),
       __vite__mapDeps([
         236, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1570,7 +1570,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./recap_routing.js?contenthash=BNfeNNAG`),
+      () => import(`./recap_routing.js?contenthash=C4-IncDR`),
       __vite__mapDeps([
         242, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,

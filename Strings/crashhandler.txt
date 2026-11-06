@@ -233,9 +233,10 @@ $ORIGIN
 *N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGU
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNGu
+++CCUNGz
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -359,10 +360,10 @@ $ORIGIN
 18CUtlCharConversion
 19CDirContentsWatcher
 19CUtlNoEscConversion
-20:32:20
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
+22:07:03
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -393,6 +394,7 @@ BFilesystemAllowsExecution: failed to reopen fd: %d\n
 BFilesystemAllowsExecution: failed to write %s: %s\n
 BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
 BREAKPAD_DUMP_LOCATION
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
@@ -586,7 +588,7 @@ No Error
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov  2 2026
+Nov  5 2026
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol
@@ -1195,6 +1197,7 @@ non-virtual thunk to
 nsection > 0
 num > 0
 numElements >= 0
+nvme
 obj_count
 obj_size
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut

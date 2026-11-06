@@ -474,7 +474,6 @@ $ORIGIN
 *pcubPlaintextData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGB
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 ++KEY_PAD_PLUS
@@ -1361,6 +1360,7 @@ BITLIST
 BITSTR
 BITSTRING
 BITWRAP
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
 BLAKE2b512
 BLAKE2s256
@@ -5293,6 +5293,7 @@ V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
+V_StripLastDir
 V_UTF16ToUTF32
 V_UTF16ToUTF8
 V_UTF32ToUTF16
@@ -8012,7 +8013,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(F"
+ggen
 givenName
 glBegin
 glBindTexture
@@ -9717,6 +9718,7 @@ numElements <= m_nAllocationCount
 numElements >= 0
 num_tickets
 number too large
+nvme
 o2i_ECPublicKey
 o2i_SCT
 o2i_SCT_LIST

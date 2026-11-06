@@ -1571,7 +1571,6 @@ $RepresentationID$
 2048
 208.64.200.0/22
 208.78.164.0/22
-20:32:20
 20CAlignedYUV420Buffer
 20CCDDBAppDetailCommon
 20CECSigningPrivateKey
@@ -1599,6 +1598,7 @@ $RepresentationID$
 21CUtlCStringConversion
 21UserSystemInformation
 21VideoRepresentation_t
+22:07:03
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2606,6 +2606,7 @@ BITSTR
 BITSTRING
 BITWRAP
 BIsDTLS()
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
 BLAKE2b512
 BLAKE2s256
@@ -6524,7 +6525,7 @@ Not supported.
 Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov  2 2026
+Nov  5 2026
 November
 NullMetrics()
 NumTickets
@@ -12242,7 +12243,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(T8
 givenName
 glibcxx.eh_pool
 global constructors keyed to
@@ -14855,6 +14856,7 @@ numElements >= 0
 num_tickets
 number too large
 nv->name->len > 0
+nvme
 o2i_ECPublicKey
 o2i_SCT
 o2i_SCT_LIST

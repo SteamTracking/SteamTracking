@@ -592,11 +592,13 @@
 #TextEntry_SentenceMode
 #TimeZoneCities_Afghanistan
 #TimeZoneCities_Alaska
+#TimeZoneCities_Alberta
 #TimeZoneCities_Arabia
 #TimeZoneCities_Arabian
 #TimeZoneCities_Atlantic
 #TimeZoneCities_Azores
 #TimeZoneCities_Brazil
+#TimeZoneCities_BritishColumbia
 #TimeZoneCities_CapeVerde
 #TimeZoneCities_Caucasus
 #TimeZoneCities_Central
@@ -625,16 +627,19 @@
 #TimeZoneCities_Israel
 #TimeZoneCities_Japan
 #TimeZoneCities_Korea
+#TimeZoneCities_Manitoba
+#TimeZoneCities_Morocco
 #TimeZoneCities_Moscow
-#TimeZoneCities_Mountain
+#TimeZoneCities_MountainArizona
 #TimeZoneCities_MountainMexico
+#TimeZoneCities_MountainUS
 #TimeZoneCities_Myanmar
 #TimeZoneCities_Nepal
 #TimeZoneCities_NewZealand
 #TimeZoneCities_NorthAsia
 #TimeZoneCities_NorthAsiaEast
 #TimeZoneCities_NorthCentralAsia
-#TimeZoneCities_Pacific
+#TimeZoneCities_PacificUS
 #TimeZoneCities_SAmericaEast
 #TimeZoneCities_SAmericaPacific
 #TimeZoneCities_SAmericaWestern
@@ -653,11 +658,13 @@
 #TimeZoneCities_Yekaterinburg
 #TimeZoneRegion_Afghanistan
 #TimeZoneRegion_Alaska
+#TimeZoneRegion_Alberta
 #TimeZoneRegion_Arabia
 #TimeZoneRegion_Arabian
 #TimeZoneRegion_Atlantic
 #TimeZoneRegion_Azores
 #TimeZoneRegion_Brazil
+#TimeZoneRegion_BritishColumbia
 #TimeZoneRegion_CapeVerde
 #TimeZoneRegion_Caucasus
 #TimeZoneRegion_Central
@@ -686,6 +693,8 @@
 #TimeZoneRegion_Israel
 #TimeZoneRegion_Japan
 #TimeZoneRegion_Korea
+#TimeZoneRegion_Manitoba
+#TimeZoneRegion_Morocco
 #TimeZoneRegion_Moscow
 #TimeZoneRegion_Mountain
 #TimeZoneRegion_MountainArizona
@@ -2714,9 +2723,9 @@ ${LANGUAGE}
 ../steamUI/serverbrowsercontroller.cpp
 ../steamUI/settinghandler.cpp
 ../steamUI/settingscontroller.cpp
-../steamUI/settingscontroller.cpp:1672
-../steamUI/settingscontroller.cpp:1693
-../steamUI/settingscontroller.cpp:2776
+../steamUI/settingscontroller.cpp:1676
+../steamUI/settingscontroller.cpp:1697
+../steamUI/settingscontroller.cpp:2780
 ../steamUI/settingscontroller.h
 ../steamUI/settingsprofilemanager.cpp
 ../steamUI/sharedconnectioncontroller.cpp
@@ -9351,6 +9360,7 @@ Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 Adult Content
 Advertisement
 Affiliation Changed
+Africa/Casablanca
 Africa/Harare
 Africa/Lagos
 Africa/Nairobi
@@ -9403,6 +9413,7 @@ America/Chicago
 America/Chihuahua
 America/Costa_Rica
 America/Denver
+America/Edmonton
 America/Godthab
 America/Indiana/Indianapolis
 America/Los_Angeles
@@ -9412,6 +9423,8 @@ America/Phoenix
 America/Santiago
 America/Sao_Paulo
 America/St_Johns
+America/Vancouver
+America/Winnipeg
 American Express
 Amex (BoaCompra)
 Amharic
@@ -9917,6 +9930,7 @@ BIsDirectoryWritable Yielding IO Job
 BIsExtendedCECWakeDeviceSupported
 BIsFixedDisk Yielding IO Job
 BIsH264() || BIsHEVC() || BIsAV1()
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsInitialized()
 BIsJobRunning()
 BIsOpen()
@@ -19885,6 +19899,7 @@ Not yet started
 NotConnected
 NotEmptyFolder
 NotExecutableFolder
+NotSharedWithContainer
 NotWritableFolder
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
@@ -19916,7 +19931,7 @@ NotifyText: %s
 NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
-Nov  2 2026 20:32:32
+Nov  5 2026 22:09:01
 November
 NullMetrics()
 Num Lock
@@ -38436,6 +38451,7 @@ number too large
 number_value
 numbers out of order in {} quantifier
 nv->name->len > 0
+nvme
 nytimes.com
 o2i_ECPublicKey
 o2i_SCT

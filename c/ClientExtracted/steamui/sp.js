@@ -860,6 +860,9 @@
           summaryText: "_2MByvWz7Ec6CRwKDWFmHrS",
           detailText: "rORRrCcMO9z86bopxDvrH",
           retryButton: "hL2FPh5NpOjzuylSWv4GY",
+          FriendsListLoadFailed: "_2Wo5iWRmiQm7mIrm-i8rQ4",
+          FriendsListLoadFailedText: "_3J6-souL46VlGPRi5soFv5",
+          FriendsListLoadFailedRetry: "ReJNvHZrIcbTJPOz4aWZE",
           RadialMenuListener: "IW8DeQJgBXtUuI0FOBRP6",
         };
       },
@@ -2825,6 +2828,42 @@
       },
       chunkid: (module) => {
         module.exports = {
+          SteamAwardContainer: "_1zT23J-iuZdvW1Hj8yNcBP",
+          InLibraryView: "_2iKu12DNmjE-9irbO5xFOb",
+          SteamAwardHeader: "_8k6BNBgZhDy91HuoDaGtd",
+          SteamAwardHeaderImage: "_11ALNe1X162ORs17XzI_Fj",
+          SteamAwardMainCtn: "_2ajlWXu_YGTvZB9Pqzqo7y",
+          SteamAwardMainTitle: "_2jBX4uaJX8EUlyfxiHqpk6",
+          SteamAwardSubTitle: "Ed2GSeqhqu7cBjRwwFBa",
+          SteamAwardLearnMore: "_2E96VxOASE_tUdK7SkSTY1",
+          BottomRight: "_ognkQEKYwTojVKd0_1i5",
+          SteamAwardHeaderText: "_3YeTDoiTvSjCAg_V2lDV9X",
+          LinkText: "qMzOtTJTwwSqJkXqMlD-D",
+          SteamAwardVoteWidget: "_28FXUjr9HAtevPX8g9FbJ1",
+          SteamAwardVotePrompt: "s2U4KCqvbyfK-Kl_j2AGo",
+          SteamAwardCategoryTitle: "_1jZlG_d-h37HHqswyNnxOB",
+          VotingTitle: "Jpg30bB2y_a4vfXJPdcO_",
+          SteamAwardCategoryDesc: "_7R5jPJeXMc6jerRn1XQLG",
+          SteamAwardVoteButtonArea: "_3WFNSu9pbA0bgmBEjtI3hF",
+          SteamAwardVoteButton: "_1CIWKHNt7dv5eJo8mAAKb1",
+          SteamAwardVoteButtonText: "YVNpIZsxDxluzR5PCoy70",
+          SteamAwardVoteButtonSubmitted: "_3HVU7tmQOeotUwc_5xHS5J",
+          NominateCtn: "_2F6Xc0Ml2ndzeGEb5OpDUt",
+          SteamAwardNominateButton: "KUQWEmEzHDi4A-6ODk9OS",
+          Nominated: "_1qXy7wGERy3LB2ttWxS1r5",
+          SteamAwardNominationWidget: "wtNzGsQipO95BYQ5KAKjh",
+          SteamAwardLinkToNominationPage: "_1Rl7GqmTRO4BBmA57-EdFm",
+          SteamAwardVoteCheckBox: "_3XKdSW4g3CJj3Fel73ePzs",
+          SteamAwardModalGameTitle: "_3yduwvkmcZXu7aJnWz43SM",
+          ExpiredEventHeader: "_3wH5siMjRzLDXY_Q4FvEca",
+          AwardCategoriesCtn: "_3tnWjZcqeSxgpawIhY9F1w",
+          SteamAwardConflictModal: "_3jNIaFQyf-CFEMh1MnS4-s",
+          ConflictBody: "_37zI3mnjqdZy6KlPX1XI1H",
+          NominationSwitchCtn: "YS_TzXn1ZzjvsEQ6T_Wwp",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
           narrowWidth: "500px",
           ExpandRowButton: "r6FhuuUn6dvEsEckchXo5",
           Selected: "wOEL5nQgChVeJX_0DwcXg",
@@ -3894,42 +3933,6 @@
           LocalizeBlock: "_1oBceu_yGnJHhqsA8fmA7P",
           CheckMark: "_24AtTon5otxGQGBY3P6ATR",
           ScreenshotCarousel: "_3uA0hv9La9Do6XtRycM0RX",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          SteamAwardContainer: "_3n6v2rFCMX3yWMfZrlCn6g",
-          InLibraryView: "pqLczqVU9TDbWz5pl3Dhl",
-          SteamAwardHeader: "_2jgrTr2L4JVpD3vsEejL4u",
-          SteamAwardHeaderImage: "_lRFQTx2beRUJL_3ltFfr",
-          SteamAwardMainCtn: "_1uGju6QeFG7khpqA7DOs0-",
-          SteamAwardMainTitle: "_161Ybvvo7TQ80J6yOfcxC5",
-          SteamAwardSubTitle: "Sxxelbb28sRAaDXPxgcHP",
-          SteamAwardLearnMore: "VQlY6MEAqF6Wsflo-Q4Wz",
-          BottomRight: "zr64QF0O74AQ9RMG-dGnw",
-          SteamAwardHeaderText: "_2mrzKOE-ejrZezNROw3GcQ",
-          LinkText: "_2x4pgJBF4vbwBJ4KH2VOHG",
-          SteamAwardVoteWidget: "khWz0kU5EooSG60KYdU1K",
-          SteamAwardVotePrompt: "H5jrPn7OY-0ToSesPTrI6",
-          SteamAwardCategoryTitle: "JVE9ORqYtUCERl3y2i7_X",
-          VotingTitle: "_32ZmvScTqfRjiW9XXgyqR2",
-          SteamAwardCategoryDesc: "_1V-8WYatw7PvjVj9hsAptM",
-          SteamAwardVoteButtonArea: "_1v9LHwNb9fLu4yXs5L0jjz",
-          SteamAwardVoteButton: "cTcgISesI0T2M-9yed2AU",
-          SteamAwardVoteButtonText: "_247y340DSkN1t7QC8tUkFx",
-          SteamAwardVoteButtonSubmitted: "_1ouD4mct3_CdBoy_lzVyFJ",
-          NominateCtn: "_1SKPLx2FBvP9iC-lJHTkKQ",
-          SteamAwardNominateButton: "_1uxCjZZ940xsM0idye1IP-",
-          Nominated: "_1No9r92B3LLgMOaSMSC9vE",
-          SteamAwardNominationWidget: "_38gTf-DsRc7bVnxxQXxT3B",
-          SteamAwardLinkToNominationPage: "_3p83sGhSP-hikRKwITXId-",
-          SteamAwardVoteCheckBox: "_1G4MUqubjzDize874UIeYh",
-          SteamAwardModalGameTitle: "_15lc0ft7pgAlFXYbgePb-8",
-          ExpiredEventHeader: "_3O3XsKT-SiMNsMqyidMLvS",
-          AwardCategoriesCtn: "_2u4z7OT5MqNj-6wojCGnsr",
-          SteamAwardConflictModal: "_2Xqc9FL9PfCQl8Fo8d7I_L",
-          ConflictBody: "_3WKl_XpHUMGcIm4cNhlc_W",
-          NominationSwitchCtn: "r9nDOvHWyABfkiiurnMwl",
         };
       },
       chunkid: (module) => {
@@ -26724,7 +26727,19 @@
               (this.m_bMadeGetFriendsListRequest = !1),
               (this.m_iIntervalDelayLoadFriendsList = void 0);
           }
+          m_bFriendsListLoadFailed = !1;
+          get friends_list_load_failed() {
+            return this.m_bFriendsListLoadFailed;
+          }
+          RetryFriendsListLoad() {
+            _("Retrying failed friends list load"),
+              this.ResetFriendsListLoadedState(),
+              this.EnsureFriendsListLoaded();
+          }
+          m_iFriendsListRequestSeq = 0;
           async GetFriendsList() {
+            const _ = ++this.m_iFriendsListRequestSeq;
+            (0, _._)(() => (this.m_bFriendsListLoadFailed = !1));
             let _ = _._.Init(_._),
               _ = await _._.GetFriendsList(
                 this.m_CMInterface.GetServiceTransport(),
@@ -26738,11 +26753,19 @@
                   ? this.SetFriendsList(_)
                   : await this.SetInitialFriendsListInSlices(_);
             } else {
-              let _ = {
-                message: "ShowFriendsErrorRetryDialog",
-              };
-              window.parent.postMessage(_, "https://steamloopback.host"),
-                (0, _._)(!1, "GetFriendsList returned", _.GetEResult());
+              if (
+                _ != this.m_iFriendsListRequestSeq ||
+                !this.m_bMadeGetFriendsListRequest
+              )
+                return;
+              (0, _._)(
+                !1,
+                "GetFriendsList failed while connected",
+                _.GetEResult(),
+                _.Hdr().transport_error(),
+                _.Hdr().error_message(),
+              ),
+                (0, _._)(() => (this.m_bFriendsListLoadFailed = !0));
             }
           }
           get not_ready_to_render_reason() {
@@ -27543,6 +27566,7 @@
           _([_._], _.prototype, "m_bInitialPersonaStatesLoaded", 2),
           _([_._], _.prototype, "m_bInitialAppInfoLoaded", 2),
           _([_._], _.prototype, "OnPersonaStateUpdate", 1),
+          _([_._], _.prototype, "m_bFriendsListLoadFailed", 2),
           _([_._], _.prototype, "not_ready_to_render_reason", 1),
           _([_._], _.prototype, "OnParentalLockChanged", 1),
           _([_._], _.prototype, "all_friends", 1),
@@ -36278,7 +36302,9 @@
               this.m_DesktopApp.RegisterListeners(),
               await Promise.all([
                 this.CMInterface.Connect(),
-                this.UIStore.RestorePopupState(),
+                this.ready_to_render
+                  ? this.UIStore.RestorePopupState()
+                  : void 0,
               ]);
           }
           GetDefaultBrowserContext() {
@@ -37720,7 +37746,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -37976,15 +38001,14 @@
                     this.FireMemberListChanged(_);
                   return;
                 }
-                if (_ == _) {
-                  let _ = _ == _._ ? _.groupSingletons : _.mapBuckets.get(_);
-                  if (_ && _.BHasMember(_)) {
-                    this.UpdatePersonaForGroup(_, _);
-                    return;
-                  }
+                let _ = this.FindCurrentBucketForMember(_, _),
+                  _ = this.GetBucketIdForPlayer(_, _, _);
+                if (_ === _) {
+                  this.UpdatePersonaForGroup(_, _);
+                  return;
                 }
-                this.RemoveMemberFromBucket(_, _, _),
-                  this.AddMemberToBucketID(_, _, _._.FriendStore.GetPlayer(_)),
+                _ !== void 0 && this.RemoveMemberFromBucket(_, _, _),
+                  this.AddMemberToBucketID(_, _, _),
                   this.FireMemberListChanged(_);
               }
             });
@@ -39594,7 +39618,10 @@
                   _.CloseAllPopups();
                 }),
                 (this.m_bRestoredPopupState = !1))
-              : this.m_bParentalLocked === !0 && !_ && this.RestorePopupState(),
+              : this.m_bParentalLocked === !0 &&
+                !_ &&
+                _._.ready_to_render &&
+                this.RestorePopupState(),
               (this.m_bParentalLocked = _);
           }
           ShowFriendChatDialog(_, _, _ = !0, _ = !0) {
@@ -47014,32 +47041,18 @@
             return this.m_Settings.m_VoiceOutputGain;
           }
           GetUserMutedRemotely(_) {
-            let _ = this.m_mapUserVoiceStatus.get(_);
-            return (
-              _ == null && ((_ = new _()), this.m_mapUserVoiceStatus.set(_, _)),
-              _.mic_muted_locally
-            );
+            return this.m_mapUserVoiceStatus.get(_)?.mic_muted_locally ?? !1;
           }
           GetOutputMutedRemotely(_) {
-            let _ = this.m_mapUserVoiceStatus.get(_);
-            return (
-              _ == null && ((_ = new _()), this.m_mapUserVoiceStatus.set(_, _)),
-              _.output_muted_locally
-            );
+            return this.m_mapUserVoiceStatus.get(_)?.output_muted_locally ?? !1;
           }
           GetUserHasNoMicForSession(_) {
-            let _ = this.m_mapUserVoiceStatus.get(_);
             return (
-              _ == null && ((_ = new _()), this.m_mapUserVoiceStatus.set(_, _)),
-              _.has_no_mic_for_session
+              this.m_mapUserVoiceStatus.get(_)?.has_no_mic_for_session ?? !1
             );
           }
           GetUserSendsVideo(_) {
-            let _ = this.m_mapUserVoiceStatus.get(_);
-            return (
-              _ == null && ((_ = new _()), this.m_mapUserVoiceStatus.set(_, _)),
-              _.sends_video
-            );
+            return this.m_mapUserVoiceStatus.get(_)?.sends_video ?? !1;
           }
           ConvertSliderToGainValue(_, _) {
             return (
@@ -53709,7 +53722,7 @@
           (_.greek = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 34922, 19))),
           (_.hungarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 15019, 19))),
+            __webpack_require__._("chunkid").then(_._.bind(_, 37400, 19))),
           (_.indonesian = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 58346, 19))),
           (_.italian = () =>
@@ -62493,7 +62506,10 @@
             _
           );
         }
-        const _ = (0, _._)(function (_) {
+        const _ = {
+            rootMargin: "300px 0px 200px 0px",
+          },
+          _ = (0, _._)(function (_) {
             const {
                 group: _,
                 bShowLastChat: _,
@@ -62551,9 +62567,7 @@
                   onEnter: _,
                   onLeave: _,
                 },
-                {
-                  rootMargin: "300px 0px 200px 0px",
-                },
+                _,
               ),
               _ = (_) =>
                 !_ || _.detail.focusSource == _._.BROWSER
@@ -76591,8 +76605,26 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (0, _._)(function () {
+          return _._.FriendStore.friends_list_load_failed
+            ? (0, _.jsxs)("div", {
+                className: _.FriendsListLoadFailed,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.FriendsListLoadFailedText,
+                    children: (0, _._)("#FriendsList_LoadFailed"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.FriendsListLoadFailedRetry,
+                    onClick: () => _._.FriendStore.RetryFriendsListLoad(),
+                    children: (0, _._)("#FriendsList_LoadFailed_Retry"),
+                  }),
+                ],
+              })
+            : null;
+        });
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -77183,6 +77215,7 @@
                     }),
                   ],
                 }),
+                (0, _.jsx)(_, {}),
                 (0, _.jsx)(_, {
                   rgTabs: _.rgTabs,
                   activeTab: _,
@@ -78767,6 +78800,7 @@
                     (0, _.jsxs)("div", {
                       className: "listContentContainer",
                       children: [
+                        !this.context?.IN_GAMEPADUI && (0, _.jsx)(_, {}),
                         _,
                         (0, _.jsx)("div", {
                           className: "disconnectBlocker",
@@ -78834,14 +78868,20 @@
                 bChatRoomListResizing: !1,
               });
           }
-          UpdateChatSectionSize() {
-            if (
-              ((0, _._)(
-                this.m_elChatSection,
-                "m_elChatRoomListContainer not set",
+          componentWillUnmount() {
+            this.m_iTimeoutUpdateChatSectionSize &&
+              (this.m_window?.clearTimeout(
+                this.m_iTimeoutUpdateChatSectionSize,
               ),
-              this.m_bMouseOver)
-            ) {
+              (this.m_iTimeoutUpdateChatSectionSize = void 0)),
+              this.m_animationChatSectionShrink &&
+                (this.m_animationChatSectionShrink.Cancel(),
+                (this.m_animationChatSectionShrink = void 0));
+          }
+          UpdateChatSectionSize() {
+            if (!this.m_elChatSection?.div || !this.m_elChatRoomListContainer)
+              return;
+            if (this.m_bMouseOver) {
               this.m_iTimeoutUpdateChatSectionSize &&
                 this.m_window.clearTimeout(
                   this.m_iTimeoutUpdateChatSectionSize,
@@ -78914,16 +78954,17 @@
             this.m_observerChatSection &&
               (this.m_observerChatSection.disconnect(),
               (this.m_observerChatSection = null)),
-              _ &&
-                ((this.m_elChatSection = _),
-                (this.m_window = _.div.ownerDocument.defaultView),
-                (this.m_observerChatSection = new MutationObserver(
-                  this.OnChatSectionMutation,
-                )),
-                this.m_observerChatSection.observe(_.div, {
-                  childList: !0,
-                  subtree: !0,
-                }));
+              _
+                ? ((this.m_elChatSection = _),
+                  (this.m_window = _.div.ownerDocument.defaultView),
+                  (this.m_observerChatSection = new MutationObserver(
+                    this.OnChatSectionMutation,
+                  )),
+                  this.m_observerChatSection.observe(_.div, {
+                    childList: !0,
+                    subtree: !0,
+                  }))
+                : (this.m_elChatSection = null);
           }
           OnGrabberMouseDown(_) {
             let _ = _.currentTarget.ownerDocument.defaultView;
@@ -83056,7 +83097,12 @@
                   _ == 0
                     ? _.MED
                     : _.message_blocks[_ - 1].GetRTimeLastMessage();
-              if (_ && _ <= _ && _.GetRTimeLastMessage() > _) {
+              if (
+                _ &&
+                _.messages.length > 0 &&
+                _ <= _ &&
+                _.GetRTimeLastMessage() > _
+              ) {
                 let _ = _,
                   _;
                 _ > _.GetRTimeFirstMessage() &&
@@ -218065,9 +218111,15 @@ ${_}`;
           WQI: () => _,
           Bwb: () => _,
           Bx6: () => _,
+          GPz: () => _,
           QAJ: () => _,
           xtC: () => _,
         });
+        var _ = {};
+        __webpack_require__._(_),
+          __webpack_require__._(_, {
+            _: () => _,
+          });
         var _ = {};
         __webpack_require__._(_),
           __webpack_require__._(_, {
@@ -218093,7 +218145,79 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ = null,
+        const _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 5,
+          _ = 6,
+          _ = 7,
+          _ = 8,
+          _ = 9,
+          _ = 10,
+          _ = 11,
+          _ = 12,
+          _ = 13,
+          _ = 14,
+          _ = 15,
+          _ = 16,
+          _ = 17,
+          _ = 18,
+          _ = 19,
+          _ = 20,
+          _ = 21,
+          _ = 22,
+          _ = 23,
+          _ = 24,
+          _ = 25,
+          _ = 26,
+          _ = 27,
+          _ = 28,
+          _ = 29,
+          _ = 30,
+          _ = 31,
+          _ = 32,
+          _ = 33,
+          _ = 34,
+          _ = 35,
+          _ = 36,
+          _ = 37,
+          _ = 38,
+          _ = 39,
+          _ = 40,
+          _ = 41,
+          _ = 42,
+          _ = 43,
+          _ = 44,
+          _ = 45,
+          _ = 46,
+          _ = 47,
+          _ = 48,
+          _ = 49,
+          _ = 50,
+          _ = 51,
+          _ = 52,
+          _ = 53,
+          _ = 54,
+          _ = 55,
+          _ = 56,
+          _ = 57,
+          _ = 58,
+          _ = 59,
+          _ = 60,
+          _ = 61,
+          _ = 62,
+          _ = 63,
+          _ = 64,
+          _ = 65,
+          _ = 66,
+          _ = 67,
+          _ = 68,
+          _ = 69,
+          _ = 70,
+          _ = 71,
+          _ = null,
           _ = 0,
           _ = 1,
           _ = 0,
@@ -264889,11 +265013,6 @@ ${_}`;
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
         });
         var _ = {};
         __webpack_require__._(_),
@@ -265001,6 +265120,7 @@ ${_}`;
           _ = 1,
           _ = 2,
           _ = 3,
+          _ = 4,
           _ = 0,
           _ = 1,
           _ = 2,
@@ -312790,75 +312910,6 @@ ${_}`;
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_, _) {
-          return (0, _._)(
-            (_) => {
-              if (!_) return;
-              const _ = _(_.ownerDocument.defaultView, (_) => {
-                _(_[0]);
-              });
-              return _.observe(_), () => _.unobserve(_);
-            },
-            [_, _],
-          );
-        }
-        function _(_) {
-          const _ = _.useCallback(
-            (_, _) =>
-              _.ResizeObserver
-                ? new _.ResizeObserver(_)
-                : ((0, _._)(!1, "ResizeObserver is not available"),
-                  {
-                    observe: () => {},
-                    unobserve: () => {},
-                    disconnect: () => {},
-                  }),
-            [],
-          );
-          return _(_, _);
-        }
-        function _(_, _) {
-          const _ = _.useCallback(
-            (_, _) => new _.IntersectionObserver(_, _),
-            [_],
-          );
-          return _(_, _);
-        }
-        function _(_, _) {
-          const _ = _.useRef(void 0);
-          return _((_) => {
-            !_.current && _.isIntersecting && _.onEnter?.(_),
-              _.current && !_.isIntersecting && _.onLeave?.(_),
-              _.onIntersectionChange?.(_),
-              (_.current = _.isIntersecting);
-          }, _);
-        }
-        function _() {
-          const _ = useForceUpdate();
-          return _(_);
-        }
-        function _(_, ..._) {
-          const _ = _.ownerDocument.defaultView,
-            _ = new _.ResizeObserver(..._);
-          return _.observe(_), _;
-        }
-        function _(_, ..._) {
-          const _ = _.ownerDocument.defaultView,
-            _ = new _.IntersectionObserver(..._);
-          return _.observe(_), _;
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -337054,7 +337105,7 @@ ${_}`;
             this.DoCallback("onResize");
           }
           OnClose() {
-            this.DoCallback("onClose");
+            this.DoCallback("onClose"), this.m_fnReadyToRender(void 0);
           }
           Render(_, _) {
             this.m_fnReadyToRender(_);
@@ -345374,6 +345425,7 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -345505,24 +345557,35 @@ ${_}`;
           }
           return _;
         }
-        function _(_) {
-          const _ = _.map((_) => ({
-              queryKey: [
-                "LatestPatchNoteForSource",
-                (0, _._)(_),
-                _.additionalParams,
-              ],
+        function _(_, _) {
+          const _ = "LatestPatchNoteForSource",
+            _ = _.map((_) => ({
+              queryKey: [_, (0, _._)(_), _.additionalParams],
               queryFn: () => _(_),
+              staleTime: 3e5,
             })),
-            _ = (0, _.useCallback)((_) => {
-              const _ = _.some((_) => _.isPending),
-                _ = _ ? [] : _.map((_) => _.data),
-                _ = _(_);
-              return {
-                isLoading: _,
-                data: _,
-              };
-            }, []);
+            _ = (0, _._)();
+          (0, _.useEffect)(() => {
+            _ &&
+              _.invalidateQueries(
+                {
+                  queryKey: [_],
+                  predicate: (_) => _.state.dataUpdatedAt < _ * 1e3,
+                },
+                {
+                  cancelRefetch: !1,
+                },
+              );
+          }, [_, _]);
+          const _ = (0, _.useCallback)((_) => {
+            const _ = _.some((_) => _.isPending),
+              _ = _ ? [] : _.map((_) => _.data),
+              _ = _(_);
+            return {
+              isLoading: _,
+              data: _,
+            };
+          }, []);
           return (0, _._)({
             queries: _,
             combine: _,
@@ -377389,13 +377452,9 @@ ${_}`;
             );
           }, []);
           const _ = _.useCallback((_) => _(!_.isIntersecting), []),
-            _ = _.useMemo(
-              () => ({
-                threshold: 0.5,
-              }),
-              [],
-            ),
-            _ = (0, _._)(_, _);
+            _ = (0, _._)(_, {
+              threshold: 0.5,
+            });
           return {
             bTabHidden: _,
             bOffscreen: _,
@@ -447335,12 +447394,16 @@ Status Code:` +
             _._.SteamVR.ShowOverlay({
               overlay_key: _,
             }).catch((_) => {
-              if (_?.info.error_code == _._._)
-                _.Debug(
-                  `ShowOverlay() failed. Calling SteamClient.OpenVR.VROverlay.ShowDashboard( "${_}" )`,
-                ),
-                  SteamClient.OpenVR?.VROverlay.ShowDashboard(_);
-              else throw _;
+              _?.info?.error_code == _._._
+                ? (_.Debug(
+                    `ShowOverlay() failed. Calling SteamClient.OpenVR.VROverlay.ShowDashboard( "${_}" )`,
+                  ),
+                  SteamClient.OpenVR?.VROverlay.ShowDashboard(_))
+                : _.Warning(
+                    `ShowOverlay( "${_}" ) failed with error code`,
+                    _?.info?.error_code,
+                    _?.message,
+                  );
             });
         }
         window.ShowVROverlay = _;
@@ -467617,7 +467680,8 @@ Status Code:` +
         };
         function _() {
           const _ = (0, _._)(),
-            _ = (0, _._)(_);
+            _ = (0, _._)().GetLastCheckTime(),
+            _ = (0, _._)(_, _);
           return _.isLoading
             ? {
                 event: null,
@@ -542839,7 +542903,6 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -542851,6 +542914,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -543153,27 +543217,35 @@ Status Code:` +
         }
         function _(_) {
           const _ = (0, _._)(),
-            { onOK: _ } = _,
+            { closeModal: _ } = _,
             _ = (0, _._)("#QuickAccess_Tab_Perf_ConnectedSlowDetailsTitle"),
             _ = _("#QuickAccess_Tab_Perf_ConnectedSlowDetails");
           return (0, _.jsx)(_._, {
             bAlertDialog: !0,
             strTitle: _,
             strDescription: _,
-            onOK: _,
+            closeModal: _,
+          });
+        }
+        function _(_) {
+          (0, _._)((0, _.jsx)(_, {}), window, {
+            fnOnClose: _,
           });
         }
         function _(_) {
           const _ = (0, _._)(),
-            { onOK: _ } = _,
+            { closeModal: _ } = _,
             _ = (0, _._)("#QuickAccess_Tab_Perf_BatteryFullDetailsTitle"),
             _ = _("#QuickAccess_Tab_Perf_BatteryFullDetails");
           return (0, _.jsx)(_._, {
             bAlertDialog: !0,
             strTitle: _,
             strDescription: _,
-            onOK: _,
+            closeModal: _,
           });
+        }
+        function _() {
+          (0, _._)((0, _.jsx)(_, {}), window);
         }
         function _(_) {
           const _ = (0, _._)(),
@@ -543186,7 +543258,7 @@ Status Code:` +
           return (
             _.eACState == _._
               ? (_ = () => _._.Get().ShowConnectedSlowDetails())
-              : _ && (_ = () => _._.Get().ShowBatteryFullDetails()),
+              : _ && (_ = _),
             (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
                 focusable: _ != null,
@@ -555680,22 +555752,30 @@ Status Code:` +
             this.m_eDesiredPersonaState = _;
           }
           async StartupAndConstructApp() {
-            const _ = performance.now();
-            try {
-              await new Promise((_, _) => {
-                let _ = window.setTimeout(() => _(), 1e4),
-                  _ = SteamClient._.RegisterForStartupFinished(() => {
-                    _(), window.clearTimeout(_), _.unregister();
-                  });
+            const _ = performance.now(),
+              _ = new Promise((_) => {
+                let _ = SteamClient._.RegisterForStartupFinished(() => {
+                  _(), _.unregister();
+                });
               });
-            } catch {
-              console.error(
-                "Timeout waiting for RegisterForStartupFinished, proceeding with FriendsUI startup.",
+            let _;
+            const _ = new Promise((_) => {
+                _ = window.setTimeout(() => _(!0), 1e4);
+              }),
+              _ = await Promise.race([_.then(() => !1), _]);
+            window.clearTimeout(_),
+              _ &&
+                ((0, _._)("WebChat.RegisterForFriendPostMessage")
+                  ? console.error(
+                      "Timeout waiting for RegisterForStartupFinished, proceeding with FriendsUI startup.",
+                    )
+                  : (console.error(
+                      "Timeout waiting for RegisterForStartupFinished, but WebChat is not registered yet; continuing to wait.",
+                    ),
+                    await _)),
+              _(
+                `Received StartupFinished callback after ${(performance.now() - _).toLocaleString(["en-US"])}ms`,
               );
-            }
-            _(
-              `Received StartupFinished callback after ${(performance.now() - _).toLocaleString(["en-US"])}ms`,
-            );
             let _ = !1;
             (0, _._)("WebChat.GetSignIntoFriendsOnStart")
               ? (_ = await SteamClient.WebChat.GetSignIntoFriendsOnStart())
@@ -555820,15 +555900,11 @@ Status Code:` +
         }
         function _(_) {
           (0, _.useEffect)(() => {
-            if (!_) return;
-            const _ = new AbortController();
-            async function _() {
-              const _ = (0, _._)(() => _.loaded);
-              (_.signal.onabort = () => _.cancel()),
-                await _,
-                _.InstrumentWindow(_);
-            }
-            return _(), () => _.abort();
+            if (_)
+              return (0, _._)(
+                () => _.loaded,
+                () => _.InstrumentWindow(_),
+              );
           }, [_]);
         }
         function _() {
@@ -563264,8 +563340,10 @@ Status Code:` +
           m_VolumePressedSubscribable = new _._();
           m_nSuppressVolumeOverlayRefCount = 0;
           constructor() {
-            (0, _._)(this),
-              (this.m_bAvailable = SteamClient.System.Audio != null),
+            (0, _._)(this);
+          }
+          Init() {
+            (this.m_bAvailable = SteamClient.System.Audio != null),
               this.m_bAvailable &&
                 (SteamClient.System.Audio.RegisterForServiceConnectionStateChanges(
                   this.OnServiceConnectionStateChanged,
@@ -563295,49 +563373,48 @@ Status Code:` +
                 ),
                 SteamClient.System.Audio.RegisterForAppVolumeChanged(
                   this.OnAppVolumeChanged,
-                ));
-          }
-          Init() {
-            _.GetSupportedFeatures({}).then((_) => {
-              _.BSuccess() &&
-                ((this.m_bSupportsMonoDownmix = _.Body().mono_downmix()),
-                (this.m_bSupportsUseBluetoothForMic =
-                  _.Body().use_bluetooth_for_mic()),
-                (this.m_bSupportsBluetoothAudioPreference =
-                  _.Body().bluetooth_audio_preference()),
-                (this.m_bSupportsResetConfig = _.Body().reset_config()),
-                (this.m_bSupportsSpatialize = _.Body().spatialize()),
-                (this.m_bSupportsSpatializeSurround =
-                  _.Body().spatialize_surround()),
-                (this.m_bSupportsPerDeviceMicProcessing =
-                  _.Body().per_device_mic_processing()),
-                this.m_bSupportsMonoDownmix &&
-                  _.GetMonoDownmixEnabled({}).then((_) => {
-                    _.BSuccess() &&
-                      (this.m_bMonoDownmixEnabled = _.Body().enabled());
-                  }),
-                this.m_bSupportsUseBluetoothForMic &&
-                  _.GetUseBluetoothForMic({}).then((_) => {
-                    _.BSuccess() &&
-                      (this.m_bUseBluetoothForMic = _.Body().enabled());
-                  }),
-                this.m_bSupportsBluetoothAudioPreference &&
-                  _.GetBluetoothAudioPreference({}).then((_) => {
-                    _.BSuccess() &&
-                      (this.m_eBluetoothAudioPreference =
-                        _.Body().preference());
-                  }),
-                this.m_bSupportsSpatialize &&
-                  _.GetSpatializeEnabled({}).then((_) => {
-                    _.BSuccess() &&
-                      (this.m_bSpatializeEnabled = _.Body().enabled());
-                  }),
-                this.m_bSupportsSpatializeSurround &&
-                  _.GetSpatializeSurroundEnabled({}).then((_) => {
-                    _.BSuccess() &&
-                      (this.m_bSpatializeSurroundEnabled = _.Body().enabled());
-                  }));
-            }),
+                )),
+              _.GetSupportedFeatures({}).then((_) => {
+                _.BSuccess() &&
+                  ((this.m_bSupportsMonoDownmix = _.Body().mono_downmix()),
+                  (this.m_bSupportsUseBluetoothForMic =
+                    _.Body().use_bluetooth_for_mic()),
+                  (this.m_bSupportsBluetoothAudioPreference =
+                    _.Body().bluetooth_audio_preference()),
+                  (this.m_bSupportsResetConfig = _.Body().reset_config()),
+                  (this.m_bSupportsSpatialize = _.Body().spatialize()),
+                  (this.m_bSupportsSpatializeSurround =
+                    _.Body().spatialize_surround()),
+                  (this.m_bSupportsPerDeviceMicProcessing =
+                    _.Body().per_device_mic_processing()),
+                  this.m_bSupportsMonoDownmix &&
+                    _.GetMonoDownmixEnabled({}).then((_) => {
+                      _.BSuccess() &&
+                        (this.m_bMonoDownmixEnabled = _.Body().enabled());
+                    }),
+                  this.m_bSupportsUseBluetoothForMic &&
+                    _.GetUseBluetoothForMic({}).then((_) => {
+                      _.BSuccess() &&
+                        (this.m_bUseBluetoothForMic = _.Body().enabled());
+                    }),
+                  this.m_bSupportsBluetoothAudioPreference &&
+                    _.GetBluetoothAudioPreference({}).then((_) => {
+                      _.BSuccess() &&
+                        (this.m_eBluetoothAudioPreference =
+                          _.Body().preference());
+                    }),
+                  this.m_bSupportsSpatialize &&
+                    _.GetSpatializeEnabled({}).then((_) => {
+                      _.BSuccess() &&
+                        (this.m_bSpatializeEnabled = _.Body().enabled());
+                    }),
+                  this.m_bSupportsSpatializeSurround &&
+                    _.GetSpatializeSurroundEnabled({}).then((_) => {
+                      _.BSuccess() &&
+                        (this.m_bSpatializeSurroundEnabled =
+                          _.Body().enabled());
+                    }));
+              }),
               SteamClient.System.Audio?.GetApps()?.then((_) => {
                 for (const _ of _.rgApps)
                   this.RegisterApp(_._, _.strName, _.flVolume, _.unPID);
@@ -566385,7 +566462,6 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -566450,21 +566526,11 @@ Status Code:` +
               );
           }
           ShowConnectedSlowDetails() {
-            if (!this.m_bShowingConnectedSlowDetails) {
-              this.m_bShowingConnectedSlowDetails = !0;
-              const _ = () => {
+            this.m_bShowingConnectedSlowDetails ||
+              ((this.m_bShowingConnectedSlowDetails = !0),
+              (0, _._)(() => {
                 this.m_bShowingConnectedSlowDetails = !1;
-              };
-              (0, _._)(
-                (0, _._)({
-                  onOK: _,
-                }),
-                window,
-              );
-            }
-          }
-          ShowBatteryFullDetails() {
-            (0, _._)((0, _._)({}), window);
+              }));
           }
           OnBatteryStateChanged(_) {
             const _ = this.m_eACState,
@@ -570647,6 +570713,7 @@ Status Code:` +
             _()["vrgamepadui-floating-bar-popup-panel-height"],
           ),
           _ = new _._("VRPooledPopupStore"),
+          _ = 2e3,
           _ = 0,
           _ = 1,
           _ = 2,
@@ -570925,6 +570992,7 @@ Status Code:` +
           m_mapHostWindowsForType = {};
           m_mapPooledPopupInstances = new Map();
           m_queueInstanceIDsAwaitingHostWindows = [];
+          m_mapHostRespawnTimers = new Map();
           m_mapTooltips = new Map();
           m_unNextTooltipId = 1;
           constructor(_) {
@@ -570970,13 +571038,80 @@ Status Code:` +
               index: _,
             }),
               !(_ < 0) &&
-                (_.popupWindow?.SteamClient?.Window.Close(),
-                this.m_mapHostWindowsForType[_.m_eHostType].splice(_, 1),
+                (this.m_mapHostWindowsForType[_.m_eHostType].splice(_, 1),
+                _.popupWindow?.SteamClient?.Window.Close(),
                 _.currentPooledPopupInstanceId &&
                   this.ClosePooledPopup(_.currentPooledPopupInstanceId));
           }
+          OnHostWindowClosed(_) {
+            const _ = _.m_eHostType,
+              _ = this.m_mapHostWindowsForType[_],
+              _ = _?.indexOf(_) ?? -1,
+              _ = !_.isSpawning;
+            if (
+              (_.Log.Debug("Host window closed", {
+                hostWindow: _,
+                index: _,
+                bWasReady: _,
+              }),
+              _.SetPopupWindow(void 0, void 0),
+              !(_ < 0) &&
+                (_.splice(_, 1),
+                this.RequeueInstanceFromHostWindow(_),
+                !!this.m_bInitialized))
+            ) {
+              if (_) {
+                this.RefillHostWindows(_);
+                return;
+              }
+              this.m_mapHostRespawnTimers.has(_) ||
+                (_.Log.Warning(
+                  `Host window closed before it finished spawning; retrying in ${_}ms.`,
+                ),
+                this.m_mapHostRespawnTimers.set(
+                  _,
+                  window.setTimeout(() => {
+                    this.m_mapHostRespawnTimers.delete(_),
+                      this.RefillHostWindows(_);
+                  }, _),
+                ));
+            }
+          }
+          RefillHostWindows(_) {
+            if (!this.m_bInitialized) return;
+            const _ = this.GetHostWindowCount(_);
+            for (let _ = _.total; _ < _.min; _++) this.CreateHostWindow(_);
+            this.AssignPendingPopupsToHostWindows();
+          }
+          RequeueInstanceFromHostWindow(_) {
+            const _ = _.currentPooledPopupInstanceId;
+            _.SetPooledPopupInstance(void 0);
+            const _ =
+              _ != null ? this.m_mapPooledPopupInstances.get(_) : void 0;
+            !_ ||
+              _.hostWindow !== _ ||
+              (_.Log.Debug(
+                "Host window was lost; re-queueing popup instance to await a new host window.",
+              ),
+              _.messageQueue.forEach((_) => {
+                _.handle.cancel() == _._ &&
+                  (_.bAnyShowPopupMessageWasTransmitted = !0);
+              }),
+              (_.messageQueue = []),
+              (_.lastSucceededMessage = void 0),
+              _.resizeObserver?.disconnect(),
+              (_.resizeObserver = void 0),
+              _.contentElement?.remove(),
+              (_.contentElement = void 0),
+              (_.hostWindow = void 0),
+              _.SetState(0),
+              this.m_queueInstanceIDsAwaitingHostWindows.includes(
+                _.instanceID,
+              ) ||
+                this.m_queueInstanceIDsAwaitingHostWindows.push(_.instanceID));
+          }
           DestroyUnusedHostWindows(_) {
-            for (const _ of this.m_mapHostWindowsForType[_])
+            for (const _ of [...this.m_mapHostWindowsForType[_]])
               _.isShowingPopup || this.DestroyHostWindow(_);
           }
           Init() {
@@ -570992,14 +571127,16 @@ Status Code:` +
             return [() => this.Deinit()];
           }
           Deinit() {
-            _.Debug("Deinit");
+            _.Debug("Deinit"), (this.m_bInitialized = !1);
+            for (const _ of this.m_mapHostRespawnTimers.keys())
+              window.clearTimeout(this.m_mapHostRespawnTimers.get(_));
+            this.m_mapHostRespawnTimers.clear();
             for (const _ of Object.values(this.m_mapHostWindowsForType))
-              for (const _ of _) this.DestroyHostWindow(_);
+              for (const _ of [..._]) this.DestroyHostWindow(_);
             for (const _ of this.m_mapPooledPopupInstances.values())
               this.ClosePooledPopup(_.instanceID);
             (this.m_queueInstanceIDsAwaitingHostWindows = []),
-              this.m_mapTooltips.clear(),
-              (this.m_bInitialized = !1);
+              this.m_mapTooltips.clear();
           }
           ShowTooltip(_, _, _, _) {
             const _ = this.m_unNextTooltipId++,
@@ -571164,24 +571301,29 @@ Status Code:` +
               _.SetPooledPopupInstance(_),
               _.hostWindow.rootElement.appendChild(_.contentElement),
               await _(_.contentElement),
-              _.state != 1)
+              _.hostWindow === _)
             ) {
-              this.ClosePooledPopup(_.instanceID).catch(() => {});
-              return;
+              if (_.state != 1) {
+                this.ClosePooledPopup(_.instanceID).catch(() => {});
+                return;
+              }
+              try {
+                await this.SendPendingInstanceParamsToSteamVR(
+                  _,
+                  this.CreateInitialRequestParams(_),
+                );
+              } catch {
+                return;
+              }
+              _.hostWindow !== _ ||
+                _.state != 1 ||
+                !_.contentElement ||
+                ((_.resizeObserver = (0, _._)(_.contentElement, () =>
+                  this.RecomputePooledPopupSize(_.instanceID),
+                )),
+                (_.hostWindow.rootElement.style.visibility = "visible"),
+                _.SetState(2));
             }
-            try {
-              await this.SendPendingInstanceParamsToSteamVR(
-                _,
-                this.CreateInitialRequestParams(_),
-              );
-            } catch {
-              return;
-            }
-            (_.resizeObserver = (0, _._)(_.contentElement, () =>
-              this.RecomputePooledPopupSize(_.instanceID),
-            )),
-              (_.hostWindow.rootElement.style.visibility = "visible"),
-              _.SetState(2);
           }
           CreateInitialRequestParams(_) {
             const _ = _.hostWindow.popupWindow.devicePixelRatio,
@@ -571370,6 +571512,9 @@ Status Code:` +
           _([_._], _.prototype, "m_mapTooltips", 2),
           _([_._], _.prototype, "CreateHostWindow", 1),
           _([_._], _.prototype, "DestroyHostWindow", 1),
+          _([_._], _.prototype, "OnHostWindowClosed", 1),
+          _([_._], _.prototype, "RefillHostWindows", 1),
+          _([_._], _.prototype, "RequeueInstanceFromHostWindow", 1),
           _([_._], _.prototype, "DestroyUnusedHostWindows", 1),
           _([_._], _.prototype, "ClosePooledPopup", 1);
         function _(_, _) {
@@ -573683,7 +573828,7 @@ Status Code:` +
           const { element: _ } = (0, _._)(_._, {
               special_identifier: _._._,
             }),
-            _ = _?.ownerDocument?.defaultView,
+            _ = _?.ownerDocument?.defaultView ?? void 0,
             _ = (0, _._)(),
             _ = (0, _._)();
           return (
@@ -573694,7 +573839,7 @@ Status Code:` +
               ),
               [_, _],
             ),
-            !_ || _
+            !_ || !_ || _
               ? null
               : (0, _.jsx)(_._, {
                   ownerWindow: _,
@@ -575411,6 +575556,13 @@ Status Code:` +
           const { host: _ } = _,
             _ =
               (_.m_Params.strDebugName || _.overlayKey) + ` (${_.m_unHostID})`,
+            _ = (0, _._)()?.VRPooledPopupStore,
+            _ = _.useMemo(
+              () => ({
+                onClose: () => _?.OnHostWindowClosed(_),
+              }),
+              [_, _],
+            ),
             { popup: _, element: _ } = (0, _._)(
               `${_.overlayKey}.${_.m_unHostID}`,
               {
@@ -575427,6 +575579,7 @@ Status Code:` +
                 popup_class: _().PopupRoot,
               },
               _.m_VRPopupParams,
+              _,
             );
           return (
             _.useEffect(
@@ -575459,7 +575612,7 @@ Status Code:` +
                           host: _,
                         }),
                       },
-                      _.overlayKey,
+                      _.m_unHostID,
                     ),
                   ),
                 })
@@ -618236,6 +618389,7 @@ Status Code:` +
                   ["VRGamepadUIMessages", () => (0, _._)()],
                   ["VRStore", () => (0, _._)()],
                   ["VRAudioSettingsStore", () => _._.Init()],
+                  ["SystemAudioStore", () => _._.Init()],
                   ["ParentalStore", () => _._.Init(_)],
                   ["VRControllerStore", () => (0, _._)()],
                 ],
@@ -618455,7 +618609,6 @@ Status Code:` +
                     ["HardwareUpdaterStore", () => _._.Init()],
                     ["CompatManagerStore", () => _._.Init()],
                     ["BluetoothStore", () => _._.Init()],
-                    ["SystemAudioStore", () => _._.Init()],
                     ["HardwarePromoStore", () => _._.Init(_)],
                     [
                       "EAAccessPromptManager",
@@ -666226,7 +666379,7 @@ Status Code:` +
           const _ = (0, _._)();
           return (
             _(),
-            (0, _.jsx)(_.Fragment, {
+            (0, _.jsx)(_._, {
               children: (0, _.jsxs)(_._, {
                 bOnlyPopups: !0,
                 children: [
@@ -703620,7 +703773,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1793740528),
+            _ = parseInt(1793919129),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -706353,7 +706506,7 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _, _) {
-          const [_] = _._.GetClientSetting("small_mode");
+          const _ = (0, _._)(_).BOnlyPopups();
           (0, _._)(
             (0, _._)(_) || _ == _._,
             "Sent in invalid RemoteClientID to ShowUninstallDialog(). Invalid String: %s",
@@ -712218,6 +712371,267 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = _.GPz._;
+        function _(_) {
+          return ["StoreSales.GetVoteDefinitions", _ ?? 0];
+        }
+        function _(_) {
+          return ["Quest.GetCommunityItemDefinitions", _ ?? 0];
+        }
+        function _(_) {
+          return ["Player.GetCommunityBadgeProgress", _, _];
+        }
+        function _(_) {
+          return ["SteamAwards.GetNominationShareLink", _];
+        }
+        function _(_) {
+          return ["SteamAwards.GetNominationRecommendations", _];
+        }
+        function _(_, _) {
+          return {
+            queryKey: _(_),
+            queryFn: async () => {
+              const _ = await _._.GetVoteDefinitions(_, {
+                sale_appid: _,
+                language: (0, _._)().strLanguage,
+              });
+              return _.BSuccess() ? _.Body().toObject() : null;
+            },
+            enabled: !!_,
+            staleTime: 1 / 0,
+          };
+        }
+        function _(_) {
+          return (0, _._)(_((0, _._)(), _));
+        }
+        function _(_, _) {
+          return {
+            queryKey: _(_),
+            queryFn: async () => {
+              const _ = await QuestService.GetCommunityItemDefinitions(_, {
+                appid: _,
+                language: GetDisplayLanguage().strLanguage,
+              });
+              return _.BSuccess() ? _.Body().toObject() : null;
+            },
+            enabled: !!_,
+            staleTime: 1 / 0,
+          };
+        }
+        async function _(_) {
+          const _ = await _._.GetUserNominations(_, {});
+          return _.BSuccess() ? (_.Body().toObject().nominations ?? []) : [];
+        }
+        async function _(_, _) {
+          const _ = await _._.GetUserVotes(_, {
+            sale_appid: _,
+          });
+          return _.BSuccess() ? (_.Body().toObject().user_votes ?? []) : [];
+        }
+        async function _(_, _, _, _) {
+          const _ = await _._.Nominate(_, {
+            category_id: _,
+            nominated_id: _,
+            source: _,
+          });
+          return (
+            _.BSuccess() ||
+              console.warn(
+                `SteamAwards.Nominate failed with ${_.GetEResult()}`,
+              ),
+            [_.GetEResult(), _.Body().toObject().nominations ?? []]
+          );
+        }
+        async function _(_, _, _, _) {
+          const _ = await _._.SetVote(_, {
+            voteid: _,
+            appid: _,
+            sale_appid: _,
+          });
+          return (
+            _.BSuccess() ||
+              console.warn(`StoreSales.SetVote failed with ${_.GetEResult()}`),
+            [_.GetEResult(), _.Body().toObject().user_votes ?? []]
+          );
+        }
+        function _(_, _) {
+          return {
+            queryKey: GetSteamAwardNominationsQueryKey(_),
+            queryFn: async () => await _(_),
+            enabled: !!_,
+          };
+        }
+        function _() {
+          return useQuery(_(useActiveServiceTransport(), UserConfig.accountid));
+        }
+        function _(_) {
+          const { data: _, isPending: _ } = _();
+          return {
+            nomination: _?.find((_) => _.category_id == _),
+            bAnswered: _ != null || !UserConfig.accountid || !_,
+          };
+        }
+        async function _(_, _, _) {
+          const _ = await SteamAwardsService.GetOtherUserNominations(_, {
+            steamid: _,
+            code: _,
+          });
+          return _.BSuccess()
+            ? (_.Body().toObject().nominations ?? [])
+            : void 0;
+        }
+        function _(_, _, _) {
+          const _ = useActiveServiceTransport(),
+            _ = useQueryClient(),
+            _ = UserConfig.accountid;
+          return useMutation({
+            mutationFn: async ({ unAppID: _, eCategoryID: _ }) => {
+              const [_, _] = await _(_, _, _, _);
+              if (_ != k_EResultOK)
+                throw new ErrorWithEResult(_, "SteamAwards.Nominate");
+              return _;
+            },
+            onSuccess: (_, { unAppID: _ }) => {
+              _.setQueryData(GetSteamAwardNominationsQueryKey(_), _),
+                globalThis.setTimeout(
+                  () =>
+                    _.invalidateQueries({
+                      queryKey: _(_),
+                    }),
+                  1e3,
+                ),
+                _?.(_);
+            },
+            onError: (_) =>
+              _?.(_ instanceof ErrorWithEResult ? _.eResult : void 0),
+          });
+        }
+        function _(_, _, _) {
+          return {
+            queryKey: GetSteamAwardVotesQueryKey(_),
+            queryFn: async () => await _(_, _),
+            enabled: !!(_ && _),
+          };
+        }
+        function _(_) {
+          return useQuery(
+            _(useActiveServiceTransport(), UserConfig.accountid, _),
+          );
+        }
+        function _(_, _) {
+          const { data: _ } = _(_);
+          return _?.find((_) => _.voteid == _)?.appid;
+        }
+        function _(_) {
+          const _ = useActiveServiceTransport(),
+            _ = useQueryClient(),
+            _ = UserConfig.accountid;
+          return useMutation({
+            mutationFn: async ({ unAppID: _, eCategoryID: _ }) => {
+              const [_, _] = await _(_, _, _, _);
+              if (_ != k_EResultOK)
+                throw new ErrorWithEResult(_, "StoreSales.SetVote");
+              return _;
+            },
+            onSuccess: (_) => _.setQueryData(GetSteamAwardVotesQueryKey(_), _),
+          });
+        }
+        function _(_, _, _) {
+          return {
+            queryKey: _(_),
+            queryFn: async () => {
+              const _ = await PlayerService.GetCommunityBadgeProgress(_, {
+                steamid: _,
+                badgeid: _,
+              });
+              return _.BSuccess() ? _.Body().toObject() : null;
+            },
+            enabled: !!_,
+          };
+        }
+        function _() {
+          return useQuery(
+            _(
+              useActiveServiceTransport(),
+              UserConfig.accountid,
+              UserConfig.steamid,
+            ),
+          );
+        }
+        function _(_, _) {
+          return {
+            queryKey: _(_),
+            queryFn: async () => await _(_, !1),
+            enabled: !!_,
+            staleTime: 1 / 0,
+          };
+        }
+        function _() {
+          return useQuery(_(useActiveServiceTransport(), UserConfig.accountid));
+        }
+        function _() {
+          const _ = useActiveServiceTransport(),
+            _ = useQueryClient(),
+            _ = UserConfig.accountid;
+          return useMutation({
+            mutationFn: async () => await _(_, !0),
+            onSuccess: (_) => _.setQueryData(_(_), _),
+          });
+        }
+        async function _(_, _) {
+          const _ = await SteamAwardsService.GetNominationShareLink(_, {
+            generate_new: _,
+          });
+          return _.BSuccess()
+            ? _.Body().toObject()
+            : (console.warn(
+                `SteamAwards.GetNominationShareLink failed with ${_.GetEResult()}`,
+              ),
+              null);
+        }
+        function _(_) {
+          const _ = useActiveServiceTransport();
+          return useQuery({
+            queryKey: _(_),
+            queryFn: async () => {
+              const _ = await SteamAwardsService.GetNominationRecommendations(
+                _,
+                {
+                  category_id: _,
+                },
+              );
+              return _.BSuccess() ? _.Body().toObject() : null;
+            },
+            staleTime: 1 / 0,
+          });
+        }
+        function _(_, _) {
+          const { data: _ } = useQuery(_(useActiveServiceTransport(), _));
+          if (_.item_type)
+            return _?.item_definitions?.find((_) => _.item_type == _.item_type);
+        }
+        function _(_) {
+          const _ = new Set();
+          for (const _ of _) {
+            for (const _ of _.app_discounts ?? []) _.appid && _.add(_.appid);
+            _.winner_appid && _.add(_.winner_appid);
+          }
+          return [..._];
+        }
+        function _(_) {
+          return (
+            _.flag == EVoteDefinitionFlag.k_EVoteDefinitionFlag_LaborOfLove
+          );
+        }
+        function _(_) {
+          return _.flag == EVoteDefinitionFlag.k_EVoteDefinitionFlag_HallOfFame;
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         const _ = {};
         function _(_) {
@@ -712407,9 +712821,10 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = _.createContext(void 0);
         function _(_) {
@@ -712602,7 +713017,6 @@ Status Code:` +
             }),
           });
         }
-        var _ = __webpack_require__("chunkid");
         function _(_) {
           const { unAppID: _, widget: _, actions: _, bNominationsOpen: _ } = _,
             _ = _.rgCategories[0],
@@ -712877,355 +713291,6 @@ Status Code:` +
             ],
           });
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = 2640290,
-          _ = 3334340,
-          _ = 4147080,
-          _ = 2215130;
-        let _;
-        function _() {
-          return (
-            _ || (_ = (0, _._)("steam_awards_config", "application_config")), _
-          );
-        }
-        const _ = _.createContext(null);
-        function _(_) {
-          const _ = (0, _._)();
-          return (0, _._)({
-            queryKey: [`SteamAwardDefs_${_}`],
-            queryFn: async () => {
-              const _ = _._.Init(_._);
-              return (
-                _.Body().set_sale_appid(_),
-                _.Body().set_language(_._.LANGUAGE),
-                (await _._.GetVoteDefinitions(_, _)).Body().toObject()
-              );
-            },
-            initialData: () => _()?.definitions,
-            enabled: _ !== void 0 && _ > 0,
-          });
-        }
-        async function _(_) {
-          const _ = _._.Init(_._);
-          return (
-            (await _._.GetUserNominations(_, _)).Body().toObject()
-              ?.nominations ?? []
-          );
-        }
-        function _() {
-          const _ = useActiveServiceTransport();
-          return useQuery({
-            queryKey: [`SteamAwardNominations_${UserConfig.accountid}`],
-            queryFn: () => _(_),
-            initialData: () => _()?.user_nominations?.nominations,
-            enabled: UserConfig.logged_in,
-          });
-        }
-        function _(_) {
-          const _ = _();
-          return _.isLoading
-            ? {
-                bLoadingNominationForCategory: !0,
-              }
-            : {
-                currentNomination: _.data?.find((_) => _.category_id == _),
-                bLoadingNominationForCategory: !1,
-              };
-        }
-        function _() {
-          return [`SteamAwardBadgeProgress_${UserConfig.accountid}`];
-        }
-        function _(_) {
-          const _ = useActiveServiceTransport();
-          return useQuery({
-            queryKey: _(),
-            queryFn: async () => {
-              const _ = CProtoBufMsg.Init(
-                CPlayer_GetCommunityBadgeProgress_Request,
-              );
-              return (
-                _.Body().set_badgeid(_),
-                _.Body().set_steamid(UserConfig.steamid),
-                (await PlayerService.GetCommunityBadgeProgress(_, _))
-                  .Body()
-                  .toObject()
-              );
-            },
-            initialData: () => _()?.badge_progress,
-            enabled: UserConfig.logged_in,
-          });
-        }
-        function _(_) {
-          const _ = useActiveServiceTransport();
-          return useQuery({
-            queryKey: [`SteamAwardSuggestions_${_}`],
-            queryFn: async () => {
-              const _ = CProtoBufMsg.Init(
-                CSteamAwards_GetNominationRecommendations_Request,
-              );
-              return (
-                _.Body().set_category_id(_),
-                (await SteamAwardsService.GetNominationRecommendations(_, _))
-                  .Body()
-                  .toObject()
-              );
-            },
-            staleTime: 1 / 0,
-          });
-        }
-        function _(_, _) {
-          _.setQueryData([`SteamAwardNominations_${UserConfig.accountid}`], _);
-        }
-        async function _(_, _, _, _) {
-          const _ = _._.Init(_._);
-          _.Body().set_category_id(_),
-            _.Body().set_source(_),
-            _.Body().set_nominated_id(_);
-          const _ = await _._.Nominate(_, _);
-          return (
-            _.BSuccess() ||
-              console.warn(
-                `Failed to nominate app ${_} for category ${_}: ${_.GetEResult()}`,
-              ),
-            [_.GetEResult(), _.Body().toObject()]
-          );
-        }
-        function _(_, _, _, _, _) {
-          const _ = useActiveServiceTransport(),
-            _ = useQueryClient();
-          return useMutation({
-            mutationFn: () => _(_, _, _, _),
-            onSuccess: ([_, _]) => {
-              _ == k_EResultOK
-                ? (_.nominations && _(_, _.nominations),
-                  window.setTimeout(
-                    () =>
-                      _.invalidateQueries({
-                        queryKey: _(),
-                      }),
-                    1e3,
-                  ),
-                  _ && _())
-                : _ && _(_);
-            },
-            onError: () => {
-              _ && _();
-            },
-          });
-        }
-        async function _(_, _, _) {
-          let _ = {
-            _: Config.COUNTRY,
-            _: Config.LANGUAGE,
-            realm: ESteamRealm.k_ESteamRealmGlobal,
-            origin: self.origin,
-            _: "jsonfull",
-            term: _.replace(" ", "+"),
-            require_type: "game",
-            is_released_somewhere: 1,
-            excluded_tags: CDynamicUserStore.Get().GetExcludedTagsSortedByID(),
-            excluded_content_descriptors:
-              CDynamicUserStore.Get().ExcludedContentDescriptor,
-            excluded_apps: _,
-          };
-          _.release_date_max &&
-            (_.release_date_max = new Date(
-              _.release_date_max * 1e3,
-            ).toISOString()),
-            _.release_date_min &&
-              (_.release_date_min = new Date(
-                _.release_date_min * 1e3,
-              ).toISOString()),
-            _.flag == EVoteDefinitionFlag.k_EVoteDefinitionFlag_OnlyVR &&
-              (_.vrsupport = 1),
-            _.flag == EVoteDefinitionFlag.k_EVoteDefinitionFlag_SteamDeck &&
-              (_.steam_deck_compat_categories = [
-                ESteamDeckCompatibilityCategory.k_ESteamDeckCompatibilityCategory_Unknown,
-                ESteamDeckCompatibilityCategory.k_ESteamDeckCompatibilityCategory_Playable,
-                ESteamDeckCompatibilityCategory.k_ESteamDeckCompatibilityCategory_Verified,
-              ]);
-          const _ = `${Config.STORE_BASE_URL}search/suggest`;
-          return (
-            (
-              await axios.get(_, {
-                params: _,
-                withCredentials: !0,
-              })
-            ).data ?? []
-          );
-        }
-        function _(_, _, _) {
-          return useQuery({
-            queryKey: [_, _.voteid, _],
-            queryFn: () => _(_, _, _),
-            staleTime: 1 / 0,
-          });
-        }
-        function _() {
-          const _ = _();
-          return _.data ? _.data.map((_) => _.appid) : [];
-        }
-        async function _(_, _) {
-          const _ = CProtoBufMsg.Init(
-            CSteamAwards_GetNominationShareLink_Request,
-          );
-          _.Body().set_generate_new(_);
-          const _ = await SteamAwardsService.GetNominationShareLink(_, _);
-          return (
-            _.BSuccess() ||
-              console.warn(
-                `Failed to GetNominationShareLink: ${_.GetEResult()}`,
-              ),
-            [_.GetEResult(), _.Body().toObject()]
-          );
-        }
-        function _() {
-          const _ = useActiveServiceTransport();
-          return useQuery({
-            queryKey: [`GetNominationShareLink_${UserConfig.accountid}`],
-            queryFn: async () => _(_, !1),
-            initialData: () => {
-              const _ = _()?.share_link;
-              if (_) return [k_EResultOK, _];
-            },
-            staleTime: 1 / 0,
-            enabled: UserConfig.logged_in,
-          });
-        }
-        function _() {
-          const _ = useActiveServiceTransport(),
-            _ = useQueryClient();
-          return useMutation({
-            mutationFn: () => _(_, !0),
-            onSuccess: ([_, _]) => {
-              _ == k_EResultOK &&
-                _.setQueryData(
-                  [`GetNominationShareLink_${UserConfig.accountid}`],
-                  [_, _],
-                );
-            },
-          });
-        }
-        async function _(_, _, _, _) {
-          const _ = _._.Init(_._);
-          _.Body().set_voteid(_),
-            _.Body().set_appid(_),
-            _.Body().set_sale_appid(_);
-          const _ = await _._.SetVote(_, _);
-          return (
-            _.BSuccess() ||
-              console.warn(
-                `Failed to set vote for app (${_}): ${_.GetEResult()}`,
-              ),
-            [_.GetEResult(), _.Body().toObject()]
-          );
-        }
-        function _(_, _, _) {
-          const _ = useActiveServiceTransport(),
-            _ = useQueryClient();
-          return useMutation({
-            mutationFn: () => _(_, _, _, _),
-            onSuccess: ([_, _]) => {
-              _ == k_EResultOK &&
-                _.setQueryData(
-                  [`SteamAwardUserVotes_${UserConfig.accountid}`],
-                  _.user_votes,
-                );
-            },
-          });
-        }
-        async function _(_, _) {
-          const _ = _._.Init(_._);
-          _.Body().set_sale_appid(_);
-          const _ = await _._.GetUserVotes(_, _);
-          return (
-            _.BSuccess() ||
-              console.warn(`Failed to get votes for user: ${_.GetEResult()}`),
-            _.Body().toObject()?.user_votes ?? []
-          );
-        }
-        function _(_) {
-          const _ = useActiveServiceTransport();
-          return useQuery({
-            queryKey: [`SteamAwardUserVotes_${UserConfig.accountid}`],
-            queryFn: () => _(_, _),
-            initialData: () => _()?.user_votes,
-            enabled: UserConfig.logged_in,
-          });
-        }
-        function _(_, _) {
-          const _ = _(_);
-          return useMemo(
-            () => _.data?.find((_) => _.voteid == _)?.appid,
-            [_, _.data],
-          );
-        }
-        function _(_) {
-          const _ = useActiveServiceTransport();
-          return useQuery({
-            queryKey: [`SteamAwardItemDefs_${_}`],
-            queryFn: async () => {
-              const _ = CProtoBufMsg.Init(
-                CQuest_GetCommunityItemDefinitions_Request,
-              );
-              return (
-                _.Body().set_appid(_),
-                _.Body().set_language(Config.LANGUAGE),
-                (await QuestService.GetCommunityItemDefinitions(_, _))
-                  .Body()
-                  .toObject()
-              );
-            },
-            staleTime: 1 / 0,
-            initialData: () => _()?.item_definitions,
-          });
-        }
-        function _(_, _) {
-          const _ = _(_),
-            _ = _(_);
-          if (!_.data || !_.data) return null;
-          const _ = _.data.votes?.find((_) => _.voteid == _);
-          return _
-            ? _.data.item_definitions?.find((_) => _.item_type == _.item_type)
-            : null;
-        }
-        function _() {
-          const _ = React.useContext(_);
-          return _ ? _.yearStyles : {};
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          return UserConfig.logged_in
-            ? UserConfig.is_limited
-              ? (ShowModalDialog(
-                  jsx(LimitAccountFeatureNotSupportedDialog, {
-                    strTokenOverride: _
-                      ? "#SteamAward_Vote_LimitedAccount"
-                      : "#SteamAward_Nominate_LimitedAccount",
-                  }),
-                  window,
-                ),
-                !1)
-              : !0
-            : (ShowModalDialog(
-                jsx(GenericConfirmDialog, {
-                  strTitle: Localize("#EventDisplay_Share_NotLoggedIn"),
-                  strDescription: Localize(
-                    "#EventDisplay_Share_NotLoggedIn_Description",
-                  ),
-                  strOKButtonText: Localize("#MobileLogin_SignIn"),
-                  onOK: StoreRedirectLogin,
-                }),
-                window,
-              ),
-              !1);
-        }
         function _(_) {
           const _ = (0, _._)();
           return (0, _.useMemo)(
@@ -713266,12 +713331,16 @@ Status Code:` +
         function _(_) {
           const { data: _, isPending: _ } = (0, _._)({
             queryKey: ["SteamAwards.WidgetStyle"],
-            queryFn: async () =>
-              (
-                await _().get(_(), {
-                  withCredentials: !1,
-                })
-              ).data,
+            queryFn: async () => {
+              const _ = await fetch(_(), {
+                credentials: "omit",
+              });
+              if (!_._)
+                throw new Error(
+                  `steamawards/ajaxgetwidgetstyle failed with ${_.status}`,
+                );
+              return await _.json();
+            },
             enabled: _,
             staleTime: 1 / 0,
             retry: !1,
@@ -713381,6 +713450,7 @@ Status Code:` +
           return _ || (0, _._)();
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -744478,7 +744548,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1793740528),
+            _ = parseInt(1793919129),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

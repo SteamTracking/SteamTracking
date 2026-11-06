@@ -12841,6 +12841,7 @@ BIsFixedDisk Yielding IO Job
 BIsGameRunning
 BIsGameWindowReady
 BIsGlobalInstance
+BIsHostPathVisibleToContainer only accepts absolute paths
 BIsInitialized()
 BIsInstallStartInProgress
 BIsJobRunning()
@@ -18749,6 +18750,7 @@ Failed %s - no request with handle %llu!\n
 Failed After %d Samples:
 Failed Dependency
 Failed adding library folder "%s" : not an absolute path
+Failed adding library folder "%s" : not shared with the container
 Failed adding library folder "%s" : same path already mounted
 Failed adding library folder "%s" : subfolder of existing folder
 Failed building depot dependency
@@ -43562,6 +43564,7 @@ numfiles
 numfolders
 nv->name->len > 0
 nvagipman:
+nvme
 nvme-
 nytimes.com
 o2i_ECPublicKey
@@ -46643,7 +46646,7 @@ stderr
 stdin
 stdout
 steam
-steam Nov  2 2026 20:32:26
+steam Nov  5 2026 22:07:51
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
