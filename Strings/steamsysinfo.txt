@@ -68,6 +68,7 @@
  was modified concurrently during serialization.
  with type
 !"Not implemented"
+!"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
 !V_isempty( prefix )
@@ -239,6 +240,7 @@ $ORIGIN
 %s.current.txt
 %s/%s/%s.previous.txt
 %s/%s/%s.txt
+%s/.steam/exportedsettings.json
 %s/.steam/steam
 %s/steamXXXXXX
 %s: No arguments passed, exiting\n
@@ -441,6 +443,7 @@ $ORIGIN
 . Difference of
 ...<truncated>...
 ../common/filesystem_helpers.cpp
+../common/language.cpp
 ../common/logfile.cpp
 ../common/logger.cpp
 ../common/steamid.cpp
@@ -542,6 +545,7 @@ $ORIGIN
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:52:16
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -657,7 +661,6 @@ $ORIGIN
 20IUniformRandomStream
 21CLogFileAsyncCallback
 21CUtlCStringConversion
-22:07:03
 24 Mbps
 24CDirWatcherPollingThread
 256 Kbps
@@ -736,10 +739,16 @@ AddString
 AddUInt32
 AddUInt64
 Address too small!
+Afrikaans
+Albanian
 Already saw decimal point or exponent; can't have another one.
+Amharic
 Anonymous mutex cannot have bAllAccess == true
 April
+Arabic
 Argument for the query, the meaning depends on the query
+Armenian
+Assamese
 Assert( %s ):%s:%d\n
 Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
@@ -750,6 +759,7 @@ Attempted to change replicated CVar when you are not the GM\n
 Attempting to create a named event with a null name
 August
 Average %.2f fps, %.2f ms per frame\n
+Azerbaijani
 BCreateDirectory
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
 BFilesystemAllowsExecution: couldn't read %s\n
@@ -773,12 +783,18 @@ Bad expression token: %c at %d in %s\n
 Bad flag in RTime32DateAdd
 Bad thread local: Get\n
 Bad thread local: Set\n
+Bangla
+Basque
+Belarusian
 Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
 Blocks
 Boolean default must be true or false.
+Bosnian
+Brazilian
 Breaking '%s' in '%s'\n
 Bucket size : count\n
 Build identifier for crash reporting
+Bulgarian
 Busy, please retry.\n
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of
 C-runtime internal
@@ -1130,9 +1146,11 @@ Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You m
 Cannot copy json_name to a proto of a different size.
 Cannot get here
 Cannot skip field value, unexpected token:
+Catalan
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
+Cherokee
 ClearField
 Close before rename failed. Log will keep its old name\n
 Command line options:\n
@@ -1145,6 +1163,8 @@ Could not create an instance of
 Could not find type "
 Couldn't parse default value "
 CreateInterface
+Croatian
+Czech
 DATA_LOSS
 DBG_PATHMATCH
 DEADLINE_EXCEEDED
@@ -1158,6 +1178,8 @@ DF64x
 DLOPEN Error:%s\n
 DO NOT PARSE: fields may be stripped and missing.\n
 DONT_BREAK_ON_ASSERT
+Danish
+Dari
 December
 Default value for an enum field must be an identifier.
 Deleting thread object from the thread, this is bad
@@ -1167,10 +1189,12 @@ Don't know how to check filesystem type on POSIX!
 Don't lookup extension types if they aren't present (1).
 Don't lookup extension types if they aren't present (2).
 DumpMemTrackingStats %d %d \n
+Dutch
 EChildProcessQueryCommand
 ERROR
 Element( i )
 End-of-file inside block comment.
+English
 Entry
 Enum name
 Enum type "
@@ -1189,6 +1213,7 @@ Error parsing text-format
 Error reporting not implemented.
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
+Estonian
 Exit code: %d\n
 Exiting on SPEW_ABORT\n
 Expanded map entry type
@@ -1234,6 +1259,7 @@ Failed to get thread priority: getpriority failed %d\n
 Failed to load "%s"
 Failed to load desktop file via gio: %s\n
 Failed to load optional module %s\n
+Failed to parse %s\n
 Failed to query vulkan gpu topology\n
 Failed to remove log event from threadsafe queue!
 Failed to resolve gio, cannot enumerate host apps\n
@@ -1283,9 +1309,12 @@ File recursively imports itself:
 FileOptions
 Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
 Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
+Filipino
+Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 Found invalid proto option data for:
+French
 Friday
 GAMESCOPE_WAYLAND_DISPLAY
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
@@ -1306,6 +1335,9 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.9
+Galician
+Georgian
+German
 GetBool
 GetBootstrapperVersion
 GetDouble
@@ -1340,17 +1372,25 @@ GetUInt32
 GetUInt64
 GetUint64FromString() did not get correct peCS parameter
 GpuTopology
+Greek
 Groups are not supported in proto3 syntax.
+Gujarati
 HOME
 HasField
+Hausa
+Hebrew
 Hex and octal numbers must be integers.
+Hindi
 Hit absolute maximum emit event queue size -- NOT adding this event
+Hungarian
 INFO
 INTERNAL
 INVALID_ARGUMENT
 INVALID_CPPTYPE
 INVALID_KEY_SYMBOL
 IVALIDATE001
+Icelandic
+Igbo
 Ignoring extension "
 Ignoring resume of count %d\n
 Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
@@ -1362,6 +1402,7 @@ Index must be -1 for non-repeated fields
 Index must be -1 for singular fields.
 Index must be in range of repeated field values.
 Index out-of-bounds (field is empty).
+Indonesian
 Infinite time value
 Input size too large:
 Integer out of range (
@@ -1395,16 +1436,22 @@ Invalid wire type for CPPTYPE_INT64:
 Invalid wire type for CPPTYPE_MESSAGE:
 Invalid wire type for CPPTYPE_UINT32:
 Invalid wire type for CPPTYPE_UINT64:
+Irish
 IsPowerOfTwo( nNewCapacity )
 IsSpewActive
 IsText()
 IsValidIndex( elem )
 IsValidIndex( idx )
 IsValidIndex(elem)
+Italian
 JArray
 January
+Japanese
 July
 June
+K'iche'
+Kannada
+Kazakh
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
 KeyValues
@@ -1436,6 +1483,12 @@ KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
 KeyValuesSystem()
+Khmer
+Kinyarwanda
+Konkani
+Korean
+Kyrgyz
+LANGUAGE
 LC_ADDRESS
 LC_COLLATE
 LC_CTYPE
@@ -1454,8 +1507,11 @@ LINUX64
 LOCK_EX
 LOCK_SH
 Last Message Repeated %d times.\n%s
+Latam_Spanish
+Latvian
 Leaked KeyValues (%u):\n
 Leaked mem: %s %s\n
+Lithuanian
 LoadFileIntoBuffer: NULL parameters
 LoadFileRangeIntoBuffer_Internal
 LoadFromBuffer: missing {   (current key: '%s')
@@ -1467,6 +1523,12 @@ Logger does not handle * char as used for a width specifier (where width is a pa
 Logic problem? szsrc =
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
+Luxembourgish
+Macedonian
+Malay
+Malayalam
+Maltese
+Maori
 MapKey::GetBoolValue
 MapKey::GetInt32Value
 MapKey::GetInt64Value
@@ -1495,6 +1557,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
+Marathi
 March
 MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
@@ -1521,6 +1584,7 @@ Missing String for %s (%d). If this comes from user data or could be valid, prov
 Missing field: FileDescriptorProto.name.
 Missing name.
 Monday
+Mongolian
 Multiple extension registrations for type "
 Must Start() thread before setting priority
 MutableMessage
@@ -1696,6 +1760,7 @@ NULL buffer passed to V_atof()
 NULL buffer passed to V_atoi()
 Need space between identifier and decimal point.
 Need space between number and identifier.
+Nepali
 Nil time value
 No default value
 No field named "uninterpreted_option" in the Options proto.
@@ -1705,10 +1770,12 @@ No tracked allocs currently in use. Total %d\n
 Non-primitive types can't be packed.
 Non-repeated Any specified multiple times.
 Non-repeated field "
+None
+Norwegian
 Not implemented field number
 Not supported.
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov  5 2026
+Nov  7 2026
 November
 Numbers starting with leading zero must be in octal.
 OSX1010
@@ -1716,6 +1783,7 @@ OUT OF MEMORY
 OUT_OF_RANGE
 Object
 October
+Odia
 Oneof must have at least one field.
 OneofOptions
 Only thread can stop self: Use a higher-level protocol
@@ -1751,8 +1819,11 @@ POSIX does not support inheriting full mutexes
 PS3 Unattributed
 Parameter file '%s' not found, skipping...\n
 Peak %.2f ms frame\n
+Persian
 Persistent Logfiles created which have no cleanup limit specified!
 Persistent logfile %s is past the keep until date - cleaning up\n
+Polish
+Portuguese
 PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
 PosixFileOpen: failed to compute relative path for: %s - %s\n
 PosixFileOpen: failed to get path fd for: %s - %s\n
@@ -1761,6 +1832,9 @@ Probably deadlock or failure waiting for thread to initialize.
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
+Punjabi (Gurmukhi)
+Punjabi (Shahmukhi)
+Quechua
 RESOURCE_EXHAUSTED
 RGBA: %.2X %.2X %.2X %.2X
 ReOpenFd: failed to reopen: %s: %s\n
@@ -1784,8 +1858,10 @@ Reserved numbers must be positive integers.
 Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
 Reserved range end number must be greater than start number.
 Response: %s\n
+Romanian
 Root
 Running query: %d - %s\n
+Russian
 SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAM_
@@ -1794,12 +1870,14 @@ STEAM_DESKTOP_APP_AFFINITY_LIST
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Saving response to: %s - %d bytes\n
+Scots
 Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 September
+Serbian
 ServiceOptions
 SetAllocatedMessage
 SetBool
@@ -1822,11 +1900,19 @@ SetString
 SetUInt32
 SetUInt64
 Should not reach here.
+Simplified_Chinese
+Sindhi
+Sinhala
 Size
 Size() == operand.Size()
+Slovak
+Slovenian
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Someone called ClearWritingMinidump without holding the minidump lock.
 Someone called SetWritingMinidump without holding the minidump lock.
+Sorani
+Sotho
+Spanish
 Spew Globals
 Spew globals
 St10bad_typeid
@@ -1964,6 +2050,7 @@ Steam Gpu Query Engine
 Steam Helper
 Steam ID does not pass strict parsing: '%s'
 Steam user identifier
+SteamChina_SChinese
 Stop using I64/I32 - use lld or d, respectively
 Store the response in a file
 String field
@@ -1971,16 +2058,23 @@ String literals cannot cross line boundaries.
 String pool bytes used %u, max %u, %u pools\n
 StringPrintfVector currently only supports up to
 Sunday
+Swahili
 Swap
+Swedish
 Symbol name "
 Synthetic oneofs must be after all other oneofs
 TLS init function for
 TLS wrapper function for
 TMPDIR
+Tajik
+Tamil
 Target buffer for V_URLEncode should be 3x source length, plus one for terminating null\n
 Target buffer too short to terminate\n
 Target buffer too short\n
+Tatar
+Telugu
 Terminal
+Thai
 The JSON camel-case name of field "
 The [proto3_optional=true] option may only be set on proto3fields, not
 The extension
@@ -1998,6 +2092,7 @@ Thread(0x%p/0x%p/0x%x)
 ThreadGetProcessExitCode
 ThreadInMainThread()
 Thursday
+Tigrinya
 Too many arguments. %d arguments at most.
 Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
@@ -2005,11 +2100,15 @@ Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
 TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
+Traditional_Chinese
 Tried to create a thread that has already been created!
 Tried to merge messages of different types
 Tried to register a non-generated type with the generated type registry.
 True
+Tswana
 Tuesday
+Turkish
+Turkmen
 Type appears to be in generated pool but wasn't
 Type is already registered:
 UNAUTHENTICATED
@@ -2020,6 +2119,7 @@ UNKNOWN_ENUM_VALUE_%s_%d
 USER
 UTF-8
 UTF-8 data when
+Ukrainian
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unexpected end of string.
@@ -2040,7 +2140,10 @@ Unsupported format qualifier %c%c
 Unsupported format qualifier l%c
 Unsupported format qualifier z%c
 Unsupported: type mismatch
+Urdu
 UtlThreadSafeQueue
+Uyghur
+Uzbek
 VISTA
 VPROF Report for Thread: %d - %s\n
 VTT for
@@ -2052,6 +2155,7 @@ V_MakeAbsolutePath: _getcwd failed.
 V_RemoveDotSlashes failed for "%s".
 V_URLDecode needs a dest buffer at least as large as the source
 V_strlen( pchTime ) == 25
+Valencian
 Validate Failed: !!!Leaked:\t%llu %s%s\n
 Validate Failed: Leaked connection %u\n
 Validate Failed: Leaked file %p\n
@@ -2071,6 +2175,7 @@ Value of type "
 Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
+Vietnamese
 WARNING
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
@@ -2088,11 +2193,16 @@ Warning: failed to set thread priority: set failed for priority %d\n
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
 Warning: thread priority outside allowed range %d\n
 Wednesday
+Welsh
+Wolof
 X360
 XXXXXX
+Xhosa
 YYYY
+Yoruba
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Z0000
+Zulu
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [%s] %.*s\r\n
@@ -2193,23 +2303,32 @@ about to perform blocking dns call from the main thread.  consider refactoring.\
 access
 accessor_ == other.accessor_
 account
+afrikaans
+albanian
 alignof
 allocator
 allowed in proto3.
 alnum
 alpha
 alphasort64
+amharic
 an arena.
 anonymous
+ar_AE
+arabic
 argLen < 0x10000000u
+armenian
 asctime_r
+assamese
 audio.so
 auto
 auto:
 availableSpace
+azerbaijani
 backtrace
 backtrace_symbols
 bad_function_call
+bangla
 baseIP.GetType() == k_EIPTypeV4
 baseIP.GetType() == k_EIPTypeV6
 baseline
@@ -2242,6 +2361,9 @@ basic_string::replace
 basic_string::resize
 basic_string::substr
 basic_string_view::substr
+basque
+belarusian
+bg_BG
 bind_textdomain_codeset
 bindtextdomain
 bitNum >= 0 && bitNum < this->Size()
@@ -2251,6 +2373,8 @@ bool
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 boolean
 bootstrap
+bosnian
+brazilian
 broadcast
 btowc
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
@@ -2258,6 +2382,7 @@ buffer. Use the 'bytes' type if you intend to send raw
 bufferLen == 0 || pDest != NULL
 bufferLen > 0 && bufferLen <= INT_MAX
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
+bulgarian
 byte
 bytes
 bytes.
@@ -2271,6 +2396,7 @@ can't convert uint64 to int64 (data loss)
 can't reach here.
 cannot create shim for unknown locale::facet
 cannot create std::vector larger than max_size()
+catalan
 cbActual < (uint32)nBufSizeWithTerminator
 ccMax >= 1
 cefwebhelper
@@ -2282,6 +2408,7 @@ char8_t
 chat
 chdir
 checkLen >= 0
+cherokee
 china
 chmod
 chown
@@ -2319,15 +2446,22 @@ crashhandler.so
 crashhandler002
 crashhandler003
 crashhandler004
+croatian
 crypto
+cs_CZ
 ctime_r
 cubBytesToRead < INT32_MAX
 cubData < FIO_MAX_IO_BYTES
 cubData < INT32_MAX
+czech
+da_DK
+danish
+dari
 data:
 data_ == other.data_
 datacoll
 daylight
+de_DE
 decimal128
 decimal32
 decimal64
@@ -2356,14 +2490,23 @@ dlsym
 double
 dprintf
 dup2
+dutch
 dynamic_cast
 eGroup < VPROF_BUDGETGROUP_MAX
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
+el_GR
+en-US
+en_US
 endmntent
+english
 enum
 enums.proto
 environ
 error
+es-419
+es_419
+es_ES
+estonian
 exec
 execv
 execve
@@ -2385,12 +2528,15 @@ fdopen
 feof
 fflush
 fgets
+fi_FI
 fileno
 fileop
 filesystem
 filesystem_stdio.so
 filesystem_steam.so
 filetx
+filipino
+finnish
 fixed32
 fixed64
 float
@@ -2405,9 +2551,12 @@ fork
 fprintf
 fputc
 fputs
+fr-FR
+fr_FR
 fread
 free
 freeaddrinfo
+french
 freopen
 friends
 friendsui.so
@@ -2442,7 +2591,10 @@ g_shell_parse_argv %s failed: %s\n
 g_strfreev
 g_type_check_instance_is_a
 g_vecTempTextBuffer
+galician
 generic
+georgian
+german
 get_disk_info
 getaddrinfo
 getc
@@ -2570,25 +2722,37 @@ google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
 google::protobuf::uint64 google::protobuf::UnknownField::varint() const
 google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSerialize(int, int, google::protobuf::uint8*, google::protobuf::io::EpsCopyOutputStream*) const
 graph
+greek
 group
 gsoapwrapper.so
 guard variable for
 guestpass
+gujarati
+gurmukhi
 half
 hardware
+hausa
+hebrew
 hidden alias for
+hindi
 html
 httpclient
 httpserver
+hu_HU
+hungarian
 i < length_
 iOption != m_listCommandLineOption.InvalidIndex()
+icelandic
 iconv
 iconv_close
 iconv_open
+id_ID
+igbo
 import "$0";\n
 import public "$0";\n
 import weak "$0";\n
 in != out
+indonesian
 infinity
 info.m_pReplacementString == 0
 initializer for module
@@ -2604,6 +2768,7 @@ ios_base::_M_grow_words allocation failed
 ios_base::_M_grow_words is not valid
 iostream
 iostream error
+irish
 is_large()
 isalnum
 isalpha
@@ -2611,7 +2776,11 @@ isspace
 iswalnum
 iswalpha
 iswspace
+it_IT
+italian
 item %p sentinel corrupted. skipping.\n
+ja_JP
+japanese
 java Class for
 java resource
 json_name = "
@@ -2620,7 +2789,19 @@ k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 k_EIPTypeV4 == addr.GetType()
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
+kannada
+kazakh
+khmer
+kiche
 kill
+kinyarwanda
+ko_KR
+konkani
+koreana
+kyrgyz
+language
+latam
+latvian
 lchown
 ld-linux-x86-64.so.2
 len < maxlen
@@ -2639,6 +2820,7 @@ libvulkan.so
 libvulkan.so.1
 license
 link
+lithuanian
 local
 locale::_Impl::_M_replace_facet
 locale::_S_normalize_category category not found
@@ -2658,6 +2840,7 @@ loopback
 lower
 lseek
 lseek64
+luxembourgish
 m_BaseIP.GetType() == k_EIPTypeV4
 m_Count == 0
 m_Elements
@@ -2730,11 +2913,17 @@ m_vecParms.IsValidIndex( nIndex )
 m_vecParms[i]
 m_vecRegisteredWriters
 m_vecRegisteredWriters.HasElement( pFile )
+macedonian
+malay
+malayalam
 malloc
 malloc_usable_size
+maltese
+maori
 map keys are not unique
 map<$0, $1>
 map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
+marathi
 maxLen <= INT_MAX
 maxLen == 0 || pDest != NULL
 maxLen > 0
@@ -2760,8 +2949,10 @@ mmap
 mmap64
 modf
 mold 2.36.0 (compatible with GNU ld)
+mongolian
 mount
 mprotect
+ms-MY
 msync
 mt19937
 munmap
@@ -2789,14 +2980,18 @@ nYear > 1712
 nYear >= 1900 && nMonth >= 1 && nMonth <= 12
 nanosleep
 nattypeprobe.so
+nepali
 network
 networkmgr
 new
 new[]
+nl_NL
+no_NO
 noexcept
 non-transaction clone for
 non-virtual thunk to
 none
+norwegian
 null
 nullptr output boolean given.
 num > 0
@@ -2804,6 +2999,7 @@ numElements >= 0
 nvme
 obj_count
 obj_size
+odia
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset >= 0
@@ -2867,12 +3063,16 @@ pchSteam2ID
 pchString != nullptr
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
+persian
 pipe2
+pl_PL
 please implement MergeFrom for your type.
 plogs
+polish
 poll
 popen
 port
+portuguese
 posix_fadvise
 posix_memalign
 ppFrames[iFrame] != NULL
@@ -2890,6 +3090,10 @@ pstrNew == pstrDestination
 pstrNew == pszString
 pszName
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
+pt-BR
+pt-br
+pt_BR
+pt_PT
 pthread_attr_init
 pthread_attr_setstacksize
 pthread_cancel
@@ -2936,6 +3140,7 @@ putc
 putwc
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pwrite64
+quechua
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -2964,6 +3169,10 @@ request_space %llu
 required
 resizeNumBits >= 0
 rmdir
+ro_RO
+romanian
+ru_RU
+russian
 s1 != NULL
 s2 != NULL
 s_VecModuleAddressRanges
@@ -2982,12 +3191,15 @@ s_treeThreadLocalSteamIDMaps
 s_treeThreadLocalSteamIDMaps[i]
 s_treeThreadLocalTxnIDMaps
 s_treeThreadLocalTxnIDMaps[i]
+sc_schinese
 scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
 sched_setaffinity
 sched_yield
+schinese
+scots
 secblock.h
 secure_getenv
 semaphore creation failed %s
@@ -2995,12 +3207,14 @@ semctl
 semget
 semop
 sendfile64
+serbian
 serialize
 serializing
 server.so
 serverbrowser.so
 service
 service $0 {\n
+setenv
 setlocale
 setmntent
 setpriority
@@ -3008,6 +3222,7 @@ setsid
 setvbuf
 sfixed32
 sfixed64
+shahmukhi
 short
 sigaction
 sigaddset
@@ -3015,6 +3230,8 @@ sigemptyset
 siginfo.si_pid == dwProcessId
 signed char
 sigprocmask
+sindhi
+sinhala
 sint32
 sint64
 size < INT_MAX
@@ -3022,6 +3239,8 @@ size too big:
 size_t to int conversion
 sizeof
 sizeof...
+slovak
+slovenian
 sm_ListWatchingLogs
 sm_ThreadSafeQueueLogEvents
 sm_ThreadSafeQueueLogEvents.GetQueue()[ iLogEvent ]
@@ -3035,9 +3254,12 @@ sm_pLogInstance
 sm_vecLogListeners
 smtp
 snprintf
+sorani
+sotho
 space
 spaceGranted
 spaceReleased
+spanish
 sprintf
 sqrtf
 src != NULL
@@ -3123,7 +3345,10 @@ strtoll
 strtoul
 strtoull
 subtype mismatch
+sv_SE
 svcm
+swahili
+swedish
 swprintf
 symlink
 syntax = "$0";\n\n
@@ -3131,6 +3356,11 @@ syntax error at line %d near:
 syscall
 system
 szDomainName != nullptr
+tajik
+tamil
+tatar
+tchinese
+telugu
 template
 template parameter object for
 tenfoot.so
@@ -3139,6 +3369,8 @@ terminate called recursively\n
 terminate called without an active exception\n
 test
 text format contains deprecated field "
+th_TH
+thai
 the
 the Element type supplies a MergeFrom() operation to make copies.
 the actual field type (for enums T should be the generated enum
@@ -3148,15 +3380,20 @@ this
 threads
 throw
 tid(%u) pthread_key_create failed: %s\n
+tigrinya
 time
 timegm
 timezone
 tolower
 towupper
+tr_TR
 transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
 true
+tswana
+turkish
+turkmen
 type or int32).
 type() == TYPE_FIXED32
 type() == TYPE_FIXED64
@@ -3171,6 +3408,8 @@ typeinfo name for
 typename
 uint32
 uint64
+uk_UA
+ukrainian
 unNetworkBitsIPv4 <= 32
 unNetworkBitsIPv4 >= 8
 unNetworkBitsIPv6 <= 64
@@ -3195,9 +3434,13 @@ unsigned short
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 upper
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
+urdu
 usleep
 utime
 utimes
+uyghur
+uzbek
+valencian
 value
 vasprintf
 vector::_M_default_append
@@ -3207,8 +3450,10 @@ vector::_M_realloc_insert
 vector::reserve
 vfprintf
 vgui2_s.so
+vi_VN
 video.so
 video64_server.so
+vietnamese
 virtual thunk to
 vkAcquireDrmDisplayEXT
 vkAcquireNextImage2KHR
@@ -3866,20 +4111,31 @@ wcstol
 wcstoll
 wcstoull
 wctob
+welsh
 with a type that does not implement MergeFrom. This is unsafe;
 wmemchr
 wmemcmp
 wmemcpy
 wmemmove
 wmemset
+wolof
 write
 write %s failed, errno = %d\n
 writev
 wrong submessage type
 x86_64
 xdigit
+xhosa
 xlocale
 xmemory
+yoruba
+zh-cn
+zh-tw
+zh-xc
+zh_CN
+zh_TW
+zh_XC
+zulu
 {%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
 {%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
 {default arg#

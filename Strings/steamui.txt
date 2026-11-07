@@ -8547,7 +8547,6 @@ ${LANGUAGE}
 @bProfileYieldsInTestSuiteJobs
 @bProtobufParseSizeProfile
 @bProtobufParseTimeProfile
-@bSearchSuggestionNameMatchScoring
 @bShowUninstalledDemosInLibrary
 @cMinimumJobTimeoutsToCheckPerFrame
 @cNetEncryptionHandshakeWorkMax_HighPri
@@ -19931,7 +19930,7 @@ NotifyText: %s
 NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
-Nov  5 2026 22:09:01
+Nov  7 2026 00:52:27
 November
 NullMetrics()
 Num Lock
@@ -23822,7 +23821,6 @@ Store
 Store / Billing country code mismatch
 Store / Business country code mismatch
 Store Promotion
-Store search suggestions use edismax name-match scoring
 Store/Community web auth request failed: %s\n
 StoreAppImages
 StoreCDN
@@ -41611,6 +41609,7 @@ strShortName
 strShortcutExe
 strShortcutLaunchOptions
 strShortcutName
+strShortcutPath
 strShortcutStartDir
 strSiteName
 strSizeOnDisk

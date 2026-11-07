@@ -2993,6 +2993,7 @@ https://store.steampowered.com/app/${appid}?announce_gid=${announcementid}
 https://store.steampowered.com/app/${appid}?snr=${g_SNR}
 https://store.steampowered.com/app/${unAppID}/
 https://store.steampowered.com/app/${unAppID}/${url_name}/
+https://store.steampowered.com/app/1289670
 https://store.steampowered.com/app/570/Dota_2/
 https://store.steampowered.com/app/730/CounterStrike_2/
 https://store.steampowered.com/appreport/${nAppId}/report/
@@ -3074,7 +3075,6 @@ https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&minneeded=$
 https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&minneeded=${price}${}&returnurl=${location}
 https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&returnurl=${location}
 https://store.steampowered.com/sub/${unPackageID}/
-https://store.steampowered.com/subscriptions/ea
 https://store.steampowered.com/supportmessages/ackmessages
 https://store.steampowered.com/tag/en/${}
 https://store.steampowered.com/tagdata/gettaggames/${strTagLanguage}/${unTagID}/
