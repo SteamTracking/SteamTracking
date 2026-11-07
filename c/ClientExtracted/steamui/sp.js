@@ -594115,7 +594115,7 @@ Status Code:` +
               )
                 return !1;
               const _ = new _._(_).GetAppID();
-              return !_._.WindowStore.VRGamepadUIMainWindowInstance.VRFrameStore?.frames.some(
+              return !_._.WindowStore.VRGamepadUIMainWindowInstance?.VRFrameStore?.frames.some(
                 (_) => _.gameAppID && _.gameAppID == _,
               );
             }
@@ -706304,7 +706304,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1794009916),
+            _ = parseInt(1794075078),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -709152,45 +709152,53 @@ Status Code:` +
           });
         }
         function _(_, _) {
-          let _ = _._.GetAppOverviewByAppID(_),
-            _ = (0, _._)(`#Steam_AppUpdateError_${_}`);
-          const _ = _.useId();
           (0, _._)(
-            (0, _.jsx)(_._, {
-              title: (0, _._)("#UninstallDialog_Title"),
-              className: _().UninstallDialog,
-              onOK: null,
-              "aria-describedby": _,
-              children: (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsxs)(_._, {
-                    _: _,
-                    children: [
-                      (0, _.jsx)("div", {
-                        children: (0, _._)(
-                          "#UninstallDialog_ErrorMessage",
-                          _.display_name,
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().UninstallError,
-                        children: _,
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_._, {
-                      children: (0, _._)("#Button_Close"),
-                    }),
-                  }),
-                ],
-              }),
+            (0, _.jsx)(_, {
+              appID: _,
+              eError: _,
             }),
             window,
             {
               strTitle: (0, _._)("#UninstallDialog_Title"),
             },
           );
+        }
+        function _(_) {
+          const { appID: _, eError: _, closeModal: _ } = _,
+            _ = _._.GetAppOverviewByAppID(_),
+            _ = (0, _._)(`#Steam_AppUpdateError_${_}`),
+            _ = _.useId();
+          return (0, _.jsx)(_._, {
+            title: (0, _._)("#UninstallDialog_Title"),
+            className: _().UninstallDialog,
+            onOK: null,
+            "aria-describedby": _,
+            closeModal: _,
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsxs)(_._, {
+                  _: _,
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#UninstallDialog_ErrorMessage",
+                        _.display_name,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().UninstallError,
+                      children: _,
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    children: (0, _._)("#Button_Close"),
+                  }),
+                }),
+              ],
+            }),
+          });
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -747117,7 +747125,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1794009916),
+            _ = parseInt(1794075078),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

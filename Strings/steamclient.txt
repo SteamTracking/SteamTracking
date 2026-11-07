@@ -40169,9 +40169,9 @@ lost rgb to gray
 lost/gained channels
 low-memory-warning
 low-power-mode1
-low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1641
-low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1805
-low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:2010
+low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1650
+low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1814
+low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:2019
 low-pri yield - ../clientdll/appdatacache.cpp:876
 low-pri yield - ../clientdll/autocloud.cpp:591
 low-pri yield - ../clientdll/autocloud.cpp:670
@@ -46646,7 +46646,7 @@ stderr
 stdin
 stdout
 steam
-steam Nov  7 2026 03:13:28
+steam Nov  7 2026 18:15:09
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &

@@ -254,8 +254,6 @@ $ORIGIN
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-03:13:22
-03:13:23
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
@@ -264,6 +262,8 @@ $ORIGIN
 16CAdHocValidation
 16CKeyValuesSystem
 16IKeyValuesSystem
+18:15:03
+18:15:05
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
