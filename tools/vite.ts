@@ -13,6 +13,7 @@ const apps = [
 	{ host: "steamcommunity.com", app: "community" },
 	{ host: "help.steampowered.com", app: "help" },
 	{ host: "partner.steamgames.com", app: "appmgmt" },
+	{ host: "partner.steampowered.com", app: "stats" },
 ];
 
 const englishChunkPattern = /_english\d*\.js$/;

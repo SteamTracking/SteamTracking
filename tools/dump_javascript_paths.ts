@@ -15,6 +15,7 @@ const pathsToRecurse = [
 	pathResolve(rootDir, "ClientExtracted/"),
 	pathResolve(rootDir, "help.steampowered.com/"),
 	pathResolve(rootDir, "partner.steamgames.com/"),
+	pathResolve(rootDir, "partner.steampowered.com/"),
 	pathResolve(rootDir, "steamcommunity.com/"),
 	pathResolve(rootDir, "store.steampowered.com/"),
 	pathResolve(rootDir, "checkout.steampowered.com/"),

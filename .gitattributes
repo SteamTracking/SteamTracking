@@ -17,6 +17,7 @@
 ClientManifest/* linguist-generated=true
 help.steampowered.com/public/javascript/applications/help/**/*.js linguist-generated=true
 partner.steamgames.com/public/javascript/applications/**/*.js linguist-generated=true
+partner.steampowered.com/public/javascript/applications/**/*.js linguist-generated=true
 steamcommunity.com/public/javascript/applications/**/*.js linguist-generated=true
 steamcommunity.com/public/javascript/webui/**/*.js linguist-generated=true
 store.steampowered.com/public/javascript/applications/**/*.js linguist-generated=true
