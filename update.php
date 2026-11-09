@@ -202,9 +202,9 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			{
 				$this->Log( '{lightblue}Dumping web protobufs' );
 
-				$this->RunCommand( 'node tools/dump_javascript_protobufs.mjs' );
-				$this->RunCommand( 'node tools/dump_javascript_urls.mjs' );
-				$this->RunCommand( 'node tools/dump_javascript_svg.mjs' );
+				$this->RunCommand( 'node tools/dump_javascript_protobufs.ts' );
+				$this->RunCommand( 'node tools/dump_javascript_urls.ts' );
+				$this->RunCommand( 'node tools/dump_javascript_svg.ts' );
 			}
 
 			$this->Log( '{lightblue}Done' );
@@ -525,7 +525,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 					$JsonFile = substr( $File, 0, -3 ) . '.json';
 
-					system( 'node tools/extract_strings.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $JsonFile ), $ReturnCode );
+					system( 'node tools/extract_strings.ts ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $JsonFile ), $ReturnCode );
 
 					if( $ReturnCode !== 0 )
 					{
@@ -568,7 +568,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 							mkdir( $CleanFolder, 0755, true );
 						}
 
-						system( 'node tools/generate_clean_js.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $CleanFile ), $ReturnCode );
+						system( 'node tools/generate_clean_js.ts ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $CleanFile ), $ReturnCode );
 
 						if( $ReturnCode === 0 )
 						{
@@ -868,7 +868,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		 */
 		private function ProcessViteChunks( array &$KnownUrls ) : array
 		{
-			$this->RunCommand( 'node tools/generate_vite_urls.mjs' );
+			$this->RunCommand( 'node tools/generate_vite_urls.ts' );
 
 			if( !file_exists( self::ViteUrlsPath ) )
 			{
@@ -968,7 +968,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		 */
 		private function ProcessSSRFiles() : array
 		{
-			$this->RunCommand( 'node tools/generate_ssr_urls.mjs' );
+			$this->RunCommand( 'node tools/generate_ssr_urls.ts' );
 
 			$SSRUrlsPath = __DIR__ . '/.support/urls_from_ssr.txt';
 

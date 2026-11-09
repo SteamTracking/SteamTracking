@@ -392,7 +392,7 @@ class ClientExtractor
 	{
 		$this->Log( 'Prettifying javascript' );
 
-		$GenerateClean = __DIR__ . '/generate_clean_js.mjs';
+		$GenerateClean = __DIR__ . '/generate_clean_js.ts';
 		$Directories =
 		[
 			self::CLIENT_EXTRACTED_DIR . '/steamui',

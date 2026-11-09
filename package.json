@@ -1,8 +1,9 @@
 {
   "private": true,
   "name": "steamtracking",
+  "type": "module",
   "scripts": {
-    "test": "biome check --config-path=biome_steamdb.json",
+    "test": "biome check --config-path=biome_steamdb.json && tsc",
     "fix": "biome check --write --config-path=biome_steamdb.json",
     "prettier": "biome format --max-diagnostics=0 --log-kind=compact --diagnostic-level=error --write"
   },
@@ -12,5 +13,11 @@
     "espree": "^11.0.0",
     "estraverse": "^5.3.0",
     "xmlbuilder2": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/estraverse": "^5.1.7",
+    "@types/estree": "^1.0.10",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
   }
 }

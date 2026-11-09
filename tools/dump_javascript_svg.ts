@@ -3,16 +3,29 @@ import { existsSync, mkdirSync, readdirSync, rmSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve as pathResolve } from "node:path";
 import { Syntax, traverse } from "estraverse";
+import type {
+	ArrayExpression,
+	CallExpression,
+	Identifier,
+	Literal,
+	MemberExpression,
+	Node,
+	ObjectExpression,
+	Property,
+	SequenceExpression,
+	TemplateLiteral,
+} from "estree";
 import { create as createXml } from "xmlbuilder2";
-import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.mjs";
+import type { XMLBuilder } from "xmlbuilder2/lib/interfaces.js";
+import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.ts";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
 const outputPath = pathResolve(rootDir, "Random/Images");
 
-const writtenFiles = new Set();
+const writtenFiles = new Set<string>();
 
-const svgKeyMap = {
+const svgKeyMap: Record<string, string> = {
 	ariaLabel: "aria-label",
 	clipPath: "clip-path",
 	clipRule: "clip-rule",
@@ -62,21 +75,23 @@ for (const file of await GetFilesToParse()) {
 		traverse(ast, {
 			enter: function (node) {
 				if (node.type === Syntax.CallExpression) {
-					let calleeName = null;
+					const call = node as CallExpression;
+					let calleeName: string | null = null;
 
-					if (node.callee?.type === Syntax.SequenceExpression) {
-						const last = node.callee.expressions[node.callee.expressions.length - 1];
+					if (call.callee?.type === Syntax.SequenceExpression) {
+						const expressions = (call.callee as SequenceExpression).expressions;
+						const last = expressions[expressions.length - 1];
 						if (last?.type === Syntax.MemberExpression) {
-							calleeName = last.property.name;
+							calleeName = ((last as MemberExpression).property as Identifier).name;
 						}
-					} else if (node.callee?.type === Syntax.MemberExpression) {
-						calleeName = node.callee.property.name;
+					} else if (call.callee?.type === Syntax.MemberExpression) {
+						calleeName = ((call.callee as MemberExpression).property as Identifier).name;
 					}
 
-					const tagName = getLiteralValue(node.arguments?.[0]);
+					const tagName = getLiteralValue(call.arguments?.[0]);
 
 					if ((calleeName === "createElement" || calleeName === "jsx" || calleeName === "jsxs") && tagName === "svg") {
-						const svg = createSvgBody(node).end({ prettyPrint: true });
+						const svg = createSvgBody(call).end({ prettyPrint: true });
 						if (svg.length > 0) {
 							const content = Buffer.from(`${svg}\n`, "utf8");
 							OutputToFile("svg", content);
@@ -98,7 +113,7 @@ for (const file of await GetFilesToParse()) {
 					const header = strValue.substring(0, commaIndex);
 					const base64Data = strValue.substring(commaIndex + marker.length);
 
-					let extension;
+					let extension: string;
 					if (header === "data:image/png") {
 						extension = "png";
 					} else if (header === "data:image/jpeg" || header === "data:image/jpg") {
@@ -134,7 +149,7 @@ for (const file of allFiles) {
 
 console.log("Extracted", writtenFiles.size, "files.");
 
-function createSvgBody(node, xml = createXml()) {
+function createSvgBody(node: CallExpression, xml: XMLBuilder = createXml()): XMLBuilder {
 	if (!node) {
 		return xml;
 	}
@@ -147,31 +162,32 @@ function createSvgBody(node, xml = createXml()) {
 
 		const elem = xml.ele(tagName);
 
-		let childrenProp = null;
-		if (node.arguments[1]?.properties) {
-			for (const prop of node.arguments[1].properties) {
-				if (prop.type === Syntax.SpreadElement || prop.key.name === "className") {
+		let childrenProp: Node | null = null;
+		const props = node.arguments[1] as ObjectExpression | undefined;
+		if (props?.properties) {
+			for (const prop of props.properties as Property[]) {
+				if (prop.type === Syntax.SpreadElement || (prop.key as Identifier).name === "className") {
 					continue;
 				}
 
-				if (prop.key.name === "children") {
+				if ((prop.key as Identifier).name === "children") {
 					childrenProp = prop.value;
 					continue;
 				}
 
 				const literalVal = getLiteralValue(prop.value);
-				const val = literalVal !== null ? literalVal : "";
+				const val = (literalVal !== null ? literalVal : "") as string;
 
-				elem.att(FixSVGKeyName(prop.key), val);
+				elem.att(FixSVGKeyName(prop.key as Identifier), val);
 			}
 		}
 
-		let children = [];
+		let children: (Node | null)[] = [];
 		if (node.arguments.length > 2) {
 			children = node.arguments.slice(2);
 		} else if (childrenProp) {
 			if (childrenProp.type === Syntax.ArrayExpression) {
-				children = childrenProp.elements;
+				children = (childrenProp as ArrayExpression).elements;
 			} else {
 				children = [childrenProp];
 			}
@@ -179,8 +195,11 @@ function createSvgBody(node, xml = createXml()) {
 
 		if (children) {
 			for (const child of children) {
-				if (child?.type === Syntax.CallExpression && typeof getLiteralValue(child.arguments?.[0]) === "string") {
-					createSvgBody(child, elem);
+				if (
+					child?.type === Syntax.CallExpression &&
+					typeof getLiteralValue((child as CallExpression).arguments?.[0]) === "string"
+				) {
+					createSvgBody(child as CallExpression, elem);
 				}
 			}
 		}
@@ -191,17 +210,13 @@ function createSvgBody(node, xml = createXml()) {
 	return xml;
 }
 
-function FixSVGKeyName(key) {
+function FixSVGKeyName(key: { name?: string; value?: string }): string {
 	// if a key has a dash in it, it's under value not name
-	const keyName = key.name || key.value;
+	const keyName = (key.name || key.value) as string;
 	return svgKeyMap[keyName] || keyName;
 }
 
-/**
- * @param {string} extension
- * @param {Buffer<ArrayBuffer>} content
- */
-async function OutputToFile(extension, content) {
+async function OutputToFile(extension: string, content: Buffer<ArrayBuffer>) {
 	if (content.length === 0) {
 		return;
 	}
@@ -220,17 +235,18 @@ async function OutputToFile(extension, content) {
 }
 
 // fix for strings using a backquote ` instead of a double quote "
-function getLiteralValue(node) {
+function getLiteralValue(node: Node | null | undefined) {
 	if (!node) {
 		return null;
 	}
 
 	if (node.type === Syntax.Literal) {
-		return node.value;
+		return (node as Literal).value;
 	}
 
-	if (node.type === Syntax.TemplateLiteral && node.expressions.length === 0) {
-		return node.quasis[0]?.value?.cooked ?? node.quasis[0]?.value?.raw ?? null;
+	if (node.type === Syntax.TemplateLiteral && (node as TemplateLiteral).expressions.length === 0) {
+		const quasi = (node as TemplateLiteral).quasis[0];
+		return quasi?.value?.cooked ?? quasi?.value?.raw ?? null;
 	}
 
 	return null;

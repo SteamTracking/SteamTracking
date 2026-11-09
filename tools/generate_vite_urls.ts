@@ -1,6 +1,6 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { extname, join, resolve as pathResolve } from "node:path";
-import { languages } from "./languages.mjs";
+import { languages } from "./languages.ts";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
@@ -18,7 +18,7 @@ const languagePattern = new RegExp(`_(${otherLanguages.join("|")})\\d*\\.js$`);
 // Matches a relative .js or .css path inside any kind of quote.
 const referencePattern = /["'`](\.{1,2}\/[^"'`\s]+?\.(?:js|css))["'`]/g;
 
-const urls = new Set();
+const urls = new Set<string>();
 
 for (const { host, app } of apps) {
 	const folder = pathResolve(rootDir, host, "public/javascript/applications", app);

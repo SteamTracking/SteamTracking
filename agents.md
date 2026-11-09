@@ -4,13 +4,13 @@ Tracks Steam web and client files over time. Keep diff noise per commit low.
 
 `update.sh` runs `update.php`, then commits and pushes. To test locally, run `php update.php` with `STEAM_API_KEY` set.
 
-Format and lint `tools/` with `npm run fix`. `npm run prettier` is for downloaded files.
+Tools are TypeScript run directly by Node, with no build step. Format and lint `tools/` with `npm run fix`, type check with `npm test`. `npm run prettier` is for downloaded files.
 
 ## Update flow
 
 - `urls.txt` lists what `update.php` fetches.
-- `tools/generate_vite_urls.mjs` finds chunks referenced by app JS under `applications/`. Fetching repeats until nothing new appears, and chunks no longer referenced are deleted.
-- `SSR @` pages and `tools/generate_ssr_urls.mjs` find SSR bundles. Raw `ssr/` folders are ignored by git, only `c/` copies are tracked.
+- `tools/generate_vite_urls.ts` finds chunks referenced by app JS under `applications/`. Fetching repeats until nothing new appears, and chunks no longer referenced are deleted.
+- `SSR @` pages and `tools/generate_ssr_urls.ts` find SSR bundles. Raw `ssr/` folders are ignored by git, only `c/` copies are tracked.
 - `tools/extract_client.php` unpacks client archives into `ClientExtracted/`.
 - Dump tools write `ProtobufsWebui/`, `Structs/webui_enums.steamd`, `API/JavascriptUrls.txt` and `Random/Images/`. The image dump deletes output it no longer finds.
 

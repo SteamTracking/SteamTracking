@@ -2,79 +2,116 @@ import { createHash } from "node:crypto";
 import { createWriteStream } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { basename as pathBasename, join as pathJoin, resolve as pathResolve } from "node:path";
-import { replace, Syntax, traverse } from "estraverse";
-import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.mjs";
+import type { Writable } from "node:stream";
+import { Syntax as EstraverseSyntax, replace, traverse } from "estraverse";
+import type {
+	ArrowFunctionExpression,
+	AssignmentExpression,
+	BlockStatement,
+	CallExpression,
+	ClassBody,
+	FunctionExpression,
+	Identifier,
+	Literal,
+	MemberExpression,
+	Node,
+	ObjectExpression,
+	Program,
+	Property,
+	SequenceExpression,
+	SpreadElement,
+} from "estree";
+import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.ts";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
 
-/**
- * @typedef {Object} Field
- * @property {number} id
- * @property {string} name
- * @property {string} type
- * @property {string} flag
- * @property {*} [default]
- * @property {string} [description]
- * @property {TypeToLookup|null} [typeToLookup]
- */
+// Maps each node type name to its literal type so that comparing `node.type` narrows the node.
+const Syntax = EstraverseSyntax as { [K in keyof typeof EstraverseSyntax]: K };
 
-/**
- * @typedef {Object} TypeToLookup
- * @property {string|null} module
- * @property {string} [name]
- * @property {boolean} [recursive]
- */
+type ConstantValue = string | number | boolean | bigint | RegExp | null | undefined;
 
-/**
- * @typedef {Object} Message
- * @property {string} className
- * @property {Set<string>} dependants
- * @property {Field[]} fields
- * @property {string} [id]
- * @property {boolean} [consumed]
- */
+type TypeToLookup = {
+	module: string | null;
+	name?: string;
+	recursive?: boolean;
+};
 
-/**
- * @typedef {Object} Method
- * @property {string} name
- * @property {string} request
- * @property {string} response
- * @property {string[]} [serviceMethodParams]
- */
+type Field = {
+	id: number;
+	name: string;
+	type: string;
+	flag: string;
+	default?: ConstantValue;
+	description?: string;
+	typeToLookup?: TypeToLookup | null;
+};
 
-/**
- * @typedef {Object} Service
- * @property {string} name
- * @property {string} request
- * @property {string} response
- * @property {Object} [requestToLookup]
- * @property {string[]} [requestToLookup.names]
- * @property {Object} [responseToLookup]
- * @property {string} [responseToLookup.module]
- * @property {string} [responseToLookup.name]
- * @property {string[]} [serviceMethodParams]
- */
+type Message = {
+	className: string;
+	dependants: Set<string>;
+	fields: Field[];
+	id?: string;
+	consumed?: boolean;
+};
 
-/**
- * @typedef {Object} ServiceWithMethods
- * @property {string} name
- * @property {Map<string, Method>} methods
- */
+type Method = {
+	name: string;
+	request: string;
+	response: string;
+	serviceMethodParams?: string[];
+};
 
-/**
- * @typedef {Object} Enum
- * @property {string} name
- * @property {Map<string, number|string>} values
- */
+type Service = {
+	name: string;
+	request: string;
+	response: string;
+	requestToLookup?: { module?: string; name?: string; names?: string[] } | null;
+	responseToLookup?: { module: string; name: string } | null;
+	serviceMethodParams?: string[];
+};
 
-/**
- * @typedef {Object} TraverseResult
- * @property {Service[]} services
- * @property {Message[]} messages
- * @property {Enum[]} enums
- * @property {Map<string, string>} exportedIds
- */
+type ServiceWithMethods = {
+	name: string;
+	methods: Map<string, Method>;
+};
+
+type EnumValues = Map<string, number | string>;
+
+type Enum = {
+	name: string;
+	values: EnumValues;
+};
+
+type TraverseResult = {
+	services: Service[];
+	messages: Message[];
+	enums: Enum[];
+	exportedIds: Map<string, string>;
+};
+
+// A message while its class name is still being looked up.
+type PartialMessage = Omit<Message, "className"> & { className: string | null };
+
+// e.NotifyUnlockedH264Handler = { name: "...", request: o }
+type HandlerAssignment = AssignmentExpression & {
+	left: MemberExpression & { property: Identifier };
+	right: ObjectExpression & { properties: [NamedProperty, NamedProperty] };
+};
+
+// (e[(e.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished")
+type EnumMemberAssignment = AssignmentExpression & {
+	left: MemberExpression & {
+		property: AssignmentExpression & { left: MemberExpression & { property: Identifier } };
+	};
+	right: Literal;
+};
+
+type NamedProperty = Property & { key: Identifier };
+
+type EsmImport = { module: string; name: string };
+type EsmImports = Map<string, EsmImport>;
+type ExportedIds = Map<string, Map<string, string>>;
 
 const outputPath = pathResolve(rootDir, "ProtobufsWebui/");
 const files = await GetFilesToParse();
@@ -82,9 +119,9 @@ const files = await GetFilesToParse();
 const NotImplemented = "NotImplemented";
 const NoResponse = "NoResponse";
 
-const allEnums = [];
-const allServices = [];
-const allMessages = [
+const allEnums: Enum[] = [];
+const allServices: Service[] = [];
+const allMessages: Message[] = [
 	{
 		className: NotImplemented,
 		dependants: new Set(),
@@ -97,21 +134,21 @@ const allMessages = [
 	},
 ];
 
-const globalModuleExportedMessages = new Map();
+const globalModuleExportedMessages: ExportedIds = new Map();
 
 console.log("Found", files.length, "files to parse");
 
 for (const file of files) {
 	try {
-		const code = await readFile(file);
+		const code = await readFile(file, "utf8");
 		const ast = ParseJavascript(code, { loc: true });
 
 		ReplaceStaticTemplateLiterals(ast);
 
-		const crossModuleExportedMessages = new Map();
-		const services = [];
-		const messages = [];
-		const enums = [];
+		const crossModuleExportedMessages: ExportedIds = new Map();
+		const services: Service[] = [];
+		const messages: Message[] = [];
+		const enums: Enum[] = [];
 
 		// ESM chunks (top-level `import`/`export` statements) go through a
 		// separate traversal. Webpack chunks contain their modules as Property
@@ -132,7 +169,7 @@ for (const file of files) {
 			if (globalModuleExportedMessages.has(currentModule)) {
 				globalModuleExportedMessages.set(
 					currentModule,
-					new Map([...globalModuleExportedMessages.get(currentModule), ...result.exportedIds]),
+					new Map([...(globalModuleExportedMessages.get(currentModule) as Map<string, string>), ...result.exportedIds]),
 				);
 			} else {
 				globalModuleExportedMessages.set(currentModule, result.exportedIds);
@@ -165,12 +202,12 @@ for (const file of files) {
 						}
 
 						const result = TraverseModule(node.value, file);
-						let currentModule;
+						let currentModule: string;
 
 						if (node.key.type === Syntax.Identifier) {
 							currentModule = node.key.name;
 						} else if (node.key.type === Syntax.Literal) {
-							currentModule = node.key.value;
+							currentModule = node.key.value as string;
 						} else {
 							throw new Error("Failed to find key name");
 						}
@@ -200,7 +237,10 @@ for (const file of files) {
 						if (globalModuleExportedMessages.has(currentModule)) {
 							globalModuleExportedMessages.set(
 								currentModule,
-								new Map([...globalModuleExportedMessages.get(currentModule), ...result.exportedIds]),
+								new Map([
+									...(globalModuleExportedMessages.get(currentModule) as Map<string, string>),
+									...result.exportedIds,
+								]),
 							);
 						} else {
 							globalModuleExportedMessages.set(currentModule, result.exportedIds);
@@ -237,11 +277,7 @@ await OutputSplitServices(allServices, mergedMessages);
 await OutputCommon(mergedMessages);
 await OutputCommonBase();
 
-/**
- * @param {Service[]} allServices
- * @param {Map<string, Message>} mergedMessages
- */
-async function OutputSplitServices(allServices, mergedMessages) {
+async function OutputSplitServices(allServices: Service[], mergedMessages: Map<string, Message>) {
 	const splitServices = SplitServices(allServices);
 	MarkMethodDependants(splitServices, mergedMessages);
 	const groupedServices = GroupServices(splitServices);
@@ -251,8 +287,8 @@ async function OutputSplitServices(allServices, mergedMessages) {
 	for (const [name, services] of groupedServices) {
 		const fileName = pathJoin(outputPath, `service_${name.toLowerCase()}.proto`);
 
-		const imports = new Set();
-		const consumedMessages = new Map();
+		const imports = new Set<string>();
+		const consumedMessages = new Map<string, Message>();
 
 		for (const [, message] of mergedMessages) {
 			const dependencyCount = GetMatchingDependencyCount(services, message.dependants);
@@ -289,13 +325,11 @@ async function OutputSplitServices(allServices, mergedMessages) {
 
 /**
  * Output common protos which were not split into services or are used by multiple services
- *
- * @param {Map<string, Message>} mergedMessages
  */
-async function OutputCommon(mergedMessages) {
+async function OutputCommon(mergedMessages: Map<string, Message>) {
 	const imports = new Set(["common_base.proto"]);
 
-	const commonMessages = new Map();
+	const commonMessages = new Map<string, Message>();
 
 	for (const [, message] of mergedMessages) {
 		if (message.className === NoResponse || message.className === NotImplemented) {
@@ -359,11 +393,7 @@ message NotImplemented {
 	stream.end();
 }
 
-/**
- * @param {ServiceWithMethods[]} services
- * @param {Set<string>} dependants
- */
-function GetMatchingDependencyCount(services, dependants) {
+function GetMatchingDependencyCount(services: ServiceWithMethods[], dependants: Set<string>) {
 	let dependencyCount = 0;
 
 	for (const { name } of services) {
@@ -375,14 +405,13 @@ function GetMatchingDependencyCount(services, dependants) {
 	return dependencyCount;
 }
 
-/**
- * @param {string} fileName
- * @param {Set<string>} imports
- * @param {ServiceWithMethods[]} services
- * @param {Map<string, Message>} messages
- */
-function OutputToFile(fileName, imports, services, messages) {
-	return new Promise((resolve) => {
+function OutputToFile(
+	fileName: string,
+	imports: Set<string>,
+	services: ServiceWithMethods[],
+	messages: Map<string, Message>,
+) {
+	return new Promise<void>((resolve) => {
 		const stream = createWriteStream(fileName, {
 			flags: "w",
 			encoding: "utf8",
@@ -397,11 +426,7 @@ function OutputToFile(fileName, imports, services, messages) {
 	});
 }
 
-/**
- * @param {Set<string>} imports
- * @param {import('fs').WriteStream} stream
- */
-function OutputImports(imports, stream = process.stdout) {
+function OutputImports(imports: Set<string>, stream: Writable = process.stdout) {
 	for (const importName of imports) {
 		stream.write(`import "${importName}";\n`);
 	}
@@ -409,11 +434,7 @@ function OutputImports(imports, stream = process.stdout) {
 	stream.write("\n");
 }
 
-/**
- * @param {Map<string, Message>} messages
- * @param {import('fs').WriteStream} stream
- */
-function OutputMessages(messages, stream = process.stdout) {
+function OutputMessages(messages: Map<string, Message>, stream: Writable = process.stdout) {
 	for (const [, message] of messages) {
 		if (!message.consumed && message.dependants.size > 0) {
 			const dependants = [...message.dependants.values()];
@@ -469,11 +490,7 @@ function OutputMessages(messages, stream = process.stdout) {
 	}
 }
 
-/**
- * @param {ServiceWithMethods[]} services
- * @param {import('fs').WriteStream} stream
- */
-function OutputServices(services, stream = process.stdout) {
+function OutputServices(services: ServiceWithMethods[], stream: Writable = process.stdout) {
 	for (const { name, methods } of services) {
 		stream.write(`service ${name} {\n`);
 
@@ -489,11 +506,7 @@ function OutputServices(services, stream = process.stdout) {
 	}
 }
 
-/**
- * @param {Map<string, Map<string, number|string>>} enums
- * @param {import('fs').WriteStream} stream
- */
-function OutputEnums(enums, stream = process.stdout) {
+function OutputEnums(enums: Map<string, EnumValues>, stream: Writable = process.stdout) {
 	for (const [name, values] of enums) {
 		stream.write(`enum ${name}\n{\n`);
 
@@ -505,10 +518,7 @@ function OutputEnums(enums, stream = process.stdout) {
 	}
 }
 
-/**
- * @param {string} rpc
- */
-function SplitRpcString(rpc) {
+function SplitRpcString(rpc: string) {
 	if (rpc === "Test_TransportError.InvalidService") {
 		rpc += "#1";
 	}
@@ -524,12 +534,9 @@ function SplitRpcString(rpc) {
 
 /**
  * Split rpc strings like "Service.Method#1" into their components and group all the methods
- *
- * @param {Service[]} allServices
  */
-function SplitServices(services) {
-	/** @type {Map<string, ServiceWithMethods>} */
-	const cleanServices = new Map();
+function SplitServices(services: Service[]) {
+	const cleanServices = new Map<string, ServiceWithMethods>();
 
 	for (const rawMethod of services) {
 		const { serviceName, methodName } = SplitRpcString(rawMethod.name);
@@ -572,12 +579,9 @@ function SplitServices(services) {
 
 /**
  * Mark which services RPCs use a particular message
- *
- * @param {Map<string, ServiceWithMethods>} splitServices
- * @param {Map<string, Message>} mergedMessages
  */
-function MarkMethodDependants(services, messages) {
-	const MarkDependants = (serviceName, messageName, parentMessageName = null) => {
+function MarkMethodDependants(services: Map<string, ServiceWithMethods>, messages: Map<string, Message>) {
+	const MarkDependants = (serviceName: string, messageName: string, parentMessageName: string | null = null) => {
 		const message = messages.get(messageName);
 
 		if (!message) {
@@ -589,7 +593,12 @@ function MarkMethodDependants(services, messages) {
 		MarkDependantsForMessage(message, serviceName, messageName, parentMessageName);
 	};
 
-	const MarkDependantsForMessage = (message, serviceName, messageName, parentMessageName) => {
+	const MarkDependantsForMessage = (
+		message: Message,
+		serviceName: string,
+		messageName: string,
+		parentMessageName: string | null,
+	) => {
 		for (const field of message.fields) {
 			if (field.type[0] !== ".") {
 				continue;
@@ -629,14 +638,11 @@ function MarkMethodDependants(services, messages) {
 
 /**
  * Group "Client" and "Notifications" services into same dump
- *
- * @param {Map<string, ServiceWithMethods>} services
  */
-function GroupServices(services) {
+function GroupServices(services: Map<string, ServiceWithMethods>) {
 	services = SortMapByKey(services);
 
-	/** @type {Map<string, ServiceWithMethods[]>} */
-	const groupedServices = new Map();
+	const groupedServices = new Map<string, ServiceWithMethods[]>();
 
 	for (const [name, service] of services) {
 		let cleanName = name;
@@ -665,12 +671,9 @@ function GroupServices(services) {
 
 /**
  * Multiple .js files can produce same messages, so de-duplicate them
- *
- * @param {Message[]} allMessages
  */
-function MergeMessages(allMessages) {
-	/** @type {Map<string, Message[]>} */
-	const keyedMessages = new Map();
+function MergeMessages(allMessages: Message[]) {
+	const keyedMessages = new Map<string, Message[]>();
 
 	for (const message of allMessages) {
 		const existingMessage = keyedMessages.get(message.className);
@@ -682,15 +685,14 @@ function MergeMessages(allMessages) {
 		}
 	}
 
-	/** @type {Map<string, Message>} */
-	const cleanMessages = new Map();
+	const cleanMessages = new Map<string, Message>();
 
 	for (const [className, messages] of keyedMessages) {
 		const message = messages[0];
 
 		// Files can have different versions of a message, so when fields conflict,
 		// the one that is in most copies is written and the others are commented out
-		const fieldCopies = new Map();
+		const fieldCopies = new Map<string, number>();
 
 		for (const { fields } of messages) {
 			for (const field of fields) {
@@ -699,7 +701,7 @@ function MergeMessages(allMessages) {
 			}
 		}
 
-		const GetFieldCopies = (field) => fieldCopies.get(`${field.id}|${field.type}|${field.name}`);
+		const GetFieldCopies = (field: Field) => fieldCopies.get(`${field.id}|${field.type}|${field.name}`) as number;
 
 		for (let i = 1; i < messages.length; i++) {
 			for (const field of messages[i].fields) {
@@ -745,13 +747,8 @@ function MergeMessages(allMessages) {
 	return SortMapByKey(cleanMessages);
 }
 
-/**
- * @param {Enum[]} allEnums
- * @returns {Map<string, Map<string, number|string>>}
- */
-function MergeEnums(allEnums) {
-	/** @type {Map<string, Map<string, number|string>[]>} */
-	const keyedEnums = new Map();
+function MergeEnums(allEnums: Enum[]): Map<string, EnumValues> {
+	const keyedEnums = new Map<string, EnumValues[]>();
 
 	for (const { name, values } of allEnums) {
 		const existingEnum = keyedEnums.get(name);
@@ -763,14 +760,12 @@ function MergeEnums(allEnums) {
 		}
 	}
 
-	/** @type {Map<string, Map<string, number|string>>} */
-	const cleanEnums = new Map();
+	const cleanEnums: Map<string, EnumValues> = new Map();
 
 	for (const [name, variants] of keyedEnums) {
 		// Different enums can get the same name, e.g. from a common prefix of their keys,
 		// so only copies that share a key and agree on all shared values are merged
-		/** @type {Map<string, number|string>[]} */
-		const groups = [];
+		const groups: EnumValues[] = [];
 
 		for (const variant of variants) {
 			const merged = groups.find((group) => IsSameEnum(group, variant));
@@ -800,11 +795,7 @@ function MergeEnums(allEnums) {
 	return SortMapByKey(cleanEnums);
 }
 
-/**
- * @param {Map<string, number|string>} a
- * @param {Map<string, number|string>} b
- */
-function IsSameEnum(a, b) {
+function IsSameEnum(a: EnumValues, b: EnumValues) {
 	let sharesKey = false;
 
 	for (const [key, value] of b) {
@@ -822,11 +813,7 @@ function IsSameEnum(a, b) {
 	return sharesKey;
 }
 
-/**
- * @param {Service[]} services
- * @param {Message[]} messages
- */
-function FixTypesSameModule(services, messages) {
+function FixTypesSameModule(services: Service[], messages: Message[]) {
 	for (const message of messages) {
 		for (const field of message.fields) {
 			if (field.typeToLookup && field.typeToLookup.module === null) {
@@ -866,14 +853,9 @@ function FixTypesSameModule(services, messages) {
 	}
 }
 
-/**
- * @param {Service[]} services
- * @param {Message[]} messages
- * @param {Map<string, Map<string, string>>} crossModuleExportedMessages
- */
-function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
-	const GetType = ({ module, name }) => {
-		const moduleExported = crossModuleExportedMessages.get(module);
+function FixTypesCrossModule(services: Service[], messages: Message[], crossModuleExportedMessages: ExportedIds) {
+	const GetType = ({ module, name }: { module?: string | null; name?: string }) => {
+		const moduleExported = crossModuleExportedMessages.get(module as string);
 
 		if (!moduleExported || moduleExported.size === 0) {
 			// TODO: Cross-file modules
@@ -881,7 +863,7 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 			return null;
 		}
 
-		const className = moduleExported.get(name);
+		const className = moduleExported.get(name as string);
 
 		if (!className) {
 			throw new Error("Failed to find exported name");
@@ -948,7 +930,7 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 				continue;
 			}
 
-			outerLoop: for (const requestToLookup of service.requestToLookup.names) {
+			outerLoop: for (const requestToLookup of service.requestToLookup.names as string[]) {
 				for (const [, map] of crossModuleExportedMessages) {
 					for (const [, className] of map) {
 						if (requestToLookup === className) {
@@ -963,21 +945,16 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 	}
 }
 
-/**
- * @param {Node} ast
- * @param {string} fileName
- * @returns {TraverseResult}
- */
-function TraverseModule(ast, fileName) {
-	const services = [];
-	const messages = [];
-	const enums = [];
-	const importedIds = new Map();
-	const exportedIds = new Map();
-	const exportedIdsFlipped = new Map();
-	const webpackRequireName = ast.params[2].name;
+function TraverseModule(ast: FunctionExpression | ArrowFunctionExpression, fileName: string): TraverseResult {
+	const services: Service[] = [];
+	const messages: Message[] = [];
+	const enums: Enum[] = [];
+	const importedIds = new Map<string, string>();
+	const exportedIds = new Map<string, string>();
+	const exportedIdsFlipped = new Map<string, string>();
+	const webpackRequireName = (ast.params[2] as Identifier).name;
 	const constants = CollectConstants(ast.body.type === Syntax.BlockStatement ? ast.body.body : []);
-	let messageIdentifier = null;
+	let messageIdentifier: string | null = null;
 
 	traverse(ast, {
 		enter: function (node, parent) {
@@ -989,14 +966,14 @@ function TraverseModule(ast, fileName) {
 			if (
 				node.type === Syntax.CallExpression &&
 				node.callee.type === Syntax.MemberExpression &&
-				node.callee.object.name === webpackRequireName &&
-				node.callee.property.name === "d"
+				(node.callee.object as Identifier).name === webpackRequireName &&
+				(node.callee.property as Identifier).name === "d"
 			) {
 				/*
 					r.d(t, { YearInReviewRoutes: () => W, default: () => j })
 				*/
 				if (node.arguments[1].type === Syntax.ObjectExpression) {
-					for (const property of node.arguments[1].properties) {
+					for (const property of node.arguments[1].properties as Property[]) {
 						if (
 							property.key.type !== Syntax.Identifier ||
 							property.value.type !== Syntax.ArrowFunctionExpression ||
@@ -1005,7 +982,7 @@ function TraverseModule(ast, fileName) {
 							/*
 								ZT: () => A.Z,
 							*/
-							if (property.value.body.type === Syntax.MemberExpression) {
+							if ((property.value as ArrowFunctionExpression).body.type === Syntax.MemberExpression) {
 								continue;
 							}
 
@@ -1035,8 +1012,8 @@ function TraverseModule(ast, fileName) {
 					return;
 				}
 
-				const exportedId = node.arguments[1].value;
-				const localId = node.arguments[2].body.body[0].argument.name;
+				const exportedId = (node.arguments[1] as Literal).value as string;
+				const localId = (node.arguments[2].body.body[0].argument as Identifier).name;
 
 				exportedIds.set(exportedId, localId);
 				exportedIdsFlipped.set(localId, exportedId);
@@ -1055,8 +1032,8 @@ function TraverseModule(ast, fileName) {
 				node.init.callee.name === webpackRequireName &&
 				node.init.arguments.length === 1
 			) {
-				const localId = node.id.name;
-				const importedId = node.init.arguments[0].value;
+				const localId = (node.id as Identifier).name;
+				const importedId = (node.init.arguments[0] as Literal).value as string;
 
 				importedIds.set(localId, importedId);
 
@@ -1070,13 +1047,13 @@ function TraverseModule(ast, fileName) {
 			if (node.type === Syntax.VariableDeclarator && node.init?.type === Syntax.SequenceExpression) {
 				const call = node.init.expressions[node.init.expressions.length - 1];
 
-				if (call.type === Syntax.CallExpression && call.callee.name === webpackRequireName) {
+				if (call.type === Syntax.CallExpression && (call.callee as Identifier).name === webpackRequireName) {
 					if (call.arguments.length !== 1) {
 						throw new Error("Unexpected webpack require");
 					}
 
-					const localId = node.id.name;
-					const importedId = call.arguments[0].value;
+					const localId = (node.id as Identifier).name;
+					const importedId = (call.arguments[0] as Literal).value as string;
 
 					importedIds.set(localId, importedId);
 
@@ -1088,7 +1065,7 @@ function TraverseModule(ast, fileName) {
 					call.property.type === Syntax.Identifier &&
 					call.property.name === "Message"
 				) {
-					messageIdentifier = node.id.name;
+					messageIdentifier = (node.id as Identifier).name;
 					return;
 				}
 			}
@@ -1192,7 +1169,7 @@ function TraverseModule(ast, fileName) {
 
 							messages.push(message);
 
-							const exportedId = exportedIdsFlipped.get(message.id);
+							const exportedId = exportedIdsFlipped.get(message.id as string);
 
 							if (exportedId) {
 								exportedIds.set(exportedId, message.className);
@@ -1239,10 +1216,10 @@ function TraverseModule(ast, fileName) {
 				node.right.properties.length === 2 &&
 				node.right.properties[0].type === Syntax.Property &&
 				node.right.properties[1].type === Syntax.Property &&
-				node.right.properties[0].key.name === "name" &&
-				node.right.properties[1].key.name === "request"
+				(node.right.properties[0].key as Identifier).name === "name" &&
+				(node.right.properties[1].key as Identifier).name === "request"
 			) {
-				services.push(GetMsgResponse(node, messages));
+				services.push(GetMsgResponse(node as HandlerAssignment, messages));
 				this.skip();
 				return;
 			}
@@ -1254,13 +1231,13 @@ function TraverseModule(ast, fileName) {
 			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
 				let msg = null;
 				if (node.property.name === "SendMsg") {
-					msg = GetSendMsg(parent, messages, importedIds);
+					msg = GetSendMsg(parent as Node, messages, importedIds);
 				} else if (node.property.name === "SendNotification") {
-					msg = GetSendNotification(parent);
+					msg = GetSendNotification(parent as Node);
 				}
 
 				if (msg !== null) {
-					SetRequestFromArgument(msg, parent.arguments[1], messages);
+					SetRequestFromArgument(msg, (parent as CallExpression).arguments[1], messages);
 					services.push(msg);
 					this.skip();
 					return;
@@ -1278,7 +1255,7 @@ function TraverseModule(ast, fileName) {
 						e.left.type === Syntax.MemberExpression &&
 						e.right.type === Syntax.Literal &&
 						e.left.property.type === Syntax.AssignmentExpression &&
-						e.left.property.left.property.name === e.right.value,
+						((e.left.property.left as MemberExpression).property as Identifier).name === e.right.value,
 				)
 			) {
 				const enumObj = ParseEnum(node, ResolveEnumName(this.parents(), exportedIdsFlipped));
@@ -1299,35 +1276,31 @@ function TraverseModule(ast, fileName) {
  * Parse an ES module file (top-level `import`/`export` statements, classes as
  * `var X = class extends o.Message { ... }` expressions) rather than a webpack
  * runtime chunk.
- *
- * @param {Node} ast
- * @returns {TraverseResult}
  */
-function TraverseEsmModule(ast) {
-	const services = [];
-	const messages = [];
-	const enums = [];
+function TraverseEsmModule(ast: Program): TraverseResult {
+	const services: Service[] = [];
+	const messages: Message[] = [];
+	const enums: Enum[] = [];
 	// importedIds stays empty here — ESM has no webpack `r("id")` calls, so the
 	// shared helpers' MemberExpression path never fires. Cross-file resolution
 	// in ESM goes through esmImports instead.
-	const importedIds = new Map();
-	/** @type {Map<string, {module: string, name: string}>} */
-	const esmImports = new Map();
-	const exportedIds = new Map();
-	const exportLocalToExported = new Map();
+	const importedIds = new Map<string, string>();
+	const esmImports: EsmImports = new Map();
+	const exportedIds = new Map<string, string>();
+	const exportLocalToExported = new Map<string, string>();
 	const constants = CollectConstants(ast.body);
 
 	// Pass 1: collect ESM import specifiers so we know which identifiers are
 	// cross-file references and their exported name in the source chunk.
 	for (const node of ast.body) {
 		if (node.type === Syntax.ImportDeclaration) {
-			const moduleKey = pathBasename(node.source.value);
+			const moduleKey = pathBasename(node.source.value as string);
 
 			for (const spec of node.specifiers) {
 				if (spec.type === Syntax.ImportSpecifier) {
 					esmImports.set(spec.local.name, {
 						module: moduleKey,
-						name: spec.imported.name,
+						name: (spec.imported as Identifier).name,
 					});
 				} else if (spec.type === Syntax.ImportDefaultSpecifier) {
 					esmImports.set(spec.local.name, {
@@ -1339,7 +1312,7 @@ function TraverseEsmModule(ast) {
 		} else if (node.type === Syntax.ExportNamedDeclaration && !node.source) {
 			for (const spec of node.specifiers) {
 				if (spec.type === Syntax.ExportSpecifier) {
-					exportLocalToExported.set(spec.local.name, spec.exported.name);
+					exportLocalToExported.set((spec.local as Identifier).name, (spec.exported as Identifier).name);
 				}
 			}
 		}
@@ -1377,10 +1350,10 @@ function TraverseEsmModule(ast) {
 				node.right.properties.length === 2 &&
 				node.right.properties[0].type === Syntax.Property &&
 				node.right.properties[1].type === Syntax.Property &&
-				node.right.properties[0].key.name === "name" &&
-				node.right.properties[1].key.name === "request"
+				(node.right.properties[0].key as Identifier).name === "name" &&
+				(node.right.properties[1].key as Identifier).name === "request"
 			) {
-				services.push(GetMsgResponse(node, messages, esmImports));
+				services.push(GetMsgResponse(node as HandlerAssignment, messages, esmImports));
 				this.skip();
 				return;
 			}
@@ -1392,13 +1365,13 @@ function TraverseEsmModule(ast) {
 			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
 				let msg = null;
 				if (node.property.name === "SendMsg") {
-					msg = GetSendMsg(parent, messages, importedIds, esmImports);
+					msg = GetSendMsg(parent as Node, messages, importedIds, esmImports);
 				} else if (node.property.name === "SendNotification") {
-					msg = GetSendNotification(parent);
+					msg = GetSendNotification(parent as Node);
 				}
 
 				if (msg !== null) {
-					SetRequestFromArgument(msg, parent.arguments[1], messages, esmImports);
+					SetRequestFromArgument(msg, (parent as CallExpression).arguments[1], messages, esmImports);
 					services.push(msg);
 					this.skip();
 					return;
@@ -1416,7 +1389,7 @@ function TraverseEsmModule(ast) {
 						e.left.type === Syntax.MemberExpression &&
 						e.right.type === Syntax.Literal &&
 						e.left.property.type === Syntax.AssignmentExpression &&
-						e.left.property.left.property.name === e.right.value,
+						((e.left.property.left as MemberExpression).property as Identifier).name === e.right.value,
 				)
 			) {
 				const enumObj = ParseEnum(node, ResolveEnumName(this.parents(), exportLocalToExported));
@@ -1448,7 +1421,7 @@ function TraverseEsmModule(ast) {
 				continue;
 			}
 
-			const imp = esmImports.get(name);
+			const imp = esmImports.get(name as string);
 
 			if (imp) {
 				field.typeToLookup = { module: imp.module, name: imp.name };
@@ -1472,13 +1445,10 @@ function TraverseEsmModule(ast) {
 /**
  * Collect the numeric constants of a module's top-level scope, e.g. `const n = 0, o = 1;`,
  * which is how enum values get inlined. Names that are declared more than once are left out.
- *
- * @param {Node[]} body
- * @returns {Map<string, number>}
  */
-function CollectConstants(body) {
-	const constants = new Map();
-	const declared = new Set();
+function CollectConstants(body: Node[]): Map<string, number> {
+	const constants = new Map<string, number>();
+	const declared = new Set<string>();
 
 	for (const node of body) {
 		if (node.type !== Syntax.VariableDeclaration) {
@@ -1510,14 +1480,12 @@ function CollectConstants(body) {
 	return constants;
 }
 
-/**
- * @param {Node} ast
- * @param {Map<string, string>} importedIds
- * @param {Map<string, number>} constants
- * @returns {Message}
- */
-function TraverseTranspiledClass(ast, importedIds, constants) {
-	const message = {
+function TraverseTranspiledClass(
+	ast: BlockStatement,
+	importedIds: Map<string, string>,
+	constants: Map<string, number>,
+): Message {
+	const message: PartialMessage = {
 		className: null,
 		dependants: new Set(),
 		fields: [],
@@ -1548,17 +1516,11 @@ function TraverseTranspiledClass(ast, importedIds, constants) {
 		throw new Error("Failed to find classname");
 	}
 
-	return message;
+	return message as Message;
 }
 
-/**
- * @param {Node} body
- * @param {Map<string, string>} importedIds
- * @param {Map<string, number>} constants
- * @returns {Message}
- */
-function TraverseClass(ast, importedIds, constants) {
-	const message = {
+function TraverseClass(ast: ClassBody, importedIds: Map<string, string>, constants: Map<string, number>): Message {
+	const message: PartialMessage = {
 		className: null,
 		dependants: new Set(),
 		fields: [],
@@ -1587,18 +1549,12 @@ function TraverseClass(ast, importedIds, constants) {
 		throw new Error("Failed to find classname");
 	}
 
-	return message;
+	return message as Message;
 }
 
-/**
- * @param {Object} ast
- * @param {Map<string, string>} importedIds
- * @param {Map<string, number>} constants
- */
-function TraverseFields(ast, importedIds, constants) {
-	/** @type {Field[]} */
-	const fields = [];
-	let selfProtoIdentifier = null;
+function TraverseFields(ast: Node, importedIds: Map<string, string>, constants: Map<string, number>) {
+	const fields: Field[] = [];
+	let selfProtoIdentifier: string | null = null;
 
 	traverse(ast, {
 		enter: function (node) {
@@ -1611,24 +1567,23 @@ function TraverseFields(ast, importedIds, constants) {
 			}
 
 			if (node.type === Syntax.Property && node.key.type === Syntax.Identifier && node.key.name === "fields") {
-				for (const prop of node.value.properties) {
+				for (const prop of (node.value as ObjectExpression).properties) {
 					if (prop.type !== Syntax.Property || prop.value.type !== Syntax.ObjectExpression) {
 						throw new Error("Unexpected property");
 					}
 
-					/** @type {Field} */
-					const field = {
-						id: null,
-						name: prop.key.name,
+					const field: Field = {
+						id: null as unknown as number,
+						name: (prop.key as Identifier).name,
 						type: "UNKNOWN",
 						flag: "optional",
 					};
 
-					for (const fieldProp of prop.value.properties) {
+					for (const fieldProp of prop.value.properties as NamedProperty[]) {
 						if (fieldProp.key.name === "n") {
 							// n: number //field [n]umber
 							if (fieldProp.value.type === Syntax.Literal) {
-								field.id = fieldProp.value.value;
+								field.id = fieldProp.value.value as number;
 							} else {
 								throw new Error("Unexpected field.n");
 							}
@@ -1666,7 +1621,7 @@ function TraverseFields(ast, importedIds, constants) {
 									};
 								}
 							} else if (fieldProp.value.type === Syntax.MemberExpression) {
-								const importedModule = importedIds.get(fieldProp.value.object.name);
+								const importedModule = importedIds.get((fieldProp.value.object as Identifier).name);
 
 								if (!importedModule) {
 									throw new Error("Failed to find imported module");
@@ -1674,7 +1629,7 @@ function TraverseFields(ast, importedIds, constants) {
 
 								field.typeToLookup = {
 									module: importedModule,
-									name: fieldProp.value.property.name,
+									name: (fieldProp.value.property as Identifier).name,
 								};
 							} else {
 								throw new Error("Unexpected field.c");
@@ -1736,9 +1691,8 @@ function TraverseFields(ast, importedIds, constants) {
 /**
  * Some bundles write strings as template literals without expressions, such as class names and
  * method names, so they are turned into the string literals that the rest of the parsing expects.
- * @param {Node} ast
  */
-function ReplaceStaticTemplateLiterals(ast) {
+function ReplaceStaticTemplateLiterals(ast: Node) {
 	replace(ast, {
 		enter: (node, parent) => {
 			if (
@@ -1746,7 +1700,7 @@ function ReplaceStaticTemplateLiterals(ast) {
 				node.expressions.length === 0 &&
 				parent?.type !== Syntax.TaggedTemplateExpression
 			) {
-				const value = node.quasis[0].value.cooked;
+				const value = node.quasis[0].value.cooked as string;
 
 				return {
 					type: Syntax.Literal,
@@ -1759,17 +1713,13 @@ function ReplaceStaticTemplateLiterals(ast) {
 	});
 }
 
-/**
- * @param {Object} ast
- * @returns {?string}
- */
-function GetClassNameLiteral(ast) {
-	let value = null;
+function GetClassNameLiteral(ast: Node): string | null {
+	let value: string | null = null;
 
 	traverse(ast, {
 		enter: (node, parent) => {
-			if (node.type === Syntax.Literal && parent.type === Syntax.ReturnStatement) {
-				value = node.value;
+			if (node.type === Syntax.Literal && (parent as Node).type === Syntax.ReturnStatement) {
+				value = node.value as string;
 			}
 		},
 	});
@@ -1777,13 +1727,7 @@ function GetClassNameLiteral(ast) {
 	return value;
 }
 
-/**
- * @param {Object} node
- * @param {Message[]} messages
- * @param {Map<string, {module: string, name: string}>|null} [esmImports]
- * @returns {Service}
- */
-function GetMsgResponse(node, messages, esmImports = null) {
+function GetMsgResponse(node: HandlerAssignment, messages: Message[], esmImports: EsmImports | null = null): Service {
 	if (!node.left.property.name.endsWith("Handler")) {
 		throw new Error("Unexpected handler name");
 	}
@@ -1796,7 +1740,7 @@ function GetMsgResponse(node, messages, esmImports = null) {
 		throw new Error("Unexpected request message");
 	}
 
-	const name = node.right.properties[0].value.value;
+	const name = node.right.properties[0].value.value as string;
 	const requestToLookup = node.right.properties[1].value.name;
 	const message = messages.find((m) => m.id === requestToLookup);
 
@@ -1810,7 +1754,7 @@ function GetMsgResponse(node, messages, esmImports = null) {
 
 	// ESM: request may reference a symbol imported from another chunk
 	if (esmImports?.has(requestToLookup)) {
-		const imp = esmImports.get(requestToLookup);
+		const imp = esmImports.get(requestToLookup) as EsmImport;
 
 		return {
 			name: name,
@@ -1826,19 +1770,15 @@ function GetMsgResponse(node, messages, esmImports = null) {
 	throw new Error("Failed to find request message");
 }
 
-/**
- * @param {Object[]} properties
- * @returns {string[]}
- */
-function GetServiceMethodParams(properties) {
-	const serviceMethodParams = [];
+function GetServiceMethodParams(properties: (Property | SpreadElement)[]): string[] {
+	const serviceMethodParams: string[] = [];
 
 	for (const property of properties) {
 		if (property.type !== Syntax.Property) {
 			continue;
 		}
 
-		serviceMethodParams.push(property.key.name + "=" + EvaluateConstant(property.value));
+		serviceMethodParams.push((property.key as Identifier).name + "=" + EvaluateConstant(property.value));
 	}
 
 	return serviceMethodParams;
@@ -1859,14 +1799,12 @@ SendMsg: <Req extends jspb.Message, Res extends jspb.Message>(
 	methodParams: ServiceMethodParams_t,
 ) => Promise<CProtoBufMsg<Res>>;
 */
-/**
- * @param {Object} node
- * @param {Message[]} messages
- * @param {Map<string, string>} importedIds
- * @param {Map<string, {module: string, name: string}>|null} [esmImports]
- * @returns {Service|null}
- */
-function GetSendMsg(node, messages, importedIds, esmImports = null) {
+function GetSendMsg(
+	node: Node,
+	messages: Message[],
+	importedIds: Map<string, string>,
+	esmImports: EsmImports | null = null,
+): Service | null {
 	if (node.type !== Syntax.CallExpression || node.arguments.length !== 4 || node.arguments[0].type !== Syntax.Literal) {
 		return null;
 	}
@@ -1876,7 +1814,7 @@ function GetSendMsg(node, messages, importedIds, esmImports = null) {
 		return null;
 	}
 
-	const name = node.arguments[0].value;
+	const name = node.arguments[0].value as string;
 
 	if (node.arguments[2].type === Syntax.Identifier) {
 		const responseToLookup = node.arguments[2].name;
@@ -1901,7 +1839,7 @@ function GetSendMsg(node, messages, importedIds, esmImports = null) {
 
 		// ESM: response may reference a symbol imported from another chunk
 		if (esmImports?.has(responseToLookup)) {
-			const imp = esmImports.get(responseToLookup);
+			const imp = esmImports.get(responseToLookup) as EsmImport;
 
 			return {
 				name: name,
@@ -1917,7 +1855,7 @@ function GetSendMsg(node, messages, importedIds, esmImports = null) {
 
 		throw new Error("Failed to find response message");
 	} else if (node.arguments[2].type === Syntax.MemberExpression) {
-		const importedModule = importedIds.get(node.arguments[2].object.name);
+		const importedModule = importedIds.get((node.arguments[2].object as Identifier).name);
 
 		if (!importedModule) {
 			throw new Error("Failed to find imported module");
@@ -1929,7 +1867,7 @@ function GetSendMsg(node, messages, importedIds, esmImports = null) {
 			response: NoResponse,
 			responseToLookup: {
 				module: importedModule,
-				name: node.arguments[2].property.name,
+				name: (node.arguments[2].property as Identifier).name,
 			},
 			serviceMethodParams: GetServiceMethodParams(node.arguments[3].properties),
 		};
@@ -1938,12 +1876,7 @@ function GetSendMsg(node, messages, importedIds, esmImports = null) {
 	return null;
 }
 
-/**
- * @param {string} rpc
- * @param {string} className
- * @returns {string[]}
- */
-function GenerateRequestNames(rpc, className) {
+function GenerateRequestNames(rpc: string, className: string): string[] {
 	const { serviceName, methodName } = SplitRpcString(rpc);
 
 	return [
@@ -1957,11 +1890,7 @@ function GenerateRequestNames(rpc, className) {
 /*
 SendNotification: ( serviceName: string, msg: CProtoBufMsg<any>, methodParams: ServiceMethodParams_t ) => boolean;
 */
-/**
- * @param {Object} node
- * @returns {Service|null}
- */
-function GetSendNotification(node) {
+function GetSendNotification(node: Node): Service | null {
 	if (node.type !== Syntax.CallExpression || node.arguments.length !== 3 || node.arguments[0].type !== Syntax.Literal) {
 		return null;
 	}
@@ -1971,7 +1900,7 @@ function GetSendNotification(node) {
 		return null;
 	}
 
-	const name = node.arguments[0].value;
+	const name = node.arguments[0].value as string;
 
 	const { serviceName, methodName } = SplitRpcString(name);
 
@@ -1997,13 +1926,13 @@ function GetSendNotification(node) {
 /**
  * The request is passed as a message made from its class, e.g. `(0, o.I8)(B, e)`,
  * so take its class instead of guessing it from the method name
- *
- * @param {Service} service
- * @param {Object} node
- * @param {Message[]} messages
- * @param {Map<string, {module: string, name: string}>|null} [esmImports]
  */
-function SetRequestFromArgument(service, node, messages, esmImports = null) {
+function SetRequestFromArgument(
+	service: Service,
+	node: Node,
+	messages: Message[],
+	esmImports: EsmImports | null = null,
+) {
 	if (
 		node.type !== Syntax.CallExpression ||
 		node.arguments.length < 2 ||
@@ -2020,7 +1949,7 @@ function SetRequestFromArgument(service, node, messages, esmImports = null) {
 		service.requestToLookup = null;
 	} else if (esmImports?.has(requestToLookup)) {
 		// ESM: request may reference a symbol imported from another chunk
-		const imp = esmImports.get(requestToLookup);
+		const imp = esmImports.get(requestToLookup) as EsmImport;
 
 		service.requestToLookup = {
 			module: imp.module,
@@ -2039,11 +1968,9 @@ function SetRequestFromArgument(service, node, messages, esmImports = null) {
  *   (function(e){...})(Foo || (Foo = {}))
  *   (function(e){...})(Foo ||= {})
  *
- * @param {Array<Object>} parents — `this.parents()` from estraverse, root-first
- * @param {Map<string, string>} exportMap — local-name → exported-name
- * @returns {string|null}
+ * parents is `this.parents()` from estraverse, root-first. exportMap maps local names to exported names.
  */
-function ResolveEnumName(parents, exportMap) {
+function ResolveEnumName(parents: Node[], exportMap: Map<string, string>): string | null {
 	// Walk parents innermost-first to find the IIFE wrapping this enum.
 	for (let i = parents.length - 1; i >= 0; i--) {
 		const parent = parents[i];
@@ -2075,18 +2002,16 @@ function ResolveEnumName(parents, exportMap) {
 }
 
 /**
- * @param {Object} node
- * @param {string|null} [identifierName] Resolved enum identifier from the
- *     enclosing IIFE (preferably an exported name; falls back to the local
- *     variable if not exported). Used as the enum name when it looks meaningful.
- * @returns {Enum|null}
+ * identifierName is the resolved enum identifier from the enclosing IIFE (preferably an
+ * exported name; falls back to the local variable if not exported). It is used as the enum
+ * name when it looks meaningful.
  */
-function ParseEnum(node, identifierName = null) {
-	const enumValues = new Map();
+function ParseEnum(node: SequenceExpression, identifierName: string | null = null): Enum | null {
+	const enumValues: EnumValues = new Map();
 
-	for (const expr of node.expressions) {
-		const name = expr.right.value;
-		const value = EvaluateConstant(expr.left.property.right);
+	for (const expr of node.expressions as EnumMemberAssignment[]) {
+		const name = expr.right.value as string;
+		const value = EvaluateConstant(expr.left.property.right) as number | string;
 
 		enumValues.set(name, value);
 	}
@@ -2155,15 +2080,11 @@ function ParseEnum(node, identifierName = null) {
 	};
 }
 
-/**
- * @param {Node} node
- * @returns {any}
- */
-function EvaluateConstant(node) {
+function EvaluateConstant(node: Node): ConstantValue {
 	if (node.type === Syntax.UnaryExpression && node.operator === "!") {
-		return node.argument.value === 0;
+		return (node.argument as Literal).value === 0;
 	} else if (node.type === Syntax.UnaryExpression && node.operator === "-") {
-		return -node.argument.value;
+		return -((node.argument as Literal).value as number);
 	} else if (node.type === Syntax.Literal) {
 		return node.value;
 	}
@@ -2171,11 +2092,6 @@ function EvaluateConstant(node) {
 	return node.type;
 }
 
-/**
- * @template K, V
- * @param {Map<K, V>} map
- * @returns {Map<K, V>}
- */
-function SortMapByKey(map) {
+function SortMapByKey<V>(map: Map<string, V>): Map<string, V> {
 	return new Map([...map].sort(([a], [b]) => a.localeCompare(b, "en-US")));
 }

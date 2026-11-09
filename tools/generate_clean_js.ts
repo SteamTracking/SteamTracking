@@ -28,8 +28,31 @@
 
 import fs from "node:fs";
 import { generate } from "astring";
-import { Syntax, traverse } from "estraverse";
-import { ParseJavascript } from "./dump_javascript_paths.mjs"; // also fixes estraverse Syntax and VisitorKeys
+import { Syntax as EstraverseSyntax, type NodeType, traverse } from "estraverse";
+import type {
+	ArrowFunctionExpression,
+	Directive,
+	FunctionDeclaration,
+	FunctionExpression,
+	Identifier,
+	ModuleDeclaration,
+	Node,
+	Program,
+	SimpleLiteral,
+	Statement,
+} from "estree";
+import { ParseJavascript } from "./dump_javascript_paths.ts"; // also fixes estraverse Syntax and VisitorKeys
+
+// Gives each Syntax member its literal type so that comparisons narrow the node union.
+const Syntax = EstraverseSyntax as { [K in NodeType | "PropertyDefinition"]: K };
+
+type FunctionNode = FunctionExpression | ArrowFunctionExpression | FunctionDeclaration;
+
+interface WebpackModuleParams {
+	moduleParam: string;
+	exportsParam?: string;
+	requireParam?: string;
+}
 
 // Process command line arguments
 const inputFile = process.argv[2];
@@ -41,48 +64,48 @@ if (!inputFile) {
 const outputFile = process.argv[3]; // Optional
 
 // Read input file
-let sourceCode;
+let sourceCode: string;
 try {
 	sourceCode = fs.readFileSync(inputFile, "utf8");
 } catch (err) {
-	console.error(`Error reading file: ${err.message}`);
+	console.error(`Error reading file: ${(err as Error).message}`);
 	process.exit(1);
 }
 
 // Parse the JavaScript code into an AST
-let ast;
+let ast: Program;
 try {
 	ast = ParseJavascript(sourceCode, { ecmaFeatures: { jsx: true } });
 } catch (err) {
-	console.error(`Failed to parse JavaScript: ${err.message}`);
+	console.error(`Failed to parse JavaScript: ${(err as Error).message}`);
 	process.exit(1);
 }
 
 const isSsrFile = inputFile.includes("/ssr/");
 
 // Normalize the AST
-function normalizeAst(ast) {
+function normalizeAst(ast: Program): Program {
 	// STEP 1: Normalize CLSTAMP if present
 	if (ast.type === Syntax.Program && ast.body.length > 0) {
 		const firstStmt = ast.body[0];
 		if (firstStmt.type === Syntax.VariableDeclaration && firstStmt.declarations.length > 0) {
 			const decl = firstStmt.declarations[0];
 			if (
-				decl.id &&
+				decl.id.type === Syntax.Identifier &&
 				decl.id.name === "CLSTAMP" &&
 				decl.init &&
 				decl.init.type === Syntax.Literal &&
 				typeof decl.init.value === "string"
 			) {
-				decl.init.value = "steamdb";
+				(decl.init as SimpleLiteral).value = "steamdb";
 				decl.init.raw = '"steamdb"';
 			}
 		}
 	}
 
 	// STEP 2: First pass to find webpack modules and require functions
-	const webpackModules = new Map();
-	const webpackRequires = new Set();
+	const webpackModules = new Map<Node, WebpackModuleParams>();
+	const webpackRequires = new Set<string>();
 
 	// Find webpack modules and parameters
 	traverse(ast, {
@@ -95,14 +118,16 @@ function normalizeAst(ast) {
 			) {
 				if (node.value.type === Syntax.FunctionExpression || node.value.type === Syntax.ArrowFunctionExpression) {
 					// Replace chunk IDs with "chunkid"
-					node.key.value = "chunkid";
+					(node.key as SimpleLiteral).value = "chunkid";
 					node.key.raw = '"chunkid"';
 
+					const params = node.value.params as Identifier[];
+
 					// Track webpack modules
-					if (node.value.params.length === 3) {
-						const moduleParam = node.value.params[0].name;
-						const exportsParam = node.value.params[1].name;
-						const requireParam = node.value.params[2].name;
+					if (params.length === 3) {
+						const moduleParam = params[0].name;
+						const exportsParam = params[1].name;
+						const requireParam = params[2].name;
 
 						webpackModules.set(node.value, {
 							moduleParam,
@@ -113,18 +138,18 @@ function normalizeAst(ast) {
 						webpackRequires.add(requireParam);
 
 						// Standardize params
-						node.value.params[0].name = "module";
-						node.value.params[1].name = "module_exports";
-						node.value.params[2].name = "__webpack_require__";
-					} else if (node.value.params.length === 1) {
-						const moduleParam = node.value.params[0].name;
+						params[0].name = "module";
+						params[1].name = "module_exports";
+						params[2].name = "__webpack_require__";
+					} else if (params.length === 1) {
+						const moduleParam = params[0].name;
 
 						webpackModules.set(node.value, {
 							moduleParam,
 						});
 
 						// Standardize param
-						node.value.params[0].name = "module";
+						params[0].name = "module";
 					}
 				}
 			}
@@ -136,20 +161,20 @@ function normalizeAst(ast) {
 	webpackRequires.add("__webpack_require__");
 
 	// STEP 3: Second pass to update identifiers, respecting scope
-	const scopes = [];
-	const scopeFunctions = []; // parallel stack: which function owns each scope
+	const scopes: Set<string>[] = [];
+	const scopeFunctions: FunctionNode[] = []; // parallel stack: which function owns each scope
 
 	// Identifiers already renamed to "_". Their new name must not be mistaken for a
 	// webpack module parameter that happens to be called "_".
-	const shortenedNodes = new Set();
+	const shortenedNodes = new Set<Node>();
 
-	function shortenIdentifier(target) {
+	function shortenIdentifier(target: Identifier) {
 		target.name = "_";
 		shortenedNodes.add(target);
 	}
 
 	// Collect all binding identifiers from a pattern (handles destructuring, rest, defaults)
-	function collectBindingIdentifiers(pattern, into) {
+	function collectBindingIdentifiers(pattern: Node | null | undefined, into: Identifier[]) {
 		if (!pattern) return;
 		switch (pattern.type) {
 			case Syntax.Identifier:
@@ -177,10 +202,10 @@ function normalizeAst(ast) {
 	// Bundlers name top-level bindings with one and two characters first and
 	// move on to three characters once those run out. The names are assigned by
 	// frequency, so adding a declaration renames many of them.
-	const threeCharacterBindings = new Set();
+	const threeCharacterBindings = new Set<string>();
 
-	function collectTopLevelBindings(statement) {
-		const bindings = [];
+	function collectTopLevelBindings(statement: Directive | Statement | ModuleDeclaration) {
+		const bindings: Identifier[] = [];
 		switch (statement.type) {
 			case Syntax.VariableDeclaration:
 				for (const decl of statement.declarations) {
@@ -213,12 +238,12 @@ function normalizeAst(ast) {
 		collectTopLevelBindings(statement);
 	}
 
-	function isMangledName(name) {
+	function isMangledName(name: string) {
 		return name.length < 3 || threeCharacterBindings.has(name);
 	}
 
 	// Create a normalized chunk ID literal
-	function createChunkIdLiteral() {
+	function createChunkIdLiteral(): SimpleLiteral {
 		return {
 			type: Syntax.Literal,
 			value: "chunkid",
@@ -239,12 +264,12 @@ function normalizeAst(ast) {
 				node.type === Syntax.ArrowFunctionExpression ||
 				node.type === Syntax.FunctionDeclaration
 			) {
-				const newScope = new Set();
+				const newScope = new Set<string>();
 
 				// Add parameters to the new scope (handles destructuring, rest, defaults)
 				if (node.params) {
 					for (const param of node.params) {
-						const bindings = [];
+						const bindings: Identifier[] = [];
 						collectBindingIdentifiers(param, bindings);
 						for (const ident of bindings) {
 							newScope.add(ident.name);
@@ -272,7 +297,7 @@ function normalizeAst(ast) {
 			// Handle variable declarations - add to current scope
 			if (node.type === Syntax.VariableDeclaration) {
 				for (const decl of node.declarations) {
-					const bindings = [];
+					const bindings: Identifier[] = [];
 					collectBindingIdentifiers(decl.id, bindings);
 					for (const ident of bindings) {
 						if (scopes.length > 0) {
@@ -288,7 +313,7 @@ function normalizeAst(ast) {
 
 			// Handle catch clause parameters
 			if (node.type === Syntax.CatchClause && node.param) {
-				const bindings = [];
+				const bindings: Identifier[] = [];
 				collectBindingIdentifiers(node.param, bindings);
 				for (const ident of bindings) {
 					if (scopes.length > 0) {
@@ -334,7 +359,7 @@ function normalizeAst(ast) {
 
 					if (containingFunc && webpackModules.has(containingFunc)) {
 						// Inside webpack module - replace webpack parameters
-						const moduleInfo = webpackModules.get(containingFunc);
+						const moduleInfo = webpackModules.get(containingFunc) as WebpackModuleParams;
 
 						if (node.name === moduleInfo.moduleParam) {
 							node.name = "module";
@@ -470,7 +495,7 @@ function normalizeAst(ast) {
 					};
 				} catch (err) {
 					// Leave invalid JSON unchanged
-					console.warn(`Warning: Failed to parse JSON in JSON.parse call: ${err.message}`);
+					console.warn(`Warning: Failed to parse JSON in JSON.parse call: ${(err as Error).message}`);
 				}
 			}
 		},
@@ -495,11 +520,11 @@ const hashedAssetPattern = /^(\.\/(?:assets\/)?)[\w-]{8}(\.(?:js|css))$/;
 
 // SSR files are named by content hash, so a reference changes whenever the file it
 // points at is rebuilt, and the name means nothing across builds.
-function normalizeHashedAsset(node) {
+function normalizeHashedAsset(node: Node) {
 	if (node.type === Syntax.Literal && typeof node.value === "string") {
 		const normalized = node.value.replace(hashedAssetPattern, "$1chunk$2");
 		if (normalized !== node.value) {
-			node.value = normalized;
+			(node as SimpleLiteral).value = normalized;
 			node.raw = JSON.stringify(normalized);
 		}
 	} else if (node.type === Syntax.TemplateElement) {

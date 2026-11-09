@@ -2,9 +2,20 @@ import { readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { basename, extname, join, resolve as pathResolve } from "node:path";
 import { latestEcmaVersion, parse } from "espree";
 import { Syntax, traverse } from "estraverse";
-import { ExtractStrings, FormatStrings, GetStringValue } from "./extract_strings.mjs";
-import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
-import { languages } from "./languages.mjs";
+import type {
+	AssignmentExpression,
+	Identifier,
+	ImportDeclaration,
+	ImportExpression,
+	Literal,
+	MemberExpression,
+	Node,
+	Program,
+	Property,
+} from "estree";
+import { ExtractStrings, FormatStrings, GetStringValue } from "./extract_strings.ts";
+import "./dump_javascript_paths.ts"; // fixing estraverse Syntax and VisitorKeys
+import { languages } from "./languages.ts";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
@@ -33,22 +44,24 @@ const folders = [
 // Matches "russian" and "sales_russian.json"
 const languageKeyPattern = new RegExp(`^(?:.*_)?(${languages.join("|")})(?:\\.json)?$`);
 
-const urls = new Set();
+const urls = new Set<string>();
 
 /**
  * Language chunks are imported as `x.russian = () => import(...)` or as `"sales_russian.json": () => import(...)`.
  * The nearest assignment or object key names the language.
  * Returns the language, or null when the import is not a language chunk.
  */
-function GetLanguageChunk(parents) {
+function GetLanguageChunk(parents: Node[]): string | null {
 	for (let i = parents.length - 1; i >= 0; i--) {
-		const parent = parents[i];
-		let key;
+		const parent = parents[i] as Node;
+		const assignment = parent as AssignmentExpression;
+		const property = parent as Property;
+		let key: string;
 
-		if (parent.type === Syntax.AssignmentExpression && parent.left.type === Syntax.MemberExpression) {
-			key = parent.left.property.name;
+		if (parent.type === Syntax.AssignmentExpression && assignment.left.type === Syntax.MemberExpression) {
+			key = ((assignment.left as MemberExpression).property as Identifier).name;
 		} else if (parent.type === Syntax.Property) {
-			key = parent.key.name ?? parent.key.value;
+			key = (property.key as Identifier).name ?? (property.key as Literal).value;
 		} else {
 			continue;
 		}
@@ -65,17 +78,22 @@ function GetLanguageChunk(parents) {
  * Merges the English chunks found on disk into one file, because chunk names change with every build.
  * Chunk order follows the hashes, so a key with different values keeps the smallest one.
  */
-async function MergeEnglishChunks(folder, cleanFolder, chunks, stringsFile) {
-	const merged = {};
+async function MergeEnglishChunks(
+	folder: string,
+	cleanFolder: string,
+	chunks: Set<string>,
+	stringsFile: string,
+): Promise<void> {
+	const merged: Record<string, string> = {};
 	let found = 0;
 
 	for (const chunk of [...chunks].sort()) {
-		let strings;
+		let strings: Record<string, string>;
 
 		try {
-			strings = ExtractStrings(await readFile(join(folder, chunk)));
+			strings = ExtractStrings(await readFile(join(folder, chunk), "utf8"));
 		} catch (e) {
-			if (e.code === "ENOENT") {
+			if ((e as NodeJS.ErrnoException).code === "ENOENT") {
 				continue;
 			}
 
@@ -105,15 +123,15 @@ async function MergeEnglishChunks(folder, cleanFolder, chunks, stringsFile) {
 
 for (const { folder, cleanFolder, cdn, stringsFile } of folders) {
 	const files = (await readdir(folder)).filter((file) => extname(file).toLowerCase() === ".js");
-	const englishChunks = new Set();
+	const englishChunks = new Set<string>();
 
 	for (const file of files) {
 		try {
-			const code = await readFile(join(folder, file));
+			const code = await readFile(join(folder, file), "utf8");
 			const ast = parse(code, {
 				ecmaVersion: latestEcmaVersion,
 				sourceType: "module",
-			});
+			}) as unknown as Program;
 
 			traverse(ast, {
 				enter: function (node) {
@@ -121,7 +139,7 @@ for (const { folder, cleanFolder, cdn, stringsFile } of folders) {
 						return;
 					}
 
-					const importPath = GetStringValue(node.source);
+					const importPath = GetStringValue((node as ImportDeclaration | ImportExpression).source);
 
 					if (importPath === null) {
 						return;

@@ -1,14 +1,15 @@
 import { readdir as readDir } from "node:fs/promises";
 import { resolve as pathResolve } from "node:path";
-import { latestEcmaVersion, parse } from "espree";
+import { latestEcmaVersion, type Options, parse } from "espree";
 import { Syntax, VisitorKeys } from "estraverse";
+import type { Program } from "estree";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
 
 // https://github.com/estools/estraverse/pull/120
-Syntax.StaticBlock = "StaticBlock";
-VisitorKeys.StaticBlock = ["body"];
+(Syntax as Record<string, string>).StaticBlock = "StaticBlock";
+(VisitorKeys as Record<string, string[]>).StaticBlock = ["body"];
 
 const pathsToRecurse = [
 	pathResolve(rootDir, "ClientExtracted/"),
@@ -22,11 +23,7 @@ const pathsToRecurse = [
 	pathResolve(rootDir, "www.playdeadlock.com/"),
 ];
 
-/**
- * @param {string} dir
- * @param {string[]} out
- */
-async function CollectJavascriptFiles(dir, out) {
+async function CollectJavascriptFiles(dir: string, out: string[]): Promise<void> {
 	const dirents = await readDir(dir, { withFileTypes: true });
 
 	for (const dirent of dirents) {
@@ -44,13 +41,13 @@ async function CollectJavascriptFiles(dir, out) {
  * Parses as a module, falling back to a script because legacy files can contain
  * code that is only valid in sloppy mode (e.g. duplicate top-level function declarations).
  */
-export function ParseJavascript(code, options) {
+export function ParseJavascript(code: string, options?: Options): Program {
 	try {
 		return parse(code, {
 			...options,
 			ecmaVersion: latestEcmaVersion,
 			sourceType: "module",
-		});
+		}) as unknown as Program;
 	} catch (e) {
 		if (!(e instanceof SyntaxError)) {
 			throw e;
@@ -60,15 +57,12 @@ export function ParseJavascript(code, options) {
 			...options,
 			ecmaVersion: latestEcmaVersion,
 			sourceType: "script",
-		});
+		}) as unknown as Program;
 	}
 }
 
-/**
- * @returns {Promise<string[]>}
- */
-export async function GetFilesToParse() {
-	const files = [];
+export async function GetFilesToParse(): Promise<string[]> {
+	const files: string[] = [];
 
 	for (const path of pathsToRecurse) {
 		await CollectJavascriptFiles(path, files);
