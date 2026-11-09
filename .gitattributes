@@ -9,6 +9,9 @@
 *.tga binary
 *.webp binary
 
+# These contain \r\r\n, which LF conversion changes again on every pass
+ClientExtracted/public/steamclean_*.txt -text
+
 ClientManifest/* linguist-generated=true
 help.steampowered.com/public/javascript/applications/help/**/*.js linguist-generated=true
 partner.steamgames.com/public/javascript/applications/**/*.js linguist-generated=true
