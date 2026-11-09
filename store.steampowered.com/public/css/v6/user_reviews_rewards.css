@@ -1,0 +1,38 @@
+
+.review_award_ctn {
+	padding-top:5px;
+}
+
+.review_award {
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 5px;
+	margin: 0 2px;
+	cursor: pointer;
+}
+.review_award:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.review_award_icon {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}	
+
+.review_award_count {
+	color: #66c0f4;
+	font-size: 13px;
+	vertical-align: middle;
+	font-weight: bold;
+	padding: 3px;
+}
+.review_award_count.hidden {
+	display: none;
+}
+
+.reward_btn_icon {
+	vertical-align: middle;
+	height: 16px;
+}

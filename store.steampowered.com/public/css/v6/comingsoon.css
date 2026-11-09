@@ -1,0 +1,226 @@
+
+body.v6.comingsoon {
+	background: #1b2838;
+}
+
+
+body.v6.comingsoon .comingsoon_headercaps > a {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#356580+0,407999+100 */
+	background: rgb(53,101,128); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(53,101,128,1) 0%, rgba(64,121,153,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(53,101,128,1) 0%,rgba(64,121,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(53,101,128,1) 0%,rgba(64,121,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#356580', endColorstr='#407999',GradientType=1 ); /* IE6-9 */
+	vertical-align: top;
+}
+body.v6.comingsoon .comingsoon_headercaps {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+body.v6.comingsoon .comingsoon_headercaps img {
+	width: 100%;
+}
+
+body.v6 .home_tabs_row_ctn {
+	margin-bottom: 2px;
+}
+
+.comingsoon_headercaps {
+	font-size: 0;
+}
+
+.comingsoon_headercaps .comingsoon_headercap {
+	font-size: 12px;
+	position: relative;
+	flex-basis: 50%;
+	flex-grow: 1;
+	min-width: 200px;
+}
+
+body.v6.comingsoon .store_capsule .discount_block {
+	float: inline-end;
+}
+
+.bucket {
+	margin: 45px 0;
+}
+.bucket.newdlc {
+	border-top: 2px solid #a655b2;
+}
+
+.underfive {
+	position: absolute;
+	width: 308px;
+	margin-top: 20px;
+}
+
+.bucket .store_capsule {
+	width: 230px;
+	height: 135px;
+	background: #303e4f;
+	box-shadow: none;
+}
+.slider_ctn.store_autoslider {
+	margin-top: 6px;
+}
+
+body.v6 .comingsoon_capsules > a {
+	box-shadow: 0 0 12px #000000;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#233d4f+0,2a485e+100 */
+	background: rgb(35,61,79); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(35,61,79,1) 0%, rgba(42,72,94,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(35,61,79,1) 0%,rgba(42,72,94,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(35,61,79,1) 0%,rgba(42,72,94,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#233d4f', endColorstr='#2a485e',GradientType=1 ); /* IE6-9 */
+
+}
+body.v6 .comingsoon_capsules > a:hover {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#386b87+0,4482a3+100 */
+	background: rgb(56,107,135); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(56,107,135,1) 0%, rgba(68,130,163,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(56,107,135,1) 0%,rgba(68,130,163,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(56,107,135,1) 0%,rgba(68,130,163,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#386b87', endColorstr='#4482a3',GradientType=1 ); /* IE6-9 */
+}
+body.v6.comingsoon .page_header_ctn {
+	background: none;
+}
+
+.comingsoon_capsules > a > div.info {
+	padding: 10px 15px 15px 15px;
+	color: #c7d5e0;
+	font-size: 17px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+
+
+.comingsoon_capsules > a > div .discount_prices {
+	color: #67c1f5;
+}
+
+.page_content.flex {
+	display: flex;
+}
+
+.home_leftcol,
+.home_rightcol {
+	float: none;
+}
+
+.home_rightcol {
+	margin-inline-start: 14px;
+	margin-top: 39px;
+background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);
+	background: linear-gradient( to right, #95bbd4 5%,#859bac 95%);
+}
+
+/* tab preview */
+#tab_preview_container {
+	position: relative;
+	margin-top: 0px;
+background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);
+	background: linear-gradient( to right, #95bbd4 5%,#859bac 95%);
+	height: 735px;
+}
+
+.tab_preview {
+	position: absolute;
+	top: 9px;
+	inset-inline-start: 16px;
+	inset-inline-end: 16px;
+	opacity: 0;
+	transition: opacity 300ms;
+	pointer-events: none;
+	width: unset;
+}
+
+#tab_preview_container.fixed_in_scroll {
+	margin-top: 0px;
+	position: fixed;
+}
+
+@media screen and (max-width: 910px )
+{
+	.underfive {
+		position: relative;
+		bottom: auto;
+		width: auto;
+	}
+
+    body.v6.comingsoon .comingsoon_headercaps .comingsoon_headercap {
+        min-height: unset;
+    }
+
+    .comingsoon_headercaps .comingsoon_headercap {
+		width: calc( 50% - 10px );
+	}
+
+    .header_inline {
+        display: none;
+    }
+
+	body.v6.comingsoon .comingsoon_headercaps .comingsoon_headercap img {
+		width: 100%;
+	}
+	html.responsive .comingsoon .home_ctn {
+		padding-inline-start: 0px;
+		padding-inline-end: 0px;
+	}
+
+	html.responsive .home_tab_bg {
+		inset-inline-start: calc(100% - 664px - 66px);
+	}
+
+}
+
+@media screen and (max-width: 560px)
+{
+	body.v6.comingsoon .comingsoon_headercaps a:first-child {
+		margin-inline-end: 0;
+	}
+
+	.comingsoon_headercaps .comingsoon_headercap {
+		width: auto;
+		display: block;
+		margin: 15px 0;
+	}
+
+	body.v6.comingsoon .comingsoon_headercaps .comingsoon_headercap img {
+		width: 100%;
+	}
+}
+
+
+body.v6.comingsoon .page_header_ctn {
+	margin-bottom: -50px;
+}
+
+body.v6.comingsoon .discovery_queue_ctn.home_ctn {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,1+100 */
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+	padding-bottom: 10px;
+}
+
+
+body.v6.comingsoon .top_capsules.page_ctn {
+	margin-bottom: 20px;
+}
+
+body.v6.comingsoon .tab_item_discount {
+	width: auto;
+}
+
+body.v6.comingsoon .store_capsule .prepurchase_tag {
+	float: inline-end;
+	margin: 4px 0 0 0;
+	background-color: transparent;
+}

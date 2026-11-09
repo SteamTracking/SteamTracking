@@ -1,0 +1,27 @@
+.SYKXsuhu4Hs- {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.xRlqOnjrLv4- {
+  flex-direction: row;
+  justify-content: center;
+  gap: 4px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+  display: flex;
+}
+.rsWZKmxU5jE- {
+  cursor: pointer;
+  opacity: 0.7;
+  align-items: center;
+  padding: 4px;
+  display: flex;
+}
+.rsWZKmxU5jE-:hover,
+.rsWZKmxU5jE-:focus {
+  opacity: 1;
+}
+.rsWZKmxU5jE- svg {
+  width: 10px;
+  height: 10px;
+}

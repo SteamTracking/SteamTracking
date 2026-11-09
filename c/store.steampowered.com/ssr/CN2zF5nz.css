@@ -1,0 +1,15 @@
+.KfDHDTqIJsA- {
+  cursor: default;
+  user-select: none;
+}
+.KfDHDTqIJsA-[data-active="1"]:hover:not(.u3-KOUmumJ8-) {
+  cursor: pointer;
+  background-color: var(--color-dull-10);
+  transition: background 0.1s ease-in-out;
+}
+.KfDHDTqIJsA-.u3-KOUmumJ8- {
+  background-color: var(--color-accent-8);
+}
+.KfDHDTqIJsA-.dFrv-UpPP1U- {
+  aspect-ratio: 1;
+}

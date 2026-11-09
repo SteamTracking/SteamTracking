@@ -1,0 +1,146 @@
+
+body {
+	background-color: #000000;
+	background-image: url('https://community.fastly.steamstatic.com/public/images//skin_1/bg_dark.gif');
+	background-repeat: repeat-x;
+}
+
+.warningSign {
+	padding: 20px 30px;
+	min-height: 100px;
+
+	border-radius: 3px;
+	background: -webkit-linear-gradient( top, #820200 5%, #602020 95%);
+	background: linear-gradient( to bottom, #820200 5%, #602020 95%);
+	-moz-box-shadow: 1px 1px 0px rgba(65,30,30,1), 0px 0px 10px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 1px 1px 0px rgba(65,30,30,1), 0px 0px 15px rgba(0,0,0,0.4);
+	box-shadow: 1px 1px 0px rgba(65,30,30,1), 0px 0px 15px rgba(0,0,0,0.4);
+}
+
+.friendlyInterstital .warningSign {
+	background: -webkit-linear-gradient( top, #E3BA14 5%, #A88A0F 95%);
+	background: linear-gradient( to bottom, #E3BA14 5%, #A88A0F 95%);
+}
+
+.warningSign img {
+	float: left;
+	height: auto;
+	max-width: 20%;
+	margin-right: 30px;
+}
+
+.warningSign h1, .warningSign h2 {
+	overflow: hidden;
+	color: #FFF;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+
+div.warningPanel {
+	position: relative;
+	display: block;
+
+	margin: 1em 2%;
+
+	padding: 1em;
+
+	border: 1px solid #000000;
+	border-radius: 3px;
+
+	color: #D6D1BD;
+	background-color: #222;
+
+	font-size: 14px;
+
+	-moz-box-shadow: -1px -1px 0px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,0.4) inset;
+	-webkit-box-shadow: -1px -1px 0px rgba(0,0,0,1), 0px 0px 15px rgba(0,0,0,0.4) inset;
+	box-shadow: -1px -1px 0px rgba(0,0,0,1), 0px 0px 15px rgba(0,0,0,0.4) inset;
+}
+
+.warningExplanation {
+	padding: 30px 13%;
+}
+
+.warningExplanation span.url {
+	letter-spacing: 1px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+
+	color: #FFF;
+}
+
+.warningPanel p {
+	margin: 20px 0;
+}
+
+.warningPanel h1 {
+	font-size: 40px;
+}
+
+.warningPanel h2 {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.warningExplanation img {
+	vertical-align: middle;
+}
+
+.warningPanel img.evCert {
+	display: none;
+}
+
+.warningPanel span.evCert {
+	display: inline-block;
+
+	padding: 4px;
+	border-radius: 3px;
+
+	color: white;
+	background: -webkit-linear-gradient( top, #8bb006 5%, #6b8805 95%);
+	background: linear-gradient( to bottom, #8bb006 5%, #6b8805 95%);
+}
+
+a.warningButton, .warningPanel a.warningButton:not(.btn_disabled):not(.btn_active):hover:not(.active):hover {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background: -webkit-linear-gradient( top, #FF7D33 5%, #D63A0B 95%);
+	background: linear-gradient( to bottom, #FF7D33 5%, #D63A0B 95%);
+}
+
+a.warningButton>span {
+	background: -webkit-linear-gradient( top, #ED742F 5%, #D63A0B 95%);
+	background: linear-gradient( to bottom, #ED742F 5%, #D63A0B 95%);
+}
+
+.warningPanel a.warningButton:not(.btn_disabled):not(.btn_active):hover:not(.active):hover>span {
+	background: -webkit-linear-gradient( top, #FF8F47 5%, #F34E1C 95%);
+	background: linear-gradient( to bottom, #FF8F47 5%, #F34E1C 95%);
+}
+
+div.centering {
+	text-align: center;
+}
+
+div#warningActions {
+	margin: 30px 0;
+}
+
+a#flagAsIncorrect, a#flaggedAsIncorrect {
+	font-size: 11px;
+}
+
+
+@media screen and (max-width: 500px)
+{
+	/* shrink some fonts */
+	html.responsive .warningPanel h1 {
+		font-size: 30px;
+	}
+
+	html.responsive .warningPanel h2 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}

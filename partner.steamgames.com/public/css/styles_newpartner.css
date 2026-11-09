@@ -1,0 +1,458 @@
+
+.AdminPageContent #PaymentDetails p {
+	font-size: 14px;
+	color: #C6D4DF;
+}
+
+.adminRightCol {
+    height: fit-content;
+    top: 0;
+}
+
+.nav_bar
+{
+	padding: 15px;
+	color: #8F98A0;
+	background: #000;
+
+}
+
+.nav_bar_item
+{
+	margin-right: 10px;
+	padding: 5px 10px 5px 10px;
+	float: left;
+	pointer-events: none;
+}
+
+.nav_bar_item.highlighted
+{
+	background-color: rgba( 255, 255, 255, 0.2);
+	color: #fff;
+	-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.nav_bar_item.clickable
+{
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+.nav_bar_item.clickable:hover
+{
+	color: #fff;
+	background-color: #529cde;
+	-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.page_title
+{
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 24px;
+	color: #ffffff;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.page_desc
+{
+	font-size: 16px;
+	padding-bottom: 30px;
+	color: #A4DAF9;
+}
+
+#Introduction,
+#PaymentDetails,
+#CompanyInfo,
+#SignNDA,
+.banking_details {
+	margin-top: 30px;
+}
+
+#PaymentDetails {
+	margin-bottom: 50px;
+}
+
+.section_title
+{
+	font-size: 19px;
+	color: #ffffff;
+	padding: 4px 6px 4px 0px;
+	width: 100%;
+    box-sizing: border-box;
+	margin-bottom: 6px;
+	border-bottom: 1px solid #C6D4DF;
+}
+
+.list_item_title
+{
+	font-size: 17px;
+	font-weight: 500;
+	color: #C6D4DF;
+	padding-bottom: 5px;
+	background-repeat:no-repeat;
+	margin-top: 12px;
+}
+
+.list_item_desc
+{
+	width: 100%;
+    box-sizing: border-box;
+	line-height: 20px;
+	font-size: 14px;
+	line-height: 1.3;
+	color: #afb4b6;
+}
+
+.list_item_desc ol {
+	margin-left: -10px;
+}
+
+.list_item_desc li {
+	margin-top: 10px;
+
+}
+
+.list_item_desc_sub
+{
+	width: 650px;
+	margin-left: 30px;
+	margin-top: 2px;
+	font-size: 12px;
+	color: #777777;
+}
+
+.page_controls
+{
+	margin-bottom: 20px;
+	margin-top: 16px;
+	margin-right: 16px;
+    width: 100%;
+    padding-top: 8px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* company info */
+
+.companyNameArea {
+    border: 1px solid #ff9d35;
+    padding: 12px;
+    border-radius: 3px;
+}
+    .companyNameArea .section_title {
+        padding-bottom: 8px;
+		border-bottom: none;
+    }
+    .companyNameArea .field_title, .companyNameArea .full_input {
+        margin-left: 0px;
+    }
+    .companyNameArea .notice {
+        color: #ff9d35;
+    }
+
+.signee_fields
+{
+	padding-top: 30px;
+}
+
+.field_title
+{
+	color: #dddddd;
+	padding-top: 20px;
+	font-size: 12px;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.field_desc
+{
+	padding-left: 10px;
+	margin-left: 10px;
+	width: 450px;
+	float: left;
+	color: #909090;
+	font-size: 12px;
+	background-image:url('https://partner.steamgames.com/public/images//icons/icon_paragraph_lead.png');
+	background-repeat:no-repeat;
+}
+
+.field_desc2
+{
+	padding-left: 10px;
+	margin-left: 10px;
+	width: 450px;
+	float: left;
+	color: #909090;
+	font-size: 12px;
+}
+
+.field
+{
+	float: left;
+	width: 450px;
+}
+
+.field_state
+{
+	float: left;
+	padding-right: 20px;
+}
+
+.field_postal_code
+{
+	float: left;
+}
+
+.field_signee_email
+{
+	margin-left: 16px;
+	border: solid 1px #262627;
+	width: 435px;
+	padding-top: 10px;
+	float: left;
+}
+
+.field_static_text
+{
+	margin-top: 5px;
+	margin-left: 16px;
+	font-size: 24px;
+	color: #ffffff;
+	padding: 10px;
+	border-radius: 3px;
+	width: 415px;
+	border: solid 1px #353535;
+}
+
+input.misc_input
+{
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #565658;
+	border: solid 1px #262627;
+	box-shadow: 1px 1px 0px #39393A;
+	border-radius: 3px;
+	padding: 4px 5px 4px 8px;
+	color: #BFBFBF;
+	width: 400px;
+}
+
+input.misc_checkbox
+{
+	top: 0px;
+	margin-right: 10px;
+}
+
+input.full_input, input.short_input, select
+{
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #565658;
+	border: solid 1px #262627;
+	box-shadow: 1px 1px 0px #39393A;
+	border-radius: 3px;
+	padding: 4px 5px 4px 8px;
+	color: #BFBFBF;
+}
+
+input[disabled]
+{
+	color: #555555;
+	background-color: #333333;
+	border: none;
+	box-shadow: none;
+}
+
+select
+{
+	width: 435px;
+	margin-left: 16px;
+}
+select[disabled]
+{
+	color: #555555;
+	background-color: #333333;
+	border: none;
+	box-shadow: none;
+}
+
+.full_input
+{
+	width: 420px;
+	margin-left: 16px;
+}
+
+.short_input
+{
+	width: 100px;
+	margin-left: 16px;
+}
+
+/* NDA */
+#SteamNDA
+{
+	min-width: 700px;
+	min-height: 600px;
+	background: #d0d0d0;
+	border: 1px solid #98b3c5;
+}
+
+
+/* sda */
+
+.sda_container
+{
+	margin: 0px auto;
+}
+
+.sda_agree_control
+{
+	margin-top: 20px;
+	color: #ffa450;
+	width: 30px;
+	float: left;
+}
+
+.sda_agree_control_label
+{
+	color: #ffa450;
+	margin-top: 20px;
+	float: left;
+	width: 560px;
+}
+
+.sda_agree_control input[type=checkbox]
+{
+	top: 0px;
+	margin-right: 10px;
+}
+
+#SteamDistributionAgreement, .steamvr_tracking_license
+{
+	min-width: 700px;
+	min-height: 600px;
+	background: #d0d0d0;
+	border: 1px solid #98b3c5;
+}
+
+.sda_view_link
+{
+	padding-top: 5px;
+}
+
+input.errorRequiredField
+{
+	border: 1px solid red;
+}
+
+select.errorRequiredField
+{
+	border: 1px solid red;
+}
+
+.AdminPageContent ul
+{
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.AdminPageContent ul li
+{
+	list-style-type: disc;
+}
+
+.captcha
+{
+	padding-top: 30px;
+}
+
+#input_captcha.errorRequiredField
+{
+	border: 1px solid red;
+}
+.landingInfoTable.dark {
+	margin-top: 16px;
+	background: #151515;
+	padding: 8px;
+    box-sizing: border-box;
+}
+.landingInfoTable p.notice {
+	color: #e66e34;
+}
+
+.steamworks_direct_header_ctn {
+background: -webkit-linear-gradient( 325deg, #407999 5%,#2A3E59 95%);
+	background: linear-gradient( 125deg, #407999 5%,#2A3E59 95%);
+	height: 160px;
+
+}
+.steamworks_direct_header {
+	background: url( 'https://partner.steamgames.com/public/images/steamworks_cubes_1.png' ) left 0px no-repeat;
+	height: 160px;
+	color: #fff;
+	font-size: 29px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			position: relative;
+	max-width: 1280px;
+	min-width: 800px;
+	margin: 0 auto;
+	padding: 50px 0px 0px 46px;
+}
+.steamworks_direct_header span {
+	font-size: 17px;
+}
+
+
+
+.steam_direct_landing .AdminPageContent {
+	margin: 0 auto;
+	background: #161920;
+	max-width: 700px;
+	min-width: 250px;
+	box-shadow: 0 0 50px rgba(103,193,245,0.3);
+	margin-top: 0px;
+	padding-top: 20px;
+}
+
+.steam_direct_landing .page_desc {
+	max-width: 720px;
+}
+.steam_direct_landing .steamworks_direct_header {
+	margin: 0 auto;
+	max-width: 700px;
+	min-width: 250px;
+	padding-left: 0px;
+}
+.steam_direct_landing .page_controls {
+	text-align: center;
+	background: rgba( 255, 255, 255, 0.2);
+	padding: 20px;
+	max-width: 660px;
+	width: 100%;
+	margin: 0px auto;
+}
+.steam_direct_landing .section_title {
+	max-width: 700px;
+	min-width: 250px;
+}
+.steam_direct_landing .list_item_desc {
+	max-width: 700px;
+	min-width: 250px;
+	width: 100%;
+}
+
+.newmodal_content {
+	max-width: 500px;
+}

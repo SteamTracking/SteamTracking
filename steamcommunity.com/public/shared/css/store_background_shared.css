@@ -1,0 +1,54 @@
+
+
+ .game_page_background_ctn {
+	 display: none;
+ }
+
+.game_page_background_ctn {
+	display: block;
+	position: absolute;
+	top: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	margin-inline: auto;
+	width: 100%;
+	height: 100%;
+	min-width: 800px;
+	max-width: 2300px;
+	z-index: -1;
+	-webkit-mask-image: linear-gradient(90deg, transparent 4%, black 30%, black 70%, transparent 96%);
+	mask-image: linear-gradient(90deg, transparent 4%, black 30%, black 70%, transparent 96%);
+
+	background: radial-gradient(1000px 500px at 23% top, hsl(213 53% 31% / 1), rgba(0, 0, 0, 0));
+
+}
+.game_page_background_ctn img.gameTexture {
+	width: 100%;
+	height: auto;
+	filter: saturate(0.1) opacity(0.2);
+	-webkit-mask-image: linear-gradient(180deg, black 38%, rgba(0,0,0,0.5) 98%);
+	mask-image: linear-gradient(180deg, black 38%, rgba(0,0,0,0.5) 96%);
+	mix-blend-mode: lighten;
+}
+
+.game_page_background_ctn.bundle img.gameTexture {
+	/* For bundles, make the background more transparent and sooner */
+	-webkit-mask-image: linear-gradient(180deg, black 200px, rgba(0,0,0,0.3) 600px, transparent 1000px);
+	mask-image: linear-gradient(180deg, black 200px, rgba(0,0,0,0.3) 600px, transparent 1000px);
+}
+
+.game_page_background_ctn img.gameColor {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	bottom: 0;
+	filter: blur(60px);
+	opacity: 0.5;
+
+	-webkit-mask-image: linear-gradient(180deg, black 200px, transparent 700px);
+	mask-image: linear-gradient(180deg, black 200px, transparent 700px);
+	mix-blend-mode: color;
+}
+

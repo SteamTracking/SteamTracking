@@ -1,0 +1,307 @@
+  
+
+#BG_top {
+	position:relative;
+	background: -moz-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%, rgba(226,244,255,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(97,100,101,0.3)), color-stop(100%,rgba(226,244,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d616465', endColorstr='#4de2f4ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	width:958px;
+	height:98px;
+	text-align: left;
+	margin-bottom: 1px;
+}
+#BG_bottom {
+	background-color: rgba( 0, 0, 0, 0.4 );
+	width:958px;
+	text-align:left;
+	margin-bottom: 10px;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:29px;
+	font-size: 26px;
+	color: #ffffff;
+}
+#BG_top p {
+	margin-top: 0px;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 24px;
+	line-height:1em;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:5px;
+	padding-bottom:13px;
+}
+#mainContents {
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:17px;
+	padding-top:24px;
+}
+
+#bodyContents {
+	padding-left:60px;
+	padding-top:40px;
+    padding-right:40px;
+	font-size:14px;
+	line-height:20px;
+}
+
+#bodyContents_lo {
+	padding-left:60px;
+	padding-top:40px;
+	font-size:14px;
+	line-height:20px;
+	height:300px;
+}
+
+
+#bodyContents_ex {
+	width:700px;
+	padding-left:60px;
+	padding-top:30px;
+	font-size:14px;
+	line-height:20px;
+}
+
+#bodyContents>h1 {
+	font-size:15px;
+	font-weight:bold;
+}
+
+#bodyContents h2,
+#bodyContents_ex h2 {
+	font-size:18px;
+	font-weight:normal;
+	color: #67c1f5;
+	padding-bottom:4px;
+	margin:0px;
+}
+
+
+#bodyContents>p {
+	margin:0;
+	padding:0;
+	padding-bottom:12px;
+}
+
+#bodyContents_ex>p {
+	margin:0;
+	padding:0;
+	padding-bottom:12px;
+}
+
+
+#bodyContents b{
+	font-size:15px;
+	font-weight:bold;
+}
+
+.supportLink,.supportLink:hover,.supportLink:active,.supportLink:visited {
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#bottomLinks {
+	position:relative;
+	width:894px;
+	margin:0;
+	padding:0;
+	margin-left:23px;
+	border:solid #252525 4px;
+}
+
+#bottomRightLinks {
+	float:right;
+}
+
+#bodyContents a {
+	font-size:14px;
+	text-decoration:none;
+}
+
+#bodyContents_ex a {
+	font-size:14px;
+	text-decoration:none;
+}
+
+#bodyContents a:hover {
+	font-size:14px;
+	text-decoration:underline;
+}
+
+#bodyContents_ex a:hover {
+	font-size:14px;
+	text-decoration:underline;
+}
+
+
+ul {
+	margin-top:0px;
+	padding-top:0px;
+}
+
+li {
+	font-size:14px;
+	line-height:20px;
+	padding-bottom:6px;
+}
+
+.error {
+	color:#bb3d25;
+	margin:0px;
+	padding-bottom:12px;
+	
+}
+	
+
+/* -----[ form element stuff ] ----------- */
+
+.smallForm {
+	margin:0;
+	padding:0;
+}
+
+.formRow {
+	width:936px;
+	margin-bottom:10px;
+}
+
+.formRowDesc {
+	float:right;
+	width:244px;
+	padding-right:10px;
+	padding-left:10px;
+	font-size:10px;
+	color:#707070;
+}
+
+descArrow {
+	font-size:11px;
+	color:#545454;
+}
+
+.formRowTitle,.formRowTitleNoPad {
+	width:106px;
+	text-align:right;
+	padding-right:4px;
+	font-size:12px;
+	padding-top:5px;
+}
+
+.formRowTitleNoPad	{
+	padding-top:0px;
+}
+
+.comingSoon	{
+	font-style:italic;
+}
+
+.titleSubtext {
+	color:#525252;
+	font-size:10px;
+}
+
+.formRowFields {
+	float:right;
+	width:559px;
+	text-align:left;
+}
+
+.agree {
+	text-align:left;
+	padding-left:110px;
+	margin:0px;
+}
+
+input, select {
+	background-color:#1d1d1d;
+	color:#e1e1e1;
+	font-size:13px;
+	border: 1px #777777 solid;
+}
+
+input {
+
+}
+
+#editForm {
+	width:360px;
+}
+
+
+select {
+	width:366px;
+} 
+
+textarea {
+	width:360px;
+	background-color:#1d1d1d;
+	border:solid 1px #777777;
+	color:#e1e1e1;
+	font-size:13px;
+}
+
+.disabled {
+	color:#707070;
+}
+
+.inputRadio {
+	width:auto;
+	border:none;
+	background-color:transparent;
+}
+
+.autoWidth {
+	width:auto;
+}
+
+.inputDate {
+	width:100px;
+}
+
+.dynSave {
+	width:auto;
+}
+
+.whiteText {
+	color:#b0b0b0;
+}
+
+#customURL {
+	width:115px;
+}
+
+.noPadding {
+	padding:0;
+	margin:0;
+}
+
+.disabled {
+	color:#707070;
+}
+
+.dynSaveDisabled {
+	width:auto;
+	color:#707070;
+}
+
+.changed {
+	color:#89ADBA;
+}
+
+/* -----[ /form element stuff ] ----------- */
+

@@ -994,12 +994,6 @@ message CLogUploadMsg {
 	optional bytes data = 3;
 }
 
-// Used by: LoyaltyRewards, SaleItemRewards
-message CLoyaltyRewards_GetEquippedProfileItems_Request {
-	optional fixed64 steamid = 1;
-	optional string language = 2;
-}
-
 message CMsgAchievementChange {
 	optional uint32 appid = 1;
 }

@@ -1,0 +1,64 @@
+
+.profile_awards_header {
+	margin-bottom: 16px;
+	line-height: 30px;
+}
+
+.profile_awards_header_title {
+	font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			//color: #ffffffcc;
+	color: #5491cf;
+	font-weight: 500;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+.profile_awards_header_subtitle {
+	font-size: 16px;
+	color: white;
+	margin-bottom: 3px;
+	font-weight: normal;
+}
+
+.profile_awards_section {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	background-color: none;
+	margin-left: 15px;
+	margin-bottom: 35px;
+}
+
+.profile_award {
+	width: 137px;
+	padding-top: 28px;
+	padding-bottom: 23px;
+	background-color: #00000044;
+	background: -webkit-linear-gradient( top, #3e4651 5%, #282c31 95%);
+	background: linear-gradient( to bottom, #3e4651 5%, #282c31 95%);
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+	margin: 8px 16px 8px 0px;
+}
+
+.profile_award_icon {
+	width: 85px;
+	height: 85px;
+}
+
+.profile_award_name {
+	//color: #5491cf;
+	color: #ffffffaa;
+	font-size: 12px;
+	padding-top: 10px;
+}
+
+.profile_award.unavailable:hover {
+	filter: grayscale(0%);
+}
+.profile_award.unavailable {
+	filter: grayscale(100%);
+}

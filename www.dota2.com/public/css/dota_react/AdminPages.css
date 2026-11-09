@@ -1,0 +1,2872 @@
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+.Strike {
+  text-decoration: line-through;
+  font-family: "Reaver", serif;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
+._31hC1zqg_cK9fp6BCtDEz {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+._2UcOFVBSgdG55jLKpxirAG {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+._1OiL0_UEMBNqnMh2NIyqgn {
+  border: 3px solid hsla(0, 0%, 100%, 0.3137254902);
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition-duration: 0.2s;
+}
+._1OiL0_UEMBNqnMh2NIyqgn:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+._1OiL0_UEMBNqnMh2NIyqgn ._3gcUnXWgY6QWkRKN1ClXpK {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 900px) {
+  ._1OiL0_UEMBNqnMh2NIyqgn ._3gcUnXWgY6QWkRKN1ClXpK {
+    font-size: 16px;
+  }
+}
+._1OiL0_UEMBNqnMh2NIyqgn ._17oKddncf6DrsSIQVgNvNG {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+._1OiL0_UEMBNqnMh2NIyqgn ._17oKddncf6DrsSIQVgNvNG._1e79tla_NJpyJDcvbU9AF9 {
+  background-image: url("https://cdn.steamstatic.com/apps/dota2/images/dota_react/icons/icon-play.svg");
+}
+._1OiL0_UEMBNqnMh2NIyqgn ._2Z206WYSu-kLFeeyQllJnA {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
+}
+._2w_iNwO7tcIXVjXubfdbpo,
+._3oBx7dyVQTWVwPU7EuvqWT {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+._3oBx7dyVQTWVwPU7EuvqWT {
+  max-width: none;
+}
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._3HPIK48slIcN5eHxvTSbKQ,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._11m5MHnA6UknRRBsXpZ1rv,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._1ohOp7TGfH5UAINZezcdxk,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f .ndSeTE99iU-Ou7uTl5Si0,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._1bbYnwq3o_lOjCCxe9iJaj,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._1igOxRpLl7PyFY24wnePza,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._3tGp0SBmohvWD8Pzf5iiuc,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._3GLmjRcbneW-hMwgcQ--3l,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._3V8yT6IOTf0yaOtb7uXfky,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._154vYGBrUHabGUpVtMn3B4 {
+  display: grid;
+  grid-template-columns: 250px auto;
+  width: 100%;
+  line-height: 1.2;
+  gap: 0.5em normal;
+}
+.w3idBBCXL0rxnD6pwBRM6 {
+  width: 100%;
+  min-width: 320px;
+  background-color: #000;
+  color: hsla(0, 0%, 100%, 0.7490196078);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f {
+  width: 100%;
+  min-height: 700px;
+  margin: 0;
+  padding: 30px 30px;
+  background-color: #0a1010;
+  position: relative;
+}
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._3gRz5dlEtd2bMEcJRISHKT {
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+.w3idBBCXL0rxnD6pwBRM6
+  .hjW9KalKzKYN16tpDQb7f
+  ._154vYGBrUHabGUpVtMn3B4
+  ._1RnAKrnaOcM3sRJ1ITONHN {
+  font-size: 14px;
+}
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._3tGp0SBmohvWD8Pzf5iiuc,
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._3GLmjRcbneW-hMwgcQ--3l {
+  max-width: 1000px;
+}
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._3GLmjRcbneW-hMwgcQ--3l {
+  max-width: 500px;
+}
+.w3idBBCXL0rxnD6pwBRM6
+  .hjW9KalKzKYN16tpDQb7f
+  .ndSeTE99iU-Ou7uTl5Si0
+  ._2LgtuThAofytR-EoQUMOLR {
+  margin-bottom: 10px;
+}
+.w3idBBCXL0rxnD6pwBRM6
+  .hjW9KalKzKYN16tpDQb7f
+  .ndSeTE99iU-Ou7uTl5Si0
+  ._3uIWu7cqjGy0dv5tXwPZnF {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+.w3idBBCXL0rxnD6pwBRM6
+  .hjW9KalKzKYN16tpDQb7f
+  .ndSeTE99iU-Ou7uTl5Si0
+  ._3uIWu7cqjGy0dv5tXwPZnF
+  img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  background:
+    -webkit-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    -webkit-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    #fff;
+  background:
+    -moz-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    -moz-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    #fff;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    #fff;
+  background-repeat: repeat, repeat;
+  background-position:
+    0px 0,
+    5px 5px;
+  -webkit-background-origin: padding-box, padding-box;
+  background-origin: padding-box, padding-box;
+  -webkit-background-clip: border-box, border-box;
+  background-clip: border-box, border-box;
+  -webkit-background-size:
+    10px 10px,
+    10px 10px;
+  background-size:
+    10px 10px,
+    10px 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1);
+  transform: scaleX(1) scaleY(1) scaleZ(1);
+}
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._1ohOp7TGfH5UAINZezcdxk {
+  max-width: 1200px;
+}
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f .SV4lDRUSn4ErLJABsMRaN {
+  margin-bottom: 0;
+}
+.w3idBBCXL0rxnD6pwBRM6 .hjW9KalKzKYN16tpDQb7f ._1Kvg9fL81Eb3WLk0EcFDTl {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #fff;
+  margin-left: 5px;
+}
+.w3idBBCXL0rxnD6pwBRM6 ._3Gjo1M2PApknKEf9Y8kZSI {
+  text-decoration: underline;
+  color: #36b;
+  cursor: pointer;
+}
+.w3idBBCXL0rxnD6pwBRM6 *:link {
+  text-decoration: underline;
+  color: #36b;
+}
+.w3idBBCXL0rxnD6pwBRM6 *:visited {
+  text-decoration: underline;
+  color: #36b;
+}
+.w3idBBCXL0rxnD6pwBRM6 ._2IXLMtIL66j_ePIFCMoMLn {
+  width: 300px;
+}
+.w3idBBCXL0rxnD6pwBRM6 ._1y2t9XMGl9stF97djWq0aK {
+  width: 150px;
+}
+.w3idBBCXL0rxnD6pwBRM6 ._3YaqJMKcvdAXYfVRX2W8PY {
+  background-color: #2b2b2b;
+  width: 90%;
+  height: 1px;
+  box-shadow: 0px 1px 1px #000;
+  margin: 20px auto 20px 0;
+}
+.w3idBBCXL0rxnD6pwBRM6 h3 {
+  margin-bottom: 0.3em;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+.Strike {
+  text-decoration: line-through;
+  font-family: "Reaver", serif;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
+._3OELhBBscklv2IMdg5oomz {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+._31I4llS_Lyhj5ATIkhm9Qt {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+._37aD3ynYPo1qUap4RVCcn1 {
+  border: 3px solid hsla(0, 0%, 100%, 0.3137254902);
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition-duration: 0.2s;
+}
+._37aD3ynYPo1qUap4RVCcn1:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+._37aD3ynYPo1qUap4RVCcn1 ._1kRqdz1Q6aw8DZs4fDMlS_ {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 900px) {
+  ._37aD3ynYPo1qUap4RVCcn1 ._1kRqdz1Q6aw8DZs4fDMlS_ {
+    font-size: 16px;
+  }
+}
+._37aD3ynYPo1qUap4RVCcn1 ._3qIRiUalNYmwOuLpN0DODG {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+._37aD3ynYPo1qUap4RVCcn1 ._3qIRiUalNYmwOuLpN0DODG._2vTU3GlbWNRYTktMAr4piA {
+  background-image: url("https://cdn.steamstatic.com/apps/dota2/images/dota_react/icons/icon-play.svg");
+}
+._37aD3ynYPo1qUap4RVCcn1 ._1fP8sQd2eLdp1lnsGBSiIc {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
+}
+.RYpRbQXFsKkHLprrRA1zi,
+._3tRwpyEakf__WKj7w5jodF {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+._3tRwpyEakf__WKj7w5jodF {
+  max-width: none;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._3V5pubLeXWOs7rDx7cGxI,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._2THih7P04NzMQyRkSCU57p,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1hn0yQoWwUItL8u4npU1FJ,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1A5QRx9VlcVs-R0nrFE7ek,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._2GLWyc9KftX65_eYbF9SbV,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._3mMUpl5v4rdbX0Y3j6h9Vt,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1VvPwBnK6kaf04tlafgJzd,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._3Yy6Z2mss8pTAjlVIJ7A9e,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._3B-f5WgGwbIfjjQ79Ef-Nx,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._3G-7dX2yZaIKFL9tnC0VkL,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .vvYl-3ZIeMPkGI94saJaY,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .e1kXopQGUfQO8ICcUgWT9,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._2qp3OE-MGle8fIYmzYo-mD,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._31PXUbr6Ft4mcgqJlnxbd4,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1OWRzmCzZ7Ff9zLvR0ij53,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._2i8-FQlo99PtuRmUvtgurE,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1ec2JlZSx2iKez9Tlm60Ho,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1CWPTeuaqNUawITjfayjh7,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .pEEkQfBPikqdsNi11lWM-,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .xI5E6apwJIM7u3b5GpQHg,
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1fxrHZYArq4s_yW3AGlgLl {
+  display: grid;
+  grid-template-columns: 250px auto;
+  width: 100%;
+  line-height: 1.2;
+  gap: 0.5em normal;
+}
+._1zeGbjgrtzsTxpMX5En4ZN {
+  width: 100%;
+  min-width: 1440px;
+  background-color: #000;
+  color: hsla(0, 0%, 100%, 0.7490196078);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd {
+  width: 100%;
+  min-height: 700px;
+  margin: 0;
+  padding: 30px 30px;
+  background-color: #0a1010;
+  position: relative;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd h1 {
+  display: block;
+  text-align: left;
+  font-size: 2em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd h2 {
+  display: block;
+  text-align: left;
+  font-size: 1.5em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd h3 {
+  display: block;
+  text-align: left;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .DQGCOxrVoC7LBhM7mn-Js {
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._2VaZtuM2kaB1JfOPNUHY7z {
+  height: 50px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._26vpYMRjrF8IaAlDodSKYJ {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._2OwWXhfu5Ir_RK5tZGdlV7 {
+  cursor: pointer;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._22K2AIz1_qxsa0prjSJght {
+  display: grid;
+  grid-template-columns: 550px 1fr;
+}
+._1zeGbjgrtzsTxpMX5En4ZN
+  .Z_Blbt7KKFTyy0LhWzqrd
+  ._22K2AIz1_qxsa0prjSJght
+  .AymWsmELt-04P2KDWP_ht {
+  display: flex;
+  flex-direction: column;
+}
+._1zeGbjgrtzsTxpMX5En4ZN
+  .Z_Blbt7KKFTyy0LhWzqrd
+  ._22K2AIz1_qxsa0prjSJght
+  ._1_Nsd4gBtT24RXhTZX59hu {
+  padding: 20px 20px 0 20px;
+  display: flex;
+}
+._1zeGbjgrtzsTxpMX5En4ZN
+  .Z_Blbt7KKFTyy0LhWzqrd
+  ._22K2AIz1_qxsa0prjSJght
+  .NJ2SxLweSpIwwij01bEPa {
+  width: 100%;
+  align-self: flex-start;
+}
+._1zeGbjgrtzsTxpMX5En4ZN
+  .Z_Blbt7KKFTyy0LhWzqrd
+  ._22K2AIz1_qxsa0prjSJght
+  ._2jj8F6TujCphllWG0mVZIR {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 99%;
+  padding-bottom: 1em;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1fxrHZYArq4s_yW3AGlgLl {
+  margin-bottom: 0.5em;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .xI5E6apwJIM7u3b5GpQHg {
+  margin-bottom: 0.5em;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .pEEkQfBPikqdsNi11lWM- {
+  margin-bottom: 0.5em;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .GCf_MpdLqqDAA2gYJy_OP {
+  margin: 30px 50px;
+  display: none;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 100px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._33ShEkw3vpxlYh9V4kq8vN {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: center;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._3_r0BBZ53SWfDvtIYFmnVy {
+  display: flex;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .sL92M3TGZXFY52YJwBjqg {
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 75vh;
+  min-height: 400px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .ux51myX2FubufpPVDr79F {
+  background-color: #161d1d;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1hn0yQoWwUItL8u4npU1FJ {
+  grid-template-columns: 250px 185px 65px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._1hn0yQoWwUItL8u4npU1FJ a {
+  display: inline-block;
+  vertical-align: top;
+  width: 170px;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+._1zeGbjgrtzsTxpMX5En4ZN
+  .Z_Blbt7KKFTyy0LhWzqrd
+  ._1hn0yQoWwUItL8u4npU1FJ
+  a:visited {
+  text-decoration: none;
+}
+._1zeGbjgrtzsTxpMX5En4ZN
+  .Z_Blbt7KKFTyy0LhWzqrd
+  ._1hn0yQoWwUItL8u4npU1FJ
+  a:hover {
+  text-decoration: none;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._2Y0XJ26SxbEz2ymss3IxT1 {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd .fQ9JbuKILX6QcGliXkAAW {
+  display: none;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._3WqIrnD55srvWk0usaiGU {
+  width: 100%;
+  border-spacing: 5px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .Z_Blbt7KKFTyy0LhWzqrd ._2D2t4sByBFxPdT19ZxDi2H {
+  display: flex;
+  gap: 5px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._1ymUXcoOK9QMVUK3LqDNva {
+  text-decoration: none;
+  color: #5886d1;
+  cursor: pointer;
+}
+._1zeGbjgrtzsTxpMX5En4ZN *:link {
+  text-decoration: none;
+  color: #5886d1;
+}
+._1zeGbjgrtzsTxpMX5En4ZN *:visited {
+  text-decoration: none;
+  color: #5886d1;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .eQUN1139S04UDBXZD9sj9 {
+  width: 300px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._1NTGYvvayGBoCVLwOZeKqr {
+  width: 150px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .TmbIeQaO211UMcS2rYilB {
+  background-color: #2b2b2b;
+  width: 98%;
+  height: 1px;
+  box-shadow: 0px 1px 1px #000;
+  margin: 20px auto 20px 0;
+}
+._1zeGbjgrtzsTxpMX5En4ZN h3 {
+  margin-bottom: 0.3em;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._3yyq7mdx9R7TGWugXYr-p1 {
+  width: 43px;
+  height: 27px;
+  transform: translateY(3px);
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._2HKl4yY1a7E74CglG8uBUX {
+  width: 144px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._3fmaFLdu4JhnWu-pNzi4n_ {
+  width: 36px;
+  height: 27px;
+  transform: translateY(3px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._2DZJOGqgRmf8BXHrKl8NlI {
+  display: inline-block;
+  min-width: 50px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .YGzF1cwttz9g-GD8lQa7u {
+  position: relative;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._1bjscpu27X92lwFnnDxuB- {
+  position: absolute;
+  left: 100%;
+  top: -5px;
+  margin-left: 10px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._2YEZTwo84iD58hIg0yVu7c {
+  text-transform: none;
+  font-weight: normal;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .F2OsALGKET10BleQcREfT {
+  padding-left: 8px;
+  padding-top: 20px;
+  text-transform: none;
+  font-weight: normal;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._2409M7zgkG1YfIoKjf0xuW {
+  margin-left: 8px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._2_9wfntkC3b3oqBh6DWQWS {
+  width: 12px;
+  height: 15px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._3BwteZt73UOnhP1eZQzjLG {
+  width: 12px;
+  height: 11px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._18x1jAkVSdDMbBRGE29U8Q {
+  margin-right: 12px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .lT6nXg4T4nF_u8dPbxbLK {
+  text-transform: capitalize;
+}
+._1zeGbjgrtzsTxpMX5En4ZN ._1zyxlvXRinV7kmTGr27_gu {
+  text-transform: uppercase;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__headerRow {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__headerTruncatedText {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__headerColumn {
+  margin-right: 5px;
+  min-width: 0px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__rowColumn {
+  margin-right: 5px;
+  min-width: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__headerColumn:first-of-type {
+  margin-left: 5px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__rowColumn:first-of-type {
+  margin-left: 5px;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__sortableHeaderColumn {
+  cursor: pointer;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__sortableHeaderIconContainer {
+  display: flex;
+  align-items: center;
+}
+._1zeGbjgrtzsTxpMX5En4ZN .ReactVirtualized__Table__sortableHeaderIcon {
+  flex: 0 0 24px;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+.Strike {
+  text-decoration: line-through;
+  font-family: "Reaver", serif;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
+._2IHKq8kE2FKkIkQ0uN1hI1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+._2jFWoHmtCDVmk-GJRBpunm {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+._3Vzjmf1OlnazpL0kLEaBk2 {
+  border: 3px solid hsla(0, 0%, 100%, 0.3137254902);
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition-duration: 0.2s;
+}
+._3Vzjmf1OlnazpL0kLEaBk2:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+._3Vzjmf1OlnazpL0kLEaBk2 ._1zE9KyknOxmGylbt0gT6G1 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 900px) {
+  ._3Vzjmf1OlnazpL0kLEaBk2 ._1zE9KyknOxmGylbt0gT6G1 {
+    font-size: 16px;
+  }
+}
+._3Vzjmf1OlnazpL0kLEaBk2 ._2kUnsdlfHyidOkvHNRy-G5 {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+._3Vzjmf1OlnazpL0kLEaBk2 ._2kUnsdlfHyidOkvHNRy-G5._3xQLJ4b-cm8IeXAoDPbn6R {
+  background-image: url("https://cdn.steamstatic.com/apps/dota2/images/dota_react/icons/icon-play.svg");
+}
+._3Vzjmf1OlnazpL0kLEaBk2 ._1hoZQVEfsnXavdsZP34vJD {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
+}
+._3fIQnpYc0eNl9uXKBoSJam,
+._13XzPZYgyQ52l8UHzh0EmH {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+._13XzPZYgyQ52l8UHzh0EmH {
+  max-width: none;
+}
+._2479It67QW-Bm9uy6i44cg._2jAmS6ZJIahLUzOlKrjWpM .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(25%) sepia(99%) saturate(100%) hue-rotate(0deg) brightness(96%)
+    contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._1VQ6_XxRXOarkHNtIZR9Bw .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(22%) sepia(99%) saturate(100%) hue-rotate(0deg) brightness(99%)
+    contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._2npcwVYfERdNcBWrDZoEz0 .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(39%) sepia(100%) saturate(100%) hue-rotate(333deg)
+    brightness(99%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._2jAmS6ZJIahLUzOlKrjWpM ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #9f3c3c, #4a2040);
+}
+._2479It67QW-Bm9uy6i44cg._1VQ6_XxRXOarkHNtIZR9Bw ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #954533, #452732);
+}
+._2479It67QW-Bm9uy6i44cg._2npcwVYfERdNcBWrDZoEz0 ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #a3735e, #4f2a25);
+}
+._2479It67QW-Bm9uy6i44cg._2dBam2Tl57qfOfNvHZ6ChQ .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(53%) sepia(100%) saturate(100%) hue-rotate(0deg)
+    brightness(99%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._28IIDyezxLgxIAUErmcPAh .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(52%) sepia(100%) saturate(100%) hue-rotate(0deg)
+    brightness(99%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._3jB4IMyM4FBN4ivpEPzbJd .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(63%) sepia(88%) saturate(100%) hue-rotate(12deg)
+    brightness(98%) contrast(99%);
+}
+._2479It67QW-Bm9uy6i44cg._1Gjyr8DdaSBz6_43VEAz0d .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(68%) sepia(67%) saturate(97%) hue-rotate(0deg) brightness(92%)
+    contrast(91%);
+}
+._2479It67QW-Bm9uy6i44cg._2dBam2Tl57qfOfNvHZ6ChQ ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #c8a45c, #6f3d21);
+}
+._2479It67QW-Bm9uy6i44cg._28IIDyezxLgxIAUErmcPAh ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #c6a158, #604928);
+}
+._2479It67QW-Bm9uy6i44cg._3jB4IMyM4FBN4ivpEPzbJd ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #cac194, #433828);
+}
+._2479It67QW-Bm9uy6i44cg._1Gjyr8DdaSBz6_43VEAz0d ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #c3a99a, #4d352b);
+}
+._2479It67QW-Bm9uy6i44cg._1c3NTvD5wY1eRXjzD8RPIe .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(57%) sepia(100%) saturate(100%) hue-rotate(34deg)
+    brightness(93%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._1-qGJ84BFxu0lBHUhb5BAi .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(62%) sepia(100%) saturate(100%) hue-rotate(114deg)
+    brightness(92%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._3sEfw4qhYeKQzhX1UOb60Z .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(39%) sepia(100%) saturate(99%) hue-rotate(88deg)
+    brightness(93%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._21o76udrdevLEWmI0ZuSCT .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(53%) sepia(99%) saturate(100%) hue-rotate(26deg)
+    brightness(92%) contrast(99%);
+}
+._2479It67QW-Bm9uy6i44cg._3833UsaWsxduGGxeTuMWAC .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(64%) sepia(60%) saturate(100%) hue-rotate(44deg)
+    brightness(91%) contrast(92%);
+}
+._2479It67QW-Bm9uy6i44cg._1c3NTvD5wY1eRXjzD8RPIe ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #a2b23e, #2d5a18);
+}
+._2479It67QW-Bm9uy6i44cg._1-qGJ84BFxu0lBHUhb5BAi ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #7ec2b2, #29493a);
+}
+._2479It67QW-Bm9uy6i44cg._3sEfw4qhYeKQzhX1UOb60Z ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #538564, #1c3d3f);
+}
+._2479It67QW-Bm9uy6i44cg._21o76udrdevLEWmI0ZuSCT ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #9a9f6a, #223824);
+}
+._2479It67QW-Bm9uy6i44cg._3833UsaWsxduGGxeTuMWAC ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #9fad8e, #3f4129);
+}
+._2479It67QW-Bm9uy6i44cg._3gfEwvDy5HqyL6VGHoMRVO .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(44%) sepia(100%) saturate(100%) hue-rotate(190deg)
+    brightness(95%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._3O35_r4wm4_s7r6H_YdPCz .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(39%) sepia(99%) saturate(99%) hue-rotate(167deg)
+    brightness(99%) contrast(99%);
+}
+._2479It67QW-Bm9uy6i44cg._3ejomd-TsjxlHuJOx2FYyf .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(57%) sepia(100%) saturate(100%) hue-rotate(145deg)
+    brightness(92%) contrast(99%);
+}
+._2479It67QW-Bm9uy6i44cg._2HyBDMaS-B2ekmE3PItFMK .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(62%) sepia(93%) saturate(72%) hue-rotate(139deg)
+    brightness(92%) contrast(92%);
+}
+._2479It67QW-Bm9uy6i44cg._3gfEwvDy5HqyL6VGHoMRVO ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #727cb2, #342d5b);
+}
+._2479It67QW-Bm9uy6i44cg._3O35_r4wm4_s7r6H_YdPCz ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #547ea6, #2a385e);
+}
+._2479It67QW-Bm9uy6i44cg._3ejomd-TsjxlHuJOx2FYyf ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #6baebc, #135459);
+}
+._2479It67QW-Bm9uy6i44cg._2HyBDMaS-B2ekmE3PItFMK ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #94b5ba, #385b59);
+}
+._2479It67QW-Bm9uy6i44cg.YXBKkoBCp4eQx9gFE-4GS .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(50%) sepia(87%) saturate(100%) hue-rotate(243deg)
+    brightness(88%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg._1EmAB8GlcjfA1QEcuCJi6K .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(44%) sepia(100%) saturate(100%) hue-rotate(294deg)
+    brightness(98%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg.GNCP-xxNt9O4-ierkeGcM .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(33%) sepia(100%) saturate(100%) hue-rotate(207deg)
+    brightness(98%) contrast(100%);
+}
+._2479It67QW-Bm9uy6i44cg.YXBKkoBCp4eQx9gFE-4GS ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #b57789, #412755);
+}
+._2479It67QW-Bm9uy6i44cg._1EmAB8GlcjfA1QEcuCJi6K ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #9c70a4, #282752);
+}
+._2479It67QW-Bm9uy6i44cg.GNCP-xxNt9O4-ierkeGcM ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #675cae, #261c44);
+}
+._2479It67QW-Bm9uy6i44cg._2TRWZ2SI7jmu1RmANk84kq .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(34%) sepia(33%) saturate(99%) hue-rotate(165deg)
+    brightness(93%) contrast(92%);
+}
+._2479It67QW-Bm9uy6i44cg._2Z0PK6Dt5jIErUliJ1Nmcb .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(42%) sepia(23%) saturate(99%) hue-rotate(181deg)
+    brightness(95%) contrast(94%);
+}
+._2479It67QW-Bm9uy6i44cg._3wy1a1XvwtnmSkyJ_Uog4B .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(66%) sepia(46%) saturate(99%) hue-rotate(151deg)
+    brightness(90%) contrast(90%);
+}
+._2479It67QW-Bm9uy6i44cg._3CwxQRU26KizreV1hodszw .Kt1MTBk5kBd4aK5CFW2BS {
+  filter: invert(73%) sepia(29%) saturate(81%) hue-rotate(166deg)
+    brightness(92%) contrast(93%);
+}
+._2479It67QW-Bm9uy6i44cg._2TRWZ2SI7jmu1RmANk84kq ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #565c61, #1b1b21);
+}
+._2479It67QW-Bm9uy6i44cg._2Z0PK6Dt5jIErUliJ1Nmcb ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #6a6d73, #29272c);
+}
+._2479It67QW-Bm9uy6i44cg._3wy1a1XvwtnmSkyJ_Uog4B ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #95a9b1, #3e464f);
+}
+._2479It67QW-Bm9uy6i44cg._3CwxQRU26KizreV1hodszw ._3MfMXew7MDkO4ZAyjocp4l {
+  background: linear-gradient(to right, #adb6be, #4e5557);
+}
+._3WgovHBiMUxsTea3MjGVj_ {
+  width: 100%;
+  color: hsla(0, 0%, 100%, 0.7490196078);
+  display: flex;
+  flex-direction: column;
+}
+._3WgovHBiMUxsTea3MjGVj_ ._1nNeHirsBILHpl2is8F5lW {
+  width: 100%;
+  padding: 20px 20px;
+  background-color: #111;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+._3WgovHBiMUxsTea3MjGVj_ ._1nNeHirsBILHpl2is8F5lW ._2AFRQzgnX-YsecNy9XrxzY {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #222;
+  cursor: pointer;
+  user-select: none;
+}
+._3WgovHBiMUxsTea3MjGVj_
+  ._1nNeHirsBILHpl2is8F5lW
+  ._2AFRQzgnX-YsecNy9XrxzY.wbLdHJ0ZWLvu8HF50SXla {
+  background-color: #333;
+}
+._3WgovHBiMUxsTea3MjGVj_
+  ._1nNeHirsBILHpl2is8F5lW
+  ._2AFRQzgnX-YsecNy9XrxzY:hover {
+  border: #272727;
+}
+._3WgovHBiMUxsTea3MjGVj_ ._2CWEAN8f8RDC7hNnHa8Suk {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+._3WgovHBiMUxsTea3MjGVj_ ._2CWEAN8f8RDC7hNnHa8Suk ._3bNeyifasCN57MFYhqx6ZU {
+  width: 100%;
+  padding: 30px;
+  background-color: #222;
+}
+._2v0i2xJP4V-2Qpo3cyY1Nj {
+  width: 126px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+._2v0i2xJP4V-2Qpo3cyY1Nj ._3i4UGSnvERSFqSVToiROro {
+  width: 100%;
+  height: 72px;
+  background-size: contain;
+  border: 1px solid #444;
+  cursor: pointer;
+  user-select: none;
+}
+._2v0i2xJP4V-2Qpo3cyY1Nj ._2479It67QW-Bm9uy6i44cg {
+  width: 100%;
+  height: 14px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #999;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+._2v0i2xJP4V-2Qpo3cyY1Nj ._1CHIkGehGqx3Ju9lDCMSL3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ddd;
+}
+.BkuFnEL7cAyjCsMYhNyG3 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.BkuFnEL7cAyjCsMYhNyG3 ._5HnIRB-JgFF82A3YeaDuq {
+  width: 1016px;
+  padding: 10px;
+  z-index: 99;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  background-color: #222;
+}
+.BkuFnEL7cAyjCsMYhNyG3 ._5HnIRB-JgFF82A3YeaDuq ._2jAZ6RdYq6X6OeC7yk8dj3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 1;
+}
+.BkuFnEL7cAyjCsMYhNyG3 ._5HnIRB-JgFF82A3YeaDuq ._3WFGlJosY89AeFD-YAn6gJ {
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+.BkuFnEL7cAyjCsMYhNyG3 ._5HnIRB-JgFF82A3YeaDuq ._21gyki0jzxuKwN4H10o8X9 {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+  z-index: 2;
+}
+.BkuFnEL7cAyjCsMYhNyG3
+  ._5HnIRB-JgFF82A3YeaDuq
+  ._21gyki0jzxuKwN4H10o8X9
+  ._3fmy45UdjacZi73yO3E_uF {
+  width: 94px;
+  height: 54px;
+  border: 1px solid #000;
+  position: relative;
+  cursor: pointer;
+}
+.BkuFnEL7cAyjCsMYhNyG3
+  ._5HnIRB-JgFF82A3YeaDuq
+  ._21gyki0jzxuKwN4H10o8X9
+  ._3fmy45UdjacZi73yO3E_uF:hover {
+  filter: brightness(1.4);
+}
+.BkuFnEL7cAyjCsMYhNyG3
+  ._5HnIRB-JgFF82A3YeaDuq
+  ._21gyki0jzxuKwN4H10o8X9
+  ._3fmy45UdjacZi73yO3E_uF
+  ._3i4UGSnvERSFqSVToiROro {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+}
+.BkuFnEL7cAyjCsMYhNyG3
+  ._5HnIRB-JgFF82A3YeaDuq
+  ._21gyki0jzxuKwN4H10o8X9
+  ._3fmy45UdjacZi73yO3E_uF
+  ._1CHIkGehGqx3Ju9lDCMSL3 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 11px;
+  color: #fff;
+  text-shadow: 0px 0px 5px #000;
+  user-select: none;
+}
+._6AJ-yI4g6fOtGfcDROYZt {
+  width: 98px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+._6AJ-yI4g6fOtGfcDROYZt ._2kUnsdlfHyidOkvHNRy-G5 {
+  width: 100%;
+  height: 72px;
+  background-size: contain;
+  border: 1px solid #444;
+  cursor: pointer;
+  user-select: none;
+}
+._6AJ-yI4g6fOtGfcDROYZt ._1CHIkGehGqx3Ju9lDCMSL3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ddd;
+}
+._145u0nzgVhn2-DZBoRWmsI {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+._145u0nzgVhn2-DZBoRWmsI ._1aNSszFcQFhi_uHGeZf8Rv {
+  width: 1016px;
+  padding: 10px;
+  z-index: 99;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  background-color: #222;
+}
+._145u0nzgVhn2-DZBoRWmsI ._1aNSszFcQFhi_uHGeZf8Rv ._2jAZ6RdYq6X6OeC7yk8dj3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 1;
+}
+._145u0nzgVhn2-DZBoRWmsI ._1aNSszFcQFhi_uHGeZf8Rv ._3WFGlJosY89AeFD-YAn6gJ {
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+._145u0nzgVhn2-DZBoRWmsI ._1aNSszFcQFhi_uHGeZf8Rv ._21gyki0jzxuKwN4H10o8X9 {
+  width: 100%;
+  max-height: 80vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 18px;
+  z-index: 2;
+  overflow: auto;
+}
+._145u0nzgVhn2-DZBoRWmsI
+  ._1aNSszFcQFhi_uHGeZf8Rv
+  ._21gyki0jzxuKwN4H10o8X9
+  ._2SWf_NNmwQ7LWbLC4VYlOr {
+  width: 74px;
+  height: 54px;
+  border: 1px solid #000;
+  position: relative;
+  cursor: pointer;
+}
+._145u0nzgVhn2-DZBoRWmsI
+  ._1aNSszFcQFhi_uHGeZf8Rv
+  ._21gyki0jzxuKwN4H10o8X9
+  ._2SWf_NNmwQ7LWbLC4VYlOr:hover {
+  filter: brightness(1.4);
+}
+._145u0nzgVhn2-DZBoRWmsI
+  ._1aNSszFcQFhi_uHGeZf8Rv
+  ._21gyki0jzxuKwN4H10o8X9
+  ._2SWf_NNmwQ7LWbLC4VYlOr
+  ._2kUnsdlfHyidOkvHNRy-G5 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+}
+._145u0nzgVhn2-DZBoRWmsI
+  ._1aNSszFcQFhi_uHGeZf8Rv
+  ._21gyki0jzxuKwN4H10o8X9
+  ._2SWf_NNmwQ7LWbLC4VYlOr
+  ._1CHIkGehGqx3Ju9lDCMSL3 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 11px;
+  color: #fff;
+  text-shadow: 0px 0px 5px #000;
+  user-select: none;
+}
+.vvXhWtkA9z6wjvMnq8Cfh {
+  width: 100%;
+  height: 2px;
+  margin: 20px auto;
+  background-color: #444;
+}
+._3Cu9n_EGnwgQDa94O5JQYa {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-end;
+  margin-top: 8px;
+}
+._3Cu9n_EGnwgQDa94O5JQYa ._1KOTz4KFHV7evGoyiIIhmZ {
+  font-size: 16px;
+  min-width: 100px;
+  max-width: 100px;
+  text-align: center;
+}
+._3Cu9n_EGnwgQDa94O5JQYa ._29uhbNe06vW1DnR0UERABv {
+  display: flex;
+  flex-direction: column;
+}
+._3Cu9n_EGnwgQDa94O5JQYa ._29uhbNe06vW1DnR0UERABv ._3pU4B55o9M0cH7n06CQ15l {
+  text-align: center;
+  color: #fff;
+}
+._2Vl5GTvbioLQmgltncA3xD {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+._28XsJixV0GJwbwa0EysF95 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: -8px;
+  margin-bottom: 20px;
+}
+._3Zp2QG7HhI-jivO6IldhoV {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: -8px;
+  margin-bottom: 20px;
+}
+._3Zp2QG7HhI-jivO6IldhoV ._219ADvdUd0lvulRTTvI5az {
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  user-select: none;
+}
+._3Zp2QG7HhI-jivO6IldhoV ._219ADvdUd0lvulRTTvI5az.wbLdHJ0ZWLvu8HF50SXla {
+  color: #ccc;
+}
+._3Zp2QG7HhI-jivO6IldhoV ._219ADvdUd0lvulRTTvI5az:hover {
+  color: #fff;
+}
+._1tx8GY0JVZNo7qQPdeDsTn {
+  margin-top: 16px;
+  margin-left: 90px;
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+  user-select: none;
+}
+._1tx8GY0JVZNo7qQPdeDsTn:hover {
+  color: #fff;
+}
+.AyejJ-aIiriywCHAZOeUo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.AyejJ-aIiriywCHAZOeUo ._3Xuun95YKZ1YruK-b9hYEf {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.AyejJ-aIiriywCHAZOeUo ._3FpjjT_dv_gp1luKSDDZhK {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+._2PVHaq0Abzd8Vpp7ZSpR6X {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+._2PVHaq0Abzd8Vpp7ZSpR6X ._2AFRQzgnX-YsecNy9XrxzY {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+._2PVHaq0Abzd8Vpp7ZSpR6X ._2AFRQzgnX-YsecNy9XrxzY ._1CHIkGehGqx3Ju9lDCMSL3 {
+  min-width: 100px;
+}
+._1epogxsRPnR7xvn_EJk5ek {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+._1epogxsRPnR7xvn_EJk5ek ._2aynAA7fYEBl7qeYdv4k7P {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+._1epogxsRPnR7xvn_EJk5ek ._2aynAA7fYEBl7qeYdv4k7P ._1LCBQ-B3CRx5lvFPGuCCnL {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  cursor: default;
+}
+._1epogxsRPnR7xvn_EJk5ek
+  ._2aynAA7fYEBl7qeYdv4k7P
+  ._1LCBQ-B3CRx5lvFPGuCCnL
+  ._3upfuZKsxFE7jDpMgQDHrF {
+  color: #fff;
+  width: 60px;
+  min-width: 60px;
+  text-align: center;
+}
+._1epogxsRPnR7xvn_EJk5ek
+  ._2aynAA7fYEBl7qeYdv4k7P
+  ._1LCBQ-B3CRx5lvFPGuCCnL
+  ._1AWXivqjFK2i-xe23q043e {
+  color: #888;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+}
+._1epogxsRPnR7xvn_EJk5ek
+  ._2aynAA7fYEBl7qeYdv4k7P
+  ._1LCBQ-B3CRx5lvFPGuCCnL
+  ._2I5WaWpAnR7Xb9bJIjMAuB {
+  color: #666;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+}
+._1epogxsRPnR7xvn_EJk5ek ._2aynAA7fYEBl7qeYdv4k7P ._1hs67D7V7zX-88hrbFgsay {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+._1Wq63SoqJ5sm2AjU0GHg0G {
+  width: 68px;
+  height: 50px;
+  border: 1px solid #666;
+  background-size: contain;
+}
+._2jWYP5f6ScwPsEZ14cFB93 {
+  width: 68px;
+  height: 68px;
+  border: 1px solid #666;
+  background-size: contain;
+}
+._2ie0WE5D9UyYhwIqhg8OUG {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 20px;
+}
+._2KHZb4-REKRB5a9tJlgkPK {
+  margin-top: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #999;
+  cursor: pointer;
+  user-select: none;
+}
+._2KHZb4-REKRB5a9tJlgkPK:hover {
+  color: #ddd;
+}
+._2U4uJQoF_QS4MJABMADMUe,
+._1uTSEvOUBlQN2EaDV3Fj_K {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+._3vYlZs47O9z1ELF14LLEsV,
+._2thRO1n5rmT_Vry4XHHkFu {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+._3POW-ow0sU5DLsnpAxjZ4u {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+._2pcHk7_VnLKZ4YPsfy3PPd {
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+._1hs67D7V7zX-88hrbFgsay {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+._1UYvWalxB-6TGfDko-EcKt {
+  margin-top: 12px;
+}

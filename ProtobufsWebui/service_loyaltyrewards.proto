@@ -45,6 +45,11 @@ message CLoyaltyRewards_GetEligibleApps_Response_EligibleApp {
 	optional bool owned = 5;
 }
 
+message CLoyaltyRewards_GetEquippedProfileItems_Request {
+	optional fixed64 steamid = 1;
+	optional string language = 2;
+}
+
 message CLoyaltyRewards_GetEquippedProfileItems_Response {
 	repeated .LoyaltyRewardDefinition active_definitions = 1;
 	repeated .LoyaltyRewardDefinition inactive_definitions = 2;

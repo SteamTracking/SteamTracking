@@ -1380,6 +1380,7 @@ ${STORE_BASE_URL}account/ajaxgetcontrollersused
 ${STORE_BASE_URL}account/ajaxhardwaredelete
 ${STORE_BASE_URL}account/ajaxhardwarerename
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
+${STORE_BASE_URL}account/change_country/
 ${STORE_BASE_URL}account/cookiepreferences
 ${STORE_BASE_URL}account/cookiepreferences/
 ${STORE_BASE_URL}account/emailoptout/app
@@ -1433,6 +1434,7 @@ ${STORE_BASE_URL}app/${}/
 ${STORE_BASE_URL}app/${}/?beta=1
 ${STORE_BASE_URL}app/${}/?curator_clanid=${}
 ${STORE_BASE_URL}app/${}?deckapp=${}&utm_source=topplayed_app_banner&utm_campaign=${}
+${STORE_BASE_URL}app/1675200/Steam_Deck/?utm_source=steamdeckcharts
 ${STORE_BASE_URL}app/trailerstats/${}/${trailer_id}
 ${STORE_BASE_URL}broadcast/ajaxcheckbroadcast
 ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpage
@@ -1445,9 +1447,11 @@ ${STORE_BASE_URL}buyitem/${DOTA_APP_ID}/${}/${}
 ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
+${STORE_BASE_URL}cart/${}
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/addtocart?redirect=1
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
+${STORE_BASE_URL}cart/ajaxsaledropprogress
 ${STORE_BASE_URL}cart/purchaserequest/${}/${}
 ${STORE_BASE_URL}cart/purchaserequested/${}
 ${STORE_BASE_URL}category/${category}
@@ -1455,7 +1459,13 @@ ${STORE_BASE_URL}category/${handle}
 ${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}charts
 ${STORE_BASE_URL}charts/
+${STORE_BASE_URL}charts/bestofyear/${nYear}
+${STORE_BASE_URL}charts/mostplayed
 ${STORE_BASE_URL}charts/steamdecktopplayed
+${STORE_BASE_URL}charts/support
+${STORE_BASE_URL}charts/topnewreleases/${strSaleName}
+${STORE_BASE_URL}charts/topsellers/${}/${}
+${STORE_BASE_URL}charts/topselling/${}
 ${STORE_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=wishlist
 ${STORE_BASE_URL}communityrecommendations/
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
@@ -1561,12 +1571,14 @@ ${STORE_BASE_URL}handlereviewanomaly/${}/
 ${STORE_BASE_URL}hardware/
 ${STORE_BASE_URL}hardware_order_terms
 ${STORE_BASE_URL}hardware_recycling/
+${STORE_BASE_URL}hwsurvey/
 ${STORE_BASE_URL}itemstore/${nAppID}/detail/${nItemDefID}
 ${STORE_BASE_URL}itemstore/${}
 ${STORE_BASE_URL}itemstore/${}/${}
 ${STORE_BASE_URL}join/
 ${STORE_BASE_URL}join/${}
 ${STORE_BASE_URL}join/?guest=1&purchaseType=gift&checkout=1&redir=${}
+${STORE_BASE_URL}join?guest=1&purchaseType=gift&checkout=1&redir=${}
 ${STORE_BASE_URL}labs/
 ${STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${}&${}
 ${STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${}&appid[]=${}
@@ -1691,6 +1703,7 @@ ${STORE_BASE_URL}search/?${}
 ${STORE_BASE_URL}search/?${}=${}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}%2C${strSecondaryCategory}
+${STORE_BASE_URL}search/?filter=${_ ? `topsellers` : `globaltopsellers`}
 ${STORE_BASE_URL}search/?franchise=${}
 ${STORE_BASE_URL}search/?term=${}
 ${STORE_BASE_URL}search/results/?${}
@@ -1700,6 +1713,7 @@ ${STORE_BASE_URL}sitemap
 ${STORE_BASE_URL}sitemap/#genres
 ${STORE_BASE_URL}specials
 ${STORE_BASE_URL}specials/
+${STORE_BASE_URL}stats/content/
 ${STORE_BASE_URL}steam_refunds
 ${STORE_BASE_URL}steam_refunds/
 ${STORE_BASE_URL}steamaccount/addfunds?marketlisting=${listingid}&returnurl=${}
@@ -1753,8 +1767,10 @@ ${STORE_CDN_URL}/public/shared/images/footer/weibo_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/responsive/logo_valve_footer.png
 ${STORE_CDN_URL}categories/image/
 ${STORE_CDN_URL}categories/searchsuggestionsimage/
+${STORE_CDN_URL}images/storepagebackground/${page_background_path}
 ${STORE_CDN_URL}images/storepagebackground/${}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
+${STORE_CDN_URL}public/images/checkout/computer.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? `animated` : `still`}/${}.png
@@ -1767,7 +1783,9 @@ ${STORE_CDN_URL}public/shared/images/footer/wechat_logo.svg?v=1
 ${STORE_CDN_URL}public/shared/images/footer/weibo_logo.svg?v=1
 ${STORE_CDN_URL}public/shared/images/game_ratings/CERO/descriptors/${strFile}.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
+${STORE_CHECKOUT_BASE_URL}checkout/
 ${STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart
+${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${}/header.jpg
 ${STORE_ITEM_BASE_URL}${filename}
@@ -1783,6 +1801,7 @@ ${STORE_URL}app/570/Dota_2/
 ${STORE_URL}app/730/CounterStrike_2/
 ${SUPPORT_BASE_URL}${}
 ${SUPPORT_BASE_URL}account/overview/${}
+${SUPPORT_BASE_URL}kb_article.php?ref=6627-QSNM-5276
 ${SUPPORT_BASE_URL}wizard/HelpWithPublishing?issueid=915
 ${URL}${URL}
 ${URL}${}

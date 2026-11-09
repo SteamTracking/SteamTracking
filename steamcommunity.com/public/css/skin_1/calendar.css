@@ -1,0 +1,128 @@
+
+
+.calendarBox {
+	background-color: #313131;
+	border: 1px solid #777777;
+	height: 206px;
+	margin: 0;
+	padding: 0 5px;
+	text-align: center;
+	width: 200px;
+}
+
+.calendarBox .monthRow {
+	width:192px;
+	height:28px;
+	margin:0;
+	padding:0;
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:8px;
+}
+
+.calendarBox h1.monthTitle {
+	margin:0;
+	padding:0;
+	font-family:Tahoma;
+	font-size:18px;
+	font-weight:normal;
+	line-height:18px;
+	color:#868686;
+}
+
+.calendarBox .monthRow .monthNav {
+	float:right;
+	margin:0;
+	padding:0;
+}
+
+.calendarBox .weekHead {
+	width:200px;
+	margin:0;
+	padding:0;
+}
+
+.calendarBox .weekHead .day {
+	float:left;
+	width:20px;
+	height:19px;
+	border:none;
+	border-bottom:solid #626262 1px;
+	margin:2px 4px 4px 4px;
+	text-align:center;
+	font-family:Tahoma;
+	font-size:12px;
+	line-height:12px;
+	color:#959595;
+}
+
+.calendarBox .days a {
+	float:left;
+	width:20px;
+	height:18px;
+	border:none;
+	margin:2px 4px 2px 4px;
+	padding:0;
+	padding-top:2px;
+	text-align:center;
+	font-family:Tahoma;
+	font-size:12px;
+	line-height:12px;
+	color:#d0d0d0;
+	text-decoration:none;
+}
+
+.calendarBox .days a.hasEvent {
+	width:18px;
+	height:16px;
+	border:solid #6f9fc8 1px;
+}
+
+.calendarBox .days a.hasExpiredEvent {
+	width:18px;
+	height:16px;
+	border:solid #707070 1px;
+}
+
+.calendarBox .days a.isSelected {
+	width:18px;
+	height:16px;
+	border:solid #d05f29 1px;
+	background-color:#d05f29;
+	color:#ffffff;
+}
+
+.calendarBox .days a.isFocus {
+	width:18px;
+	height:16px;
+	border:solid #d05f29 1px;
+	background-color:#d05f29;
+	color:#ffffff;
+}
+
+.calendarBox .days a.isCurrent {
+	width:18px;
+	height:16px;
+	border:solid #6f9fc8 1px;
+	background-color:#6f9fc8;
+	color:#1f1f1f;
+}
+
+.calendarBox .days a.otherMonth {
+	cursor:default;
+	color:#535353;
+}
+
+.calendarBox .days a.isExpired {
+	cursor:default;
+	color:#959595;
+}
+
+.calendarBox .days a.rollOver {
+	width:18px;
+	height:16px;
+	border:solid #d05f29 1px;
+	background-color:#d05f29;
+	color:#1f1f1f;
+}
+

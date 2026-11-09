@@ -1,0 +1,14 @@
+
+html.force_desktop body {
+    min-width: 940px; }
+
+@media screen and (max-width: 910px)
+{
+html.responsive body.events_hub.events_hub.events_hub .responsive_page_frame.with_header div.responsive_page_content {
+	padding-top: 0;
+}
+}
+html.responsive.touch body.events_hub.events_hub.events_hub .responsive_page_frame.with_header div.responsive_page_content {
+	padding-top: 0;
+}
+

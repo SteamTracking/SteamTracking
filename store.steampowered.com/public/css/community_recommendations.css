@@ -1,0 +1,617 @@
+
+body.v6 {
+    background-image: linear-gradient(#1B2838, #1B2838 400px, #1B2838 100%);
+}
+
+body.v6 h2.pageheader {
+    letter-spacing: 1px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+body.v6 h3 {
+    font-size: 21px;
+    font-weight: 200;
+}
+
+#RefreshBtn {
+}
+
+
+#LoadingThrobber, #NoMatchingReviews {
+	transition: height 0.25s, opacity 0.25s;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+#LoadingThrobber.visible, #NoMatchingReviews.visible {
+	opacity: 1;
+	height: 133px;
+}
+
+#NoMatchingReviews {
+	position: relative;
+	margin: auto auto;
+	vertical-align: middle;
+
+	color: #60acde;
+	font-size: 22px;
+	text-align: center;
+}
+
+div.advanced_controls_toggle_icon {
+	position: relative;
+	top: 3px;
+	width: 14px;
+	height: 16px;
+	background: url('/public/images/v6/app/review_graph_expander.png');
+	background-repeat: no-repeat;
+	background-size: 14px 26px;
+	display: inline-block;
+}
+div.advanced_controls_toggle_icon.up {
+	background-position: 0px 2px;
+}
+div.advanced_controls_toggle_icon.down {
+	background-position: 0px -12px;
+}
+
+
+.advanced_controls_toggle_ctn {
+	text-align: center;
+}
+
+.show_advanced_controls #ShowAdvancedControls {
+	display: none;
+
+}
+#HideAdvancedControls {
+	display: none;
+}
+.show_advanced_controls #HideAdvancedControls {
+	display: inline-block;
+}
+
+.trending_reviews_content {
+	width: 100%;
+	margin: auto;
+	overflow: initial;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.trending_reviews_controls_ctn {
+	padding: 15px;
+	margin-top: 25px;
+	margin-bottom: 5px;
+    background: #363f4f;
+}
+
+.trending_reviews_controls_ctn h1 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 20px;
+	line-height: 28px;
+	margin-block: 0px 15px;
+	margin-inline: 10px 0px;
+	color: #e7e7e8;
+}
+
+.trending_reviews_controls {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 10px 0 10px;
+	font-size: 14px;
+	color: #fff;
+	overflow: hidden;
+
+	height: 0;
+	opacity: 0;
+	transition: opacity 0.75s;
+}
+.show_advanced_controls .trending_reviews_controls {
+	height: auto;
+	opacity: 1;
+    line-height: 21px;
+}
+.trending_reviews_controls > div {
+	flex-grow: 1;
+	width: 32%;
+	min-width: 140px;
+	padding: 5px;
+}
+
+.trending_reviews_controls label {
+    color: #abb3bf;
+}
+
+.trending_reviews_control_header {
+    font-weight: 300;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.playtime_filter_controls {
+}
+
+.playtime_filter_slider_ctn {
+	height: 0;
+	opacity: 0;
+	margin-top: 5px;
+	transition: height 0.75s, opacity 0.75s;
+	overflow: hidden;
+}
+.playtime_filter_controls.custom_range .playtime_filter_slider_ctn {
+	height: auto;
+	opacity: 1;
+}
+
+#app_reviews_playtime_slider {
+	margin: 10px;
+	height: auto;
+	border: 2px solid #fff;
+	border-radius: 0px;
+	cursor: pointer;
+}
+
+#app_reviews_playtime_slider .ui-slider-range {
+
+}
+
+#app_reviews_playtime_slider .ui-slider-handle {
+	margin-top: -2px;
+	height: 14px;
+	width: 14px;
+	border-radius: 7px;
+	box-shadow: 0px 0px 4px 0px #000000;
+	border: none;
+	cursor: pointer;
+}
+#app_reviews_playtime_slider .ui-slider-handle.ui-state-hover {
+	background: #fff;
+}
+
+#app_reviews_playtime_slider .ui-widget-header {
+	background: #67c1f5;
+	height: 4px;
+	margin-top: -2px;
+}
+
+#app_reviews_playtime_range_text_min, #app_reviews_playtime_range_text_max {
+	font-weight: bold;
+}
+
+.hide_options label > input,
+.other_options label > input {
+	vertical-align: bottom;
+	top: -3px;
+	position: relative;
+	margin-inline-end: 5px;
+}
+
+.language_options > label > input {
+	margin-inline-end: 3px;
+}
+
+.trending_reviews_customize_language {
+	padding-top: 5px;
+}
+
+.save_preferences_ctn {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: height 0.75s, opacity 0.75s;
+}
+
+.show_advanced_controls .save_preferences_ctn {
+	margin-top: 20px;
+    margin-inline-start: 15px;
+	height: auto;
+	opacity: 1;
+}
+
+.save_preferences_desc {
+	color: #fff;
+	font-size: 14px;
+}
+
+.preferencesSavedCtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background: #29303d;
+    color: #fff;
+}
+
+#preferences_last_saved {
+    margin-inline-end: 12px;
+    color: #828997;
+}
+
+.bottomControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.using_saved_preferences {
+	color: #fff;
+	padding-inline-start: 15px;
+	transition: height 0.75s, opacity 0.75s;
+}
+
+.show_advanced_controls .using_saved_preferences {
+	opacity: 0;
+	height: 0;
+}
+
+.reviewed_app {
+	display: flex;
+	margin-bottom: 5px;
+	background-color: rgba(0,0,0,0.25);
+	overflow: hidden;
+	transition: transform 0.2s;
+	transform: scale(0);
+	width: 100%;
+}
+.reviewed_app.visible {
+	transform: scale(.97);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+.reviewed_app.visible:hover {
+	transform: scale(1.0);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+
+.reviewed_app > .ds_options {
+	inset-inline-end: 317px;
+}
+.reviewed_app:hover > .ds_options {
+	inset-inline-end: 323px;
+}
+
+.reviewed_app.appeared {
+}
+
+.reviewed_app .main_cap_discount {
+	bottom: 50px;
+}
+
+.reviewed_app .details {
+	position: relative;
+	flex-basis: 50%;
+}
+
+.reviewed_app .reviewed_app_media {
+	position: relative;
+	max-height: 346px;
+	background-color: #000;
+    border-start-start-radius: 3px;
+    border-end-start-radius: 3px;
+    overflow: hidden;
+}
+.reviewed_app .reviewed_app_image {
+	max-width: 616px;
+	max-height: 353px;
+	width: 100%;
+	position: relative;
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+.reviewed_app .reviewed_app_image.header_image_fallback {
+	height: 288px;
+}
+
+.reviewed_app .microtrailer_video {
+	position: absolute;
+	inset-inline-start: 0;
+	opacity: 0;
+	width: 100%;
+	height: auto;
+	transition: opacity 0.5s;
+}
+.reviewed_app:hover .microtrailer_video {
+	display: block;
+	top: 50%;
+	opacity: 1;
+	transform: translateY(-50%);
+}
+.reviewed_app.has_microtrailer:hover .reviewed_app_image {
+	opacity: 0;
+}
+
+.reviewed_app_small_image {
+	position: absolute;
+	bottom: 0px;
+	inset-inline-end: 0;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.reviewed_app.has_microtrailer:hover .reviewed_app_small_image {
+	opacity: 1;
+}
+
+.reviewed_app .right_col {
+	flex-basis: 50%;
+    background-image: radial-gradient(101% 168% at 1% 0%, #313D53 0%, #282E39 100%);
+    border-start-end-radius: 3px;
+    border-end-end-radius: 3px;
+	margin-inline-start: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewed_app:hover .right_col {
+    background-image: radial-gradient(101% 168% at 1% 0%, #33425d 0%, #373f4e 100%);
+}
+
+
+.reviewed_app .reviews {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+}
+
+.reviewed_app .paging_thumbs {
+	display: none;
+	position: relative;
+}
+.reviewed_app.has_multiple_reviews .paging_thumbs {
+	display: flex;
+	text-align: center;
+	z-index: 1;
+    border-top: 1px solid #16191d;
+	gap: 4px;
+	padding: 14px 20px;
+}
+.reviewed_app .paging_thumbs .num_reviews_desc {
+	line-height: 24px;
+	display: inline-block;
+	color: #b9d2ea;
+	width: 100%;
+	text-align: start;
+}
+
+/* Arrows */
+.reviewed_app .arrow {
+	display: inline-block;
+	line-height: 24px;
+	background-color: rgba(146, 181, 201, 0.2);
+	border: 1px transparent;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0px 16px;
+	color: #98b3c3;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+.reviewed_app .arrow.left {
+	/* margin-left: 20px; */
+}
+
+.reviewed_app .arrow.right {
+	/* margin-right: 20px; */
+}
+
+.reviewed_app .arrow:hover {
+	background-color: rgba(144, 181, 203, 0.4);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+	color: #fff;
+	text-decoration: none;
+}
+
+.review_box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	opacity: 0;
+	transition: opacity 400ms;
+	pointer-events: none;
+	padding: 20px;
+}
+.review_box.focus {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.review_box .author_block {
+	display: flex;
+	flex-direction: row;
+	font-size: 10px;
+	color: #8091a2;
+	position: absolute;
+	bottom: 14px;
+}
+
+.review_box .avatar {
+	margin-inline-end: 5px;
+}
+.review_box .avatar .playerAvatar {
+	width: 40px;
+	height: 40px;
+}
+.review_box .avatar .playerAvatar img {
+	width: 38px;
+	height: 38px;
+}
+
+.review_box .view_more {
+	text-align: center;
+	font-size: 12px;
+}
+.review_box .view_more a {
+    color: #a7b0b9;
+    background: #252a31;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+.review_box .view_more a:hover {
+	color: #fff;
+    background: #464f5d;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.review_box .persona_name {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 140px;
+	overflow: hidden;
+	margin-top: -2px;
+}
+.review_box .persona_name a {
+	color: #c1dbf4;
+	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.review_box .content {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 17px;
+	height: 210px;
+	color: #ebebeb;
+	overflow-wrap: break-word;
+	overflow: hidden;
+}
+.has_multiple_reviews .review_box .content {
+    height: 190px;
+}
+
+.reviewCopy::before {
+    content: "“";
+    font-size: 37px;
+    position: absolute;
+    inset-inline-start: 5px;
+    top: 8px;
+}
+.reviewCopy::after {
+    content: "”";
+    font-size: 37px;
+    line-height: 11px;
+    position: relative;
+    inset-inline-start: 5px;
+    top: 8px;
+}
+
+.tag_filter_controls {
+}
+.tag_filter_controls .trending_reviews_control_header {
+	margin-bottom: 5px;
+}
+.tag_filter_controls input[type="text"] {
+	width: 100%;
+}
+
+
+.tag_filter {
+	margin: 2px 2px;
+	display: inline-block;
+}
+
+.tag_filter > div {
+	display: inline-block;
+	line-height: 19px;
+	padding: 2px 7px;
+	color: #67c1f5;
+	background-color: #283b47;
+
+	margin-inline-end: 2px;
+	border-radius: 3px;
+
+	box-shadow: 1px 1px 0 0 #000000;
+
+	margin-bottom: 3px;
+}
+
+.tag_filter > div > div {
+	display: inline-block;
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: top;
+}
+
+.tag_filter > div > span {
+	display: inline-block;
+	cursor: pointer;
+	width: 12px;
+	height: 12px;
+	margin-block: 3px 4px;
+	margin-inline: 5px 0;
+	vertical-align: top;
+	background-image: url( '/public/images/v6/delete_search_term.png' );
+	margin-inline-start: 5px;
+}
+
+@media screen and (max-width: 910px)
+{
+    html.responsive .reviewed_app .details {
+        width: 100%;
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+	html.responsive .reviewed_app .reviewed_app_media {
+        width: 100%;
+	}
+
+    html.responsive .reviewed_app .right_col {
+        width: 100%;
+    }
+
+	html.responsive .reviewed_app .reviews {
+		width: auto;
+	}
+
+	html.responsive .review_box .content {
+		font-size: 12px;
+        height: fit-content;
+        margin-bottom: 8px;
+	}
+
+
+}
+@media screen and ( max-width: 700px )
+{
+    html.responsive .reviewed_app .reviews {
+        height: 200px;
+    }
+
+    html.responsive .reviewed_app.visible {
+        flex-direction: column;
+    }
+
+    html.responsive .review_box {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    html.responsive .reviewCopy::after {
+        line-height: 3px;
+
+    html.responsive .reviewed_app .reviews {
+        height: 166px;
+    }
+
+}
