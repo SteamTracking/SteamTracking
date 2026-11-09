@@ -24,6 +24,7 @@ type ClientAssets = Record<string, { href: string }[] | undefined>;
 export const ssrRequest = "SSR";
 
 const ssrUrlsPath = join(rootDir, ".support/urls_from_ssr.txt");
+const ssrRoutesPath = join(rootDir, "Random/SsrRoutes.txt");
 const cdn = "https://cdn.fastly.steamstatic.com";
 
 // pathPrefix is where the CDN serves the site's SSR files from.
@@ -79,9 +80,44 @@ export function HandleSsrPage(data: string, url: string): boolean {
 		}
 	}
 
+	AddSsrRoutes(data, url);
+
 	state.ssrPagesParsed++;
 
 	return true;
+}
+
+/**
+ * Collects the route table of the site, which every SSR page embeds.
+ */
+function AddSsrRoutes(data: string, url: string): void {
+	const match = /"manifest":\{"routes":(\[.+?\}\])/.exec(data);
+
+	if (match === null) {
+		throw new Error(`Failed to find SSR routes on ${url}`);
+	}
+
+	let routes: { regex: string }[];
+
+	try {
+		routes = JSON.parse(match[1]);
+	} catch {
+		throw new Error(`Failed to parse SSR routes on ${url}`);
+	}
+
+	const host = new URL(url).hostname;
+
+	state.ssrHostsParsed.add(host);
+
+	for (const route of routes) {
+		state.ssrRoutes.add(`${host} ${route.regex.replaceAll("\\/", "/")}`);
+	}
+}
+
+export async function WriteSsrRoutes(): Promise<void> {
+	const lines = [...state.ssrRoutes].toSorted();
+
+	await writeFile(ssrRoutesPath, `${lines.join("\n")}\n`);
 }
 
 /**

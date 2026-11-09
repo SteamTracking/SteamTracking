@@ -19,6 +19,9 @@ export const state = {
 	hashes: {} as Record<string, string>,
 	urlsToFetch: [] as UrlToFetch[],
 	currentSsrFiles: new Set<string>(),
+	ssrRoutes: new Set<string>(),
+	ssrHostsToParse: new Set<string>(),
+	ssrHostsParsed: new Set<string>(),
 	filesToFormat: new Set<string>(),
 	clientArchiveHashes: new Map<string, string>(),
 };

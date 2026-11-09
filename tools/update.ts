@@ -6,7 +6,7 @@ import { DumpUrls } from "./dump_javascript_urls.ts";
 import { ExtractClient } from "./extract_client.ts";
 import { FetchQueued, ParseUrls } from "./fetch_urls.ts";
 import { Log } from "./log.ts";
-import { DeleteOldSsrFiles, GenerateSsrUrls, ProcessSsrFiles, ssrRequest } from "./ssr.ts";
+import { DeleteOldSsrFiles, GenerateSsrUrls, ProcessSsrFiles, ssrRequest, WriteSsrRoutes } from "./ssr.ts";
 import { apiKey, rootDir, state, useCache } from "./state.ts";
 import { DeleteOldViteChunks, GenerateViteUrls, ProcessViteChunks, ReadViteUrls } from "./vite.ts";
 
@@ -47,10 +47,16 @@ async function Update(): Promise<void> {
 
 		if (file === ssrRequest) {
 			state.ssrPagesToParse++;
+			state.ssrHostsToParse.add(new URL(url).hostname);
 		}
 	}
 
 	await FetchListedUrls();
+
+	// Every SSR page of a site embeds the same routes, so one parsed page per site is enough
+	if (state.ssrHostsParsed.size === state.ssrHostsToParse.size) {
+		await WriteSsrRoutes();
+	}
 
 	if (state.updateViteUrls) {
 		await UpdateViteChunks(knownUrls);
