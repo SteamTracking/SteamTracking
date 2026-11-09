@@ -12,6 +12,9 @@ import { DeleteOldViteChunks, GenerateViteUrls, ProcessViteChunks, ReadViteUrls 
 
 const etagsPath = join(rootDir, ".support/etags.json");
 
+// Files are written directly into these folders, which do not exist in an empty tree.
+const outputDirs = [".support", "API", "ProtobufsWebui", "Strings", "Structs"];
+
 // A discovery round fetches what the previous round found, and the last round found nothing new.
 const maxDiscoveryRounds = 6;
 
@@ -24,7 +27,9 @@ async function Update(): Promise<void> {
 		return;
 	}
 
-	mkdirSync(join(rootDir, ".support"), { recursive: true });
+	for (const dir of outputDirs) {
+		mkdirSync(join(rootDir, dir), { recursive: true });
+	}
 
 	if (useCache && existsSync(etagsPath)) {
 		const { etags = {}, hashes = {} } = JSON.parse(readFileSync(etagsPath, "utf8"));
