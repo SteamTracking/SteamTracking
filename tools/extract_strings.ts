@@ -1,5 +1,3 @@
-import { readFile, writeFile } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
 import { latestEcmaVersion, parse } from "espree";
 import type { Expression, Identifier, Node, Program } from "estree";
 
@@ -80,7 +78,7 @@ export function ExtractStrings(code: string): Record<string, string> {
 }
 
 /**
- * Returns the strings as JSON with sorted keys, matching PHP's unescaped pretty print.
+ * Returns the strings as JSON with sorted keys and unescaped unicode.
  */
 export function FormatStrings(strings: Record<string, string>): string {
 	// Written by hand because integer-like keys would be reordered by a plain object
@@ -89,16 +87,4 @@ export function FormatStrings(strings: Record<string, string>): string {
 		.map((key) => `    ${JSON.stringify(key)}: ${JSON.stringify(strings[key])}`);
 
 	return "{\n" + lines.join(",\n") + "\n}\n";
-}
-
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-	if (process.argv.length < 4) {
-		console.error("Usage: node extract_strings.ts <input.js> <output.json>");
-		process.exit(1);
-	}
-
-	const code = await readFile(process.argv[2], "utf8");
-	const strings = ExtractStrings(code);
-
-	await writeFile(process.argv[3], FormatStrings(strings));
 }

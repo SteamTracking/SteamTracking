@@ -54,37 +54,8 @@ interface WebpackModuleParams {
 	requireParam?: string;
 }
 
-// Process command line arguments
-const inputFile = process.argv[2];
-if (!inputFile) {
-	console.error("Error: Input file path required");
-	process.exit(1);
-}
-
-const outputFile = process.argv[3]; // Optional
-
-// Read input file
-let sourceCode: string;
-try {
-	sourceCode = fs.readFileSync(inputFile, "utf8");
-} catch (err) {
-	console.error(`Error reading file: ${(err as Error).message}`);
-	process.exit(1);
-}
-
-// Parse the JavaScript code into an AST
-let ast: Program;
-try {
-	ast = ParseJavascript(sourceCode, { ecmaFeatures: { jsx: true } });
-} catch (err) {
-	console.error(`Failed to parse JavaScript: ${(err as Error).message}`);
-	process.exit(1);
-}
-
-const isSsrFile = inputFile.includes("/ssr/");
-
 // Normalize the AST
-function normalizeAst(ast: Program): Program {
+function normalizeAst(ast: Program, isSsrFile: boolean): Program {
 	// STEP 1: Normalize CLSTAMP if present
 	if (ast.type === Syntax.Program && ast.body.length > 0) {
 		const firstStmt = ast.body[0];
@@ -535,23 +506,21 @@ function normalizeHashedAsset(node: Node) {
 	}
 }
 
-// Normalize the AST and generate the output code
-const normalizedAst = normalizeAst(ast);
+export function GenerateCleanJs(inputFile: string, outputFile: string, isSsrFile: boolean): void {
+	const sourceCode = fs.readFileSync(inputFile, "utf8");
+	const ast = ParseJavascript(sourceCode, { ecmaFeatures: { jsx: true } });
+	const normalizedAst = normalizeAst(ast, isSsrFile);
 
-// Remove static import declarations from SSR files, after normalization all imports
-// are indistinguishable (import { _ } from "./chunk.js") and Vite reorders
-// them across builds, creating diff churn with no meaningful information
-if (isSsrFile) {
-	normalizedAst.body = normalizedAst.body.filter((node) => node.type !== Syntax.ImportDeclaration);
-}
+	// Remove static import declarations from SSR files, after normalization all imports
+	// are indistinguishable (import { _ } from "./chunk.js") and Vite reorders
+	// them across builds, creating diff churn with no meaningful information
+	if (isSsrFile) {
+		normalizedAst.body = normalizedAst.body.filter((node) => node.type !== Syntax.ImportDeclaration);
+	}
 
-const normalizedCode = generate(normalizedAst, {
-	indent: "  ",
-});
+	const normalizedCode = generate(normalizedAst, {
+		indent: "  ",
+	});
 
-if (outputFile) {
 	fs.writeFileSync(outputFile, normalizedCode);
-} else {
-	// Print to stdout
-	process.stdout.write(normalizedCode);
 }

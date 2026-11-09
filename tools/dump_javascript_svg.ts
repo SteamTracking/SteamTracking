@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readdirSync, rmSync } from "node:fs";
-import { readFile, writeFile } from "node:fs/promises";
+import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { readFile } from "node:fs/promises";
 import { resolve as pathResolve } from "node:path";
 import { Syntax, traverse } from "estraverse";
 import type {
@@ -22,8 +22,6 @@ import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.ts";
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
 const outputPath = pathResolve(rootDir, "Random/Images");
-
-const writtenFiles = new Set<string>();
 
 const svgKeyMap: Record<string, string> = {
 	ariaLabel: "aria-label",
@@ -60,94 +58,101 @@ const svgKeyMap: Record<string, string> = {
 	xlinkHref: "xlink:href",
 };
 
-mkdirSync(outputPath, { recursive: true });
+export async function DumpSvg(): Promise<void> {
+	const writtenFiles = new Set<string>();
 
-for (const file of await GetFilesToParse()) {
-	try {
-		const code = await readFile(file, "utf8");
+	mkdirSync(outputPath, { recursive: true });
 
-		if (!file.endsWith(".js")) {
-			continue;
+	for (const file of await GetFilesToParse()) {
+		try {
+			const code = await readFile(file, "utf8");
+
+			if (!file.endsWith(".js")) {
+				continue;
+			}
+
+			const ast = ParseJavascript(code, { loc: true });
+
+			traverse(ast, {
+				enter: function (node) {
+					if (node.type === Syntax.CallExpression) {
+						const call = node as CallExpression;
+						let calleeName: string | null = null;
+
+						if (call.callee?.type === Syntax.SequenceExpression) {
+							const expressions = (call.callee as SequenceExpression).expressions;
+							const last = expressions[expressions.length - 1];
+							if (last?.type === Syntax.MemberExpression) {
+								calleeName = ((last as MemberExpression).property as Identifier).name;
+							}
+						} else if (call.callee?.type === Syntax.MemberExpression) {
+							calleeName = ((call.callee as MemberExpression).property as Identifier).name;
+						}
+
+						const tagName = getLiteralValue(call.arguments?.[0]);
+
+						if (
+							(calleeName === "createElement" || calleeName === "jsx" || calleeName === "jsxs") &&
+							tagName === "svg"
+						) {
+							const svg = createSvgBody(call).end({ prettyPrint: true });
+							if (svg.length > 0) {
+								const content = Buffer.from(`${svg}\n`, "utf8");
+								OutputToFile(writtenFiles, "svg", content);
+							}
+
+							this.skip();
+							return;
+						}
+					}
+
+					const strValue = getLiteralValue(node);
+					if (typeof strValue === "string" && strValue.startsWith("data:image/")) {
+						const marker = ";base64,";
+						const commaIndex = strValue.indexOf(marker);
+						if (commaIndex === -1) {
+							return;
+						}
+
+						const header = strValue.substring(0, commaIndex);
+						const base64Data = strValue.substring(commaIndex + marker.length);
+
+						let extension: string;
+						if (header === "data:image/png") {
+							extension = "png";
+						} else if (header === "data:image/jpeg" || header === "data:image/jpg") {
+							extension = "jpg";
+						} else if (header === "data:image/gif") {
+							extension = "gif";
+						} else if (header === "data:image/webp") {
+							extension = "webp";
+						} else if (header === "data:image/svg+xml") {
+							extension = "svg";
+						} else {
+							console.warn(`Unknown data URI header: ${header}`);
+							return;
+						}
+
+						const data = Buffer.from(base64Data, "base64");
+						OutputToFile(writtenFiles, extension, data);
+					}
+				},
+			});
+		} catch (e) {
+			console.error(`Unable to parse "${file}": ${e}`);
 		}
-
-		const ast = ParseJavascript(code, { loc: true });
-
-		traverse(ast, {
-			enter: function (node) {
-				if (node.type === Syntax.CallExpression) {
-					const call = node as CallExpression;
-					let calleeName: string | null = null;
-
-					if (call.callee?.type === Syntax.SequenceExpression) {
-						const expressions = (call.callee as SequenceExpression).expressions;
-						const last = expressions[expressions.length - 1];
-						if (last?.type === Syntax.MemberExpression) {
-							calleeName = ((last as MemberExpression).property as Identifier).name;
-						}
-					} else if (call.callee?.type === Syntax.MemberExpression) {
-						calleeName = ((call.callee as MemberExpression).property as Identifier).name;
-					}
-
-					const tagName = getLiteralValue(call.arguments?.[0]);
-
-					if ((calleeName === "createElement" || calleeName === "jsx" || calleeName === "jsxs") && tagName === "svg") {
-						const svg = createSvgBody(call).end({ prettyPrint: true });
-						if (svg.length > 0) {
-							const content = Buffer.from(`${svg}\n`, "utf8");
-							OutputToFile("svg", content);
-						}
-
-						this.skip();
-						return;
-					}
-				}
-
-				const strValue = getLiteralValue(node);
-				if (typeof strValue === "string" && strValue.startsWith("data:image/")) {
-					const marker = ";base64,";
-					const commaIndex = strValue.indexOf(marker);
-					if (commaIndex === -1) {
-						return;
-					}
-
-					const header = strValue.substring(0, commaIndex);
-					const base64Data = strValue.substring(commaIndex + marker.length);
-
-					let extension: string;
-					if (header === "data:image/png") {
-						extension = "png";
-					} else if (header === "data:image/jpeg" || header === "data:image/jpg") {
-						extension = "jpg";
-					} else if (header === "data:image/gif") {
-						extension = "gif";
-					} else if (header === "data:image/webp") {
-						extension = "webp";
-					} else if (header === "data:image/svg+xml") {
-						extension = "svg";
-					} else {
-						console.warn(`Unknown data URI header: ${header}`);
-						return;
-					}
-
-					const data = Buffer.from(base64Data, "base64");
-					OutputToFile(extension, data);
-				}
-			},
-		});
-	} catch (e) {
-		console.error(`Unable to parse "${file}": ${e}`);
 	}
-}
 
-const allFiles = readdirSync(outputPath).map((f) => `${outputPath}/${f}`);
-for (const file of allFiles) {
-	if (!writtenFiles.has(file)) {
-		console.log("Removing unused file:", file);
-		rmSync(file);
+	const allFiles = readdirSync(outputPath).map((f) => `${outputPath}/${f}`);
+	for (const file of allFiles) {
+		if (!writtenFiles.has(file)) {
+			console.log("Removing unused file:", file);
+			rmSync(file);
+		}
 	}
-}
 
-console.log("Extracted", writtenFiles.size, "files.");
+	console.log("Extracted", writtenFiles.size, "files.");
+}
 
 function createSvgBody(node: CallExpression, xml: XMLBuilder = createXml()): XMLBuilder {
 	if (!node) {
@@ -216,7 +221,7 @@ function FixSVGKeyName(key: { name?: string; value?: string }): string {
 	return svgKeyMap[keyName] || keyName;
 }
 
-async function OutputToFile(extension: string, content: Buffer<ArrayBuffer>) {
+function OutputToFile(writtenFiles: Set<string>, extension: string, content: Buffer<ArrayBuffer>) {
 	if (content.length === 0) {
 		return;
 	}
@@ -231,7 +236,7 @@ async function OutputToFile(extension: string, content: Buffer<ArrayBuffer>) {
 
 	console.log("Writing file:", fileName);
 
-	await writeFile(fileName, content);
+	writeFileSync(fileName, content);
 }
 
 // fix for strings using a backquote ` instead of a double quote "

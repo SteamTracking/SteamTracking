@@ -1,9 +1,0 @@
-parameters:
-	level: max
-	checkExplicitMixed: false
-	checkFunctionNameCase: true
-	checkUnionTypes: false
-	reportMaybes: true
-	paths:
-		- tools
-		- update.php

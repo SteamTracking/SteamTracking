@@ -17,41 +17,43 @@ import { GetFilesToParse } from "./dump_javascript_paths.ts";
 
 const __dirname = import.meta.dirname;
 
-const allStrings = new Set<string>();
+export async function DumpUrls(): Promise<void> {
+	const allStrings = new Set<string>();
 
-for (const file of await GetFilesToParse()) {
-	try {
-		const code = await readFile(file, "utf8");
-		const ast = parse(code, {
-			ecmaVersion: latestEcmaVersion,
-			sourceType: "module",
-			loc: true,
-		}) as unknown as Program;
+	for (const file of await GetFilesToParse()) {
+		try {
+			const code = await readFile(file, "utf8");
+			const ast = parse(code, {
+				ecmaVersion: latestEcmaVersion,
+				sourceType: "module",
+				loc: true,
+			}) as unknown as Program;
 
-		traverse(ast, {
-			enter: function (node) {
-				if (node.type === Syntax.TemplateLiteral && (node as TemplateLiteral).expressions.some(IsBaseUrlExpression)) {
-					allStrings.add(ConstructLiteral(node as TemplateLiteral));
-					this.skip();
-				} else if (node.type === Syntax.Literal && IsBaseUrlExpression(node)) {
-					allStrings.add(FormatNode(node, true).join(""));
-					this.skip();
-				} else if (node.type === Syntax.BinaryExpression && IsLeftSideBaseUrlExpression(node as BinaryExpression)) {
-					allStrings.add(FormatNode(node, true).join(""));
-					this.skip();
-				}
-			},
-		});
-	} catch (e) {
-		console.error(`Unable to parse "${file}": ${e}`);
+			traverse(ast, {
+				enter: function (node) {
+					if (node.type === Syntax.TemplateLiteral && (node as TemplateLiteral).expressions.some(IsBaseUrlExpression)) {
+						allStrings.add(ConstructLiteral(node as TemplateLiteral));
+						this.skip();
+					} else if (node.type === Syntax.Literal && IsBaseUrlExpression(node)) {
+						allStrings.add(FormatNode(node, true).join(""));
+						this.skip();
+					} else if (node.type === Syntax.BinaryExpression && IsLeftSideBaseUrlExpression(node as BinaryExpression)) {
+						allStrings.add(FormatNode(node, true).join(""));
+						this.skip();
+					}
+				},
+			});
+		} catch (e) {
+			console.error(`Unable to parse "${file}": ${e}`);
+		}
 	}
+
+	console.log("Found", allStrings.size, "strings");
+
+	const strings = [...allStrings.values()].sort().join("\n") + "\n";
+
+	await writeFile(pathResolve(__dirname, "../API/JavascriptUrls.txt"), strings);
 }
-
-console.log("Found", allStrings.size, "strings");
-
-const strings = [...allStrings.values()].sort().join("\n") + "\n";
-
-await writeFile(pathResolve(__dirname, "../API/JavascriptUrls.txt"), strings);
 
 function IsLeftSideBaseUrlExpression(node: BinaryExpression): boolean {
 	return node.left.type === Syntax.BinaryExpression

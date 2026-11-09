@@ -114,168 +114,184 @@ type EsmImports = Map<string, EsmImport>;
 type ExportedIds = Map<string, Map<string, string>>;
 
 const outputPath = pathResolve(rootDir, "ProtobufsWebui/");
-const files = await GetFilesToParse();
 
 const NotImplemented = "NotImplemented";
 const NoResponse = "NoResponse";
 
-const allEnums: Enum[] = [];
-const allServices: Service[] = [];
-const allMessages: Message[] = [
-	{
-		className: NotImplemented,
-		dependants: new Set(),
-		fields: [],
-	},
-	{
-		className: NoResponse,
-		dependants: new Set(),
-		fields: [],
-	},
-];
+export async function DumpProtobufs(): Promise<void> {
+	const files = await GetFilesToParse();
+	const allEnums: Enum[] = [];
+	const allServices: Service[] = [];
+	const allMessages: Message[] = [
+		{
+			className: NotImplemented,
+			dependants: new Set(),
+			fields: [],
+		},
+		{
+			className: NoResponse,
+			dependants: new Set(),
+			fields: [],
+		},
+	];
 
-const globalModuleExportedMessages: ExportedIds = new Map();
+	const globalModuleExportedMessages: ExportedIds = new Map();
 
-console.log("Found", files.length, "files to parse");
+	console.log("Found", files.length, "files to parse");
 
-for (const file of files) {
-	try {
-		const code = await readFile(file, "utf8");
-		const ast = ParseJavascript(code, { loc: true });
+	for (const file of files) {
+		try {
+			const code = await readFile(file, "utf8");
+			const ast = ParseJavascript(code, { loc: true });
 
-		ReplaceStaticTemplateLiterals(ast);
+			ReplaceStaticTemplateLiterals(ast);
 
-		const crossModuleExportedMessages: ExportedIds = new Map();
-		const services: Service[] = [];
-		const messages: Message[] = [];
-		const enums: Enum[] = [];
+			const crossModuleExportedMessages: ExportedIds = new Map();
+			const services: Service[] = [];
+			const messages: Message[] = [];
+			const enums: Enum[] = [];
 
-		// ESM chunks (top-level `import`/`export` statements) go through a
-		// separate traversal. Webpack chunks contain their modules as Property
-		// nodes inside an object literal and still use the original path.
-		const isEsm = ast.body.some(
-			(node) =>
-				node.type === Syntax.ImportDeclaration ||
-				node.type === Syntax.ExportNamedDeclaration ||
-				node.type === Syntax.ExportDefaultDeclaration,
-		);
+			// ESM chunks (top-level `import`/`export` statements) go through a
+			// separate traversal. Webpack chunks contain their modules as Property
+			// nodes inside an object literal and still use the original path.
+			const isEsm = ast.body.some(
+				(node) =>
+					node.type === Syntax.ImportDeclaration ||
+					node.type === Syntax.ExportNamedDeclaration ||
+					node.type === Syntax.ExportDefaultDeclaration,
+			);
 
-		if (isEsm) {
-			const result = TraverseEsmModule(ast);
-			const currentModule = pathBasename(file);
+			if (isEsm) {
+				const result = TraverseEsmModule(ast);
+				const currentModule = pathBasename(file);
 
-			crossModuleExportedMessages.set(currentModule, result.exportedIds);
+				crossModuleExportedMessages.set(currentModule, result.exportedIds);
 
-			if (globalModuleExportedMessages.has(currentModule)) {
-				globalModuleExportedMessages.set(
-					currentModule,
-					new Map([...(globalModuleExportedMessages.get(currentModule) as Map<string, string>), ...result.exportedIds]),
-				);
+				if (globalModuleExportedMessages.has(currentModule)) {
+					globalModuleExportedMessages.set(
+						currentModule,
+						new Map([
+							...(globalModuleExportedMessages.get(currentModule) as Map<string, string>),
+							...result.exportedIds,
+						]),
+					);
+				} else {
+					globalModuleExportedMessages.set(currentModule, result.exportedIds);
+				}
+
+				FixTypesSameModule(result.services, result.messages);
+
+				services.push(...result.services);
+				messages.push(...result.messages);
+				enums.push(...result.enums);
 			} else {
-				globalModuleExportedMessages.set(currentModule, result.exportedIds);
-			}
+				traverse(ast, {
+					enter: function (node) {
+						if (node.type === Syntax.Property) {
+							this.skip();
 
-			FixTypesSameModule(result.services, result.messages);
-
-			services.push(...result.services);
-			messages.push(...result.messages);
-			enums.push(...result.enums);
-		} else {
-			traverse(ast, {
-				enter: function (node) {
-					if (node.type === Syntax.Property) {
-						this.skip();
-
-						/*
+							/*
 							oFam: function (e, r, t) {
 
 							or
 
 							24262: (e, t, r) => {
 						*/
-						if (
-							(node.value.type !== Syntax.ArrowFunctionExpression && node.value.type !== Syntax.FunctionExpression) ||
-							node.value.params.length !== 3
-						) {
-							// (module, module.exports, __webpack_require__)
-							return;
-						}
-
-						const result = TraverseModule(node.value, file);
-						let currentModule: string;
-
-						if (node.key.type === Syntax.Identifier) {
-							currentModule = node.key.name;
-						} else if (node.key.type === Syntax.Literal) {
-							currentModule = node.key.value as string;
-						} else {
-							throw new Error("Failed to find key name");
-						}
-
-						if (currentModule === "get" || currentModule === "set" || currentModule === "object") {
-							return;
-						}
-
-						if (crossModuleExportedMessages.has(currentModule)) {
-							// Plain (non-webpack) scripts can have object literals that reuse the same
-							// key with a 3-parameter function (e.g. `success: function (a, b, c)`).
-							// Only complain if this repeat actually looks like a webpack module.
 							if (
-								result.exportedIds.size > 0 ||
-								result.services.length > 0 ||
-								result.messages.length > 0 ||
-								result.enums.length > 0
+								(node.value.type !== Syntax.ArrowFunctionExpression && node.value.type !== Syntax.FunctionExpression) ||
+								node.value.params.length !== 3
 							) {
-								throw new Error(`Module already exported: ${currentModule}`);
+								// (module, module.exports, __webpack_require__)
+								return;
 							}
 
-							return;
+							const result = TraverseModule(node.value, file);
+							let currentModule: string;
+
+							if (node.key.type === Syntax.Identifier) {
+								currentModule = node.key.name;
+							} else if (node.key.type === Syntax.Literal) {
+								currentModule = node.key.value as string;
+							} else {
+								throw new Error("Failed to find key name");
+							}
+
+							if (currentModule === "get" || currentModule === "set" || currentModule === "object") {
+								return;
+							}
+
+							if (crossModuleExportedMessages.has(currentModule)) {
+								// Plain (non-webpack) scripts can have object literals that reuse the same
+								// key with a 3-parameter function (e.g. `success: function (a, b, c)`).
+								// Only complain if this repeat actually looks like a webpack module.
+								if (
+									result.exportedIds.size > 0 ||
+									result.services.length > 0 ||
+									result.messages.length > 0 ||
+									result.enums.length > 0
+								) {
+									throw new Error(`Module already exported: ${currentModule}`);
+								}
+
+								return;
+							}
+
+							crossModuleExportedMessages.set(currentModule, result.exportedIds);
+
+							if (globalModuleExportedMessages.has(currentModule)) {
+								globalModuleExportedMessages.set(
+									currentModule,
+									new Map([
+										...(globalModuleExportedMessages.get(currentModule) as Map<string, string>),
+										...result.exportedIds,
+									]),
+								);
+							} else {
+								globalModuleExportedMessages.set(currentModule, result.exportedIds);
+							}
+
+							// Look up field types from other messages in same module
+							FixTypesSameModule(result.services, result.messages);
+
+							services.push(...result.services);
+							messages.push(...result.messages);
+							enums.push(...result.enums);
 						}
+					},
+				});
+			}
 
-						crossModuleExportedMessages.set(currentModule, result.exportedIds);
+			FixTypesCrossModule(services, messages, crossModuleExportedMessages);
 
-						if (globalModuleExportedMessages.has(currentModule)) {
-							globalModuleExportedMessages.set(
-								currentModule,
-								new Map([
-									...(globalModuleExportedMessages.get(currentModule) as Map<string, string>),
-									...result.exportedIds,
-								]),
-							);
-						} else {
-							globalModuleExportedMessages.set(currentModule, result.exportedIds);
-						}
-
-						// Look up field types from other messages in same module
-						FixTypesSameModule(result.services, result.messages);
-
-						services.push(...result.services);
-						messages.push(...result.messages);
-						enums.push(...result.enums);
-					}
-				},
-			});
+			allServices.push(...services);
+			allMessages.push(...messages);
+			allEnums.push(...enums);
+		} catch (e) {
+			console.error(`Unable to parse "${file}":`, e);
 		}
-
-		FixTypesCrossModule(services, messages, crossModuleExportedMessages);
-
-		allServices.push(...services);
-		allMessages.push(...messages);
-		allEnums.push(...enums);
-	} catch (e) {
-		console.error(`Unable to parse "${file}":`, e);
 	}
+
+	FixTypesCrossModule(allServices, allMessages, globalModuleExportedMessages);
+
+	const mergedMessages = MergeMessages(allMessages);
+
+	console.log("Found", mergedMessages.size, "messages");
+
+	await OutputSplitServices(allServices, mergedMessages);
+	await OutputCommon(mergedMessages);
+	await OutputCommonBase();
+
+	const mergedEnums = MergeEnums(allEnums);
+
+	console.log("Found", mergedEnums.size, "enums");
+
+	const stream = createWriteStream(pathResolve(rootDir, "Structs/webui_enums.steamd"), {
+		flags: "w",
+		encoding: "utf8",
+	});
+	OutputEnums(mergedEnums, stream);
+	stream.end();
 }
-
-FixTypesCrossModule(allServices, allMessages, globalModuleExportedMessages);
-
-const mergedMessages = MergeMessages(allMessages);
-
-console.log("Found", mergedMessages.size, "messages");
-
-await OutputSplitServices(allServices, mergedMessages);
-await OutputCommon(mergedMessages);
-await OutputCommonBase();
 
 async function OutputSplitServices(allServices: Service[], mergedMessages: Map<string, Message>) {
 	const splitServices = SplitServices(allServices);
@@ -378,19 +394,6 @@ message NotImplemented {
 `;
 
 	await writeFile(pathJoin(outputPath, "common_base.proto"), base);
-}
-
-{
-	const mergedEnums = MergeEnums(allEnums);
-
-	console.log("Found", mergedEnums.size, "enums");
-
-	const stream = createWriteStream(pathResolve(rootDir, "Structs/webui_enums.steamd"), {
-		flags: "w",
-		encoding: "utf8",
-	});
-	OutputEnums(mergedEnums, stream);
-	stream.end();
 }
 
 function GetMatchingDependencyCount(services: ServiceWithMethods[], dependants: Set<string>) {

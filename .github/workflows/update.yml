@@ -36,11 +36,6 @@ jobs:
               submodules: true
               fetch-depth: 1
 
-          - name: Setup PHP
-            uses: shivammathur/setup-php@v2
-            with:
-              php-version: '8.5'
-
           - name: Setup Go
             uses: actions/setup-go@v6
             with:
@@ -99,7 +94,8 @@ jobs:
           BEFORE=$(git rev-parse HEAD)
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          bash update.sh ${{ inputs.force == true && 'force' || '' }}
+          node tools/update.ts ${{ inputs.force == true && 'force' || '' }}
+          node tools/commit.ts
           if [[ "$(git rev-parse HEAD)" != "$BEFORE" ]]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

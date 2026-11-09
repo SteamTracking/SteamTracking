@@ -2,16 +2,17 @@
 
 Tracks Steam web and client files over time. Keep diff noise per commit low.
 
-`update.sh` runs `update.php`, then commits and pushes. To test locally, run `php update.php` with `STEAM_API_KEY` set.
+`tools/update.ts` updates the files and `tools/commit.ts` commits and pushes. To test locally, run `node tools/update.ts` with `STEAM_API_KEY` set.
 
 Tools are TypeScript run directly by Node, with no build step. Format and lint `tools/` with `npm run fix`, type check with `npm test`. `npm run prettier` is for downloaded files.
 
 ## Update flow
 
-- `urls.txt` lists what `update.php` fetches.
-- `tools/generate_vite_urls.ts` finds chunks referenced by app JS under `applications/`. Fetching repeats until nothing new appears, and chunks no longer referenced are deleted.
-- `SSR @` pages and `tools/generate_ssr_urls.ts` find SSR bundles. Raw `ssr/` folders are ignored by git, only `c/` copies are tracked.
-- `tools/extract_client.php` unpacks client archives into `ClientExtracted/`.
+- `tools/update.ts` runs the steps in order. `urls.txt` lists what `tools/fetch_urls.ts` fetches.
+- `tools/handle_response.ts` validates and saves each response. A rejected response records no ETag, so it is fetched again.
+- `tools/vite.ts` finds chunks referenced by app JS under `applications/`. Fetching repeats until nothing new appears, and chunks no longer referenced are deleted.
+- `SSR @` pages and `tools/ssr.ts` find SSR bundles, and keep the list of SSR sites. Raw `ssr/` folders are ignored by git, only `c/` copies are tracked. Old SSR files are deleted only when every SSR page was parsed.
+- `tools/extract_client.ts` unpacks client archives into `ClientExtracted/`.
 - Dump tools write `ProtobufsWebui/`, `Structs/webui_enums.steamd`, `API/JavascriptUrls.txt` and `Random/Images/`. The image dump deletes output it no longer finds.
 
 ## Saved files
@@ -19,7 +20,7 @@ Tools are TypeScript run directly by Node, with no build step. Format and lint `
 - The four web apps (store, community, help, partner) are Vite builds. Dota 2, Counter-Strike, Deadlock and the client are webpack builds.
 - `contenthash` is stripped from saved files.
 - `c/` holds normalized JS. Do not mark it `linguist-generated`: its diffs are the ones to read.
-- English chunks under `applications/` are saved as sorted JSON. SSR English chunks merge into `Strings/*_ssr_english.json`. Web files in other languages are skipped; `ClientExtracted/` keeps them.
+- English chunks under `applications/` and `*_english-json.js` bundles are saved as JSON only. SSR English chunks merge into `Strings/*_ssr_english.json`. Web files in other languages are skipped; `ClientExtracted/` keeps them.
 - Binary file types must be listed in `.gitattributes`, because everything else is normalized to LF.
 
 ## urls.txt
