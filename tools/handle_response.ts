@@ -1,4 +1,3 @@
-import { execFileSync } from "node:child_process";
 import { createHash, hash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -6,6 +5,7 @@ import { unzipSync } from "fflate";
 import { EmptyObjectToArray, ExtractJsonFromWebpack } from "./extract_client.ts";
 import { ExtractStrings, FormatStrings } from "./extract_strings.ts";
 import { GenerateCleanJs } from "./generate_clean_js.ts";
+import { ExtractHermesStrings } from "./hermes.ts";
 import { Log } from "./log.ts";
 import { HandleSsrPage, IsSsrFile, ssrRequest } from "./ssr.ts";
 import { rootDir, state } from "./state.ts";
@@ -291,7 +291,6 @@ function HandleApk(body: Buffer): boolean {
 	Log("Dumping mobile app");
 
 	const bundleName = "assets/index.android.bundle";
-	const bundlePath = join(rootDir, ".support/archives/index.android.bundle");
 
 	mkdirSync(join(rootDir, ".support/archives"), { recursive: true });
 	writeFileSync(join(rootDir, apkFile), body);
@@ -300,15 +299,7 @@ function HandleApk(body: Buffer): boolean {
 	const bundle = files[bundleName];
 
 	if (bundle !== undefined) {
-		writeFileSync(bundlePath, bundle);
-
-		execFileSync(
-			"python3",
-			["tools/hermes.py", ".support/archives/index.android.bundle", "Random/SteamApkStrings.txt"],
-			{ cwd: rootDir, stdio: "inherit" },
-		);
-
-		unlinkSync(bundlePath);
+		writeFileSync(join(rootDir, "Random/SteamApkStrings.txt"), ExtractHermesStrings(bundle));
 	}
 
 	return true;

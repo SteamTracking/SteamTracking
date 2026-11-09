@@ -47,11 +47,6 @@ jobs:
             with:
               dotnet-version: '10.x'
 
-          - name: Setup Python
-            uses: actions/setup-python@v6
-            with:
-              python-version: '3.x'
-
       # The npm cache key is computed from package-lock.json
       - name: Setup Node.js
         uses: actions/setup-node@v6
