@@ -1,0 +1,226 @@
+.wfYLbgRuzK4- {
+  color: #fff;
+  padding: 3em 4em 2em;
+}
+.i9CeKv4zNtk- {
+  color: #fff;
+  padding: 0 4em 2em;
+}
+.NOWMI8171os- {
+  color: #000;
+  border-radius: 3px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+}
+.-xAyBNitkfo- {
+  color: #000;
+  border-radius: 3px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 48px;
+  max-width: 940px;
+  padding: 20px;
+  display: flex;
+}
+.vG92rKV06Vw- {
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+.mO3YucT2yhw- {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.mO3YucT2yhw- .-xAyBNitkfo- {
+  box-sizing: border-box;
+  width: 100%;
+}
+.lVVj5-spmMk- {
+  font-size: 20px;
+  font-weight: 500;
+  top: 150px;
+  right: 10px;
+}
+.Lz5T3nvQepQ- {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+._9oc5tWkKYVs- {
+  flex-grow: 1;
+  width: 100%;
+}
+.SsCA8NsKGRU- {
+  align-items: center;
+  max-width: 300px;
+  padding: 5px;
+  display: flex;
+}
+.lfxeePvcPHs- {
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  display: flex;
+}
+.lfxeePvcPHs- .knSZraHxQvo-,
+.lfxeePvcPHs- .SsCA8NsKGRU- {
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  display: flex;
+}
+.lfxeePvcPHs- .knSZraHxQvo- button,
+.lfxeePvcPHs- .SsCA8NsKGRU- button {
+  color: #fff;
+  background: #000;
+  border: 0;
+  border-radius: 24px;
+  width: fit-content;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4em;
+  transition: all 0.2s;
+}
+.lfxeePvcPHs- .knSZraHxQvo- button:before,
+.lfxeePvcPHs- .SsCA8NsKGRU- button:before {
+  box-shadow: 0 0 #0000;
+}
+.lfxeePvcPHs- .knSZraHxQvo- button:hover,
+.lfxeePvcPHs- .SsCA8NsKGRU- button:hover {
+  color: #fff;
+  filter: drop-shadow(0 2px 6px #00000059);
+  background: #2681da;
+  border-radius: 24px;
+}
+.QIW7X7GYiCg- {
+  background: #fff;
+}
+.m2d10Hp4TmU- {
+  text-align: center;
+  color: #fff;
+  background: #000;
+  border-radius: 3px;
+  width: 80%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+._3tH0MtNxFE8- {
+  max-width: 300px;
+}
+.lUpnXAlsAMY- {
+  color: #00000080;
+  text-align: center;
+  padding-bottom: 5px;
+  font-style: italic;
+}
+.zXK7Qx16r6Y- {
+  text-align: center;
+}
+.-MGOM22QVA8- {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.widtxMzYU9k- {
+  text-decoration: underline;
+}
+.widtxMzYU9k-:hover {
+  text-decoration: none;
+}
+.lfxeePvcPHs- .EPG94JgbbPw- button,
+.lfxeePvcPHs- .JcC4gm72eF0- button {
+  color: #555;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-decoration: underline;
+  background: unset !important;
+  display: flex !important;
+}
+.lfxeePvcPHs- .EPG94JgbbPw- button:before,
+.lfxeePvcPHs- .JcC4gm72eF0- button:before {
+  display: none;
+}
+.lfxeePvcPHs- .EPG94JgbbPw- button:hover,
+.lfxeePvcPHs- .JcC4gm72eF0- button:hover {
+  color: #000;
+}
+.lfxeePvcPHs- .EPG94JgbbPw- button:active,
+.lfxeePvcPHs- .JcC4gm72eF0- button:active {
+  box-shadow: none;
+}
+.lfxeePvcPHs- .EPG94JgbbPw- button svg,
+.lfxeePvcPHs- .JcC4gm72eF0- button svg {
+  width: 20px;
+  height: 20px;
+}
+[data-checkbox] {
+  --bg-default: white !important;
+  --bg-focus: white !important;
+  --border-color: #111 !important;
+  gap: 0 !important;
+}
+@media screen and (width <= 940px) {
+  .wfYLbgRuzK4-,
+  .i9CeKv4zNtk- {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+.m8TRNh1e3As- {
+  max-width: 450px;
+  position: relative;
+}
+.CxHAWKdNnYI- {
+  padding: 0 6px;
+  text-decoration: underline;
+}
+.ReservationExpectedDate .CxHAWKdNnYI- {
+  color: #000;
+}
+.CxHAWKdNnYI-:hover {
+  text-decoration: underline;
+}
+.aX8eDU3ZLpM-,
+.DmuYKD97aAo- {
+  background-color: #000;
+  max-width: 600px;
+  font-size: 14px;
+}
+.aX8eDU3ZLpM- .CxHAWKdNnYI-,
+.DmuYKD97aAo- .CxHAWKdNnYI- {
+  color: #cfcfcf;
+}
+.aX8eDU3ZLpM- .CxHAWKdNnYI-:hover,
+.DmuYKD97aAo- .CxHAWKdNnYI-:hover {
+  color: #fff;
+}
+._352VG05v3Cs- {
+  background-color: #ff69b4;
+}
+.X59ZcWQtAm4- tr {
+  background: #000;
+}
+._6Zo5eaJ9-rg- {
+  color: #000;
+}
+.Ge6Utmxhlt4- {
+  min-width: 500px;
+  min-height: 500px;
+}
+.xw68-Hgdak8- {
+  background: #000;
+  padding: 12px;
+}
+/*$vite$:1*/

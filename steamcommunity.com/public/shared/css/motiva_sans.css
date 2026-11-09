@@ -1,0 +1,78 @@
+/*
+ Font: 		Motiva Sans
+ URL: 		http://www.youworkforthem.com/product.php?sku=T2982
+ Foundry: 	Niramekko
+ Foundry: 	http://www.youworkforthem.com/designer/293/niramekko
+ Copyright:	Copyright  2011 by Rodrigo Saiani. All rights reserved.
+ Version: 	1.0
+ Created:	August 09, 2012
+ License: 	http://www.youworkforthem.com/font-license
+ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			 WebFont license rules. All other parties are strictly restricted
+			 from using the WebFonts(s) listed without a purchased license.
+			 All details above must always remain unaltered and visible in your CSS.
+ */
+
+@font-face {
+	font-family: 'Motiva Sans';
+	src: url('https://community.fastly.steamstatic.com/public/shared/fonts/MotivaSans-Regular.ttf?v=4.015') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Motiva Sans';
+	src: url('https://community.fastly.steamstatic.com/public/shared/fonts/MotivaSans-Light.ttf?v=4.015') format('truetype');
+	font-weight: 300; /* Light */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Motiva Sans';
+	src: url('https://community.fastly.steamstatic.com/public/shared/fonts/MotivaSans-Thin.ttf?v=4.015') format('truetype');
+	font-weight: 200; /* Ultra-Light / Thin */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Motiva Sans';
+	src: url('https://community.fastly.steamstatic.com/public/shared/fonts/MotivaSans-Medium.ttf?v=4.015') format('truetype');
+	font-weight: 500; /* Medium */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Motiva Sans';
+	src: url('https://community.fastly.steamstatic.com/public/shared/fonts/MotivaSans-Bold.ttf?v=4.015') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Motiva Sans';
+	src: url('https://community.fastly.steamstatic.com/public/shared/fonts/MotivaSans-RegularItalic.ttf?v=4.015') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Motiva Sans';
+	src: url('https://community.fastly.steamstatic.com/public/shared/fonts/MotivaSans-LightItalic.ttf?v=4.015') format('truetype');
+	font-weight: 300; /* Light */
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Motiva Sans';
+	src: url('https://community.fastly.steamstatic.com/public/shared/fonts/MotivaSans-BoldItalic.ttf?v=4.015') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Motiva Sans';
+	src: url('https://community.fastly.steamstatic.com/public/shared/fonts/MotivaSans-Black.ttf?v=4.015') format('truetype');
+	font-weight: 900; /* Black */
+	font-style: normal;
+}
+

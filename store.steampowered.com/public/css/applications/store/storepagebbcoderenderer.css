@@ -1,0 +1,72 @@
+.vNNhEahPBA0- {
+  background-color: var(--separator-color, var(--color-text-body-description));
+}
+.vNNhEahPBA0-[aria-orientation="horizontal"] {
+  width: var(--separator-length);
+  height: 1px;
+  min-height: 1px;
+}
+.vNNhEahPBA0-[aria-orientation="vertical"] {
+  height: var(--separator-length);
+  width: 1px;
+}
+.cG3Bl0aMLsI- {
+  --separator-length: var(--spacing-4);
+}
+.sTGfTmWlAtM- {
+  --separator-length: var(--spacing-6);
+}
+.SaUen44WwpY- {
+  --separator-length: var(--spacing-9);
+}
+.KZc7C2EnUyw- {
+  --separator-length: 100%;
+}
+.Ni6YiwQWBXM- .BB_Header2 {
+  color: #2f89bc;
+  text-transform: none;
+  letter-spacing: 0;
+  background-image: none;
+  margin-top: 18px;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+.GamepadMode .Ni6YiwQWBXM- .BB_Header2 {
+  margin-top: unset;
+  color: var(--gpStoreLighterGrey);
+  font: var(--gpText-BodyLarge);
+  font-weight: 700;
+}
+.Ni6YiwQWBXM- ul {
+  color: #acb2b8;
+  margin-inline-start: 16px;
+  padding-inline-start: 0;
+  list-style-type: square;
+}
+.GamepadMode .Ni6YiwQWBXM- ul {
+  color: unset;
+}
+.Ni6YiwQWBXM- ol {
+  color: #acb2b8;
+  margin-inline-start: 20px;
+  padding-inline-start: 0;
+}
+.GamepadMode .Ni6YiwQWBXM- ol {
+  color: unset;
+}
+.Ni6YiwQWBXM- ul li,
+.Ni6YiwQWBXM- ol li {
+  margin-bottom: 8px;
+}
+.GamepadMode .Ni6YiwQWBXM- a {
+  display: inline-flex;
+}
+.JH6u-fBBvEI-,
+.ebS1BwVurMY- {
+  max-width: 100%;
+}
+.GamepadMode .JH6u-fBBvEI-,
+.GamepadMode .ebS1BwVurMY- {
+  margin: 12px 0;
+}
+/*$vite$:1*/

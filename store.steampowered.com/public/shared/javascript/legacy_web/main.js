@@ -5,10 +5,10 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./webgamepadnavigation.js?contenthash=C096YUfn",
-      "./clientpostmessage.js?contenthash=KNDFkyqw",
-      "../../css/legacy_web/webgamepadnavigation.css?contenthash=DdLU0sAX",
-      "./desktopbridge.js?contenthash=Cdpq8p9l",
+      "./webgamepadnavigation.js",
+      "./clientpostmessage.js",
+      "../../css/legacy_web/webgamepadnavigation.css",
+      "./desktopbridge.js",
     ]),
 ) => i.map((i) => d[i]);
 
@@ -485,7 +485,7 @@ async function T(e) {
   let { InitializeGamepadNavigation: t } = await S(
     async () => {
       let { InitializeGamepadNavigation: e } = await import(
-        `./webgamepadnavigation.js?contenthash=C096YUfn`
+        `./webgamepadnavigation.js`
       );
       return { InitializeGamepadNavigation: e };
     },
@@ -497,9 +497,7 @@ async function T(e) {
 async function E() {
   let { InitializeForDesktop: e } = await S(
     async () => {
-      let { InitializeForDesktop: e } = await import(
-        `./desktopbridge.js?contenthash=Cdpq8p9l`
-      );
+      let { InitializeForDesktop: e } = await import(`./desktopbridge.js`);
       return { InitializeForDesktop: e };
     },
     __vite__mapDeps([3, 1]),

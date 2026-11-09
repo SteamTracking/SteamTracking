@@ -1,0 +1,44 @@
+html:has(dialog.egtbEvvs2Oc-[open]) {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+}
+.YAxuZ29pC9k- {
+  color: #acb2b8;
+  background: 0 0;
+  border: none;
+  outline: none;
+  max-width: calc(100% - 48px);
+  margin: auto;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  overflow: visible;
+  box-shadow: 0 8px 38px 5px #000000bf;
+}
+.YAxuZ29pC9k- :where(.u0AMI7eXw6w-) {
+  overscroll-behavior: contain;
+  background:
+    radial-gradient(circle at 0 0, #4a515c66 0%, #4b515c00 60%), #25282e;
+  overflow: auto;
+}
+.YAxuZ29pC9k- :where(.u0AMI7eXw6w-):before {
+  content: " ";
+  background: linear-gradient(90deg, #0cf, #36f);
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+.YAxuZ29pC9k-::backdrop {
+  background: #000c;
+}
+.fS9t6DH7Z-U- {
+  --border: 1px solid var(--color-dull-9);
+}
+.fS9t6DH7Z-U-.nu0EdzsNfaM- {
+  border-top: var(--border);
+}
+.fS9t6DH7Z-U-.Ti-54apdb-E- {
+  border-bottom: var(--border);
+}
+/*$vite$:1*/

@@ -1,3 +1,4 @@
+import "common.proto";
 import "common_base.proto";
 
 message CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request {
@@ -5,8 +6,8 @@ message CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request {
 	optional int32 sort = 2 [default = 1, (.description) = "enum"];
 	optional int32 clusters_to_return = 3;
 	optional int32 cluster_index = 4;
-	//optional UNKNOWN context = 10;
-	//optional UNKNOWN data_request = 11;
+	optional .StoreBrowseContext context = 10;
+	optional .StoreBrowseItemDataRequest data_request = 11;
 }
 
 message CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response {
@@ -20,14 +21,14 @@ message CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response_Cluster {
 	optional uint32 last_played = 4;
 	repeated int32 played_appids = 5;
 	repeated int32 similar_items_appids = 6;
-	//repeated UNKNOWN similar_items = 7;
+	repeated .StoreItem similar_items = 7;
 	optional double similar_item_popularity_score = 8;
 }
 
 message CStoreAppSimilarity_PrioritizeAppsForUser_Request {
 	optional fixed64 steamid = 1;
 	optional string country_code = 2;
-	//repeated UNKNOWN ids = 3;
+	repeated .StoreItemID ids = 3;
 	optional .StoreAppSimilarityPriorityOptions options = 4;
 	optional bool debug = 5;
 	optional bool include_owned_games = 6;
@@ -38,7 +39,7 @@ message CStoreAppSimilarity_PrioritizeAppsForUser_Response {
 }
 
 message CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem {
-	//optional UNKNOWN id = 1;
+	optional .StoreItemID id = 1;
 	optional bool already_owned = 2;
 	optional double weight = 3;
 	optional double weight_before_dedupe = 4;

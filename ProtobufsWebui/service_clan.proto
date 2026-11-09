@@ -46,6 +46,22 @@ message CClan_GetPartnerEventsByBuildIDRange_Response_PatchNotesDesc {
 	optional uint32 clan_account_id = 5;
 }
 
+message CClan_GetPartnerEventSummaries_Request {
+	optional fixed64 steamid = 1;
+	repeated .CClan_GetPartnerEventSummaries_Request_Event events = 2;
+	optional uint32 language = 3;
+}
+
+message CClan_GetPartnerEventSummaries_Request_Event {
+	optional uint32 clan_accountid = 1;
+	optional fixed64 clan_event_gid = 2;
+	optional fixed64 announcement_gid = 3;
+}
+
+message CClan_GetPartnerEventSummaries_Response {
+	repeated .CPartnerEventSummary summaries = 1;
+}
+
 message CClan_RespondToClanInvite_Request {
 	optional fixed64 steamid = 1;
 	optional bool accept = 2;
@@ -54,11 +70,38 @@ message CClan_RespondToClanInvite_Request {
 message CClan_RespondToClanInvite_Response {
 }
 
+message CPartnerEventSummary {
+	optional uint32 clan_accountid = 1;
+	optional fixed64 clan_event_gid = 2;
+	optional fixed64 announcement_gid = 3;
+	optional uint32 appid = 4;
+	optional int32 event_type = 5 [(.description) = "enum"];
+	repeated string tags = 6;
+	optional uint32 rtime32_start_time = 7;
+	optional uint32 rtime32_end_time = 8;
+	optional uint32 rtime32_visibility_start = 9;
+	optional uint32 rtime32_visibility_end = 10;
+	optional string event_name = 11;
+	optional string subtitle = 12;
+	optional string summary = 13;
+	optional .CPartnerEventSummary_Image capsule_image = 14;
+	optional string store_path = 15;
+	optional uint32 rtime32_post_time = 20;
+}
+
+message CPartnerEventSummary_Image {
+	optional string image = 1;
+	optional uint32 language = 2;
+	optional bool from_body = 3;
+}
+
 service Clan {
 	// bConstMethod=true, ePrivilege=1
 	rpc GetDraftAndRecentPartnerEventSnippet (.CClan_GetDraftAndRecentPartnerEventSnippet_Request) returns (.CClan_GetDraftAndRecentPartnerEventSnippet_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPartnerEventsByBuildIDRange (.CClan_GetPartnerEventsByBuildIDRange_Request) returns (.CClan_GetPartnerEventsByBuildIDRange_Response);
+	// ePrivilege=2, rgBrowserAPISites=ArrayExpression
+	rpc GetPartnerEventSummaries (.CClan_GetPartnerEventSummaries_Request) returns (.CClan_GetPartnerEventSummaries_Response);
 	// ePrivilege=1
 	rpc RespondToClanInvite (.CClan_RespondToClanInvite_Request) returns (.CClan_RespondToClanInvite_Response);
 }

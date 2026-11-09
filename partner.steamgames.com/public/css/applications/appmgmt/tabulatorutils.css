@@ -1,0 +1,40 @@
+.-x0pInEBhX4- {
+  --radio-size: calc(var(--spacing-2) + var(--spacing-1));
+  --bg-default: var(--color-dull-8);
+  --bg-focus: var(--color-dull-9);
+  --bg-disabled: rgb(from var(--bg-focus) r g b / 50%);
+  --background-color: var(--bg-default);
+}
+.-x0pInEBhX4-:hover:not([aria-checked="true"]):not(.EynJrG05Wqc-) {
+  --background-color: var(--bg-focus);
+}
+.-x0pInEBhX4-:disabled,
+.-x0pInEBhX4-.EynJrG05Wqc- {
+  --background-color: var(--bg-disabled);
+}
+.-x0pInEBhX4-:focus-visible,
+.-x0pInEBhX4-.gpfocus {
+  outline: none;
+}
+.-x0pInEBhX4-:focus-visible .KYFjrdxYAEg-,
+.-x0pInEBhX4-.gpfocus .KYFjrdxYAEg- {
+  outline: 2px solid #fff;
+}
+.-x0pInEBhX4- .KYFjrdxYAEg- {
+  background-color: var(--background-color);
+  width: var(--radio-size);
+  min-width: var(--radio-size);
+  height: var(--radio-size);
+  min-height: var(--radio-size);
+  border-radius: var(--radio-size);
+  margin-top: 2px;
+  position: relative;
+}
+.-x0pInEBhX4-[aria-checked="true"] .KYFjrdxYAEg-:after {
+  content: "";
+  background-color: var(--color-accent-8);
+  border-radius: var(--radio-size);
+  position: absolute;
+  inset: 2px;
+}
+/*$vite$:1*/

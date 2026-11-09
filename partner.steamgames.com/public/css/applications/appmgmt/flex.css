@@ -1,0 +1,33 @@
+:where(._3HgSSqEdwS4-) {
+  box-sizing: border-box;
+  display: block;
+}
+:where(.PmISXgz3FoQ-) {
+  box-sizing: border-box;
+  display: flex;
+}
+.Bj8vGJI7AGo- {
+  flex-direction: var(--direction);
+}
+._2AVS3LuARvU- {
+  justify-content: var(--justify);
+}
+.rC6xro2ZWbk- {
+  align-items: var(--align);
+}
+.oln6i1TGpO0- {
+  gap: var(--gap);
+}
+.xTWnfrOQ1MU- {
+  column-gap: var(--gap-x);
+}
+.h31r9FtdgH0- {
+  row-gap: var(--gap-y);
+}
+.AwByPYmuf2E- {
+  flex-wrap: var(--wrap);
+}
+.rPm-B0T-Plk- {
+  display: inline-flex;
+}
+/*$vite$:1*/

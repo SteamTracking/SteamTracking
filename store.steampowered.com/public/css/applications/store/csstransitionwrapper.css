@@ -1,0 +1,41 @@
+.b70IXFNJqco- {
+  text-indent: -9999em;
+  border: 1.1em solid #fff3;
+  border-left-color: #fff;
+  border-radius: 50%;
+  margin: auto;
+  font-size: 10px;
+  animation: 1.1s linear infinite _2VCJTPg9K0A-;
+  position: relative;
+  transform: translateZ(0);
+}
+.b70IXFNJqco-._1aSjKS0YPT0- {
+  border-width: 0.3em;
+  width: 3em;
+  min-width: 3em;
+  height: 3em;
+  min-height: 3em;
+}
+.b70IXFNJqco-.zKPudkXmNc8- {
+  border-width: 0.4em;
+  width: 6em;
+  min-width: 6em;
+  height: 6em;
+  min-height: 6em;
+}
+.b70IXFNJqco-._7O6Q-wUbKJ4- {
+  border-width: 1.1em;
+  width: 10em;
+  min-width: 10em;
+  height: 10em;
+  min-height: 10em;
+}
+@keyframes _2VCJTPg9K0A- {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*$vite$:1*/

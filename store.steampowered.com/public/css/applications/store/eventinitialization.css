@@ -1,0 +1,247 @@
+.wKSQT4ZMQNA- {
+  z-index: 2;
+  background: radial-gradient(at 100% 0, #949494, #414141);
+  border-radius: 2px;
+  display: flex;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 3px #000000e6;
+}
+.BasicUI .wKSQT4ZMQNA- {
+  display: none;
+}
+.wKSQT4ZMQNA- svg {
+  fill: #fff;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  display: block;
+}
+.wKSQT4ZMQNA- .NQcSXUQ7jyY- {
+  color: #0000;
+  width: 0;
+  height: 0;
+  padding: 7px 0;
+  font-size: 13px;
+  transition: padding-right 0.2s ease-out;
+}
+.wKSQT4ZMQNA- .NQcSXUQ7jyY-.ijKnSJ3VcqM- {
+  filter: opacity(50%);
+}
+html.touch .wKSQT4ZMQNA- .NQcSXUQ7jyY-,
+.wKSQT4ZMQNA-:hover .NQcSXUQ7jyY- {
+  color: #fff;
+  text-shadow: 0 0 3px #000000e6;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  padding-right: 8px;
+}
+@media screen and (width <= 700px) {
+  html.touch .wKSQT4ZMQNA- .NQcSXUQ7jyY-,
+  .wKSQT4ZMQNA-:hover .NQcSXUQ7jyY- {
+    display: none;
+  }
+}
+._8XhS5eUF7W0- {
+  width: fit-content;
+  max-height: 32px;
+  box-shadow: none;
+  color: #0e141b;
+  right: unset;
+  background: #fff;
+  border-radius: 28px;
+  padding: 8px 12px;
+  transition: all 0.2s ease-out;
+  display: inline-flex;
+  position: relative;
+}
+._8XhS5eUF7W0- .FollowButton {
+  text-shadow: none;
+  color: #0e141b;
+  box-shadow: none;
+  background: #fff;
+  font-weight: 600;
+}
+._8XhS5eUF7W0- .FollowBtnText {
+  font-size: 14px;
+}
+._8XhS5eUF7W0- .SVGIcon_Check {
+  stroke: #000;
+}
+._8XhS5eUF7W0-:hover .FollowButton {
+  box-shadow: none;
+  color: #0e141b;
+  background: 0 0;
+}
+._8XhS5eUF7W0-.Cc5dEagASNE- {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px #0b1b2933;
+}
+.QDlDPfR3f5M- {
+  scrollbar-gutter: stable;
+  overflow: hidden !important;
+}
+@media screen and (width <= 730px) {
+  .QDlDPfR3f5M- {
+    scrollbar-gutter: initial;
+  }
+}
+.FClDTpQrpCc- {
+  width: auto;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+}
+.MYmTqhwexFc- {
+  color: #0e141b;
+  max-height: 34px;
+  box-shadow: none;
+  background: #fff;
+  border-radius: 28px;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 12px;
+  display: inline-flex;
+  position: relative;
+  inset-inline-end: unset;
+  overflow: hidden;
+}
+.BasicUI .MYmTqhwexFc- {
+  display: inline-flex;
+}
+.FClDTpQrpCc-:hover .MYmTqhwexFc- {
+  z-index: 10;
+  width: max-content;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: visible;
+  transform: translate(-50%);
+  box-shadow: 0 6px 12px #0b1b2933;
+}
+html.responsive.touch .FClDTpQrpCc-:hover .MYmTqhwexFc- {
+  left: unset;
+  transform: unset;
+  position: relative;
+}
+@media screen and (width <= 910px) {
+  html.responsive .FClDTpQrpCc-:hover .MYmTqhwexFc- {
+    left: unset;
+    transform: unset;
+    position: relative;
+  }
+}
+.FClDTpQrpCc-:hover .MYmTqhwexFc- .WishlistButtonText {
+  text-shadow: none;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  color: #0e141b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.BasicUI .MYmTqhwexFc- .WishlistButtonText,
+html.responsive.touch .MYmTqhwexFc- .WishlistButtonText {
+  text-wrap: nowrap;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  text-shadow: none !important;
+  color: #0e141b !important;
+}
+@media screen and (width <= 910px) {
+  html.responsive .MYmTqhwexFc- .WishlistButtonText {
+    text-wrap: nowrap;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-shadow: none !important;
+    color: #0e141b !important;
+  }
+}
+.XJDpqo3kSV4- {
+  width: fit-content;
+  max-height: 32px;
+  box-shadow: none;
+  color: #0e141b;
+  right: unset;
+  background: #fff;
+  border-radius: 28px;
+  justify-self: center;
+  padding: 8px 12px;
+  transition: all 0.2s ease-out;
+  position: relative;
+}
+.XJDpqo3kSV4-:hover {
+  box-shadow: 0 6px 12px #0b1b2933;
+}
+.XJDpqo3kSV4-:hover .FollowGameButton {
+  text-shadow: none;
+  color: #0e141b;
+  font-weight: 600;
+}
+.PrWjrQm2y8g- {
+  background: radial-gradient(
+    100% 80% at 64% 95%,
+    #6c778666 40%,
+    #53686866 100%
+  );
+  border-radius: 4px;
+  padding: 16px;
+}
+.baDBPeinwws- {
+  position: relative;
+}
+.YnCoxa3m5cw- {
+  border-bottom: 1px solid #ffffff4d;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+.YnCoxa3m5cw- .aOXiLwSp1Xc- {
+  color: #fff;
+  background: #ffffff1a;
+  border-radius: 2px;
+  width: 62px;
+  padding-left: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+.YnCoxa3m5cw- .pnbvcAjswZk- {
+  margin-left: 8px;
+  font-size: 16px;
+  display: inline;
+}
+.xY-AG4Vtjr0- {
+  position: relative;
+}
+.Yb8JolxIPe0- {
+  color: #80caff;
+  border-bottom: 1px solid #ffffff4d;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  line-height: 37px;
+  display: flex;
+}
+.-Q8aSdniAKw- {
+  margin-right: 8px;
+  display: inline;
+}
+.-Q8aSdniAKw- ._4V6epCns4jI- {
+  background: #ffffff1a;
+  border-radius: 2px;
+  width: 62px;
+  padding-left: 14px;
+  display: inline-block;
+}
+.-Q8aSdniAKw- .EVJMTmpF-Vc- {
+  margin-left: 8px;
+  display: inline;
+}
+/*$vite$:1*/

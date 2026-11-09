@@ -280,6 +280,36 @@ message CEcon_GetAssetClassProperties_Response_Property {
 	optional bool instance = 3;
 }
 
+message CEcon_GetAssetPrices_Request {
+	optional uint32 appid = 1;
+	optional string currency = 2;
+	optional string language = 3;
+	repeated .CEcon_GetAssetPrices_Request_AssetClassProperty asset_class_properties = 4;
+}
+
+message CEcon_GetAssetPrices_Request_AssetClassProperty {
+	optional string name = 1;
+	optional string value = 2;
+}
+
+message CEcon_GetAssetPrices_Response {
+	repeated .CEcon_GetAssetPrices_Response_Asset assets = 1;
+}
+
+message CEcon_GetAssetPrices_Response_Asset {
+	optional string name = 1;
+	repeated .CEcon_GetAssetPrices_Response_Price prices = 2;
+	repeated .CEcon_GetAssetPrices_Response_Price original_prices = 3;
+	optional uint64 classid = 4;
+	optional uint64 instanceid = 5;
+	repeated string tags = 6;
+}
+
+message CEcon_GetAssetPrices_Response_Price {
+	optional string currency = 1;
+	optional int64 amount = 2;
+}
+
 message CEcon_GetAssetPropertySchema_Request {
 	optional uint32 appid = 1;
 	optional string language = 2;
@@ -382,6 +412,27 @@ message CEcon_GetInventoryItemsWithDescriptions_Response {
 	optional uint64 last_assetid = 5;
 	optional uint32 total_inventory_count = 6;
 	repeated .CEconItem_AssetProperties asset_properties = 7;
+}
+
+message CEcon_GetItemShopItems_Request {
+	optional uint32 appid = 1;
+	optional string language = 2;
+	optional string country_code = 3;
+	optional bool show_featured = 4;
+	optional uint32 count = 5 [default = 5];
+	optional uint32 realm = 6;
+}
+
+message CEcon_GetItemShopItems_Response {
+	repeated .CEcon_GetItemShopItems_Response_Item items = 1;
+	optional uint32 total_count = 2;
+}
+
+message CEcon_GetItemShopItems_Response_Item {
+	optional uint64 itemdefid = 1;
+	optional string name = 2;
+	optional string formatted_price = 3;
+	optional string icon_url = 4;
 }
 
 message CEcon_GetItemShopPartnerToken_Request {
@@ -927,6 +978,8 @@ service Econ {
 	rpc GetAssetClassInfoInternal (.CEcon_GetAssetClassInfo_Request) returns (.CEcon_GetAssetClassInfo_Response);
 	// ePrivilege=0
 	rpc GetAssetClassProperties (.CEcon_GetAssetClassProperties_Request) returns (.CEcon_GetAssetClassProperties_Response);
+	// bConstMethod=true, ePrivilege=0
+	rpc GetAssetPrices (.CEcon_GetAssetPrices_Request) returns (.CEcon_GetAssetPrices_Response);
 	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetAssetPropertySchema (.CEcon_GetAssetPropertySchema_Request) returns (.CEcon_GetAssetPropertySchema_Response);
 	// ePrivilege=7
@@ -937,6 +990,8 @@ service Econ {
 	rpc GetEligibleOneOffRefunds (.CEcon_GetEligibleOneOffRefunds_Request) returns (.CEcon_GetEligibleOneOffRefunds_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetInventoryItemsWithDescriptions (.CEcon_GetInventoryItemsWithDescriptions_Request) returns (.CEcon_GetInventoryItemsWithDescriptions_Response);
+	// bConstMethod=true, ePrivilege=1
+	rpc GetItemShopItems (.CEcon_GetItemShopItems_Request) returns (.CEcon_GetItemShopItems_Response);
 	// ePrivilege=0
 	rpc GetItemShopPartnerToken (.CEcon_GetItemShopPartnerToken_Request) returns (.CEcon_GetItemShopPartnerToken_Response);
 	// ePrivilege=2

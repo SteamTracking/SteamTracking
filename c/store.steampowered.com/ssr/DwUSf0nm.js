@@ -3,11 +3,11 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./assets/BGNw32Xm.css",
-      "./assets/WYH7fRa0.css",
-      "./assets/BNoGfLec.css",
-      "./assets/pjcnHITE.css",
-      "./assets/BoKFlOZe.css",
+      "./assets/chunk.css",
+      "./assets/chunk.css",
+      "./assets/chunk.css",
+      "./assets/chunk.css",
+      "./assets/chunk.css",
     ]),
 ) => _.map((_) => _[_]);
 var _ = _(_(), 1),
@@ -159,38 +159,38 @@ var _ = `X-UKhqf-Moc-`,
   _ = `XYfgXgWUac8-`,
   _ = `_7ykpxZ0stGM-`,
   _ = {};
-(_.arabic = () => _(() => import(`./CbFc4X49.js`), [], import.meta.url)),
-  (_.brazilian = () => _(() => import(`./BNtqV-9t.js`), [], import.meta.url)),
-  (_.bulgarian = () => _(() => import(`./dKe-nwo_.js`), [], import.meta.url)),
-  (_.czech = () => _(() => import(`./sEI114Gg.js`), [], import.meta.url)),
-  (_.danish = () => _(() => import(`./Dtyk78_A.js`), [], import.meta.url)),
-  (_.dutch = () => _(() => import(`./C4NTkSj8.js`), [], import.meta.url)),
-  (_.english = () => _(() => import(`./B9Sfz8a6.js`), [], import.meta.url)),
-  (_.finnish = () => _(() => import(`./oacA_2k-.js`), [], import.meta.url)),
-  (_.french = () => _(() => import(`./D-xzU_ri.js`), [], import.meta.url)),
-  (_.german = () => _(() => import(`./BeFe8IYW.js`), [], import.meta.url)),
-  (_.greek = () => _(() => import(`./CobHqX7M.js`), [], import.meta.url)),
-  (_.hungarian = () => _(() => import(`./B5UNNs4d.js`), [], import.meta.url)),
-  (_.indonesian = () => _(() => import(`./DEwAOel-.js`), [], import.meta.url)),
-  (_.italian = () => _(() => import(`./DcyvSHOJ.js`), [], import.meta.url)),
-  (_.japanese = () => _(() => import(`./BdF_OyiE.js`), [], import.meta.url)),
-  (_.koreana = () => _(() => import(`./f_KtEiWH.js`), [], import.meta.url)),
-  (_.latam = () => _(() => import(`./CSFB3M9t.js`), [], import.meta.url)),
-  (_.malay = () => _(() => import(`./7olx0lv_.js`), [], import.meta.url)),
-  (_.norwegian = () => _(() => import(`./C6Yk6Zf2.js`), [], import.meta.url)),
-  (_.polish = () => _(() => import(`./CD243SA_.js`), [], import.meta.url)),
-  (_.portuguese = () => _(() => import(`./D_RB244w.js`), [], import.meta.url)),
-  (_.romanian = () => _(() => import(`./-vgmGXNA.js`), [], import.meta.url)),
-  (_.russian = () => _(() => import(`./mxjwTvUf.js`), [], import.meta.url)),
-  (_.sc_schinese = () => _(() => import(`./nWAGPzW_.js`), [], import.meta.url)),
-  (_.schinese = () => _(() => import(`./DKWXDvzj.js`), [], import.meta.url)),
-  (_.spanish = () => _(() => import(`./DhMa-8mX.js`), [], import.meta.url)),
-  (_.swedish = () => _(() => import(`./BRw-3QHK.js`), [], import.meta.url)),
-  (_.tchinese = () => _(() => import(`./BKKDA6hc.js`), [], import.meta.url)),
-  (_.thai = () => _(() => import(`./DVyUiQZm.js`), [], import.meta.url)),
-  (_.turkish = () => _(() => import(`./DxETk0a-.js`), [], import.meta.url)),
-  (_.ukrainian = () => _(() => import(`./D0_wGiUk.js`), [], import.meta.url)),
-  (_.vietnamese = () => _(() => import(`./DT8WdHVI.js`), [], import.meta.url));
+(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.danish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.dutch = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.english = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.finnish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.french = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.german = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.greek = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.hungarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.indonesian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.italian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.japanese = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.koreana = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.latam = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.malay = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.norwegian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.polish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.portuguese = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.romanian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.russian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.sc_schinese = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.schinese = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.spanish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.swedish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.tchinese = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -332,9 +332,7 @@ function _(_) {
                     (
                       await _(
                         async () => {
-                          let { GreenEnvelope: _ } = await import(
-                            `./DoAsnO9k.js`
-                          );
+                          let { GreenEnvelope: _ } = await import(`./chunk.js`);
                           return {
                             GreenEnvelope: _,
                           };
@@ -973,7 +971,7 @@ function _(_) {
                         await _(
                           async () => {
                             let { GreenEnvelope: _ } = await import(
-                              `./DoAsnO9k.js`
+                              `./chunk.js`
                             );
                             return {
                               GreenEnvelope: _,

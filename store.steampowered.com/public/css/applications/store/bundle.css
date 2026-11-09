@@ -1,0 +1,123 @@
+.oFLuLZpxn4k- {
+  color: #a4d007;
+  background-color: #4c6b22;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 6px;
+  font-size: 14px;
+  display: flex;
+}
+.oFLuLZpxn4k-:dir(rtl) {
+  direction: ltr;
+}
+body.v6.rewards {
+  background-color: #161a1f;
+}
+body.v6.rewards .ModalPosition {
+  overflow-y: auto;
+}
+body.v6.rewards .ModalPosition_Content {
+  min-height: none;
+}
+body.v6.rewards {
+  -webkit-overflow-scrolling: touch;
+}
+body.v6.rewards .responsive_page_template_content {
+  padding-bottom: 0 !important;
+}
+.KQyLZHLXSX4- {
+  z-index: 12;
+  box-sizing: border-box;
+  user-select: none;
+  background-color: #1e232e;
+  width: 100%;
+  min-height: 51px;
+}
+.KQyLZHLXSX4- .KAiDcgl-pMY- {
+  max-width: 988px;
+  margin: 0 auto;
+}
+.KQyLZHLXSX4- .ijv3bTSrHWA- {
+  letter-spacing: 0.1em;
+}
+.DLODopAqfYc- {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #d9d9d9;
+  padding-inline-start: 20px;
+  font-size: 18px;
+  font-weight: 900;
+}
+.js41FRLDWNQ- {
+  color: #c5cbd8;
+  letter-spacing: 0;
+  font-family:
+    Motiva Sans,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+.js41FRLDWNQ- a {
+  color: #c5cbd8;
+}
+@media screen and (width <= 720px) {
+  .js41FRLDWNQ- a {
+    flex-shrink: 0;
+    display: flex;
+  }
+}
+.js41FRLDWNQ- .eE8v-PlS-Vg- {
+  align-items: stretch;
+}
+.TaGY3G-CC7Y- path {
+  fill: #78a9e2;
+}
+.mz8r9p5W3Ak- {
+  z-index: 1;
+}
+.mz8r9p5W3Ak-:hover {
+  z-index: 20;
+}
+._898PejNcf-E- {
+  color: #c5cbd8;
+  letter-spacing: 0.0625rem;
+  background-color: #474e58;
+  border-radius: 3px;
+  margin-inline-start: 8px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 100;
+  line-height: 1.125rem;
+  transition: color 0.2s ease-in-out;
+}
+._898PejNcf-E-:hover,
+._898PejNcf-E-:focus {
+  color: #fff;
+}
+.DmOUg3qjtYw- {
+  width: 32px;
+  height: 32px;
+}
+.YUOqKgPXmCU- {
+  margin-bottom: 20px;
+}
+.zWVeNNgiLlw- {
+  color: #5b7e0f;
+  width: 20px;
+  height: 20px;
+}
+._3FNdh1NAvXg- {
+  color: #5b7e0f;
+  user-select: none;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+._3FNdh1NAvXg- .jZFDBQTnlmM- {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-inline-start: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+/*$vite$:1*/

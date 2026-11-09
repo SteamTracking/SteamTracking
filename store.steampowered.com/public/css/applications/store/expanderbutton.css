@@ -1,0 +1,29 @@
+.UsXiB1C-X8I-.UsXiB1C-X8I- {
+  cursor: pointer;
+  fill: #fff;
+  color: #fff;
+  background-color: #0000;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+@media screen and (width <= 500px) {
+  .UsXiB1C-X8I-.UsXiB1C-X8I- {
+    background-color: #23262e;
+    width: 100%;
+  }
+}
+.UsXiB1C-X8I-.UsXiB1C-X8I-:hover {
+  background-color: #1a9fff;
+}
+.UsXiB1C-X8I-.UsXiB1C-X8I- svg {
+  height: 18px;
+  margin-top: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+.UsXiB1C-X8I-.UsXiB1C-X8I-.kQONFOetCiQ- svg {
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(180deg);
+}
+/*$vite$:1*/

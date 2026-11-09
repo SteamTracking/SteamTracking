@@ -1,0 +1,17 @@
+.RTyw40qgE3M- {
+  --bg-color: rgb(from var(--color-dull-10) r g b / 60%);
+  background-color: var(--bg-color);
+  animation: 2s ease-in-out infinite XwKPddwB6Dg-;
+}
+@keyframes XwKPddwB6Dg- {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+/*$vite$:1*/

@@ -1,61 +1,41 @@
-"use strict";
-(() => {
-  (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-    [32345],
-    {
-      chunkid: (module, module_exports, __webpack_require__) => {
-        __webpack_require__._(module_exports),
-          __webpack_require__._(module_exports, {
-            default: () => _,
-          });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const {
-              steamid: _,
-              commentThreadID: _,
-              gidComment: _,
-              authorSteamID: _,
-            } = _,
-            _ = (0, _._)({
-              subject_type: _._,
-              comment_thread_id: _,
-            }),
-            _ = (0, _._)(_, _, _),
-            _ = (0, _._)(_, _, _),
-            _ = (_.data?.subjects ?? []).find(
-              (_) => _.coordinates?.comment === _,
-            );
-          return (0, _.jsx)(_._, {
-            sanctionMutation: _,
-            acquitMutation: _,
-            subject: _,
-            eSubjectType: _._,
-            gidComment: _,
-            authorSteamID: _,
-            children: (0, _.jsx)(_, {
-              ..._,
-            }),
-          });
-        }
-        function _(_) {
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsxs)("div", {
-                children: ["SteamID: ", _.steamid],
-              }),
-              (0, _.jsxs)("div", {
-                children: ["CommentThreadID: ", _.commentThreadID],
-              }),
-              (0, _.jsxs)("div", {
-                children: ["CommentGID: ", _.gidComment],
-              }),
-            ],
-          });
-        }
-      },
-    },
-  ]);
-})();
+import { _ } from "./libraries.js";
+import { _, _, _ } from "./moderationqueries.js";
+import { _ } from "./moderationdialog.js";
+var _ = _();
+function _(_) {
+  let { steamid: _, commentThreadID: _, gidComment: _, authorSteamID: _ } = _,
+    _ = _({
+      subject_type: 2,
+      comment_thread_id: _,
+    }),
+    _ = _(_, _, _),
+    _ = _(_, _, _),
+    _ = (_.data?.subjects ?? []).find((_) => _.coordinates?.comment === _);
+  return (0, _.jsx)(_, {
+    sanctionMutation: _,
+    acquitMutation: _,
+    subject: _,
+    eSubjectType: 2,
+    gidComment: _,
+    authorSteamID: _,
+    children: (0, _.jsx)(_, {
+      ..._,
+    }),
+  });
+}
+function _(_) {
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsxs)(`div`, {
+        children: [`SteamID: `, _.steamid],
+      }),
+      (0, _.jsxs)(`div`, {
+        children: [`CommentThreadID: `, _.commentThreadID],
+      }),
+      (0, _.jsxs)(`div`, {
+        children: [`CommentGID: `, _.gidComment],
+      }),
+    ],
+  });
+}
+export { _ as default };

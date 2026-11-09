@@ -1,0 +1,743 @@
+.SF1sJnuMqxw- {
+  flex-direction: row-reverse;
+  flex-shrink: 0;
+  margin-inline-start: 4px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.SF1sJnuMqxw- .rALHh8gNXzk- {
+  font-size: 6px;
+}
+.GamepadMode .SF1sJnuMqxw- .rALHh8gNXzk- {
+  font-size: 8px;
+  font-weight: 700;
+}
+.SF1sJnuMqxw- .rALHh8gNXzk- {
+  animation-name: none;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.SF1sJnuMqxw-.BPUdGzLfnOs- .rALHh8gNXzk- {
+  font-size: 8px;
+}
+.SF1sJnuMqxw-.JOLhLnwh07k- .rALHh8gNXzk- {
+  text-shadow:
+    -1px -1px 4px #000,
+    1px -1px 4px #000,
+    -1px 1px 2px #000,
+    1px 1px 2px #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+.SF1sJnuMqxw-.rum5qK7fcnY- .rALHh8gNXzk- {
+  filter: brightness(0.75);
+}
+.SF1sJnuMqxw- .ZNkrEoiqVl8- {
+  z-index: 1;
+  margin-top: 0;
+  animation-delay: 0s;
+}
+.SF1sJnuMqxw- .QJ-7IJ25nrU- {
+  z-index: 2;
+  margin-top: 2px;
+  animation-delay: 0.2s;
+}
+.SF1sJnuMqxw- .PxCAsy1vdvA- {
+  z-index: 3;
+  margin-top: 4px;
+  animation-delay: 0.4s;
+}
+.SF1sJnuMqxw-.online .rALHh8gNXzk- {
+  color: #4c91ac;
+}
+.GamepadMode .SF1sJnuMqxw-.online .rALHh8gNXzk- {
+  color: #4cb4ff;
+}
+.SF1sJnuMqxw-.watchingbroadcast .rALHh8gNXzk- {
+  color: #c9bdf7;
+}
+.GamepadMode .SF1sJnuMqxw-.watchingbroadcast .rALHh8gNXzk- {
+  color: #5340a6;
+}
+.SF1sJnuMqxw-.in-game .rALHh8gNXzk- {
+  color: #91c257;
+}
+.GamepadMode .SF1sJnuMqxw-.in-game .rALHh8gNXzk- {
+  color: #3e862d;
+}
+.SF1sJnuMqxw-.online.rum5qK7fcnY- .rALHh8gNXzk- {
+  color: #6dcff6;
+}
+.GamepadMode .SF1sJnuMqxw-.online.rum5qK7fcnY- .rALHh8gNXzk- {
+  color: #4cb4ff;
+}
+.SF1sJnuMqxw-.in-game.rum5qK7fcnY- .rALHh8gNXzk- {
+  color: #a1f410;
+}
+.GamepadMode .SF1sJnuMqxw-.in-game.rum5qK7fcnY- .rALHh8gNXzk- {
+  color: #3e862d;
+}
+.friend.gpfocus .rALHh8gNXzk-,
+.mJ-ovG6Q-Nw-.gpfocus .rALHh8gNXzk-,
+.SF1sJnuMqxw-.h-MpRJExIDY- .rALHh8gNXzk-,
+.mJ-ovG6Q-Nw-:hover * .rALHh8gNXzk- {
+  animation-name: -Xm1QufOgYg-;
+}
+@keyframes -Xm1QufOgYg- {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.da-aiolTzeA- {
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+  margin-left: 2px;
+}
+.GamepadMode .da-aiolTzeA- {
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+}
+.da-aiolTzeA-.blHJJNodWx8- {
+  margin-top: -2px;
+  margin-left: -1px;
+}
+.GamepadMode .da-aiolTzeA-.blHJJNodWx8- {
+  justify-content: center;
+  align-items: center;
+  margin-top: -4px;
+  margin-left: 0;
+  display: flex;
+}
+.BasicUI .da-aiolTzeA-.blHJJNodWx8- {
+  display: block;
+}
+.da-aiolTzeA-.mTNeCLqRe-M- {
+  margin-left: 4px;
+}
+.da-aiolTzeA-.BcFXA8lWH3E- {
+  margin-top: -1px;
+}
+.da-aiolTzeA-.ingame .SVGIcon_SteamDeck path,
+.da-aiolTzeA-.ingame .SVGIcon_VRIcon path,
+.da-aiolTzeA-.ingame .SVGIcon_MobilePhone path,
+.da-aiolTzeA-.ingame .SVGIcon_BigPicture path {
+  fill: #80aa4d;
+}
+.GamepadMode .da-aiolTzeA-.ingame .SVGIcon_SteamDeck path,
+.GamepadMode .da-aiolTzeA-.ingame .SVGIcon_VRIcon path,
+.GamepadMode .da-aiolTzeA-.ingame .SVGIcon_MobilePhone path,
+.GamepadMode .da-aiolTzeA-.ingame .SVGIcon_BigPicture path {
+  fill: #59bf40;
+}
+.da-aiolTzeA-.online .SVGIcon_SteamDeck path,
+.da-aiolTzeA-.online .SVGIcon_VRIcon path,
+.da-aiolTzeA-.online .SVGIcon_MobilePhone path,
+.da-aiolTzeA-.online .SVGIcon_BigPicture path {
+  fill: #4c91ac;
+}
+.GamepadMode .da-aiolTzeA-.online .SVGIcon_SteamDeck path,
+.GamepadMode .da-aiolTzeA-.online .SVGIcon_VRIcon path,
+.GamepadMode .da-aiolTzeA-.online .SVGIcon_MobilePhone path,
+.GamepadMode .da-aiolTzeA-.online .SVGIcon_BigPicture path {
+  fill: #4cb4ff;
+}
+.JT7Tc3-HVD8- {
+  display: flex;
+}
+.JT7Tc3-HVD8-.j-7wpj1lnTs- {
+  margin-top: -2px;
+}
+.GamepadMode .JT7Tc3-HVD8- {
+  align-items: center;
+}
+.GamepadMode .JT7Tc3-HVD8-.j-7wpj1lnTs- {
+  margin-top: 0;
+}
+.YSmzqRXBp-c- .KzNkmPbkAaI- {
+  color: #c34a48bf;
+}
+.DiM-YEuAiRQ-,
+.eOmjO6XkTx4- {
+  white-space: nowrap;
+  text-overflow: clip;
+  flex: 1;
+  font-size: 14px;
+  line-height: 16px;
+  transition: text-overflow linear;
+  overflow: hidden;
+}
+.GamepadMode .DiM-YEuAiRQ-,
+.GamepadMode .eOmjO6XkTx4- {
+  text-align: start;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #fff;
+  font-family:
+    Motiva Sans,
+    Helvetica,
+    sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
+.BasicUI .DiM-YEuAiRQ-,
+.BasicUI .eOmjO6XkTx4-,
+.DiM-YEuAiRQ-.cTbg3n7roHw-,
+.eOmjO6XkTx4-.cTbg3n7roHw- {
+  text-overflow: ellipsis;
+}
+.Zhs6svnnbFQ- .DiM-YEuAiRQ-,
+.Zhs6svnnbFQ- .eOmjO6XkTx4- {
+  color: inherit;
+}
+.GamepadMode .eOmjO6XkTx4- {
+  color: #67707b;
+}
+.eOmjO6XkTx4- {
+  color: #666;
+  padding-inline-start: 5px;
+}
+.Zhs6svnnbFQ- .eOmjO6XkTx4- {
+  color: inherit;
+}
+.DiM-YEuAiRQ- {
+  --mask-direction: right;
+}
+.DiM-YEuAiRQ-:dir(rtl) {
+  --mask-direction: left;
+}
+.DiM-YEuAiRQ- {
+  -webkit-mask: linear-gradient(
+    to var(--mask-direction),
+    #000 calc(100% - 6px),
+    #00000026 100%
+  );
+  mask: linear-gradient(
+    to to var(--mask-direction),
+    #000 calc(100% - 6px),
+    #00000026 100%
+  );
+  flex: initial;
+  margin-inline-end: -6px;
+  padding-inline-end: 6px;
+}
+.GamepadMode .DiM-YEuAiRQ- {
+  margin-inline-end: 0;
+  padding-inline-end: 2px;
+  mask: none;
+}
+.-oIKqTeuyo8- {
+  color: #999;
+  opacity: 0.5;
+  margin-inline-start: 1px;
+  font-size: 18px;
+  line-height: 16px;
+  display: inline-block;
+}
+._9lhfreYH7b4- {
+  flex-direction: column;
+  display: flex;
+}
+.GamepadMode ._9lhfreYH7b4- .-rLUGeiOB5k-.KzNkmPbkAaI-.j-7wpj1lnTs- {
+  margin-top: -2px;
+  line-height: 15px;
+}
+.FriendPicker_Suggestions ._9lhfreYH7b4- {
+  display: none;
+}
+.KzNkmPbkAaI- {
+  white-space: nowrap;
+  --mask-direction: right;
+  flex-direction: row;
+  margin-top: -1px;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  overflow: hidden;
+}
+.KzNkmPbkAaI-:dir(rtl) {
+  --mask-direction: left;
+}
+.KzNkmPbkAaI- {
+  -webkit-mask: linear-gradient(
+    to to var(--mask-direction),
+    #000 calc(100% - 8px),
+    #00000026 100%
+  );
+  mask: linear-gradient(
+    to to var(--mask-direction),
+    #000 calc(100% - 8px),
+    #00000026 100%
+  );
+  padding-inline-end: 24px;
+}
+.KzNkmPbkAaI-.VWRtCEXAYxQ- {
+  padding-inline-end: 0;
+}
+.BasicUI .KzNkmPbkAaI- {
+  text-overflow: ellipsis;
+  display: block;
+}
+.VoqT3Dd8TPE- .KzNkmPbkAaI- {
+  mask-image: none;
+}
+.nBCm-QvuKr8- .KzNkmPbkAaI- {
+  font-size: 12px;
+  line-height: 18px;
+}
+.GamepadMode .nBCm-QvuKr8- .KzNkmPbkAaI- {
+  height: 20px;
+  line-height: 15px;
+}
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .nBCm-QvuKr8-
+  .JT7Tc3-HVD8- {
+  align-items: center;
+  margin-top: -2px;
+  margin-bottom: 1px;
+}
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .nBCm-QvuKr8-
+  .KzNkmPbkAaI- {
+  height: 25px;
+}
+.TGKbpc7Wcyk- {
+  margin-top: -3px;
+  width: 12px;
+  height: 12px;
+  margin-inline-start: 3px;
+}
+.VirJ-To7GvQ- {
+  font-weight: 800;
+}
+.ingame .DiM-YEuAiRQ- {
+  color: #e3ffc2;
+}
+.GamepadMode .ingame .DiM-YEuAiRQ- {
+  text-align: start;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #c2ffb3;
+  font-family:
+    Motiva Sans,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
+.ingame .-rLUGeiOB5k-.KzNkmPbkAaI-,
+.ingame .-rLUGeiOB5k-.KzNkmPbkAaI- a,
+.ingame .-rLUGeiOB5k-.KzNkmPbkAaI- a:hover,
+.ingame .-rLUGeiOB5k-.KzNkmPbkAaI- a:active,
+.ingame .-rLUGeiOB5k-.KzNkmPbkAaI- a:visited,
+.ingame.nBCm-QvuKr8- .KzNkmPbkAaI- {
+  color: #91c257;
+}
+.GamepadMode .ingame .-rLUGeiOB5k-.KzNkmPbkAaI-,
+.GamepadMode .ingame .-rLUGeiOB5k-.KzNkmPbkAaI- a,
+.GamepadMode .ingame .-rLUGeiOB5k-.KzNkmPbkAaI- a:hover,
+.GamepadMode .ingame .-rLUGeiOB5k-.KzNkmPbkAaI- a:active,
+.GamepadMode .ingame .-rLUGeiOB5k-.KzNkmPbkAaI- a:visited,
+.GamepadMode .ingame.nBCm-QvuKr8- .KzNkmPbkAaI- {
+  color: #59bf40;
+}
+.ingame .-rLUGeiOB5k-.KzNkmPbkAaI- {
+  font-size: 12px;
+}
+.GamepadMode .ingame .-rLUGeiOB5k-.KzNkmPbkAaI- {
+  text-align: start;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #59bf40;
+  font-family:
+    Motiva Sans,
+    Helvetica,
+    sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+}
+.VoiceChannelParticipants .ingame .DiM-YEuAiRQ- {
+  margin-top: -2px;
+  margin-bottom: -2px;
+  font-size: 11px;
+}
+.VoiceChannelParticipants .ingame .nBCm-QvuKr8- .DiM-YEuAiRQ- {
+  margin-top: 0;
+  font-size: 14px;
+}
+.VoiceChannelParticipants .ingame .KzNkmPbkAaI- {
+  margin-top: -6px;
+  margin-bottom: 3px;
+  font-size: 10px;
+}
+.VoiceChannelParticipants .ingame .nBCm-QvuKr8- .KzNkmPbkAaI- {
+  margin-top: 0;
+  font-size: 12px;
+}
+.ingame.awayOrSnooze .KzNkmPbkAaI-,
+.ingame .KzNkmPbkAaI-,
+.ingame .KzNkmPbkAaI- a,
+.ingame .KzNkmPbkAaI- a:hover,
+.ingame .KzNkmPbkAaI- a:active,
+.ingame .KzNkmPbkAaI- a:visited {
+  color: #62813b;
+}
+.GamepadMode .ingame.awayOrSnooze .KzNkmPbkAaI-,
+.GamepadMode .ingame .KzNkmPbkAaI-,
+.GamepadMode .ingame .KzNkmPbkAaI- a,
+.GamepadMode .ingame .KzNkmPbkAaI- a:hover,
+.GamepadMode .ingame .KzNkmPbkAaI- a:active,
+.GamepadMode .ingame .KzNkmPbkAaI- a:visited {
+  color: #3e862d;
+}
+.ingame .SVGIcon_DoNotDisturb circle,
+.ingame .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.GamepadMode .friend.gpfocus .labelHolder .DiM-YEuAiRQ-,
+.GamepadMode .friend.gpfocus .labelHolder .KzNkmPbkAaI-,
+.GamepadMode .favoriteElement.gpfocus .labelHolder .DiM-YEuAiRQ-,
+.GamepadMode .favoriteElement.gpfocus .labelHolder .KzNkmPbkAaI- {
+  text-shadow: 1px 1px #0e141b;
+}
+.GamepadMode .friend.gpfocus .labelHolder.offline .KzNkmPbkAaI-,
+.GamepadMode .favoriteElement.gpfocus .labelHolder.offline .KzNkmPbkAaI- {
+  color: #8b929a;
+  text-shadow: 1px 1px #0e141b;
+}
+.GamepadMode .friend.gpfocus .labelHolder.online.awayOrSnooze .DiM-YEuAiRQ-,
+.GamepadMode .friend.gpfocus .labelHolder.online.awayOrSnooze .KzNkmPbkAaI-,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .DiM-YEuAiRQ-,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .KzNkmPbkAaI- {
+  color: #4cb4ff;
+  text-shadow: 1px 1px #0e141b;
+}
+.GamepadMode .friend.gpfocus .labelHolder.ingame.awayOrSnooze .DiM-YEuAiRQ-,
+.GamepadMode .friend.gpfocus .labelHolder.ingame .KzNkmPbkAaI-,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.ingame.awayOrSnooze
+  .DiM-YEuAiRQ-,
+.GamepadMode .favoriteElement.gpfocus .labelHolder.ingame .KzNkmPbkAaI- {
+  color: #59bf40;
+  text-shadow: 1px 1px #0e141b;
+}
+.GamepadMode .awayOrSnooze .DiM-YEuAiRQ- {
+  color: #59bf40;
+}
+.watchingbroadcast .DiM-YEuAiRQ- {
+  color: #c9bdf7;
+}
+.watchingbroadcast .KzNkmPbkAaI-,
+.watchingbroadcast .-rLUGeiOB5k-.KzNkmPbkAaI- a,
+.watchingbroadcast .-rLUGeiOB5k-.KzNkmPbkAaI- a:hover,
+.watchingbroadcast .-rLUGeiOB5k-.KzNkmPbkAaI- a:active,
+.watchingbroadcast .-rLUGeiOB5k-.KzNkmPbkAaI- a:visited {
+  color: #8277b1;
+}
+.GamepadMode .awayOrSnooze.online .DiM-YEuAiRQ-,
+.GamepadMode .awayOrSnooze.online .KzNkmPbkAaI-,
+.GamepadMode .awayOrSnooze.online .-rLUGeiOB5k-.KzNkmPbkAaI- a,
+.GamepadMode .awayOrSnooze.online .-rLUGeiOB5k-.KzNkmPbkAaI- a:hover,
+.GamepadMode .awayOrSnooze.online .-rLUGeiOB5k-.KzNkmPbkAaI- a:active,
+.GamepadMode .awayOrSnooze.online .-rLUGeiOB5k-.KzNkmPbkAaI- a:visited {
+  color: #4cb4ff;
+}
+.online .DiM-YEuAiRQ- {
+  color: #6dcff6;
+}
+.GamepadMode .online .DiM-YEuAiRQ- {
+  color: #b3dfff;
+}
+.online .KzNkmPbkAaI-,
+.online .-rLUGeiOB5k-.KzNkmPbkAaI- a,
+.online .-rLUGeiOB5k-.KzNkmPbkAaI- a:hover,
+.online .-rLUGeiOB5k-.KzNkmPbkAaI- a:active,
+.online .-rLUGeiOB5k-.KzNkmPbkAaI- a:visited {
+  color: #4c91ac;
+}
+.GamepadMode .online .KzNkmPbkAaI-,
+.GamepadMode .online .-rLUGeiOB5k-.KzNkmPbkAaI- a,
+.GamepadMode .online .-rLUGeiOB5k-.KzNkmPbkAaI- a:hover,
+.GamepadMode .online .-rLUGeiOB5k-.KzNkmPbkAaI- a:active,
+.GamepadMode .online .-rLUGeiOB5k-.KzNkmPbkAaI- a:visited {
+  color: #4cb4ff;
+}
+.online .SVGIcon_DoNotDisturb circle,
+.online .SVGIcon_DoNotDisturb line {
+  stroke: #a0545a;
+}
+.offline .DiM-YEuAiRQ- {
+  color: #a0a0a0;
+}
+.GamepadMode .offline .DiM-YEuAiRQ- {
+  color: #b8bcbf;
+}
+.offline .KzNkmPbkAaI-,
+.offline .-rLUGeiOB5k-.KzNkmPbkAaI- a,
+.offline .-rLUGeiOB5k-.KzNkmPbkAaI- a:hover,
+.offline .-rLUGeiOB5k-.KzNkmPbkAaI- a:active,
+.offline .-rLUGeiOB5k-.KzNkmPbkAaI- a:visited {
+  color: #6e6e6e;
+}
+.offline .SVGIcon_DoNotDisturb circle,
+.offline .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.offline .TGKbpc7Wcyk- {
+  display: none;
+}
+.FriendVoiceChatContainer .DiM-YEuAiRQ- {
+  width: 100%;
+  font-size: 20px;
+  line-height: 24px;
+}
+.cj674wkduhQ- .JT7Tc3-HVD8- {
+  align-items: center;
+  height: 100%;
+  margin-top: 0;
+}
+.ne8a3CldZh4-.nBCm-QvuKr8- .KzNkmPbkAaI- {
+  margin-top: 1px;
+  font-size: 10px;
+}
+.ne8a3CldZh4- .KzNkmPbkAaI- {
+  font-size: 10px;
+  line-height: 11px;
+}
+.ne8a3CldZh4- .ingame .-rLUGeiOB5k-.KzNkmPbkAaI- {
+  font-size: 10px;
+  line-height: 14px;
+}
+.ne8a3CldZh4- .speaking .DiM-YEuAiRQ- {
+  filter: brightness(1.5);
+}
+.ne8a3CldZh4- .DiM-YEuAiRQ-,
+.ne8a3CldZh4- .eOmjO6XkTx4- {
+  margin-bottom: -6px;
+  font-size: 12px;
+}
+.ne8a3CldZh4- .bTQkmHfshdg- .DiM-YEuAiRQ-,
+.ne8a3CldZh4- .bTQkmHfshdg- .eOmjO6XkTx4- {
+  margin-bottom: -2px;
+}
+.currentUserContainer .DiM-YEuAiRQ- {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+  font-family:
+    Motiva Sans,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.94s ease-in-out;
+  overflow: hidden;
+}
+.currentUserContainer .JT7Tc3-HVD8- {
+  -webkit-app-region: no-drag;
+  flex-direction: row;
+  margin-bottom: -4px;
+  display: flex;
+}
+.currentUserContainer .-rLUGeiOB5k-.KzNkmPbkAaI- {
+  font-size: 13px;
+}
+.currentUserContainer .KzNkmPbkAaI- {
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer ._9lhfreYH7b4- {
+  align-self: stretch;
+  margin-top: 2px;
+}
+.currentUserContainer .ne8a3CldZh4- .DiM-YEuAiRQ- {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.currentUserContainer .ne8a3CldZh4- .KzNkmPbkAaI- {
+  line-height: initial;
+}
+.currentUserContainer .ne8a3CldZh4- .-rLUGeiOB5k-.KzNkmPbkAaI- {
+  font-size: 12px;
+}
+.ChatTabs .ne8a3CldZh4- .DiM-YEuAiRQ-,
+.ChatTabs .ne8a3CldZh4- .eOmjO6XkTx4- {
+  text-overflow: clip;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.ChatTabs .ne8a3CldZh4- .eOmjO6XkTx4- {
+  color: #a2a6ac;
+}
+.ChatTabs .ne8a3CldZh4- .KzNkmPbkAaI- {
+  margin-top: -1px;
+  font-size: 10px;
+  line-height: 11px;
+}
+.ChatTabs .ne8a3CldZh4-:not(.nBCm-QvuKr8-) .KzNkmPbkAaI-:not(.-rLUGeiOB5k-) {
+  display: none;
+}
+.ChatTabs .ne8a3CldZh4- .offline .JT7Tc3-HVD8- {
+  color: #ccc;
+}
+.ChatTabs .ne8a3CldZh4- .offline .KzNkmPbkAaI- {
+  color: #888;
+}
+.titleBarContainer .currentUserContainer .KzNkmPbkAaI- {
+  margin-top: -1px;
+  margin-bottom: 1px;
+  font-size: 12px;
+  transition: color 0.94s ease-in-out;
+  display: inline-block;
+}
+.titleBarContainer .currentUserContainer .ne8a3CldZh4- .KzNkmPbkAaI- {
+  margin-top: -4px;
+  margin-bottom: -2px;
+}
+.titleBarContainer .currentUserContainer .nBCm-QvuKr8- .KzNkmPbkAaI- {
+  margin-top: 0;
+}
+.titleBarContainer
+  .currentUserContainer
+  .ne8a3CldZh4-.nBCm-QvuKr8-
+  .KzNkmPbkAaI- {
+  margin-top: -4px;
+  margin-bottom: 0;
+}
+.titleBarContainer .currentUserContainer .KzNkmPbkAaI-:not(.-rLUGeiOB5k-) {
+  margin-top: -1px;
+  margin-bottom: 1px;
+  font-size: 10px;
+}
+.titleBarContainer .currentUserContainer .ContextMenuButton {
+  margin-top: -4px;
+  margin-bottom: 4px;
+}
+.singlewindow .currentUserContainer .JT7Tc3-HVD8- {
+  margin-inline-end: 4px;
+}
+.singlewindow .currentUserContainer .nBCm-QvuKr8- .JT7Tc3-HVD8-,
+.singlewindow .currentUserContainer .nBCm-QvuKr8- {
+  width: 100%;
+}
+.needsUpdate .currentUserContainer .nBCm-QvuKr8- .JT7Tc3-HVD8- {
+  margin-inline-end: 48px;
+}
+.friendRequests .bright .moMutualFriends .DiM-YEuAiRQ-,
+.friendRequests .DiM-YEuAiRQ- {
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+.friendRequests .noMutualFriends .DiM-YEuAiRQ- {
+  color: #aaa;
+  transition: color 0.2s ease-in-out;
+}
+.MemberListColumn .JT7Tc3-HVD8- .KzNkmPbkAaI-,
+.MemberListColumn .JT7Tc3-HVD8- .eOmjO6XkTx4-,
+.MemberListColumn .JT7Tc3-HVD8- .DiM-YEuAiRQ- {
+  text-overflow: clip;
+  transition-delay: 0.4s;
+}
+.MemberListColumn.MemberListViewCompact .JT7Tc3-HVD8- .KzNkmPbkAaI-,
+.MemberListColumn.MemberListViewCompact .JT7Tc3-HVD8- .eOmjO6XkTx4-,
+.MemberListColumn.MemberListViewCompact .JT7Tc3-HVD8- .DiM-YEuAiRQ- {
+  text-overflow: clip;
+  transition-delay: 0s;
+}
+.groupMemberList .DiM-YEuAiRQ-,
+.groupMemberList .eOmjO6XkTx4- {
+  font-size: 13px;
+}
+.groupMemberList .ingame .-rLUGeiOB5k-.KzNkmPbkAaI- {
+  margin-top: -3px;
+  margin-bottom: -3px;
+  font-size: 10px;
+}
+.groupMemberList .ingame.nBCm-QvuKr8- .-rLUGeiOB5k-.KzNkmPbkAaI- {
+  margin-top: -1px;
+  font-size: 12px;
+}
+.groupMemberList .nBCm-QvuKr8- .KzNkmPbkAaI- {
+  font-size: 12px;
+}
+.groupMemberList .KzNkmPbkAaI- {
+  line-height: 13px;
+}
+.Dialog_RemotePlay .awayOrSnooze .JT7Tc3-HVD8- {
+  margin-bottom: -10px;
+}
+.Dialog_RemotePlay .ingame .DiM-YEuAiRQ-,
+.Dialog_RemotePlay .ingame .eOmjO6XkTx4- {
+  width: 175px;
+  margin-top: 0;
+}
+.Dialog_RemotePlay .nBCm-QvuKr8- {
+  width: 175px;
+  margin-top: -44px;
+}
+.Dialog_RemotePlay .ingame .KzNkmPbkAaI- {
+  visibility: collapse;
+  width: 175px;
+  margin-top: -15px;
+}
+.RUAwoGhbIvU- {
+  margin-top: -3px;
+  width: 28px;
+  height: 20px;
+  margin-inline-start: 0;
+  display: inline-block;
+}
+.RUAwoGhbIvU- svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: -8px;
+}
+.RUAwoGhbIvU- svg line,
+.RUAwoGhbIvU- svg path {
+  stroke: #6e8d50;
+}
+.qAItuMOYwsU- {
+  margin-top: -6px;
+  margin-inline-start: 4px;
+  display: inline-block;
+}
+.qAItuMOYwsU- svg {
+  width: 12px;
+  height: 12px;
+}
+/*$vite$:1*/

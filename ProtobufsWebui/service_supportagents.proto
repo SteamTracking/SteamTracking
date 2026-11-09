@@ -37,7 +37,7 @@ message CSupportData_QuickTextContent {
 }
 
 service SupportAgents {
-	// bConstMethod=true, ePrivilege=5
+	// bConstMethod=true, ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc GetQuickText (.CSupportAgents_GetQuickText_Request) returns (.CSupportAgents_GetQuickText_Response);
 }
 

@@ -1,10 +1,3 @@
-enum BundleSort
-{
-	k_BundleSort_Name = 1;
-	k_BundleSort_Price = 2;
-	k_BundleSort_Popular = 3;
-}
-
 enum EAccountFlag
 {
 	k_EAccountFlagNormalUser = 0;
@@ -138,18 +131,6 @@ enum EConnectivityTestResult
 	k_EConnectivityTestResult_Failed = 4;
 	k_EConnectivityTestResult_WifiDisabled = 5;
 	k_EConnectivityTestResult_NoLAN = 6;
-}
-
-enum EControllerBindingType
-{
-	k_EControllerBindingType_None = 0;
-	k_EControllerBindingType_Key = 1;
-	k_EControllerBindingType_MouseButton = 2;
-	k_EControllerBindingType_Gamepad = 3;
-	k_EControllerBindingType_Mousewheel = 4;
-	k_EControllerBindingType_Modeshift = 5;
-	k_EControllerBindingType_GameAction = 6;
-	k_EControllerBindingType_ControllerAction = 7;
 }
 
 enum EEventState
@@ -388,59 +369,12 @@ enum EWindowBringToFront
 	k_EWindowBringToFrontUsingExistingOSState = 3;
 }
 
-enum GAMEPAD
+enum IDerivationState_
 {
-	GAMEPAD_BUTTON_A = 0;
-	GAMEPAD_BUTTON_B = 1;
-	GAMEPAD_BUTTON_X = 2;
-	GAMEPAD_BUTTON_Y = 3;
-	GAMEPAD_BUTTON_DPAD_UP = 4;
-	GAMEPAD_BUTTON_DPAD_RIGHT = 5;
-	GAMEPAD_BUTTON_DPAD_DOWN = 6;
-	GAMEPAD_BUTTON_DPAD_LEFT = 7;
-	GAMEPAD_BUTTON_MENU = 8;
-	GAMEPAD_BUTTON_VIEW = 9;
-	GAMEPAD_LEFTPAD_UP = 10;
-	GAMEPAD_LEFTPAD_DOWN = 11;
-	GAMEPAD_LEFTPAD_LEFT = 12;
-	GAMEPAD_LEFTPAD_RIGHT = 13;
-	GAMEPAD_LEFTPAD_ANALOG = 14;
-	GAMEPAD_RIGHTPAD_UP = 15;
-	GAMEPAD_RIGHTPAD_DOWN = 16;
-	GAMEPAD_RIGHTPAD_LEFT = 17;
-	GAMEPAD_RIGHTPAD_RIGHT = 18;
-	GAMEPAD_RIGHTPAD_ANALOG = 19;
-	GAMEPAD_LEFTSTICK_UP = 20;
-	GAMEPAD_LEFTSTICK_DOWN = 21;
-	GAMEPAD_LEFTSTICK_LEFT = 22;
-	GAMEPAD_LEFTSTICK_RIGHT = 23;
-	GAMEPAD_LEFTSTICK_ANALOG = 24;
-	GAMEPAD_LEFTSTICK_CLICK = 25;
-	GAMEPAD_LTRIGGER_ANALOG = 26;
-	GAMEPAD_RTRIGGER_ANALOG = 27;
-	GAMEPAD_BUTTON_LTRIGGER = 28;
-	GAMEPAD_BUTTON_RTRIGGER = 29;
-	GAMEPAD_BUTTON_LSHOULDER = 30;
-	GAMEPAD_BUTTON_RSHOULDER = 31;
-	GAMEPAD_BUTTON_LBACK = 32;
-	GAMEPAD_BUTTON_RBACK = 33;
-	GAMEPAD_BUTTON_GUIDE = 34;
-	GAMEPAD_BUTTON_SELECT = 35;
-	GAMEPAD_BUTTON_START = 36;
-	GAMEPAD_BUTTON_LPAD_CLICKED = 37;
-	GAMEPAD_BUTTON_LPAD_TOUCH = 38;
-	GAMEPAD_BUTTON_RPAD_CLICKED = 39;
-	GAMEPAD_BUTTON_RPAD_TOUCH = 40;
-	GAMEPAD_RIGHTSTICK_CLICK = 41;
-	GAMEPAD_RIGHTSTICK_TOUCH = 42;
-	GAMEPAD_LEFTSTICK_TOUCH = 43;
-	GAMEPAD_BUTTON_LBACK_UPPER = 44;
-	GAMEPAD_BUTTON_RBACK_UPPER = 45;
-	GAMEPAD_BUTTON_LAST = 46;
-	GAMEPAD_ANALOG_SCROLL = 47;
-	GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR = 48;
-	GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49;
-	GAMEPAD_ANALOG_LAST = 50;
+	NOT_TRACKING_ = -1;
+	UP_TO_DATE_ = 0;
+	POSSIBLY_STALE_ = 1;
+	STALE_ = 2;
 }
 
 enum iEc
@@ -495,6 +429,13 @@ enum STORAGE
 {
 	STORAGE_DOES_NOT_EXIST = 0;
 	STORAGE_IN_MEMORY = 1;
+}
+
+enum TraceMode
+{
+	NONE = 0;
+	LOG = 1;
+	BREAK = 2;
 }
 
 enum UnnamedEnum001b037885a2ecde
@@ -1669,15 +1610,6 @@ enum UnnamedEnuma744c529bb8c8699
 	League = 3;
 }
 
-enum UnnamedEnuma80ee23554b6c9ac
-{
-	PageUnloading = 0;
-	Unknown = 1;
-	None = 2;
-	Basic = 3;
-	Full = 4;
-}
-
 enum UnnamedEnumb0a2812931bd301b
 {
 	None = 0;
@@ -1786,13 +1718,6 @@ enum UnnamedEnumbed52b1352908d10
 {
 	Invoke = 0;
 	Automatic = 1;
-}
-
-enum UnnamedEnumc0d3181531d6b6e5
-{
-	Unknown = 0;
-	NotNeeded = 1;
-	InReactTree = 2;
 }
 
 enum UnnamedEnumc44bf4cf244e5406

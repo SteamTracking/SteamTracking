@@ -297,7 +297,7 @@ async function* _(_) {
 async function* _(_, _) {
   let { abortSignal: _, additionalHeaders: _, requestType: _ } = _;
   `TextDecoderStream` in window ||
-    (await _(() => import(`./DIAux0Mo.js`), [], import.meta.url));
+    (await _(() => import(`./chunk.js`), [], import.meta.url));
   let _ = new Headers(_);
   _.append(_, _);
   let _,

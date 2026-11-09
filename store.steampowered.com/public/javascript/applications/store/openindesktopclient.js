@@ -1,89 +1,111 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(() => {
-  (self.webpackChunkstore = self.webpackChunkstore || []).push([
-    [38843],
-    {
-      90114: (i, l, n) => {
-        "use strict";
-        n.r(l),
-          n.d(l, {
-            OpenInDesktopClient: () => _,
-            default: () => E,
-            useOpenWebInSteamClient: () => O,
-          });
-        var e = n(7850),
-          c = n(90626),
-          d = n(25792),
-          s = n(97824),
-          I = n.n(s),
-          B = n(3166),
-          C = n(97996),
-          r = n(18210);
-        const _ = (0, d.Nr)(function (t) {
-          const { fnOpenInSteamClient: a } = O();
-          return (0, e.jsx)("div", {
-            className: s.OpenInBannerContainer,
-            children: (0, e.jsxs)("div", {
-              className: s.OpenInBannerContent,
-              children: [
-                (0, e.jsx)("div", {
-                  className: s.BannerButtonContainer,
-                  children: (0, e.jsx)("div", {
-                    onClick: a,
-                    className: s.BannerButton,
-                    children: (0, r.we)(
-                      "#OpenInDesktopAppBanner_OpenAppButton",
-                    ),
-                  }),
+
+import { o as e, r as t } from "./rolldown-runtime.js";
+import { Lt as n, ft as r } from "./libraries.js";
+import {
+  Fb as i,
+  Gb as a,
+  Xb as o,
+  b as s,
+  ha as c,
+  la as l,
+  ma as u,
+  sa as d,
+} from "./main.js";
+var f = e(n(), 1),
+  p = `Y6jQLvaUs3E-`,
+  m = `pdKx9hOuFv0-`,
+  h = r();
+function g(e) {
+  let { children: t, ...n } = e;
+  return (0, h.jsx)(c, {
+    className: p,
+    ...n,
+    children: (0, h.jsx)(`div`, { className: m, children: e.children }),
+  });
+}
+function _() {
+  return typeof navigator < `u` ? navigator.userAgent : void 0;
+}
+function v(e = _()) {
+  let t = e?.match(
+    /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
+  );
+  if (t) return t.groups;
+}
+function y(e = _()) {
+  return (
+    !!e &&
+    /iP(?:od|hone|ad)|[pP]lay[sS]tation [vV]ita|Symbian|webOS\/|Blazer|\/GoBrowser|BlackBerry|Opera M(?:obi|ini)\/|Vortex|Android|Windows (?:CE|Mobile)/.test(
+      e,
+    )
+  );
+}
+var b = `oQvwi1Y4MaQ-`,
+  x = `GKmWn7m8mDY-`,
+  S = `WdULLkUdyac-`,
+  C = `_7q8JkI4IXK8-`,
+  w = t({
+    OpenInDesktopClient: () => E,
+    default: () => E,
+    useOpenWebInSteamClient: () => D,
+    useShowOpenInSteamBanner: () => T,
+  });
+function T() {
+  return !a.logged_in && !v() && !y();
+}
+function E() {
+  let { fnOpenInSteamClient: e } = D();
+  return T()
+    ? (0, h.jsx)(c, {
+        className: b,
+        children: (0, h.jsx)(g, {
+          children: (0, h.jsxs)(u, {
+            align: `center`,
+            gap: `5`,
+            padding: `3`,
+            children: [
+              (0, h.jsx)(c, {
+                className: C,
+                children: (0, h.jsx)(l, {
+                  onClick: e,
+                  children: s.Localize(`#OpenInDesktopAppBanner_OpenAppButton`),
                 }),
-                (0, e.jsx)("div", {
-                  className: s.BannerMessage,
-                  children: (0, e.jsxs)("div", {
-                    className: s.BannerTitle,
-                    children: [
-                      (0, e.jsx)("b", {
-                        children: (0, r.we)(
-                          "#OpenInDesktopAppBanner_NotSignedIn",
-                        ),
-                      }),
-                      (0, e.jsx)("br", {}),
-                      (0, r.we)("#OpenInDesktopAppBanner_Body"),
-                    ],
+              }),
+              (0, h.jsxs)(d, {
+                as: `div`,
+                size: `4`,
+                className: x,
+                children: [
+                  (0, h.jsx)(d, {
+                    weight: `heavy`,
+                    className: S,
+                    children: s.Localize(`#OpenInDesktopAppBanner_NotSignedIn`),
                   }),
-                }),
-              ],
-            }),
-          });
-        });
-        function O() {
-          return {
-            fnOpenInSteamClient: c.useCallback(() => {
-              let t = `${(0, B.yl)()}//openurl/`;
-              const a = (0, C.VY)("browserid");
-              if (a) {
-                const o = new URL(window.location.href),
-                  p = new URLSearchParams(o.search);
-                p.set("utm_bid", a),
-                  (t += o.origin + o.pathname + "?" + p.toString() + o.hash);
-              } else t += window.location.href;
-              window.location.href = t;
-            }, []),
-          };
-        }
-        const E = _;
-      },
-      97824: (i) => {
-        i.exports = {
-          OpenInBannerContainer: "_1EQpm6hAsghyCST7W04m-E",
-          OpenInBannerContent: "_13oFTFTjvz0YaOVnWZxyqr",
-          ValveOnly: "_3jg5qxP4_hiZYa6-GJDCOp",
-          BannerMessage: "_1HSa8QK0U-qQCGObG6XYFT",
-          BannerTitle: "_3Xfc_DOo4BUZBmxkSRmD6y",
-          BannerButtonContainer: "_1lwkSayKFi-9WCDd6pq5bV",
-          BannerButton: "_1jso7z80FWGn42k1HP0_cf",
-        };
-      },
-    },
-  ]);
-})();
+                  (0, h.jsx)(`br`, {}),
+                  s.Localize(`#OpenInDesktopAppBanner_Body`),
+                ],
+              }),
+            ],
+          }),
+        }),
+      })
+    : null;
+}
+function D() {
+  return {
+    fnOpenInSteamClient: f.useCallback(() => {
+      let e = `${i()}//openurl/`,
+        t = o(`browserid`);
+      if (t) {
+        let n = new URL(window.location.href),
+          r = new URLSearchParams(n.search);
+        r.set(`utm_bid`, t),
+          (e += n.origin + n.pathname + `?` + r.toString() + n.hash);
+      } else e += window.location.href;
+      window.location.href = e;
+    }, []),
+  };
+}
+export { D as n, w as t };

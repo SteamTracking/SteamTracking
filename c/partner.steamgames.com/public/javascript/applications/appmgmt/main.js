@@ -3,264 +3,266 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./rootlogin.js?contenthash=BqNRqIx6",
-      "./mobx.esm.js?contenthash=CQiZDS-T",
-      "./dialogs.js?contenthash=D2HH3Ebx",
-      "./src.js?contenthash=CBPcp3zo",
-      "./react-router.js?contenthash=C8paMHEZ",
-      "../../../css/applications/appmgmt/dialogs.css?contenthash=MsVVHrZ1",
-      "./logindialog.js?contenthash=C3o7S94R",
-      "./cookies.client.js?contenthash=jlsD2weH",
-      "./button.js?contenthash=CQ1RMSZv",
-      "./flex.js?contenthash=0fKWXcpn",
-      "./formfactor.js?contenthash=BbHLP_Th",
-      "./useclienthints.js?contenthash=D7HGBzTq",
-      "./focuselement.js?contenthash=ClL5Hd1c",
-      "./layout.js?contenthash=B7GG5oam",
-      "../../../css/applications/appmgmt/layout.css?contenthash=DoE9LMAn",
-      "./variantdefaults.js?contenthash=twwj7ifz",
-      "../../../css/applications/appmgmt/variantdefaults.css?contenthash=BW2vKi2i",
-      "../../../css/applications/appmgmt/flex.css?contenthash=LKqXWYdL",
-      "./linkbase.js?contenthash=Y_3Gf2Zb",
-      "./storenaveventcontext.js?contenthash=CI-QJyey",
-      "../../../css/applications/appmgmt/button.css?contenthash=B75cQfMy",
-      "./axios.js?contenthash=DJSofgRR",
-      "./throbber.js?contenthash=8IkzFhw7",
-      "../../../css/applications/appmgmt/throbber.css?contenthash=DMWv5jTr",
-      "./base64-js.js?contenthash=DK9GxJy5",
-      "./browserapi.js?contenthash=B4KRK3Fl",
-      "../../../css/applications/appmgmt/logindialog.css?contenthash=Bt4FceDh",
-      "./modals.js?contenthash=B-zy_ctt",
-      "./steamml_routing.js?contenthash=D6GgQLSc",
-      "./react-router-dom.js?contenthash=C5N9ARHv",
-      "./formatnumber.js?contenthash=Ccr-Vppf",
-      "./getpreferredlocales.js?contenthash=DHiMU7Q0",
-      "../../../css/applications/appmgmt/steamml_routing.css?contenthash=FpgtU6N4",
-      "./steamdeckcompatibilitydetails.js?contenthash=C3Dw0FSv",
-      "./deckverified.js?contenthash=BkxXldoI",
-      "./storebrowsequerycontext.js?contenthash=IltPrRPI",
-      "./servicetransportprovider.js?contenthash=VcFarKSG",
-      "./utils.js?contenthash=C_yXlbsa",
-      "./useQuery.js?contenthash=DNURXK9V",
-      "./dataloader.js?contenthash=DACDuCdd",
-      "./axiosutils.js?contenthash=DGrnkyHA",
-      "./historyutils.js?contenthash=HC4tjo4S",
-      "./stringutils.js?contenthash=MvxgDsyH",
-      "../../../css/applications/appmgmt/deckverified.css?contenthash=8gfE5L-q",
-      "./steamdeckcompatibilitydetails_admin.js?contenthash=BRnvsAYG",
-      "./pricing_routing.js?contenthash=RV_1gohi",
-      "./pricingguidelineobject.js?contenthash=CP-NKVXf",
-      "./reactqueryroot.js?contenthash=BLvKcg6J",
-      "./mutation.js?contenthash=D6buw3Ef",
-      "./currencyutils.js?contenthash=BN9XPice",
-      "./tabulatorutils.js?contenthash=BY9EAK3d",
-      "./text.js?contenthash=ByQZrEYb",
-      "../../../css/applications/appmgmt/text.css?contenthash=B7RzJx_9",
-      "./render.js?contenthash=C8U-rBc7",
-      "../../../css/applications/appmgmt/tabulatorutils.css?contenthash=DbzYDbls",
-      "./eventdevfeaturestore.js?contenthash=D6hR68sL",
-      "./ajaxhooks.js?contenthash=CEg2MQ4D",
-      "./eventtime.js?contenthash=DoCzeHHw",
-      "./debugglobal.js?contenthash=Bxli5Vsy",
-      "./playerstore.js?contenthash=CZKGEZUK",
-      "./usedataloader.client.js?contenthash=c41ZJXNa",
-      "./steamid.js?contenthash=C36PBsuf",
-      "./personautils.js?contenthash=BL5p5k2Z",
-      "./steammessages_player_pb.js?contenthash=UPv_T5EM",
-      "./appinfostore.js?contenthash=nRm6135I",
-      "./appinfo.js?contenthash=BLaDYuBQ",
-      "./steammessages_community_pb.js?contenthash=yPbkqLbM",
-      "./pricinggridcell.js?contenthash=Cz-n-2Pt",
-      "./useMutation.js?contenthash=CVVv1aVR",
-      "./simplesuccesserror.js?contenthash=CCsUy6HZ",
-      "./partnereventdialog.module.js?contenthash=Bx2fOKRM",
-      "../../../css/applications/appmgmt/partnereventdialog.css?contenthash=CX73M240",
-      "./localization3.js?contenthash=CMhtC-ks",
-      "../../../css/applications/appmgmt/pricinggridcell.css?contenthash=DDtZlMHR",
-      "../../../css/applications/appmgmt/shared_dialog.css?contenthash=BAGai7ql",
-      "./configdatadiag.js?contenthash=Cn2q9-OP",
-      "./unknownroute.js?contenthash=CtgV9GMi",
-      "./importexport.js?contenthash=DLEsuR9F",
-      "./storebrowsesetup.js?contenthash=Cw-yYmWF",
-      "./storeitemcache.js?contenthash=sEBFEsXI",
-      "./storeitem.js?contenthash=BTZNvV0H",
-      "./shared_common.module.js?contenthash=Cv5S5tkQ",
-      "../../../css/applications/appmgmt/shared_common.css?contenthash=ylUtvFuK",
-      "./fancytable.js?contenthash=DApMQvc2",
-      "./esm.js?contenthash=0V2Quw_K",
-      "../../../css/applications/appmgmt/fancytable.css?contenthash=E9h2xK7G",
-      "./profilestore.js?contenthash=paYAk34X",
-      "./timeutils.js?contenthash=D1_SoPwK",
-      "./moment-timezone.js?contenthash=B478HHZe",
-      "../../../css/applications/appmgmt/profilestore.css?contenthash=CzpZEyQF",
-      "./discountgridheaders.module.js?contenthash=CRZHLaeb",
-      "../../../css/applications/appmgmt/discountgridheaders.css?contenthash=B1oqOlNM",
-      "./saveprices.js?contenthash=CURC9yU9",
-      "../../../css/applications/appmgmt/saveprices.css?contenthash=CEy2TD8X",
-      "../../../css/applications/appmgmt/pricing_routing.css?contenthash=BebE6H5L",
-      "./buildpatchnotes.js?contenthash=DLpfhhlN",
-      "./saletags.js?contenthash=BwgyOgVh",
-      "./steammessages_store_pb.js?contenthash=-Wyv7mai",
-      "./steammessages_clan_pb.js?contenthash=DA7iuHZE",
-      "./appidutils.js?contenthash=BwQ9uTye",
-      "./csstransitionwrapper.js?contenthash=BcnDODoO",
-      "./localization2.js?contenthash=BO0uUOoo",
-      "./partnereventshared.module.js?contenthash=V2YgIGAf",
-      "../../../css/applications/appmgmt/partnereventshared.css?contenthash=DkySbiVV",
-      "./loadingspinner.js?contenthash=BfamknL4",
-      "../../../css/applications/appmgmt/loadingspinner.css?contenthash=5k1i5yPG",
-      "../../../css/applications/appmgmt/saletags.css?contenthash=w4ya6iNx",
-      "./emoticonstorecontext.js?contenthash=De3IsX-r",
-      "./lazyrenderchildren.js?contenthash=9xG0euuR",
-      "./useresizeobserver.js?contenthash=B7CLWQqo",
-      "./emoticon_php.js?contenthash=B1reVxDD",
-      "../../../css/applications/appmgmt/emoticonstorecontext.css?contenthash=MMQUAYJ6",
-      "./partnereventstore.js?contenthash=1nfNKLbB",
-      "./partnereventutils.js?contenthash=OMx-u-Sq",
-      "./uploadutils.js?contenthash=Bmfjs2kv",
-      "./importexportdialog.js?contenthash=BrqPGEL-",
-      "./eventimageurlwithfallback.js?contenthash=CWGMZ55U",
-      "./salestoreitemutils.js?contenthash=CPLn6R2t",
-      "../../../css/applications/appmgmt/salestoreitemutils.css?contenthash=Dwsr4g6b",
-      "../../../css/applications/appmgmt/eventimageurlwithfallback.css?contenthash=DEg_FYDV",
-      "./src2.js?contenthash=DAty2h9Y",
-      "./textlink.js?contenthash=B_GEVPyV",
-      "../../../css/applications/appmgmt/textlink.css?contenthash=CMU1nJhL",
-      "./emoticonbutton.js?contenthash=DLpIQzlw",
-      "./bbcodes.module.js?contenthash=DbS1TX25",
-      "../../../css/applications/appmgmt/bbcodes.css?contenthash=CxUNTrby",
-      "./numberformats.js?contenthash=Dxy3jn17",
-      "./storeitemhooks.js?contenthash=D9DhEFeU",
-      "../../../css/applications/appmgmt/emoticonbutton.css?contenthash=BI4D_Lkh",
-      "./bbcodeeditor.js?contenthash=JoCSA4dF",
-      "./multisourceimage.js?contenthash=B44mwdrc",
-      "./meetsteamclanid.js?contenthash=eNmAiasR",
-      "./shared_svg_gamerecordings.js?contenthash=DJfSaeDD",
-      "../../../css/applications/appmgmt/shared_svg_gamerecordings.css?contenthash=C9ahyCu_",
-      "./dashplayer.js?contenthash=BlAf73Ot",
-      "./reorderablelist.module.js?contenthash=DxulBny0",
-      "../../../css/applications/appmgmt/reorderablelist.css?contenthash=Dt2Mlogs",
-      "./genericimageupload.js?contenthash=HB2ds7hn",
-      "./linkregionbox.js?contenthash=D0E23xaz",
-      "../../../css/applications/appmgmt/linkregionbox.css?contenthash=HkLONVRS",
-      "../../../css/applications/appmgmt/genericimageupload.css?contenthash=NERScwG6",
-      "../../../css/applications/appmgmt/bbcodeeditor.css?contenthash=BV6DSFsH",
-      "./steammessages_experiments_pb.js?contenthash=D_xDYnsA",
-      "./meetsteamregistrationhooks.js?contenthash=9H86_lw9",
-      "./vodquery.js?contenthash=B7JZ8hBP",
-      "../../../css/applications/appmgmt/importexportdialog.css?contenthash=DjhWuO8T",
-      "./creatorhomestore.js?contenthash=DkXi4hy7",
-      "./storegamehover.js?contenthash=DUWVnzTA",
-      "./eventtrackinghook.js?contenthash=gCT2xl2u",
-      "./discussionwidget.module.js?contenthash=CdiHbfPb",
-      "../../../css/applications/appmgmt/discussionwidget.css?contenthash=2bhRMVOg",
-      "./crosspromotesalelayouts.js?contenthash=DZMczD84",
-      "../../../css/applications/appmgmt/crosspromotesalelayouts.css?contenthash=BweObkpj",
-      "./clanstore.js?contenthash=BTKVBpVz",
-      "./languagepicker.js?contenthash=CIp15g_B",
-      "./editorlocalizationstore.js?contenthash=CAHej8DH",
-      "../../../css/applications/appmgmt/buildpatchnotes.css?contenthash=n5tjT5tP",
-      "./promotion_routing.js?contenthash=DEHTTpYK",
-      "./promotionoperationowner.js?contenthash=DRb6m5ZI",
-      "./marketingmessageevent.js?contenthash=BR4DzxSO",
-      "../../../css/applications/appmgmt/marketingmessageevent.css?contenthash=DbKXx2FI",
-      "./primarypartnercontext.js?contenthash=C34eLrtw",
-      "./assertThisInitialized.js?contenthash=UThVrofZ",
-      "./fast-deep-equal.js?contenthash=DNIk-Xq0",
-      "./localization.js?contenthash=BUenBlTJ",
-      "./popoversurface.js?contenthash=BWeFIEma",
-      "../../../css/applications/appmgmt/popoversurface.css?contenthash=CQEcKe8B",
-      "../../../css/applications/appmgmt/localization.css?contenthash=CeNPQ2w4",
-      "./dashboardutilities.js?contenthash=Dw_8wnpM",
-      "../../../css/applications/appmgmt/dashboardutilities.css?contenthash=DxafS6Qx",
-      "../../../css/applications/appmgmt/fast-deep-equal.css?contenthash=_CH5obot",
-      "./heading.js?contenthash=CbFBhM_-",
-      "../../../css/applications/appmgmt/heading.css?contenthash=BUJSDlhm",
-      "./imageuploaderpanel.js?contenthash=7weekcuV",
-      "./slider.js?contenthash=99MCOPmX",
-      "../../../css/applications/appmgmt/slider.css?contenthash=D9rMOvcL",
-      "../../../css/applications/appmgmt/imageuploaderpanel.css?contenthash=DQY4D1Bk",
-      "./partnerstats.module.js?contenthash=DhudO6uZ",
-      "./with-selector.js?contenthash=DgeOOO5N",
-      "../../../css/applications/appmgmt/partnerstats.css?contenthash=tAeOf2hA",
-      "./filechangepoll.js?contenthash=BLixuvBz",
-      "../../../css/applications/appmgmt/filechangepoll.css?contenthash=Br-8R0Ql",
-      "./adminshared.module.js?contenthash=B8TEWtL2",
-      "../../../css/applications/appmgmt/adminshared.css?contenthash=OY2FNZOQ",
-      "./partnereventshareddates.js?contenthash=Dp-DW_Sh",
-      "./cross.js?contenthash=BC8w4gvU",
-      "../../../css/applications/appmgmt/partnereventshareddates.css?contenthash=CbM88CZ9",
-      "../../../css/applications/appmgmt/react-datetime2.css?contenthash=BLBSEpof",
-      "./themefestplanning.js?contenthash=DeKrOYdT",
-      "../../../css/applications/appmgmt/themefestplanning.css?contenthash=NA_CPQH-",
-      "./react-select.cjs.js?contenthash=DdexvlLh",
-      "./reorderablelist.js?contenthash=B8_6q6s6",
-      "./partnervalvecontactstore.js?contenthash=BnkReuCP",
-      "../../../css/applications/appmgmt/partnervalvecontactstore.css?contenthash=DTazZ76p",
-      "./adminaccount.js?contenthash=BKA24pkT",
-      "./collapseablesection.js?contenthash=DkNqvFOw",
-      "../../../css/applications/appmgmt/collapseablesection.css?contenthash=CY5rgv5g",
-      "./userprofile.js?contenthash=CSXnFWtk",
-      "../../../css/applications/appmgmt/userprofile.css?contenthash=CVciQcNY",
-      "./partnerinfostore.js?contenthash=Dj2bfcG0",
-      "./localization4.js?contenthash=CQV4E5Dp",
-      "../../../css/applications/appmgmt/localization2.css?contenthash=DbStjDdD",
-      "./gamerecordinglog.js?contenthash=DRuHwfo8",
-      "./cloudlocalizedartdisplay.js?contenthash=CF-st2u9",
-      "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css?contenthash=CJgc3uaF",
-      "../../../css/applications/appmgmt/promotionoperationowner.css?contenthash=BMr1Aq2o",
-      "./salesrouting.js?contenthash=D3RkvM7e",
-      "./optin_routing.js?contenthash=BElv0DpT",
-      "./appadminrouter.js?contenthash=rMRwF7_F",
-      "./phpintegration.js?contenthash=Ct_VuVs0",
-      "./releasedateinfo.js?contenthash=BSt6vE-p",
-      "../../../css/applications/appmgmt/releasedateinfo.css?contenthash=Llx8JmM3",
-      "../../../css/applications/appmgmt/appadminrouter.css?contenthash=CyDP4Tb6",
-      "./storeadmin.js?contenthash=1HLokWS5",
-      "./select.js?contenthash=CMAd_8Ol",
-      "./grid.js?contenthash=Do9LXVcI",
-      "../../../css/applications/appmgmt/grid.css?contenthash=CmLumJCG",
-      "./richgamedescriptioneditor.js?contenthash=qjCm5sgJ",
-      "../../../css/applications/appmgmt/richgamedescriptioneditor.css?contenthash=CEmRLwB0",
-      "../../../css/applications/appmgmt/storeadmin.css?contenthash=hvuUUzkI",
-      "./packageadmin.js?contenthash=CrrB2UYB",
-      "../../../css/applications/appmgmt/packageadmin.css?contenthash=D1QLSM5y",
-      "./connections.js?contenthash=iB4M5j_3",
-      "../../../css/applications/appmgmt/connections.css?contenthash=C2Hy6zmN",
-      "./landing.js?contenthash=DdHbci8Z",
-      "./recentapps.js?contenthash=HmN-6pHl",
-      "../../../css/applications/appmgmt/recentapps.css?contenthash=BF2THleY",
-      "./steammessages_partnerdeadline_pb.js?contenthash=DR0aOWrU",
-      "./seasonpasshooks.js?contenthash=Kfa8k0u7",
-      "../../../css/applications/appmgmt/landing.css?contenthash=BpRvFlrk",
-      "./timelinemarkereditorlanding.js?contenthash=CIM6srjd",
-      "./webuitransportdefaults.js?contenthash=B2A3Z7Xe",
-      "./dnd.esm.js?contenthash=I3HJU98C",
-      "./tour.js?contenthash=Dokib-CR",
-      "../../../css/applications/appmgmt/tour.css?contenthash=a_0H_DmF",
-      "../../../css/applications/appmgmt/timelinemarkereditorlanding.css?contenthash=DkE7l4f1",
-      "./promotionreviewdashboard.js?contenthash=Dd-ctw-O",
-      "../../../css/applications/appmgmt/promotionreviewdashboard.css?contenthash=x1XGuNl0",
-      "./reservationqueuemessagingdashboard.js?contenthash=BwPhr1JQ",
-      "../../../css/applications/appmgmt/reservationqueuemessagingdashboard.css?contenthash=DlqQi-f_",
-      "./contenthub_routing.js?contenthash=CoiyhuS3",
-      "../../../css/applications/appmgmt/contenthub_routing.css?contenthash=0kfC_Hr7",
-      "./recap_routing.js?contenthash=C3Wm04x0",
-      "./deadlinelanding.js?contenthash=C_qlT2Ho",
-      "../../../css/applications/appmgmt/deadlinelanding.css?contenthash=Dqt7byuq",
-      "./taxrequirementlanding.js?contenthash=CHpNmmCJ",
-      "../../../css/applications/appmgmt/taxrequirementlanding.css?contenthash=DVgGvYeX",
-      "./meetsteamrouting.js?contenthash=wMW01c5P",
-      "../../../css/applications/appmgmt/meetsteamrouting.css?contenthash=DVdtIb42",
-      "./achievementseditorlanding.js?contenthash=uwyRqNL-",
-      "../../../css/applications/appmgmt/achievementseditorlanding.css?contenthash=vTrBU8HP",
-      "./creatorhomeadmindashboard.js?contenthash=Bb_uMOJD",
-      "../../../css/applications/appmgmt/creatorhomeadmindashboard.css?contenthash=DOp5Ycpn",
-      "./logoedtior.js?contenthash=laS2m0Jv",
-      "./canvas.js?contenthash=CBcuoO99",
-      "../../../css/applications/appmgmt/logoedtior.css?contenthash=gVXoSlLX",
+      "./rootlogin.js",
+      "./mobx.esm.js",
+      "./dialogs.js",
+      "./src.js",
+      "./react-router.js",
+      "../../../css/applications/appmgmt/dialogs.css",
+      "./logindialog.js",
+      "./cookies.client.js",
+      "./button.js",
+      "./flex.js",
+      "./formfactor.js",
+      "./useclienthints.js",
+      "./focuselement.js",
+      "./layout.js",
+      "../../../css/applications/appmgmt/layout.css",
+      "./variantdefaults.js",
+      "../../../css/applications/appmgmt/variantdefaults.css",
+      "../../../css/applications/appmgmt/flex.css",
+      "./linkbase.js",
+      "./storenaveventcontext.js",
+      "../../../css/applications/appmgmt/button.css",
+      "./axios.js",
+      "./throbber.js",
+      "../../../css/applications/appmgmt/throbber.css",
+      "./base64-js.js",
+      "./browserapi.js",
+      "../../../css/applications/appmgmt/logindialog.css",
+      "./modals.js",
+      "./steamml_routing.js",
+      "./react-router-dom.js",
+      "./formatnumber.js",
+      "./getpreferredlocales.js",
+      "../../../css/applications/appmgmt/steamml_routing.css",
+      "./steamdeckcompatibilitydetails.js",
+      "./deckverified.js",
+      "./storebrowsequerycontext.js",
+      "./servicetransportprovider.js",
+      "./utils.js",
+      "./useQuery.js",
+      "./dataloader.js",
+      "./axiosutils.js",
+      "./historyutils.js",
+      "./stringutils.js",
+      "../../../css/applications/appmgmt/deckverified.css",
+      "./steamdeckcompatibilitydetails_admin.js",
+      "./pricing_routing.js",
+      "./pricingguidelineobject.js",
+      "./reactqueryroot.js",
+      "./mutation.js",
+      "./currencyutils.js",
+      "./tabulatorutils.js",
+      "./text.js",
+      "../../../css/applications/appmgmt/text.css",
+      "./render.js",
+      "../../../css/applications/appmgmt/tabulatorutils.css",
+      "./eventdevfeaturestore.js",
+      "./ajaxhooks.js",
+      "./eventtime.js",
+      "./debugglobal.js",
+      "./playerstore.js",
+      "./usedataloader.client.js",
+      "./steamid.js",
+      "./personautils.js",
+      "./steammessages_player_pb.js",
+      "./appinfostore.js",
+      "./appinfo.js",
+      "./steammessages_community_pb.js",
+      "./pricinggridcell.js",
+      "./useMutation.js",
+      "./simplesuccesserror.js",
+      "./partnereventdialog.module.js",
+      "../../../css/applications/appmgmt/partnereventdialog.css",
+      "./localization3.js",
+      "../../../css/applications/appmgmt/pricinggridcell.css",
+      "../../../css/applications/appmgmt/shared_dialog.css",
+      "./configdatadiag.js",
+      "./unknownroute.js",
+      "./importexport.js",
+      "./storebrowsesetup.js",
+      "./storeitemcache.js",
+      "./storeitem.js",
+      "./shared_common.module.js",
+      "../../../css/applications/appmgmt/shared_common.css",
+      "./fancytable.js",
+      "./esm.js",
+      "../../../css/applications/appmgmt/fancytable.css",
+      "./profilestore.js",
+      "./timeutils.js",
+      "./moment-timezone.js",
+      "../../../css/applications/appmgmt/profilestore.css",
+      "./discountgridheaders.module.js",
+      "../../../css/applications/appmgmt/discountgridheaders.css",
+      "./saveprices.js",
+      "../../../css/applications/appmgmt/saveprices.css",
+      "../../../css/applications/appmgmt/pricing_routing.css",
+      "./buildpatchnotes.js",
+      "./saletags.js",
+      "./steammessages_store_pb.js",
+      "./steammessages_clan_pb.js",
+      "./appidutils.js",
+      "./csstransitionwrapper.js",
+      "./localization2.js",
+      "./partnereventshared.module.js",
+      "../../../css/applications/appmgmt/partnereventshared.css",
+      "./loadingspinner.js",
+      "../../../css/applications/appmgmt/loadingspinner.css",
+      "../../../css/applications/appmgmt/saletags.css",
+      "./emoticonstorecontext.js",
+      "./lazyrenderchildren.js",
+      "./useresizeobserver.js",
+      "./emoticon_php.js",
+      "../../../css/applications/appmgmt/emoticonstorecontext.css",
+      "./partnereventstore.js",
+      "./partnereventutils.js",
+      "./uploadutils.js",
+      "./importexportdialog.js",
+      "./eventimageurlwithfallback.js",
+      "./salestoreitemutils.js",
+      "../../../css/applications/appmgmt/salestoreitemutils.css",
+      "../../../css/applications/appmgmt/eventimageurlwithfallback.css",
+      "./src2.js",
+      "./textlink.js",
+      "../../../css/applications/appmgmt/textlink.css",
+      "./emoticonbutton.js",
+      "./bbcodes.module.js",
+      "../../../css/applications/appmgmt/bbcodes.css",
+      "./numberformats.js",
+      "./storeitemhooks.js",
+      "../../../css/applications/appmgmt/emoticonbutton.css",
+      "./bbcodeeditor.js",
+      "./multisourceimage.js",
+      "./meetsteamclanid.js",
+      "./shared_svg_gamerecordings.js",
+      "../../../css/applications/appmgmt/shared_svg_gamerecordings.css",
+      "./dashplayer.js",
+      "./reorderablelist.module.js",
+      "../../../css/applications/appmgmt/reorderablelist.css",
+      "./genericimageupload.js",
+      "./linkregionbox.js",
+      "../../../css/applications/appmgmt/linkregionbox.css",
+      "../../../css/applications/appmgmt/genericimageupload.css",
+      "../../../css/applications/appmgmt/bbcodeeditor.css",
+      "./steammessages_experiments_pb.js",
+      "./meetsteamregistrationhooks.js",
+      "./vodquery.js",
+      "../../../css/applications/appmgmt/importexportdialog.css",
+      "./creatorhomestore.js",
+      "./storegamehover.js",
+      "./eventtrackinghook.js",
+      "./discussionwidget.module.js",
+      "../../../css/applications/appmgmt/discussionwidget.css",
+      "./crosspromotesalelayouts.js",
+      "../../../css/applications/appmgmt/crosspromotesalelayouts.css",
+      "./clanstore.js",
+      "./languagepicker.js",
+      "./editorlocalizationstore.js",
+      "../../../css/applications/appmgmt/buildpatchnotes.css",
+      "./promotion_routing.js",
+      "./promotionoperationowner.js",
+      "./marketingmessageevent.js",
+      "../../../css/applications/appmgmt/marketingmessageevent.css",
+      "./primarypartnercontext.js",
+      "./assertThisInitialized.js",
+      "./fast-deep-equal.js",
+      "./localization.js",
+      "./popoversurface.js",
+      "../../../css/applications/appmgmt/popoversurface.css",
+      "../../../css/applications/appmgmt/localization.css",
+      "./dashboardutilities.js",
+      "../../../css/applications/appmgmt/dashboardutilities.css",
+      "../../../css/applications/appmgmt/fast-deep-equal.css",
+      "./heading.js",
+      "../../../css/applications/appmgmt/heading.css",
+      "./imageuploaderpanel.js",
+      "./slider.js",
+      "../../../css/applications/appmgmt/slider.css",
+      "../../../css/applications/appmgmt/imageuploaderpanel.css",
+      "./partnerstats.module.js",
+      "./with-selector.js",
+      "../../../css/applications/appmgmt/partnerstats.css",
+      "./filechangepoll.js",
+      "../../../css/applications/appmgmt/filechangepoll.css",
+      "./adminshared.module.js",
+      "../../../css/applications/appmgmt/adminshared.css",
+      "./partnereventshareddates.js",
+      "./cross.js",
+      "../../../css/applications/appmgmt/partnereventshareddates.css",
+      "../../../css/applications/appmgmt/react-datetime2.css",
+      "./themefestplanning.js",
+      "../../../css/applications/appmgmt/themefestplanning.css",
+      "./react-select.cjs.js",
+      "./reorderablelist.js",
+      "./partnervalvecontactstore.js",
+      "../../../css/applications/appmgmt/partnervalvecontactstore.css",
+      "./adminaccount.js",
+      "./collapseablesection.js",
+      "../../../css/applications/appmgmt/collapseablesection.css",
+      "./userprofile.js",
+      "../../../css/applications/appmgmt/userprofile.css",
+      "./partnerinfostore.js",
+      "./localization4.js",
+      "../../../css/applications/appmgmt/localization2.css",
+      "./gamerecordinglog.js",
+      "./cloudlocalizedartdisplay.js",
+      "../../../css/applications/appmgmt/cloudlocalizedartdisplay.css",
+      "../../../css/applications/appmgmt/promotionoperationowner.css",
+      "./salesrouting.js",
+      "./optin_routing.js",
+      "./appadminrouter.js",
+      "./phpintegration.js",
+      "./releasedateinfo.js",
+      "../../../css/applications/appmgmt/releasedateinfo.css",
+      "../../../css/applications/appmgmt/appadminrouter.css",
+      "./storeadmin.js",
+      "./select.js",
+      "./grid.js",
+      "../../../css/applications/appmgmt/grid.css",
+      "./richgamedescriptioneditor.js",
+      "../../../css/applications/appmgmt/richgamedescriptioneditor.css",
+      "../../../css/applications/appmgmt/storeadmin.css",
+      "./packageadmin.js",
+      "../../../css/applications/appmgmt/packageadmin.css",
+      "./connections.js",
+      "../../../css/applications/appmgmt/connections.css",
+      "./landing.js",
+      "./recentapps.js",
+      "../../../css/applications/appmgmt/recentapps.css",
+      "./steammessages_partnerdeadline_pb.js",
+      "./seasonpasshooks.js",
+      "../../../css/applications/appmgmt/landing.css",
+      "./timelinemarkereditorlanding.js",
+      "./webuitransportdefaults.js",
+      "./dnd.esm.js",
+      "./tour.js",
+      "../../../css/applications/appmgmt/tour.css",
+      "../../../css/applications/appmgmt/timelinemarkereditorlanding.css",
+      "./promotionreviewdashboard.js",
+      "../../../css/applications/appmgmt/promotionreviewdashboard.css",
+      "./reservationqueuemessagingdashboard.js",
+      "../../../css/applications/appmgmt/reservationqueuemessagingdashboard.css",
+      "./contenthub_routing.js",
+      "../../../css/applications/appmgmt/contenthub_routing.css",
+      "./recap_routing.js",
+      "./deadlinelanding.js",
+      "../../../css/applications/appmgmt/deadlinelanding.css",
+      "./taxrequirementlanding.js",
+      "../../../css/applications/appmgmt/taxrequirementlanding.css",
+      "./meetsteamrouting.js",
+      "../../../css/applications/appmgmt/meetsteamrouting.css",
+      "./achievementseditorlanding.js",
+      "../../../css/applications/appmgmt/achievementseditorlanding.css",
+      "./creatorhomeadmindashboard.js",
+      "../../../css/applications/appmgmt/creatorhomeadmindashboard.css",
+      "./logoedtior.js",
+      "./canvas.js",
+      "../../../css/applications/appmgmt/logoedtior.css",
     ]),
 ) => _.map((_) => _[_]);
+import { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./mobx.esm.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./src.js";
 import {
   _,
   _,
@@ -278,9 +280,6 @@ import {
   _,
   _,
   _,
-} from "./mobx.esm.js?contenthash=CQiZDS-T";
-import { _, _, _, _, _, _, _, _, _, _, _ } from "./src.js?contenthash=CBPcp3zo";
-import {
   _,
   _,
   _,
@@ -290,46 +289,30 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./dialogs.js?contenthash=D2HH3Ebx";
-import { _ } from "./storebrowsequerycontext.js?contenthash=IltPrRPI";
-import { _, _, _, _ } from "./react-router.js?contenthash=C8paMHEZ";
-import { _ } from "./servicetransportprovider.js?contenthash=VcFarKSG";
-import { _ } from "./reactqueryroot.js?contenthash=BLvKcg6J";
-import { _ } from "./useMutation.js?contenthash=CVVv1aVR";
-import { _, _, _ } from "./react-router-dom.js?contenthash=C5N9ARHv";
-import { _ } from "./primarypartnercontext.js?contenthash=C34eLrtw";
-import { _, _ } from "./emoticonstorecontext.js?contenthash=De3IsX-r";
-import { _, _ } from "./formfactor.js?contenthash=BbHLP_Th";
-import { _ } from "./variantdefaults.js?contenthash=twwj7ifz";
-import { _ } from "./popoversurface.js?contenthash=BWeFIEma";
-import { _ } from "./formatnumber.js?contenthash=Ccr-Vppf";
-import { _ } from "./modals.js?contenthash=B-zy_ctt";
-import { _ } from "./axios.js?contenthash=DJSofgRR";
-import { _ } from "./historyutils.js?contenthash=HC4tjo4S";
-import { _, _, _ } from "./browserapi.js?contenthash=B4KRK3Fl";
-import { _, _ } from "./simplesuccesserror.js?contenthash=CCsUy6HZ";
-import { _ } from "./eventtrackinghook.js?contenthash=gCT2xl2u";
-import { _ } from "./localstorage.js?contenthash=CDvEuPjQ";
-import { _ } from "./configdatadiag.js?contenthash=Cn2q9-OP";
-import { _ } from "./phpintegration.js?contenthash=Ct_VuVs0";
-import { _ } from "./unknownroute.js?contenthash=CtgV9GMi";
-import { _, _ } from "./filechangepoll.js?contenthash=BLixuvBz";
+} from "./dialogs.js";
+import { _ } from "./storebrowsequerycontext.js";
+import { _, _, _, _ } from "./react-router.js";
+import { _ } from "./servicetransportprovider.js";
+import { _ } from "./reactqueryroot.js";
+import { _ } from "./useMutation.js";
+import { _, _, _ } from "./react-router-dom.js";
+import { _ } from "./primarypartnercontext.js";
+import { _, _ } from "./emoticonstorecontext.js";
+import { _, _ } from "./formfactor.js";
+import { _ } from "./variantdefaults.js";
+import { _ } from "./popoversurface.js";
+import { _ } from "./formatnumber.js";
+import { _ } from "./modals.js";
+import { _ } from "./axios.js";
+import { _ } from "./historyutils.js";
+import { _, _, _ } from "./browserapi.js";
+import { _, _ } from "./simplesuccesserror.js";
+import { _ } from "./eventtrackinghook.js";
+import { _ } from "./localstorage.js";
+import { _ } from "./configdatadiag.js";
+import { _ } from "./phpintegration.js";
+import { _ } from "./unknownroute.js";
+import { _, _ } from "./filechangepoll.js";
 var _ = (_, _, _) => {
   let _ = _.lastIndexOf(`?`),
     _ = _[_ === -1 || _ < _.lastIndexOf(`/`) ? _ : _.slice(0, _)];
@@ -1318,7 +1301,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
     _(
-      () => import(`./rootlogin.js?contenthash=BqNRqIx6`),
+      () => import(`./rootlogin.js`),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27,
@@ -1328,14 +1311,14 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./steamml_routing.js?contenthash=D6GgQLSc`),
+      () => import(`./steamml_routing.js`),
       __vite__mapDeps([28, 1, 4, 29, 30, 31, 21, 32]),
       import.meta.url,
     ),
   );
 _.lazy(() =>
   _(
-    () => import(`./steamdeckcompatibilitydetails.js?contenthash=C3Dw0FSv`),
+    () => import(`./steamdeckcompatibilitydetails.js`),
     __vite__mapDeps([
       33, 34, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 22, 23, 42, 43,
     ]),
@@ -1344,8 +1327,7 @@ _.lazy(() =>
 );
 var _ = _.lazy(() =>
     _(
-      () =>
-        import(`./steamdeckcompatibilitydetails_admin.js?contenthash=BRnvsAYG`),
+      () => import(`./steamdeckcompatibilitydetails_admin.js`),
       __vite__mapDeps([
         44, 1, 34, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 22, 23, 42,
         43,
@@ -1355,7 +1337,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./pricing_routing.js?contenthash=RV_1gohi`),
+      () => import(`./pricing_routing.js`),
       __vite__mapDeps([
         45, 1, 3, 2, 4, 5, 46, 38, 37, 47, 48, 49, 29, 50, 9, 10, 11, 12, 13,
         14, 15, 16, 17, 51, 52, 53, 21, 40, 42, 54, 27, 41, 22, 23, 55, 56, 57,
@@ -1368,7 +1350,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./buildpatchnotes.js?contenthash=DLpfhhlN`),
+      () => import(`./buildpatchnotes.js`),
       __vite__mapDeps([
         95, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
         80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
@@ -1384,7 +1366,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./promotion_routing.js?contenthash=DEHTTpYK`),
+      () => import(`./promotion_routing.js`),
       __vite__mapDeps([
         157, 158, 1, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1404,7 +1386,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./salesrouting.js?contenthash=D3RkvM7e`),
+      () => import(`./salesrouting.js`),
       __vite__mapDeps([
         206, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1424,7 +1406,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./optin_routing.js?contenthash=BElv0DpT`),
+      () => import(`./optin_routing.js`),
       __vite__mapDeps([
         207, 158, 1, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1444,7 +1426,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./appadminrouter.js?contenthash=rMRwF7_F`),
+      () => import(`./appadminrouter.js`),
       __vite__mapDeps([
         208, 1, 3, 114, 66, 2, 4, 5, 35, 36, 37, 38, 39, 47, 48, 97, 99, 161,
         30, 31, 173, 174, 13, 10, 11, 14, 53, 175, 27, 40, 21, 22, 23, 155, 102,
@@ -1457,7 +1439,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./storeadmin.js?contenthash=1HLokWS5`),
+      () => import(`./storeadmin.js`),
       __vite__mapDeps([
         213, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
         80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
@@ -1474,7 +1456,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./packageadmin.js?contenthash=CrrB2UYB`),
+      () => import(`./packageadmin.js`),
       __vite__mapDeps([
         220, 1, 3, 60, 37, 38, 2, 4, 5, 46, 47, 48, 49, 9, 10, 11, 12, 13, 14,
         15, 16, 17, 8, 18, 19, 20, 51, 52, 171, 172, 121, 122, 50, 53, 21, 40,
@@ -1487,14 +1469,14 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./connections.js?contenthash=iB4M5j_3`),
+      () => import(`./connections.js`),
       __vite__mapDeps([222, 1, 3, 2, 4, 5, 31, 21, 40, 22, 23, 223]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./landing.js?contenthash=DdHbci8Z`),
+      () => import(`./landing.js`),
       __vite__mapDeps([
         224, 1, 3, 158, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1515,7 +1497,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./timelinemarkereditorlanding.js?contenthash=CIM6srjd`),
+      () => import(`./timelinemarkereditorlanding.js`),
       __vite__mapDeps([
         230, 1, 3, 2, 4, 5, 231, 65, 62, 27, 21, 56, 40, 41, 102, 103, 70, 71,
         132, 133, 134, 61, 126, 31, 25, 7, 24, 69, 22, 23, 64, 66, 182, 183,
@@ -1526,7 +1508,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./promotionreviewdashboard.js?contenthash=Dd-ctw-O`),
+      () => import(`./promotionreviewdashboard.js`),
       __vite__mapDeps([
         236, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1546,8 +1528,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () =>
-        import(`./reservationqueuemessagingdashboard.js?contenthash=BwPhr1JQ`),
+      () => import(`./reservationqueuemessagingdashboard.js`),
       __vite__mapDeps([
         238, 1, 3, 2, 4, 5, 97, 30, 31, 27, 40, 21, 101, 19, 55, 56, 57, 58,
         102, 103, 25, 7, 24, 69, 22, 23, 70, 71, 182, 183, 184, 88, 185, 186,
@@ -1558,7 +1539,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./contenthub_routing.js?contenthash=CoiyhuS3`),
+      () => import(`./contenthub_routing.js`),
       __vite__mapDeps([
         240, 1, 3, 2, 4, 5, 29, 214, 9, 10, 11, 12, 13, 14, 15, 16, 17, 51, 52,
         164, 165, 166, 53, 167, 120, 27, 21, 41, 22, 23, 76, 182, 183, 77, 188,
@@ -1571,7 +1552,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./recap_routing.js?contenthash=C3Wm04x0`),
+      () => import(`./recap_routing.js`),
       __vite__mapDeps([
         242, 1, 158, 3, 60, 37, 38, 114, 66, 2, 4, 5, 35, 36, 39, 96, 19, 47,
         48, 68, 97, 7, 80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43,
@@ -1591,7 +1572,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./deadlinelanding.js?contenthash=C_qlT2Ho`),
+      () => import(`./deadlinelanding.js`),
       __vite__mapDeps([
         243, 1, 3, 2, 4, 5, 38, 37, 21, 41, 102, 103, 104, 105, 79, 35, 36, 39,
         80, 7, 40, 58, 25, 24, 127, 227, 199, 228, 244,
@@ -1601,14 +1582,14 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./taxrequirementlanding.js?contenthash=CHpNmmCJ`),
+      () => import(`./taxrequirementlanding.js`),
       __vite__mapDeps([245, 1, 3, 2, 4, 5, 21, 40, 182, 183, 227, 246]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./meetsteamrouting.js?contenthash=wMW01c5P`),
+      () => import(`./meetsteamrouting.js`),
       __vite__mapDeps([
         247, 1, 3, 60, 37, 38, 2, 4, 5, 35, 36, 39, 96, 19, 47, 48, 68, 97, 7,
         80, 98, 99, 100, 31, 27, 34, 21, 40, 41, 22, 23, 42, 43, 56, 49, 101,
@@ -1621,7 +1602,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./achievementseditorlanding.js?contenthash=uwyRqNL-`),
+      () => import(`./achievementseditorlanding.js`),
       __vite__mapDeps([
         249, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 68, 48, 163, 9, 10, 11, 12, 13,
         14, 15, 16, 17, 51, 52, 164, 165, 166, 53, 167, 120, 168, 169, 84, 170,
@@ -1633,7 +1614,7 @@ var _ = _.lazy(() =>
   ),
   _ = _.lazy(() =>
     _(
-      () => import(`./creatorhomeadmindashboard.js?contenthash=Bb_uMOJD`),
+      () => import(`./creatorhomeadmindashboard.js`),
       __vite__mapDeps([
         251, 1, 3, 47, 37, 38, 48, 22, 23, 146, 98, 21, 58, 61, 25, 7, 24, 252,
       ]),
@@ -1994,9 +1975,7 @@ function _() {
       case `LibraryLogoEditorPopup`:
         _(
           async () => {
-            let { Init_LibraryLogoEditor: _ } = await import(
-              `./logoedtior.js?contenthash=laS2m0Jv`
-            );
+            let { Init_LibraryLogoEditor: _ } = await import(`./logoedtior.js`);
             return {
               Init_LibraryLogoEditor: _,
             };
@@ -2026,210 +2005,86 @@ async function _(_) {
       _(
         Object.assign({
           "../../../shared/localization/marketing/marketing_arabic.json": () =>
-            _(
-              () => import(`./marketing_arabic.js?contenthash=BlSm_2Jk`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_arabic.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_brazilian.json":
             () =>
-              _(
-                () => import(`./marketing_brazilian.js?contenthash=BKDdEwME`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_brazilian.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_bulgarian.json":
             () =>
-              _(
-                () => import(`./marketing_bulgarian.js?contenthash=BmRn81Nd`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_bulgarian.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_czech.json": () =>
-            _(
-              () => import(`./marketing_czech.js?contenthash=CvQF2eO3`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_czech.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_danish.json": () =>
-            _(
-              () => import(`./marketing_danish.js?contenthash=cNZLsRI8`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_danish.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_dutch.json": () =>
-            _(
-              () => import(`./marketing_dutch.js?contenthash=DRbz-gVZ`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_dutch.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_english.json": () =>
-            _(
-              () => import(`./marketing_english.js?contenthash=EJzLbNl_`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_english.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_finnish.json": () =>
-            _(
-              () => import(`./marketing_finnish.js?contenthash=DJeuGS_z`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_finnish.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_french.json": () =>
-            _(
-              () => import(`./marketing_french.js?contenthash=C8LqArXc`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_french.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_german.json": () =>
-            _(
-              () => import(`./marketing_german.js?contenthash=C4-Glaif`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_german.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_greek.json": () =>
-            _(
-              () => import(`./marketing_greek.js?contenthash=B8_3yLM5`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_greek.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_hungarian.json":
             () =>
-              _(
-                () => import(`./marketing_hungarian.js?contenthash=aZ5cW6C-`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_hungarian.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_indonesian.json":
             () =>
-              _(
-                () => import(`./marketing_indonesian.js?contenthash=yu7Yx2Ve`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_indonesian.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_italian.json": () =>
-            _(
-              () => import(`./marketing_italian.js?contenthash=WRYbZufQ`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_italian.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_japanese.json":
             () =>
-              _(
-                () => import(`./marketing_japanese.js?contenthash=DoS3ptn-`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_japanese.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_koreana.json": () =>
-            _(
-              () => import(`./marketing_koreana.js?contenthash=D64inlsM`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_koreana.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_latam.json": () =>
-            _(
-              () => import(`./marketing_latam.js?contenthash=mmAmCJSg`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_latam.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_malay.json": () =>
-            _(
-              () => import(`./marketing_malay.js?contenthash=CaugIytj`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_malay.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_norwegian.json":
             () =>
-              _(
-                () => import(`./marketing_norwegian.js?contenthash=D9K6FGMw`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_norwegian.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_polish.json": () =>
-            _(
-              () => import(`./marketing_polish.js?contenthash=D12wtWzA`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_polish.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_portuguese.json":
             () =>
-              _(
-                () => import(`./marketing_portuguese.js?contenthash=B_Ypa57o`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_portuguese.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_romanian.json":
             () =>
-              _(
-                () => import(`./marketing_romanian.js?contenthash=CKC3RFo3`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_romanian.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_russian.json": () =>
-            _(
-              () => import(`./marketing_russian.js?contenthash=CCbRMiHZ`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_russian.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_sc_schinese.json":
             () =>
               _(
-                () => import(`./marketing_sc_schinese.js?contenthash=CBaIRNmB`),
+                () => import(`./marketing_sc_schinese.js`),
                 [],
                 import.meta.url,
               ),
           "../../../shared/localization/marketing/marketing_schinese.json":
             () =>
-              _(
-                () => import(`./marketing_schinese.js?contenthash=DYdtM4VU`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_schinese.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_spanish.json": () =>
-            _(
-              () => import(`./marketing_spanish.js?contenthash=DQHo4sgY`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_spanish.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_swedish.json": () =>
-            _(
-              () => import(`./marketing_swedish.js?contenthash=B_S-_NDs`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_swedish.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_tchinese.json":
             () =>
-              _(
-                () => import(`./marketing_tchinese.js?contenthash=CEZdEDY_`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_tchinese.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_thai.json": () =>
-            _(
-              () => import(`./marketing_thai.js?contenthash=ORUND__6`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_thai.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_turkish.json": () =>
-            _(
-              () => import(`./marketing_turkish.js?contenthash=B-x03CTa`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./marketing_turkish.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_ukrainian.json":
             () =>
-              _(
-                () => import(`./marketing_ukrainian.js?contenthash=VW8ivB3B`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_ukrainian.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_vietnamese.json":
             () =>
-              _(
-                () => import(`./marketing_vietnamese.js?contenthash=C3ruthGv`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_vietnamese.js`), [], import.meta.url),
         }),
         `../../../shared/localization/marketing/marketing_${_}.json`,
         7,
@@ -2237,197 +2092,69 @@ async function _(_) {
       _(
         Object.assign({
           "../../../shared/localization/sales/sales_arabic.json": () =>
-            _(
-              () => import(`./sales_arabic.js?contenthash=C02IINCu`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_arabic.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_brazilian.json": () =>
-            _(
-              () => import(`./sales_brazilian.js?contenthash=C2G9dFFj`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_brazilian.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_bulgarian.json": () =>
-            _(
-              () => import(`./sales_bulgarian.js?contenthash=lw2AWYIV`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_bulgarian.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_czech.json": () =>
-            _(
-              () => import(`./sales_czech.js?contenthash=BZZ7M9qo`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_czech.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_danish.json": () =>
-            _(
-              () => import(`./sales_danish.js?contenthash=DurWzClu`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_danish.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_dutch.json": () =>
-            _(
-              () => import(`./sales_dutch.js?contenthash=6f8Zz0gG`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_dutch.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_english.json": () =>
-            _(
-              () => import(`./sales_english.js?contenthash=DFk0--Os`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_english.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_finnish.json": () =>
-            _(
-              () => import(`./sales_finnish.js?contenthash=DhUbM-Jt`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_finnish.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_french.json": () =>
-            _(
-              () => import(`./sales_french.js?contenthash=DP8eQZOY`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_french.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_german.json": () =>
-            _(
-              () => import(`./sales_german.js?contenthash=DAwNj52t`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_german.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_greek.json": () =>
-            _(
-              () => import(`./sales_greek.js?contenthash=G6JDGR9O`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_greek.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_hungarian.json": () =>
-            _(
-              () => import(`./sales_hungarian.js?contenthash=DHEcijhC`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_hungarian.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_indonesian.json": () =>
-            _(
-              () => import(`./sales_indonesian.js?contenthash=BwNTwwpn`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_indonesian.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_italian.json": () =>
-            _(
-              () => import(`./sales_italian.js?contenthash=biyfj6H6`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_italian.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_japanese.json": () =>
-            _(
-              () => import(`./sales_japanese.js?contenthash=IIFQnAMN`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_japanese.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_koreana.json": () =>
-            _(
-              () => import(`./sales_koreana.js?contenthash=D-9Yd9nt`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_koreana.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_latam.json": () =>
-            _(
-              () => import(`./sales_latam.js?contenthash=BILfj3oe`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_latam.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_malay.json": () =>
-            _(
-              () => import(`./sales_malay.js?contenthash=DUQen0LL`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_malay.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_norwegian.json": () =>
-            _(
-              () => import(`./sales_norwegian.js?contenthash=t2VTel3C`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_norwegian.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_polish.json": () =>
-            _(
-              () => import(`./sales_polish.js?contenthash=BgmroHDW`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_polish.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_portuguese.json": () =>
-            _(
-              () => import(`./sales_portuguese.js?contenthash=jV8GiRtg`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_portuguese.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_romanian.json": () =>
-            _(
-              () => import(`./sales_romanian.js?contenthash=udeyIVLy`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_romanian.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_russian.json": () =>
-            _(
-              () => import(`./sales_russian.js?contenthash=Fm9HNr7K`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_russian.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_sc_schinese.json": () =>
-            _(
-              () => import(`./sales_sc_schinese.js?contenthash=C7cK8EZ6`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_sc_schinese.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_schinese.json": () =>
-            _(
-              () => import(`./sales_schinese.js?contenthash=q_Wmxlrj`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_schinese.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_spanish.json": () =>
-            _(
-              () => import(`./sales_spanish.js?contenthash=CDDQfkTm`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_spanish.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_swedish.json": () =>
-            _(
-              () => import(`./sales_swedish.js?contenthash=ClWdNYkP`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_swedish.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_tchinese.json": () =>
-            _(
-              () => import(`./sales_tchinese.js?contenthash=DCqdMVZ0`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_tchinese.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_thai.json": () =>
-            _(
-              () => import(`./sales_thai.js?contenthash=CSi-QcV1`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_thai.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_turkish.json": () =>
-            _(
-              () => import(`./sales_turkish.js?contenthash=DR3tPRul`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_turkish.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_ukrainian.json": () =>
-            _(
-              () => import(`./sales_ukrainian.js?contenthash=C8JS8V9t`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_ukrainian.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_vietnamese.json": () =>
-            _(
-              () => import(`./sales_vietnamese.js?contenthash=BKQlmzOs`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./sales_vietnamese.js`), [], import.meta.url),
         }),
         `../../../shared/localization/sales/sales_${_}.json`,
         7,
@@ -2435,191 +2162,67 @@ async function _(_) {
       _(
         Object.assign({
           "../localization/main_arabic.json": () =>
-            _(
-              () => import(`./main_arabic.js?contenthash=CNav5C-d`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_arabic.js`), [], import.meta.url),
           "../localization/main_brazilian.json": () =>
-            _(
-              () => import(`./main_brazilian.js?contenthash=B4mftQtW`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_brazilian.js`), [], import.meta.url),
           "../localization/main_bulgarian.json": () =>
-            _(
-              () => import(`./main_bulgarian.js?contenthash=J_RSrIh6`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_bulgarian.js`), [], import.meta.url),
           "../localization/main_czech.json": () =>
-            _(
-              () => import(`./main_czech.js?contenthash=yMZ74kkZ`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_czech.js`), [], import.meta.url),
           "../localization/main_danish.json": () =>
-            _(
-              () => import(`./main_danish.js?contenthash=B_F6ZR8N`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_danish.js`), [], import.meta.url),
           "../localization/main_dutch.json": () =>
-            _(
-              () => import(`./main_dutch.js?contenthash=zc-j9rQy`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_dutch.js`), [], import.meta.url),
           "../localization/main_english.json": () =>
-            _(
-              () => import(`./main_english.js?contenthash=jTgRlzbD`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_english.js`), [], import.meta.url),
           "../localization/main_finnish.json": () =>
-            _(
-              () => import(`./main_finnish.js?contenthash=DYhvFAWG`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_finnish.js`), [], import.meta.url),
           "../localization/main_french.json": () =>
-            _(
-              () => import(`./main_french.js?contenthash=Dgp1Yo7m`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_french.js`), [], import.meta.url),
           "../localization/main_german.json": () =>
-            _(
-              () => import(`./main_german.js?contenthash=CId8_EF1`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_german.js`), [], import.meta.url),
           "../localization/main_greek.json": () =>
-            _(
-              () => import(`./main_greek.js?contenthash=DGxkqOOv`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_greek.js`), [], import.meta.url),
           "../localization/main_hungarian.json": () =>
-            _(
-              () => import(`./main_hungarian.js?contenthash=Auy4C77W`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_hungarian.js`), [], import.meta.url),
           "../localization/main_indonesian.json": () =>
-            _(
-              () => import(`./main_indonesian.js?contenthash=C72xZPj8`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_indonesian.js`), [], import.meta.url),
           "../localization/main_italian.json": () =>
-            _(
-              () => import(`./main_italian.js?contenthash=CzD8Sv9f`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_italian.js`), [], import.meta.url),
           "../localization/main_japanese.json": () =>
-            _(
-              () => import(`./main_japanese.js?contenthash=BY9BEDwI`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_japanese.js`), [], import.meta.url),
           "../localization/main_koreana.json": () =>
-            _(
-              () => import(`./main_koreana.js?contenthash=CmicwRWO`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_koreana.js`), [], import.meta.url),
           "../localization/main_latam.json": () =>
-            _(
-              () => import(`./main_latam.js?contenthash=B7yvIQ9M`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_latam.js`), [], import.meta.url),
           "../localization/main_malay.json": () =>
-            _(
-              () => import(`./main_malay.js?contenthash=CWYZnm-j`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_malay.js`), [], import.meta.url),
           "../localization/main_norwegian.json": () =>
-            _(
-              () => import(`./main_norwegian.js?contenthash=CU54KPJL`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_norwegian.js`), [], import.meta.url),
           "../localization/main_polish.json": () =>
-            _(
-              () => import(`./main_polish.js?contenthash=CZIP_wzD`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_polish.js`), [], import.meta.url),
           "../localization/main_portuguese.json": () =>
-            _(
-              () => import(`./main_portuguese.js?contenthash=BPKOEqDg`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_portuguese.js`), [], import.meta.url),
           "../localization/main_romanian.json": () =>
-            _(
-              () => import(`./main_romanian.js?contenthash=BlQRPYVE`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_romanian.js`), [], import.meta.url),
           "../localization/main_russian.json": () =>
-            _(
-              () => import(`./main_russian.js?contenthash=Ducs4uPM`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_russian.js`), [], import.meta.url),
           "../localization/main_schinese.json": () =>
-            _(
-              () => import(`./main_schinese.js?contenthash=CW6agI8H`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_schinese.js`), [], import.meta.url),
           "../localization/main_spanish.json": () =>
-            _(
-              () => import(`./main_spanish.js?contenthash=BSrOITqp`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_spanish.js`), [], import.meta.url),
           "../localization/main_swedish.json": () =>
-            _(
-              () => import(`./main_swedish.js?contenthash=1k63OGDY`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_swedish.js`), [], import.meta.url),
           "../localization/main_tchinese.json": () =>
-            _(
-              () => import(`./main_tchinese.js?contenthash=tCvF5EPc`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_tchinese.js`), [], import.meta.url),
           "../localization/main_thai.json": () =>
-            _(
-              () => import(`./main_thai.js?contenthash=BIWuRmTP`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_thai.js`), [], import.meta.url),
           "../localization/main_turkish.json": () =>
-            _(
-              () => import(`./main_turkish.js?contenthash=DDQfy92W`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_turkish.js`), [], import.meta.url),
           "../localization/main_ukrainian.json": () =>
-            _(
-              () => import(`./main_ukrainian.js?contenthash=D3qiwrR6`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_ukrainian.js`), [], import.meta.url),
           "../localization/main_vietnamese.json": () =>
-            _(
-              () => import(`./main_vietnamese.js?contenthash=PF7wqVqN`),
-              [],
-              import.meta.url,
-            ),
+            _(() => import(`./main_vietnamese.js`), [], import.meta.url),
         }),
         `../localization/main_${_}.json`,
         3,
@@ -2636,223 +2239,127 @@ async function _(_) {
           Object.assign({
             "../../../shared/localization/marketing/marketing_arabic.json":
               () =>
-                _(
-                  () => import(`./marketing_arabic.js?contenthash=BlSm_2Jk`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_arabic.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_brazilian.json":
               () =>
                 _(
-                  () => import(`./marketing_brazilian.js?contenthash=BKDdEwME`),
+                  () => import(`./marketing_brazilian.js`),
                   [],
                   import.meta.url,
                 ),
             "../../../shared/localization/marketing/marketing_bulgarian.json":
               () =>
                 _(
-                  () => import(`./marketing_bulgarian.js?contenthash=BmRn81Nd`),
+                  () => import(`./marketing_bulgarian.js`),
                   [],
                   import.meta.url,
                 ),
             "../../../shared/localization/marketing/marketing_czech.json": () =>
-              _(
-                () => import(`./marketing_czech.js?contenthash=CvQF2eO3`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_czech.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_danish.json":
               () =>
-                _(
-                  () => import(`./marketing_danish.js?contenthash=cNZLsRI8`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_danish.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_dutch.json": () =>
-              _(
-                () => import(`./marketing_dutch.js?contenthash=DRbz-gVZ`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_dutch.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_english.json":
               () =>
-                _(
-                  () => import(`./marketing_english.js?contenthash=EJzLbNl_`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_english.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_finnish.json":
               () =>
-                _(
-                  () => import(`./marketing_finnish.js?contenthash=DJeuGS_z`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_finnish.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_french.json":
               () =>
-                _(
-                  () => import(`./marketing_french.js?contenthash=C8LqArXc`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_french.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_german.json":
               () =>
-                _(
-                  () => import(`./marketing_german.js?contenthash=C4-Glaif`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_german.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_greek.json": () =>
-              _(
-                () => import(`./marketing_greek.js?contenthash=B8_3yLM5`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_greek.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_hungarian.json":
               () =>
                 _(
-                  () => import(`./marketing_hungarian.js?contenthash=aZ5cW6C-`),
+                  () => import(`./marketing_hungarian.js`),
                   [],
                   import.meta.url,
                 ),
             "../../../shared/localization/marketing/marketing_indonesian.json":
               () =>
                 _(
-                  () =>
-                    import(`./marketing_indonesian.js?contenthash=yu7Yx2Ve`),
+                  () => import(`./marketing_indonesian.js`),
                   [],
                   import.meta.url,
                 ),
             "../../../shared/localization/marketing/marketing_italian.json":
               () =>
-                _(
-                  () => import(`./marketing_italian.js?contenthash=WRYbZufQ`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_italian.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_japanese.json":
               () =>
-                _(
-                  () => import(`./marketing_japanese.js?contenthash=DoS3ptn-`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_japanese.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_koreana.json":
               () =>
-                _(
-                  () => import(`./marketing_koreana.js?contenthash=D64inlsM`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_koreana.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_latam.json": () =>
-              _(
-                () => import(`./marketing_latam.js?contenthash=mmAmCJSg`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_latam.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_malay.json": () =>
-              _(
-                () => import(`./marketing_malay.js?contenthash=CaugIytj`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_malay.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_norwegian.json":
               () =>
                 _(
-                  () => import(`./marketing_norwegian.js?contenthash=D9K6FGMw`),
+                  () => import(`./marketing_norwegian.js`),
                   [],
                   import.meta.url,
                 ),
             "../../../shared/localization/marketing/marketing_polish.json":
               () =>
-                _(
-                  () => import(`./marketing_polish.js?contenthash=D12wtWzA`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_polish.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_portuguese.json":
               () =>
                 _(
-                  () =>
-                    import(`./marketing_portuguese.js?contenthash=B_Ypa57o`),
+                  () => import(`./marketing_portuguese.js`),
                   [],
                   import.meta.url,
                 ),
             "../../../shared/localization/marketing/marketing_romanian.json":
               () =>
-                _(
-                  () => import(`./marketing_romanian.js?contenthash=CKC3RFo3`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_romanian.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_russian.json":
               () =>
-                _(
-                  () => import(`./marketing_russian.js?contenthash=CCbRMiHZ`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_russian.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_sc_schinese.json":
               () =>
                 _(
-                  () =>
-                    import(`./marketing_sc_schinese.js?contenthash=CBaIRNmB`),
+                  () => import(`./marketing_sc_schinese.js`),
                   [],
                   import.meta.url,
                 ),
             "../../../shared/localization/marketing/marketing_schinese.json":
               () =>
-                _(
-                  () => import(`./marketing_schinese.js?contenthash=DYdtM4VU`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_schinese.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_spanish.json":
               () =>
-                _(
-                  () => import(`./marketing_spanish.js?contenthash=DQHo4sgY`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_spanish.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_swedish.json":
               () =>
-                _(
-                  () => import(`./marketing_swedish.js?contenthash=B_S-_NDs`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_swedish.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_tchinese.json":
               () =>
-                _(
-                  () => import(`./marketing_tchinese.js?contenthash=CEZdEDY_`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_tchinese.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_thai.json": () =>
-              _(
-                () => import(`./marketing_thai.js?contenthash=ORUND__6`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./marketing_thai.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_turkish.json":
               () =>
-                _(
-                  () => import(`./marketing_turkish.js?contenthash=B-x03CTa`),
-                  [],
-                  import.meta.url,
-                ),
+                _(() => import(`./marketing_turkish.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_ukrainian.json":
               () =>
                 _(
-                  () => import(`./marketing_ukrainian.js?contenthash=VW8ivB3B`),
+                  () => import(`./marketing_ukrainian.js`),
                   [],
                   import.meta.url,
                 ),
             "../../../shared/localization/marketing/marketing_vietnamese.json":
               () =>
                 _(
-                  () =>
-                    import(`./marketing_vietnamese.js?contenthash=C3ruthGv`),
+                  () => import(`./marketing_vietnamese.js`),
                   [],
                   import.meta.url,
                 ),
@@ -2863,197 +2370,69 @@ async function _(_) {
         _(
           Object.assign({
             "../../../shared/localization/sales/sales_arabic.json": () =>
-              _(
-                () => import(`./sales_arabic.js?contenthash=C02IINCu`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_arabic.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_brazilian.json": () =>
-              _(
-                () => import(`./sales_brazilian.js?contenthash=C2G9dFFj`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_brazilian.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_bulgarian.json": () =>
-              _(
-                () => import(`./sales_bulgarian.js?contenthash=lw2AWYIV`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_bulgarian.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_czech.json": () =>
-              _(
-                () => import(`./sales_czech.js?contenthash=BZZ7M9qo`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_czech.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_danish.json": () =>
-              _(
-                () => import(`./sales_danish.js?contenthash=DurWzClu`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_danish.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_dutch.json": () =>
-              _(
-                () => import(`./sales_dutch.js?contenthash=6f8Zz0gG`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_dutch.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_english.json": () =>
-              _(
-                () => import(`./sales_english.js?contenthash=DFk0--Os`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_english.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_finnish.json": () =>
-              _(
-                () => import(`./sales_finnish.js?contenthash=DhUbM-Jt`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_finnish.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_french.json": () =>
-              _(
-                () => import(`./sales_french.js?contenthash=DP8eQZOY`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_french.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_german.json": () =>
-              _(
-                () => import(`./sales_german.js?contenthash=DAwNj52t`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_german.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_greek.json": () =>
-              _(
-                () => import(`./sales_greek.js?contenthash=G6JDGR9O`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_greek.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_hungarian.json": () =>
-              _(
-                () => import(`./sales_hungarian.js?contenthash=DHEcijhC`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_hungarian.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_indonesian.json": () =>
-              _(
-                () => import(`./sales_indonesian.js?contenthash=BwNTwwpn`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_indonesian.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_italian.json": () =>
-              _(
-                () => import(`./sales_italian.js?contenthash=biyfj6H6`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_italian.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_japanese.json": () =>
-              _(
-                () => import(`./sales_japanese.js?contenthash=IIFQnAMN`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_japanese.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_koreana.json": () =>
-              _(
-                () => import(`./sales_koreana.js?contenthash=D-9Yd9nt`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_koreana.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_latam.json": () =>
-              _(
-                () => import(`./sales_latam.js?contenthash=BILfj3oe`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_latam.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_malay.json": () =>
-              _(
-                () => import(`./sales_malay.js?contenthash=DUQen0LL`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_malay.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_norwegian.json": () =>
-              _(
-                () => import(`./sales_norwegian.js?contenthash=t2VTel3C`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_norwegian.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_polish.json": () =>
-              _(
-                () => import(`./sales_polish.js?contenthash=BgmroHDW`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_polish.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_portuguese.json": () =>
-              _(
-                () => import(`./sales_portuguese.js?contenthash=jV8GiRtg`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_portuguese.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_romanian.json": () =>
-              _(
-                () => import(`./sales_romanian.js?contenthash=udeyIVLy`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_romanian.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_russian.json": () =>
-              _(
-                () => import(`./sales_russian.js?contenthash=Fm9HNr7K`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_russian.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_sc_schinese.json": () =>
-              _(
-                () => import(`./sales_sc_schinese.js?contenthash=C7cK8EZ6`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_sc_schinese.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_schinese.json": () =>
-              _(
-                () => import(`./sales_schinese.js?contenthash=q_Wmxlrj`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_schinese.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_spanish.json": () =>
-              _(
-                () => import(`./sales_spanish.js?contenthash=CDDQfkTm`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_spanish.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_swedish.json": () =>
-              _(
-                () => import(`./sales_swedish.js?contenthash=ClWdNYkP`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_swedish.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_tchinese.json": () =>
-              _(
-                () => import(`./sales_tchinese.js?contenthash=DCqdMVZ0`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_tchinese.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_thai.json": () =>
-              _(
-                () => import(`./sales_thai.js?contenthash=CSi-QcV1`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_thai.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_turkish.json": () =>
-              _(
-                () => import(`./sales_turkish.js?contenthash=DR3tPRul`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_turkish.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_ukrainian.json": () =>
-              _(
-                () => import(`./sales_ukrainian.js?contenthash=C8JS8V9t`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_ukrainian.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_vietnamese.json": () =>
-              _(
-                () => import(`./sales_vietnamese.js?contenthash=BKQlmzOs`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./sales_vietnamese.js`), [], import.meta.url),
           }),
           `../../../shared/localization/sales/sales_${_}.json`,
           7,
@@ -3061,191 +2440,67 @@ async function _(_) {
         _(
           Object.assign({
             "../localization/main_arabic.json": () =>
-              _(
-                () => import(`./main_arabic.js?contenthash=CNav5C-d`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_arabic.js`), [], import.meta.url),
             "../localization/main_brazilian.json": () =>
-              _(
-                () => import(`./main_brazilian.js?contenthash=B4mftQtW`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_brazilian.js`), [], import.meta.url),
             "../localization/main_bulgarian.json": () =>
-              _(
-                () => import(`./main_bulgarian.js?contenthash=J_RSrIh6`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_bulgarian.js`), [], import.meta.url),
             "../localization/main_czech.json": () =>
-              _(
-                () => import(`./main_czech.js?contenthash=yMZ74kkZ`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_czech.js`), [], import.meta.url),
             "../localization/main_danish.json": () =>
-              _(
-                () => import(`./main_danish.js?contenthash=B_F6ZR8N`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_danish.js`), [], import.meta.url),
             "../localization/main_dutch.json": () =>
-              _(
-                () => import(`./main_dutch.js?contenthash=zc-j9rQy`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_dutch.js`), [], import.meta.url),
             "../localization/main_english.json": () =>
-              _(
-                () => import(`./main_english.js?contenthash=jTgRlzbD`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_english.js`), [], import.meta.url),
             "../localization/main_finnish.json": () =>
-              _(
-                () => import(`./main_finnish.js?contenthash=DYhvFAWG`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_finnish.js`), [], import.meta.url),
             "../localization/main_french.json": () =>
-              _(
-                () => import(`./main_french.js?contenthash=Dgp1Yo7m`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_french.js`), [], import.meta.url),
             "../localization/main_german.json": () =>
-              _(
-                () => import(`./main_german.js?contenthash=CId8_EF1`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_german.js`), [], import.meta.url),
             "../localization/main_greek.json": () =>
-              _(
-                () => import(`./main_greek.js?contenthash=DGxkqOOv`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_greek.js`), [], import.meta.url),
             "../localization/main_hungarian.json": () =>
-              _(
-                () => import(`./main_hungarian.js?contenthash=Auy4C77W`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_hungarian.js`), [], import.meta.url),
             "../localization/main_indonesian.json": () =>
-              _(
-                () => import(`./main_indonesian.js?contenthash=C72xZPj8`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_indonesian.js`), [], import.meta.url),
             "../localization/main_italian.json": () =>
-              _(
-                () => import(`./main_italian.js?contenthash=CzD8Sv9f`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_italian.js`), [], import.meta.url),
             "../localization/main_japanese.json": () =>
-              _(
-                () => import(`./main_japanese.js?contenthash=BY9BEDwI`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_japanese.js`), [], import.meta.url),
             "../localization/main_koreana.json": () =>
-              _(
-                () => import(`./main_koreana.js?contenthash=CmicwRWO`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_koreana.js`), [], import.meta.url),
             "../localization/main_latam.json": () =>
-              _(
-                () => import(`./main_latam.js?contenthash=B7yvIQ9M`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_latam.js`), [], import.meta.url),
             "../localization/main_malay.json": () =>
-              _(
-                () => import(`./main_malay.js?contenthash=CWYZnm-j`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_malay.js`), [], import.meta.url),
             "../localization/main_norwegian.json": () =>
-              _(
-                () => import(`./main_norwegian.js?contenthash=CU54KPJL`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_norwegian.js`), [], import.meta.url),
             "../localization/main_polish.json": () =>
-              _(
-                () => import(`./main_polish.js?contenthash=CZIP_wzD`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_polish.js`), [], import.meta.url),
             "../localization/main_portuguese.json": () =>
-              _(
-                () => import(`./main_portuguese.js?contenthash=BPKOEqDg`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_portuguese.js`), [], import.meta.url),
             "../localization/main_romanian.json": () =>
-              _(
-                () => import(`./main_romanian.js?contenthash=BlQRPYVE`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_romanian.js`), [], import.meta.url),
             "../localization/main_russian.json": () =>
-              _(
-                () => import(`./main_russian.js?contenthash=Ducs4uPM`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_russian.js`), [], import.meta.url),
             "../localization/main_schinese.json": () =>
-              _(
-                () => import(`./main_schinese.js?contenthash=CW6agI8H`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_schinese.js`), [], import.meta.url),
             "../localization/main_spanish.json": () =>
-              _(
-                () => import(`./main_spanish.js?contenthash=BSrOITqp`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_spanish.js`), [], import.meta.url),
             "../localization/main_swedish.json": () =>
-              _(
-                () => import(`./main_swedish.js?contenthash=1k63OGDY`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_swedish.js`), [], import.meta.url),
             "../localization/main_tchinese.json": () =>
-              _(
-                () => import(`./main_tchinese.js?contenthash=tCvF5EPc`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_tchinese.js`), [], import.meta.url),
             "../localization/main_thai.json": () =>
-              _(
-                () => import(`./main_thai.js?contenthash=BIWuRmTP`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_thai.js`), [], import.meta.url),
             "../localization/main_turkish.json": () =>
-              _(
-                () => import(`./main_turkish.js?contenthash=DDQfy92W`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_turkish.js`), [], import.meta.url),
             "../localization/main_ukrainian.json": () =>
-              _(
-                () => import(`./main_ukrainian.js?contenthash=D3qiwrR6`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_ukrainian.js`), [], import.meta.url),
             "../localization/main_vietnamese.json": () =>
-              _(
-                () => import(`./main_vietnamese.js?contenthash=PF7wqVqN`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_vietnamese.js`), [], import.meta.url),
           }),
           `../localization/main_${_}.json`,
           3,

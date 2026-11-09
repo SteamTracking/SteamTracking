@@ -1,247 +1,84 @@
-import { _, _, _, _, _, _ } from "./mobx.esm.js?contenthash=BRGZcCup";
-import { _, _, _, _, _, _, _, _ } from "./dialogs.js?contenthash=D1pxcxuf";
-import { _ } from "./usedataloader.client.js?contenthash=DAd0LgAa";
-import { _ } from "./long.js?contenthash=DWB27pGN";
-import { _, _, _, _ } from "./react-router.js?contenthash=nQj0_J23";
-import { _, _, _, _ } from "./pricingguidelineobject.js?contenthash=BkbRq0Li";
-import { _ } from "./modals.js?contenthash=Bi1vin1f";
-import { _, _ } from "./flex.js?contenthash=BqvwdiAv";
-import { _, _ } from "./button.js?contenthash=CU33iYfg";
-import { _ } from "./text.js?contenthash=eLRF4CUL";
-import { _ } from "./heading.js?contenthash=JlFqtEbo";
-import { _ } from "./textlink.js?contenthash=DqM5ftUk";
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./tabulatorutils.js?contenthash=BiwL1JH9";
-import { _ } from "./throbber.js?contenthash=1eooMzHf";
-import { _, _, _, _, _ } from "./currencyutils.js?contenthash=BLJDeGzO";
-import { _, _, _, _ } from "./pricinggridcell.js?contenthash=LyzAlx0S";
-import { _ } from "./phpintegration.js?contenthash=CCsRwFZl";
-import { _ } from "./unknownroute.js?contenthash=C2vrZ8Y1";
-import { _, _ } from "./fancytable.js?contenthash=BiBqH93f";
-import { _, _ } from "./profilestore.js?contenthash=3wVpz-0i";
-import { _ } from "./localization3.js?contenthash=B4lvHMmE";
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./saveprices.js?contenthash=B2VMWVQE";
-import { _, _ } from "./localization4.js?contenthash=73n-ZBjU";
+import { _, _, _, _, _, _ } from "./mobx.esm.js";
+import { _, _, _, _ } from "./src.js";
+import { _ } from "./usedataloader.client.js";
+import { _, _, _, _, _ } from "./dialogs.js";
+import { _, _, _, _ } from "./react-router.js";
+import { _, _, _, _ } from "./pricingguidelineobject.js";
+import { _, _ } from "./flex.js";
+import { _, _ } from "./button.js";
+import { _ } from "./text.js";
+import { _ } from "./heading.js";
+import { _ } from "./textlink.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./tabulatorutils.js";
+import { _ } from "./modals.js";
+import { _ } from "./throbber.js";
+import { _, _, _, _, _ } from "./currencyutils.js";
+import { _, _, _, _ } from "./pricinggridcell.js";
+import { _ } from "./phpintegration.js";
+import { _ } from "./unknownroute.js";
+import { _, _ } from "./fancytable.js";
+import { _, _ } from "./profilestore.js";
+import { _ } from "./localization3.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./saveprices.js";
+import { _, _ } from "./localization4.js";
 var _ = {};
-(_.arabic = () =>
-  _(
-    () => import(`./currency_arabic.js?contenthash=gFBHoyni`),
-    [],
-    import.meta.url,
-  )),
+(_.arabic = () => _(() => import(`./currency_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
-    _(
-      () => import(`./currency_brazilian.js?contenthash=KjHxyFBf`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_brazilian.js`), [], import.meta.url)),
   (_.bulgarian = () =>
-    _(
-      () => import(`./currency_bulgarian.js?contenthash=CmZniUHH`),
-      [],
-      import.meta.url,
-    )),
-  (_.czech = () =>
-    _(
-      () => import(`./currency_czech.js?contenthash=Brld-NkF`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_bulgarian.js`), [], import.meta.url)),
+  (_.czech = () => _(() => import(`./currency_czech.js`), [], import.meta.url)),
   (_.danish = () =>
-    _(
-      () => import(`./currency_danish.js?contenthash=Dyd8FMZa`),
-      [],
-      import.meta.url,
-    )),
-  (_.dutch = () =>
-    _(
-      () => import(`./currency_dutch.js?contenthash=jt7JKRbR`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_danish.js`), [], import.meta.url)),
+  (_.dutch = () => _(() => import(`./currency_dutch.js`), [], import.meta.url)),
   (_.english = () =>
-    _(
-      () => import(`./currency_english.js?contenthash=DcNS618d`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_english.js`), [], import.meta.url)),
   (_.finnish = () =>
-    _(
-      () => import(`./currency_finnish.js?contenthash=BOsgMjY5`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_finnish.js`), [], import.meta.url)),
   (_.french = () =>
-    _(
-      () => import(`./currency_french.js?contenthash=CWYifI2w`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_french.js`), [], import.meta.url)),
   (_.german = () =>
-    _(
-      () => import(`./currency_german.js?contenthash=D8O0Qd5l`),
-      [],
-      import.meta.url,
-    )),
-  (_.greek = () =>
-    _(
-      () => import(`./currency_greek.js?contenthash=C_30d4Wv`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_german.js`), [], import.meta.url)),
+  (_.greek = () => _(() => import(`./currency_greek.js`), [], import.meta.url)),
   (_.hungarian = () =>
-    _(
-      () => import(`./currency_hungarian.js?contenthash=KrE9bPHA`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_hungarian.js`), [], import.meta.url)),
   (_.indonesian = () =>
-    _(
-      () => import(`./currency_indonesian.js?contenthash=GLv7lpUi`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_indonesian.js`), [], import.meta.url)),
   (_.italian = () =>
-    _(
-      () => import(`./currency_italian.js?contenthash=2ZJWmGPn`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_italian.js`), [], import.meta.url)),
   (_.japanese = () =>
-    _(
-      () => import(`./currency_japanese.js?contenthash=DVpUjcez`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_japanese.js`), [], import.meta.url)),
   (_.koreana = () =>
-    _(
-      () => import(`./currency_koreana.js?contenthash=CWk_iEjY`),
-      [],
-      import.meta.url,
-    )),
-  (_.latam = () =>
-    _(
-      () => import(`./currency_latam.js?contenthash=Q9Q8vP40`),
-      [],
-      import.meta.url,
-    )),
-  (_.malay = () =>
-    _(
-      () => import(`./currency_malay.js?contenthash=fhaBO-Xv`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_koreana.js`), [], import.meta.url)),
+  (_.latam = () => _(() => import(`./currency_latam.js`), [], import.meta.url)),
+  (_.malay = () => _(() => import(`./currency_malay.js`), [], import.meta.url)),
   (_.norwegian = () =>
-    _(
-      () => import(`./currency_norwegian.js?contenthash=Bc0SPDDJ`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_norwegian.js`), [], import.meta.url)),
   (_.polish = () =>
-    _(
-      () => import(`./currency_polish.js?contenthash=BOF_IGdx`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_polish.js`), [], import.meta.url)),
   (_.portuguese = () =>
-    _(
-      () => import(`./currency_portuguese.js?contenthash=DEBVwj_9`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_portuguese.js`), [], import.meta.url)),
   (_.romanian = () =>
-    _(
-      () => import(`./currency_romanian.js?contenthash=1c0yX7xS`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_romanian.js`), [], import.meta.url)),
   (_.russian = () =>
-    _(
-      () => import(`./currency_russian.js?contenthash=DcouFg8i`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_russian.js`), [], import.meta.url)),
   (_.sc_schinese = () =>
-    _(
-      () => import(`./currency_sc_schinese.js?contenthash=-HVyXZH3`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_sc_schinese.js`), [], import.meta.url)),
   (_.schinese = () =>
-    _(
-      () => import(`./currency_schinese.js?contenthash=B6q7gqNk`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_schinese.js`), [], import.meta.url)),
   (_.spanish = () =>
-    _(
-      () => import(`./currency_spanish.js?contenthash=Dg5T0oJY`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_spanish.js`), [], import.meta.url)),
   (_.swedish = () =>
-    _(
-      () => import(`./currency_swedish.js?contenthash=D9qGtxR2`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_swedish.js`), [], import.meta.url)),
   (_.tchinese = () =>
-    _(
-      () => import(`./currency_tchinese.js?contenthash=CqKmq7sE`),
-      [],
-      import.meta.url,
-    )),
-  (_.thai = () =>
-    _(
-      () => import(`./currency_thai.js?contenthash=3CA5Hupg`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_tchinese.js`), [], import.meta.url)),
+  (_.thai = () => _(() => import(`./currency_thai.js`), [], import.meta.url)),
   (_.turkish = () =>
-    _(
-      () => import(`./currency_turkish.js?contenthash=BsgHcKs7`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_turkish.js`), [], import.meta.url)),
   (_.ukrainian = () =>
-    _(
-      () => import(`./currency_ukrainian.js?contenthash=C7AI--qO`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./currency_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(
-      () => import(`./currency_vietnamese.js?contenthash=CKVM5eDv`),
-      [],
-      import.meta.url,
-    ));
+    _(() => import(`./currency_vietnamese.js`), [], import.meta.url));
 async function _(_) {
   if (_[_]) return await _[_]();
 }

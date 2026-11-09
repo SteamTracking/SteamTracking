@@ -1,0 +1,209 @@
+body,
+body.Dkzap317Nac- {
+  color: #969696;
+  font-family:
+    Motiva Sans,
+    Motiva Sans fallback,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+button {
+  font-family:
+    Motiva Sans,
+    Motiva Sans fallback,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+img {
+  -webkit-user-drag: none;
+}
+::-webkit-scrollbar {
+  z-index: 12;
+  background: 0 0;
+  width: 14px;
+  height: 12px;
+  overflow: visible;
+}
+::-webkit-scrollbar-thumb {
+  z-index: 12;
+  background-color: #434953;
+  background-clip: padding-box;
+  border: 4px solid #0000;
+  border-radius: 10px;
+  width: 10px;
+  min-width: 32px;
+  min-height: 32px;
+  margin: 4px;
+  transition: background-color 0.32s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4e5157;
+}
+::-webkit-scrollbar-corner {
+  background: #202020;
+}
+::selection {
+  text-shadow: 1px 1px 2px #000a;
+  color: #fff;
+  background: #54a5d4;
+}
+.dc15Yd2Gij4- {
+  color: gray;
+  font-size: 10px;
+}
+.k-l2vEyhBKY- {
+  border-radius: 25%;
+  width: 34px;
+  height: 34px;
+  margin-right: 4px;
+  overflow: hidden;
+}
+.evBuHomylGs- {
+  border-radius: 25%;
+  width: 70px;
+  height: 45px;
+  margin-right: 4px;
+  overflow: hidden;
+}
+.dRAg6GcBahk- {
+  border-radius: 25%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.dRAg6GcBahk-:after {
+  content: "N/A";
+  color: #555;
+  text-align: center;
+  background-color: #201e25;
+  width: 100%;
+  height: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 10px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+._7yRAThzmB0c- .dRAg6GcBahk- {
+  border: 2px solid red;
+}
+.wvnOnMJ1aJ8- {
+  background-color: #201e25;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  position: relative;
+}
+.Tji-YT4na9o- {
+  text-transform: uppercase;
+  color: #7d6ebc;
+  user-select: none;
+  cursor: pointer;
+  background: 0 0;
+  border: 1px solid #7d6ebc;
+  border-radius: 2px;
+  margin-top: 4px;
+  margin-right: 4px;
+  padding: 8px 32px;
+  font-size: 14px;
+  display: inline-block;
+}
+.Tji-YT4na9o-.lJsjt2GYXeg- {
+  padding: 4px 8px;
+  font-size: 9px;
+}
+.RPxGbDpMPvc- {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.LPyHca4dMlA- {
+  height: 100%;
+  min-height: 420px;
+}
+.bYRlRDpVqYA- {
+  color: inherit;
+  text-decoration: underline;
+}
+._7gofsR-SF5w- {
+  resize: none;
+  color: #dfe3e6;
+  background: #3b3f4880;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  max-height: 100px;
+  margin: 0;
+  padding: 4px;
+  font-family:
+    Motiva Sans,
+    Motiva Sans fallback,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  transition-property: background, box-shadow, padding-left;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  box-shadow: inset 0 0 #0000;
+}
+._7gofsR-SF5w-:focus {
+  background: #43495399;
+  outline: none;
+  padding-left: 6px;
+  box-shadow: inset 1px 1px 8px #000a;
+}
+.EJE6Uh9cQZA- {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.tool-tip-source {
+  cursor: default;
+}
+.react-select-container .react-select__control {
+  background: #dce8fb14;
+  border-color: #0000;
+  box-shadow: 0 0 #0000;
+}
+.react-select-container .react-select__control:hover {
+  background: #464d58;
+  border-color: #0000;
+}
+.react-select-container .react-select__control .react-select__single-value,
+.react-select-container .react-select__control .react-select__input-container {
+  color: #d9dde1;
+}
+.react-select-container
+  .react-select__control
+  input[type="text"].react-select__input {
+  color: #d9dde1;
+  box-shadow: unset;
+}
+.react-select-container
+  .react-select__control
+  .react-select__indicator-separator {
+  background-color: #42494d;
+}
+.react-select-container .react-select__menu {
+  background-color: #373c44;
+  margin-top: 2px;
+}
+.react-select-container .react-select__menu .react-select__option {
+  color: #d9dde1;
+}
+.react-select-container .react-select__menu .react-select__option--is-focused {
+  color: #d9dde1;
+  background-color: #3e444d;
+}
+.react-select-container .react-select__menu .react-select__option--is-selected {
+  background-color: #1c8cde;
+}
+/*$vite$:1*/

@@ -1,0 +1,1771 @@
+.crossfade {
+  position: relative;
+  overflow: hidden;
+}
+.crossfade-anim-exit {
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: linear;
+}
+.crossfade-anim-exit-active {
+  opacity: 0.01;
+}
+.crossfade-img {
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+}
+.BroadcastView {
+  background-color: #000;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.broadcastHeader {
+  background-color: #393947;
+  border-bottom: 1px solid #000;
+  height: 96px;
+}
+.broadcastMainView {
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
+}
+.leftContainer {
+  flex-direction: column;
+  flex: 1 0;
+  align-items: center;
+  display: flex;
+}
+.rightContainer {
+  border-left: 1px solid #000;
+  flex-direction: column;
+  min-width: 320px;
+  display: flex;
+}
+.broadcastChatContainer {
+  background-color: #393947;
+  flex: 1;
+  width: 100%;
+}
+.videoFooter {
+  display: none;
+}
+.videoContainer .videoBlur {
+  opacity: 0.5;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+.videoControls {
+  z-index: 31;
+  opacity: 1;
+  user-select: none;
+  pointer-events: none;
+  flex-direction: column;
+  transition-property: opacity, bottom;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+.videoContainer.HidePlayerControls .videoControls,
+.videoContainer.HidePlayerControls .STV_BroadcastClose {
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0.3s;
+  bottom: -24px;
+}
+.videoContainer:hover.HidePlayerControls .videoControls,
+.videoContainer:hover.HidePlayerControls .STV_BroadcastClose {
+  transition-duration: 0.8s;
+}
+.videoControls .videoControlsBottom {
+  pointer-events: all;
+  background: linear-gradient(#1d1e2300 0%, #0009 40%, #000000f2 100%);
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+}
+.STV_BroadcastClose {
+  cursor: pointer;
+  opacity: 0.75;
+  z-index: 55;
+  background-color: #0002;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 10px;
+  padding: 6px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.ChatRoomGroup_Main_Content.chatHidden .STV_BroadcastClose {
+  margin-right: 40px;
+}
+.STV_BroadcastClose:hover {
+  opacity: 1;
+  background-color: #000a;
+}
+.STV_ReplayBanner {
+  z-index: 46;
+  color: #000;
+  white-space: nowrap;
+  background-image: url(../../../images/applications/appmgmt/rebroadcast.png?v=valveisgoodatcaching);
+  border-radius: 3px;
+  padding: 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  box-shadow: 0 0 10px #000;
+}
+.videoContainer.fullscreenVideo .STV_ReplayBanner {
+  font-size: 1.5vh;
+  line-height: 2vh;
+}
+.videoContainer.HidePlayerControls video {
+  cursor: none;
+}
+.BroadcastVideoWatchState,
+.BroadcastVideoUserInputNeeded {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: default;
+  z-index: 45;
+  background-color: #0009;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+.BroadcastVideoWatchState_Text {
+  text-align: center;
+  margin: 0 10%;
+}
+.BroadcastVideoUserInputNeeded {
+  cursor: pointer;
+}
+.BroadcastVideoUserInputNeeded:hover {
+  color: #fff;
+}
+.BroadcastVideoUserInputNeeded .SVGIcon_Play {
+  border: 1px solid #fff1;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 4px;
+  padding: 8px;
+}
+.BroadcastVideoUserInputNeeded .SVGIcon_Play path {
+  fill: #fff4;
+  stroke: #fff;
+  stroke-width: 6px;
+  stroke-dasharray: 0 576;
+  stroke-linecap: butt;
+  transition-property: stroke-dasharray, fill;
+  transition-duration: 0.12s;
+  transition-timing-function: ease-in-out;
+  transform: translate(20px);
+}
+.BroadcastVideoUserInputNeeded:hover .SVGIcon_Play path {
+  stroke-dasharray: 512 0;
+  fill: #fffc;
+}
+.videoTimelineMain {
+  outline: none;
+  width: 92%;
+  margin-top: 48px;
+  margin-left: 4%;
+  position: relative;
+}
+.videoTimelineMain .STV_timelineContainer {
+  padding-top: 0;
+  padding-bottom: 6px;
+}
+.videoTimelineMain .STV_timelineContainer:focus {
+  outline: none;
+}
+.videoTimelineMain ._DialogInputContainer {
+  margin: 0 0 16px;
+  padding: 0;
+}
+.SliderContainer {
+  cursor: pointer;
+  height: 22px;
+  padding-top: 6px;
+}
+.VideoTimelineSlider {
+  cursor: pointer;
+  user-select: none;
+  background-color: #405358;
+  border: none;
+  border-radius: 2px;
+  height: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  position: relative;
+  box-shadow:
+    0 1px 8px 2px #000,
+    1px 2px 28px #000;
+}
+.videoTimelineMain .STV_timelineGhostValue,
+.videoTimelineMain .STV_timelineValue,
+.videoTimelineMain .STV_timelineNoVideo {
+  background: linear-gradient(
+    90deg,
+    #368fa773 0,
+    #368fa780 calc(100% - 64px),
+    #5dc3ff 100%
+  );
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.videoTimelineMain .STV_timelineValue {
+  -webkit-mask:
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    0 0 / 4px 15px repeat-x;
+  mask:
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    0 0 / 5px 5px repeat-x;
+}
+.videoTimelineMain .STV_timelineGhostValue {
+  background: linear-gradient(
+    90deg,
+    #368fa7 0%,
+    #5dc3ff calc(100% - 4px),
+    #dcf2ff calc(100% - 1px) 100%
+  );
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: width 0.2s linear;
+}
+.videoTimelineMain .STV_timelineNoVideo {
+  background:
+    #3a3e46
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGimlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDAwOjI2OjEwLTA3OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE4LTA4LTE2VDAwOjQzLTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0xNlQwMDo0My0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzRkNjE4Y2MtMzc1Ny1iMjRmLTlmN2UtOGJlODkwNDczZGJmIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVjZTVmNjQwLTdhMDktYjY0YS1iNzQ0LTk5MTA1ZWVjMThmOSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjVjZTVmNjQwLTdhMDktYjY0YS1iNzQ0LTk5MTA1ZWVjMThmOSIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NWNlNWY2NDAtN2EwOS1iNjRhLWI3NDQtOTkxMDVlZWMxOGY5IiBzdEV2dDp3aGVuPSIyMDE4LTA4LTE2VDAwOjI2OjEwLTA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjFiNTYxMGI3LTgzZjYtY2I0YS04MjkwLThmMzQ2ZDc1OTQ5MSIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0xNlQwMDo0MjoyNy0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDozNGQ2MThjYy0zNzU3LWIyNGYtOWY3ZS04YmU4OTA0NzNkYmYiIHN0RXZ0OndoZW49IjIwMTgtMDgtMTZUMDA6NDMtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6q0R0kAAAAoElEQVRIibXNuQ2AMBBEUeoiIERQCYS0ALREU3SBLXEaH3vMShNM9H5VN63RumGetr0y1ftxNQncuvv4wFvHBwIdHPjryEBUhwVSOiaQ0QGBvK4NFHVVgKLLA0RdGKDrkgBLZwe4Oi8g0BkBmU4NiHVSQKOXA0q9ENDrucClLxo9GUDp8QBQjwSwehiA65+Ahf4EjPQzYKf7gKnuA6a62wFthz4cxE3MuQAAAABJRU5ErkJggg==)
+    0 0 / 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: width 0.2s linear;
+}
+.STV_timelineContainer.minimapActive .STV_timelineGhostValue {
+  transition: none;
+}
+.STV_BroadcastSettings,
+.videoControlsButtons {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.videoControlsButtons.LeftSpacer {
+  flex-shrink: 1;
+  width: calc(50% - 85px);
+}
+.videoControlsButtons.PlayControls {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.videoControlsButtons.GoLive {
+  text-align: left;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  width: 110px;
+}
+.STV_BroadcastSettings {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.videoControlButton {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  transition-property: filter, width, height, margin;
+  transition-duration: 0.12s;
+  transition-timing-function: ease-in-out;
+  position: relative;
+}
+.videoControlButton:hover {
+  filter: brightness(1.3);
+}
+.STV_BroadcastSettings .videoControlButton {
+  width: 18px;
+  height: 18px;
+}
+.STV_BroadcastSettings .videoControlButton .SVGIcon_Settings path {
+  fill: #0000;
+  stroke: #7e7e7e;
+  stroke-width: 10px;
+}
+.STV_BroadcastSettingsPanel {
+  text-align: right;
+  z-index: 7;
+  background: #000c;
+  border: 1px solid #333e;
+  margin-top: -156px;
+  margin-left: -64px;
+  padding: 8px;
+  position: absolute;
+}
+.STV_BroadcastSettingsPanel.SubtitlesMenu {
+  padding-right: 0;
+  overflow: hidden scroll;
+}
+.STV_BroadcastContextMenuPanel {
+  text-align: center;
+  z-index: 44;
+  background: #000c;
+  border: 1px solid #333e;
+  padding: 8px;
+  position: absolute;
+}
+.STV_BroadcastSettingsMenuItems {
+  background: #234e;
+  font-size: 12px;
+}
+.STV_BroadcastSettingsMenuItems .contextMenuItem {
+  cursor: pointer;
+  padding: 2px 12px;
+}
+.STV_BroadcastSettingsMenuItems .contextMenuItem:hover {
+  color: #fff;
+  background-color: #3d5b79;
+}
+.STV_BroadcastSettingsMenuItems .contextMenuItem.menuChecked {
+  font-weight: 700;
+  position: relative;
+}
+.STV_BroadcastSettingsMenuItems .menuChecked .contextMenuCheckMark {
+  top: 9px;
+  right: 4px;
+  left: initial;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+}
+.settingsMenuSeparator {
+  background-color: #536d84;
+  width: calc(100% - 8px);
+  height: 1px;
+  margin: 4px;
+}
+.videoControlButton .SVGIcon_Button {
+  margin-left: 6px;
+}
+.videoControlButton.controlFlip .SVGIcon_Button {
+  margin-left: -6px;
+}
+.videoControlButton.videoControlJump {
+  align-items: center;
+  display: flex;
+}
+.videoControlButton .SVGIcon_Button polyline,
+.videoControlButton .SVGIcon_Button path {
+  fill: #7e7e7e;
+  transition: fill 0.12s ease-in-out;
+}
+.videoControlButton:hover .SVGIcon_Button polyline,
+.videoControlButton:hover .SVGIcon_Button path,
+.BroadcastVolumeControl:hover .SVGIcon_Button polyline,
+.BroadcastVolumeControl:hover .SVGIcon_Button path {
+  fill: #dadada;
+}
+.STV_BroadcastSettings
+  .videoControlButton.VideoSettingsOpen
+  .SVGIcon_Button
+  polyline,
+.STV_BroadcastSettings
+  .videoControlButton.VideoSettingsOpen
+  .SVGIcon_Button
+  path {
+  fill: #6dcff6;
+  stroke: #6dcff6;
+}
+.videoControlButton.jumpToMarker .Arrow,
+.videoControlButton.jumpToMarker .preArrowBox {
+  fill: #b29a7c;
+}
+.videoControlButton.jumpToMarker:not(.noMarkersInDirection):hover .Arrow,
+.videoControlButton.jumpToMarker:not(.noMarkersInDirection):hover .preArrowBox {
+  fill: #ffead1;
+}
+.videoControlButton.jumpToMarker.noMarkersOrSegments {
+  visibility: hidden;
+  display: none;
+}
+.videoControlButton.jumpToMarker.noMarkersInDirection {
+  cursor: default;
+}
+.videoControlButton.jumpToMarker.noMarkersInDirection .Arrow,
+.videoControlButton.jumpToMarker.noMarkersInDirection .preArrowBox {
+  fill: #66635e;
+}
+.videoControlButton.videoControlGoLive {
+  width: fit-content;
+  display: flex;
+}
+.videoControlButton.videoControlGoLive .SVGIcon_Button {
+  width: 32px;
+}
+.videoControlButton.videoControlGoLive .Arrow {
+  fill: #216c91;
+}
+.videoControlButton.videoControlGoLive:hover .Arrow {
+  fill: #3da5da;
+}
+.videoControlButton.videoControlGoLive .jumpGoLive {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #216c91;
+  border-radius: 2px;
+  height: 17.5px;
+  margin-top: 7px;
+  margin-left: -6px;
+  margin-right: -60px;
+  padding: 1px 6px 0;
+  font-size: 12px;
+  line-height: 15px;
+  transition-property: background-color, color;
+  transition-duration: 0.12s;
+  transition-timing-function: ease-in-out;
+}
+.videoControlButton.videoControlGoLive:hover .jumpGoLive {
+  background-color: #3da5da;
+}
+.videoControlButton.videoControlGoLive.isLiveEdge:hover .jumpGoLive,
+.videoControlButton.videoControlGoLive.isLiveEdge .jumpGoLive {
+  color: #3da5da;
+  background-color: #0000;
+}
+.videoControlButton.videoControlGoLive.isLiveEdge svg {
+  display: none;
+}
+.videoControlButton.videoControlGoLive.isLiveEdge {
+  cursor: default;
+}
+.videoControlButton .jumpAheadValue {
+  color: #141823;
+  font-size: 12px;
+  position: absolute;
+  left: 9px;
+}
+.videoControlButton.buttonPlayPause {
+  background-color: #7e7e7e1a;
+  border: 1px solid #7e7e7e80;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+.videoControlButton.buttonPlayPause .SVGIcon_Play {
+  width: 80%;
+  height: 80%;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.videoControlButton.buttonPlayPause .SVGIcon_Pause {
+  width: 75%;
+  height: 75%;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+.videoControlButton.buttonPlayPause .SVGIcon_Button path {
+  fill: #fff;
+}
+.videoControlButton.buttonPlayPause:hover {
+  background-color: #7e7e7e;
+  border: 1px solid #7e7e7e;
+}
+.videoControlButton .SVGIcon_Button.SVGIcon_ClosedCaption {
+  width: 24px;
+  height: 24px;
+  margin-top: -2px;
+  margin-left: -2px;
+}
+.videoControlButton .SVGIcon_Button.SVGIcon_ClosedCaption path.CCBox {
+  fill: #0000;
+  stroke: #7e7e7e;
+}
+.videoControlButton.ClosedCaptionsActive
+  .SVGIcon_Button.SVGIcon_ClosedCaption
+  path.CCBox {
+  fill: #ccc;
+  stroke: #000;
+}
+.videoControlButton.ClosedCaptionsActive
+  .SVGIcon_Button.SVGIcon_ClosedCaption
+  path.C1 {
+  fill: #000;
+  stroke: #7e7e7e;
+}
+.BroadcastVolumeControl {
+  cursor: pointer;
+  width: 34px;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+.BroadcastVolumeControl.ShowVolumeSlider {
+  width: 99px;
+}
+.BroadcastVolumeControl_FixedLayout {
+  flex-direction: row;
+  align-items: center;
+  width: 99px;
+  display: flex;
+}
+.BroadcastVolumeControl .videoControlButton {
+  margin-right: 16px;
+}
+.BroadcastVolumeControl.muted .SVGIcon_Volume .SoundWaves {
+  display: none;
+}
+.BroadcastVolumeControl.muted .SVGIcon_Volume .SoundX line {
+  stroke: #7e7e7e;
+  stroke-width: 10px;
+}
+.BroadcastVolumeControl.muted:hover .SVGIcon_Volume .SoundX line {
+  stroke: #dadada;
+}
+.BroadcastVolumeControl .videoControlButton .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton .SoundWavesHigh,
+.BroadcastVolumeControl .videoControlButton .SoundWavesMed {
+  transition-property: opacity;
+  transition-duration: 0.32s;
+  transition-timing-function: ease-in-out;
+}
+.BroadcastVolumeControl .videoControlButton.HighVolume .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton.MedVolume .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton.MedVolume .SoundWavesHigh,
+.BroadcastVolumeControl .videoControlButton.LowVolume .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton.LowVolume .SoundWavesHigh,
+.BroadcastVolumeControl .videoControlButton.LowVolume .SoundWavesMed {
+  opacity: 0;
+}
+.BroadcastVolumeSlider {
+  cursor: pointer;
+  width: 50px;
+  height: 22px;
+  position: relative;
+}
+.BroadcastVolumeSlider_Track {
+  background-color: #7e7e7e;
+  position: absolute;
+  inset: 10px 0;
+}
+.BroadcastVolumeSlider_Fill {
+  background-color: #dadada;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+}
+.BroadcastVolumeSlider_Thumb {
+  background-color: #dadada;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  margin-left: -6px;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+}
+.STV_timelineGrabber_Wrapper {
+  z-index: 6;
+  align-items: center;
+  width: 24px;
+  height: 54px;
+  margin-left: -14px;
+  display: flex;
+  position: absolute;
+  top: -25px;
+  bottom: -3px;
+}
+.videoTimelineMain .STV_timelineGrabber {
+  -webkit-app-region: no-drag;
+  pointer-events: none;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -100%;
+  transition: transform ease-in-out;
+  display: flex;
+}
+.STV_timelineContainer .STV_timelineGrabber .rightarrow,
+.STV_timelineContainer .STV_timelineGrabber .leftarrow {
+  transform-origin: 50%;
+  transform: scaleX(0);
+}
+.STV_timelineContainer:not(.grabberDown)
+  .STV_timelineGrabber.grabberOffScreenRight
+  .rightarrow,
+.STV_timelineContainer:not(.grabberDown)
+  .STV_timelineGrabber.grabberOffScreenLeft
+  .leftarrow {
+  opacity: 1;
+  fill: #5dc2fe;
+  stroke: #000;
+  stroke-width: 10px;
+  transition-property: transform, opacity, fill, stroke;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(1);
+}
+.STV_timelineContainer:not(.grabberDown)
+  .STV_timelineGrabber.grabberOffScreenRight
+  .grabber,
+.STV_timelineContainer:not(.grabberDown)
+  .STV_timelineGrabber.grabberOffScreenLeft
+  .grabber {
+  opacity: 1;
+  fill: #5dc2fe;
+  stroke: #000;
+  stroke-width: 10px;
+  transition-property: transform, opacity, fill, stroke;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
+  transform: scale(1);
+}
+.STV_timelineGrabberArrow {
+  pointer-events: all;
+  width: 24px;
+  height: 44px;
+  margin-top: -6px;
+  margin-left: 26px;
+}
+.STV_timelineGrabberArrow .SVGIcon_STVTimelineGrabber .grabber {
+  transform-origin: 50%;
+  fill: #5dc2fe;
+  stroke: #000;
+  stroke-width: 6px;
+  vector-effect: non-scaling-stroke;
+  transform: scale(2, 1.25);
+}
+.STV_timelineGrabberArrow:hover .SVGIcon_STVTimelineGrabber .grabber {
+  fill: #fff;
+}
+.STV_timelineMinimapContainer .STV_timelineMapCurTime {
+  background-color: #fff;
+  width: 2px;
+  height: 6px;
+  margin-left: -1px;
+  display: none;
+  position: absolute;
+  top: 6px;
+}
+.STV_timelineGrabberValue {
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  z-index: 2;
+  background: linear-gradient(#5dc3ff 0% 80%);
+  border-radius: 2px;
+  flex: 0;
+  width: fit-content;
+  padding: 0 3px;
+  font-size: 10px;
+  box-shadow: 0 -4px 5px 2px #0003;
+}
+.timelineMarker {
+  z-index: 1;
+  width: 8px;
+  height: 32px;
+  position: absolute;
+  top: -8px;
+  left: 10%;
+}
+.timelineMarkerIcon {
+  pointer-events: none;
+  width: 24px;
+  height: 32px;
+  margin-left: -8px;
+}
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker {
+  fill: #b29a7c;
+  stroke: #000;
+  stroke-width: 6px;
+}
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker .pointer {
+  fill: #886b48;
+  transform-origin: 50%;
+  transition-property: transform, fill;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
+  transform: scale(0.6) translateY(26px);
+}
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .pointer {
+  transform: scale(1) translateY(0);
+}
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker .line {
+  transform-origin: 50%;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 0.5px;
+  transform: scaleX(2);
+}
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker {
+  cursor: pointer;
+}
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .line {
+  fill: #ffe9cd;
+}
+.STV_timelineSegmentsContainer {
+  flex-direction: row;
+  width: 100%;
+  height: 16px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.noSegments .STV_timelineSegmentsContainer {
+  display: none;
+}
+.STV_timelineSegment {
+  cursor: pointer;
+  flex-direction: row;
+  height: 16px;
+  margin-right: 2px;
+  font-size: 10px;
+  transition: opacity 0.1s linear;
+  display: flex;
+  position: absolute;
+}
+.STV_timelineSegment:hover {
+  z-index: 5;
+  text-shadow:
+    0 0 2px #000,
+    1px 1px 3px #000;
+}
+.STV_timelineSegment:hover .STV_timelineSegmentBackFill,
+.STV_timelineSegment:hover .STV_timelineSegmentFrontFill {
+  opacity: 1;
+}
+.STV_timelineSegment:hover div {
+  border-color: #cacaca;
+}
+.STV_timelineSegmentFrontFill {
+  opacity: 0.3;
+  pointer-events: none;
+  border: 0 solid #0000;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  width: 8px;
+  height: 100%;
+  margin-top: 6px;
+  margin-right: 4px;
+  transition: opacity 0.1s ease-in-out;
+}
+.STV_timelineSegment.hideFront .STV_timelineSegmentFrontFill {
+  border-top-style: dotted;
+  border-left: 0 solid #0000;
+}
+.STV_timelineSegmentLabel {
+  flex-shrink: 0;
+  transition: color 0.1s ease-in-out;
+}
+.STV_timelineSegment:hover .STV_timelineSegmentLabel {
+  color: #fff !important;
+}
+.STV_timelineSegmentBackFill {
+  opacity: 0.3;
+  pointer-events: none;
+  border-top: 1px solid gray;
+  border-bottom: 0 solid #0000;
+  border-left: 0 solid #0000;
+  border-right: 1px solid gray;
+  flex: 1;
+  height: 100%;
+  margin-top: 6px;
+  margin-left: 4px;
+  transition: opacity 0.1s ease-in-out;
+}
+.STV_timelineMinimapContainer {
+  flex: 1;
+  height: 22px;
+  margin-top: 72px;
+  margin-right: 32px;
+  position: relative;
+}
+.STV_timelineMinimap {
+  width: 100%;
+  height: 6px;
+  padding: 7px 0 6px;
+}
+.STV_timelineMinimapLine {
+  background-color: #405358;
+  width: 100%;
+  height: 3px;
+}
+.STV_timelineMinimapLine.Played {
+  background: #216c91
+    linear-gradient(90deg, #368fa7 0 calc(100% - 6px), #5dc3ff 100%);
+  transition-property: background, background-color, top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  top: 7px;
+}
+.STV_timelineMapWindow {
+  backdrop-filter: brightness(160%);
+  box-sizing: border-box;
+  border: 1px dashed #fff2;
+  border-left: 0 solid #fff0;
+  border-right: 0 solid #fff0;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: -2px;
+}
+.STV_timelineMapWindowCenter {
+  cursor: pointer;
+  background-color: #06f1;
+  flex: 1;
+}
+.STV_timelineMapWindowCenter:hover {
+  background-color: #94bfff25;
+}
+.STV_timelineMapWindowEdge {
+  cursor: ew-resize;
+  background-color: #d5e4ff80;
+  flex-shrink: 0;
+  width: 4px;
+  height: 100%;
+}
+.STV_timelineMapWindowEdge:hover {
+  cursor: ew-resize;
+  background-color: #fff;
+}
+.STV_BroadcastController {
+  flex-direction: row;
+  align-items: center;
+  margin: 0 64px;
+  display: flex;
+}
+.STV_BroadcastTooltip {
+  color: #fff;
+  user-select: none;
+  z-index: 1000;
+  background-color: #216c91;
+  border-radius: 4px;
+  padding: 0 4px;
+  font-size: 12px;
+  position: absolute;
+  box-shadow:
+    0 1px 8px 2px #00000080,
+    2px 3px 32px #000c;
+}
+.dash_video_stats {
+  color: #cfdae4;
+  backdrop-filter: blur(8px);
+  z-index: 40;
+  background: #283c52a6;
+  border: 1px solid #000;
+  margin: 6px;
+  padding: 8px;
+  font: 14px sans-serif;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.dash_video_stats .videoStatsValue {
+  color: #fff;
+}
+.dash_video_stats .dash_stat_close_button {
+  cursor: pointer;
+  background: #0005;
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 2px;
+}
+.dash_video_stats .dash_stat_close_button:focus,
+.dash_video_stats .dash_stat_close_button:active {
+  outline: none;
+}
+.dash_video_stats .dash_stat_close_button svg {
+  width: 100%;
+  height: 100%;
+}
+.dash_video_stats .dash_stat_close_button svg line {
+  stroke: #c9d3df;
+  stroke-width: 24px;
+}
+.dash_video_stats .dash_stat_close_button:hover svg line {
+  stroke: #fff;
+}
+.dash_stat_close_button {
+  float: right;
+}
+.BroadcastTab {
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+.ToggleBroadcastChat {
+  cursor: pointer;
+  background-color: #7a6ebe;
+  border-radius: 2px;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  margin: 8px 16px 8px 0;
+  padding: 7px;
+}
+.ToggleBroadcastChat .SVGIcon_DoubleArrow {
+  transition-property: transform;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
+  transform: rotate(180deg);
+}
+.ChatCollapsed .ToggleBroadcastChat .SVGIcon_DoubleArrow {
+  transform: rotate(0);
+}
+.BroadcastTabHeaderContainer {
+  justify-content: flex-end;
+  display: flex;
+}
+.TheaterMode .BroadcastTabHeaderContainer {
+  display: none;
+}
+.BroadcastTab_OverBackground {
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+.BroadcastTab_HeaderRow {
+  place-content: center flex-end;
+  align-items: center;
+  width: 356px;
+  display: flex;
+}
+.BroadcastContainer {
+  flex-direction: row;
+  flex-grow: 1;
+  min-height: 0;
+  margin-left: 4px;
+  padding: 0 16px 18px;
+  display: flex;
+}
+.multiChatDialog .BroadcastContainer {
+  padding: 0 2px 0 0;
+}
+.TheaterMode .BroadcastContainer {
+  height: 100%;
+  padding: 0;
+}
+.BroadcastChat {
+  background-color: #22252b;
+  flex: 1;
+  min-width: 340px;
+  max-width: 340px;
+  font-size: 0;
+  position: relative;
+}
+.BroadcastChat iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+.BroadcastSection,
+.BroadcastContainerSection {
+  flex-direction: column;
+  flex-basis: content;
+  background-color: #000;
+  flex-shrink: 0;
+  max-width: 100%;
+  display: flex;
+}
+.BroadcastSection {
+  width: 100%;
+  max-width: 100%;
+  max-height: calc(100% - 50px);
+  position: relative;
+}
+.BroadcastContainerSection {
+  overflow: auto scroll;
+}
+.BroadcastDetailsSection {
+  user-select: none;
+  flex: 1;
+  display: flex;
+}
+.TheaterMode .BroadcastSection {
+  max-height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.TheaterMode .BroadcastDetailsSection {
+  display: none;
+}
+.BroadcastDetailsSection .BroadcastDetails {
+  background-color: #00000026;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  padding: 0 8px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.BroadcastDetailsSection .BroadcastDetails .StoreSaleWidgetOuterContainer {
+  min-width: 520px;
+}
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
+  box-sizing: border-box;
+  z-index: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  padding: 8px;
+  font-size: 16px;
+  display: flex;
+}
+.BroadcastDetailsHeader_ViewerCount {
+  pointer-events: none;
+  height: 20px;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+}
+.BroadcastDetailsHeader_ViewerCount .SVGIcon_Viewers {
+  width: 16px;
+  height: 16px;
+  margin-bottom: -3px;
+  margin-right: 10px;
+}
+.BroadcastButton.WatchWithFriends .SVGIcon_Viewers .backGuy {
+  fill: #fff;
+}
+.BroadcastButton.WatchWithFriends .SVGIcon_Viewers .frontGuy {
+  fill: #b6c3f8;
+}
+.videoContainer .BroadcastDetailsHeader_ViewerCount {
+  margin-left: 0;
+}
+.videoContainer .videoBackground,
+.BroadcastDetailsSection .BroadcastDetails .broadcastDetailsThumbBlur {
+  opacity: 0.6;
+  user-select: none;
+  filter: blur(24px) saturate(2) brightness(1.21);
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  position: absolute;
+  inset: 0;
+  mask-image: linear-gradient(90deg, #00000080 -25%, #0000 100%);
+}
+.BroadcastDetailsSection .BroadcastDetails .ImpressionTrackedElement {
+  max-width: 940px;
+}
+.videoContainer .videoBackground {
+  opacity: 0.4;
+  mask-image: none;
+}
+.BroadcastDetails .BroadcastDetailsHeader .AppTitle {
+  color: #c1c6cf;
+  flex-shrink: 0;
+}
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastTitle {
+  color: #777;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastLink {
+  color: #778494;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 14px;
+}
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastLink:hover {
+  color: #aaa;
+}
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastLanguage {
+  color: #8277b1;
+  cursor: pointer;
+  flex-direction: row;
+  flex-shrink: 0;
+  align-items: center;
+  display: flex;
+}
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader .Info {
+  align-items: center;
+  display: flex;
+}
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader .Actions {
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-end;
+  margin-left: 40px;
+  display: flex;
+}
+.BroadcastDetailsSection
+  .BroadcastDetails
+  .BroadcastDetailsHeader
+  .ContextMenuButton {
+  opacity: 1;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding-top: 4px;
+  display: flex;
+}
+.BroadcastDetailsSection
+  .BroadcastDetails
+  .BroadcastDetailsHeader
+  .ContextMenuButton
+  .SVGIcon_DownArrowContextMenu {
+  fill: #8277b1;
+  stroke-width: 8px;
+  stroke: #8277b1;
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+}
+.BroadcastChatDivider {
+  z-index: 1;
+  background-color: #333741;
+  border: 0.5px solid #121216;
+}
+.TheaterMode .BroadcastChatDivider {
+  background-color: #121314;
+}
+.TheaterMode .BroadcastChatDivider:hover,
+.BroadcastChatDivider:hover {
+  background-color: #40464f;
+}
+.BroadcastTheaterToggle,
+.BroadcastChatPositionToggle,
+.BroadcastFullscreenToggle {
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.BroadcastChatPositionToggle.bottom {
+  background-image: url(../../../images/applications/appmgmt/icon_view_chatbottom.png?v=valveisgoodatcaching);
+  margin-right: 4px;
+}
+.BroadcastChatPositionToggle.right {
+  background-image: url(../../../images/applications/appmgmt/icon_view_chatright.png?v=valveisgoodatcaching);
+  margin-right: 4px;
+}
+.BroadcastFullscreenToggle {
+  background-image: url(../../../images/applications/appmgmt/icon_view_fullscreen.png?v=valveisgoodatcaching);
+  margin-left: 4px;
+}
+.BroadcastTheaterToggle {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF+mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA4LTE2VDIyOjA4OjU2LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wOC0yMlQwMTo0NTo1NS0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wOC0yMlQwMTo0NTo1NS0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3YTg2NzRiMS00YTZlLWI1NDYtYWZlZi1lNzg0NGRjMDM0OTUiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDoyNzVmZDViNS1jZTMyLWVjNDYtYTNjYi0yMWRkOTdlYjdhZjQiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiNGJkNTdkNC0yZjMxLWQzNDUtYTE2My1hOGM0ODdiNGI1NzQiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmI0YmQ1N2Q0LTJmMzEtZDM0NS1hMTYzLWE4YzQ4N2I0YjU3NCIgc3RFdnQ6d2hlbj0iMjAxOC0wOC0xNlQyMjowODo1Ni0wNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo3YTg2NzRiMS00YTZlLWI1NDYtYWZlZi1lNzg0NGRjMDM0OTUiIHN0RXZ0OndoZW49IjIwMTgtMDgtMjJUMDE6NDU6NTUtMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6X//lCAAAALklEQVRIiWOoq6v7PxCYAcpgIBf///+fZDxq8ajFoxaPWjxq8ajFoxZjtZjuGAA6L7Opo1B2PwAAAABJRU5ErkJggg==);
+}
+.BroadcastChatDivider.horizontal {
+  cursor: ew-resize;
+  width: 6px;
+  min-width: 6px;
+  height: 100%;
+}
+.BroadcastChatDivider.vertical {
+  cursor: ns-resize;
+  width: 100%;
+  height: 6px;
+  min-height: 6px;
+}
+.chatWindow.broadcastVisible .chatBody {
+  flex: 1 0;
+  min-height: 200px;
+}
+.videoContainer {
+  flex-direction: column;
+  flex-basis: content;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.videoContainer .BroadcastDetails {
+  text-shadow:
+    0 0 2px #000,
+    1px 1px 3px 4px #000,
+    1px 1px 8px 6px #000;
+  background: linear-gradient(#000000bf 0%, #0009 40%, #1d1e2300 100%);
+  height: 64px;
+  padding: 8px 16px;
+  font-size: 20px;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  display: none;
+}
+.videoContainer.HidePlayerControls .BroadcastDetails {
+  transform: translateY(-24px);
+}
+.TheaterMode .videoContainer .BroadcastDetails,
+.videoContainer.fullscreenVideo .BroadcastDetails {
+  display: block;
+}
+.videoContainer .BroadcastDetails .BroadcastDetailsHeader .BroadcastTitle {
+  color: #ccc;
+}
+.videoContainer .BroadcastDetails .BroadcastDetailsHeader .AppTitle {
+  color: #eceff5;
+}
+.videoContainerSizer {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.videoSrc {
+  z-index: 2;
+  object-fit: contain;
+  background-color: #18191d;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  max-width: 100%;
+  height: 100%;
+  transition-property: filter;
+  transition-duration: 60ms;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.videoContainer.VideoPaused .videoSrc {
+  filter: saturate(0.5) brightness(0.96);
+}
+iframe.steamTVLogin {
+  border: none;
+  width: 800px;
+  max-width: 100%;
+  height: 60vh;
+  max-height: 500px;
+}
+.DialogContent.SteamTVLoginDialog {
+  width: 800px;
+  max-width: 100%;
+  padding: 0;
+}
+.DialogContent.SteamTVLoginDialog > .DialogContent_InnerWidth {
+  max-width: 800px;
+}
+.FullpageBroadcastBackdrop {
+  filter: blur(50px);
+  opacity: 0.5;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+.StandalonePlayer .FullpageBroadcastBackdrop {
+  z-index: -100;
+}
+.BroadcastButton {
+  color: #fff;
+  user-select: none;
+  background: linear-gradient(90deg, #36f, #7d6ebc);
+  border-radius: 2px;
+  padding: 8px 32px;
+  font-size: 14px;
+  display: inline-block;
+}
+.StandalonePlayerHeader {
+  background-color: #171a214d;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(90deg, #33667a80, #00cbff80) 100% 1;
+  justify-content: space-between;
+  height: 71px;
+  display: flex;
+}
+.StandalonePlayer.TheaterMode .StandalonePlayerHeader {
+  display: none;
+}
+.StandalonePlayerHeader .Logo {
+  background-image: url(../../../images/applications/appmgmt/logo_steamtv.png?v=valveisgoodatcaching);
+  width: 154px;
+  height: 46px;
+  margin: 12px 0 0 20px;
+  display: inline-block;
+}
+.BroadcastContainerSectionVideoContainer {
+  max-height: calc(100vh - 150px);
+  position: relative;
+}
+.StandalonePlayer .BroadcastContainerSectionVideoContainer {
+  max-height: calc(100vh - 150px);
+}
+.TheaterMode .BroadcastContainerSectionVideoContainer {
+  max-height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.BroadcastStreamDetails {
+  padding: 10px;
+}
+.WatchWithFriends {
+  cursor: pointer;
+  flex: 1;
+  justify-content: center;
+  margin: 0 16px 0 4px;
+  display: flex;
+}
+.WatchWithFriends svg {
+  vertical-align: top;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.BroadcastStreamDetails .BroadcastAppName {
+  color: #fff;
+  margin-left: 5px;
+  font-size: 18px;
+  display: inline-block;
+}
+.BroadcastStreamDetails .BroadcastTitle {
+  color: #778494;
+  margin-left: 10px;
+  font-size: 18px;
+  display: inline-block;
+}
+.BroadcastStreamDetails .BroadcastLanguage {
+  color: #9582e7;
+  font-size: 18px;
+}
+.StandalonePlayer,
+.StandalonePlayer .BroadcastContainerSection,
+.StandalonePlayer .BroadcastContainer {
+  background: 0 0;
+}
+.StandalonePlayer.TheaterMode,
+.TheaterMode .BroadcastContainerSection,
+.TheaterMode .BroadcastContainer {
+  height: 100%;
+}
+.StandalonePlayer .BroadcastStreamDetails {
+  background-color: #0006;
+  padding: 12px 5px;
+}
+.STV_Logo {
+  align-content: center;
+  align-items: center;
+  margin-left: 16px;
+  display: flex;
+}
+.STV_Logo .SVGIcon_SteamTV {
+  width: 152px;
+  height: 38px;
+  margin-right: 3px;
+}
+.STV_Logo_STEAM,
+.STV_Logo_TV {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7d6ebc;
+  user-select: none;
+  font-size: 20px;
+  font-weight: 0;
+}
+.STV_Logo_TV {
+  margin-top: 1px;
+  font-family:
+    Motiva Sans,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: 300;
+}
+.STV_Logo_STEAM {
+  background: linear-gradient(90deg, #5b6adb 0%, #7d6ebc 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-right: 1px;
+  font-weight: 700;
+}
+.STV_Logo .SVGIcon_Throbber #mainOutline path {
+  stroke-width: 0;
+}
+.STV_Logo .SVGIcon_Throbber #mainOutline path,
+.STV_Logo .SVGIcon_Throbber #partCircle path {
+  display: none;
+}
+.STV_Logo .SVGIcon_Throbber #mainOutline .steamTV {
+  display: block;
+}
+.STV_Logo .SVGIcon_Throbber #topCircle circle {
+  stroke: #5069e5;
+}
+.STV_Logo .SVGIcon_Throbber #bottomCircle path {
+  fill: #4367f0;
+  stroke-width: 0;
+}
+.BroadcastOffline {
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+}
+.LinkOverlayContainer {
+  z-index: 30;
+  -webkit-app-region: no-drag;
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+.LinkOverlayValidRegion {
+  -webkit-app-region: no-drag;
+  width: 100%;
+  height: 85%;
+  position: relative;
+}
+.LinkOverlayInvalidRegion {
+  opacity: 1;
+  background-color: #0003;
+  background-size: 16px;
+  border-top: 1px solid #65a4d440;
+  border-bottom: 1px solid #65a4d440;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+  display: flex;
+}
+.LinkOverlayInvalidRegion > div {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #80c1f3;
+  text-align: center;
+  vertical-align: middle;
+  text-shadow:
+    1px 1px 2px 4px #000,
+    1px 1px 3px 3px #000;
+  align-self: center;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 100;
+}
+.LinkRegion {
+  opacity: 0.1;
+  background-color: #ff0;
+  width: 20%;
+  height: 10%;
+  display: table;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+.LinkRegion:hover {
+  opacity: 0.5;
+}
+.LinkRegionText {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+.AddLinkRegion,
+.SaveLinkRegion {
+  color: #3b7fee;
+  z-index: 51;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #000a;
+  border: 1px solid #3b7fee8a;
+  padding: 8px;
+  font-size: 12px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.AddLinkRegion:hover,
+.SaveLinkRegion:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.SaveLinkRegion {
+  top: 45px;
+}
+@media screen and (width <= 420px) and (height >= 420px) {
+  .BroadcastContainer {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  .StandalonePlayer .BroadcastContainerSectionVideoContainer {
+    flex: 1;
+  }
+  .StandalonePlayer .BroadcastContainerSection {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .BroadcastContainerSection {
+    flex: none;
+    align-self: stretch;
+  }
+  .BroadcastTab_HeaderRow {
+    width: 100%;
+  }
+  .BroadcastDetailsSection {
+    flex-basis: auto;
+    max-height: 32px;
+    display: none;
+  }
+  .BroadcastChatDivider.horizontal {
+    width: 100%;
+    height: 6px;
+    display: none;
+  }
+  .BroadcastChatDiv {
+    height: 100%;
+  }
+  .StandalonePlayer .LoginDiv,
+  .BroadcastDetailsSection .BroadcastDetails .broadcastDetailsThumbBlur,
+  .WatchWithFriends {
+    display: none;
+  }
+  .BroadcastChat {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .StandalonePlayerHeader {
+    z-index: 12;
+    background: 0 0;
+    border: none;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .StandalonePlayer {
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+  }
+  .StandalonePlayer .BroadcastContainer {
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+  }
+  .StandalonePlayer .FullpageBroadcastBackdrop {
+    position: absolute;
+  }
+  .StandalonePlayer .videoSrc {
+    inset: 0;
+  }
+  .BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
+    font-size: 12px;
+  }
+  .dash_video_stats {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .STV_BroadcastController {
+    margin: 0;
+  }
+  .STV_BroadcastSettings {
+    filter: brightness(1.3);
+    background-color: #0008;
+    border-radius: 8px;
+    padding-right: 16px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+  .STV_BroadcastSettingsPanel {
+    margin-top: 28px !important;
+  }
+}
+@media screen and (width <= 830px) and (height <= 420px) {
+  .BroadcastContainer {
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .StandalonePlayerHeader {
+    z-index: 12;
+    background: 0 0;
+    border: none;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .STV_BroadcastSettings {
+    filter: brightness(1.3);
+    background-color: #0008;
+    border-radius: 8px;
+    padding-right: 16px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+  .WatchWithFriends {
+    display: none;
+  }
+  .STV_BroadcastSettingsPanel {
+    margin-top: 28px !important;
+  }
+  .StandalonePlayer {
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+  }
+  .StandalonePlayer .BroadcastContainerSectionVideoContainer {
+    flex: 1;
+    max-height: calc(100% - 32px);
+  }
+  .StandalonePlayer .FullpageBroadcastBackdrop {
+    position: absolute;
+  }
+  .StandalonePlayer .BroadcastContainerSection {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .StandalonePlayer .BroadcastChatDivider.horizontal,
+  .StandalonePlayer .BroadcastChatDiv {
+    display: none !important;
+  }
+  .BroadcastContainerSection {
+    flex: auto;
+    align-self: stretch;
+  }
+  .BroadcastDetailsSection {
+    flex-basis: auto;
+    max-height: 32px;
+  }
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .STV_BroadcastController {
+  margin: 0;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .LeftSpacer {
+  display: none;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlsButtons {
+  width: fit-content;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode)
+  .videoControlButton.videoControlGoLive
+  .SVGIcon_Button {
+  margin-left: 0;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode)
+  .STV_BroadcastSettings
+  .videoControlButton.videoControlFitWidth {
+  width: fit-content;
+}
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoTimelineMain {
+  margin-top: 0;
+}
+@media screen and (width <= 1735px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.videoControlJump,
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.VideoSettings {
+    display: none;
+  }
+}
+@media screen and (width <= 1434px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .BroadcastVolumeSlider {
+    display: none;
+  }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .BroadcastVolumeControl.ShowVolumeSlider,
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .BroadcastVolumeControl_FixedLayout {
+    width: initial;
+  }
+}
+@media screen and (width <= 1275px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.videoControlGoLive:not(.isLiveEdge) {
+    margin-left: -10px;
+  }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.buttonPlayPause {
+    width: 24px;
+    height: 24px;
+  }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.buttonPlayPause
+    .SVGIcon_Pause {
+    margin-top: 3px;
+    margin-left: 3px;
+  }
+}
+@media screen and (width <= 1180px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode)
+    .videoControlButton.videoControlGoLive {
+    display: none;
+  }
+}
+.SZg1nSrRKQw- {
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+._6iOFTW4uJG8- {
+  object-fit: contain;
+  background-color: #000;
+  max-width: 100%;
+  height: 100%;
+}
+.-E3lTjmAU0M- {
+  z-index: 5;
+  opacity: 1;
+  background: linear-gradient(#000000f2 0%, #0009 60%, #1d1e2300 100%);
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  transform: translateY(0%);
+}
+.HidePlayerControls .-E3lTjmAU0M- {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+img.eyYzaS8MDnA- {
+  z-index: 2;
+  height: 100%;
+  max-width: unset;
+}
+/*$vite$:1*/

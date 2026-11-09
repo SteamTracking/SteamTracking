@@ -9,7 +9,7 @@ function _() {
   );
 }
 async function _() {
-  _() && (await _(() => import(`./Bx4V5Q2H.js`), [], import.meta.url)).apply();
+  _() && (await _(() => import(`./chunk.js`), [], import.meta.url)).apply();
 }
 var _ = _();
 _();

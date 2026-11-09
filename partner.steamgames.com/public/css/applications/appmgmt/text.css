@@ -1,0 +1,76 @@
+.oDEFTUumdv8- {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  color: var(--text-color, var(--color-text-body-body));
+  font-size: var(--font-size, var(--default-font-size));
+  line-height: var(--line-height, var(--default-line-height));
+  letter-spacing: var(--letter-spacing, var(--default-letter-spacing));
+}
+.oDEFTUumdv8-:where(.Ic04FuZ-TKg-) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+}
+.kvJw29bpEN0- {
+  --font-size: var(--text-size-1);
+  --line-height: var(--line-height-1);
+  --letter-spacing: var(--letter-spacing-1);
+}
+.GeWSoC6e568- {
+  --font-size: var(--text-size-2);
+  --line-height: var(--line-height-2);
+  --letter-spacing: var(--letter-spacing-2);
+}
+.La-YYLx2qY0- {
+  --font-size: var(--text-size-3);
+  --line-height: var(--line-height-3);
+  --letter-spacing: var(--letter-spacing-3);
+}
+.RIS7imY3rYQ- {
+  --font-size: var(--text-size-4);
+  --line-height: var(--line-height-4);
+  --letter-spacing: var(--letter-spacing-4);
+}
+.m3n9feiG5Z0- {
+  --font-size: var(--text-size-5);
+  --line-height: var(--line-height-5);
+  --letter-spacing: var(--letter-spacing-5);
+}
+.FTwvzjX-DeA- {
+  --font-size: var(--text-size-6);
+  --line-height: var(--line-height-6);
+  --letter-spacing: var(--letter-spacing-6);
+}
+.WFGm5WdD-9M- {
+  --font-size: var(--text-size-7);
+  --line-height: var(--line-height-7);
+  --letter-spacing: var(--letter-spacing-7);
+}
+._8QB4wGa6kZw- {
+  --font-size: var(--text-size-8);
+  --line-height: var(--line-height-8);
+  --letter-spacing: var(--letter-spacing-8);
+}
+.RKf2rBMhi2M- {
+  --font-size: var(--text-size-9);
+  --line-height: var(--line-height-9);
+  --letter-spacing: var(--letter-spacing-9);
+}
+.onLSYXBtvEU- {
+  font-weight: var(--text-weight);
+}
+.NQUG6IKBYxM- {
+  text-align: var(--text-align);
+}
+.PKFlRSq6vqk- {
+  -webkit-line-clamp: var(--line-clamp);
+  line-clamp: var(--line-clamp);
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+.ZRy341OHOcI- {
+  white-space: var(--white-space);
+}
+/*$vite$:1*/

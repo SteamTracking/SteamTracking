@@ -1,0 +1,37 @@
+var _ = {};
+(_.arabic = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.brazilian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.bulgarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.czech = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.danish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.dutch = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.english = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.finnish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.french = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.german = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.greek = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.hungarian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.indonesian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.italian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.japanese = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.koreana = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.latam = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.malay = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.norwegian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.polish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.portuguese = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.romanian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.russian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.schinese = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.spanish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.swedish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.tchinese = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.thai = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.turkish = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.ukrainian = () => _(() => import(`./chunk.js`), [], import.meta.url)),
+  (_.vietnamese = () => _(() => import(`./chunk.js`), [], import.meta.url));
+async function _(_) {
+  if (_[_]) return await _[_]();
+}
+var _ = _(_);
+export { _ };

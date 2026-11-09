@@ -3,15 +3,15 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./greenenvelope.js?contenthash=DbdebwMS",
-      "./rolldown-runtime.js?contenthash=utrJ2gYs",
-      "./storenaveventcontext.js?contenthash=v_jBOGh9",
-      "../../../css/applications/help/greenenvelope.css?contenthash=CwRZqDdO",
-      "./src.js?contenthash=G4F-Nkjs",
-      "../../../css/applications/help/src.css?contenthash=BbLhD5Ku",
+      "./greenenvelope.js",
+      "./rolldown-runtime.js",
+      "./storenaveventcontext.js",
+      "../../../css/applications/help/greenenvelope.css",
+      "./src.js",
+      "../../../css/applications/help/src.css",
     ]),
 ) => _.map((_) => _[_]);
-import { _, _, _ } from "./rolldown-runtime.js?contenthash=utrJ2gYs";
+import { _, _, _ } from "./rolldown-runtime.js";
 import {
   _,
   _,
@@ -148,7 +148,7 @@ import {
   _,
   _,
   _,
-} from "./storenaveventcontext.js?contenthash=v_jBOGh9";
+} from "./storenaveventcontext.js";
 var _ = (_, _, _) => {
   let _ = _.lastIndexOf(`?`),
     _ = _[_ === -1 || _ < _.lastIndexOf(`/`) ? _ : _.slice(0, _)];
@@ -32168,198 +32168,59 @@ var _ = class _ extends _.Message {
   _.GetMarketingMessagesForApps = _;
 })((_ ||= {}));
 var _ = {};
-(_.arabic = () =>
-  _(
-    () => import(`./shared_arabic.js?contenthash=DwI5faQr`),
-    [],
-    import.meta.url,
-  )),
+(_.arabic = () => _(() => import(`./shared_arabic.js`), [], import.meta.url)),
   (_.brazilian = () =>
-    _(
-      () => import(`./shared_brazilian.js?contenthash=NlaZNNfZ`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_brazilian.js`), [], import.meta.url)),
   (_.bulgarian = () =>
-    _(
-      () => import(`./shared_bulgarian.js?contenthash=y_hDwB_9`),
-      [],
-      import.meta.url,
-    )),
-  (_.czech = () =>
-    _(
-      () => import(`./shared_czech.js?contenthash=DlcMsMSx`),
-      [],
-      import.meta.url,
-    )),
-  (_.danish = () =>
-    _(
-      () => import(`./shared_danish.js?contenthash=9FL4tXU6`),
-      [],
-      import.meta.url,
-    )),
-  (_.dutch = () =>
-    _(
-      () => import(`./shared_dutch.js?contenthash=CZvSlh0t`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_bulgarian.js`), [], import.meta.url)),
+  (_.czech = () => _(() => import(`./shared_czech.js`), [], import.meta.url)),
+  (_.danish = () => _(() => import(`./shared_danish.js`), [], import.meta.url)),
+  (_.dutch = () => _(() => import(`./shared_dutch.js`), [], import.meta.url)),
   (_.english = () =>
-    _(
-      () => import(`./shared_english.js?contenthash=qI1Ksaj4`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_english.js`), [], import.meta.url)),
   (_.finnish = () =>
-    _(
-      () => import(`./shared_finnish.js?contenthash=DyFzAmy4`),
-      [],
-      import.meta.url,
-    )),
-  (_.french = () =>
-    _(
-      () => import(`./shared_french.js?contenthash=BPalbH1I`),
-      [],
-      import.meta.url,
-    )),
-  (_.german = () =>
-    _(
-      () => import(`./shared_german.js?contenthash=CTGjyeyr`),
-      [],
-      import.meta.url,
-    )),
-  (_.greek = () =>
-    _(
-      () => import(`./shared_greek.js?contenthash=CbMuk3Ku`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_finnish.js`), [], import.meta.url)),
+  (_.french = () => _(() => import(`./shared_french.js`), [], import.meta.url)),
+  (_.german = () => _(() => import(`./shared_german.js`), [], import.meta.url)),
+  (_.greek = () => _(() => import(`./shared_greek.js`), [], import.meta.url)),
   (_.hungarian = () =>
-    _(
-      () => import(`./shared_hungarian.js?contenthash=C_R_qbns`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_hungarian.js`), [], import.meta.url)),
   (_.indonesian = () =>
-    _(
-      () => import(`./shared_indonesian.js?contenthash=DNCJgYEU`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_indonesian.js`), [], import.meta.url)),
   (_.italian = () =>
-    _(
-      () => import(`./shared_italian.js?contenthash=lb1QDu4L`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_italian.js`), [], import.meta.url)),
   (_.japanese = () =>
-    _(
-      () => import(`./shared_japanese.js?contenthash=Dp3nmOP0`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_japanese.js`), [], import.meta.url)),
   (_.koreana = () =>
-    _(
-      () => import(`./shared_koreana.js?contenthash=BruX78Nl`),
-      [],
-      import.meta.url,
-    )),
-  (_.latam = () =>
-    _(
-      () => import(`./shared_latam.js?contenthash=-tRZFbzP`),
-      [],
-      import.meta.url,
-    )),
-  (_.malay = () =>
-    _(
-      () => import(`./shared_malay.js?contenthash=cYZ4UPel`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_koreana.js`), [], import.meta.url)),
+  (_.latam = () => _(() => import(`./shared_latam.js`), [], import.meta.url)),
+  (_.malay = () => _(() => import(`./shared_malay.js`), [], import.meta.url)),
   (_.norwegian = () =>
-    _(
-      () => import(`./shared_norwegian.js?contenthash=CkXDrGlG`),
-      [],
-      import.meta.url,
-    )),
-  (_.polish = () =>
-    _(
-      () => import(`./shared_polish.js?contenthash=Dplhxfqs`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_norwegian.js`), [], import.meta.url)),
+  (_.polish = () => _(() => import(`./shared_polish.js`), [], import.meta.url)),
   (_.portuguese = () =>
-    _(
-      () => import(`./shared_portuguese.js?contenthash=sTCjp89U`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_portuguese.js`), [], import.meta.url)),
   (_.romanian = () =>
-    _(
-      () => import(`./shared_romanian.js?contenthash=Eo2EWXr7`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_romanian.js`), [], import.meta.url)),
   (_.russian = () =>
-    _(
-      () => import(`./shared_russian.js?contenthash=7zE-e_1Y`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_russian.js`), [], import.meta.url)),
   (_.sc_schinese = () =>
-    _(
-      () => import(`./shared_sc_schinese.js?contenthash=BjjIYK8K`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_sc_schinese.js`), [], import.meta.url)),
   (_.schinese = () =>
-    _(
-      () => import(`./shared_schinese.js?contenthash=DC3umz2-`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_schinese.js`), [], import.meta.url)),
   (_.spanish = () =>
-    _(
-      () => import(`./shared_spanish.js?contenthash=3hB7YxWK`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_spanish.js`), [], import.meta.url)),
   (_.swedish = () =>
-    _(
-      () => import(`./shared_swedish.js?contenthash=Bw9HT5un`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_swedish.js`), [], import.meta.url)),
   (_.tchinese = () =>
-    _(
-      () => import(`./shared_tchinese.js?contenthash=S00Nwmgv`),
-      [],
-      import.meta.url,
-    )),
-  (_.thai = () =>
-    _(
-      () => import(`./shared_thai.js?contenthash=CTnlWR6E`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_tchinese.js`), [], import.meta.url)),
+  (_.thai = () => _(() => import(`./shared_thai.js`), [], import.meta.url)),
   (_.turkish = () =>
-    _(
-      () => import(`./shared_turkish.js?contenthash=BL9X-oh8`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_turkish.js`), [], import.meta.url)),
   (_.ukrainian = () =>
-    _(
-      () => import(`./shared_ukrainian.js?contenthash=BsxhT4rB`),
-      [],
-      import.meta.url,
-    )),
+    _(() => import(`./shared_ukrainian.js`), [], import.meta.url)),
   (_.vietnamese = () =>
-    _(
-      () => import(`./shared_vietnamese.js?contenthash=Dzv5iugB`),
-      [],
-      import.meta.url,
-    ));
+    _(() => import(`./shared_vietnamese.js`), [], import.meta.url));
 async function _(_) {
   if (_[_]) return await _[_]();
 }
@@ -83084,7 +82945,7 @@ function _(_) {
 }
 var _ = _.lazy(() =>
     _(
-      () => import(`./greenenvelope.js?contenthash=DbdebwMS`),
+      () => import(`./greenenvelope.js`),
       __vite__mapDeps([0, 1, 2, 3]),
       import.meta.url,
     ),
@@ -83093,9 +82954,7 @@ var _ = _.lazy(() =>
     default: (
       await _(
         async () => {
-          let { GlobalFooter: _ } = await import(
-            `./src.js?contenthash=G4F-Nkjs`
-          );
+          let { GlobalFooter: _ } = await import(`./src.js`);
           return {
             GlobalFooter: _,
           };
@@ -83274,197 +83133,69 @@ async function _(_) {
         _(
           Object.assign({
             "../localization/main_arabic.json": () =>
-              _(
-                () => import(`./main_arabic.js?contenthash=BdNOExyP`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_arabic.js`), [], import.meta.url),
             "../localization/main_brazilian.json": () =>
-              _(
-                () => import(`./main_brazilian.js?contenthash=Ce7Zlg2N`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_brazilian.js`), [], import.meta.url),
             "../localization/main_bulgarian.json": () =>
-              _(
-                () => import(`./main_bulgarian.js?contenthash=t3E9DxmI`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_bulgarian.js`), [], import.meta.url),
             "../localization/main_czech.json": () =>
-              _(
-                () => import(`./main_czech.js?contenthash=BFob_unO`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_czech.js`), [], import.meta.url),
             "../localization/main_danish.json": () =>
-              _(
-                () => import(`./main_danish.js?contenthash=CMJxZ8oL`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_danish.js`), [], import.meta.url),
             "../localization/main_dutch.json": () =>
-              _(
-                () => import(`./main_dutch.js?contenthash=kr5a5OPt`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_dutch.js`), [], import.meta.url),
             "../localization/main_english.json": () =>
-              _(
-                () => import(`./main_english.js?contenthash=0ZcEja3A`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_english.js`), [], import.meta.url),
             "../localization/main_finnish.json": () =>
-              _(
-                () => import(`./main_finnish.js?contenthash=BPlEv3h1`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_finnish.js`), [], import.meta.url),
             "../localization/main_french.json": () =>
-              _(
-                () => import(`./main_french.js?contenthash=D-mE1IcI`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_french.js`), [], import.meta.url),
             "../localization/main_german.json": () =>
-              _(
-                () => import(`./main_german.js?contenthash=CP7g-NdM`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_german.js`), [], import.meta.url),
             "../localization/main_greek.json": () =>
-              _(
-                () => import(`./main_greek.js?contenthash=D7MvMVml`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_greek.js`), [], import.meta.url),
             "../localization/main_hungarian.json": () =>
-              _(
-                () => import(`./main_hungarian.js?contenthash=BB2lVwDH`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_hungarian.js`), [], import.meta.url),
             "../localization/main_indonesian.json": () =>
-              _(
-                () => import(`./main_indonesian.js?contenthash=BlBEI7d4`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_indonesian.js`), [], import.meta.url),
             "../localization/main_italian.json": () =>
-              _(
-                () => import(`./main_italian.js?contenthash=BNZQbsAK`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_italian.js`), [], import.meta.url),
             "../localization/main_japanese.json": () =>
-              _(
-                () => import(`./main_japanese.js?contenthash=B9kbndqm`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_japanese.js`), [], import.meta.url),
             "../localization/main_koreana.json": () =>
-              _(
-                () => import(`./main_koreana.js?contenthash=CZMN1QGR`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_koreana.js`), [], import.meta.url),
             "../localization/main_latam.json": () =>
-              _(
-                () => import(`./main_latam.js?contenthash=CgcIizRk`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_latam.js`), [], import.meta.url),
             "../localization/main_malay.json": () =>
-              _(
-                () => import(`./main_malay.js?contenthash=BToBUTtY`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_malay.js`), [], import.meta.url),
             "../localization/main_norwegian.json": () =>
-              _(
-                () => import(`./main_norwegian.js?contenthash=DK_2GjpY`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_norwegian.js`), [], import.meta.url),
             "../localization/main_polish.json": () =>
-              _(
-                () => import(`./main_polish.js?contenthash=DTRl9uYv`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_polish.js`), [], import.meta.url),
             "../localization/main_portuguese.json": () =>
-              _(
-                () => import(`./main_portuguese.js?contenthash=CF--uuVY`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_portuguese.js`), [], import.meta.url),
             "../localization/main_romanian.json": () =>
-              _(
-                () => import(`./main_romanian.js?contenthash=CoTvJZ49`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_romanian.js`), [], import.meta.url),
             "../localization/main_russian.json": () =>
-              _(
-                () => import(`./main_russian.js?contenthash=CcaiajfF`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_russian.js`), [], import.meta.url),
             "../localization/main_sc_schinese.json": () =>
-              _(
-                () => import(`./main_sc_schinese.js?contenthash=QfOOmX5Q`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_sc_schinese.js`), [], import.meta.url),
             "../localization/main_schinese.json": () =>
-              _(
-                () => import(`./main_schinese.js?contenthash=BV6of_CX`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_schinese.js`), [], import.meta.url),
             "../localization/main_spanish.json": () =>
-              _(
-                () => import(`./main_spanish.js?contenthash=iLiD3lgG`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_spanish.js`), [], import.meta.url),
             "../localization/main_swedish.json": () =>
-              _(
-                () => import(`./main_swedish.js?contenthash=BOo5JkM6`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_swedish.js`), [], import.meta.url),
             "../localization/main_tchinese.json": () =>
-              _(
-                () => import(`./main_tchinese.js?contenthash=CacJfP4f`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_tchinese.js`), [], import.meta.url),
             "../localization/main_thai.json": () =>
-              _(
-                () => import(`./main_thai.js?contenthash=rExPR-Vn`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_thai.js`), [], import.meta.url),
             "../localization/main_turkish.json": () =>
-              _(
-                () => import(`./main_turkish.js?contenthash=DoUlIaYG`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_turkish.js`), [], import.meta.url),
             "../localization/main_ukrainian.json": () =>
-              _(
-                () => import(`./main_ukrainian.js?contenthash=D9Ycr9NF`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_ukrainian.js`), [], import.meta.url),
             "../localization/main_vietnamese.json": () =>
-              _(
-                () => import(`./main_vietnamese.js?contenthash=Cvz7gWO5`),
-                [],
-                import.meta.url,
-              ),
+              _(() => import(`./main_vietnamese.js`), [], import.meta.url),
           }),
           `../localization/main_${_}.json`,
           3,
@@ -83474,197 +83205,69 @@ async function _(_) {
           : _(
               Object.assign({
                 "../localization/main_arabic.json": () =>
-                  _(
-                    () => import(`./main_arabic.js?contenthash=BdNOExyP`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_arabic.js`), [], import.meta.url),
                 "../localization/main_brazilian.json": () =>
-                  _(
-                    () => import(`./main_brazilian.js?contenthash=Ce7Zlg2N`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_brazilian.js`), [], import.meta.url),
                 "../localization/main_bulgarian.json": () =>
-                  _(
-                    () => import(`./main_bulgarian.js?contenthash=t3E9DxmI`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_bulgarian.js`), [], import.meta.url),
                 "../localization/main_czech.json": () =>
-                  _(
-                    () => import(`./main_czech.js?contenthash=BFob_unO`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_czech.js`), [], import.meta.url),
                 "../localization/main_danish.json": () =>
-                  _(
-                    () => import(`./main_danish.js?contenthash=CMJxZ8oL`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_danish.js`), [], import.meta.url),
                 "../localization/main_dutch.json": () =>
-                  _(
-                    () => import(`./main_dutch.js?contenthash=kr5a5OPt`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_dutch.js`), [], import.meta.url),
                 "../localization/main_english.json": () =>
-                  _(
-                    () => import(`./main_english.js?contenthash=0ZcEja3A`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_english.js`), [], import.meta.url),
                 "../localization/main_finnish.json": () =>
-                  _(
-                    () => import(`./main_finnish.js?contenthash=BPlEv3h1`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_finnish.js`), [], import.meta.url),
                 "../localization/main_french.json": () =>
-                  _(
-                    () => import(`./main_french.js?contenthash=D-mE1IcI`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_french.js`), [], import.meta.url),
                 "../localization/main_german.json": () =>
-                  _(
-                    () => import(`./main_german.js?contenthash=CP7g-NdM`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_german.js`), [], import.meta.url),
                 "../localization/main_greek.json": () =>
-                  _(
-                    () => import(`./main_greek.js?contenthash=D7MvMVml`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_greek.js`), [], import.meta.url),
                 "../localization/main_hungarian.json": () =>
-                  _(
-                    () => import(`./main_hungarian.js?contenthash=BB2lVwDH`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_hungarian.js`), [], import.meta.url),
                 "../localization/main_indonesian.json": () =>
-                  _(
-                    () => import(`./main_indonesian.js?contenthash=BlBEI7d4`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_indonesian.js`), [], import.meta.url),
                 "../localization/main_italian.json": () =>
-                  _(
-                    () => import(`./main_italian.js?contenthash=BNZQbsAK`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_italian.js`), [], import.meta.url),
                 "../localization/main_japanese.json": () =>
-                  _(
-                    () => import(`./main_japanese.js?contenthash=B9kbndqm`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_japanese.js`), [], import.meta.url),
                 "../localization/main_koreana.json": () =>
-                  _(
-                    () => import(`./main_koreana.js?contenthash=CZMN1QGR`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_koreana.js`), [], import.meta.url),
                 "../localization/main_latam.json": () =>
-                  _(
-                    () => import(`./main_latam.js?contenthash=CgcIizRk`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_latam.js`), [], import.meta.url),
                 "../localization/main_malay.json": () =>
-                  _(
-                    () => import(`./main_malay.js?contenthash=BToBUTtY`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_malay.js`), [], import.meta.url),
                 "../localization/main_norwegian.json": () =>
-                  _(
-                    () => import(`./main_norwegian.js?contenthash=DK_2GjpY`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_norwegian.js`), [], import.meta.url),
                 "../localization/main_polish.json": () =>
-                  _(
-                    () => import(`./main_polish.js?contenthash=DTRl9uYv`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_polish.js`), [], import.meta.url),
                 "../localization/main_portuguese.json": () =>
-                  _(
-                    () => import(`./main_portuguese.js?contenthash=CF--uuVY`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_portuguese.js`), [], import.meta.url),
                 "../localization/main_romanian.json": () =>
-                  _(
-                    () => import(`./main_romanian.js?contenthash=CoTvJZ49`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_romanian.js`), [], import.meta.url),
                 "../localization/main_russian.json": () =>
-                  _(
-                    () => import(`./main_russian.js?contenthash=CcaiajfF`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_russian.js`), [], import.meta.url),
                 "../localization/main_sc_schinese.json": () =>
-                  _(
-                    () => import(`./main_sc_schinese.js?contenthash=QfOOmX5Q`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_sc_schinese.js`), [], import.meta.url),
                 "../localization/main_schinese.json": () =>
-                  _(
-                    () => import(`./main_schinese.js?contenthash=BV6of_CX`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_schinese.js`), [], import.meta.url),
                 "../localization/main_spanish.json": () =>
-                  _(
-                    () => import(`./main_spanish.js?contenthash=iLiD3lgG`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_spanish.js`), [], import.meta.url),
                 "../localization/main_swedish.json": () =>
-                  _(
-                    () => import(`./main_swedish.js?contenthash=BOo5JkM6`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_swedish.js`), [], import.meta.url),
                 "../localization/main_tchinese.json": () =>
-                  _(
-                    () => import(`./main_tchinese.js?contenthash=CacJfP4f`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_tchinese.js`), [], import.meta.url),
                 "../localization/main_thai.json": () =>
-                  _(
-                    () => import(`./main_thai.js?contenthash=rExPR-Vn`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_thai.js`), [], import.meta.url),
                 "../localization/main_turkish.json": () =>
-                  _(
-                    () => import(`./main_turkish.js?contenthash=DoUlIaYG`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_turkish.js`), [], import.meta.url),
                 "../localization/main_ukrainian.json": () =>
-                  _(
-                    () => import(`./main_ukrainian.js?contenthash=D9Ycr9NF`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_ukrainian.js`), [], import.meta.url),
                 "../localization/main_vietnamese.json": () =>
-                  _(
-                    () => import(`./main_vietnamese.js?contenthash=Cvz7gWO5`),
-                    [],
-                    import.meta.url,
-                  ),
+                  _(() => import(`./main_vietnamese.js`), [], import.meta.url),
               }),
               `../localization/main_${_}.json`,
               3,

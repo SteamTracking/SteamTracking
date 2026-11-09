@@ -1,0 +1,62 @@
+.HRBMC8-sveg- {
+  --bg-width: 1200px;
+  max-width: var(--bg-width);
+  background-position: 50%;
+  margin: 0 auto;
+}
+.Z2hc6V7xIVo- {
+  max-width: calc(var(--bg-width) - 20px);
+  clip-path: inset(0 -10px -10px);
+  background: linear-gradient(#1b1e24 0%, #242730 100%);
+  height: 102px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 7px #000c;
+}
+.mhCq6vJJMJc- {
+  margin-inline-start: 24px;
+  display: inline-block;
+}
+@media screen and (width <= 500px) {
+  .mhCq6vJJMJc- {
+    margin-inline-start: 15px;
+  }
+}
+.ouEGP5Y9ebw- {
+  color: #fff;
+  text-overflow: ellipsis;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+  font-size: 14px;
+  line-height: normal;
+  overflow: hidden;
+}
+.ouEGP5Y9ebw- a {
+  color: #ebebeb;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media screen and (width <= 768px) {
+  .ouEGP5Y9ebw- .kCeTAvl-6j4- {
+    display: none;
+  }
+}
+.Q5WOxcN63k0- {
+  font-size: 24px;
+  font-weight: 500;
+}
+.kd0AtvY9hsY- {
+  color: #828282;
+  font-size: 16px;
+}
+.a-kItTN8sSI- {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+}
+.M4-Lc-g-O3U- {
+  text-overflow: ellipsis;
+  text-wrap-mode: nowrap;
+  overflow: hidden;
+}

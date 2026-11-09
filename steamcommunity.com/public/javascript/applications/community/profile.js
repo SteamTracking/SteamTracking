@@ -5,16 +5,16 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "./avatarcrop.js?contenthash=v2RNKD8_",
-      "./rolldown-runtime.js?contenthash=C8f2gWku",
-      "./libraries.js?contenthash=BSMOk6Fq",
-      "./main.js?contenthash=DniUHuiT",
-      "../../../css/applications/community/main.css?contenthash=Dkt-4wdG",
-      "../../../css/applications/community/avatarcrop.css?contenthash=BSO5h7oj",
+      "./avatarcrop.js",
+      "./rolldown-runtime.js",
+      "./libraries.js",
+      "./main.js",
+      "../../../css/applications/community/main.css",
+      "../../../css/applications/community/avatarcrop.css",
     ]),
 ) => i.map((i) => d[i]);
 
-import { o as e, r as t } from "./rolldown-runtime.js?contenthash=C8f2gWku";
+import { o as e, r as t } from "./rolldown-runtime.js";
 import {
   A as n,
   B as r,
@@ -35,27 +35,27 @@ import {
   w as h,
   xt as g,
   yt as _,
-} from "./libraries.js?contenthash=BSMOk6Fq";
+} from "./libraries.js";
 import {
   a as re,
   f as v,
   u as ie,
-} from "./steammessages_contentmoderation_pb.js?contenthash=DTGSpeap";
-import { u as ae } from "./moderationqueries.js?contenthash=BCBIvr9z";
-import { t as oe } from "./throbber.js?contenthash=Bw9DjjzR";
+} from "./steammessages_contentmoderation_pb.js";
+import { u as ae } from "./moderationqueries.js";
+import { t as oe } from "./throbber.js";
 import {
   _ as se,
   f as ce,
   g as le,
   n as ue,
   t as de,
-} from "./emoticonbutton.js?contenthash=C-ywMWUv";
-import { n as fe } from "./personautils.js?contenthash=CCIlCBXp";
-import "./steammessages_loyalty_rewards_pb.js?contenthash=CiJ-OJos";
-import { n as pe } from "./appinfostore.js?contenthash=CBIrcRUp";
-import { n as y, t as me } from "./persona.js?contenthash=Bx7yOXHn";
-import { n as he } from "./storeitemhooks.js?contenthash=5Zs7_In4";
-import { n as ge } from "./awardmodal.js?contenthash=Btbuvimf";
+} from "./emoticonbutton.js";
+import { n as fe } from "./personautils.js";
+import "./steammessages_loyalty_rewards_pb.js";
+import { n as pe } from "./appinfostore.js";
+import { n as y, t as me } from "./persona.js";
+import { n as he } from "./storeitemhooks.js";
+import { n as ge } from "./awardmodal.js";
 import {
   Ai as _e,
   Cu as b,
@@ -122,8 +122,8 @@ import {
   zf as lt,
   zo as ut,
   zu as dt,
-} from "./main.js?contenthash=DniUHuiT";
-import { n as ft, t as pt } from "./steamavatar2.js?contenthash=C53VF8Id";
+} from "./main.js";
+import { n as ft, t as pt } from "./steamavatar2.js";
 var I = e(u()),
   L = te(),
   R = e(n()),
@@ -3056,7 +3056,7 @@ var Yr = i(({ onSelected: e, ProfileItems: t, large: n }) => {
     }),
   Zr = I.lazy(() =>
     Ee(
-      () => import(`./avatarcrop.js?contenthash=v2RNKD8_`),
+      () => import(`./avatarcrop.js`),
       __vite__mapDeps([0, 1, 2, 3, 4, 5]),
       import.meta.url,
     ),

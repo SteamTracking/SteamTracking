@@ -1,0 +1,80 @@
+html:has(dialog.egtbEvvs2Oc-[open]) {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+}
+.YAxuZ29pC9k- {
+  color: #acb2b8;
+  background: 0 0;
+  border: none;
+  outline: none;
+  max-width: calc(100% - 48px);
+  margin: auto;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  overflow: visible;
+  box-shadow: 0 8px 38px 5px #000000bf;
+}
+.YAxuZ29pC9k- :where(.u0AMI7eXw6w-) {
+  overscroll-behavior: contain;
+  background:
+    radial-gradient(circle at 0 0, #4a515c66 0%, #4b515c00 60%), #25282e;
+  overflow: auto;
+}
+.YAxuZ29pC9k- :where(.u0AMI7eXw6w-):before {
+  content: " ";
+  background: linear-gradient(90deg, #0cf, #36f);
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+.YAxuZ29pC9k-::backdrop {
+  background: #000c;
+}
+.sgMEGCsNg7c- {
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 800px;
+  max-height: 90vh;
+  padding: 18px;
+  display: flex;
+  overflow: clip;
+}
+.sgMEGCsNg7c-.GJxb9L6ppZw- {
+  max-width: 90vw;
+}
+.zSTkW-sxkis- {
+  flex-direction: row;
+  justify-content: right;
+  align-items: flex-start;
+  gap: 18px;
+  display: flex;
+}
+.zSTkW-sxkis- .pxN-7GRnbkY- {
+  color: #fff;
+  flex-grow: 1;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.zSTkW-sxkis- .s682fjGpPIQ- {
+  color: #b7bfcb;
+  cursor: pointer;
+  background: 0 0;
+  border: none;
+  flex-grow: 0;
+  flex-basis: 26px;
+  width: 26px;
+  height: 26px;
+  padding: 4px;
+}
+.zSTkW-sxkis- .s682fjGpPIQ-:hover {
+  color: #fff;
+}
+._3FHQnSAvzY8- {
+  overflow: auto;
+}
+/*$vite$:1*/

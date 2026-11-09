@@ -423,7 +423,6 @@ body:not(.v7menu) div#global_header .content {
   left: 0;
   right: 0;
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, #000 78%, #0000 100%);
   mask: linear-gradient(90deg, #000 78%, #0000 100%);
 }
 .-ltR43mR0X4-._-02GoLJ4zss- ._3eZTUI8a7YQ- {
@@ -483,29 +482,17 @@ body:not(.v7menu) div#global_header .content {
   position: relative;
   overflow: hidden;
   transform: scale(1) rotate(-23deg) translate(5vw, -20vh);
-  -webkit-mask-image:
-    linear-gradient(#000 58%, #0000004d 95%),
-    radial-gradient(48.77% 50.22% at 47% 42.95%, #424242 0%, #42424200 100%);
   mask-image:
     linear-gradient(#000 58%, #0000004d 95%),
     radial-gradient(48.77% 50.22% at 47% 42.95%, #424242 0%, #42424200 100%);
-  -webkit-mask-position:
-    0 0,
-    0 0;
   mask-position:
     0 0,
     0 0;
-  -webkit-mask-size: auto, auto;
   mask-size: auto, auto;
-  -webkit-mask-repeat: repeat, repeat;
   mask-repeat: repeat, repeat;
-  -webkit-mask-clip: border-box, border-box;
   mask-clip: border-box, border-box;
-  -webkit-mask-origin: border-box, border-box;
   mask-origin: border-box, border-box;
-  -webkit-mask-composite: source-in;
   mask-composite: intersect;
-  -webkit-mask-source-type: auto, auto;
   mask-mode: match-source, match-source;
 }
 ._3eZTUI8a7YQ- ._6nJy9OkrSk4- {

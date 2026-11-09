@@ -389,9 +389,9 @@ message ClientCloudFileUploadBlockDetails_HTTPHeaders {
 }
 
 service Cloud {
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc BeginAppUploadBatch (.CCloud_BeginAppUploadBatch_Request) returns (.CCloud_BeginAppUploadBatch_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc BeginHTTPUpload (.CCloud_BeginHTTPUpload_Request) returns (.CCloud_BeginHTTPUpload_Response);
 	// ePrivilege=1
 	rpc BeginUGCUpload (.CCloud_BeginUGCUpload_Request) returns (.CCloud_BeginUGCUpload_Response);
@@ -413,17 +413,17 @@ service Cloud {
 	rpc ClientLogUploadCheck (.CCloud_ClientLogUploadCheck_Notification) returns (.NoResponse);
 	// ePrivilege=1
 	rpc ClientLogUploadComplete (.CCloud_ClientLogUploadComplete_Notification) returns (.NoResponse);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc CommitHTTPUpload (.CCloud_CommitHTTPUpload_Request) returns (.CCloud_CommitHTTPUpload_Response);
 	// ePrivilege=1
 	rpc CommitUGCUpload (.CCloud_CommitUGCUpload_Request) returns (.CCloud_CommitUGCUpload_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc CompleteAppUploadBatch (.CCloud_CompleteAppUploadBatch_Notification) returns (.NoResponse);
 	// ePrivilege=1
 	rpc CompleteAppUploadBatchBlocking (.CCloud_CompleteAppUploadBatch_Request) returns (.CCloud_CompleteAppUploadBatch_Response);
 	// ePrivilege=1
 	rpc Delete (.CCloud_Delete_Request) returns (.CCloud_Delete_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc EnumerateUserFiles (.CCloud_EnumerateUserFiles_Request) returns (.CCloud_EnumerateUserFiles_Response);
 	// ePrivilege=1
 	rpc ExternalStorageTransferReport (.CCloud_ExternalStorageTransferReport_Notification) returns (.NoResponse);
@@ -431,7 +431,7 @@ service Cloud {
 	rpc GetAppFileChangelist (.CCloud_GetAppFileChangelist_Request) returns (.CCloud_GetAppFileChangelist_Response);
 	// ePrivilege=1
 	rpc GetClientEncryptionKey (.CCloud_GetClientEncryptionKey_Request) returns (.CCloud_GetClientEncryptionKey_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetFileDetails (.CCloud_GetFileDetails_Request) returns (.CCloud_GetFileDetails_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetSingleFileInfo (.CCloud_GetSingleFileInfo_Request) returns (.CCloud_GetSingleFileInfo_Response);

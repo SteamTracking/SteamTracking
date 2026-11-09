@@ -1,0 +1,536 @@
+
+html body #pageContainer {
+	min-height: calc( 100vh - 388px );
+}
+
+.landing_header_ctn {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.landing_header_ctn a {
+	text-decoration: none;
+}
+
+.main_nav_ctn {
+	background: #000000;
+}
+
+img.steamworks_logo {
+	width: 143px;
+	height: 48px;
+	margin-right: 60px;
+	transform: translatey(0px);
+}
+
+.main_nav_content {
+	margin: 0 auto;
+	max-width: 1280px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	vertical-align: bottom;
+	border-top: 20px solid #727477;
+}
+
+
+i.arrow-right {
+	background-image: url( 'https://partner.steamgames.com/public/images/mobile/arrow_right.svg' );
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 15px;
+	height: 15px;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.main_menu_dropdown {
+	font-size: 14px;
+	color: #FFF;
+	padding: 20px;
+	cursor: default;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+}
+
+.main_menu_dropdown:hover {
+	background: #323940;
+	color: #FFF;
+}
+
+a.main_menu_dropdown {
+	cursor:pointer;
+}
+
+.main_menu_tooltip_hover {
+	background: #323940;
+}
+
+.main_menu_tooltip {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background-color: #323940;
+	padding: 0 20px 15px 20px;
+	/*box-shadow: 5px 15px 10px #000000;*/
+}
+
+.main_menu_tooltip a {
+	color: #FFF;
+	font-size: 13px;
+	display: block;
+	text-decoration: none;
+}
+
+.main_menu_tooltip a:not(:first-child) {
+	margin-top: 8px;
+}
+
+.main_menu_tooltip a:hover {
+	color: #67c1f5;
+}
+
+.header_logout_btn,
+.header_login_btn {
+	background: #369DD2;
+	border: 0;
+	opacity: 1;
+	transition: background-color 0.1s, text-shadow 0.1s;
+	text-shadow: none;
+	border-radius: 2px;
+	padding: 3px 26px;
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+.header_logout_btn {
+	background: #727477;
+}
+.header_logout_btn:hover {
+	background: #b2b2b2;
+	color: #FFF;
+}
+
+.header_login_btn:hover {
+	background: #55c5ff;
+	text-shadow: 0 0 4px #369DD2;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.header_login_ctn {
+	padding: 10px;
+}
+
+.main_nav_right, .partner_nav_right {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+}
+
+.header_partner_name {
+	font-size: 12px;
+	color: #FFF;
+	font-weight: bold;
+	margin: 0 0 5px 5px;
+	text-align: right;
+	line-height: 25px;
+}
+
+.header_partner_name img {
+	vertical-align: sub;
+	margin-left: 5px;
+}
+
+.nav_right_info_ctn {
+	margin-right: 20px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 300px;
+	margin-top: 3px;
+}
+
+.partner_nav_right .search_by_app {
+	width: 250px;
+	line-height: 22px;
+	background-color: rgba( 0, 0, 0, .3 );
+}
+
+.partner_nav_right .search_by_app::placeholder {
+	color: #8B8B8B;
+}
+
+.main_nav_right #account_pulldown {
+	margin-left: auto;
+	margin-top: -5px;
+}
+
+.main_nav_right #account_pulldown:hover {
+	color: #67c1f5;
+}
+
+.header_language_ctn:hover {
+	color: #FFF;
+}
+
+.partner_nav_ctn {
+	background: #323940;
+	box-shadow: 2px 2px 2px #000000;
+}
+
+.partner_nav_content {
+	margin: 0 auto;
+	max-width: 1280px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.partner_selector_name {
+	font-size: 15px;
+	color: #FFF;
+	font-weight: 500;
+}
+
+.partner_logo_valve {
+	margin-right: 5px;
+	transform: translateY(3px);
+}
+
+.partner_nav_content > nav, .partner_nav_content > a {
+	padding: 15px 20px;
+	color: #e6e6e6;
+	font-size: 14px;
+}
+
+.partner_nav_content > a:first-child {
+	margin-left: -20px;
+}
+
+.partner_selector_name {
+	padding: 15px 15px 15px 0px;
+	color: #e6e6e6;
+	font-size: 14px;
+}
+
+.partner_menu_dropdown {
+	cursor: default;
+}
+
+.partner_menu_dropdown:hover {
+	background: #323940 !important;
+	color: #67c1f5;
+}
+
+.partner_nav_content > a:hover {
+	background: #323940 !important;
+}
+
+.partner_menu_tooltip .beta {
+    text-transform: uppercase;
+    background: #00BBFF;
+    color: #FFF;
+    border-radius: 2px;
+    padding: 1px 4px;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.partner_menu_tooltip_hover {
+	background: #323940;
+}
+
+.partner_menu_tooltip {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background-color: #323940;
+	padding: 15px 20px 15px 20px;
+    border-right: 20px solid #323940;
+}
+
+.partner_menu_tooltip a {
+	color: #FFF;
+	font-size: 13px;
+	display: block;
+	text-decoration: none;
+}
+
+.partner_menu_tooltip a:hover, .partner_nav_content > a:hover  {
+	color: #67c1f5;
+}
+
+.partner_menu_tooltip a:not(:first-child) {
+	margin-top: 8px;
+}
+
+.partner_menu_tooltip > hr, .main_nav_content div > hr {
+	margin: 6px 0 5px 0;
+	color: transparent;
+	border-bottom: 1px solid #ffffff;
+	opacity: 0.1;
+}
+
+.partner_nav_search {
+	padding: 7px;
+	background: #262626;
+	width: 250px;
+}
+
+.partner_nav_search::placeholder {
+	color: #e1e1e1;
+}
+
+i.icoArrow {
+	background-image: url( 'https://partner.steamgames.com/public/images/icn_carat.svg' );
+	width: 8px;
+	height: 8px;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+i.icoExternal {
+	background-image: url( 'https://partner.steamgames.com/public/images/Documentation/ico_external_link.gif' );
+	width: 10px;
+	height: 10px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	opacity: .7;
+	margin-left: 3px;
+}
+
+i.icoExternalBlue {
+	background-image: url( 'https://partner.steamgames.com/public/images/Documentation/ico_external_link_blue.gif' );
+	width: 10px;
+	height: 10px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	opacity: 1;
+}
+
+.partner_menu_dropdown.active {
+	background: #6E7D8D;
+}
+
+.header_spoofing {
+	background:#AE3135;
+	color: #FFF;
+	padding: 5px 0;
+	text-align: center;
+	font-weight: 500;
+	font-size: 12px;
+	height: 22px;
+}
+
+.firstlink {
+    margin-left: 10px;
+}
+
+.header_spoofing_content {
+	margin: 0 auto;
+	max-width: 1280px;
+	padding: 0 5px;
+}
+
+.header_spoofing .header_login_btn {
+	max-width: 100px;
+	/*display: inline-block;*/
+}
+
+
+.header_spoofing_left {
+	float: left;
+	margin-top: 2px;
+}
+
+.header_spoofing_right {
+	float: right;
+}
+
+#account_dropdown .popup_body.popup_menu {
+	width: inherit;
+}
+
+.partner_info_ctn {
+	display: flex;
+}
+
+.main_nav_mobile_ctn {
+	display: none;
+	position: relative;
+}
+
+.mobile_mainmenu_content {
+	display: none;
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	/*max-width: 400px;*/
+	background: #131313;
+	border-top: 1px solid #222222;
+	z-index: 100;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			transition: left 0.5s, right 0.5s;
+}
+
+.mobile_mainmenu_content a {
+	display: block;
+}
+
+.mobile_toplevel_option {
+	padding: 30px;
+	color: #FFF;
+	font-size: 24px;
+	cursor: pointer;
+	font-weight: 400;
+	border-bottom: 1px solid #333333;
+}
+
+.mobile_nav_sublevel {
+	display: flex;
+}
+
+.mobile_nav_title {
+	font-size: 26px;
+	text-align: center;
+	color: #FFF;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+
+.mobile_hamburger {
+	position: absolute;
+	top: 12px;
+	left: 8px;
+	cursor: pointer;
+	width: 36px;
+	height: 31px;
+	background-image: url( 'https://partner.steamgames.com/public/images/mobile/icn_hamburger.svg' );
+	background-repeat: no-repeat;
+	background-position-y: center;
+}
+
+.mobile_nav_back {
+	font-size: 14px;
+	margin: 15px 0 15px 20px;
+	cursor: pointer;
+	font-weight: bold;
+	display: inline-block;
+	background-image: url( 'https://partner.steamgames.com/public/images/mobile/arrow_left.svg' );
+	background-repeat: no-repeat;
+	background-position-x: left;
+	background-position-y: center;
+	padding-left: 15px;
+	line-height: 14px;
+
+}
+
+.mobile_nav_icon_option {
+	color: #FFF;
+	font-size: 14px;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.mobile_nav_icon_option img {
+	max-width: 35px;
+	max-height: 35px;
+}
+
+.mobile_nav_icon_option img:hover
+{
+	fill: #FFF;
+}
+
+.mobile_nav_icon_title {
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.mobile_nav_icons_ctn {
+	justify-content: space-evenly;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	display: grid;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.mobile_nav_suboption {
+	padding: 10px 20px 15px 20px;
+	color: #FFF;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 10px 0;
+	background-image: url( 'https://partner.steamgames.com/public/images/mobile/arrow_right.svg' );
+	background-repeat: no-repeat;
+	background-position-x: 90%;
+	background-position-y: center;
+	border-bottom: 1px solid #333333;
+}
+
+.mobile_mainmenu_content .header_logout_btn,
+.mobile_mainmenu_content .header_login_btn {
+	font-size: 15px;
+	max-width: 350px;
+	padding: 15px;
+	font-weight: bold;
+	margin: 30px;
+}
+
+@media screen and (max-width: 1380px) {
+
+	html .main_nav_content {
+		padding: 0 5px;
+	}
+
+	.partner_nav_content {
+		padding: 0px 40px 0px 25px;
+		transform: translateX(0px);
+	}
+}
+
+@media screen and (max-width: 910px) {
+
+	html .main_nav_mobile_ctn
+	{
+		display: flex;
+		justify-content: center;
+	}
+
+	html .steamworks_logo
+	{
+		margin: 0;
+	}
+
+	html .main_nav_content {
+		display: none;
+	}
+}
+
+@media screen and ( max-width: 480px ) {
+
+	html .partner_nav_ctn
+	{
+		display: none;
+	}
+
+}

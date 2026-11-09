@@ -1,4 +1,4 @@
-import { _ } from "./rolldown-runtime.js?contenthash=Bk3-1wwW";
+import { _ } from "./rolldown-runtime.js";
 import {
   _,
   _,
@@ -40,7 +40,7 @@ import {
   _,
   _,
   _,
-} from "./storenaveventcontext.js?contenthash=txejLlpB";
+} from "./storenaveventcontext.js";
 import {
   _,
   _,
@@ -103,7 +103,7 @@ import {
   _,
   _,
   _,
-} from "./main.js?contenthash=Dv3tB2-X";
+} from "./main.js";
 var _ = _(_()),
   _ = _(_(), 1),
   _ = new (class {
@@ -753,7 +753,7 @@ var _ = _(),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetLists = _;
@@ -762,7 +762,7 @@ var _ = _(),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetListDetails = _;
@@ -773,7 +773,7 @@ async function _(_) {
   );
 }
 async function _(_) {
-  let _ = _.InitFromClanID(_);
+  let _ = _.InitFromClanID(_, _.EUNIVERSE);
   return _(
     `${_.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${location.origin}`,
   );
@@ -832,7 +832,7 @@ function _(_) {
         ..._,
         clanSteamID: _.clanSteamIDString
           ? new _(_.clanSteamIDString)
-          : _.InitFromClanID(_.clanAccountID),
+          : _.InitFromClanID(_.clanAccountID, _.EUNIVERSE),
       }),
       _.set(_, _)),
     _
@@ -3514,12 +3514,14 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Parental.EnableParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.EnableParentalSettings = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.DisableParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.DisableParentalSettings = _;
@@ -3541,13 +3543,14 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Parental.SetParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.SetParentalSettings = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ValidateToken#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`help`, `community`],
     });
   }
   _.ValidateToken = _;
@@ -3572,24 +3575,28 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Parental.RequestFeatureAccess#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.RequestFeatureAccess = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ApproveFeatureAccess#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.ApproveFeatureAccess = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.RequestPlaytime#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.RequestPlaytime = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ApprovePlaytime#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.ApprovePlaytime = _;
@@ -3597,6 +3604,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Parental.GetRequests#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetRequests = _;
@@ -4598,7 +4606,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`],
+        rgBrowserAPISites: [`partner`, `help`, `community`],
       },
     );
   }
@@ -4609,7 +4617,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`],
+        rgBrowserAPISites: [`partner`, `help`, `community`],
       },
     );
   }
@@ -4620,7 +4628,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`],
+        rgBrowserAPISites: [`partner`, `help`, `community`],
       },
     );
   }
@@ -4628,7 +4636,7 @@ var _ = class _ extends _.Message {
   function _(_, _) {
     return _.SendNotification(`SteamNotification.HideNotification#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.HideNotification = _;
@@ -4643,7 +4651,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`SteamNotification.GetPreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetPreferences = _;
@@ -6478,7 +6486,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`partner`, `help`],
+        rgBrowserAPISites: [`partner`, `help`, `community`],
       },
     );
   }
@@ -6500,6 +6508,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetAssetClassInfo = _;
@@ -6508,7 +6517,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetAssetPropertySchema = _;
@@ -10865,7 +10874,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.CreateFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.CreateFamilyGroup = _;
@@ -10873,7 +10882,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetFamilyGroup#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetFamilyGroup = _;
@@ -10881,21 +10890,21 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetFamilyGroupForUser#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetFamilyGroupForUser = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.ModifyFamilyGroupDetails#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.ModifyFamilyGroupDetails = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.InviteToFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.InviteToFamilyGroup = _;
@@ -10906,7 +10915,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `community`],
       },
     );
   }
@@ -10918,7 +10927,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `community`],
       },
     );
   }
@@ -10926,28 +10935,28 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.JoinFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.JoinFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.ConfirmJoinFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.ConfirmJoinFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.RemoveFromFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.RemoveFromFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.CancelFamilyGroupInvite#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.CancelFamilyGroupInvite = _;
@@ -10955,35 +10964,35 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetUsersSharingDevice#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetUsersSharingDevice = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.DeleteFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.DeleteFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.UndeleteFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.UndeleteFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.GetPlaytimeSummary#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetPlaytimeSummary = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.RequestPurchase#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.RequestPurchase = _;
@@ -10991,7 +11000,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetPurchaseRequests#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetPurchaseRequests = _;
@@ -11002,7 +11011,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `community`],
       },
     );
   }
@@ -11011,7 +11020,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetChangeLog#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetChangeLog = _;
@@ -11022,6 +11031,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 5,
+        rgBrowserAPISites: [`community`],
       },
     );
   }
@@ -11030,7 +11040,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetSharedLibraryApps#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetSharedLibraryApps = _;
@@ -11050,6 +11060,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.ForceAcceptInvite#1`, _(_, _, _), _, {
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.ForceAcceptInvite = _;
@@ -11057,6 +11068,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetInviteCheckResults#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetInviteCheckResults = _;
@@ -13046,7 +13058,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetShoppingCartContents = _;
@@ -13435,6 +13447,11 @@ var _ = class _ extends _.Message {
             coordinates: {
               _: 26,
               _: _,
+            },
+            reporter_is_support: {
+              _: 27,
+              _: _.readBool,
+              _: _.writeBool,
             },
           },
         }),
@@ -16138,6 +16155,11 @@ var _ = class _ extends _.Message {
               _: _.readUint64String,
               _: _.writeUint64String,
             },
+            include_reporter_account_status: {
+              _: 2,
+              _: _.readBool,
+              _: _.writeBool,
+            },
           },
         }),
         _.sm_m
@@ -16614,6 +16636,11 @@ var _ = class _ extends _.Message {
               _: 5,
               _: _.readString,
               _: _.writeString,
+            },
+            actor_is_support: {
+              _: 6,
+              _: _.readBool,
+              _: _.writeBool,
             },
           },
         }),
@@ -17361,6 +17388,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`ContentModeration.ReleaseSubjects#1`, _(_, _, _), _, {
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.ReleaseSubjects = _;
@@ -17413,6 +17441,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 5,
+        rgBrowserAPISites: [`community`],
       },
     );
   }
@@ -17421,6 +17450,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ContentModeration.GetReporterCooldown#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetReporterCooldown = _;
@@ -17486,6 +17516,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ContentModeration.GetReporterStats#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetReporterStats = _;
@@ -17497,6 +17528,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
+        rgBrowserAPISites: [`community`],
       },
     );
   }
@@ -17505,6 +17537,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ContentModeration.GetReportedContent#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetReportedContent = _;
@@ -17515,6 +17548,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 1,
+        rgBrowserAPISites: [`community`],
       },
     );
   }
@@ -17523,6 +17557,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ContentModeration.GetAuditLogByID#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetAuditLogByID = _;
@@ -17544,6 +17579,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 5,
+        rgBrowserAPISites: [`community`],
       },
     );
   }
@@ -17551,6 +17587,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`ContentModeration.EscalateSubjectByID#1`, _(_, _, _), _, {
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.EscalateSubjectByID = _;
@@ -17563,6 +17600,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`ContentModeration.UpdateSubjectByID#1`, _(_, _, _), _, {
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.UpdateSubjectByID = _;
@@ -17822,11 +17860,9 @@ var _ = new _(`SteamNotificationStore`),
         return;
       }
       let _ = this.m_rgNotificationRollups[_];
-      if (_.item.read) {
+      if (_.item.read)
         _(`Attempted to mark notification read that is already read`);
-        return;
-      }
-      if (((_.item.read = !0), _.rgunread?.length > 0)) {
+      else if (((_.item.read = !0), _.rgunread?.length > 0)) {
         this.ReduceNewTotals(_.type, _.rgunread.length);
         let _ = [];
         _.rgunread.forEach((_) => {
@@ -18297,7 +18333,7 @@ function _(_, _) {
         topic_id: _.topic_id,
         forum_id: _.forum_id,
         account_steam_id: _.account_id
-          ? _.InitFromAccountID(_.account_id)
+          ? _.InitFromAccountID(_.account_id, _.EUNIVERSE)
           : null,
         bhas_friend: _(_.bhas_friend),
         bis_forum: _(_.bis_forum),
@@ -18583,7 +18619,7 @@ var _ = `xKH6brPrFV4-`,
   _ = `https://steamloopback.host/clientassets/avatars/`;
 function _(_, _, _ = `auto`) {
   let _ = `.jpg`;
-  (!_ || _ === `0000000000000000000000000000000000000000`) && (_ = _),
+  (_ && _ !== `0000000000000000000000000000000000000000`) || (_ = _),
     _.length == 44 && ((_ = _.substr(-4)), (_ = _.substr(0, 40)));
   let _ = _ == `client` || (_ == `auto` && _.IN_STEAMUI),
     _ = _.AVATAR_BASE_URL;
@@ -18792,12 +18828,13 @@ var _ = 1209600,
       return this.m_CMInterface;
     }
     RegisterCallbackOnLoad(_) {
-      if (!this.BHavePendingAppInfoRequests()) {
-        _(!1, `Registering for callback on appinfo load, but nothing queued`),
-          _();
-        return;
-      }
-      this.m_fnCallbackOnAppInfoLoaded.Register(_);
+      this.BHavePendingAppInfoRequests()
+        ? this.m_fnCallbackOnAppInfoLoaded.Register(_)
+        : (_(
+            !1,
+            `Registering for callback on appinfo load, but nothing queued`,
+          ),
+          _());
     }
     IsLoadingAppID(_) {
       return this.m_setPendingAppInfo.has(_);
@@ -18882,14 +18919,12 @@ var _ = 1209600,
       return (
         _.forEach((_) => {
           let _ = this.m_mapAppInfo.get(_);
-          if (_) {
-            _.is_valid || (_ = !0);
-            return;
-          }
-          (_ = new _(_)),
-            this.m_mapAppInfo.set(_, _),
-            this.QueueAppInfoRequest(_),
-            (_ = !0);
+          _
+            ? _.is_valid || (_ = !0)
+            : ((_ = new _(_)),
+              this.m_mapAppInfo.set(_, _),
+              this.QueueAppInfoRequest(_),
+              (_ = !0));
         }),
         _ && this.m_PendingAppInfoPromise !== void 0
           ? this.m_PendingAppInfoPromise
@@ -19331,8 +19366,10 @@ function _(_) {
 var _ = _.createContext({
   loadPersonaState: async (_, _) => {
     if (_ == null) return null;
-    let _ = await _(_).load(_.InitFromAccountID(_).ConvertTo64BitString());
-    return _(_.InitFromAccountID(_), _);
+    let _ = await _(_).load(
+      _.InitFromAccountID(_, _.EUNIVERSE).ConvertTo64BitString(),
+    );
+    return _(_.InitFromAccountID(_, _.EUNIVERSE), _);
   },
 });
 function _(_, _, _) {
@@ -20633,7 +20670,7 @@ var _ = `wtEvuR05t3A-`,
   function _(_, _, _) {
     return _.SendMsg(`StoreCatalog.GetDevPageAllAppsLinked#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetDevPageAllAppsLinked = _;
@@ -20642,7 +20679,7 @@ var _ = `wtEvuR05t3A-`,
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetDevPageListApps = _;
@@ -20756,6 +20793,409 @@ var _ = class _ extends _.Message {
     }
     getClassName() {
       return `CClan_RespondToClanInvite_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.image || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            image: {
+              _: 1,
+              _: _.readString,
+              _: _.writeString,
+            },
+            language: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            from_body: {
+              _: 3,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CPartnerEventSummary_Image`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.clan_accountid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [6], null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            clan_accountid: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            clan_event_gid: {
+              _: 2,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            announcement_gid: {
+              _: 3,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            appid: {
+              _: 4,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            event_type: {
+              _: 5,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+            tags: {
+              _: 6,
+              _: !0,
+              _: !0,
+              _: _.readString,
+              _: _.writeRepeatedString,
+            },
+            rtime32_start_time: {
+              _: 7,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            rtime32_end_time: {
+              _: 8,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            rtime32_visibility_start: {
+              _: 9,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            rtime32_visibility_end: {
+              _: 10,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            event_name: {
+              _: 11,
+              _: _.readString,
+              _: _.writeString,
+            },
+            subtitle: {
+              _: 12,
+              _: _.readString,
+              _: _.writeString,
+            },
+            summary: {
+              _: 13,
+              _: _.readString,
+              _: _.writeString,
+            },
+            capsule_image: {
+              _: 14,
+              _: _,
+            },
+            store_path: {
+              _: 15,
+              _: _.readString,
+              _: _.writeString,
+            },
+            rtime32_post_time: {
+              _: 20,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CPartnerEventSummary`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.steamid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            steamid: {
+              _: 1,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            events: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            language: {
+              _: 3,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CClan_GetPartnerEventSummaries_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.clan_accountid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            clan_accountid: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            clan_event_gid: {
+              _: 2,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            announcement_gid: {
+              _: 3,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CClan_GetPartnerEventSummaries_Request_Event`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.summaries || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            summaries: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return (_.sm_mbf ||= _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return `CClan_GetPartnerEventSummaries_Response`;
     }
   },
   _ = class _ extends _.Message {
@@ -21274,6 +21714,13 @@ var _ = class _ extends _.Message {
   }
   _.RespondToClanInvite = _;
   function _(_, _, _) {
+    return _.SendMsg(`Clan.GetPartnerEventSummaries#1`, _(_, _, _), _, {
+      ePrivilege: 2,
+      rgBrowserAPISites: [`store`, `community`, `partner`],
+    });
+  }
+  _.GetPartnerEventSummaries = _;
+  function _(_, _, _) {
     return _.SendMsg(
       `Clan.GetDraftAndRecentPartnerEventSnippet#1`,
       _(_, _, _),
@@ -21290,7 +21737,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `community`],
     });
   }
   _.GetPartnerEventsByBuildIDRange = _;
@@ -21454,7 +21901,7 @@ var _ = class _ {
       this.ValidateStoreDefault(_) &&
         _.forEach((_) => {
           let _ = Number(_.creator_clan_id),
-            _ = new _(_.InitFromClanID(_));
+            _ = new _(_.InitFromClanID(_, _.EUNIVERSE));
           _.Initialize(_),
             (_.m_promise = _.GetAsPromise(_)),
             this.m_mapClanToCreatorHome.set(_, _);
@@ -21571,7 +22018,7 @@ var _ = class _ {
         _(() => {
           _.data.curators.forEach((_) => {
             if (!this.m_mapClanToCreatorHome.has(_.creator_clan_id)) {
-              let _ = new _(_.InitFromClanID(_.creator_clan_id));
+              let _ = new _(_.InitFromClanID(_.creator_clan_id, _.EUNIVERSE));
               _.Initialize(_),
                 this.m_mapClanToCreatorHome.set(_.creator_clan_id, _);
             }
@@ -21688,7 +22135,7 @@ var _ = new (class {
   }
   GetClanSteamIDForAppID(_) {
     let _ = _(_(_), this.ReadCache());
-    return _ ? _.InitFromClanID(_.clanAccountID) : void 0;
+    return _ ? _.InitFromClanID(_.clanAccountID, _.EUNIVERSE) : void 0;
   }
   GetClanVanityForAppID(_) {
     return _(_(_), this.ReadCache())?.vanity_url;
@@ -22454,7 +22901,8 @@ function _(_) {
               (0, _.jsx)(`span`, {
                 children: _,
               }),
-              (0, _.jsx)(`span`, {
+              (0, _.jsx)(`bdi`, {
+                dir: `ltr`,
                 style: {
                   color: `#FFFFFF`,
                 },
@@ -22463,7 +22911,8 @@ function _(_) {
             ))
           : (_ = _(
               `#SteamNotifications_Wishlist_OnSale_Single`,
-              (0, _.jsx)(`span`, {
+              (0, _.jsx)(`bdi`, {
+                dir: `ltr`,
                 style: {
                   color: `#FFFFFF`,
                 },
@@ -23954,31 +24403,27 @@ var _ = class {
       : !this.m_bDisconnectRequested;
   }
   async StartReconnect() {
-    if (
-      (this.Log.Info(`start reconnect`),
+    this.Log.Info(`start reconnect`),
       (this.m_socket = null),
       this.m_fnOnReconnectStartHandler({
         connection: this,
       }),
-      (await this.Reconnect()).result != 1)
-    ) {
-      this.Log.Warning(`failed to re-connect to websocket after close`),
-        this.m_fnOnReconnectFinishHandler({
-          connection: this,
-          eResult: 2,
-        }),
-        this.m_fnOnCloseHandler({
-          connection: this,
-          bError: !0,
-          bIsExpectedToReconnect: !1,
-        });
-      return;
-    }
-    this.Log.Info(`reconnect successful`),
-      this.m_fnOnReconnectFinishHandler({
-        connection: this,
-        eResult: 1,
-      });
+      (await this.Reconnect()).result == 1
+        ? (this.Log.Info(`reconnect successful`),
+          this.m_fnOnReconnectFinishHandler({
+            connection: this,
+            eResult: 1,
+          }))
+        : (this.Log.Warning(`failed to re-connect to websocket after close`),
+          this.m_fnOnReconnectFinishHandler({
+            connection: this,
+            eResult: 2,
+          }),
+          this.m_fnOnCloseHandler({
+            connection: this,
+            bError: !0,
+            bIsExpectedToReconnect: !1,
+          }));
   }
   async ConnectToSocket(_, _) {
     if (this.m_socket != null)
@@ -24196,19 +24641,16 @@ var _ = `127.0.0.1`,
           );
           let _ = _.Init(_);
           _.Hdr().set_eresult(2), _(_);
-          return;
-        }
-        if (_.SendSerializedMessage(_) != 1) {
-          _.Error(`SendMsg: Failed to send message`),
-            _(`Transport SendMsg: failed to send message`);
-          return;
-        }
-        this.m_mapPendingMethodRequests.set(_, {
-          m_iSeq: _,
-          m_responseClass: _,
-          m_fnCallback: _,
-          m_fnError: _,
-        });
+        } else
+          _.SendSerializedMessage(_) == 1
+            ? this.m_mapPendingMethodRequests.set(_, {
+                m_iSeq: _,
+                m_responseClass: _,
+                m_fnCallback: _,
+                m_fnError: _,
+              })
+            : (_.Error(`SendMsg: Failed to send message`),
+              _(`Transport SendMsg: failed to send message`));
       });
     }
     SendNotification(_, _, _) {
@@ -25052,7 +25494,7 @@ function _(_) {
     _ = `${_.COMMUNITY_BASE_URL}profiles/${_}/tradeoffers`,
     _ = () => _(() => window.location.assign(_), _.item),
     _ = (_) => _(() => {}, _.item, _),
-    { data: _ } = _(_.InitFromAccountID(_).GetAccountID());
+    { data: _ } = _(_.InitFromAccountID(_, _.EUNIVERSE).GetAccountID());
   return (0, _.jsx)(`a`, {
     href: _,
     onMouseDown: _,
@@ -25108,7 +25550,7 @@ function _(_) {
     _ = () => _(() => window.location.assign(_), _.item),
     _ = (_) => _(() => {}, _.item, _),
     _ = _(_),
-    { data: _ } = _(_.InitFromAccountID(_).GetAccountID());
+    { data: _ } = _(_.InitFromAccountID(_, _.EUNIVERSE).GetAccountID());
   return (0, _.jsx)(`a`, {
     href: _,
     onMouseDown: _,
@@ -25604,9 +26046,9 @@ var _ = (_) => {
     });
   };
 function _(_, _, _) {
-  !_.read &&
-    (!_ || _.button == 0 || _.button == 1) &&
-    _.notification_id &&
+  _.read ||
+    (_ && _.button != 0 && _.button != 1) ||
+    !_.notification_id ||
     _.MarkItemRead(_.notification_id),
     _();
 }

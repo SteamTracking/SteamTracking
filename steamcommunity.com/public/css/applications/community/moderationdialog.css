@@ -1,0 +1,99 @@
+.iummRPlc5UA- {
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+.gDpRvQSyEhc- {
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-style: normal;
+  display: grid;
+}
+.gDpRvQSyEhc- ._0Aus5xkg4rs- {
+  grid-column: 1 / span 2;
+}
+.M5MEiztLFqg- {
+  flex-flow: wrap;
+  grid-column: 2;
+  gap: 4px;
+  min-width: 0;
+  max-width: 260px;
+  display: flex;
+}
+.Obo5tCs0Dgo- {
+  box-sizing: border-box;
+  width: 100%;
+  height: 5em;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.WfjrnpAtOos- {
+  border: 1px solid #930808;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  display: flex;
+}
+.WfjrnpAtOos- svg {
+  color: red;
+  fill: red;
+  width: 16px;
+  height: 16px;
+}
+.qJiMpgjUBmw- {
+  user-select: text;
+  display: contents;
+}
+.tPmeaVOVhvg- {
+  width: auto;
+  height: 13px;
+}
+.Wgs3U5MVZxE- {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 26px;
+  display: flex;
+}
+.XevVgxU7JM8- {
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  gap: 36px;
+  display: flex;
+}
+.TMrWHSfHqDs- {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  display: flex;
+}
+.VDTUVdDNhUU- {
+  margin-left: 8px;
+  padding: 0;
+}
+.VDTUVdDNhUU- svg {
+  stroke: #000;
+  fill: #000;
+  width: 12px;
+  height: 12px;
+}
+._2T5Cy4opNNw- {
+  color: red;
+}
+.WUCJ-cE1nNQ- {
+  color: orange;
+}
+.RxrRIG6Jn9o- {
+  color: green;
+  width: 18px;
+  height: 18px;
+}
+.Pk8e-JCMLtM- {
+  fill: red;
+  width: 18px;
+  height: 18px;
+}
+/*$vite$:1*/

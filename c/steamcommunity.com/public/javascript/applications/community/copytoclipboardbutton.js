@@ -1,60 +1,40 @@
-(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [583],
-  {
-    chunkid: (module) => {
-      module.exports = {
-        CopyButton: "_2IGMSIG6hbIQPg-K1KoY-W",
-        CopiedNotice: "_1G568MNm7rDJNLFkzReXEc",
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports),
-        __webpack_require__._(module_exports, {
-          default: () => _,
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const [_, _] = (0, _.useState)(!1),
-          _ = (0, _.useRef)(null),
-          _ = (0, _.useMemo)(
-            () =>
-              (_.bPrefixCurrentURL ? window.location.href.split("#")[0] : "") +
-              _.text,
-            [_.text, _.bPrefixCurrentURL],
-          );
-        return (0, _.jsx)("span", {
-          children: (0, _.jsxs)("button", {
-            onClick: (_) => (
-              __webpack_require__(!0),
-              _.stopPropagation(),
-              navigator.clipboard.writeText(_),
-              setTimeout(() => __webpack_require__(!1), 1e3),
-              !1
-            ),
-            className: _.CopyButton,
-            ref: _,
-            title: _,
-            children: [
-              _ &&
-                _.current &&
-                (0, _.jsx)(_._, {
-                  target: _.current,
-                  direction: "bottom",
-                  children: (0, _.jsx)("div", {
-                    className: _.CopiedNotice,
-                    children: "Copied.",
-                  }),
-                }),
-              (0, _.jsx)(_.cKB, {}),
-            ],
+import { _ } from "./rolldown-runtime.js";
+import { _, _ } from "./libraries.js";
+import { _, _, _ } from "./main.js";
+var _ = _(_()),
+  _ = `_22H1cFqJ3Xo-`,
+  _ = `ILRTOLQcXtQ-`,
+  _ = `DEcxQM-4cPU-`,
+  _ = _();
+function _(_) {
+  let [_, _] = (0, _.useState)(!1),
+    _ = (0, _.useRef)(null);
+  return (0, _.jsx)(`span`, {
+    children: (0, _.jsxs)(`button`, {
+      onClick: (_) => (
+        _(!0),
+        _.stopPropagation(),
+        navigator.clipboard.writeText(_.text),
+        setTimeout(() => _(!1), 1e3),
+        !1
+      ),
+      className: _(_, _.size === `large` ? _ : _),
+      ref: _,
+      title: _.text,
+      children: [
+        _ &&
+          _.current &&
+          (0, _.jsx)(_, {
+            target: _.current,
+            direction: `bottom`,
+            children: (0, _.jsx)(`div`, {
+              className: `e1X81I-Jga0-`,
+              children: `Copied.`,
+            }),
           }),
-        });
-      }
-    },
-  },
-]);
+        (0, _.jsx)(_, {}),
+      ],
+    }),
+  });
+}
+export { _ };

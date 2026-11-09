@@ -3,10 +3,10 @@ const __vite__mapDeps = (
   _ = __vite__mapDeps,
   _ = _._ ||
     (_._ = [
-      "./webgamepadnavigation.js?contenthash=C096YUfn",
-      "./clientpostmessage.js?contenthash=KNDFkyqw",
-      "../../css/legacy_web/webgamepadnavigation.css?contenthash=DdLU0sAX",
-      "./desktopbridge.js?contenthash=Cdpq8p9l",
+      "./webgamepadnavigation.js",
+      "./clientpostmessage.js",
+      "../../css/legacy_web/webgamepadnavigation.css",
+      "./desktopbridge.js",
     ]),
 ) => _.map((_) => _[_]);
 `VALVE_PUBLIC_PATH` in window
@@ -569,7 +569,7 @@ async function _(_) {
   let { InitializeGamepadNavigation: _ } = await _(
     async () => {
       let { InitializeGamepadNavigation: _ } = await import(
-        `./webgamepadnavigation.js?contenthash=C096YUfn`
+        `./webgamepadnavigation.js`
       );
       return {
         InitializeGamepadNavigation: _,
@@ -583,9 +583,7 @@ async function _(_) {
 async function _() {
   let { InitializeForDesktop: _ } = await _(
     async () => {
-      let { InitializeForDesktop: _ } = await import(
-        `./desktopbridge.js?contenthash=Cdpq8p9l`
-      );
+      let { InitializeForDesktop: _ } = await import(`./desktopbridge.js`);
       return {
         InitializeForDesktop: _,
       };

@@ -21,12 +21,12 @@
 }
 ._0aFiUekNE6I- {
   max-height: 350px;
-  margin-left: 4px;
+  margin-inline-start: 4px;
   padding-bottom: 4px;
   overflow-y: auto;
 }
 ._0aFiUekNE6I-._6CRZVgXX8WU- {
-  margin-right: 4px;
+  margin-inline-end: 4px;
 }
 .-RS5MjpS9jg- {
   color: #fff;
@@ -64,6 +64,7 @@
 }
 .jw00MnpI46s- {
   cursor: pointer;
+  inset-inline-start: 0;
   z-index: 402;
   width: 46px;
   height: 24px;
@@ -76,7 +77,6 @@
   display: flex;
   position: absolute;
   top: 0;
-  left: 0;
 }
 .jw00MnpI46s- .yV0P89CB4mg- {
   width: 14px;

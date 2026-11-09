@@ -1,5 +1,5 @@
-import "common_base.proto";
 import "common.proto";
+import "common_base.proto";
 
 message CommunityItemDefinition {
 	optional uint32 item_type = 1;
@@ -34,6 +34,7 @@ message CSaleItemRewards_CanClaimItem_Response {
 	optional bool can_claim = 1;
 	optional uint32 next_claim_time = 2;
 	optional .LoyaltyRewardDefinition reward_item = 3;
+	//optional .CLoyaltyRewards_GetEquippedProfileItems_Request reward_item = 3;
 }
 
 message CSaleItemRewards_ClaimItem_Request {
@@ -44,6 +45,7 @@ message CSaleItemRewards_ClaimItem_Response {
 	optional uint64 communityitemid = 1;
 	optional uint32 next_claim_time = 2;
 	optional .LoyaltyRewardDefinition reward_item = 3;
+	//optional .CLoyaltyRewards_GetEquippedProfileItems_Request reward_item = 3;
 }
 
 message CSaleItemRewards_GetClaimedSaleRewards_Request {

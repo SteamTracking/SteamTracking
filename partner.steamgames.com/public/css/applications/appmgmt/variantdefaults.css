@@ -1,0 +1,200 @@
+@layer reset {
+  :where(.xtBr-L5Owus-):where(body, blockquote, dl, dd, figure, p) {
+    margin: 0;
+  }
+  :where(.xtBr-L5Owus-):where(
+      address,
+      b,
+      cite,
+      code,
+      dfn,
+      em,
+      i,
+      kbd,
+      q,
+      samp,
+      small,
+      strong,
+      var
+    ) {
+    font: unset;
+  }
+  :where(.xtBr-L5Owus-):where(h1, h2, h3, h4, h5, h6) {
+    font: unset;
+    margin: 0;
+  }
+  :where(.xtBr-L5Owus-):where(a) {
+    all: unset;
+    -webkit-tap-highlight-color: transparent;
+  }
+  :where(.xtBr-L5Owus-):where(
+      button,
+      select,
+      [type="button"],
+      [type="image"],
+      [type="reset"],
+      [type="submit"],
+      [type="checkbox"],
+      [type="color"],
+      [type="radio"],
+      [type="range"]
+    ) {
+    all: unset;
+    text-indent: initial;
+    -webkit-tap-highlight-color: transparent;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+  }
+  :where(.xtBr-L5Owus-):where(label) {
+    -webkit-tap-highlight-color: transparent;
+  }
+  :where(.xtBr-L5Owus-):where(select) {
+    text-align: start;
+    font-style: normal;
+    font-weight: 400;
+  }
+  :where(.xtBr-L5Owus-):where(
+      textarea,
+      input:not(
+          [type="button"],
+          [type="image"],
+          [type="reset"],
+          [type="submit"],
+          [type="checkbox"],
+          [type="color"],
+          [type="radio"],
+          [type="range"]
+        )
+    ) {
+    all: unset;
+    text-align: start;
+    width: -webkit-fill-available;
+    width: stretch;
+    text-indent: initial;
+    -webkit-tap-highlight-color: transparent;
+    cursor: text;
+    white-space: pre-wrap;
+    font-style: normal;
+    font-weight: 400;
+    display: block;
+  }
+  :where(.xtBr-L5Owus-):where(:focus) {
+    outline: none;
+  }
+  :where(.xtBr-L5Owus-)::placeholder {
+    color: unset;
+    opacity: unset;
+    user-select: none;
+  }
+  :where(.xtBr-L5Owus-):where(table) {
+    all: unset;
+    text-indent: initial;
+    display: table;
+  }
+  :where(.xtBr-L5Owus-):where(caption) {
+    text-align: inherit;
+  }
+  :where(.xtBr-L5Owus-):where(td) {
+    padding: 0;
+  }
+  :where(.xtBr-L5Owus-):where(th) {
+    font-weight: unset;
+    text-align: inherit;
+    padding: 0;
+  }
+  :where(.xtBr-L5Owus-):where(abbr, acronym) {
+    text-decoration: none;
+  }
+  :where(.xtBr-L5Owus-):where(canvas, object, picture, summary) {
+    display: block;
+  }
+  :where(.xtBr-L5Owus-):where(del, s) {
+    text-decoration: unset;
+  }
+  :where(.xtBr-L5Owus-):where(fieldset, hr) {
+    all: unset;
+    display: block;
+  }
+  :where(.xtBr-L5Owus-):where(legend) {
+    cursor: default;
+    border: none;
+    padding: 0;
+  }
+  :where(.xtBr-L5Owus-):where(li) {
+    text-align: unset;
+    display: block;
+  }
+  :where(.xtBr-L5Owus-):where(ol, ul) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  :where(.xtBr-L5Owus-):where(iframe) {
+    width: -webkit-fill-available;
+    border: none;
+    width: stretch;
+    display: block;
+  }
+  :where(.xtBr-L5Owus-):where(ins, u) {
+    text-decoration: none;
+  }
+  :where(.xtBr-L5Owus-):where(img) {
+    max-width: 100%;
+    display: block;
+  }
+  :where(.xtBr-L5Owus-):where(svg) {
+    flex-shrink: 0;
+    max-width: 100%;
+    display: block;
+  }
+  :where(.xtBr-L5Owus-):where(mark) {
+    all: unset;
+  }
+  :where(.xtBr-L5Owus-):where(pre) {
+    font: unset;
+    margin: unset;
+  }
+  :where(.xtBr-L5Owus-):where(q):before,
+  :where(.xtBr-L5Owus-):where(q):after {
+    content: "";
+  }
+  :where(.xtBr-L5Owus-):where(sub, sup) {
+    font: unset;
+    vertical-align: unset;
+  }
+  :where(.xtBr-L5Owus-):where(details) ::marker,
+  :where(.xtBr-L5Owus-):where(summary)::marker {
+    content: none;
+  }
+  :where(.xtBr-L5Owus-):where(video) {
+    width: -webkit-fill-available;
+    width: stretch;
+    display: block;
+  }
+  :where(.xtBr-L5Owus-):where(:any-link) {
+    cursor: var(--cursor-link);
+  }
+  :where(.xtBr-L5Owus-):where(button) {
+    cursor: var(--cursor-button);
+  }
+  :where(.xtBr-L5Owus-):where(:disabled, [data-disabled]) {
+    cursor: var(--cursor-disabled);
+  }
+  :where(.xtBr-L5Owus-):where(input[type="checkbox"]) {
+    cursor: var(--cursor-checkbox);
+  }
+  :where(.xtBr-L5Owus-):where(input[type="radio"]) {
+    cursor: var(--cursor-radio);
+  }
+  :where(.xtBr-L5Owus-):where([popover]) {
+    inset: unset;
+    color: inherit;
+    background: 0 0;
+    border: none;
+    padding: 0;
+    top: 0;
+    left: 0;
+  }
+}
+/*$vite$:1*/

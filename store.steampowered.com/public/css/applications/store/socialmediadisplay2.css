@@ -1,0 +1,52 @@
+.m6H2njbbWSs- {
+  max-width: 688px;
+  margin-top: 42px;
+}
+.BgrsKgSro1E- {
+  flex-flow: wrap;
+  align-items: center;
+  gap: 2px 6px;
+  display: flex;
+}
+.BgrsKgSro1E- a {
+  cursor: pointer;
+}
+.BgrsKgSro1E- a:hover .z0NFw8S8xoo- {
+  opacity: 1;
+}
+.BgrsKgSro1E- a .tool-tip-source {
+  cursor: pointer;
+}
+.BgrsKgSro1E- .z0NFw8S8xoo- {
+  opacity: 0.6;
+  fill: #fff;
+  width: 24px;
+  height: auto;
+}
+.V6ZJUZpOph0- {
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  display: flex;
+}
+.V6ZJUZpOph0- .t-0XbUHeOaw- {
+  color: #fff;
+  background: #ffffff4d;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  padding: 1px 6px;
+  position: relative;
+}
+.V6ZJUZpOph0- .t-0XbUHeOaw-:after {
+  content: "";
+  pointer-events: none;
+  border: 6px solid #88b7d500;
+  border-right-color: #ffffff4d;
+  width: 0;
+  height: 0;
+  margin-top: -6px;
+  position: absolute;
+  top: 50%;
+  right: 100%;
+}
+/*$vite$:1*/
