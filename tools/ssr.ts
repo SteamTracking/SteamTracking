@@ -301,8 +301,9 @@ async function MergeEnglishChunks(
 
 /**
  * Finds the chunks imported by the SSR files on disk, and merges the English ones into the strings files.
+ * With reachableOnly, files not reached from an SSR page are skipped, so old files cannot keep their imports alive.
  */
-export async function GenerateSsrUrls(): Promise<void> {
+export async function GenerateSsrUrls(reachableOnly: boolean): Promise<void> {
 	const urls = new Set<string>();
 
 	for (const site of sites) {
@@ -313,6 +314,10 @@ export async function GenerateSsrUrls(): Promise<void> {
 		const englishChunks = new Set<string>();
 
 		for (const file of files) {
+			if (reachableOnly && !state.currentSsrFiles.has(`${site.folder}/${file}`)) {
+				continue;
+			}
+
 			try {
 				const code = await readFile(join(folder, file), "utf8");
 				const ast = ParseJavascript(code);

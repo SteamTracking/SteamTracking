@@ -143,25 +143,26 @@ async function UpdateSsrFiles(): Promise<void> {
 	Log("{lightblue}Updating SSR files");
 
 	const allPagesParsed = state.ssrPagesParsed === state.ssrPagesToParse;
+	let foundEverything = false;
 
 	if (!allPagesParsed) {
 		Log(`{yellow}Keeping old SSR files because only ${state.ssrPagesParsed} of ${state.ssrPagesToParse} pages parsed`);
 	}
 
 	for (let round = 0; round < maxDiscoveryRounds; round++) {
-		// Old files would otherwise be read for imports and kept alive
-		if (allPagesParsed) {
-			DeleteOldSsrFiles();
-		}
-
-		await GenerateSsrUrls();
+		await GenerateSsrUrls(allPagesParsed);
 		state.urlsToFetch.push(...ProcessSsrFiles());
 
 		if (state.urlsToFetch.length === 0) {
+			foundEverything = true;
 			break;
 		}
 
 		await FetchQueued(5);
+	}
+
+	if (allPagesParsed && foundEverything) {
+		DeleteOldSsrFiles();
 	}
 }
 
