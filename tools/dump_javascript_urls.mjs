@@ -38,8 +38,7 @@ for (const file of await GetFilesToParse()) {
 
 console.log("Found", allStrings.size, "strings");
 
-const filteredStrings = [...allStrings.values()].filter((url) => !url.startsWith("https://swarm.valve.org/changes/"));
-const strings = filteredStrings.sort().join("\n") + "\n";
+const strings = [...allStrings.values()].sort().join("\n") + "\n";
 
 await writeFile(pathResolve(__dirname, "../API/JavascriptUrls.txt"), strings);
 

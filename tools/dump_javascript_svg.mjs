@@ -2,10 +2,9 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readdirSync, rmSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve as pathResolve } from "node:path";
-import { latestEcmaVersion, parse } from "espree";
 import { Syntax, traverse } from "estraverse";
 import { create as createXml } from "xmlbuilder2";
-import { GetFilesToParse } from "./dump_javascript_paths.mjs";
+import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.mjs";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
@@ -58,13 +57,7 @@ for (const file of await GetFilesToParse()) {
 			continue;
 		}
 
-		const sourceType = file.includes("/ssr/") || file.includes("\\ssr\\") ? "module" : "script";
-
-		const ast = parse(code, {
-			ecmaVersion: latestEcmaVersion,
-			sourceType: sourceType,
-			loc: true,
-		});
+		const ast = ParseJavascript(code, { loc: true });
 
 		traverse(ast, {
 			enter: function (node) {
@@ -82,10 +75,7 @@ for (const file of await GetFilesToParse()) {
 
 					const tagName = getLiteralValue(node.arguments?.[0]);
 
-					if (
-						(calleeName === "createElement" || calleeName === "jsx" || calleeName === "jsxs") &&
-						tagName === "svg"
-					) {
+					if ((calleeName === "createElement" || calleeName === "jsx" || calleeName === "jsxs") && tagName === "svg") {
 						const svg = createSvgBody(node).end({ prettyPrint: true });
 						if (svg.length > 0) {
 							const content = Buffer.from(`${svg}\n`, "utf8");
@@ -189,10 +179,7 @@ function createSvgBody(node, xml = createXml()) {
 
 		if (children) {
 			for (const child of children) {
-				if (
-					child?.type === Syntax.CallExpression &&
-					typeof getLiteralValue(child.arguments?.[0]) === "string"
-				) {
+				if (child?.type === Syntax.CallExpression && typeof getLiteralValue(child.arguments?.[0]) === "string") {
 					createSvgBody(child, elem);
 				}
 			}

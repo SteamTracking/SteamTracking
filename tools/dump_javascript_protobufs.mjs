@@ -2,9 +2,8 @@ import { createHash } from "node:crypto";
 import { createWriteStream } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { basename as pathBasename, join as pathJoin, resolve as pathResolve } from "node:path";
-import { latestEcmaVersion, parse } from "espree";
 import { replace, Syntax, traverse } from "estraverse";
-import { GetFilesToParse } from "./dump_javascript_paths.mjs";
+import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.mjs";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
@@ -105,27 +104,7 @@ console.log("Found", files.length, "files to parse");
 for (const file of files) {
 	try {
 		const code = await readFile(file);
-		let ast;
-
-		try {
-			ast = parse(code, {
-				ecmaVersion: latestEcmaVersion,
-				sourceType: "module",
-				loc: true,
-			});
-		} catch (e) {
-			// Legacy non-module scripts can contain things that are only valid in
-			// sloppy mode (e.g. duplicate top-level function declarations).
-			if (!(e instanceof SyntaxError)) {
-				throw e;
-			}
-
-			ast = parse(code, {
-				ecmaVersion: latestEcmaVersion,
-				sourceType: "script",
-				loc: true,
-			});
-		}
+		const ast = ParseJavascript(code, { loc: true });
 
 		ReplaceStaticTemplateLiterals(ast);
 

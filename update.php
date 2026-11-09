@@ -7,13 +7,16 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 	class SteamTracker
 	{
+		private const ViteUrlsPath = __DIR__ . '/.support/urls_from_vite.txt';
+		private const EnglishChunkPattern = '/_english\d*\.js$/';
+
 		private string $APIKey = '';
 		private int $AppStart;
 		private int $CurrentTime;
 		private bool $UseCache = true;
 		private bool $ExtractClientArchives = false;
 		private bool $DumpJavascriptFiles = false;
-		private bool $UpdateManifestUrls = false;
+		private bool $UpdateViteUrls = false;
 		private bool $UpdateSSRUrls = false;
 
 		/** @var array<string, string> */
@@ -112,20 +115,34 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			}
 			while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
 
-			if( $this->UpdateManifestUrls )
+			if( $this->UpdateViteUrls )
 			{
 				$Tries = 5;
-				$this->URLsToFetch = $this->ProcessManifests( $KnownUrls );
+				$PreviousViteUrls = [];
+
+				if( file_exists( self::ViteUrlsPath ) )
+				{
+					$PreviousViteUrls = file( self::ViteUrlsPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+				}
 
 				do
 				{
+					$this->URLsToFetch = array_merge( $this->URLsToFetch, $this->ProcessViteChunks( $KnownUrls ) );
+
+					if( empty( $this->URLsToFetch ) )
+					{
+						break;
+					}
+
 					$URLs = $this->URLsToFetch;
 					$this->URLsToFetch = [];
 
 					$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
 					$this->Fetch( $URLs, 5 );
 				}
-				while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
+				while( $Tries-- > 0 );
+
+				$this->DeleteOldViteChunks( $PreviousViteUrls, $KnownUrls );
 			}
 
 			if( $this->UpdateSSRUrls && !empty( $this->CurrentSSRFiles ) )
@@ -200,15 +217,15 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					'__KEY__',
 					'__TIME__',
 					'__CDN__',
-					//'https://steamcommunity.com/',
-					//'https://store.steampowered.com/',
+					'https://steamcommunity.com/public/',
+					'https://store.steampowered.com/public/',
 				],
 				[
 					'key=' . $this->APIKey,
 					'_=' . $this->CurrentTime,
 					'_cdn=fastly',
-					//'https://community.fastly.steamstatic.com/',
-					//'https://store.fastly.steamstatic.com/',
+					'https://community.fastly.steamstatic.com/public/',
+					'https://store.fastly.steamstatic.com/public/',
 				],
 				$URL
 			);
@@ -459,65 +476,6 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				$Data = preg_replace( '/[&\?]v=[a-zA-Z0-9\.\-\_]{3,}/', '?v=valveisgoodatcaching', $Data );
 				$Data = str_replace( 'akamai.steamstatic', 'fastly.steamstatic', $Data );
 				$Data = str_replace( '_cdn=akamai', '_cdn=fastly', $Data );
-
-				if( $File === 'Random/About.html' )
-				{
-					$Data = preg_replace( '/<section>\s+<div class="steam_section">.+?<\/section>\r\n/s', '', $Data );
-				}
-				else if( $File === 'Random/People.html' )
-				{
-					libxml_use_internal_errors( true );
-
-					$DOM = new DOMDocument;
-					$DOM->loadHTML( '<?xml encoding="UTF-8">' . $Data );
-					$XPath = new DOMXPath( $DOM );
-
-					$PeopleDivs = $XPath->evaluate( '//div[@class="row person"]' );
-					$AlreadySeen = [];
-					$People = [];
-
-					foreach( $PeopleDivs as $Person )
-					{
-						$Name = $XPath->evaluate( 'string(.//div[@class="name"])', $Person );
-
-						if( isset( $AlreadySeen[ $Name ] ) )
-						{
-							continue;
-						}
-
-						$AlreadySeen[ $Name ] = true;
-
-						$Bio = $XPath->evaluate( 'string(.//p[@class="bio"])', $Person );
-						$LinkElements = $XPath->evaluate( './/a', $Person );
-						$Links = [];
-
-						foreach( $LinkElements as $Link )
-						{
-							$Links[] = $Link->getAttribute( 'href' );
-						}
-
-						$Person =
-						[
-							'name' => trim( $Name ),
-							'bio' => trim( $Bio ),
-						];
-
-						if( !empty( $Links ) )
-						{
-							$Person[ 'links' ] = $Links;
-						}
-
-						$People[] = $Person;
-					}
-
-					$People = array_column( $People, 'name' );
-					array_multisort( $People, SORT_ASC, $People );
-
-					if( !empty( $People ) )
-					{
-						file_put_contents( __DIR__ . '/Random/People.json', json_encode( $People, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) );
-					}
-				}
 			}
 			else if( str_ends_with( $File, '.css' ) || str_ends_with( $File, '.js' ) )
 			{
@@ -536,16 +494,18 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				mkdir( $Folder, 0755, true );
 			}
 
+			$IsViteFile = str_contains( $OriginalFile, '/applications/' );
+			$IsLocalization = str_contains( $OriginalFile, '/localization/' );
+
 			if(
 				$IsSSR ||
-				str_ends_with( $File, 'english-json.js' ) ||
+				$IsViteFile ||
 				str_starts_with( $OriginalFile, 'www.dota2.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.counter-strike.net/' ) ||
 				str_starts_with( $OriginalFile, 'www.playdeadlock.com/' ) ||
 				str_contains( $OriginalFile, '/webui/' ) ||
 				str_contains( $OriginalFile, '/legacy_web/' ) ||
-				str_contains( $OriginalFile, '/partnermenu/' ) ||
-				str_contains( $OriginalFile, '/applications/' )
+				str_contains( $OriginalFile, '/partnermenu/' )
 			)
 			{
 				$HashPath = $OriginalFile . '.unmodified';
@@ -558,47 +518,29 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 				$this->ETags[ $HashPath ] = $Hash;
 
-				// Extract json so it gets pretty printed from the json.parse
-				//TODO: left json preg match is for older strings files (cs2 blog), to be looked back for removal in a couple of weeks (sept 2026)
-				if( str_ends_with( $File, 'english-json.js' ) && ( preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\(`(.*)`\)/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\('(.*)'\)/", $Data, $Matches ) ) )
+				// English string chunks are stored as json only
+				if( $IsViteFile && !$IsLocalization && preg_match( self::EnglishChunkPattern, $File ) === 1 )
 				{
-					$Data = $this->StringUnescape( $Matches[ 1 ] );
-					$Data = json_decode( $Data, true );
-					$Data = json_encode( $Data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL;
+					file_put_contents( $File, $Data );
 
-					file_put_contents( str_replace( '-json.js', '.json', $File ), $Data );
+					$JsonFile = substr( $File, 0, -3 ) . '.json';
+
+					system( 'node tools/extract_strings.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $JsonFile ), $ReturnCode );
+
+					if( $ReturnCode !== 0 )
+					{
+						$this->Log( '{lightred}Failed to extract strings from ' . $File );
+					}
+					else
+					{
+						unlink( $File );
+					}
 
 					return true;
 				}
 
-				// Extract json from numeric localization chunks
-				//TODO: left json preg match is for older chunks, to be looked back for removal in a couple of weeks (sept 2026)
-				if( preg_match( '/[0-9]+\.js$/', $File ) && ( preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\(`(.+)`\)/", $Data, $Matches ) || preg_match( "/exports=JSON\.parse\('(.+)'\)/", $Data, $Matches ) ) )
-				{
-					$JsonData = $this->StringUnescape( $Matches[ 1 ] );
-					$JsonData = json_decode( $JsonData, true );
-
-					if( $JsonData !== null )
-					{
-						$JsonData = json_encode( $JsonData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL;
-						file_put_contents( preg_replace( '/\.js$/', '.json', $File ), $JsonData );
-
-						// Delete old .js and c/ copies from before this extraction existed
-						if( file_exists( $File ) )
-						{
-							unlink( $File );
-						}
-
-						$CleanFile = __DIR__ . '/c/' . $OriginalFile;
-
-						if( file_exists( $CleanFile ) )
-						{
-							unlink( $CleanFile );
-						}
-
-						return true;
-					}
-				}
+				// Content hashes change with every build and would mark every importing file as changed
+				$Data = preg_replace( '/\.(js|css)\?contenthash=[\w-]{8}/', '.$1', $Data );
 
 				file_put_contents( $File, $Data );
 
@@ -609,11 +551,12 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 				if( str_ends_with( $File, '.js' ) )
 				{
-					if( str_ends_with( $File, '/manifest.js' ) )
+					if( $IsViteFile )
 					{
-						$this->UpdateManifestUrls = true;
+						$this->UpdateViteUrls = true;
 					}
-					else if( !str_contains( $OriginalFile, '/localization/' ) )
+
+					if( !str_ends_with( $File, '/manifest.js' ) && !$IsLocalization )
 					{
 						$CleanFile = __DIR__ . '/c/' . $OriginalFile;
 						$CleanFolder = dirname( $CleanFile );
@@ -634,22 +577,6 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					}
 
 					$this->DumpJavascriptFiles = true;
-				}
-				else if( $IsSSR && str_ends_with( $File, '.json' ) )
-				{
-					$JsonData = json_decode( $Data, true );
-					// TODO: strip hash from named json files: preg_replace( '/^(?!chunk-)(.+)-[A-Z0-9]{8}\.json$/', '$1.json', basename( $OriginalFile ) )
-					$CleanFile = __DIR__ . '/c/' . $OriginalFile;
-					$CleanFolder = dirname( $CleanFile );
-
-					if( !is_dir( $CleanFolder ) )
-					{
-						$this->Log( '{lightblue}Creating ' . $CleanFolder );
-
-						mkdir( $CleanFolder, 0755, true );
-					}
-
-					file_put_contents( $CleanFile, json_encode( $JsonData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL );
 				}
 				else if( $IsSSR && str_ends_with( $File, '.css' ) )
 				{
@@ -939,33 +866,19 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		 *
 		 * @return array<int, array{URL: string, File: string}>
 		 */
-		private function ProcessManifests( array $KnownUrls ) : array
+		private function ProcessViteChunks( array &$KnownUrls ) : array
 		{
-			$this->RunCommand( 'node tools/generate_manifest_urls.mjs' );
+			$this->RunCommand( 'node tools/generate_vite_urls.mjs' );
+
+			if( !file_exists( self::ViteUrlsPath ) )
+			{
+				throw new Exception( self::ViteUrlsPath . ' does not exist' );
+			}
 
 			$URLsToFetch = [];
-			$KnownFilenames = [];
-			$ManifestUrlsPath = __DIR__ . '/.support/urls_from_manifests.txt';
+			$ViteUrls = file( self::ViteUrlsPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
 
-			if( !file_exists( $ManifestUrlsPath ) )
-			{
-				throw new Exception( $ManifestUrlsPath . ' does not exist' );
-			}
-
-			$ManifestUrls = file( $ManifestUrlsPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
-
-			foreach( $KnownUrls as $Url => $Trash )
-			{
-				$QuestionMark = strrpos( $Url, '?' );
-
-				if( $QuestionMark !== false && str_starts_with( $Url, 'https://' ) )
-				{
-					$Filename = substr( $Url, 8, $QuestionMark - 8 );
-					$KnownFilenames[] = $Filename;
-				}
-			}
-
-			foreach( $ManifestUrls as $Url )
+			foreach( $ViteUrls as $Url )
 			{
 				if( !str_starts_with( $Url, 'https://' ) )
 				{
@@ -979,100 +892,75 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					throw new Exception( $Url . ' does not contain a question mark' );
 				}
 
-				$Filename = substr( $Url, 8, $QuestionMark - 8 );
-
 				if( isset( $KnownUrls[ $Url ] ) )
 				{
 					continue;
 				}
 
-				$KnownFilenames[] = $Filename;
+				$KnownUrls[ $Url ] = true;
 				$URLsToFetch[] =
 				[
 					'URL'  => $Url,
-					'File' => $Filename,
+					'File' => substr( $Url, 8, $QuestionMark - 8 ),
 				];
 			}
 
-			// Find and delete old chunk~ files
-			$Folders = [];
+			return $URLsToFetch;
+		}
 
-			$IsChunkFile = static fn( string $Filename ) : bool => preg_match( '/^(chunk~|libraries~|[0-9]+\.)/', $Filename, $Matches ) === 1;
-
-			foreach( $KnownFilenames as $Filepath )
+		/**
+		 * @param array<int, string> $PreviousUrls
+		 * @param array<string, true> $KnownUrls
+		 */
+		private function DeleteOldViteChunks( array $PreviousUrls, array $KnownUrls ) : void
+		{
+			foreach( $PreviousUrls as $Url )
 			{
-				$Filename = basename( $Filepath );
-
-				if( $IsChunkFile( $Filename ) )
+				if( isset( $KnownUrls[ $Url ] ) )
 				{
-					$Folder = dirname( $Filepath );
-
-					if( !isset( $Folders[ $Folder ] ) )
-					{
-						$Folders[ $Folder ] = [];
-					}
-
-					$Folders[ $Folder ][ $Filename ] = true;
-				}
-			}
-
-			foreach( $Folders as $Folder => $NewChunks )
-			{
-				$FullFolderPath = __DIR__ . '/' . $Folder . '/';
-
-				if( !is_dir( $FullFolderPath ) )
-				{
-					$this->Log( $FullFolderPath . ' does not exist' );
 					continue;
 				}
 
-				foreach( new DirectoryIterator( $FullFolderPath ) as $FileInfo )
+				$QuestionMark = strrpos( $Url, '?' );
+
+				if( $QuestionMark === false || !str_starts_with( $Url, 'https://' ) )
 				{
-					if( $FileInfo->isDot() )
+					continue;
+				}
+
+				$File = substr( $Url, 8, $QuestionMark - 8 );
+				$FilepathOnDisk = __DIR__ . '/' . $File;
+
+				if( file_exists( $FilepathOnDisk ) )
+				{
+					$this->Log( 'Chunk ' . $FilepathOnDisk . ' is no longer referenced' );
+
+					unlink( $FilepathOnDisk );
+				}
+
+				$CleanFilepath = __DIR__ . '/c/' . $File;
+
+				if( file_exists( $CleanFilepath ) )
+				{
+					$this->Log( 'Deleting clean file ' . $CleanFilepath );
+
+					unlink( $CleanFilepath );
+				}
+
+				if( preg_match( self::EnglishChunkPattern, $File ) === 1 )
+				{
+					$JsonFilepath = substr( $FilepathOnDisk, 0, -3 ) . '.json';
+
+					if( file_exists( $JsonFilepath ) )
 					{
-						continue;
-					}
+						$this->Log( 'Deleting strings file ' . $JsonFilepath );
 
-					$Filename = $FileInfo->getFilename();
-
-					if( $IsChunkFile( $Filename ) && !isset( $NewChunks[ $Filename ] ) )
-					{
-						// Preserve .json files whose corresponding .js chunk is still in the manifest
-						if( str_ends_with( $Filename, '.json' )
-						 && isset( $NewChunks[ str_replace( '.json', '.js', $Filename ) ] ) )
-						{
-							continue;
-						}
-
-						$FilepathOnDisk = $FileInfo->getRealPath();
-
-						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
-
-						unlink( $FilepathOnDisk );
-
-						$TagFile = $Folder . '/' . $Filename;
-						unset( $this->ETags[ $TagFile ], $this->ETags[ $TagFile . '.unmodified' ] );
-
-						// When deleting a .json chunk, also clear ETags for the corresponding .js
-						if( str_ends_with( $Filename, '.json' ) )
-						{
-							$JsTagFile = str_replace( '.json', '.js', $TagFile );
-							unset( $this->ETags[ $JsTagFile ], $this->ETags[ $JsTagFile . '.unmodified' ] );
-						}
-
-						// Also delete the corresponding file in the clean directory if it exists
-						$CleanFilepath = __DIR__ . '/c/' . $Folder . '/' . $Filename;
-
-						if( file_exists( $CleanFilepath ) )
-						{
-							$this->Log( 'Deleting clean file ' . $CleanFilepath );
-							unlink( $CleanFilepath );
-						}
+						unlink( $JsonFilepath );
 					}
 				}
-			}
 
-			return $URLsToFetch;
+				unset( $this->ETags[ $File ], $this->ETags[ $File . '.unmodified' ] );
+			}
 		}
 
 		/**
@@ -1082,17 +970,17 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		{
 			$this->RunCommand( 'node tools/generate_ssr_urls.mjs' );
 
-			$ManifestUrlsPath = __DIR__ . '/.support/urls_from_ssr.txt';
+			$SSRUrlsPath = __DIR__ . '/.support/urls_from_ssr.txt';
 
-			if( !file_exists( $ManifestUrlsPath ) )
+			if( !file_exists( $SSRUrlsPath ) )
 			{
-				throw new Exception( $ManifestUrlsPath . ' does not exist' );
+				throw new Exception( $SSRUrlsPath . ' does not exist' );
 			}
 
 			$URLsToFetch = [];
-			$ManifestUrls = file( $ManifestUrlsPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+			$SSRUrls = file( $SSRUrlsPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
 
-			foreach( $ManifestUrls as $Url )
+			foreach( $SSRUrls as $Url )
 			{
 				if( !str_starts_with( $Url, 'https://' ) )
 				{
@@ -1254,34 +1142,4 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 			echo $Log;
 		}
-
-		// Fixes valve being unable to send a proper utf-8 file
-		private function StringUnescape( $str )
-        {
-            return preg_replace_callback( '/\\\\(\\\\|x[0-9A-Fa-f]{2}|\'|u\{[0-9a-fA-F]+\})/',
-				function( $m )
-				{
-					$esc = $m[ 1 ];
-
-					if( $esc === '\\' )
-					{
-						return '\\';
-					}
-
-					if( $esc[ 0 ] === 'x' )
-					{
-						return '\u00' . substr( $esc, 1 );
-					}
-
-					if( $esc[ 0 ] === 'u' )
-					{
-						return mb_chr(hexdec(substr( $esc, 2, -1 )), 'UTF-8');
-					}
-
-					return "'";
-				},
-				$str
-        );
-    }
 	}
-

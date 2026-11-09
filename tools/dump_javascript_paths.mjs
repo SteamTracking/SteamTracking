@@ -1,5 +1,6 @@
 import { readdir as readDir } from "node:fs/promises";
 import { resolve as pathResolve } from "node:path";
+import { latestEcmaVersion, parse } from "espree";
 import { Syntax, VisitorKeys } from "estraverse";
 
 const __dirname = import.meta.dirname;
@@ -36,6 +37,30 @@ async function CollectJavascriptFiles(dir, out) {
 		} else if (dirent.isFile() && dirent.name.endsWith(".js") && dirent.name !== "licenses.js") {
 			out.push(res);
 		}
+	}
+}
+
+/**
+ * Parses as a module, falling back to a script because legacy files can contain
+ * code that is only valid in sloppy mode (e.g. duplicate top-level function declarations).
+ */
+export function ParseJavascript(code, options) {
+	try {
+		return parse(code, {
+			...options,
+			ecmaVersion: latestEcmaVersion,
+			sourceType: "module",
+		});
+	} catch (e) {
+		if (!(e instanceof SyntaxError)) {
+			throw e;
+		}
+
+		return parse(code, {
+			...options,
+			ecmaVersion: latestEcmaVersion,
+			sourceType: "script",
+		});
 	}
 }
 

@@ -1,20 +1,22 @@
 * text eol=lf
 
+*.bin binary
 *.dat binary
 *.doc binary
 *.gif binary
 *.ico binary
 *.jpg binary
+*.m4a binary
 *.png binary
 *.tga binary
 *.ttf binary
 *.wav binary
+*.uifont binary
 *.webp binary
 
 ClientManifest/* linguist-generated=true
 help.steampowered.com/public/javascript/applications/help/**/*.js linguist-generated=true
 partner.steamgames.com/public/javascript/applications/**/*.js linguist-generated=true
-partner.steamgames.com/public/javascript/webui/**/*.js linguist-generated=true
 steamcommunity.com/public/javascript/applications/**/*.js linguist-generated=true
 steamcommunity.com/public/javascript/webui/**/*.js linguist-generated=true
 store.steampowered.com/public/javascript/applications/**/*.js linguist-generated=true

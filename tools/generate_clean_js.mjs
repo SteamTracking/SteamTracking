@@ -15,7 +15,7 @@
  * 2. Normalization Strategies:
  *    - CLSTAMP/Build ID: Replaces build timestamps with "steamdb"
  *    - Module IDs: Replaces numeric chunk IDs with "chunkid"
- *    - Short Variables: Replaces identifiers < 3 chars with "_"
+ *    - Short Variables: Replaces mangled identifiers with "_"
  *    - Webpack Parameters: Standardizes to module/module_exports/__webpack_require__
  *    - Require Patterns: Handles direct calls, method calls, and bind patterns
  *
@@ -28,9 +28,8 @@
 
 import fs from "node:fs";
 import { generate } from "astring";
-import { latestEcmaVersion, parse } from "espree";
 import { Syntax, traverse } from "estraverse";
-import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
+import { ParseJavascript } from "./dump_javascript_paths.mjs"; // also fixes estraverse Syntax and VisitorKeys
 
 // Process command line arguments
 const inputFile = process.argv[2];
@@ -53,24 +52,13 @@ try {
 // Parse the JavaScript code into an AST
 let ast;
 try {
-	ast = parse(sourceCode, {
-		ecmaVersion: latestEcmaVersion,
-		sourceType: "module",
-		ecmaFeatures: { jsx: true },
-	});
-} catch (_err) {
-	try {
-		// Try again with 'script' source type if 'module' fails
-		ast = parse(sourceCode, {
-			ecmaVersion: latestEcmaVersion,
-			sourceType: "script",
-			ecmaFeatures: { jsx: true },
-		});
-	} catch (innerErr) {
-		console.error(`Failed to parse JavaScript: ${innerErr.message}`);
-		process.exit(1);
-	}
+	ast = ParseJavascript(sourceCode, { ecmaFeatures: { jsx: true } });
+} catch (err) {
+	console.error(`Failed to parse JavaScript: ${err.message}`);
+	process.exit(1);
 }
+
+const isSsrFile = inputFile.includes("/ssr/");
 
 // Normalize the AST
 function normalizeAst(ast) {
@@ -90,23 +78,6 @@ function normalizeAst(ast) {
 				decl.init.raw = '"steamdb"';
 			}
 		}
-	}
-
-	// STEP 1.5: Special handling for the client ui js chunk that contains the CLSTAMP value in a string literal
-	// But isn't assigned to clstamp variable, so we assume the numeral value that is assigned the most is clstamp.
-	let clstamp;
-	if (inputFile.includes("/ClientExtracted/steamui/")) {
-		const stringCounts = new Map();
-		traverse(ast, {
-			enter: (node) => {
-				if (node.type === Syntax.Literal && typeof node.value === "string") {
-					if (/^[0-9]{8}$/.test(node.value)) {
-						stringCounts.set(node.value, (stringCounts.get(node.value) || 0) + 1);
-					}
-				}
-			},
-		});
-		clstamp = [...stringCounts.entries()].reduce((a, b) => (b[1] > a[1] ? b : a), [null, 0])[0];
 	}
 
 	// STEP 2: First pass to find webpack modules and require functions
@@ -168,6 +139,15 @@ function normalizeAst(ast) {
 	const scopes = [];
 	const scopeFunctions = []; // parallel stack: which function owns each scope
 
+	// Identifiers already renamed to "_". Their new name must not be mistaken for a
+	// webpack module parameter that happens to be called "_".
+	const shortenedNodes = new Set();
+
+	function shortenIdentifier(target) {
+		target.name = "_";
+		shortenedNodes.add(target);
+	}
+
 	// Collect all binding identifiers from a pattern (handles destructuring, rest, defaults)
 	function collectBindingIdentifiers(pattern, into) {
 		if (!pattern) return;
@@ -194,6 +174,49 @@ function normalizeAst(ast) {
 		}
 	}
 
+	// Bundlers name top-level bindings with one and two characters first and
+	// move on to three characters once those run out. The names are assigned by
+	// frequency, so adding a declaration renames many of them.
+	const threeCharacterBindings = new Set();
+
+	function collectTopLevelBindings(statement) {
+		const bindings = [];
+		switch (statement.type) {
+			case Syntax.VariableDeclaration:
+				for (const decl of statement.declarations) {
+					collectBindingIdentifiers(decl.id, bindings);
+				}
+				break;
+			case Syntax.FunctionDeclaration:
+			case Syntax.ClassDeclaration:
+				collectBindingIdentifiers(statement.id, bindings);
+				break;
+			case Syntax.ImportDeclaration:
+				for (const specifier of statement.specifiers) {
+					collectBindingIdentifiers(specifier.local, bindings);
+				}
+				break;
+			case Syntax.ExportNamedDeclaration:
+				if (statement.declaration) {
+					collectTopLevelBindings(statement.declaration);
+				}
+				break;
+		}
+		for (const ident of bindings) {
+			if (ident.name.length === 3) {
+				threeCharacterBindings.add(ident.name);
+			}
+		}
+	}
+
+	for (const statement of ast.body) {
+		collectTopLevelBindings(statement);
+	}
+
+	function isMangledName(name) {
+		return name.length < 3 || threeCharacterBindings.has(name);
+	}
+
 	// Create a normalized chunk ID literal
 	function createChunkIdLiteral() {
 		return {
@@ -206,6 +229,10 @@ function normalizeAst(ast) {
 	// Main traversal for normalization
 	traverse(ast, {
 		enter: (node, parent) => {
+			if (isSsrFile) {
+				normalizeHashedAsset(node);
+			}
+
 			// Handle new scope for functions
 			if (
 				node.type === Syntax.FunctionExpression ||
@@ -223,8 +250,8 @@ function normalizeAst(ast) {
 							newScope.add(ident.name);
 
 							// Normalize short parameter names in non-webpack modules
-							if (ident.name.length < 3 && !webpackModules.has(node)) {
-								ident.name = "_";
+							if (isMangledName(ident.name) && !webpackModules.has(node)) {
+								shortenIdentifier(ident);
 							}
 						}
 					}
@@ -252,8 +279,8 @@ function normalizeAst(ast) {
 							scopes[scopes.length - 1].add(ident.name);
 						}
 
-						if (ident.name.length < 3) {
-							ident.name = "_";
+						if (isMangledName(ident.name)) {
+							shortenIdentifier(ident);
 						}
 					}
 				}
@@ -268,20 +295,25 @@ function normalizeAst(ast) {
 						scopes[scopes.length - 1].add(ident.name);
 					}
 
-					if (ident.name.length < 3) {
-						ident.name = "_";
+					if (isMangledName(ident.name)) {
+						shortenIdentifier(ident);
 					}
 				}
 			}
 
 			// Handle identifiers (variable references)
 			if (node.type === Syntax.Identifier) {
+				if (shortenedNodes.has(node)) {
+					return;
+				}
+
 				// Skip if non-computed property key or class member key
 				if (
 					parent &&
 					((parent.type === Syntax.Property && parent.key === node && !parent.computed) ||
 						(parent.type === Syntax.MethodDefinition && parent.key === node) ||
-						(parent.type === Syntax.PropertyDefinition && parent.key === node))
+						(parent.type === Syntax.PropertyDefinition && parent.key === node) ||
+						(parent.type === Syntax.MemberExpression && parent.property === node && !parent.computed))
 				) {
 					return;
 				}
@@ -310,7 +342,7 @@ function normalizeAst(ast) {
 							node.name = "module_exports";
 						} else if (moduleInfo.requireParam && node.name === moduleInfo.requireParam) {
 							node.name = "__webpack_require__";
-						} else if (node.name.length < 3) {
+						} else if (isMangledName(node.name)) {
 							node.name = "_";
 						}
 					} else {
@@ -318,11 +350,11 @@ function normalizeAst(ast) {
 						// for plain identifiers (call-site matching is handled separately)
 						if (node.name === "__webpack_require__") {
 							// already normalized
-						} else if (node.name.length < 3) {
+						} else if (isMangledName(node.name)) {
 							node.name = "_";
 						}
 					}
-				} else if (node.name.length < 3) {
+				} else if (isMangledName(node.name)) {
 					// Shadowed but short - normalize
 					node.name = "_";
 				}
@@ -335,7 +367,7 @@ function normalizeAst(ast) {
 				node.key.type === Syntax.Identifier &&
 				node.key.name.length < 3
 			) {
-				node.key.name = "_";
+				shortenIdentifier(node.key);
 			}
 
 			// Handle member expression properties
@@ -345,7 +377,7 @@ function normalizeAst(ast) {
 				node.property.type === Syntax.Identifier &&
 				node.property.name.length < 3
 			) {
-				node.property.name = "_";
+				shortenIdentifier(node.property);
 			}
 
 			// Handle webpack require calls
@@ -405,27 +437,6 @@ function normalizeAst(ast) {
 				}
 			}
 
-			// Handle string literals with chunk hashes (imports and variable assignments) - only for SSR files
-			if (node.type === Syntax.Literal && typeof node.value === "string" && inputFile.includes("/ssr/")) {
-				const stringValue = node.value;
-				// Replace hash patterns in file paths
-				if (stringValue.includes("-") && (stringValue.endsWith(".json") || stringValue.endsWith(".js"))) {
-					const normalizedPath = stringValue.replace(/-[A-Z0-9]{8}\./g, "-XXXXXXXX.");
-					if (normalizedPath !== stringValue) {
-						node.value = normalizedPath;
-						node.raw = `"${normalizedPath}"`;
-					}
-				}
-			}
-
-			// Remove any occurrences of the original exact CLSTAMP value in string literals
-			if (clstamp && node.type === Syntax.Literal && typeof node.value === "string") {
-				if (node.value === clstamp) {
-					node.value = "steamdb";
-					node.raw = '"steamdb"';
-				}
-			}
-
 			// Handle JSON.parse calls with string literals
 			if (
 				node.type === Syntax.CallExpression &&
@@ -480,13 +491,32 @@ function normalizeAst(ast) {
 	return ast;
 }
 
+const hashedAssetPattern = /^(\.\/(?:assets\/)?)[\w-]{8}(\.(?:js|css))$/;
+
+// SSR files are named by content hash, so a reference changes whenever the file it
+// points at is rebuilt, and the name means nothing across builds.
+function normalizeHashedAsset(node) {
+	if (node.type === Syntax.Literal && typeof node.value === "string") {
+		const normalized = node.value.replace(hashedAssetPattern, "$1chunk$2");
+		if (normalized !== node.value) {
+			node.value = normalized;
+			node.raw = JSON.stringify(normalized);
+		}
+	} else if (node.type === Syntax.TemplateElement) {
+		const normalized = node.value.raw.replace(hashedAssetPattern, "$1chunk$2");
+		if (normalized !== node.value.raw) {
+			node.value = { raw: normalized, cooked: normalized };
+		}
+	}
+}
+
 // Normalize the AST and generate the output code
 const normalizedAst = normalizeAst(ast);
 
 // Remove static import declarations from SSR files, after normalization all imports
-// are indistinguishable (import { _ } from "./chunk-XXXXXXXX.js") and Vite reorders
+// are indistinguishable (import { _ } from "./chunk.js") and Vite reorders
 // them across builds, creating diff churn with no meaningful information
-if (inputFile.includes("/ssr/")) {
+if (isSsrFile) {
 	normalizedAst.body = normalizedAst.body.filter((node) => node.type !== Syntax.ImportDeclaration);
 }
 

@@ -423,6 +423,8 @@ class ClientExtractor
 			}
 		}
 
+		$FilesToFormat = [];
+
 		/** @var \SplFileInfo $File */
 		foreach( $Files as $File )
 		{
@@ -453,13 +455,22 @@ class ClientExtractor
 
 					if( file_exists( $CleanFile ) )
 					{
-						system( 'npm run prettier ' . escapeshellarg( $CleanFile ) );
+						$FilesToFormat[] = realpath( $CleanFile );
 					}
 				}
 			}
 
-			$this->Log( 'Prettifying ' . $RelativePath );
-			system( 'npm run prettier ' . escapeshellarg( $File->getPathname() ) );
+			$FilesToFormat[] = $File->getRealPath();
+		}
+
+		$this->Log( 'Formatting ' . count( $FilesToFormat ) . ' files' );
+
+		// Batched to stay under command line length limits
+		foreach( array_chunk( $FilesToFormat, 50 ) as $Batch )
+		{
+			$Arguments = implode( ' ', array_map( 'escapeshellarg', $Batch ) );
+
+			system( 'npm run prettier ' . $Arguments );
 		}
 	}
 
