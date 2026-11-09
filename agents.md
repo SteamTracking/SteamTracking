@@ -4,7 +4,7 @@ Tracks Steam web and client files over time. Keep diff noise per commit low.
 
 `tools/update.ts` updates the files and `tools/commit.ts` commits and pushes. To test locally, run `node tools/update.ts` with `STEAM_API_KEY` set.
 
-Tools are TypeScript run directly by Node, with no build step. Format and lint `tools/` with `npm run fix`, type check with `npm test`. `npm run prettier` is for downloaded files.
+Tools are TypeScript run directly by Node, with no build step. Fix lint and format in `tools/` with `npm run fix`, check lint, format and types with `npm test`. Downloaded `.js`, `.css` and `.json` files are formatted with oxfmt by `tools/format_files.ts`.
 
 ## Update flow
 

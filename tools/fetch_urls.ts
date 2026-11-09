@@ -92,7 +92,7 @@ export async function FetchQueued(windowSize: number): Promise<void> {
 	if (state.filesToFormat.size > 0) {
 		Log(`{lightblue}Formatting ${state.filesToFormat.size} files`);
 
-		FormatFiles([...state.filesToFormat]);
+		await FormatFiles([...state.filesToFormat]);
 		state.filesToFormat.clear();
 	}
 }

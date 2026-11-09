@@ -3,16 +3,16 @@
   "name": "steamtracking",
   "type": "module",
   "scripts": {
-    "test": "biome check --config-path=biome_steamdb.json && tsc",
-    "fix": "biome check --write --config-path=biome_steamdb.json",
-    "prettier": "biome format --max-diagnostics=0 --log-kind=compact --diagnostic-level=error --write"
+    "test": "oxlint tools && oxfmt --check \"tools/*.ts\" && tsc",
+    "fix": "oxlint --fix tools && oxfmt --write \"tools/*.ts\""
   },
   "dependencies": {
-    "@biomejs/biome": "^2.0",
     "astring": "^1.9.0",
     "espree": "^11.0.0",
     "estraverse": "^5.3.0",
     "fflate": "^0.8.3",
+    "oxfmt": "^0.77.0",
+    "oxlint": "^1.92.0",
     "xmlbuilder2": "^4.0.0"
   },
   "devDependencies": {

@@ -83,7 +83,7 @@ export function ExtractStrings(code: string): Record<string, string> {
 export function FormatStrings(strings: Record<string, string>): string {
 	// Written by hand because integer-like keys would be reordered by a plain object
 	const lines = Object.keys(strings)
-		.sort()
+		.toSorted()
 		.map((key) => `    ${JSON.stringify(key)}: ${JSON.stringify(strings[key])}`);
 
 	return "{\n" + lines.join(",\n") + "\n}\n";

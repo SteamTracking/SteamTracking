@@ -231,7 +231,7 @@ async function MergeEnglishChunks(
 	const merged: Record<string, string> = {};
 	let found = 0;
 
-	for (const chunk of [...chunks].sort()) {
+	for (const chunk of [...chunks].toSorted()) {
 		let strings: Record<string, string>;
 
 		try {
@@ -321,7 +321,7 @@ export async function GenerateSsrUrls(): Promise<void> {
 
 	console.log("Found", urls.size, "SSR urls");
 
-	const strings = `${[...urls].sort().join("\n")}\n`;
+	const strings = `${[...urls].toSorted().join("\n")}\n`;
 
 	await writeFile(ssrUrlsPath, strings);
 }

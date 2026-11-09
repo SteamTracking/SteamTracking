@@ -39,13 +39,13 @@ interface ArchiveEntry {
 	crc: number;
 }
 
-export function ExtractClient(): void {
+export async function ExtractClient(): Promise<void> {
 	BuildTools();
 	CleanupExistingFiles();
 	ExtractArchives();
 	DumpProtobufs();
 	DumpStringsFromBinaries();
-	ProcessJavascript();
+	await ProcessJavascript();
 	FixEncodings();
 	DeleteDirectory(linuxBinsDir);
 
@@ -101,7 +101,7 @@ function ExtractArchives(): void {
 		try {
 			files = unzipSync(readFileSync(archivePath));
 		} catch (error) {
-			throw new Error(`Failed to open archive ${archiveName}: ${error}`);
+			throw new Error(`Failed to open archive ${archiveName}: ${error}`, { cause: error });
 		}
 
 		const isBinsArchive = archiveName.includes("bins") || archiveName.includes("runtime_");
@@ -261,10 +261,10 @@ function FindFiles(dir: string, extensions: string[]): string[] {
 	return readdirSync(dir, { recursive: true, withFileTypes: true })
 		.filter((entry) => entry.isFile() && extensions.includes(extname(entry.name)))
 		.map((entry) => join(entry.parentPath, entry.name))
-		.sort();
+		.toSorted();
 }
 
-function ProcessJavascript(): void {
+async function ProcessJavascript(): Promise<void> {
 	Log("Prettifying javascript");
 
 	const directories = [
@@ -310,7 +310,7 @@ function ProcessJavascript(): void {
 
 	Log(`Formatting ${filesToFormat.length} files`);
 
-	FormatFiles(filesToFormat);
+	await FormatFiles(filesToFormat);
 }
 
 function FixEncodings(): void {

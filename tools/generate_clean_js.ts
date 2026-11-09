@@ -506,6 +506,28 @@ function normalizeHashedAsset(node: Node) {
 	}
 }
 
+// A local export list names its bindings with the mangled names, which all became "_".
+// They carry no information, and a module cannot export the same name twice.
+function removeMangledExports(ast: Program): void {
+	const body: Program["body"] = [];
+
+	for (const node of ast.body) {
+		if (node.type === Syntax.ExportNamedDeclaration && !node.source && !node.declaration) {
+			node.specifiers = node.specifiers.filter(
+				(specifier) => specifier.exported.type !== Syntax.Identifier || specifier.exported.name !== "_",
+			);
+
+			if (node.specifiers.length === 0) {
+				continue;
+			}
+		}
+
+		body.push(node);
+	}
+
+	ast.body = body;
+}
+
 export function GenerateCleanJs(inputFile: string, outputFile: string, isSsrFile: boolean): void {
 	const sourceCode = fs.readFileSync(inputFile, "utf8");
 	const ast = ParseJavascript(sourceCode, { ecmaFeatures: { jsx: true } });
@@ -517,6 +539,8 @@ export function GenerateCleanJs(inputFile: string, outputFile: string, isSsrFile
 	if (isSsrFile) {
 		normalizedAst.body = normalizedAst.body.filter((node) => node.type !== Syntax.ImportDeclaration);
 	}
+
+	removeMangledExports(normalizedAst);
 
 	const normalizedCode = generate(normalizedAst, {
 		indent: "  ",

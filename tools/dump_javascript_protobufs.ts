@@ -2096,5 +2096,5 @@ function EvaluateConstant(node: Node): ConstantValue {
 }
 
 function SortMapByKey<V>(map: Map<string, V>): Map<string, V> {
-	return new Map([...map].sort(([a], [b]) => a.localeCompare(b, "en-US")));
+	return new Map([...map].toSorted(([a], [b]) => a.localeCompare(b, "en-US")));
 }

@@ -50,7 +50,7 @@ export async function DumpUrls(): Promise<void> {
 
 	console.log("Found", allStrings.size, "strings");
 
-	const strings = [...allStrings.values()].sort().join("\n") + "\n";
+	const strings = [...allStrings.values()].toSorted().join("\n") + "\n";
 
 	await writeFile(pathResolve(__dirname, "../API/JavascriptUrls.txt"), strings);
 }
@@ -96,7 +96,7 @@ function IsSafeName(name: string): boolean {
 }
 
 function ConstructLiteral(parent: TemplateLiteral): string {
-	const nodes = ([...(parent.expressions || []), ...(parent.quasis || [])] as (Node & { start: number })[]).sort(
+	const nodes = ([...(parent.expressions || []), ...(parent.quasis || [])] as (Node & { start: number })[]).toSorted(
 		(a, b) => a.start - b.start,
 	);
 	const str: unknown[] = [];
@@ -179,7 +179,6 @@ function FormatNode(node: Node, noWrap = false): unknown[] {
 		str.push(...FormatNode(binary.left, true));
 		str.push(...FormatNode(binary.right, true));
 	} else {
-		// biome-ignore lint: noTemplateCurlyInString
 		str.push("${}");
 	}
 

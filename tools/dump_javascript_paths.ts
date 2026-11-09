@@ -68,5 +68,5 @@ export async function GetFilesToParse(): Promise<string[]> {
 		await CollectJavascriptFiles(path, files);
 	}
 
-	return files.sort();
+	return files.toSorted();
 }

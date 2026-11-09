@@ -61,7 +61,7 @@ async function Update(): Promise<void> {
 		Log("{lightblue}Extracting client archives");
 		state.dumpJavascriptFiles = true;
 
-		ExtractClient();
+		await ExtractClient();
 	}
 
 	if (state.dumpJavascriptFiles) {

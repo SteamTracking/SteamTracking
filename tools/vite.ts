@@ -89,7 +89,7 @@ export async function GenerateViteUrls(): Promise<void> {
 
 	console.log("Found", urls.size, "Vite urls");
 
-	const strings = `${[...urls].sort().join("\n")}\n`;
+	const strings = `${[...urls].toSorted().join("\n")}\n`;
 
 	await writeFile(viteUrlsPath, strings);
 }
