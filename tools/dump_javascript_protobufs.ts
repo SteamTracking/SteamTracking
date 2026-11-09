@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { createWriteStream } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
-import { basename as pathBasename, join as pathJoin, resolve as pathResolve } from "node:path";
+import { dirname as pathDirname, join as pathJoin, resolve as pathResolve } from "node:path";
 import type { Writable } from "node:stream";
 import { Syntax as EstraverseSyntax, replace, traverse } from "estraverse";
 import type {
@@ -163,8 +163,8 @@ export async function DumpProtobufs(): Promise<void> {
 			);
 
 			if (isEsm) {
-				const result = TraverseEsmModule(ast);
-				const currentModule = pathBasename(file);
+				const result = TraverseEsmModule(ast, file);
+				const currentModule = pathResolve(file);
 
 				crossModuleExportedMessages.set(currentModule, result.exportedIds);
 
@@ -1281,7 +1281,7 @@ function TraverseModule(ast: FunctionExpression | ArrowFunctionExpression, fileN
  * `var X = class extends o.Message { ... }` expressions) rather than a webpack
  * runtime chunk.
  */
-function TraverseEsmModule(ast: Program): TraverseResult {
+function TraverseEsmModule(ast: Program, file: string): TraverseResult {
 	const services: Service[] = [];
 	const messages: Message[] = [];
 	const enums: Enum[] = [];
@@ -1298,7 +1298,7 @@ function TraverseEsmModule(ast: Program): TraverseResult {
 	// cross-file references and their exported name in the source chunk.
 	for (const node of ast.body) {
 		if (node.type === Syntax.ImportDeclaration) {
-			const moduleKey = pathBasename(node.source.value as string);
+			const moduleKey = pathResolve(pathDirname(file), node.source.value as string);
 
 			for (const spec of node.specifiers) {
 				if (spec.type === Syntax.ImportSpecifier) {
